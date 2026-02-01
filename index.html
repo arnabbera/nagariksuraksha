@@ -69,6 +69,7 @@ nav a:hover{color:#38bdf8}
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
+  cursor:pointer;
 }
 .btn.alt{
   background:transparent;
@@ -179,6 +180,47 @@ footer{
   header{flex-direction:column}
   .home{flex-direction:column;text-align:center}
 }
+
+/* MODAL FORM */
+#consultationForm{
+  display:none; /* hidden initially */
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+}
+#consultationForm .modal-content{
+  background:#020617;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:500px;
+  position:relative;
+  color:#e5e7eb;
+}
+#consultationForm .close-btn{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:24px;
+  cursor:pointer;
+}
+#consultationForm h2{
+  color:#38bdf8;
+  margin-bottom:20px;
+}
+#consultationForm input, #consultationForm textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
+}
+#consultationForm button{
+  width:100%;
+}
 </style>
 </head>
 
@@ -202,7 +244,7 @@ footer{
   <div class="home-text">
     <h1><span>NagarikSuraksha</span><br>Your Trusted Legal & Citizen Protection Partner</h1>
     <p>Professional assistance in civil suits, criminal cases, and consumer forum matters.</p>
-    <a href="#contact" class="btn">Free Consultation</a>
+    <button class="btn" id="openFormBtn">Free Consultation</button>
     <a href="#services" class="btn alt">Explore Services</a>
   </div>
 
@@ -270,7 +312,7 @@ footer{
   </div>
 </section>
 
-<!-- CONSULTANTS (FIXED IMAGES) -->
+<!-- CONSULTANTS -->
 <section id="consultant">
   <h2>Consultant in Kolkata</h2>
   <div class="grid">
@@ -278,7 +320,7 @@ footer{
       <h3>Metiabruz Office</h3>
       <img src="images/aftab.jpg" class="consultant-img" alt="Aftab Alam">
       <p>Aftab Alam</p>
-	  <p>[BA, LL.B pursuing]</p>
+      <p>[BA, LL.B pursuing]</p>
       <p>Mobile 7439297280</p>
     </div>
 
@@ -286,7 +328,7 @@ footer{
       <h3>Gariahat Office</h3>
       <img src="images/arnab.jpg" class="consultant-img" alt="Arnab Bera">
       <p>Arnab Bera</p>
-	  <p>[MTech, LL.B pursuing]</p>
+      <p>[MTech, LL.B pursuing]</p>
       <p>Mobile 9830015498</p>
     </div>
 
@@ -294,7 +336,7 @@ footer{
       <h3>NewTown Office</h3>
       <img src="images/pratik.jpg" class="consultant-img" alt="Pratik Majumder">
       <p>Pratik Majumder</p>
-	  <p>[MBA, LL.B pursuing]</p>
+      <p>[MBA, LL.B pursuing]</p>
       <p>Mobile 9830419552</p>
     </div>
   </div>
@@ -317,35 +359,59 @@ footer{
   <p>© 2025 NagarikSuraksha. All Rights Reserved.</p>
 </footer>
 
-
 <!-- FLOATING SOCIAL -->
 <div class="floating-social">
-  <a href="https://www.facebook.com/nagariksuraksha" class="facebook" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://www.instagram.com/nagariksuraksha" class="instagram" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://x.com/nagariksuraksha" class="twitter" target="_blank" aria-label="X (Twitter)">
-    <i class="fa-brands fa-x-twitter"></i>
-  </a>
-
-  <a href="https://wa.me/919830015487" class="whatsapp" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <a href="https://www.facebook.com/nagariksuraksha" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://wa.me/919830015487" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
 </div>
 
+<!-- MODAL FORM -->
+<div id="consultationForm">
+  <div class="modal-content">
+    <span class="close-btn" id="closeFormBtn">&times;</span>
+    <h2>Free Consultation Form</h2>
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
 
 <script>
-let slides=document.querySelectorAll('.slide');
-let index=0;
-setInterval(()=>{
-  slides[index].classList.remove('active');
-  index=(index+1)%slides.length;
-  slides[index].classList.add('active');
-},5000);
+  // Slider
+  let slides = document.querySelectorAll('.slide');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 5000);
+
+  // Modal logic
+  const modal = document.getElementById('consultationForm');
+  const openBtn = document.getElementById('openFormBtn');
+  const closeBtn = document.getElementById('closeFormBtn');
+
+  openBtn.onclick = () => modal.style.display = 'flex';
+  closeBtn.onclick = () => modal.style.display = 'none';
+  window.onclick = e => { if(e.target == modal) modal.style.display = 'none'; };
+
+  // WhatsApp submission
+  document.getElementById('whatsappForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const whatsappNumber = '919830015487';
+    const text = `*Free Consultation Request*\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+  });
 </script>
 
 </body>
