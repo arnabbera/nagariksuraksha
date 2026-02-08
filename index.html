@@ -20,24 +20,21 @@ body{
   overflow-x:hidden;
 }
 
-section{padding:90px 8%}
-h2{font-size:36px;color:#38bdf8;margin-bottom:25px}
+/* ===== HEADER ===== */
 
-/* HEADER */
 header{
   position:fixed;
   top:0;
   width:100%;
   background:#020617;
-  padding:12px 8%;
+  padding:10px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
-  flex-wrap:wrap;
 }
 
-.logo img{height:60px}
+.logo img{height:55px}
 
 .mobile-toggle{
   display:none;
@@ -52,16 +49,30 @@ nav #navMenu{
 }
 
 nav a{
-  margin-left:30px;
+  margin-left:25px;
   font-weight:600;
   color:#e5e7eb;
   text-decoration:none;
 }
+
 nav a:hover{color:#38bdf8}
 
-/* HOME */
+/* ===== SECTIONS ===== */
+
+section{
+  padding:110px 5% 70px;
+}
+
+h2{
+  font-size:34px;
+  color:#38bdf8;
+  margin-bottom:25px;
+  text-align:center;
+}
+
+/* ===== HOME ===== */
+
 .home{
-  min-height:100vh;
   display:flex;
   align-items:center;
   gap:40px;
@@ -69,35 +80,39 @@ nav a:hover{color:#38bdf8}
 }
 
 .home-text{flex:1;min-width:280px}
-.home h1{font-size:46px;margin-bottom:20px}
+.home h1{font-size:44px;margin-bottom:20px}
 .home span{color:#38bdf8}
 
 .home-slider{flex:1;min-width:280px}
 
-/* BUTTONS */
+/* ===== BUTTONS ===== */
+
 .btn{
   display:inline-block;
-  margin-top:20px;
-  padding:14px 32px;
+  margin-top:15px;
+  padding:12px 28px;
   background:#38bdf8;
   color:#020617;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
   cursor:pointer;
+  border:none;
 }
+
 .btn.alt{
   background:transparent;
   border:2px solid #38bdf8;
   color:#38bdf8;
-  margin-left:15px;
+  margin-left:10px;
 }
 
-/* SLIDER */
+/* ===== SLIDER ===== */
+
 .slider{
   position:relative;
   width:100%;
-  height:340px;
+  height:320px;
   overflow:hidden;
   border-radius:20px;
   background:#020617;
@@ -118,21 +133,24 @@ nav a:hover{color:#38bdf8}
   object-fit:cover;
 }
 
-/* GRID */
+/* ===== GRID ===== */
+
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
 
-/* CARDS */
+/* ===== CARDS ===== */
+
 .card,.office-card,.contact-box{
   background:#020617;
-  padding:25px;
+  padding:20px;
   border-radius:18px;
 }
 
-/* IMAGES */
+/* ===== IMAGES ===== */
+
 .office-img,
 .contact-img{
   width:100%;
@@ -152,29 +170,31 @@ nav a:hover{color:#38bdf8}
   margin:15px 0;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
+
 footer{
   background:#020617;
-  padding:40px 8%;
+  padding:30px 5%;
   text-align:center;
 }
 
-/* FLOATING SOCIAL */
+/* ===== FLOATING SOCIAL ===== */
+
 .floating-social{
   position:fixed;
-  bottom:20px;
-  right:15px;
+  bottom:15px;
+  right:10px;
   display:flex;
-  gap:10px;
+  gap:8px;
   z-index:999;
 }
 
 .floating-social a{
-  width:50px;
-  height:50px;
+  width:45px;
+  height:45px;
   border-radius:50%;
   color:#fff;
-  font-size:22px;
+  font-size:20px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -185,7 +205,8 @@ footer{
 .instagram{background:#e1306c}
 .linkedin{background:#0a66c2}
 
-/* MODAL */
+/* ===== MODAL ===== */
+
 #consultationForm{
   display:none;
   position:fixed;
@@ -199,17 +220,17 @@ footer{
 
 #consultationForm .modal-content{
   background:#020617;
-  padding:30px;
+  padding:25px;
   border-radius:20px;
   width:100%;
-  max-width:500px;
+  max-width:450px;
   position:relative;
 }
 
 .close-btn{
   position:absolute;
-  top:15px;
-  right:20px;
+  top:10px;
+  right:15px;
   font-size:24px;
   cursor:pointer;
 }
@@ -218,19 +239,20 @@ footer{
 #consultationForm textarea{
   width:100%;
   padding:10px;
-  margin-bottom:15px;
+  margin-bottom:12px;
   border-radius:8px;
   border:none;
 }
 
-/* TABLET */
+/* ===== TABLET ===== */
+
 @media(max-width:1024px){
-  section{padding:80px 6%}
-  .home h1{font-size:36px}
-  .slider{height:280px}
+  .home h1{font-size:34px}
+  .slider{height:260px}
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media(max-width:768px){
 
   .mobile-toggle{display:block}
@@ -245,7 +267,7 @@ footer{
     background:#020617;
     width:100%;
     margin-top:10px;
-    padding:15px 0;
+    padding:10px 0;
   }
 
   nav #navMenu.active{
@@ -253,7 +275,7 @@ footer{
   }
 
   nav a{
-    margin:10px 0;
+    margin:8px 0;
     text-align:center;
   }
 
@@ -262,17 +284,25 @@ footer{
     text-align:center;
   }
 
-  .home h1{font-size:30px}
-  h2{font-size:28px}
-  .slider{height:230px}
+  .home h1{font-size:26px}
+
+  .btn,
+  .btn.alt{
+    display:block;
+    margin:10px auto;
+  }
+
+  .slider{height:220px}
 }
 
-/* SMALL MOBILE */
+/* ===== SMALL MOBILE ===== */
+
 @media(max-width:480px){
-  section{padding:70px 5%}
-  .home h1{font-size:24px}
-  .slider{height:200px}
+  section{padding:100px 4% 60px}
+  .home h1{font-size:22px}
+  .slider{height:190px}
 }
+
 </style>
 </head>
 
@@ -411,7 +441,7 @@ footer{
   <div class="modal-content">
     <span class="close-btn" id="closeFormBtn">&times;</span>
     <h2>Free Consultation</h2>
-    <form id="whatsappForm">
+    <form>
       <input type="text" placeholder="Name" required>
       <input type="email" placeholder="Email" required>
       <input type="tel" placeholder="Phone" required>
@@ -422,7 +452,6 @@ footer{
 </div>
 
 <script>
-/* Slider */
 let slides=document.querySelectorAll('.slide');
 let index=0;
 setInterval(()=>{
@@ -431,12 +460,10 @@ setInterval(()=>{
   slides[index].classList.add('active');
 },5000);
 
-/* Mobile menu */
 const menuToggle=document.getElementById("menuToggle");
 const navMenu=document.getElementById("navMenu");
 menuToggle.onclick=()=>navMenu.classList.toggle("active");
 
-/* Modal */
 const modal=document.getElementById("consultationForm");
 document.getElementById("openFormBtn").onclick=()=>modal.style.display="flex";
 document.getElementById("closeFormBtn").onclick=()=>modal.style.display="none";
