@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NagarikSuraksha | Legal & Consultancy Services</title>
+<title>NagarikSuraksha</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 
 body{
   font-family:'Poppins',sans-serif;
@@ -27,50 +26,47 @@ header{
   top:0;
   width:100%;
   background:#020617;
-  padding:10px 5%;
+  padding:12px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
 }
 
-.logo img{height:55px}
+.logo img{height:50px}
 
-.mobile-toggle{
+.menu-toggle{
   display:none;
   font-size:28px;
   cursor:pointer;
-  color:#e5e7eb;
+  color:#fff;
 }
 
-nav #navMenu{
+nav{
   display:flex;
-  align-items:center;
+  gap:25px;
 }
 
 nav a{
-  margin-left:25px;
-  font-weight:600;
   color:#e5e7eb;
   text-decoration:none;
+  font-weight:600;
 }
-
-nav a:hover{color:#38bdf8}
 
 /* ===== SECTIONS ===== */
 
 section{
-  padding:110px 5% 70px;
+  padding:100px 6% 60px;
 }
 
 h2{
-  font-size:34px;
+  font-size:32px;
   color:#38bdf8;
   margin-bottom:25px;
   text-align:center;
 }
 
-/* ===== HOME ===== */
+/* ===== HERO ===== */
 
 .home{
   display:flex;
@@ -79,50 +75,43 @@ h2{
   flex-wrap:wrap;
 }
 
-.home-text{flex:1;min-width:280px}
-.home h1{font-size:44px;margin-bottom:20px}
+.home-text{flex:1}
+.home h1{font-size:40px;margin-bottom:20px}
 .home span{color:#38bdf8}
 
-.home-slider{flex:1;min-width:280px}
-
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 
 .btn{
   display:inline-block;
-  margin-top:15px;
-  padding:12px 28px;
-  background:#38bdf8;
-  color:#020617;
+  margin-top:12px;
+  padding:14px 28px;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
-  cursor:pointer;
-  border:none;
 }
 
-.btn.alt{
-  background:transparent;
+.primary{background:#38bdf8;color:#000}
+.secondary{
   border:2px solid #38bdf8;
   color:#38bdf8;
   margin-left:10px;
 }
 
-/* ===== SLIDER ===== */
+/* SLIDER */
 
 .slider{
-  position:relative;
-  width:100%;
-  height:320px;
-  overflow:hidden;
+  flex:1;
+  height:300px;
   border-radius:20px;
-  background:#020617;
+  overflow:hidden;
+  position:relative;
 }
 
 .slide{
   position:absolute;
   inset:0;
   opacity:0;
-  transition:opacity 1s ease-in-out;
+  transition:1s;
 }
 
 .slide.active{opacity:1}
@@ -133,7 +122,7 @@ h2{
   object-fit:cover;
 }
 
-/* ===== GRID ===== */
+/* GRID */
 
 .grid{
   display:grid;
@@ -141,166 +130,125 @@ h2{
   gap:25px;
 }
 
-/* ===== CARDS ===== */
-
-.card,.office-card,.contact-box{
+.card{
   background:#020617;
   padding:20px;
-  border-radius:18px;
+  border-radius:16px;
 }
 
-/* ===== IMAGES ===== */
-
-.office-img,
-.contact-img{
+.card img{
   width:100%;
   height:200px;
   object-fit:cover;
-  border-radius:14px;
-  margin:15px 0;
+  border-radius:12px;
+  margin-bottom:10px;
 }
 
-.consultant-img{
-  width:100%;
-  height:220px;
-  object-fit:contain;
-  background:#020617;
-  padding:10px;
-  border-radius:14px;
-  margin:15px 0;
-}
-
-/* ===== FOOTER ===== */
-
-footer{
-  background:#020617;
-  padding:30px 5%;
-  text-align:center;
-}
-
-/* ===== FLOATING SOCIAL ===== */
+/* FLOATING SOCIAL */
 
 .floating-social{
   position:fixed;
-  bottom:15px;
-  right:10px;
+  bottom:12px;
+  right:8px;
   display:flex;
-  gap:8px;
+  gap:6px;
   z-index:999;
 }
 
 .floating-social a{
-  width:45px;
-  height:45px;
+  width:42px;
+  height:42px;
   border-radius:50%;
-  color:#fff;
-  font-size:20px;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:#fff;
+  font-size:18px;
 }
 
-.whatsapp{background:#25d366}
 .facebook{background:#1877f2}
 .instagram{background:#e1306c}
 .linkedin{background:#0a66c2}
-
-/* ===== MODAL ===== */
-
-#consultationForm{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.7);
-  z-index:2000;
-  justify-content:center;
-  align-items:center;
-  padding:15px;
-}
-
-#consultationForm .modal-content{
-  background:#020617;
-  padding:25px;
-  border-radius:20px;
-  width:100%;
-  max-width:450px;
-  position:relative;
-}
-
-.close-btn{
-  position:absolute;
-  top:10px;
-  right:15px;
-  font-size:24px;
-  cursor:pointer;
-}
-
-#consultationForm input,
-#consultationForm textarea{
-  width:100%;
-  padding:10px;
-  margin-bottom:12px;
-  border-radius:8px;
-  border:none;
-}
-
-/* ===== TABLET ===== */
-
-@media(max-width:1024px){
-  .home h1{font-size:34px}
-  .slider{height:260px}
-}
+.whatsapp{background:#25d366}
 
 /* ===== MOBILE ===== */
 
 @media(max-width:768px){
 
-  .mobile-toggle{display:block}
-
-  nav{
-    width:100%;
-  }
-
-  nav #navMenu{
-    display:none;
-    flex-direction:column;
-    background:#020617;
-    width:100%;
-    margin-top:10px;
-    padding:10px 0;
-  }
-
-  nav #navMenu.active{
-    display:flex;
-  }
-
-  nav a{
-    margin:8px 0;
-    text-align:center;
-  }
-
-  .home{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .home h1{font-size:26px}
-
-  .btn,
-  .btn.alt{
-    display:block;
-    margin:10px auto;
-  }
-
-  .slider{height:220px}
+.menu-toggle{
+  display:block;
 }
 
-/* ===== SMALL MOBILE ===== */
+nav{
+  position:absolute;
+  top:65px;
+  left:0;
+  width:100%;
+  background:#020617;
+  flex-direction:column;
+  display:none;
+}
+
+nav.active{
+  display:flex;
+}
+
+nav a{
+  padding:15px;
+  text-align:center;
+  border-top:1px solid #111;
+}
+
+section{
+  padding:85px 5% 45px;
+}
+
+.home{
+  flex-direction:column;
+  text-align:center;
+  gap:20px;
+}
+
+.home h1{
+  font-size:26px;
+}
+
+.slider{
+  height:200px;
+}
+
+.btn{
+  display:block;
+  width:100%;
+  margin:8px 0;
+}
+
+.secondary{
+  margin-left:0;
+}
+
+h2{
+  font-size:26px;
+}
+
+}
+
+/* SMALL PHONES */
 
 @media(max-width:480px){
-  section{padding:100px 4% 60px}
-  .home h1{font-size:22px}
-  .slider{height:190px}
+
+section{
+  padding:75px 4% 40px;
+}
+
+.home h1{
+  font-size:22px;
+}
+
+.slider{
+  height:170px;
+}
+
 }
 
 </style>
@@ -309,165 +257,131 @@ footer{
 <body>
 
 <header>
-  <div class="logo">
-    <img src="images/logo.png" alt="NagarikSuraksha">
-  </div>
 
-  <div class="mobile-toggle" id="menuToggle">&#9776;</div>
+<div class="logo">
+<img src="images/logo.png">
+</div>
 
-  <nav>
-    <div id="navMenu">
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#offices">Offices</a>
-      <a href="#consultant">Consultant</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<div class="menu-toggle" id="menuToggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<nav id="navMenu">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#offices">Offices</a>
+<a href="#consultant">Consultant</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<section id="home" class="home">
-  <div class="home-text">
-    <h1><span>NagarikSuraksha</span><br>Your Trusted Legal & Citizen Protection Partner</h1>
-    <p>Professional assistance in civil suits, criminal cases, and consumer forum matters.</p>
-    <button class="btn" id="openFormBtn">Free Consultation</button>
-    <a href="#services" class="btn alt">Explore Services</a>
-  </div>
+<!-- HERO -->
 
-  <div class="home-slider slider">
-    <div class="slide active"><img src="images/hero1.jpg"></div>
-    <div class="slide"><img src="images/hero2.jpg"></div>
-    <div class="slide"><img src="images/hero3.jpg"></div>
-  </div>
+<section id="home" class="home">
+
+<div class="home-text">
+<h1><span>NagarikSuraksha</span><br>
+Your Trusted Legal & Citizen Protection Partner</h1>
+
+<p>Professional assistance in civil suits, criminal cases, and consumer forum matters.</p>
+
+<a href="#" class="btn primary">Free Consultation</a>
+<a href="#services" class="btn secondary">Explore Services</a>
+</div>
+
+<div class="slider">
+<div class="slide active"><img src="images/hero1.jpg"></div>
+<div class="slide"><img src="images/hero2.jpg"></div>
+<div class="slide"><img src="images/hero3.jpg"></div>
+</div>
+
 </section>
+
+<!-- SERVICES -->
 
 <section id="services">
-  <h2>Our Legal Services</h2>
-  <div class="grid">
 
-    <div class="card">
-      <img src="images/civil.png" class="office-img">
-      <h3>Civil Suit</h3>
-      <p>Legal assistance in civil disputes including property matters, recovery of money, injunctions and declarations.</p>
-    </div>
+<h2>Our Legal Services</h2>
 
-    <div class="card">
-      <img src="images/criminal.png" class="office-img">
-      <h3>Criminal Case</h3>
-      <p>Support in FIR matters, bail applications and representation before courts.</p>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <img src="images/consumer.png" class="office-img">
-      <h3>Consumer Forum Case</h3>
-      <p>Handling complaints for deficiency in service and compensation claims.</p>
-    </div>
+<div class="card">
+<img src="images/civil.jpg">
+<h3>Civil Suit</h3>
+<p>Property disputes and money recovery.</p>
+</div>
 
-  </div>
+<div class="card">
+<img src="images/criminal.jpg">
+<h3>Criminal Case</h3>
+<p>Legal representation and FIR matters.</p>
+</div>
+
+<div class="card">
+<img src="images/consumer.jpg">
+<h3>Consumer Forum</h3>
+<p>Consumer protection and complaints.</p>
+</div>
+
+</div>
+
 </section>
+
+<!-- OFFICES -->
 
 <section id="offices">
-  <h2>Our Offices – Kolkata</h2>
-  <div class="grid">
-    <div class="office-card">
-      <h3>Metiabruz Office</h3>
-      <img src="images/metiabruz.jpg" class="office-img">
-      <p>Metiabruz, Kolkata</p>
-    </div>
-
-    <div class="office-card">
-      <h3>Gariahat Office</h3>
-      <img src="images/gariahat.jpg" class="office-img">
-      <p>103 Ballygunge Gardens</p>
-    </div>
-
-    <div class="office-card">
-      <h3>New Town Office</h3>
-      <img src="images/newtown.jpg" class="office-img">
-      <p>New Town, Kolkata</p>
-    </div>
-  </div>
+<h2>Our Offices</h2>
+<p style="text-align:center">Kolkata Offices</p>
 </section>
+
+<!-- CONSULTANT -->
 
 <section id="consultant">
-  <h2>Consultant in Kolkata</h2>
-  <div class="grid">
-
-    <div class="office-card">
-      <h3>Metiabruz Office</h3>
-      <img src="images/aftab.jpg" class="consultant-img">
-      <p>Aftab Alam</p>
-    </div>
-
-    <div class="office-card">
-      <h3>Gariahat Office</h3>
-      <img src="images/arnab.jpg" class="consultant-img">
-      <p>Arnab Bera</p>
-    </div>
-
-    <div class="office-card">
-      <h3>NewTown Office</h3>
-      <img src="images/pratik.jpg" class="consultant-img">
-      <p>Pratik Majumder</p>
-    </div>
-
-  </div>
+<h2>Consultant</h2>
+<p style="text-align:center">Professional legal consultants</p>
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <div class="grid">
-    <img src="images/contact.jpg" class="contact-img">
-    <div class="contact-box">
-      <p><i class="fa-solid fa-phone"></i> 7439297280</p>
-      <p><i class="fa-solid fa-envelope"></i> consultkaro2025@gmail.com</p>
-      <p><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</p>
-    </div>
-  </div>
+<h2>Contact</h2>
+<p style="text-align:center">Reach us anytime</p>
 </section>
 
-<footer>
-  <p>© 2025 NagarikSuraksha. All Rights Reserved.</p>
+<footer style="background:#020617;padding:25px;text-align:center">
+© 2026 NagarikSuraksha
 </footer>
 
 <div class="floating-social">
-  <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-  <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-  <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-  <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-</div>
-
-<div id="consultationForm">
-  <div class="modal-content">
-    <span class="close-btn" id="closeFormBtn">&times;</span>
-    <h2>Free Consultation</h2>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone" required>
-      <textarea rows="4" placeholder="Message" required></textarea>
-      <button class="btn">Submit</button>
-    </form>
-  </div>
+<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 </div>
 
 <script>
-let slides=document.querySelectorAll('.slide');
-let index=0;
+
+/* slider */
+
+let slides=document.querySelectorAll(".slide");
+let i=0;
+
 setInterval(()=>{
-  slides[index].classList.remove('active');
-  index=(index+1)%slides.length;
-  slides[index].classList.add('active');
-},5000);
+slides[i].classList.remove("active");
+i=(i+1)%slides.length;
+slides[i].classList.add("active");
+},4000);
+
+/* mobile menu */
 
 const menuToggle=document.getElementById("menuToggle");
 const navMenu=document.getElementById("navMenu");
-menuToggle.onclick=()=>navMenu.classList.toggle("active");
 
-const modal=document.getElementById("consultationForm");
-document.getElementById("openFormBtn").onclick=()=>modal.style.display="flex";
-document.getElementById("closeFormBtn").onclick=()=>modal.style.display="none";
-window.onclick=e=>{if(e.target==modal)modal.style.display="none";}
+menuToggle.onclick=function(){
+navMenu.classList.toggle("active");
+};
+
 </script>
 
 </body>
