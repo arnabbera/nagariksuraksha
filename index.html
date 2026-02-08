@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NagarikSuraksha</title>
+<title>NagarikSuraksha | Legal & Consultancy Services</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -12,110 +12,88 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
+html{scroll-behavior:smooth}
+
 body{
   font-family:'Poppins',sans-serif;
   background:#0b1120;
   color:#e5e7eb;
-  overflow-x:hidden;
 }
 
-/* HEADER */
+section{padding:90px 10%}
+h2{font-size:36px;color:#38bdf8;margin-bottom:25px}
 
+/* HEADER */
 header{
   position:fixed;
   top:0;
   width:100%;
   background:#020617;
-  padding:12px 5%;
+  padding:12px 10%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   z-index:1000;
 }
 
-.logo img{height:50px}
-
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-  color:#fff;
-}
-
-nav{
-  display:flex;
-  gap:25px;
-}
+.logo img{height:60px}
 
 nav a{
+  margin-left:35px;
+  font-weight:600;
   color:#e5e7eb;
   text-decoration:none;
-  font-weight:600;
 }
+nav a:hover{color:#38bdf8}
 
-/* SECTIONS */
-
-section{
-  padding:100px 6% 60px;
-}
-
-h2{
-  font-size:32px;
-  color:#38bdf8;
-  margin-bottom:25px;
-  text-align:center;
-}
-
-/* HERO */
-
+/* HOME */
 .home{
+  min-height:100vh;
   display:flex;
   align-items:center;
   gap:40px;
-  flex-wrap:wrap;
 }
 
 .home-text{flex:1}
-.home h1{font-size:40px;margin-bottom:20px}
+.home h1{font-size:46px;margin-bottom:20px}
 .home span{color:#38bdf8}
+.home-slider{flex:1}
 
 /* BUTTONS */
-
 .btn{
   display:inline-block;
-  margin-top:12px;
-  padding:14px 28px;
+  margin-top:20px;
+  padding:14px 32px;
+  background:#38bdf8;
+  color:#020617;
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
+  cursor:pointer;
 }
-
-.primary{background:#38bdf8;color:#000}
-.secondary{
+.btn.alt{
+  background:transparent;
   border:2px solid #38bdf8;
   color:#38bdf8;
-  margin-left:10px;
+  margin-left:15px;
 }
 
 /* SLIDER */
-
 .slider{
-  flex:1;
-  height:300px;
-  border-radius:20px;
-  overflow:hidden;
   position:relative;
+  width:100%;
+  height:340px;
+  overflow:hidden;
+  border-radius:20px;
+  background:#020617;
 }
-
 .slide{
   position:absolute;
   inset:0;
   opacity:0;
-  transition:1s;
+  transition:opacity 1s ease-in-out;
 }
-
 .slide.active{opacity:1}
-
 .slide img{
   width:100%;
   height:100%;
@@ -123,112 +101,125 @@ h2{
 }
 
 /* GRID */
-
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
 }
 
-.card{
+/* CARDS */
+.card,.office-card,.contact-box{
   background:#020617;
-  padding:20px;
-  border-radius:16px;
+  padding:25px;
+  border-radius:18px;
 }
 
-.card img{
+/* OFFICE IMAGES */
+.office-img{
   width:100%;
   height:200px;
   object-fit:cover;
-  border-radius:12px;
-  margin-bottom:10px;
+  border-radius:14px;
+  margin:15px 0;
+}
+
+/* CONSULTANT IMAGES */
+.consultant-img{
+  width:100%;
+  height:220px;
+  object-fit:contain;
+  background:#020617;
+  padding:10px;
+  border-radius:14px;
+  margin:15px 0;
+}
+
+/* CONTACT IMAGE */
+.contact-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  padding:40px 10%;
+  text-align:center;
 }
 
 /* FLOATING SOCIAL */
-
 .floating-social{
   position:fixed;
-  bottom:12px;
-  right:8px;
+  bottom:25px;
+  right:25px;
   display:flex;
-  gap:6px;
+  gap:12px;
   z-index:999;
 }
 
 .floating-social a{
-  width:42px;
-  height:42px;
+  width:55px;
+  height:55px;
   border-radius:50%;
+  color:#fff;
+  font-size:24px;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:#fff;
-  font-size:18px;
 }
 
+.whatsapp{background:#25d366}
 .facebook{background:#1877f2}
 .instagram{background:#e1306c}
 .linkedin{background:#0a66c2}
-.whatsapp{background:#25d366}
 
 /* MOBILE */
-
 @media(max-width:768px){
+  header{flex-direction:column}
+  .home{flex-direction:column;text-align:center}
+}
 
-.menu-toggle{display:block}
-
-nav{
-  position:absolute;
-  top:65px;
-  left:0;
-  width:100%;
+/* MODAL FORM */
+#consultationForm{
+  display:none; /* hidden initially */
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+}
+#consultationForm .modal-content{
   background:#020617;
-  flex-direction:column;
-  display:none;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:500px;
+  position:relative;
+  color:#e5e7eb;
 }
-
-nav.active{display:flex}
-
-nav a{
-  padding:15px;
-  text-align:center;
-  border-top:1px solid #111;
+#consultationForm .close-btn{
+  position:absolute;
+  top:15px;
+  right:20px;
+  font-size:24px;
+  cursor:pointer;
 }
-
-section{padding:85px 5% 45px}
-
-.home{
-  flex-direction:column;
-  text-align:center;
-  gap:20px;
+#consultationForm h2{
+  color:#38bdf8;
+  margin-bottom:20px;
 }
-
-.home h1{font-size:26px}
-
-.slider{height:200px}
-
-.btn{
-  display:block;
+#consultationForm input, #consultationForm textarea{
   width:100%;
-  margin:8px 0;
+  padding:10px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:none;
 }
-
-.secondary{margin-left:0}
-
-h2{font-size:26px}
-
-}
-
-/* SMALL PHONES */
-
-@media(max-width:480px){
-
-section{padding:75px 4% 40px}
-
-.home h1{font-size:22px}
-
-.slider{height:170px}
-
+#consultationForm button{
+  width:100%;
 }
 </style>
 </head>
@@ -236,131 +227,191 @@ section{padding:75px 4% 40px}
 <body>
 
 <header>
-
-<div class="logo">
-<img src="logo.png">
-</div>
-
-<div class="menu-toggle" id="menuToggle">
-<i class="fas fa-bars"></i>
-</div>
-
-<nav id="navMenu">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#offices">Offices</a>
-<a href="#consultant">Consultant</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <div class="logo">
+    <img src="images/logo.png" alt="NagarikSuraksha">
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#offices">Offices</a>
+    <a href="#consultant">Consultant</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- HERO -->
-
+<!-- HOME -->
 <section id="home" class="home">
+  <div class="home-text">
+    <h1><span>NagarikSuraksha</span><br>Your Trusted Legal & Citizen Protection Partner</h1>
+    <p>Professional assistance in civil suits, criminal cases, and consumer forum matters.</p>
+    <button class="btn" id="openFormBtn">Free Consultation</button>
+    <a href="#services" class="btn alt">Explore Services</a>
+  </div>
 
-<div class="home-text">
-<h1><span>NagarikSuraksha</span><br>
-Your Trusted Legal & Citizen Protection Partner</h1>
-
-<p>Professional assistance in civil suits, criminal cases, and consumer forum matters.</p>
-
-<a href="#" class="btn primary">Free Consultation</a>
-<a href="#services" class="btn secondary">Explore Services</a>
-</div>
-
-<div class="slider">
-<div class="slide active"><img src="hero1.jpg"></div>
-<div class="slide"><img src="hero2.jpg"></div>
-<div class="slide"><img src="hero3.jpg"></div>
-</div>
-
+  <div class="home-slider slider">
+    <div class="slide active"><img src="images/hero1.jpg"></div>
+    <div class="slide"><img src="images/hero2.jpg"></div>
+    <div class="slide"><img src="images/hero3.jpg"></div>
+  </div>
 </section>
 
 <!-- SERVICES -->
-
 <section id="services">
+  <h2>Our Legal Services</h2>
+  <div class="grid">
 
-<h2>Our Legal Services</h2>
+    <div class="card">
+      <img src="images/civil.png" class="office-img">
+      <h3>Civil Suit</h3>
+      <p>
+        Legal assistance in civil disputes including property matters, recovery of money,
+        injunctions, declarations, partition suits, and contractual disputes before civil courts.
+      </p>
+    </div>
 
-<div class="grid">
+    <div class="card">
+      <img src="images/criminal.png" class="office-img">
+      <h3>Criminal Case</h3>
+      <p>
+        Assistance in criminal complaints, FIR-related matters, bail applications,
+        trial proceedings, and representation before Magistrate and Sessions Courts.
+      </p>
+    </div>
 
-<div class="card">
-<img src="civil.jpg">
-<h3>Civil Suit</h3>
-<p>Property disputes and money recovery.</p>
-</div>
+    <div class="card">
+      <img src="images/consumer.png" class="office-img">
+      <h3>Consumer Forum Case</h3>
+      <p>
+        Filing and handling of consumer complaints relating to deficiency in service,
+        unfair trade practices, and compensation claims before Consumer Commissions.
+      </p>
+    </div>
 
-<div class="card">
-<img src="criminal.jpg">
-<h3>Criminal Case</h3>
-<p>Legal representation and FIR matters.</p>
-</div>
-
-<div class="card">
-<img src="consumer.jpg">
-<h3>Consumer Forum</h3>
-<p>Consumer protection and complaints.</p>
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <!-- OFFICES -->
-
 <section id="offices">
-<h2>Our Offices</h2>
-<p style="text-align:center">Kolkata Offices</p>
+  <h2>Our Offices – Kolkata</h2>
+  <div class="grid">
+    <div class="office-card">
+      <h3>Metiabruz Office</h3>
+      <img src="images/metiabruz.jpg" class="office-img">
+      <p>Metiabruz, Kolkata</p>
+    </div>
+    <div class="office-card">
+      <h3>Gariahat Office</h3>
+      <img src="images/gariahat.jpg" class="office-img">
+      <p>103 Ballygunge Gardens</p>
+    </div>
+    <div class="office-card">
+      <h3>New Town Office</h3>
+      <img src="images/newtown.jpg" class="office-img">
+      <p>New Town, Kolkata</p>
+    </div>
+  </div>
 </section>
 
-<!-- CONSULTANT -->
-
+<!-- CONSULTANTS -->
 <section id="consultant">
-<h2>Consultant</h2>
-<p style="text-align:center">Professional legal consultants</p>
+  <h2>Consultant in Kolkata</h2>
+  <div class="grid">
+    <div class="office-card">
+      <h3>Metiabruz Office</h3>
+      <img src="images/aftab.jpg" class="consultant-img" alt="Aftab Alam">
+      <p>Aftab Alam</p>
+      <p>[BA, LL.B pursuing]</p>
+      <p>Mobile 7439297280</p>
+    </div>
+
+    <div class="office-card">
+      <h3>Gariahat Office</h3>
+      <img src="images/arnab.jpg" class="consultant-img" alt="Arnab Bera">
+      <p>Arnab Bera</p>
+      <p>[MTech, LL.B pursuing]</p>
+      <p>Mobile 9830015498</p>
+    </div>
+
+    <div class="office-card">
+      <h3>NewTown Office</h3>
+      <img src="images/pratik.jpg" class="consultant-img" alt="Pratik Majumder">
+      <p>Pratik Majumder</p>
+      <p>[MBA, LL.B pursuing]</p>
+      <p>Mobile 9830419552</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-<h2>Contact</h2>
-<p style="text-align:center">Reach us anytime</p>
+  <h2>Contact Us</h2>
+  <div class="grid">
+    <img src="images/contact.jpg" class="contact-img">
+    <div class="contact-box">
+      <p><i class="fa-solid fa-phone"></i>7439297280</p>
+      <p><i class="fa-solid fa-envelope"></i> consultkaro2025@gmail.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Kolkata, West Bengal</p>
+    </div>
+  </div>
 </section>
 
-<footer style="background:#020617;padding:25px;text-align:center">
-© 2026 NagarikSuraksha
+<footer>
+  <p>© 2025 NagarikSuraksha. All Rights Reserved.</p>
 </footer>
 
+<!-- FLOATING SOCIAL -->
 <div class="floating-social">
-<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-<a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-<a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/nagariksuraksha" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/nagariksuraksha" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/" class="youtube" target="_blank"> <i class="fab fa-youtube"></i></a>
+  <a href="https://wa.me/919830015487" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<!-- MODAL FORM -->
+<div id="consultationForm">
+  <div class="modal-content">
+    <span class="close-btn" id="closeFormBtn">&times;</span>
+    <h2>Free Consultation Form</h2>
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
 </div>
 
 <script>
+  // Slider
+  let slides = document.querySelectorAll('.slide');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 5000);
 
-/* slider */
+  // Modal logic
+  const modal = document.getElementById('consultationForm');
+  const openBtn = document.getElementById('openFormBtn');
+  const closeBtn = document.getElementById('closeFormBtn');
 
-let slides=document.querySelectorAll(".slide");
-let i=0;
+  openBtn.onclick = () => modal.style.display = 'flex';
+  closeBtn.onclick = () => modal.style.display = 'none';
+  window.onclick = e => { if(e.target == modal) modal.style.display = 'none'; };
 
-setInterval(()=>{
-slides[i].classList.remove("active");
-i=(i+1)%slides.length;
-slides[i].classList.add("active");
-},4000);
-
-/* mobile menu */
-
-const menuToggle=document.getElementById("menuToggle");
-const navMenu=document.getElementById("navMenu");
-
-menuToggle.onclick=function(){
-navMenu.classList.toggle("active");
-};
-
+  // WhatsApp submission
+  document.getElementById('whatsappForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const whatsappNumber = '919830015487';
+    const text = `*Free Consultation Request*\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
+  });
 </script>
 
 </body>
