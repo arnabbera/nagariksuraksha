@@ -176,9 +176,26 @@ footer{
 .linkedin{background:#0a66c2}
 
 /* MOBILE */
+.mobile-toggle{display:none;font-size:26px;cursor:pointer}
 @media(max-width:768px){
-  header{flex-direction:column}
-  .home{flex-direction:column;text-align:center}
+  nav ul{
+    flex-direction:column;
+    display:none; /* hidden by default */
+    background:#083fa8;
+    width:100%;
+    padding:15px;
+    position:absolute;
+    top:60px; /* below header */
+    left:0;
+    z-index:1000;
+  }
+  nav ul.active{
+    display:flex;
+  }
+  .mobile-toggle{
+    display:block;
+    color:#fff;
+  }
 }
 
 /* MODAL FORM */
