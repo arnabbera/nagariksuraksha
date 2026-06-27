@@ -175,10 +175,118 @@ footer{
 .instagram{background:#e1306c}
 .linkedin{background:#0a66c2}
 
-/* MOBILE */
+/* MOBILE RESPONSIVE FIXES (from ConsultKaro) */
 @media(max-width:768px){
-  header{flex-direction:column}
-  .home{flex-direction:column;text-align:center}
+  /* HEADER FIX */
+  header{
+    padding:12px 6%;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .menu-toggle{
+    display:block;
+    font-size:26px;
+    cursor:pointer;
+    color:#fff;
+    margin-left:auto;
+  }
+  nav{
+    width:100%;
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  nav a{
+    margin-left:0;
+    padding:8px 0;
+    font-size:14px;
+  }
+  /* SECTION PADDING */
+  section{
+    padding:80px 6%;
+  }
+  /* HOME SECTION */
+  .home{
+    flex-direction:column;
+    text-align:center;
+  }
+  .home h1{
+    font-size:32px;
+  }
+  .home-slider{
+    width:100%;
+  }
+  .slider{
+    height:60vh;
+    min-height:280px;
+  }
+  .slide img{
+    object-fit:cover;
+  }
+  /* BUTTONS */
+  .btn,
+  .btn.alt{
+    display:block;
+    width:100%;
+    margin:12px auto 0;
+  }
+  .btn.alt{
+    margin-left:0;
+  }
+  /* GRID STACK */
+  .grid{
+    grid-template-columns:1fr;
+  }
+  /* IMAGES SCALE */
+  .office-img,
+  .consultant-img,
+  .contact-img{
+    height:auto;
+  }
+  /* FOOTER */
+  footer{
+    padding:25px 6%;
+    font-size:14px;
+  }
+  /* FLOATING SOCIAL */
+  .floating-social{
+    right:12px;
+    bottom:12px;
+  }
+  .floating-social a{
+    width:48px;
+    height:48px;
+    font-size:20px;
+  }
+}
+/* MOBILE MENU FIX */
+@media(max-width:768px){
+  header{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .menu-toggle{
+    display:block;
+  }
+  nav{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#020617;
+    flex-direction:column;
+    display:none;
+    padding:20px 6%;
+  }
+  nav a{
+    margin:10px 0;
+    font-size:16px;
+  }
+  nav.active{
+    display:flex;
+  }
 }
 
 /* Additional mobile responsiveness */
@@ -248,7 +356,7 @@ h2 {font-size: 28px; margin-bottom: 20px;}
   <div class="logo">
     <img src="images/logo.png" alt="NagarikSuraksha">
   </div>
-  <nav>
+  <nav id="mobileMenu">
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#offices">Offices</a>
@@ -430,6 +538,12 @@ h2 {font-size: 28px; margin-bottom: 20px;}
     const text = `*Free Consultation Request*\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`, '_blank');
   });
+  // Hamburger menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.onclick = () => {
+    mobileMenu.classList.toggle('active');
+  };
 </script>
 
 </body>
