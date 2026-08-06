@@ -1,52 +1,39 @@
+import AnnouncementBar from "../components/AnnouncementBar";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import ServicesSection from "../components/ServicesSection";
+import WhyChooseUs from "../components/WhyChooseUs";
+import StatsSection from "../components/StatsSection";
+import LearningSection from "../components/LearningSection";
+import LatestUpdates from "../components/LatestUpdates";
+import VideosSection from "../components/VideosSection";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
+import ContactCTA from "../components/ContactCTA";
+import Footer from "../components/Footer";
 
-import Button from "../../../shared/ui/Button";
-import Card from "../../../shared/ui/Card";
-import Container from "../../../shared/ui/Container";
-import Heading from "../../../shared/ui/Heading";
-import Section from "../../../shared/ui/Section";
-
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
+      <AnnouncementBar />
       <Header />
 
-      <Section className="bg-slate-100">
-        <Container>
-          <Heading
-            title="Welcome to NagarikSuraksha"
-            subtitle="Legal Services • Legal Education • Certification"
-          />
+      <main>
+        <Hero />
+        <ServicesSection />
+        <WhyChooseUs />
+        <StatsSection />
+        <LearningSection />
+        <LatestUpdates />
+        <VideosSection />
+        <Testimonials />
+        <FAQ />
+        <ContactCTA />
+      </main>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <Card>
-              <h3 className="text-xl font-semibold">Legal Services</h3>
-              <p className="mt-2 text-slate-600">
-                Professional legal guidance for citizens.
-              </p>
-            </Card>
-
-            <Card>
-              <h3 className="text-xl font-semibold">LL.B Learning</h3>
-              <p className="mt-2 text-slate-600">
-                Structured learning with notes, videos and quizzes.
-              </p>
-            </Card>
-
-            <Card>
-              <h3 className="text-xl font-semibold">Certification</h3>
-              <p className="mt-2 text-slate-600">
-                Complete courses and earn certificates.
-              </p>
-            </Card>
-          </div>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Button>Student Login</Button>
-            <Button variant="outline">Explore Courses</Button>
-          </div>
-        </Container>
-      </Section>
+      <Footer />
     </>
   );
-}
+};
+
+export default HomePage;
