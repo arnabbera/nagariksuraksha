@@ -1,130 +1,192 @@
+import { useEffect, useState } from "react";
 import {
   FaBook,
   FaComments,
   FaFileAlt,
-  FaUsers,
-  FaVideo,
+  FaGavel,
+  FaPlus,
   FaUserGraduate,
+  FaVideo,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const cards = [
-  {
-    title: "Students",
-    value: "0",
-    color: "bg-blue-600",
-    icon: FaUserGraduate,
-  },
-  {
-    title: "Courses",
-    value: "0",
-    color: "bg-green-600",
-    icon: FaBook,
-  },
-  {
-    title: "Posts",
-    value: "0",
-    color: "bg-orange-500",
-    icon: FaFileAlt,
-  },
-  {
-    title: "Videos",
-    value: "0",
-    color: "bg-red-600",
-    icon: FaVideo,
-  },
-  {
-    title: "Comments",
-    value: "0",
-    color: "bg-purple-600",
-    icon: FaComments,
-  },
-  {
-    title: "Users",
-    value: "0",
-    color: "bg-cyan-600",
-    icon: FaUsers,
-  },
-];
+import Button from "../../../shared/components/Button";
+import Card from "../../../shared/components/Card";
+import EmptyState from "../../../shared/components/EmptyState";
+import LoadingSpinner from "../../../shared/components/LoadingSpinner";
+import PageHeader from "../../../shared/components/PageHeader";
 
-export default function Dashboard() {
+import { getDashboardStatistics } from "../../../services/dashboardService";
+
+const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const [loading, setLoading] = useState(true);
+
+  const [stats, setStats] = useState({
+    students: 0,
+    courses: 0,
+    articles: 0,
+    videos: 0,
+    legalServices: 0,
+    pendingComments: 0,
+  });
+
+  useEffect(() => {
+    loadDashboard();
+  }, []);
+
+  const loadDashboard = async () => {
+    try {
+      setLoading(true);
+
+      const result =
+        await getDashboardStatistics();
+
+      setStats(result);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <LoadingSpinner
+        fullPage
+        text="Loading Dashboard..."
+      />
+    );
+  }
+
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold text-slate-900">
-          Dashboard
-        </h1>
+    <>
+      <PageHeader
+        title="Dashboard"
+        description="Welcome to NagarikSuraksha Administration"
+      />
 
-        <p className="mt-2 text-slate-600">
-          Welcome to the NagarikSuraksha Administration Portal.
-        </p>
+      {/* Statistics */}
+
+      <div className="dashboard-grid">
+
+        <Card>
+          <h4>Students</h4>
+          <h1>{stats.students}</h1>
+        </Card>
+
+        <Card>
+          <h4>Courses</h4>
+          <h1>{stats.courses}</h1>
+        </Card>
+
+        <Card>
+          <h4>Articles</h4>
+          <h1>{stats.articles}</h1>
+        </Card>
+
+        <Card>
+          <h4>Videos</h4>
+          <h1>{stats.videos}</h1>
+        </Card>
+
+        <Card>
+          <h4>Services</h4>
+          <h1>{stats.legalServices}</h1>
+        </Card>
+
+        <Card>
+          <h4>Pending Comments</h4>
+          <h1>{stats.pendingComments}</h1>
+        </Card>
+
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        {cards.map((card) => {
-          const Icon = card.icon;
+      <br />
 
-          return (
-            <div
-              key={card.title}
-              className="rounded-2xl bg-white p-6 shadow"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-slate-500">
-                    {card.title}
-                  </p>
+      <Card
+        title="Quick Actions"
+        subtitle="Frequently used administration tasks"
+      >
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 15,
+          }}
+        >
+          <Button
+            leftIcon={<FaPlus />}
+            onClick={() =>
+              navigate("/admin/articles")
+            }
+          >
+            Add Article
+          </Button>
 
-                  <h2 className="mt-3 text-4xl font-bold">
-                    {card.value}
-                  </h2>
-                </div>
+          <Button
+            leftIcon={<FaBook />}
+            onClick={() =>
+              navigate("/admin/courses")
+            }
+          >
+            Add Course
+          </Button>
 
-                <div
-                  className={`${card.color} rounded-xl p-4 text-white`}
-                >
-                  <Icon size={28} />
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+          <Button
+            leftIcon={<FaVideo />}
+            onClick={() =>
+              navigate("/admin/videos")
+            }
+          >
+            Add Video
+          </Button>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="rounded-2xl bg-white p-6 shadow">
-          <h2 className="mb-5 text-xl font-bold">
-            Recent Activity
-          </h2>
-
-          <div className="rounded-lg border border-dashed border-slate-300 p-12 text-center text-slate-500">
-            Activity Log will appear here.
-          </div>
+          <Button
+            leftIcon={<FaGavel />}
+            onClick={() =>
+              navigate("/admin/services")
+            }
+          >
+            Add Service
+          </Button>
         </div>
+      </Card>
 
-        <div className="rounded-2xl bg-white p-6 shadow">
-          <h2 className="mb-5 text-xl font-bold">
-            Quick Actions
-          </h2>
+      <br />
 
-          <div className="grid gap-4">
-            <button className="rounded-xl bg-blue-600 px-5 py-4 text-left font-semibold text-white hover:bg-blue-700">
-              + Create New Post
-            </button>
+      <Card
+        title="Recent Activity"
+        subtitle="Latest activities across the portal"
+      >
+        <EmptyState
+          title="No Activity Yet"
+          description="Activities will automatically appear here."
+        />
+      </Card>
 
-            <button className="rounded-xl bg-green-600 px-5 py-4 text-left font-semibold text-white hover:bg-green-700">
-              + Add YouTube Video
-            </button>
+      <style>{`
+        .dashboard-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+            margin-bottom:20px;
+        }
 
-            <button className="rounded-xl bg-orange-500 px-5 py-4 text-left font-semibold text-white hover:bg-orange-600">
-              + Add Course
-            </button>
+        .dashboard-grid h4{
+            color:#64748b;
+            margin:0;
+        }
 
-            <button className="rounded-xl bg-purple-600 px-5 py-4 text-left font-semibold text-white hover:bg-purple-700">
-              + Manage Homepage
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+        .dashboard-grid h1{
+            font-size:42px;
+            margin:10px 0 0;
+            color:#2563eb;
+        }
+      `}</style>
+    </>
   );
-}
+};
+
+export default Dashboard;

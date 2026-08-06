@@ -12,7 +12,6 @@ import { USER_ROLES } from "../constants/enums";
 import { auth } from "../firebase/firebase";
 import { createUserModel } from "../models/UserModel";
 import { userRepository } from "../repositories/UserRepository";
-import { generateEnrollmentId } from "./users/enrollmentService";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -33,57 +32,89 @@ export const createAuthenticatedUserProfile = async (
   firebaseUser,
 ) => {
   if (!firebaseUser?.uid || !firebaseUser?.email) {
-    throw new Error("A valid authenticated user is required.");
+    throw new Error(
+      "A valid authenticated user is required.",
+    );
   }
 
-  const existingUser = await userRepository.getByUid(
-    firebaseUser.uid,
-  );
+  const email = normalizeEmail(firebaseUser.email);
+  const role = getRoleFromEmail(email);
+
+  const existingUser =
+    await userRepository.getByUid(firebaseUser.uid);
 
   if (existingUser) {
-    const currentLoginCount = Number(
-      existingUser.loginCount || 0,
-    );
-
     return userRepository.update(firebaseUser.uid, {
+      email,
+
       displayName:
         firebaseUser.displayName ||
         existingUser.displayName ||
         "",
+
       photoURL:
         firebaseUser.photoURL ||
         existingUser.photoURL ||
         "",
+
+      phone:
+        firebaseUser.phoneNumber ||
+        existingUser.phone ||
+        "",
+
       emailVerified:
         firebaseUser.emailVerified ??
         existingUser.emailVerified ??
         false,
-      previousLoginAt: existingUser.lastLoginAt || null,
+
+      role,
+
+      enrollmentId:
+        role === USER_ROLES.ADMIN
+          ? null
+          : existingUser.enrollmentId || null,
+
+      previousLoginAt:
+        existingUser.lastLoginAt || null,
+
       lastLoginAt: new Date(),
-      loginCount: currentLoginCount + 1,
+
+      loginCount:
+        Number(existingUser.loginCount || 0) + 1,
+
       updatedBy: firebaseUser.uid,
-      version: Number(existingUser.version || 1) + 1,
+
+      version:
+        Number(existingUser.version || 1) + 1,
     });
   }
 
-  const role = getRoleFromEmail(firebaseUser.email);
-
-
-	  
-const enrollmentId = null;
-
   const userModel = createUserModel({
     uid: firebaseUser.uid,
-    enrollmentId,
-    email: normalizeEmail(firebaseUser.email),
+
+    enrollmentId: null,
+
+    email,
+
     displayName: firebaseUser.displayName || "",
+
     photoURL: firebaseUser.photoURL || "",
+
     phone: firebaseUser.phoneNumber || "",
+
     role,
-    emailVerified: firebaseUser.emailVerified || false,
+
+    emailVerified:
+      firebaseUser.emailVerified || false,
+
     loginCount: 1,
+
+    previousLoginAt: null,
+
     lastLoginAt: new Date(),
+
     createdBy: firebaseUser.uid,
+
     updatedBy: firebaseUser.uid,
   });
 
@@ -94,16 +125,20 @@ const enrollmentId = null;
 };
 
 export const loginWithGoogle = async () => {
-  await setPersistence(auth, browserLocalPersistence);
+  await setPersistence(
+    auth,
+    browserLocalPersistence,
+  );
 
   const loginResult = await signInWithPopup(
     auth,
     googleProvider,
   );
 
-  const profile = await createAuthenticatedUserProfile(
-    loginResult.user,
-  );
+  const profile =
+    await createAuthenticatedUserProfile(
+      loginResult.user,
+    );
 
   return {
     firebaseUser: loginResult.user,
@@ -115,11 +150,13 @@ export const logoutUser = async () => {
   await signOut(auth);
 };
 
-export const subscribeToAuthentication = (callback) =>
-  onAuthStateChanged(auth, callback);
+export const subscribeToAuthentication = (
+  callback,
+) => onAuthStateChanged(auth, callback);
 
 export const getCurrentFirebaseUser = () =>
   auth.currentUser;
 
 export const isAdminEmail = (email) =>
-  getRoleFromEmail(email) === USER_ROLES.ADMIN;
+  getRoleFromEmail(email) ===
+  USER_ROLES.ADMIN;
