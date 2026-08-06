@@ -175,7 +175,7 @@ const Footer = () => {
                     Phone
                   </p>
 
-                  <p>+91 XXXXX XXXXX</p>
+                  <p>+91 98300 15487</p>
                 </div>
               </div>
 
@@ -187,7 +187,7 @@ const Footer = () => {
                     Email
                   </p>
 
-                  <p>info@nagariksuraksha.com</p>
+                  <p>beraarnab@gmail.com</p>
                 </div>
               </div>
 

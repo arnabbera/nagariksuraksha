@@ -1,7 +1,11 @@
 // src/features/home/components/Header.jsx
 
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useNavigate,
+} from "react-router-dom";
 import {
   FaBars,
   FaTimes,
@@ -10,10 +14,16 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 
+import { loginWithGoogle } from "../../../services/authService";
+
 const Header = () => {
+  const navigate = useNavigate();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [learningOpen, setLearningOpen] = useState(false);
+  const [loginLoading, setLoginLoading] = useState(false);
+  const [loginError, setLoginError] = useState("");
 
   const navStyle = ({ isActive }) => ({
     color: isActive ? "#2563eb" : "#1e293b",
@@ -42,6 +52,39 @@ const Header = () => {
     borderBottom: "1px solid #f1f5f9",
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      setLoginLoading(true);
+      setLoginError("");
+
+      const { profile } = await loginWithGoogle();
+
+      setMenuOpen(false);
+
+      navigate(
+        profile?.role === "admin" ? "/admin" : "/student",
+        { replace: true },
+      );
+    } catch (error) {
+      console.error("Google login failed:", error);
+
+      if (error?.code === "auth/popup-closed-by-user") {
+        setLoginError("");
+      } else if (error?.code === "auth/popup-blocked") {
+        setLoginError(
+          "Google login popup was blocked. Please allow popups and try again.",
+        );
+      } else {
+        setLoginError(
+          error?.message ||
+            "Google login failed. Please try again.",
+        );
+      }
+    } finally {
+      setLoginLoading(false);
+    }
+  };
+
   return (
     <header
       style={{
@@ -62,8 +105,6 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        {/* Logo */}
-
         <Link
           to="/"
           style={{
@@ -73,10 +114,7 @@ const Header = () => {
             textDecoration: "none",
           }}
         >
-          <FaBalanceScale
-            size={36}
-            color="#2563eb"
-          />
+          <FaBalanceScale size={36} color="#2563eb" />
 
           <div>
             <h2
@@ -98,8 +136,6 @@ const Header = () => {
           </div>
         </Link>
 
-        {/* Desktop Menu */}
-
         <nav
           className="desktop-menu"
           style={{
@@ -108,21 +144,13 @@ const Header = () => {
             alignItems: "center",
           }}
         >
-          <NavLink
-            to="/"
-            style={navStyle}
-          >
+          <NavLink to="/" style={navStyle}>
             Home
           </NavLink>
 
-          <NavLink
-            to="/about"
-            style={navStyle}
-          >
+          <NavLink to="/about" style={navStyle}>
             About
           </NavLink>
-
-          {/* Legal Services */}
 
           <div
             style={{ position: "relative" }}
@@ -166,8 +194,6 @@ const Header = () => {
             )}
           </div>
 
-          {/* Learning */}
-
           <div
             style={{ position: "relative" }}
             onMouseEnter={() => setLearningOpen(true)}
@@ -188,19 +214,43 @@ const Header = () => {
 
             {learningOpen && (
               <div style={dropdownStyle}>
-                <Link
-                  to="/learning"
-                  style={dropdownLink}
+                <button
+                  type="button"
+                  onClick={handleGoogleLogin}
+                  disabled={loginLoading}
+                  style={{
+                    ...dropdownLink,
+                    width: "100%",
+                    border: "none",
+                    background: "#ffffff",
+                    textAlign: "left",
+                    cursor: loginLoading
+                      ? "not-allowed"
+                      : "pointer",
+                    opacity: loginLoading ? 0.7 : 1,
+                  }}
                 >
                   LL.B Learning
-                </Link>
+                </button>
 
-                <Link
-                  to="/certification"
-                  style={dropdownLink}
+                <button
+                  type="button"
+                  onClick={handleGoogleLogin}
+                  disabled={loginLoading}
+                  style={{
+                    ...dropdownLink,
+                    width: "100%",
+                    border: "none",
+                    background: "#ffffff",
+                    textAlign: "left",
+                    cursor: loginLoading
+                      ? "not-allowed"
+                      : "pointer",
+                    opacity: loginLoading ? 0.7 : 1,
+                  }}
                 >
                   Certification
-                </Link>
+                </button>
 
                 <Link
                   to="/resources"
@@ -219,43 +269,49 @@ const Header = () => {
             Legal Updates
           </NavLink>
 
-          <NavLink
-            to="/videos"
-            style={navStyle}
-          >
+          <NavLink to="/videos" style={navStyle}>
             Videos
           </NavLink>
 
-          <NavLink
-            to="/contact"
-            style={navStyle}
-          >
+          <NavLink to="/contact" style={navStyle}>
             Contact
           </NavLink>
 
-          <Link
-            to="/login"
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loginLoading}
             style={{
+              border: "none",
               background: "#2563eb",
               color: "#fff",
-              textDecoration: "none",
               padding: "11px 22px",
               borderRadius: "50px",
               display: "flex",
               alignItems: "center",
               gap: "8px",
               fontWeight: 600,
+              cursor: loginLoading
+                ? "not-allowed"
+                : "pointer",
+              opacity: loginLoading ? 0.7 : 1,
             }}
           >
             <FaUserGraduate />
-            Student Login
-          </Link>
+            {loginLoading
+              ? "Signing in..."
+              : "Student Login"}
+          </button>
         </nav>
 
-        {/* Mobile Button */}
-
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          type="button"
+          aria-label={
+            menuOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          }
+          onClick={() => setMenuOpen((current) => !current)}
           style={{
             border: "none",
             background: "transparent",
@@ -269,7 +325,20 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {loginError && (
+        <div
+          style={{
+            background: "#fef2f2",
+            color: "#b91c1c",
+            textAlign: "center",
+            padding: "10px 20px",
+            fontSize: "14px",
+            borderTop: "1px solid #fecaca",
+          }}
+        >
+          {loginError}
+        </div>
+      )}
 
       {menuOpen && (
         <div
@@ -282,27 +351,107 @@ const Header = () => {
             borderTop: "1px solid #e2e8f0",
           }}
         >
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Legal Services</Link>
-          <Link to="/learning">LL.B Learning</Link>
-          <Link to="/legal-updates">Legal Updates</Link>
-          <Link to="/videos">Videos</Link>
-          <Link to="/contact">Contact</Link>
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
 
           <Link
-            to="/login"
+            to="/about"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </Link>
+
+          <Link
+            to="/services"
+            onClick={() => setMenuOpen(false)}
+          >
+            Legal Services
+          </Link>
+
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loginLoading}
             style={{
+              border: "none",
+              background: "transparent",
+              padding: 0,
+              textAlign: "left",
+              color: "#2563eb",
+              cursor: loginLoading
+                ? "not-allowed"
+                : "pointer",
+              fontSize: "16px",
+            }}
+          >
+            LL.B Learning
+          </button>
+
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loginLoading}
+            style={{
+              border: "none",
+              background: "transparent",
+              padding: 0,
+              textAlign: "left",
+              color: "#2563eb",
+              cursor: loginLoading
+                ? "not-allowed"
+                : "pointer",
+              fontSize: "16px",
+            }}
+          >
+            Certification
+          </button>
+
+          <Link
+            to="/legal-updates"
+            onClick={() => setMenuOpen(false)}
+          >
+            Legal Updates
+          </Link>
+
+          <Link
+            to="/videos"
+            onClick={() => setMenuOpen(false)}
+          >
+            Videos
+          </Link>
+
+          <Link
+            to="/contact"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
+
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            disabled={loginLoading}
+            style={{
+              border: "none",
               background: "#2563eb",
               color: "#fff",
-              textDecoration: "none",
               padding: "12px",
               borderRadius: "8px",
               textAlign: "center",
+              cursor: loginLoading
+                ? "not-allowed"
+                : "pointer",
+              opacity: loginLoading ? 0.7 : 1,
             }}
           >
-            Student Login
-          </Link>
+            {loginLoading
+              ? "Signing in..."
+              : "Student Login"}
+          </button>
         </div>
       )}
     </header>
