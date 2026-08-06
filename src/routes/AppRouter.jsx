@@ -4,6 +4,7 @@ import {
   Routes,
 } from "react-router-dom";
 
+import Dashboard from "../features/admin/pages/Dashboard";
 import LoginPage from "../features/auth/pages/LoginPage";
 import AdminLayout from "../shared/layouts/AdminLayout";
 import PublicLayout from "../shared/layouts/PublicLayout";
@@ -12,15 +13,28 @@ import StudentLayout from "../shared/layouts/StudentLayout";
 export default function AppRouter() {
   return (
     <Routes>
+      {/* Public website */}
       <Route path="/" element={<PublicLayout />} />
 
+      {/* Authentication */}
       <Route path="/login" element={<LoginPage />} />
 
-      <Route path="/student/*" element={<StudentLayout />} />
+      {/* Student portal */}
+      <Route
+        path="/student/*"
+        element={<StudentLayout />}
+      />
 
-      <Route path="/admin/*" element={<AdminLayout />} />
+      {/* Admin portal */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Dashboard />} />
+      </Route>
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {/* Unknown routes */}
+      <Route
+        path="*"
+        element={<Navigate to="/" replace />}
+      />
     </Routes>
   );
 }
