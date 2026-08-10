@@ -13,18 +13,38 @@ export const createChapterModel = ({
   chapterNumber = 1,
   displayOrder = 1,
 
+  // =========================================================
+  // VIDEO
+  // =========================================================
+
   youtubeUrl = "",
   youtubeVideoId = "",
   videoDuration = "",
 
+  // =========================================================
+  // PDF / STUDY MATERIAL
+  // =========================================================
+
   pdfUrl = "",
   pdfStoragePath = "",
-  downloadable = false,
+  pdfPublicId = "",
+  pdfFileName = "",
+  pdfFileSize = 0,
+  pdfContentType = "",
+  pdfAssetId = "",
+
+  // =========================================================
+  // QUIZ
+  // =========================================================
 
   quizId = "",
   quizRequired = true,
   passingPercentage = 80,
   maximumAttempts = 3,
+
+  // =========================================================
+  // STATUS
+  // =========================================================
 
   published = false,
   previewAvailable = false,
@@ -51,41 +71,127 @@ export const createChapterModel = ({
     version,
   }),
 
+  // =========================================================
+  // COURSE
+  // =========================================================
+
   courseId,
+
+  // =========================================================
+  // CHAPTER
+  // =========================================================
 
   title,
   slug,
   shortDescription,
   notes,
 
-  chapterNumber: Number(chapterNumber || 1),
-  displayOrder: Number(displayOrder || 1),
+  chapterNumber:
+    Number(
+      chapterNumber || 1,
+    ),
+
+  displayOrder:
+    Number(
+      displayOrder || 1,
+    ),
+
+  // =========================================================
+  // VIDEO
+  // =========================================================
 
   video: {
-    youtubeUrl,
-    youtubeVideoId,
-    duration: videoDuration,
+    youtubeUrl:
+      youtubeUrl || "",
+
+    youtubeVideoId:
+      youtubeVideoId || "",
+
+    duration:
+      videoDuration || "",
   },
+
+  // =========================================================
+  // PDF / STUDY MATERIAL
+  // =========================================================
+  //
+  // PDF is uploaded from Admin Portal to Cloudinary.
+  //
+  // Students will read the PDF inside Chapter Learning.
+  //
+  // Download permission will NOT be controlled here.
+  // It will be determined from the student's certification
+  // entitlement.
+  // =========================================================
 
   pdf: {
-    url: pdfUrl,
-    storagePath: pdfStoragePath,
-    downloadable: Boolean(downloadable),
+    url:
+      pdfUrl || "",
+
+    storagePath:
+      pdfStoragePath || "",
+
+    publicId:
+      pdfPublicId || "",
+
+    fileName:
+      pdfFileName || "",
+
+    fileSize:
+      Number(
+        pdfFileSize || 0,
+      ),
+
+    contentType:
+      pdfContentType || "",
+
+    assetId:
+      pdfAssetId || "",
   },
+
+  // =========================================================
+  // QUIZ
+  // =========================================================
 
   quiz: {
-    quizId,
-    required: Boolean(quizRequired),
-    passingPercentage: Number(
-      passingPercentage || 80,
-    ),
-    maximumAttempts: Number(
-      maximumAttempts || 3,
-    ),
+    quizId:
+      quizId || "",
+
+    required:
+      Boolean(
+        quizRequired,
+      ),
+
+    passingPercentage:
+      Number(
+        passingPercentage ||
+          80,
+      ),
+
+    maximumAttempts:
+      Number(
+        maximumAttempts ||
+          3,
+      ),
   },
 
-  published: Boolean(published),
-  previewAvailable: Boolean(previewAvailable),
+  // =========================================================
+  // ACCESS
+  // =========================================================
+
+  published:
+    Boolean(
+      published,
+    ),
+
+  previewAvailable:
+    Boolean(
+      previewAvailable,
+    ),
+
+  // =========================================================
+  // SEARCH
+  // =========================================================
 
   searchKeywords: [
     title,
@@ -94,10 +200,19 @@ export const createChapterModel = ({
   ]
     .filter(Boolean)
     .flatMap((value) =>
-      String(value).toLowerCase().split(/\s+/),
+      String(value)
+        .toLowerCase()
+        .split(/\s+/),
     )
     .filter(
-      (value, index, items) =>
-        value && items.indexOf(value) === index,
+      (
+        value,
+        index,
+        items,
+      ) =>
+        value &&
+        items.indexOf(
+          value,
+        ) === index,
     ),
 });

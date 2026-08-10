@@ -3,7 +3,17 @@
 const CLOUDINARY_CLOUD_NAME = "udxty7iy";
 const CLOUDINARY_UPLOAD_PRESET = "nagariksuraksha_courses";
 
-const sanitiseFileName = (fileName) =>
+// =========================================================
+// FILE LIMITS
+// =========================================================
+
+const MAX_PDF_SIZE = 25 * 1024 * 1024;
+
+// =========================================================
+// FILE NAME HELPER
+// =========================================================
+
+const sanitiseFileName = (fileName = "") =>
   fileName
     .trim()
     .toLowerCase()
@@ -12,188 +22,441 @@ const sanitiseFileName = (fileName) =>
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
 
-/**
- * Upload a file directly to Cloudinary.
- *
- * Keeps the same function interface previously used by
- * Firebase Storage so existing components do not need
- * major changes.
- */
-export const uploadFile = async ({
+// =========================================================
+// GENERIC CLOUDINARY UPLOAD
+// =========================================================
+
+const uploadToCloudinary = ({
   file,
   folder,
+  resourceType = "auto",
   onProgress,
 }) => {
   if (!file) {
-    throw new Error("Please select a file.");
+    return Promise.reject(
+      new Error("Please select a file."),
+    );
   }
 
   if (!folder) {
-    throw new Error("An upload folder is required.");
+    return Promise.reject(
+      new Error("An upload folder is required."),
+    );
   }
 
   const safeFileName =
-    sanitiseFileName(file.name) || `file-${Date.now()}`;
+    sanitiseFileName(file.name) ||
+    `file-${Date.now()}`;
 
-  const publicId = `${Date.now()}-${safeFileName}`;
+  const publicId =
+    `${Date.now()}-${safeFileName}`;
 
   const formData = new FormData();
 
-  formData.append("file", file);
+  formData.append(
+    "file",
+    file,
+  );
+
   formData.append(
     "upload_preset",
     CLOUDINARY_UPLOAD_PRESET,
   );
 
-  formData.append("folder", folder);
-  formData.append("public_id", publicId);
+  formData.append(
+    "folder",
+    folder,
+  );
+
+  formData.append(
+    "public_id",
+    publicId,
+  );
 
   const uploadUrl =
     `https://api.cloudinary.com/v1_1/` +
-    `${CLOUDINARY_CLOUD_NAME}/auto/upload`;
+    `${CLOUDINARY_CLOUD_NAME}/` +
+    `${resourceType}/upload`;
 
-  // Your existing UI expects progress.
-  // We use XMLHttpRequest because fetch() does not provide
-  // browser upload progress events.
-  return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest();
+  return new Promise(
+    (resolve, reject) => {
+      const xhr =
+        new XMLHttpRequest();
 
-    xhr.open("POST", uploadUrl, true);
-
-    xhr.upload.onprogress = (event) => {
-      if (!event.lengthComputable) {
-        return;
-      }
-
-      const progress = Math.round(
-        (event.loaded / event.total) * 100,
+      xhr.open(
+        "POST",
+        uploadUrl,
+        true,
       );
 
-      onProgress?.(progress);
-    };
+      // =====================================================
+      // UPLOAD PROGRESS
+      // =====================================================
 
-    xhr.onerror = () => {
-      reject(
-        new Error(
-          "Unable to connect to Cloudinary. Please check your internet connection.",
-        ),
+      xhr.upload.onprogress = (
+        event,
+      ) => {
+        if (
+          !event.lengthComputable
+        ) {
+          return;
+        }
+
+        const progress =
+          Math.round(
+            (event.loaded /
+              event.total) *
+              100,
+          );
+
+        onProgress?.(
+          progress,
+        );
+      };
+
+      // =====================================================
+      // NETWORK ERROR
+      // =====================================================
+
+      xhr.onerror = () => {
+        reject(
+          new Error(
+            "Unable to connect to Cloudinary. Please check your internet connection.",
+          ),
+        );
+      };
+
+      // =====================================================
+      // CLOUDINARY RESPONSE
+      // =====================================================
+
+      xhr.onload = () => {
+        let result;
+
+        try {
+          result =
+            JSON.parse(
+              xhr.responseText,
+            );
+        } catch {
+          reject(
+            new Error(
+              "Cloudinary returned an invalid response.",
+            ),
+          );
+
+          return;
+        }
+
+        if (
+          xhr.status < 200 ||
+          xhr.status >= 300
+        ) {
+          reject(
+            new Error(
+              result?.error
+                ?.message ||
+                `Cloudinary upload failed (${xhr.status}).`,
+            ),
+          );
+
+          return;
+        }
+
+        onProgress?.(100);
+
+        resolve({
+          downloadURL:
+            result.secure_url,
+
+          storagePath:
+            result.public_id,
+
+          publicId:
+            result.public_id,
+
+          fileName:
+            result.public_id,
+
+          originalFileName:
+            file.name,
+
+          contentType:
+            file.type,
+
+          size:
+            result.bytes ??
+            file.size,
+
+          secureUrl:
+            result.secure_url,
+
+          resourceType:
+            result.resource_type,
+
+          format:
+            result.format ??
+            "",
+
+          width:
+            result.width ??
+            null,
+
+          height:
+            result.height ??
+            null,
+
+          version:
+            result.version ??
+            null,
+
+          assetId:
+            result.asset_id ??
+            "",
+        });
+      };
+
+      xhr.send(
+        formData,
       );
-    };
-
-    xhr.onload = () => {
-      let result;
-
-      try {
-        result = JSON.parse(xhr.responseText);
-      } catch {
-        reject(
-          new Error(
-            "Cloudinary returned an invalid response.",
-          ),
-        );
-        return;
-      }
-
-      if (xhr.status < 200 || xhr.status >= 300) {
-        reject(
-          new Error(
-            result?.error?.message ||
-              `Cloudinary upload failed (${xhr.status}).`,
-          ),
-        );
-        return;
-      }
-
-      onProgress?.(100);
-
-      resolve({
-        // Keep these property names because the existing
-        // CourseForm may already depend on them.
-        downloadURL: result.secure_url,
-        storagePath: result.public_id,
-        fileName: result.public_id,
-
-        originalFileName: file.name,
-        contentType:
-          result.resource_type === "image"
-            ? file.type
-            : file.type,
-        size: result.bytes ?? file.size,
-
-        // Additional Cloudinary information.
-        publicId: result.public_id,
-        secureUrl: result.secure_url,
-        resourceType: result.resource_type,
-        format: result.format ?? "",
-        width: result.width ?? null,
-        height: result.height ?? null,
-      });
-    };
-
-    xhr.send(formData);
-  });
-};
-
-/**
- * Deleting a Cloudinary asset requires an authenticated
- * server-side API call containing the Cloudinary API secret.
- *
- * Never put the API secret in a React/Vite application.
- *
- * For now this method intentionally does not attempt to
- * delete the remote Cloudinary asset.
- */
-export const deleteStoredFile = async (storagePath) => {
-  if (!storagePath) {
-    return;
-  }
-
-  console.warn(
-    "Cloudinary asset deletion requires a secure server-side endpoint:",
-    storagePath,
+    },
   );
 };
 
-/**
- * Upload images used by posts.
- *
- * Preserves the interface used by the previous Firebase
- * Storage implementation.
- */
-export const uploadPostImages = async ({
-  thumbnailFile,
-  desktopFile,
-  mobileFile,
+// =========================================================
+// GENERAL FILE UPLOAD
+// =========================================================
+//
+// IMPORTANT:
+//
+// CourseForm currently uses this function for the working
+// 16:9 and 9:16 course images.
+//
+// Keep this interface unchanged.
+// =========================================================
+
+export const uploadFile = async ({
+  file,
+  folder,
   onProgress,
 }) => {
-  const uploads = {};
-
-  if (thumbnailFile) {
-    uploads.thumbnail = await uploadFile({
-      file: thumbnailFile,
-      folder: "posts/thumbnail",
-      onProgress: (progress) =>
-        onProgress?.("thumbnail", progress),
-    });
-  }
-
-  if (desktopFile) {
-    uploads.desktop = await uploadFile({
-      file: desktopFile,
-      folder: "posts/desktop-16x9",
-      onProgress: (progress) =>
-        onProgress?.("desktop", progress),
-    });
-  }
-
-  if (mobileFile) {
-    uploads.mobile = await uploadFile({
-      file: mobileFile,
-      folder: "posts/mobile-9x16",
-      onProgress: (progress) =>
-        onProgress?.("mobile", progress),
-    });
-  }
-
-  return uploads;
+  return uploadToCloudinary({
+    file,
+    folder,
+    resourceType: "auto",
+    onProgress,
+  });
 };
+
+// =========================================================
+// CHAPTER PDF UPLOAD
+// =========================================================
+
+export const uploadPdf = async ({
+  file,
+  courseId,
+  chapterId,
+  onProgress,
+}) => {
+  if (!file) {
+    throw new Error(
+      "Please select a PDF file.",
+    );
+  }
+
+  // ---------------------------------------------------------
+  // FILE TYPE
+  // ---------------------------------------------------------
+
+  const isPdf =
+    file.type ===
+      "application/pdf" ||
+    file.name
+      ?.toLowerCase()
+      .endsWith(".pdf");
+
+  if (!isPdf) {
+    throw new Error(
+      "Only PDF files can be uploaded as chapter study material.",
+    );
+  }
+
+  // ---------------------------------------------------------
+  // FILE SIZE
+  // ---------------------------------------------------------
+
+  if (
+    file.size >
+    MAX_PDF_SIZE
+  ) {
+    throw new Error(
+      "The chapter PDF must be 25 MB or smaller.",
+    );
+  }
+
+  // ---------------------------------------------------------
+  // COURSE / CHAPTER
+  // ---------------------------------------------------------
+
+  if (!courseId) {
+    throw new Error(
+      "Course ID is required before uploading the chapter PDF.",
+    );
+  }
+
+  const safeCourseId =
+    String(courseId)
+      .replace(
+        /[^a-zA-Z0-9_-]/g,
+        "-",
+      );
+
+  const safeChapterId =
+    chapterId
+      ? String(
+          chapterId,
+        ).replace(
+          /[^a-zA-Z0-9_-]/g,
+          "-",
+        )
+      : "new-chapter";
+
+  const folder =
+    `nagariksuraksha/chapters/` +
+    `${safeCourseId}/` +
+    `${safeChapterId}`;
+
+  /*
+   * We intentionally use "auto".
+   *
+   * This keeps the same unsigned Cloudinary preset that is
+   * already working for your course images and allows
+   * Cloudinary to determine the uploaded asset type.
+   */
+  const result =
+    await uploadToCloudinary({
+      file,
+      folder,
+      resourceType:
+        "auto",
+      onProgress,
+    });
+
+  return {
+    ...result,
+
+    originalFileName:
+      file.name,
+
+    contentType:
+      "application/pdf",
+
+    size:
+      result.size ??
+      file.size,
+  };
+};
+
+// =========================================================
+// DELETE CLOUDINARY FILE
+// =========================================================
+//
+// IMPORTANT:
+//
+// Cloudinary deletion requires API Secret authentication.
+//
+// API Secret must NEVER be stored in a React/Vite frontend.
+//
+// We therefore keep this safe placeholder until we create a
+// backend/serverless deletion endpoint.
+// =========================================================
+
+export const deleteStoredFile =
+  async (
+    storagePath,
+  ) => {
+    if (!storagePath) {
+      return;
+    }
+
+    console.warn(
+      "Cloudinary asset deletion requires a secure server-side endpoint:",
+      storagePath,
+    );
+  };
+
+// =========================================================
+// POST IMAGE UPLOAD
+// =========================================================
+//
+// Preserve existing functionality.
+// =========================================================
+
+export const uploadPostImages =
+  async ({
+    thumbnailFile,
+    desktopFile,
+    mobileFile,
+    onProgress,
+  }) => {
+    const uploads = {};
+
+    if (thumbnailFile) {
+      uploads.thumbnail =
+        await uploadFile({
+          file:
+            thumbnailFile,
+
+          folder:
+            "posts/thumbnail",
+
+          onProgress: (
+            progress,
+          ) =>
+            onProgress?.(
+              "thumbnail",
+              progress,
+            ),
+        });
+    }
+
+    if (desktopFile) {
+      uploads.desktop =
+        await uploadFile({
+          file:
+            desktopFile,
+
+          folder:
+            "posts/desktop-16x9",
+
+          onProgress: (
+            progress,
+          ) =>
+            onProgress?.(
+              "desktop",
+              progress,
+            ),
+        });
+    }
+
+    if (mobileFile) {
+      uploads.mobile =
+        await uploadFile({
+          file:
+            mobileFile,
+
+          folder:
+            "posts/mobile-9x16",
+
+          onProgress: (
+            progress,
+          ) =>
+            onProgress?.(
+              "mobile",
+              progress,
+            ),
+        });
+    }
+
+    return uploads;
+  };

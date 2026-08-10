@@ -460,7 +460,7 @@ export default function CourseDetails() {
   // =========================================================
 
   return (
-    <div>
+    <div className="ns-course-details-page">
       <PageHeader
         title={
           course.title
@@ -785,13 +785,22 @@ export default function CourseDetails() {
 
             gap: 24px;
 
-            align-items: start;
+            align-items: stretch;
 
             margin-bottom: 24px;
           }
 
           .ns-course-hero > * {
             min-width: 0;
+            height: 100%;
+          }
+
+          .ns-course-details-page {
+            padding-top: 12px;
+          }
+
+          .ns-course-hero > :last-child {
+            height: 100%;
           }
 
           /* ==================================================
@@ -854,6 +863,7 @@ export default function CourseDetails() {
           .ns-course-intro {
             display: flex;
 
+            height: 100%;
             min-height: 100%;
 
             flex-direction: column;
@@ -1235,6 +1245,11 @@ export default function CourseDetails() {
                 1fr;
 
               gap: 18px;
+            }
+
+            .ns-course-hero > *,
+            .ns-course-hero > :last-child {
+              height: auto;
             }
 
             .ns-course-cover {

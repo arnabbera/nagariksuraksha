@@ -10,6 +10,7 @@ import {
   FaFileAlt,
   FaFilePdf,
   FaLink,
+  FaLock,
 } from "react-icons/fa";
 
 import {
@@ -56,19 +57,14 @@ const getYouTubeEmbedUrl = (
   try {
     const url = new URL(youtubeUrl);
 
-    if (
-      url.hostname.includes(
-        "youtu.be",
-      )
-    ) {
+    if (url.hostname.includes("youtu.be")) {
       return `https://www.youtube.com/embed/${url.pathname.replace(
         "/",
         "",
       )}`;
     }
 
-    const id =
-      url.searchParams.get("v");
+    const id = url.searchParams.get("v");
 
     return id
       ? `https://www.youtube.com/embed/${id}`
@@ -78,14 +74,33 @@ const getYouTubeEmbedUrl = (
   }
 };
 
+const formatFileSize = (bytes = 0) => {
+  const size = Number(bytes || 0);
+
+  if (!size) {
+    return "";
+  }
+
+  if (size < 1024) {
+    return `${size} B`;
+  }
+
+  if (size < 1024 * 1024) {
+    return `${(size / 1024).toFixed(1)} KB`;
+  }
+
+  return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+};
+
 export default function ChapterLearning() {
   /*
-   * The route is:
+   * Route:
    *
    * /student/learn/:courseId/:chapterId
    *
-   * courseId currently contains the COURSE SLUG.
+   * courseId currently contains the course slug.
    */
+
   const {
     courseId: courseSlug,
     chapterId,
@@ -124,8 +139,10 @@ export default function ChapterLearning() {
   const [completing, setCompleting] =
     useState(false);
 
-  const [resourceCompletingId, setResourceCompletingId] =
-    useState("");
+  const [
+    resourceCompletingId,
+    setResourceCompletingId,
+  ] = useState("");
 
   const [error, setError] =
     useState("");
@@ -154,8 +171,7 @@ export default function ChapterLearning() {
       setError("");
 
       // -------------------------------------------------------
-      // STEP 1
-      // Resolve the course URL slug.
+      // Resolve course slug
       // -------------------------------------------------------
 
       const courseData =
@@ -181,8 +197,7 @@ export default function ChapterLearning() {
       setCourse(courseData);
 
       // -------------------------------------------------------
-      // STEP 2
-      // Load student-safe learning data.
+      // Load chapter + resources + progress
       // -------------------------------------------------------
 
       const [
@@ -195,14 +210,6 @@ export default function ChapterLearning() {
           chapterId,
         ),
 
-        /*
-         * IMPORTANT:
-         *
-         * Student query contains:
-         * published == true
-         *
-         * This matches Firestore security rules.
-         */
         getPublishedChaptersByCourse(
           realCourseId,
         ),
@@ -218,7 +225,7 @@ export default function ChapterLearning() {
       ]);
 
       // -------------------------------------------------------
-      // Validate chapter belongs to this course.
+      // Validate chapter
       // -------------------------------------------------------
 
       if (
@@ -239,7 +246,7 @@ export default function ChapterLearning() {
       );
 
       // -------------------------------------------------------
-      // Published chapters only.
+      // Published chapters
       // -------------------------------------------------------
 
       const safeChapterList =
@@ -247,10 +254,8 @@ export default function ChapterLearning() {
           ? chapterList
               .filter(
                 (item) =>
-                  item.published ===
-                    true &&
-                  item.deleted !==
-                    true,
+                  item.published === true &&
+                  item.deleted !== true,
               )
               .sort(
                 (
@@ -273,7 +278,7 @@ export default function ChapterLearning() {
       );
 
       // -------------------------------------------------------
-      // Published resources only.
+      // Published additional resources
       // -------------------------------------------------------
 
       setResources(
@@ -283,7 +288,7 @@ export default function ChapterLearning() {
       );
 
       // -------------------------------------------------------
-      // Existing progress or start chapter.
+      // Progress
       // -------------------------------------------------------
 
       if (existingProgress) {
@@ -295,17 +300,10 @@ export default function ChapterLearning() {
           await startChapter(
             {
               studentId,
-
-              /*
-               * Progress must store the REAL
-               * Firestore course ID.
-               */
               courseId:
                 realCourseId,
-
               chapterId,
             },
-
             studentId,
           );
 
@@ -329,6 +327,47 @@ export default function ChapterLearning() {
       setLoading(false);
     }
   };
+
+  // =========================================================
+  // CHAPTER PDF
+  // =========================================================
+
+  /*
+   * Supports both structures:
+   *
+   * New/nested:
+   * chapter.pdf.url
+   *
+   * Current compatibility fields:
+   * chapter.pdfUrl
+   */
+
+  const chapterPdfUrl =
+    chapter?.pdf?.url ||
+    chapter?.pdfUrl ||
+    "";
+
+  const chapterPdfFileName =
+    chapter?.pdf?.fileName ||
+    chapter?.pdfFileName ||
+    "Chapter Study Material.pdf";
+
+  const chapterPdfFileSize =
+    chapter?.pdf?.fileSize ||
+    chapter?.pdfFileSize ||
+    0;
+
+  const hasChapterPdf =
+    Boolean(chapterPdfUrl);
+
+  /*
+   * UI download permission.
+   *
+   * Keep false until certification/payment entitlement
+   * is connected.
+   */
+  const canDownloadChapterPdf =
+    false;
 
   // =========================================================
   // CURRENT CHAPTER POSITION
@@ -554,6 +593,10 @@ export default function ChapterLearning() {
         </div>
       )}
 
+      {/* =====================================================
+          PROGRESS
+      ====================================================== */}
+
       <div className="ns-learning-progress-summary">
         <div>
           <span>
@@ -561,13 +604,11 @@ export default function ChapterLearning() {
           </span>
 
           <strong>
-            {
-              Number(
-                progress
-                  ?.progressPercentage ||
-                  0,
-              )
-            }
+            {Number(
+              progress
+                ?.progressPercentage ||
+                0,
+            )}
             %
           </strong>
         </div>
@@ -575,17 +616,19 @@ export default function ChapterLearning() {
         <div className="ns-learning-progress-track">
           <div
             style={{
-              width: `${
-                Number(
-                  progress
-                    ?.progressPercentage ||
-                    0,
-                )
-              }%`,
+              width: `${Number(
+                progress
+                  ?.progressPercentage ||
+                  0,
+              )}%`,
             }}
           />
         </div>
       </div>
+
+      {/* =====================================================
+          CHAPTER INTRODUCTION
+      ====================================================== */}
 
       {chapter.notes && (
         <Card
@@ -602,14 +645,102 @@ export default function ChapterLearning() {
         </Card>
       )}
 
+      {/* =====================================================
+          MAIN CHAPTER PDF
+      ====================================================== */}
+
+      {hasChapterPdf && (
+        <div className="ns-chapter-pdf-section">
+          <div className="ns-chapter-pdf-heading">
+            <div className="ns-chapter-pdf-title">
+              <div className="ns-chapter-pdf-icon">
+                <FaFilePdf />
+              </div>
+
+              <div>
+                <h2>
+                  Chapter Study Material
+                </h2>
+
+                <p>
+                  Read the chapter material below.
+                </p>
+              </div>
+            </div>
+
+            <div className="ns-chapter-pdf-file">
+              <strong>
+                {chapterPdfFileName}
+              </strong>
+
+              {chapterPdfFileSize >
+                0 && (
+                <span>
+                  {formatFileSize(
+                    chapterPdfFileSize,
+                  )}
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div className="ns-pdf-reader">
+            <iframe
+              src={`${chapterPdfUrl}#toolbar=0&navpanes=0`}
+              title={`${chapter.title} PDF`}
+            />
+          </div>
+
+          <div className="ns-pdf-access">
+            {canDownloadChapterPdf ? (
+              <a
+                href={
+                  chapterPdfUrl
+                }
+                target="_blank"
+                rel="noreferrer"
+                download
+                className="ns-pdf-download"
+              >
+                <FaFilePdf />
+
+                Download PDF
+              </a>
+            ) : (
+              <div className="ns-pdf-locked">
+                <FaLock />
+
+                <div>
+                  <strong>
+                    Read-only study material
+                  </strong>
+
+                  <span>
+                    PDF download is available
+                    with eligible paid
+                    certification access.
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* =====================================================
+          ADDITIONAL RESOURCES
+      ====================================================== */}
+
       <div className="ns-learning-resource-list">
         {resources.length ===
         0 ? (
-          <Card>
-            No learning resources
-            have been published for
-            this chapter yet.
-          </Card>
+          !hasChapterPdf && (
+            <Card>
+              No learning resources
+              have been published for
+              this chapter yet.
+            </Card>
+          )
         ) : (
           resources.map(
             (resource) => {
@@ -770,6 +901,10 @@ export default function ChapterLearning() {
         )}
       </div>
 
+      {/* =====================================================
+          CHAPTER NAVIGATION
+      ====================================================== */}
+
       <ChapterNavigation
         previousChapter={
           previousChapter
@@ -836,6 +971,148 @@ export default function ChapterLearning() {
             background: #2563eb;
             transition: width .25s ease;
           }
+
+          /* ================================================
+             CHAPTER PDF
+          ================================================= */
+
+          .ns-chapter-pdf-section {
+            margin-bottom: 22px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow:
+              0 4px 18px
+              rgba(15, 23, 42, 0.05);
+          }
+
+          .ns-chapter-pdf-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 17px 20px;
+            border-bottom: 1px solid #e2e8f0;
+          }
+
+          .ns-chapter-pdf-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+
+          .ns-chapter-pdf-icon {
+            display: flex;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #fee2e2;
+            color: #dc2626;
+            font-size: 21px;
+          }
+
+          .ns-chapter-pdf-title h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 16px;
+          }
+
+          .ns-chapter-pdf-title p {
+            margin: 3px 0 0;
+            color: #64748b;
+            font-size: 12px;
+          }
+
+          .ns-chapter-pdf-file {
+            display: flex;
+            max-width: 45%;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 3px;
+          }
+
+          .ns-chapter-pdf-file strong {
+            overflow: hidden;
+            max-width: 100%;
+            color: #334155;
+            font-size: 11px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .ns-chapter-pdf-file span {
+            color: #94a3b8;
+            font-size: 10px;
+          }
+
+          .ns-pdf-reader {
+            width: 100%;
+            height: min(82vh, 1000px);
+            min-height: 650px;
+            background: #334155;
+          }
+
+          .ns-pdf-reader iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #ffffff;
+          }
+
+          .ns-pdf-access {
+            padding: 13px 18px;
+            border-top: 1px solid #e2e8f0;
+            background: #f8fafc;
+          }
+
+          .ns-pdf-locked {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #64748b;
+          }
+
+          .ns-pdf-locked > svg {
+            flex-shrink: 0;
+            color: #64748b;
+          }
+
+          .ns-pdf-locked div {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+          }
+
+          .ns-pdf-locked strong {
+            color: #334155;
+            font-size: 11px;
+          }
+
+          .ns-pdf-locked span {
+            font-size: 10px;
+          }
+
+          .ns-pdf-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            border-radius: 9px;
+            background: #2563eb;
+            color: #ffffff;
+            padding: 9px 13px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+          }
+
+          /* ================================================
+             RESOURCES
+          ================================================= */
 
           .ns-learning-resource-list {
             display: flex;
@@ -929,6 +1206,23 @@ export default function ChapterLearning() {
             background: #fef2f2;
             color: #b91c1c;
             padding: 12px;
+          }
+
+          @media (max-width: 768px) {
+            .ns-chapter-pdf-heading {
+              align-items: flex-start;
+              flex-direction: column;
+            }
+
+            .ns-chapter-pdf-file {
+              max-width: 100%;
+              align-items: flex-start;
+            }
+
+            .ns-pdf-reader {
+              height: 72vh;
+              min-height: 500px;
+            }
           }
         `}
       </style>
