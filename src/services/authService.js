@@ -12,6 +12,7 @@ import { USER_ROLES } from "../constants/enums";
 import { auth } from "../firebase/firebase";
 import { createUserModel } from "../models/UserModel";
 import { userRepository } from "../repositories/UserRepository";
+import { generateEnrollmentId } from "./enrollmentService";
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -43,64 +44,113 @@ export const createAuthenticatedUserProfile = async (
   const existingUser =
     await userRepository.getByUid(firebaseUser.uid);
 
+  // ==========================================
+  // EXISTING USER
+  // ==========================================
+
   if (existingUser) {
-    return userRepository.update(firebaseUser.uid, {
-      email,
+    let enrollmentId =
+      existingUser.enrollmentId || null;
 
-      displayName:
-        firebaseUser.displayName ||
-        existingUser.displayName ||
-        "",
+    /*
+     * Existing student accounts created before
+     * Enrollment ID support may have:
+     *
+     * enrollmentId: null
+     *
+     * Assign an Enrollment ID automatically the
+     * next time that student authenticates.
+     */
+    if (
+      role === USER_ROLES.STUDENT &&
+      !enrollmentId
+    ) {
+      enrollmentId =
+        await generateEnrollmentId();
+    }
 
-      photoURL:
-        firebaseUser.photoURL ||
-        existingUser.photoURL ||
-        "",
+    /*
+     * Admin accounts do not receive student
+     * Enrollment IDs.
+     */
+    if (role === USER_ROLES.ADMIN) {
+      enrollmentId = null;
+    }
 
-      phone:
-        firebaseUser.phoneNumber ||
-        existingUser.phone ||
-        "",
+    return userRepository.update(
+      firebaseUser.uid,
+      {
+        email,
 
-      emailVerified:
-        firebaseUser.emailVerified ??
-        existingUser.emailVerified ??
-        false,
+        displayName:
+          firebaseUser.displayName ||
+          existingUser.displayName ||
+          "",
 
-      role,
+        photoURL:
+          firebaseUser.photoURL ||
+          existingUser.photoURL ||
+          "",
 
-      enrollmentId:
-        role === USER_ROLES.ADMIN
-          ? null
-          : existingUser.enrollmentId || null,
+        phone:
+          firebaseUser.phoneNumber ||
+          existingUser.phone ||
+          "",
 
-      previousLoginAt:
-        existingUser.lastLoginAt || null,
+        emailVerified:
+          firebaseUser.emailVerified ??
+          existingUser.emailVerified ??
+          false,
 
-      lastLoginAt: new Date(),
+        role,
 
-      loginCount:
-        Number(existingUser.loginCount || 0) + 1,
+        enrollmentId,
 
-      updatedBy: firebaseUser.uid,
+        previousLoginAt:
+          existingUser.lastLoginAt || null,
 
-      version:
-        Number(existingUser.version || 1) + 1,
-    });
+        lastLoginAt: new Date(),
+
+        loginCount:
+          Number(existingUser.loginCount || 0) + 1,
+
+        updatedBy: firebaseUser.uid,
+
+        version:
+          Number(existingUser.version || 1) + 1,
+      },
+    );
+  }
+
+  // ==========================================
+  // NEW USER
+  // ==========================================
+
+  let enrollmentId = null;
+
+  /*
+   * Generate an Enrollment ID only for students.
+   */
+  if (role === USER_ROLES.STUDENT) {
+    enrollmentId =
+      await generateEnrollmentId();
   }
 
   const userModel = createUserModel({
     uid: firebaseUser.uid,
 
-    enrollmentId: null,
+    enrollmentId,
 
     email,
 
-    displayName: firebaseUser.displayName || "",
+    displayName:
+      firebaseUser.displayName || "",
 
-    photoURL: firebaseUser.photoURL || "",
+    photoURL:
+      firebaseUser.photoURL || "",
 
-    phone: firebaseUser.phoneNumber || "",
+    phone:
+      firebaseUser.phoneNumber || "",
 
     role,
 
@@ -130,10 +180,11 @@ export const loginWithGoogle = async () => {
     browserLocalPersistence,
   );
 
-  const loginResult = await signInWithPopup(
-    auth,
-    googleProvider,
-  );
+  const loginResult =
+    await signInWithPopup(
+      auth,
+      googleProvider,
+    );
 
   const profile =
     await createAuthenticatedUserProfile(
@@ -141,7 +192,9 @@ export const loginWithGoogle = async () => {
     );
 
   return {
-    firebaseUser: loginResult.user,
+    firebaseUser:
+      loginResult.user,
+
     profile,
   };
 };
@@ -152,7 +205,10 @@ export const logoutUser = async () => {
 
 export const subscribeToAuthentication = (
   callback,
-) => onAuthStateChanged(auth, callback);
+) => onAuthStateChanged(
+  auth,
+  callback,
+);
 
 export const getCurrentFirebaseUser = () =>
   auth.currentUser;

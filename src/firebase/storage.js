@@ -1,83 +1,165 @@
-import {
-  deleteObject,
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
+// src/firebase/storage.js
 
-import { storage } from "./firebase";
+const CLOUDINARY_CLOUD_NAME = "udxty7iy";
+const CLOUDINARY_UPLOAD_PRESET = "nagariksuraksha_courses";
 
 const sanitiseFileName = (fileName) =>
   fileName
     .trim()
     .toLowerCase()
-    .replace(/[^a-z0-9._-]+/g, "-")
-    .replace(/-+/g, "-");
+    .replace(/\.[^/.]+$/, "")
+    .replace(/[^a-z0-9_-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 
-export const uploadFile = ({
+/**
+ * Upload a file directly to Cloudinary.
+ *
+ * Keeps the same function interface previously used by
+ * Firebase Storage so existing components do not need
+ * major changes.
+ */
+export const uploadFile = async ({
   file,
   folder,
   onProgress,
-}) =>
-  new Promise((resolve, reject) => {
-    if (!file) {
-      reject(new Error("Please select a file."));
-      return;
-    }
+}) => {
+  if (!file) {
+    throw new Error("Please select a file.");
+  }
 
-    if (!folder) {
-      reject(new Error("A storage folder is required."));
-      return;
-    }
+  if (!folder) {
+    throw new Error("An upload folder is required.");
+  }
 
-    const safeFileName = sanitiseFileName(file.name);
-    const uniqueFileName = `${Date.now()}-${safeFileName}`;
-    const storagePath = `${folder}/${uniqueFileName}`;
-    const storageReference = ref(storage, storagePath);
+  const safeFileName =
+    sanitiseFileName(file.name) || `file-${Date.now()}`;
 
-    const uploadTask = uploadBytesResumable(
-      storageReference,
-      file,
-      {
-        contentType: file.type,
-      },
-    );
+  const publicId = `${Date.now()}-${safeFileName}`;
 
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const progress =
-          (snapshot.bytesTransferred / snapshot.totalBytes) *
-          100;
+  const formData = new FormData();
 
-        onProgress?.(Math.round(progress));
-      },
-      reject,
-      async () => {
-        const downloadURL = await getDownloadURL(
-          uploadTask.snapshot.ref,
+  formData.append("file", file);
+  formData.append(
+    "upload_preset",
+    CLOUDINARY_UPLOAD_PRESET,
+  );
+
+  formData.append("folder", folder);
+  formData.append("public_id", publicId);
+
+  const uploadUrl =
+    `https://api.cloudinary.com/v1_1/` +
+    `${CLOUDINARY_CLOUD_NAME}/auto/upload`;
+
+  // Your existing UI expects progress.
+  // We use XMLHttpRequest because fetch() does not provide
+  // browser upload progress events.
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", uploadUrl, true);
+
+    xhr.upload.onprogress = (event) => {
+      if (!event.lengthComputable) {
+        return;
+      }
+
+      const progress = Math.round(
+        (event.loaded / event.total) * 100,
+      );
+
+      onProgress?.(progress);
+    };
+
+    xhr.onerror = () => {
+      reject(
+        new Error(
+          "Unable to connect to Cloudinary. Please check your internet connection.",
+        ),
+      );
+    };
+
+    xhr.onload = () => {
+      let result;
+
+      try {
+        result = JSON.parse(xhr.responseText);
+      } catch {
+        reject(
+          new Error(
+            "Cloudinary returned an invalid response.",
+          ),
         );
+        return;
+      }
 
-        resolve({
-          downloadURL,
-          storagePath,
-          fileName: uniqueFileName,
-          originalFileName: file.name,
-          contentType: file.type,
-          size: file.size,
-        });
-      },
-    );
+      if (xhr.status < 200 || xhr.status >= 300) {
+        reject(
+          new Error(
+            result?.error?.message ||
+              `Cloudinary upload failed (${xhr.status}).`,
+          ),
+        );
+        return;
+      }
+
+      onProgress?.(100);
+
+      resolve({
+        // Keep these property names because the existing
+        // CourseForm may already depend on them.
+        downloadURL: result.secure_url,
+        storagePath: result.public_id,
+        fileName: result.public_id,
+
+        originalFileName: file.name,
+        contentType:
+          result.resource_type === "image"
+            ? file.type
+            : file.type,
+        size: result.bytes ?? file.size,
+
+        // Additional Cloudinary information.
+        publicId: result.public_id,
+        secureUrl: result.secure_url,
+        resourceType: result.resource_type,
+        format: result.format ?? "",
+        width: result.width ?? null,
+        height: result.height ?? null,
+      });
+    };
+
+    xhr.send(formData);
   });
+};
 
+/**
+ * Deleting a Cloudinary asset requires an authenticated
+ * server-side API call containing the Cloudinary API secret.
+ *
+ * Never put the API secret in a React/Vite application.
+ *
+ * For now this method intentionally does not attempt to
+ * delete the remote Cloudinary asset.
+ */
 export const deleteStoredFile = async (storagePath) => {
   if (!storagePath) {
     return;
   }
 
-  await deleteObject(ref(storage, storagePath));
+  console.warn(
+    "Cloudinary asset deletion requires a secure server-side endpoint:",
+    storagePath,
+  );
 };
 
+/**
+ * Upload images used by posts.
+ *
+ * Preserves the interface used by the previous Firebase
+ * Storage implementation.
+ */
 export const uploadPostImages = async ({
   thumbnailFile,
   desktopFile,

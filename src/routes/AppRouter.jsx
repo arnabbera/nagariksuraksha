@@ -7,8 +7,18 @@ import {
 import Courses from "../features/admin/pages/Courses";
 import Dashboard from "../features/admin/pages/Dashboard";
 import HomepageCms from "../features/admin/pages/HomepageCms";
+
+import ChapterManagement from "../features/admin/chapters/pages/ChapterManagement";
+import ResourceManagement from "../features/admin/resources/pages/ResourceManagement";
+
 import LoginPage from "../features/auth/pages/LoginPage";
+
 import StudentDashboard from "../features/student/pages/StudentDashboard";
+
+import MyCourses from "../features/student/courses/pages/MyCourses";
+import CourseDetails from "../features/student/courses/pages/CourseDetails";
+
+import ChapterLearning from "../features/student/learning/pages/ChapterLearning";
 
 import AdminLayout from "../shared/layouts/AdminLayout";
 import PublicLayout from "../shared/layouts/PublicLayout";
@@ -17,19 +27,18 @@ import StudentLayout from "../shared/layouts/StudentLayout";
 export default function AppRouter() {
   return (
     <Routes>
-      {/* Public website */}
+      {/* Public */}
       <Route
         path="/"
         element={<PublicLayout />}
       />
 
-      {/* Authentication */}
       <Route
         path="/login"
         element={<LoginPage />}
       />
 
-      {/* Student portal */}
+      {/* Student Portal */}
       <Route
         path="/student"
         element={<StudentLayout />}
@@ -41,7 +50,17 @@ export default function AppRouter() {
 
         <Route
           path="courses"
-          element={<h2>My Courses</h2>}
+          element={<MyCourses />}
+        />
+
+        <Route
+          path="courses/:courseId"
+          element={<CourseDetails />}
+        />
+
+        <Route
+          path="learn/:courseId/:chapterId"
+          element={<ChapterLearning />}
         />
 
         <Route
@@ -65,7 +84,7 @@ export default function AppRouter() {
         />
       </Route>
 
-      {/* Admin portal */}
+      {/* Admin Portal */}
       <Route
         path="/admin"
         element={<AdminLayout />}
@@ -84,9 +103,19 @@ export default function AppRouter() {
           path="courses"
           element={<Courses />}
         />
+
+        <Route
+          path="chapters"
+          element={<ChapterManagement />}
+        />
+
+        <Route
+          path="resources"
+          element={<ResourceManagement />}
+        />
       </Route>
 
-      {/* Unknown routes */}
+      {/* 404 */}
       <Route
         path="*"
         element={

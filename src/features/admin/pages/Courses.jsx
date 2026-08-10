@@ -1,4 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+
 import {
   FaArchive,
   FaEdit,
@@ -9,7 +15,9 @@ import {
 } from "react-icons/fa";
 
 import CourseForm from "../course-management/components/CourseForm";
+
 import { useAuth } from "../../../hooks/useAuth";
+
 import {
   archiveCourse,
   createCourse,
@@ -19,6 +27,7 @@ import {
   setCourseFeatured,
   updateCourse,
 } from "../../../services/courseService";
+
 import Button from "../../../shared/components/Button";
 import Card from "../../../shared/components/Card";
 import EmptyState from "../../../shared/components/EmptyState";
@@ -28,17 +37,34 @@ import PageHeader from "../../../shared/components/PageHeader";
 export default function Courses() {
   const { profile, firebaseUser } = useAuth();
 
+  const courseFormRef = useRef(null);
+
   const [courses, setCourses] = useState([]);
-  const [editingCourse, setEditingCourse] = useState(null);
-  const [searchText, setSearchText] = useState("");
-  const [statusFilter, setStatusFilter] = useState("all");
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  const [editingCourse, setEditingCourse] =
+    useState(null);
+
+  const [searchText, setSearchText] =
+    useState("");
+
+  const [statusFilter, setStatusFilter] =
+    useState("all");
+
+  const [loading, setLoading] =
+    useState(true);
+
+  const [saving, setSaving] =
+    useState(false);
+
+  const [message, setMessage] =
+    useState("");
+
+  const [error, setError] =
+    useState("");
 
   const currentUserId =
-    profile?.uid || firebaseUser?.uid || "system";
+    profile?.uid ||
+    firebaseUser?.uid ||
+    "system";
 
   useEffect(() => {
     loadCourses();
@@ -49,11 +75,15 @@ export default function Courses() {
       setLoading(true);
       setError("");
 
-      const result = await getAllCourses();
+      const result =
+        await getAllCourses();
 
       setCourses(
         result
-          .filter((course) => !course.deleted)
+          .filter(
+            (course) =>
+              !course.deleted,
+          )
           .sort(
             (first, second) =>
               Number(first.order || 0) -
@@ -61,59 +91,102 @@ export default function Courses() {
           ),
       );
     } catch (loadError) {
-      console.error("Unable to load courses:", loadError);
-      setError("Unable to load courses.");
+      console.error(
+        "Unable to load courses:",
+        loadError,
+      );
+
+      setError(
+        "Unable to load courses.",
+      );
     } finally {
       setLoading(false);
     }
   };
 
   const filteredCourses = useMemo(() => {
-    const searchQuery = searchText.trim().toLowerCase();
+    const searchQuery =
+      searchText
+        .trim()
+        .toLowerCase();
 
-    return courses.filter((course) => {
-      const matchesStatus =
-        statusFilter === "all" ||
-        course.status === statusFilter;
+    return courses.filter(
+      (course) => {
+        const matchesStatus =
+          statusFilter === "all" ||
+          course.status ===
+            statusFilter;
 
-      const matchesSearch =
-        !searchQuery ||
-        course.title?.toLowerCase().includes(searchQuery) ||
-        course.slug?.toLowerCase().includes(searchQuery) ||
-        course.shortDescription
-          ?.toLowerCase()
-          .includes(searchQuery);
+        const matchesSearch =
+          !searchQuery ||
+          course.title
+            ?.toLowerCase()
+            .includes(searchQuery) ||
+          course.slug
+            ?.toLowerCase()
+            .includes(searchQuery) ||
+          course.shortDescription
+            ?.toLowerCase()
+            .includes(searchQuery);
 
-      return matchesStatus && matchesSearch;
-    });
-  }, [courses, searchText, statusFilter]);
+        return (
+          matchesStatus &&
+          matchesSearch
+        );
+      },
+    );
+  }, [
+    courses,
+    searchText,
+    statusFilter,
+  ]);
 
   const clearMessages = () => {
     setMessage("");
     setError("");
   };
 
+  const scrollToCourseForm = () => {
+    window.setTimeout(() => {
+      courseFormRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   const handleNewCourse = () => {
     clearMessages();
+
     setEditingCourse(null);
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToCourseForm();
   };
 
   const handleEdit = (course) => {
     clearMessages();
+
+    console.log(
+      "EDIT CLICKED:",
+      course,
+    );
+
     setEditingCourse(course);
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    scrollToCourseForm();
   };
 
-  const handleSave = async (courseData) => {
+  const handleCancelEdit = () => {
+    clearMessages();
+
+    setEditingCourse(null);
+
+    scrollToCourseForm();
+  };
+
+  const handleSave = async (
+    courseData,
+  ) => {
     try {
       setSaving(true);
       clearMessages();
@@ -125,20 +198,28 @@ export default function Courses() {
           currentUserId,
         );
 
-        setMessage("Course updated successfully.");
+        setMessage(
+          "Course updated successfully.",
+        );
       } else {
         await createCourse(
           courseData,
           currentUserId,
         );
 
-        setMessage("Course created successfully.");
+        setMessage(
+          "Course created successfully.",
+        );
       }
 
       setEditingCourse(null);
+
       await loadCourses();
     } catch (saveError) {
-      console.error("Unable to save course:", saveError);
+      console.error(
+        "Unable to save course:",
+        saveError,
+      );
 
       setError(
         saveError?.message ||
@@ -149,33 +230,57 @@ export default function Courses() {
     }
   };
 
-  const handlePublish = async (courseId) => {
+  const handlePublish = async (
+    courseId,
+  ) => {
     try {
       clearMessages();
-      await publishCourse(courseId);
-      setMessage("Course published successfully.");
+
+      await publishCourse(
+        courseId,
+      );
+
+      setMessage(
+        "Course published successfully.",
+      );
+
       await loadCourses();
     } catch (publishError) {
       console.error(
         "Unable to publish course:",
         publishError,
       );
-      setError("Unable to publish the course.");
+
+      setError(
+        "Unable to publish the course.",
+      );
     }
   };
 
-  const handleArchive = async (courseId) => {
+  const handleArchive = async (
+    courseId,
+  ) => {
     try {
       clearMessages();
-      await archiveCourse(courseId);
-      setMessage("Course archived successfully.");
+
+      await archiveCourse(
+        courseId,
+      );
+
+      setMessage(
+        "Course archived successfully.",
+      );
+
       await loadCourses();
     } catch (archiveError) {
       console.error(
         "Unable to archive course:",
         archiveError,
       );
-      setError("Unable to archive the course.");
+
+      setError(
+        "Unable to archive the course.",
+      );
     }
   };
 
@@ -203,14 +308,20 @@ export default function Courses() {
         "Unable to update featured status:",
         featuredError,
       );
-      setError("Unable to update featured status.");
+
+      setError(
+        "Unable to update featured status.",
+      );
     }
   };
 
-  const handleDelete = async (courseId) => {
-    const confirmed = window.confirm(
-      "Delete this course? It will be soft-deleted and can be restored later.",
-    );
+  const handleDelete = async (
+    courseId,
+  ) => {
+    const confirmed =
+      window.confirm(
+        "Delete this course? It will be soft-deleted and can be restored later.",
+      );
 
     if (!confirmed) {
       return;
@@ -224,18 +335,27 @@ export default function Courses() {
         currentUserId,
       );
 
-      if (editingCourse?.id === courseId) {
+      if (
+        editingCourse?.id ===
+        courseId
+      ) {
         setEditingCourse(null);
       }
 
-      setMessage("Course deleted successfully.");
+      setMessage(
+        "Course deleted successfully.",
+      );
+
       await loadCourses();
     } catch (deleteError) {
       console.error(
         "Unable to delete course:",
         deleteError,
       );
-      setError("Unable to delete the course.");
+
+      setError(
+        "Unable to delete the course.",
+      );
     }
   };
 
@@ -253,11 +373,17 @@ export default function Courses() {
       <PageHeader
         title="Course Management"
         description="Create, edit, publish and manage NagarikSuraksha learning courses."
-        breadcrumbs={["Admin", "Learning", "Courses"]}
+        breadcrumbs={[
+          "Admin",
+          "Learning",
+          "Courses",
+        ]}
         actions={
           <Button
             leftIcon={<FaPlus />}
-            onClick={handleNewCourse}
+            onClick={
+              handleNewCourse
+            }
           >
             New Course
           </Button>
@@ -276,22 +402,33 @@ export default function Courses() {
         </div>
       )}
 
-      <div className="ns-course-layout">
+      <div
+        className="ns-course-layout"
+        ref={courseFormRef}
+      >
         <Card
           title={
             editingCourse
               ? "Edit Course"
               : "Create Course"
           }
-          subtitle="Enter the course details, images and SEO information."
+          subtitle={
+            editingCourse
+              ? `Editing: ${editingCourse.title}`
+              : "Enter the course details, images and SEO information."
+          }
         >
           <CourseForm
-            course={editingCourse}
+            course={
+              editingCourse
+            }
             saving={saving}
-            onSubmit={handleSave}
+            onSubmit={
+              handleSave
+            }
             onCancel={
               editingCourse
-                ? () => setEditingCourse(null)
+                ? handleCancelEdit
                 : undefined
             }
           />
@@ -306,34 +443,54 @@ export default function Courses() {
               <FaSearch />
 
               <input
-                value={searchText}
-                onChange={(event) =>
-                  setSearchText(event.target.value)
+                value={
+                  searchText
+                }
+                onChange={(
+                  event,
+                ) =>
+                  setSearchText(
+                    event.target
+                      .value,
+                  )
                 }
                 placeholder="Search courses..."
               />
             </div>
 
             <select
-              value={statusFilter}
-              onChange={(event) =>
-                setStatusFilter(event.target.value)
+              value={
+                statusFilter
+              }
+              onChange={(
+                event,
+              ) =>
+                setStatusFilter(
+                  event.target
+                    .value,
+                )
               }
             >
               <option value="all">
                 All statuses
               </option>
-              <option value="draft">Draft</option>
+
+              <option value="draft">
+                Draft
+              </option>
+
               <option value="published">
                 Published
               </option>
+
               <option value="archived">
                 Archived
               </option>
             </select>
           </div>
 
-          {filteredCourses.length === 0 ? (
+          {filteredCourses.length ===
+          0 ? (
             <EmptyState
               icon="📚"
               title="No courses found"
@@ -341,128 +498,154 @@ export default function Courses() {
             />
           ) : (
             <div className="ns-course-list">
-              {filteredCourses.map((course) => {
-                const thumbnailUrl =
-                  course.media?.thumbnailUrl ||
-                  course.thumbnailUrl ||
-                  "";
+              {filteredCourses.map(
+                (course) => {
+                  const thumbnailUrl =
+                    course.media
+                      ?.thumbnailUrl ||
+                    course.thumbnailUrl ||
+                    "";
 
-                return (
-                  <article
-                    key={course.id}
-                    className="ns-course-item"
-                  >
-                    <div className="ns-course-item-main">
-                      {thumbnailUrl ? (
-                        <img
-                          src={thumbnailUrl}
-                          alt={course.title}
-                        />
-                      ) : (
-                        <div className="ns-course-placeholder">
-                          📘
-                        </div>
-                      )}
+                  return (
+                    <article
+                      key={
+                        course.id
+                      }
+                      className="ns-course-item"
+                    >
+                      <div className="ns-course-item-main">
+                        {thumbnailUrl ? (
+                          <img
+                            src={
+                              thumbnailUrl
+                            }
+                            alt={
+                              course.title
+                            }
+                          />
+                        ) : (
+                          <div className="ns-course-placeholder">
+                            📘
+                          </div>
+                        )}
 
-                      <div>
-                        <div className="ns-course-title-row">
-                          <h3>{course.title}</h3>
+                        <div>
+                          <div className="ns-course-title-row">
+                            <h3>
+                              {
+                                course.title
+                              }
+                            </h3>
 
-                          {course.featured && (
-                            <FaStar
-                              title="Featured course"
-                              className="ns-featured-star"
-                            />
-                          )}
-                        </div>
+                            {course.featured && (
+                              <FaStar
+                                title="Featured course"
+                                className="ns-featured-star"
+                              />
+                            )}
+                          </div>
 
-                        <p>
-                          {course.shortDescription ||
-                            "No description available."}
-                        </p>
+                          <p>
+                            {course.shortDescription ||
+                              "No description available."}
+                          </p>
 
-                        <div className="ns-course-meta">
-                          <span>
-                            {course.duration || "—"}
-                          </span>
+                          <div className="ns-course-meta">
+                            <span>
+                              {course.duration ||
+                                "—"}
+                            </span>
 
-                          <span>
-                            {course.courseType || "—"}
-                          </span>
+                            <span>
+                              {course.courseType ||
+                                "—"}
+                            </span>
 
-                          <span
-                            className={`ns-status-badge is-${course.status}`}
-                          >
-                            {course.status}
-                          </span>
+                            <span
+                              className={`ns-status-badge is-${course.status}`}
+                            >
+                              {
+                                course.status
+                              }
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className="ns-course-actions">
-                      <button
-                        type="button"
-                        title="Edit course"
-                        onClick={() =>
-                          handleEdit(course)
-                        }
-                      >
-                        <FaEdit />
-                      </button>
-
-                      <button
-                        type="button"
-                        title={
-                          course.featured
-                            ? "Remove featured status"
-                            : "Mark as featured"
-                        }
-                        onClick={() =>
-                          handleFeatured(
-                            course.id,
-                            course.featured,
-                          )
-                        }
-                      >
-                        <FaStar />
-                      </button>
-
-                      {course.status !== "published" ? (
+                      <div className="ns-course-actions">
                         <button
                           type="button"
-                          title="Publish course"
+                          title="Edit course"
                           onClick={() =>
-                            handlePublish(course.id)
+                            handleEdit(
+                              course,
+                            )
                           }
                         >
-                          ✓
+                          <FaEdit />
                         </button>
-                      ) : (
+
                         <button
                           type="button"
-                          title="Archive course"
+                          title={
+                            course.featured
+                              ? "Remove featured status"
+                              : "Mark as featured"
+                          }
                           onClick={() =>
-                            handleArchive(course.id)
+                            handleFeatured(
+                              course.id,
+                              course.featured,
+                            )
                           }
                         >
-                          <FaArchive />
+                          <FaStar />
                         </button>
-                      )}
 
-                      <button
-                        type="button"
-                        title="Delete course"
-                        className="is-danger"
-                        onClick={() =>
-                          handleDelete(course.id)
-                        }
-                      >
-                        <FaTrash />
-                      </button>
-                    </div>
-                  </article>
-                );
-              })}
+                        {course.status !==
+                        "published" ? (
+                          <button
+                            type="button"
+                            title="Publish course"
+                            onClick={() =>
+                              handlePublish(
+                                course.id,
+                              )
+                            }
+                          >
+                            ✓
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            title="Archive course"
+                            onClick={() =>
+                              handleArchive(
+                                course.id,
+                              )
+                            }
+                          >
+                            <FaArchive />
+                          </button>
+                        )}
+
+                        <button
+                          type="button"
+                          title="Delete course"
+                          className="is-danger"
+                          onClick={() =>
+                            handleDelete(
+                              course.id,
+                            )
+                          }
+                        >
+                          <FaTrash />
+                        </button>
+                      </div>
+                    </article>
+                  );
+                },
+              )}
             </div>
           )}
         </Card>
@@ -477,6 +660,7 @@ export default function Courses() {
               minmax(0, 1.35fr);
             gap: 22px;
             align-items: start;
+            scroll-margin-top: 20px;
           }
 
           .ns-course-toolbar {
@@ -495,7 +679,8 @@ export default function Courses() {
             top: 50%;
             left: 13px;
             color: #94a3b8;
-            transform: translateY(-50%);
+            transform:
+              translateY(-50%);
           }
 
           .ns-course-toolbar input,
@@ -519,7 +704,12 @@ export default function Courses() {
             border-color: #2563eb;
             box-shadow:
               0 0 0 3px
-              rgba(37, 99, 235, 0.12);
+              rgba(
+                37,
+                99,
+                235,
+                0.12
+              );
           }
 
           .ns-course-list {
@@ -531,9 +721,11 @@ export default function Courses() {
           .ns-course-item {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content:
+              space-between;
             gap: 18px;
-            border: 1px solid #e2e8f0;
+            border:
+              1px solid #e2e8f0;
             border-radius: 15px;
             background: #ffffff;
             padding: 15px;
@@ -632,7 +824,8 @@ export default function Courses() {
             height: 35px;
             align-items: center;
             justify-content: center;
-            border: 1px solid #dbeafe;
+            border:
+              1px solid #dbeafe;
             border-radius: 9px;
             background: #eff6ff;
             color: #2563eb;
@@ -658,24 +851,31 @@ export default function Courses() {
           }
 
           .ns-course-success {
-            border: 1px solid #bbf7d0;
+            border:
+              1px solid #bbf7d0;
             background: #f0fdf4;
             color: #166534;
           }
 
           .ns-course-error {
-            border: 1px solid #fecaca;
+            border:
+              1px solid #fecaca;
             background: #fef2f2;
             color: #b91c1c;
           }
 
-          @media (max-width: 1150px) {
+          @media (
+            max-width: 1150px
+          ) {
             .ns-course-layout {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
           }
 
-          @media (max-width: 700px) {
+          @media (
+            max-width: 700px
+          ) {
             .ns-course-toolbar,
             .ns-course-item {
               align-items: stretch;
@@ -683,7 +883,8 @@ export default function Courses() {
             }
 
             .ns-course-actions {
-              justify-content: flex-end;
+              justify-content:
+                flex-end;
             }
           }
         `}

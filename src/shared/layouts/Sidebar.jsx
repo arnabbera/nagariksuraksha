@@ -1,25 +1,27 @@
 import { useState } from "react";
 import {
+  FaBalanceScale,
+  FaBell,
   FaBook,
+  FaBookOpen,
   FaChartBar,
   FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
+  FaCog,
   FaComments,
   FaDatabase,
   FaFileAlt,
+  FaFolderOpen,
   FaHome,
   FaImage,
+  FaLayerGroup,
+  FaList,
+  FaQuestionCircle,
   FaSearch,
   FaTimes,
   FaUserGraduate,
   FaVideo,
-  FaCog,
-  FaBell,
-  FaLayerGroup,
-  FaList,
-  FaQuestionCircle,
-  FaBalanceScale,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
@@ -103,6 +105,16 @@ const menuGroups = [
         icon: FaBook,
       },
       {
+        label: "Chapters",
+        path: "/admin/chapters",
+        icon: FaBookOpen,
+      },
+      {
+        label: "Resources",
+        path: "/admin/resources",
+        icon: FaFolderOpen,
+      },
+      {
         label: "Students",
         path: "/admin/students",
         icon: FaUserGraduate,
@@ -171,6 +183,7 @@ const Sidebar = ({
   onCloseMobile,
 }) => {
   const [collapsed, setCollapsed] = useState(false);
+
   const [openMenus, setOpenMenus] = useState({
     "Content Manager": true,
   });
@@ -265,48 +278,69 @@ const Sidebar = ({
                             toggleSubmenu(item.label)
                           }
                           className="ns-sidebar-link ns-sidebar-button"
-                          title={collapsed ? item.label : ""}
+                          title={
+                            collapsed
+                              ? item.label
+                              : ""
+                          }
                         >
                           <span className="ns-sidebar-link-main">
                             {Icon && <Icon />}
 
                             {!collapsed && (
-                              <span>{item.label}</span>
+                              <span>
+                                {item.label}
+                              </span>
                             )}
                           </span>
 
                           {!collapsed && (
                             <FaChevronDown
                               className={`ns-sidebar-chevron ${
-                                isOpen ? "is-open" : ""
+                                isOpen
+                                  ? "is-open"
+                                  : ""
                               }`}
                             />
                           )}
                         </button>
 
-                        {isOpen && !collapsed && (
-                          <div className="ns-sidebar-submenu">
-                            {item.children.map(
-                              (child) => (
-                                <NavLink
-                                  key={child.path}
-                                  to={child.path}
-                                  onClick={closeMobile}
-                                  className={({ isActive }) =>
-                                    `ns-sidebar-sublink ${
-                                      isActive
-                                        ? "is-active"
-                                        : ""
-                                    }`
-                                  }
-                                >
-                                  <span className="ns-sidebar-dot" />
-                                  <span>{child.label}</span>
-                                </NavLink>
-                              ),
-                            )}
-                          </div>
-                        )}
+                        {isOpen &&
+                          !collapsed && (
+                            <div className="ns-sidebar-submenu">
+                              {item.children.map(
+                                (child) => (
+                                  <NavLink
+                                    key={
+                                      child.path
+                                    }
+                                    to={
+                                      child.path
+                                    }
+                                    onClick={
+                                      closeMobile
+                                    }
+                                    className={({
+                                      isActive,
+                                    }) =>
+                                      `ns-sidebar-sublink ${
+                                        isActive
+                                          ? "is-active"
+                                          : ""
+                                      }`
+                                    }
+                                  >
+                                    <span className="ns-sidebar-dot" />
+                                    <span>
+                                      {
+                                        child.label
+                                      }
+                                    </span>
+                                  </NavLink>
+                                ),
+                              )}
+                            </div>
+                          )}
                       </div>
                     );
                   }
@@ -317,10 +351,18 @@ const Sidebar = ({
                       to={item.path}
                       end={item.end}
                       onClick={closeMobile}
-                      title={collapsed ? item.label : ""}
-                      className={({ isActive }) =>
+                      title={
+                        collapsed
+                          ? item.label
+                          : ""
+                      }
+                      className={({
+                        isActive,
+                      }) =>
                         `ns-sidebar-link ${
-                          isActive ? "is-active" : ""
+                          isActive
+                            ? "is-active"
+                            : ""
                         }`
                       }
                     >
@@ -328,7 +370,9 @@ const Sidebar = ({
                         {Icon && <Icon />}
 
                         {!collapsed && (
-                          <span>{item.label}</span>
+                          <span>
+                            {item.label}
+                          </span>
                         )}
                       </span>
                     </NavLink>
@@ -343,9 +387,14 @@ const Sidebar = ({
           {!collapsed && (
             <div className="ns-sidebar-status">
               <span className="ns-status-dot" />
+
               <div>
-                <strong>Firebase Connected</strong>
-                <small>Version 1.0.0</small>
+                <strong>
+                  Firebase Connected
+                </strong>
+                <small>
+                  Version 1.1.0
+                </small>
               </div>
             </div>
           )}
@@ -353,7 +402,9 @@ const Sidebar = ({
           <button
             type="button"
             onClick={() =>
-              setCollapsed((current) => !current)
+              setCollapsed(
+                (current) => !current,
+              )
             }
             className="ns-sidebar-collapse"
             aria-label={
@@ -423,7 +474,9 @@ const Sidebar = ({
             background: #2563eb;
             color: #ffffff;
             font-size: 22px;
-            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
+            box-shadow:
+              0 10px 24px
+              rgba(37, 99, 235, 0.3);
           }
 
           .ns-sidebar-brand h2 {
@@ -512,7 +565,9 @@ const Sidebar = ({
           .ns-sidebar-link.is-active {
             background: #2563eb;
             color: #ffffff;
-            box-shadow: 0 10px 22px rgba(37, 99, 235, 0.24);
+            box-shadow:
+              0 10px 22px
+              rgba(37, 99, 235, 0.24);
           }
 
           .ns-sidebar-link-main {
@@ -532,7 +587,8 @@ const Sidebar = ({
           .ns-sidebar-chevron {
             flex-shrink: 0;
             font-size: 12px;
-            transition: transform 0.2s ease;
+            transition:
+              transform 0.2s ease;
           }
 
           .ns-sidebar-chevron.is-open {
@@ -595,7 +651,9 @@ const Sidebar = ({
             flex-shrink: 0;
             border-radius: 50%;
             background: #22c55e;
-            box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+            box-shadow:
+              0 0 0 4px
+              rgba(34, 197, 94, 0.12);
           }
 
           .ns-sidebar-status strong,
@@ -635,28 +693,34 @@ const Sidebar = ({
             color: #ffffff;
           }
 
-          .ns-admin-sidebar.is-collapsed .ns-sidebar-header {
+          .ns-admin-sidebar.is-collapsed
+            .ns-sidebar-header {
             justify-content: center;
           }
 
-          .ns-admin-sidebar.is-collapsed .ns-sidebar-link,
-          .ns-admin-sidebar.is-collapsed .ns-sidebar-button {
+          .ns-admin-sidebar.is-collapsed
+            .ns-sidebar-link,
+          .ns-admin-sidebar.is-collapsed
+            .ns-sidebar-button {
             justify-content: center;
             padding-inline: 12px;
           }
 
-          .ns-admin-sidebar.is-collapsed .ns-sidebar-link-main {
+          .ns-admin-sidebar.is-collapsed
+            .ns-sidebar-link-main {
             justify-content: center;
           }
 
           @media (max-width: 1023px) {
             .ns-admin-sidebar {
               width: 288px;
-              transform: translateX(-100%);
+              transform:
+                translateX(-100%);
             }
 
             .ns-admin-sidebar.is-mobile-open {
-              transform: translateX(0);
+              transform:
+                translateX(0);
             }
 
             .ns-admin-sidebar.is-collapsed {
