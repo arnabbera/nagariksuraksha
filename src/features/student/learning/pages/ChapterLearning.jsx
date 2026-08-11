@@ -6,7 +6,6 @@ import {
 
 import {
   FaCheckCircle,
-  FaExternalLinkAlt,
   FaFileAlt,
   FaFilePdf,
   FaLink,
@@ -571,7 +570,7 @@ export default function ChapterLearning() {
   // =========================================================
 
   return (
-    <div>
+    <div className="ns-learning-page">
       <PageHeader
         title={
           chapter.title
@@ -686,7 +685,7 @@ export default function ChapterLearning() {
 
           <div className="ns-pdf-reader">
             <iframe
-              src={`${chapterPdfUrl}#toolbar=0&navpanes=0`}
+              src={`${chapterPdfUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
               title={`${chapter.title} PDF`}
             />
           </div>
@@ -832,46 +831,48 @@ export default function ChapterLearning() {
                     "pdf" &&
                     resource.file
                       ?.url && (
-                      <a
-                        href={
-                          resource.file
-                            .url
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className="ns-learning-link"
-                      >
-                        <FaFilePdf />
-
-                        Open PDF
-
-                        <FaExternalLinkAlt />
-                      </a>
+                      <div className="ns-resource-pdf">
+                        <div className="ns-resource-pdf-label">
+                          <FaFilePdf />
+                          <span>Read-only PDF resource</span>
+                          <FaLock />
+                        </div>
+                        <div className="ns-resource-pdf-reader">
+                          <iframe
+                            src={`${resource.file.url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+                            title={`${resource.title} PDF`}
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                      </div>
                     )}
 
-                  {[
-                    "link",
-                    "download",
-                  ].includes(
-                    resource.type,
-                  ) &&
+                  {resource.type ===
+                    "link" &&
                     resource.file
                       ?.url && (
                       <a
-                        href={
-                          resource.file
-                            .url
-                        }
+                        href={resource.file.url}
                         target="_blank"
                         rel="noreferrer"
                         className="ns-learning-link"
                       >
                         <FaLink />
-
                         Open Resource
-
-                        <FaExternalLinkAlt />
                       </a>
+                    )}
+
+                  {resource.type ===
+                    "download" &&
+                    resource.file
+                      ?.url && (
+                      <div className="ns-protected-download">
+                        <FaLock />
+                        <div>
+                          <strong>Protected download</strong>
+                          <span>Download access is reserved for eligible paid certification students.</span>
+                        </div>
+                      </div>
                     )}
 
                   {!completed && (
@@ -1208,6 +1209,60 @@ export default function ChapterLearning() {
             padding: 12px;
           }
 
+          .ns-learning-page { width: 100%; min-width: 0; overflow-x: hidden; }
+
+          .ns-resource-pdf {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            background: #ffffff;
+          }
+
+          .ns-resource-pdf-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            background: #f8fafc;
+            color: #475569;
+            padding: 10px 12px;
+            font-size: 11px;
+            font-weight: 700;
+          }
+
+          .ns-resource-pdf-label svg:first-child { color: #dc2626; }
+          .ns-resource-pdf-label svg:last-child { margin-left: auto; color: #64748b; }
+
+          .ns-resource-pdf-reader {
+            width: 100%;
+            height: min(70vh, 800px);
+            min-height: 520px;
+            background: #334155;
+          }
+
+          .ns-resource-pdf-reader iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #ffffff;
+          }
+
+          .ns-protected-download {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f8fafc;
+            color: #64748b;
+            padding: 11px 13px;
+          }
+
+          .ns-protected-download div { display: flex; min-width: 0; flex-direction: column; gap: 2px; }
+          .ns-protected-download strong { color: #334155; font-size: 11px; }
+          .ns-protected-download span { font-size: 10px; line-height: 1.45; }
+
           @media (max-width: 768px) {
             .ns-chapter-pdf-heading {
               align-items: flex-start;
@@ -1220,8 +1275,20 @@ export default function ChapterLearning() {
             }
 
             .ns-pdf-reader {
-              height: 72vh;
-              min-height: 500px;
+              height: 68vh;
+              min-height: 430px;
+            }
+
+            .ns-resource-pdf-reader {
+              height: 62vh;
+              min-height: 400px;
+            }
+
+            .ns-learning-link,
+            .ns-mark-resource-complete {
+              box-sizing: border-box;
+              width: 100%;
+              justify-content: center;
             }
           }
         `}

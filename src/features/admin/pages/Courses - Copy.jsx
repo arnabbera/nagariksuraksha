@@ -8,7 +8,6 @@ import {
 import {
   FaArchive,
   FaEdit,
-  FaEye,
   FaPlus,
   FaSearch,
   FaStar,
@@ -162,24 +161,6 @@ export default function Courses() {
     setEditingCourse(null);
 
     scrollToCourseForm();
-  };
-
-  const handleView = (course) => {
-    clearMessages();
-
-    if (!course?.slug) {
-      setError(
-        "This course does not have a valid course slug.",
-      );
-
-      return;
-    }
-
-    window.open(
-      `/student/courses/${course.slug}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
   };
 
   const handleEdit = (course) => {
@@ -511,7 +492,7 @@ export default function Courses() {
           {filteredCourses.length ===
           0 ? (
             <EmptyState
-              icon="ðŸ“š"
+              icon="📚"
               title="No courses found"
               description="Create the first NagarikSuraksha course using the form."
             />
@@ -544,7 +525,7 @@ export default function Courses() {
                           />
                         ) : (
                           <div className="ns-course-placeholder">
-                            ðŸ“˜
+                            📘
                           </div>
                         )}
 
@@ -572,12 +553,12 @@ export default function Courses() {
                           <div className="ns-course-meta">
                             <span>
                               {course.duration ||
-                                "â€”"}
+                                "—"}
                             </span>
 
                             <span>
                               {course.courseType ||
-                                "â€”"}
+                                "—"}
                             </span>
 
                             <span
@@ -592,19 +573,6 @@ export default function Courses() {
                       </div>
 
                       <div className="ns-course-actions">
-                        <button
-                          type="button"
-                          title="View course"
-                          className="is-view"
-                          onClick={() =>
-                            handleView(
-                              course,
-                            )
-                          }
-                        >
-                          <FaEye />
-                        </button>
-
                         <button
                           type="button"
                           title="Edit course"
@@ -645,7 +613,7 @@ export default function Courses() {
                               )
                             }
                           >
-                            âœ“
+                            ✓
                           </button>
                         ) : (
                           <button
@@ -866,16 +834,6 @@ export default function Courses() {
 
           .ns-course-actions button:hover {
             background: #dbeafe;
-          }
-
-          .ns-course-actions button.is-view {
-            border-color: #bbf7d0;
-            background: #f0fdf4;
-            color: #15803d;
-          }
-
-          .ns-course-actions button.is-view:hover {
-            background: #dcfce7;
           }
 
           .ns-course-actions button.is-danger {

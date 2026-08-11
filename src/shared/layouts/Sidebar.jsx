@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   FaBalanceScale,
   FaBell,
@@ -23,6 +24,7 @@ import {
   FaUserGraduate,
   FaVideo,
 } from "react-icons/fa";
+
 import { NavLink } from "react-router-dom";
 
 const menuGroups = [
@@ -42,6 +44,7 @@ const menuGroups = [
       },
     ],
   },
+
   {
     title: "Content",
     items: [
@@ -79,16 +82,19 @@ const menuGroups = [
           },
         ],
       },
+
       {
         label: "Videos",
         path: "/admin/videos",
         icon: FaVideo,
       },
+
       {
         label: "Categories",
         path: "/admin/categories",
         icon: FaList,
       },
+
       {
         label: "Keyword Groups",
         path: "/admin/keywords",
@@ -96,6 +102,7 @@ const menuGroups = [
       },
     ],
   },
+
   {
     title: "Learning",
     items: [
@@ -104,21 +111,31 @@ const menuGroups = [
         path: "/admin/courses",
         icon: FaBook,
       },
+
       {
         label: "Chapters",
         path: "/admin/chapters",
         icon: FaBookOpen,
       },
+
       {
         label: "Resources",
         path: "/admin/resources",
         icon: FaFolderOpen,
       },
+
+      {
+        label: "Recommended Books",
+        path: "/admin/books",
+        icon: FaBookOpen,
+      },
+
       {
         label: "Students",
         path: "/admin/students",
         icon: FaUserGraduate,
       },
+
       {
         label: "Certificates",
         path: "/admin/certificates",
@@ -126,6 +143,7 @@ const menuGroups = [
       },
     ],
   },
+
   {
     title: "Management",
     items: [
@@ -134,21 +152,25 @@ const menuGroups = [
         path: "/admin/media",
         icon: FaImage,
       },
+
       {
         label: "Comments",
         path: "/admin/comments",
         icon: FaComments,
       },
+
       {
         label: "Notifications",
         path: "/admin/notifications",
         icon: FaBell,
       },
+
       {
         label: "SEO Manager",
         path: "/admin/seo",
         icon: FaSearch,
       },
+
       {
         label: "Analytics",
         path: "/admin/analytics",
@@ -156,6 +178,7 @@ const menuGroups = [
       },
     ],
   },
+
   {
     title: "System",
     items: [
@@ -164,11 +187,13 @@ const menuGroups = [
         path: "/admin/database",
         icon: FaDatabase,
       },
+
       {
         label: "Settings",
         path: "/admin/settings",
         icon: FaCog,
       },
+
       {
         label: "Help",
         path: "/admin/help",
@@ -182,11 +207,13 @@ const Sidebar = ({
   mobileOpen = false,
   onCloseMobile,
 }) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] =
+    useState(false);
 
-  const [openMenus, setOpenMenus] = useState({
-    "Content Manager": true,
-  });
+  const [openMenus, setOpenMenus] =
+    useState({
+      "Content Manager": true,
+    });
 
   const toggleSubmenu = (label) => {
     setOpenMenus((current) => ({
@@ -211,7 +238,8 @@ const Sidebar = ({
             inset: 0,
             zIndex: 40,
             border: "none",
-            background: "rgba(2, 6, 23, 0.65)",
+            background:
+              "rgba(2, 6, 23, 0.65)",
           }}
           className="ns-sidebar-overlay"
         />
@@ -219,8 +247,14 @@ const Sidebar = ({
 
       <aside
         className={`ns-admin-sidebar ${
-          collapsed ? "is-collapsed" : ""
-        } ${mobileOpen ? "is-mobile-open" : ""}`}
+          collapsed
+            ? "is-collapsed"
+            : ""
+        } ${
+          mobileOpen
+            ? "is-mobile-open"
+            : ""
+        }`}
       >
         <div className="ns-sidebar-header">
           <div className="ns-sidebar-brand">
@@ -230,8 +264,13 @@ const Sidebar = ({
 
             {!collapsed && (
               <div>
-                <h2>NagarikSuraksha</h2>
-                <p>Admin CMS</p>
+                <h2>
+                  NagarikSuraksha
+                </h2>
+
+                <p>
+                  Admin CMS
+                </p>
               </div>
             )}
           </div>
@@ -247,140 +286,178 @@ const Sidebar = ({
         </div>
 
         <div className="ns-sidebar-scroll">
-          {menuGroups.map((group) => (
-            <section
-              key={group.title}
-              className="ns-sidebar-group"
-            >
-              {!collapsed && (
-                <p className="ns-sidebar-group-title">
-                  {group.title}
-                </p>
-              )}
+          {menuGroups.map(
+            (group) => (
+              <section
+                key={
+                  group.title
+                }
+                className="ns-sidebar-group"
+              >
+                {!collapsed && (
+                  <p className="ns-sidebar-group-title">
+                    {
+                      group.title
+                    }
+                  </p>
+                )}
 
-              <div className="ns-sidebar-items">
-                {group.items.map((item) => {
-                  const Icon = item.icon;
+                <div className="ns-sidebar-items">
+                  {group.items.map(
+                    (item) => {
+                      const Icon =
+                        item.icon;
 
-                  if (item.children) {
-                    const isOpen = Boolean(
-                      openMenus[item.label],
-                    );
+                      if (
+                        item.children
+                      ) {
+                        const isOpen =
+                          Boolean(
+                            openMenus[
+                              item
+                                .label
+                            ],
+                          );
 
-                    return (
-                      <div
-                        key={item.label}
-                        className="ns-sidebar-parent"
-                      >
-                        <button
-                          type="button"
-                          onClick={() =>
-                            toggleSubmenu(item.label)
+                        return (
+                          <div
+                            key={
+                              item.label
+                            }
+                            className="ns-sidebar-parent"
+                          >
+                            <button
+                              type="button"
+                              onClick={() =>
+                                toggleSubmenu(
+                                  item.label,
+                                )
+                              }
+                              className="ns-sidebar-link ns-sidebar-button"
+                              title={
+                                collapsed
+                                  ? item.label
+                                  : ""
+                              }
+                            >
+                              <span className="ns-sidebar-link-main">
+                                {Icon && (
+                                  <Icon />
+                                )}
+
+                                {!collapsed && (
+                                  <span>
+                                    {
+                                      item.label
+                                    }
+                                  </span>
+                                )}
+                              </span>
+
+                              {!collapsed && (
+                                <FaChevronDown
+                                  className={`ns-sidebar-chevron ${
+                                    isOpen
+                                      ? "is-open"
+                                      : ""
+                                  }`}
+                                />
+                              )}
+                            </button>
+
+                            {isOpen &&
+                              !collapsed && (
+                                <div className="ns-sidebar-submenu">
+                                  {item.children.map(
+                                    (
+                                      child,
+                                    ) => (
+                                      <NavLink
+                                        key={
+                                          child.path
+                                        }
+                                        to={
+                                          child.path
+                                        }
+                                        onClick={
+                                          closeMobile
+                                        }
+                                        className={({
+                                          isActive,
+                                        }) =>
+                                          `ns-sidebar-sublink ${
+                                            isActive
+                                              ? "is-active"
+                                              : ""
+                                          }`
+                                        }
+                                      >
+                                        <span className="ns-sidebar-dot" />
+
+                                        <span>
+                                          {
+                                            child.label
+                                          }
+                                        </span>
+                                      </NavLink>
+                                    ),
+                                  )}
+                                </div>
+                              )}
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <NavLink
+                          key={
+                            item.path
                           }
-                          className="ns-sidebar-link ns-sidebar-button"
+                          to={
+                            item.path
+                          }
+                          end={
+                            item.end
+                          }
+                          onClick={
+                            closeMobile
+                          }
                           title={
                             collapsed
                               ? item.label
                               : ""
                           }
+                          className={({
+                            isActive,
+                          }) =>
+                            `ns-sidebar-link ${
+                              isActive
+                                ? "is-active"
+                                : ""
+                            }`
+                          }
                         >
                           <span className="ns-sidebar-link-main">
-                            {Icon && <Icon />}
+                            {Icon && (
+                              <Icon />
+                            )}
 
                             {!collapsed && (
                               <span>
-                                {item.label}
+                                {
+                                  item.label
+                                }
                               </span>
                             )}
                           </span>
-
-                          {!collapsed && (
-                            <FaChevronDown
-                              className={`ns-sidebar-chevron ${
-                                isOpen
-                                  ? "is-open"
-                                  : ""
-                              }`}
-                            />
-                          )}
-                        </button>
-
-                        {isOpen &&
-                          !collapsed && (
-                            <div className="ns-sidebar-submenu">
-                              {item.children.map(
-                                (child) => (
-                                  <NavLink
-                                    key={
-                                      child.path
-                                    }
-                                    to={
-                                      child.path
-                                    }
-                                    onClick={
-                                      closeMobile
-                                    }
-                                    className={({
-                                      isActive,
-                                    }) =>
-                                      `ns-sidebar-sublink ${
-                                        isActive
-                                          ? "is-active"
-                                          : ""
-                                      }`
-                                    }
-                                  >
-                                    <span className="ns-sidebar-dot" />
-                                    <span>
-                                      {
-                                        child.label
-                                      }
-                                    </span>
-                                  </NavLink>
-                                ),
-                              )}
-                            </div>
-                          )}
-                      </div>
-                    );
-                  }
-
-                  return (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      end={item.end}
-                      onClick={closeMobile}
-                      title={
-                        collapsed
-                          ? item.label
-                          : ""
-                      }
-                      className={({
-                        isActive,
-                      }) =>
-                        `ns-sidebar-link ${
-                          isActive
-                            ? "is-active"
-                            : ""
-                        }`
-                      }
-                    >
-                      <span className="ns-sidebar-link-main">
-                        {Icon && <Icon />}
-
-                        {!collapsed && (
-                          <span>
-                            {item.label}
-                          </span>
-                        )}
-                      </span>
-                    </NavLink>
-                  );
-                })}
-              </div>
-            </section>
-          ))}
+                        </NavLink>
+                      );
+                    },
+                  )}
+                </div>
+              </section>
+            ),
+          )}
         </div>
 
         <div className="ns-sidebar-footer">
@@ -392,6 +469,7 @@ const Sidebar = ({
                 <strong>
                   Firebase Connected
                 </strong>
+
                 <small>
                   Version 1.1.0
                 </small>
@@ -403,7 +481,8 @@ const Sidebar = ({
             type="button"
             onClick={() =>
               setCollapsed(
-                (current) => !current,
+                (current) =>
+                  !current,
               )
             }
             className="ns-sidebar-collapse"
@@ -418,7 +497,10 @@ const Sidebar = ({
             ) : (
               <>
                 <FaChevronLeft />
-                <span>Collapse</span>
+
+                <span>
+                  Collapse
+                </span>
               </>
             )}
           </button>
@@ -476,7 +558,12 @@ const Sidebar = ({
             font-size: 22px;
             box-shadow:
               0 10px 24px
-              rgba(37, 99, 235, 0.3);
+              rgba(
+                37,
+                99,
+                235,
+                0.3
+              );
           }
 
           .ns-sidebar-brand h2 {
@@ -567,7 +654,12 @@ const Sidebar = ({
             color: #ffffff;
             box-shadow:
               0 10px 22px
-              rgba(37, 99, 235, 0.24);
+              rgba(
+                37,
+                99,
+                235,
+                0.24
+              );
           }
 
           .ns-sidebar-link-main {
@@ -653,7 +745,12 @@ const Sidebar = ({
             background: #22c55e;
             box-shadow:
               0 0 0 4px
-              rgba(34, 197, 94, 0.12);
+              rgba(
+                34,
+                197,
+                94,
+                0.12
+              );
           }
 
           .ns-sidebar-status strong,

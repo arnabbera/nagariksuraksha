@@ -5,6 +5,7 @@
 } from "react";
 
 import {
+  FaBook,
   FaBookOpen,
   FaCheckCircle,
   FaClock,
@@ -26,6 +27,10 @@ import {
 import {
   getPublishedChaptersByCourse,
 } from "../../../../services/chapterService";
+
+import {
+  getPublishedBooksByCourse,
+} from "../../../../services/courseBookService";
 
 import {
   enrollStudent,
@@ -65,6 +70,11 @@ export default function CourseDetails() {
   const [
     chapters,
     setChapters,
+  ] = useState([]);
+
+  const [
+    recommendedBooks,
+    setRecommendedBooks,
   ] = useState([]);
 
   const [
@@ -134,6 +144,7 @@ export default function CourseDetails() {
         if (!courseData) {
           setCourse(null);
           setChapters([]);
+          setRecommendedBooks([]);
           setEnrollment(null);
           setProgress([]);
           return;
@@ -231,6 +242,49 @@ export default function CourseDetails() {
             ? progressData
             : [],
         );
+
+        // -----------------------------------------------------
+        // STEP 5: LOAD RECOMMENDED BOOKS INDEPENDENTLY
+        // -----------------------------------------------------
+        //
+        // A permissions/query issue in courseBooks must never
+        // break the course page itself.
+        //
+        try {
+          const bookData =
+            await getPublishedBooksByCourse(
+              realCourseId,
+            );
+
+          const publishedRecommendedBooks =
+            Array.isArray(
+              bookData,
+            )
+              ? bookData.filter(
+                  (book) =>
+                    book &&
+                    book.published ===
+                      true &&
+                    book.deleted !==
+                      true &&
+                    book.recommended ===
+                      true,
+                )
+              : [];
+
+          setRecommendedBooks(
+            publishedRecommendedBooks,
+          );
+        } catch (
+          bookLoadError
+        ) {
+          console.error(
+            "Unable to load recommended books:",
+            bookLoadError,
+          );
+
+          setRecommendedBooks([]);
+        }
       } catch (
         loadError
       ) {
@@ -267,6 +321,37 @@ export default function CourseDetails() {
     course?.media
       ?.mobileImageUrl ||
     course?.mobileImageUrl ||
+    "";
+
+  const getBookCover = (book) =>
+    book?.coverImageUrl ||
+    book?.imageUrl ||
+    book?.thumbnailUrl ||
+    book?.coverUrl ||
+    book?.media?.coverImageUrl ||
+    "";
+
+  const getBookTitle = (book) =>
+    book?.title ||
+    book?.bookTitle ||
+    "Recommended Book";
+
+  const getBookAuthor = (book) =>
+    book?.author ||
+    book?.authors ||
+    book?.authorName ||
+    "";
+
+  const getBookPublisher = (book) =>
+    book?.publisher ||
+    book?.publisherName ||
+    "";
+
+  const getBookLink = (book) =>
+    book?.url ||
+    book?.purchaseUrl ||
+    book?.buyUrl ||
+    book?.amazonUrl ||
     "";
 
   // =========================================================
@@ -493,35 +578,104 @@ export default function CourseDetails() {
       ====================================================== */}
 
       <div className="ns-course-hero">
-        {/* COURSE IMAGE */}
+        {/* LEFT COLUMN: IMAGE + RECOMMENDED BOOKS */}
 
-        {desktopImageUrl &&
-          !imageError && (
-            <div className="ns-course-cover">
-              <picture>
-                {mobileImageUrl && (
-                  <source
-                    media="(max-width: 640px)"
-                    srcSet={
-                      mobileImageUrl
+        <div className="ns-course-left-column">
+          {desktopImageUrl &&
+            !imageError && (
+              <div className="ns-course-cover">
+                <picture>
+                  {mobileImageUrl && (
+                    <source
+                      media="(max-width: 640px)"
+                      srcSet={
+                        mobileImageUrl
+                      }
+                    />
+                  )}
+
+                  <img
+                    src={
+                      desktopImageUrl
+                    }
+                    alt={`${course.title} course banner`}
+                    onError={() =>
+                      setImageError(
+                        true,
+                      )
                     }
                   />
-                )}
+                </picture>
+              </div>
+            )}
 
-                <img
-                  src={
-                    desktopImageUrl
-                  }
-                  alt={`${course.title} course banner`}
-                  onError={() =>
-                    setImageError(
-                      true,
-                    )
-                  }
-                />
-              </picture>
+          <section className="ns-course-books">
+            <div className="ns-course-books-heading">
+              <FaBook />
+              <div>
+                <h2>Recommended Books</h2>
+                <p>Suggested reading for this course</p>
+              </div>
             </div>
-          )}
+
+            {recommendedBooks.length === 0 ? (
+              <div className="ns-course-books-empty">
+                Recommended books will be added soon.
+              </div>
+            ) : (
+              <div className="ns-course-book-list">
+                {recommendedBooks.map((book, index) => {
+                  const cover = getBookCover(book);
+                  const title = getBookTitle(book);
+                  const author = getBookAuthor(book);
+                  const publisher = getBookPublisher(book);
+                  const link = getBookLink(book);
+
+                  const bookContent = (
+                    <>
+                      <div className="ns-course-book-cover">
+                        {cover ? (
+                          <img
+                            src={cover}
+                            alt={`${title} cover`}
+                            loading="lazy"
+                          />
+                        ) : (
+                          <FaBook />
+                        )}
+                      </div>
+
+                      <div className="ns-course-book-info">
+                        <h3>{title}</h3>
+                        {author && <p>By {author}</p>}
+                        {publisher && <small>{publisher}</small>}
+                      </div>
+                    </>
+                  );
+
+                  return link ? (
+                    <a
+                      key={book.id || `${title}-${index}`}
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="ns-course-book-item"
+                    >
+                      {bookContent}
+                    </a>
+                  ) : (
+                    <article
+                      key={book.id || `${title}-${index}`}
+                      className="ns-course-book-item"
+                    >
+                      {bookContent}
+                    </article>
+                  );
+                })}
+              </div>
+            )}
+          </section>
+        </div>
 
         {/* COURSE OVERVIEW */}
 
@@ -792,6 +946,117 @@ export default function CourseDetails() {
 
           .ns-course-hero > * {
             min-width: 0;
+          }
+
+          .ns-course-left-column {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+            gap: 18px;
+          }
+
+          .ns-course-books {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+          }
+
+          .ns-course-books-heading {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #2563eb;
+            padding: 15px 16px;
+          }
+
+          .ns-course-books-heading h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 15px;
+          }
+
+          .ns-course-books-heading p {
+            margin: 3px 0 0;
+            color: #64748b;
+            font-size: 10px;
+          }
+
+          .ns-course-book-list {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .ns-course-book-item {
+            display: flex;
+            min-width: 0;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            color: inherit;
+            padding: 12px 16px;
+            text-decoration: none;
+          }
+
+          .ns-course-book-item:last-child {
+            border-bottom: 0;
+          }
+
+          a.ns-course-book-item:hover {
+            background: #f8fafc;
+          }
+
+          .ns-course-book-cover {
+            display: flex;
+            width: 48px;
+            height: 64px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 7px;
+            background: #f8fafc;
+            color: #94a3b8;
+          }
+
+          .ns-course-book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .ns-course-book-info {
+            min-width: 0;
+            flex: 1;
+          }
+
+          .ns-course-book-info h3 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 12px;
+            line-height: 1.45;
+          }
+
+          .ns-course-book-info p {
+            margin: 4px 0 0;
+            color: #64748b;
+            font-size: 10px;
+          }
+
+          .ns-course-book-info small {
+            display: block;
+            margin-top: 3px;
+            color: #94a3b8;
+            font-size: 9px;
+          }
+
+          .ns-course-books-empty {
+            color: #64748b;
+            padding: 18px 16px;
+            font-size: 11px;
           }
 
           /* ==================================================
@@ -1244,6 +1509,22 @@ export default function CourseDetails() {
 
               margin:
                 0 auto;
+            }
+
+            .ns-course-left-column {
+              display: contents;
+            }
+
+            .ns-course-cover {
+              order: 1;
+            }
+
+            .ns-course-hero > .ns-course-left-column + * {
+              order: 2;
+            }
+
+            .ns-course-books {
+              order: 3;
             }
           }
 

@@ -10,6 +10,7 @@ import HomepageCms from "../features/admin/pages/HomepageCms";
 
 import ChapterManagement from "../features/admin/chapters/pages/ChapterManagement";
 import ResourceManagement from "../features/admin/resources/pages/ResourceManagement";
+import CourseBookManagement from "../features/admin/books/pages/CourseBookManagement";
 
 import LoginPage from "../features/auth/pages/LoginPage";
 
@@ -27,7 +28,10 @@ import StudentLayout from "../shared/layouts/StudentLayout";
 export default function AppRouter() {
   return (
     <Routes>
-      {/* Public */}
+      {/* =====================================================
+          PUBLIC
+      ====================================================== */}
+
       <Route
         path="/"
         element={<PublicLayout />}
@@ -38,7 +42,10 @@ export default function AppRouter() {
         element={<LoginPage />}
       />
 
-      {/* Student Portal */}
+      {/* =====================================================
+          STUDENT PORTAL
+      ====================================================== */}
+
       <Route
         path="/student"
         element={<StudentLayout />}
@@ -84,7 +91,10 @@ export default function AppRouter() {
         />
       </Route>
 
-      {/* Admin Portal */}
+      {/* =====================================================
+          ADMIN PORTAL
+      ====================================================== */}
+
       <Route
         path="/admin"
         element={<AdminLayout />}
@@ -113,9 +123,19 @@ export default function AppRouter() {
           path="resources"
           element={<ResourceManagement />}
         />
+
+        {/* Recommended Books */}
+
+        <Route
+          path="books"
+          element={<CourseBookManagement />}
+        />
       </Route>
 
-      {/* 404 */}
+      {/* =====================================================
+          404
+      ====================================================== */}
+
       <Route
         path="*"
         element={
