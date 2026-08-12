@@ -5,7 +5,10 @@ import {
 } from "react";
 
 import {
+  FaBookOpen,
   FaFilePdf,
+  FaLandmark,
+  FaPlus,
   FaTrash,
   FaUpload,
 } from "react-icons/fa";
@@ -15,19 +18,47 @@ import Button from "../../../../shared/components/Button";
 const MAX_PDF_SIZE =
   25 * 1024 * 1024;
 
+// =========================================================
+// EMPTY FORM
+// =========================================================
+
 const EMPTY_FORM = {
   courseId: "",
+
   title: "",
   slug: "",
+
   shortDescription: "",
+
+  chapterOverview: "",
+
+  learningObjectivesText: "",
+
+  detailedContent: "",
+
+  keyPointsText: "",
+
+  statutoryProvisions: [],
+
+  importantCases: [],
+
+  examFocus: "",
+
+  revisionNotes: "",
+
   notes: "",
+
   chapterNumber: 1,
   displayOrder: 1,
+
   previewAvailable: false,
   published: false,
   status: "draft",
 
-  // Existing PDF information
+  // =======================================================
+  // EXISTING PDF INFORMATION
+  // =======================================================
+
   pdfUrl: "",
   pdfStoragePath: "",
   pdfPublicId: "",
@@ -37,38 +68,189 @@ const EMPTY_FORM = {
   pdfAssetId: "",
 };
 
-const createSlug = (value = "") =>
+// =========================================================
+// HELPERS
+// =========================================================
+
+const createSlug = (
+  value = "",
+) =>
   value
     .trim()
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+    .replace(
+      /[^a-z0-9\s-]/g,
+      "",
+    )
+    .replace(
+      /\s+/g,
+      "-",
+    )
+    .replace(
+      /-+/g,
+      "-",
+    );
 
-const formatFileSize = (bytes = 0) => {
-  const size = Number(bytes || 0);
+const formatFileSize = (
+  bytes = 0,
+) => {
+  const size =
+    Number(
+      bytes || 0,
+    );
 
   if (!size) {
     return "";
   }
 
-  if (size < 1024) {
+  if (
+    size <
+    1024
+  ) {
     return `${size} B`;
   }
 
-  if (size < 1024 * 1024) {
-    return `${(size / 1024).toFixed(1)} KB`;
+  if (
+    size <
+    1024 * 1024
+  ) {
+    return `${(
+      size /
+      1024
+    ).toFixed(
+      1,
+    )} KB`;
   }
 
   return `${(
     size /
-    (1024 * 1024)
-  ).toFixed(2)} MB`;
+    (
+      1024 *
+      1024
+    )
+  ).toFixed(
+    2,
+  )} MB`;
 };
 
-const normalizeChapter = (chapter) => ({
+const arrayToMultilineText = (
+  values = [],
+) =>
+  Array.isArray(
+    values,
+  )
+    ? values
+        .filter(Boolean)
+        .join("\n")
+    : "";
+
+const multilineTextToArray = (
+  value = "",
+) =>
+  String(
+    value || "",
+  )
+    .split(/\r?\n/)
+    .map(
+      (item) =>
+        item.trim(),
+    )
+    .filter(Boolean);
+
+// =========================================================
+// NORMALIZE CHAPTER FOR EDITING
+// =========================================================
+
+const normalizeChapter = (
+  chapter,
+) => ({
   ...EMPTY_FORM,
   ...chapter,
+
+  // =======================================================
+  // ACADEMIC CONTENT
+  // =======================================================
+
+  chapterOverview:
+    chapter?.content
+      ?.overview ??
+    chapter
+      ?.chapterOverview ??
+    "",
+
+  learningObjectivesText:
+    arrayToMultilineText(
+      chapter?.content
+        ?.learningObjectives ??
+        chapter
+          ?.learningObjectives ??
+        [],
+    ),
+
+  detailedContent:
+    chapter?.content
+      ?.detailedContent ??
+    chapter
+      ?.detailedContent ??
+    "",
+
+  keyPointsText:
+    arrayToMultilineText(
+      chapter?.content
+        ?.keyPoints ??
+        chapter
+          ?.keyPoints ??
+        [],
+    ),
+
+  statutoryProvisions:
+    Array.isArray(
+      chapter?.content
+        ?.statutoryProvisions,
+    )
+      ? chapter
+          .content
+          .statutoryProvisions
+      : Array.isArray(
+            chapter
+              ?.statutoryProvisions,
+          )
+        ? chapter
+            .statutoryProvisions
+        : [],
+
+  importantCases:
+    Array.isArray(
+      chapter?.content
+        ?.importantCases,
+    )
+      ? chapter
+          .content
+          .importantCases
+      : Array.isArray(
+            chapter
+              ?.importantCases,
+          )
+        ? chapter
+            .importantCases
+        : [],
+
+  examFocus:
+    chapter?.content
+      ?.examFocus ??
+    chapter?.examFocus ??
+    "",
+
+  revisionNotes:
+    chapter?.content
+      ?.revisionNotes ??
+    chapter
+      ?.revisionNotes ??
+    "",
+
+  // =======================================================
+  // PDF
+  // =======================================================
 
   pdfUrl:
     chapter?.pdf?.url ??
@@ -76,35 +258,51 @@ const normalizeChapter = (chapter) => ({
     "",
 
   pdfStoragePath:
-    chapter?.pdf?.storagePath ??
-    chapter?.pdfStoragePath ??
+    chapter?.pdf
+      ?.storagePath ??
+    chapter
+      ?.pdfStoragePath ??
     "",
 
   pdfPublicId:
-    chapter?.pdf?.publicId ??
-    chapter?.pdfPublicId ??
+    chapter?.pdf
+      ?.publicId ??
+    chapter
+      ?.pdfPublicId ??
     "",
 
   pdfFileName:
-    chapter?.pdf?.fileName ??
-    chapter?.pdfFileName ??
+    chapter?.pdf
+      ?.fileName ??
+    chapter
+      ?.pdfFileName ??
     "",
 
   pdfFileSize:
-    chapter?.pdf?.fileSize ??
-    chapter?.pdfFileSize ??
+    chapter?.pdf
+      ?.fileSize ??
+    chapter
+      ?.pdfFileSize ??
     0,
 
   pdfContentType:
-    chapter?.pdf?.contentType ??
-    chapter?.pdfContentType ??
+    chapter?.pdf
+      ?.contentType ??
+    chapter
+      ?.pdfContentType ??
     "",
 
   pdfAssetId:
-    chapter?.pdf?.assetId ??
-    chapter?.pdfAssetId ??
+    chapter?.pdf
+      ?.assetId ??
+    chapter
+      ?.pdfAssetId ??
     "",
 });
+
+// =========================================================
+// COMPONENT
+// =========================================================
 
 export default function ChapterForm({
   courses = [],
@@ -119,100 +317,352 @@ export default function ChapterForm({
   const pdfInputRef =
     useRef(null);
 
-  const [form, setForm] =
+  const [
+    form,
+    setForm,
+  ] =
     useState({
       ...EMPTY_FORM,
+
       courseId:
         selectedCourseId,
     });
 
-  const [pdfFile, setPdfFile] =
+  const [
+    pdfFile,
+    setPdfFile,
+  ] =
     useState(null);
 
   const [
     removeExistingPdf,
     setRemoveExistingPdf,
-  ] = useState(false);
+  ] =
+    useState(false);
 
-  const [error, setError] =
+  const [
+    error,
+    setError,
+  ] =
     useState("");
 
-  useEffect(() => {
-    if (chapter) {
-      setForm(
-        normalizeChapter(
-          chapter,
-        ),
+  // =========================================================
+  // LOAD / RESET FORM
+  // =========================================================
+
+  useEffect(
+    () => {
+      if (chapter) {
+        setForm(
+          normalizeChapter(
+            chapter,
+          ),
+        );
+
+        setPdfFile(
+          null,
+        );
+
+        setRemoveExistingPdf(
+          false,
+        );
+
+        if (
+          pdfInputRef.current
+        ) {
+          pdfInputRef.current.value =
+            "";
+        }
+
+        return;
+      }
+
+      setForm({
+        ...EMPTY_FORM,
+
+        courseId:
+          selectedCourseId,
+      });
+
+      setPdfFile(
+        null,
       );
 
-      setPdfFile(null);
-      setRemoveExistingPdf(false);
+      setRemoveExistingPdf(
+        false,
+      );
 
-      if (pdfInputRef.current) {
+      if (
+        pdfInputRef.current
+      ) {
         pdfInputRef.current.value =
           "";
       }
+    },
+    [
+      chapter,
+      selectedCourseId,
+    ],
+  );
 
-      return;
-    }
-
-    setForm({
-      ...EMPTY_FORM,
-      courseId:
-        selectedCourseId,
-    });
-
-    setPdfFile(null);
-    setRemoveExistingPdf(false);
-
-    if (pdfInputRef.current) {
-      pdfInputRef.current.value =
-        "";
-    }
-  }, [
-    chapter,
-    selectedCourseId,
-  ]);
+  // =========================================================
+  // GENERAL FIELD UPDATE
+  // =========================================================
 
   const updateField = (
     field,
     value,
   ) => {
-    setForm((current) => ({
-      ...current,
-      [field]: value,
-    }));
+    setForm(
+      (
+        current,
+      ) => ({
+        ...current,
+
+        [field]:
+          value,
+      }),
+    );
   };
+
+  // =========================================================
+  // TITLE
+  // =========================================================
 
   const handleTitleChange = (
     value,
   ) => {
-    setForm((current) => ({
-      ...current,
+    setForm(
+      (
+        current,
+      ) => ({
+        ...current,
 
-      title: value,
+        title:
+          value,
 
-      slug:
-        chapter ||
-        current.slug
-          ? current.slug
-          : createSlug(value),
-    }));
+        slug:
+          chapter ||
+          current.slug
+            ? current.slug
+            : createSlug(
+                value,
+              ),
+      }),
+    );
   };
+
+  // =========================================================
+  // PUBLISH STATUS
+  // =========================================================
 
   const handlePublishedChange = (
     published,
   ) => {
-    setForm((current) => ({
-      ...current,
+    setForm(
+      (
+        current,
+      ) => ({
+        ...current,
 
-      published,
+        published,
 
-      status: published
-        ? "published"
-        : "draft",
-    }));
+        status:
+          published
+            ? "published"
+            : "draft",
+      }),
+    );
   };
+
+  // =========================================================
+  // STATUTORY PROVISIONS
+  // =========================================================
+
+  const addStatutoryProvision =
+    () => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          statutoryProvisions: [
+            ...current
+              .statutoryProvisions,
+
+            {
+              id:
+                `provision-${Date.now()}`,
+
+              title:
+                "",
+
+              provision:
+                "",
+
+              description:
+                "",
+            },
+          ],
+        }),
+      );
+    };
+
+  const updateStatutoryProvision =
+    (
+      index,
+      field,
+      value,
+    ) => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          statutoryProvisions:
+            current
+              .statutoryProvisions
+              .map(
+                (
+                  item,
+                  itemIndex,
+                ) =>
+                  itemIndex ===
+                  index
+                    ? {
+                        ...item,
+
+                        [field]:
+                          value,
+                      }
+                    : item,
+              ),
+        }),
+      );
+    };
+
+  const removeStatutoryProvision =
+    (
+      index,
+    ) => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          statutoryProvisions:
+            current
+              .statutoryProvisions
+              .filter(
+                (
+                  _,
+                  itemIndex,
+                ) =>
+                  itemIndex !==
+                  index,
+              ),
+        }),
+      );
+    };
+
+  // =========================================================
+  // IMPORTANT CASES
+  // =========================================================
+
+  const addImportantCase =
+    () => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          importantCases: [
+            ...current
+              .importantCases,
+
+            {
+              id:
+                `case-${Date.now()}`,
+
+              caseName:
+                "",
+
+              citation:
+                "",
+
+              principle:
+                "",
+
+              summary:
+                "",
+            },
+          ],
+        }),
+      );
+    };
+
+  const updateImportantCase =
+    (
+      index,
+      field,
+      value,
+    ) => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          importantCases:
+            current
+              .importantCases
+              .map(
+                (
+                  item,
+                  itemIndex,
+                ) =>
+                  itemIndex ===
+                  index
+                    ? {
+                        ...item,
+
+                        [field]:
+                          value,
+                      }
+                    : item,
+              ),
+        }),
+      );
+    };
+
+  const removeImportantCase =
+    (
+      index,
+    ) => {
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
+
+          importantCases:
+            current
+              .importantCases
+              .filter(
+                (
+                  _,
+                  itemIndex,
+                ) =>
+                  itemIndex !==
+                  index,
+              ),
+        }),
+      );
+    };
 
   // =========================================================
   // PDF SELECTION
@@ -222,7 +672,8 @@ export default function ChapterForm({
     event,
   ) => {
     const file =
-      event.target.files?.[0];
+      event.target
+        .files?.[0];
 
     setError("");
 
@@ -235,14 +686,17 @@ export default function ChapterForm({
         "application/pdf" ||
       file.name
         .toLowerCase()
-        .endsWith(".pdf");
+        .endsWith(
+          ".pdf",
+        );
 
     if (!isPdf) {
       setError(
         "Please select a PDF file.",
       );
 
-      event.target.value = "";
+      event.target.value =
+        "";
 
       return;
     }
@@ -255,121 +709,203 @@ export default function ChapterForm({
         "The chapter PDF must be 25 MB or smaller.",
       );
 
-      event.target.value = "";
+      event.target.value =
+        "";
 
       return;
     }
 
-    setPdfFile(file);
+    setPdfFile(
+      file,
+    );
 
     setRemoveExistingPdf(
       false,
     );
   };
 
-  const handleChoosePdf = () => {
-    pdfInputRef.current?.click();
-  };
+  const handleChoosePdf =
+    () => {
+      pdfInputRef.current?.click();
+    };
 
-  const handleRemovePdf = () => {
-    setPdfFile(null);
-
-    if (
-      form.pdfUrl ||
-      form.pdfStoragePath
-    ) {
-      setRemoveExistingPdf(
-        true,
+  const handleRemovePdf =
+    () => {
+      setPdfFile(
+        null,
       );
-    }
 
-    setForm((current) => ({
-      ...current,
+      if (
+        form.pdfUrl ||
+        form.pdfStoragePath
+      ) {
+        setRemoveExistingPdf(
+          true,
+        );
+      }
 
-      pdfUrl: "",
-      pdfStoragePath: "",
-      pdfPublicId: "",
-      pdfFileName: "",
-      pdfFileSize: 0,
-      pdfContentType: "",
-      pdfAssetId: "",
-    }));
+      setForm(
+        (
+          current,
+        ) => ({
+          ...current,
 
-    if (pdfInputRef.current) {
-      pdfInputRef.current.value =
-        "";
-    }
-  };
+          pdfUrl:
+            "",
+
+          pdfStoragePath:
+            "",
+
+          pdfPublicId:
+            "",
+
+          pdfFileName:
+            "",
+
+          pdfFileSize:
+            0,
+
+          pdfContentType:
+            "",
+
+          pdfAssetId:
+            "",
+        }),
+      );
+
+      if (
+        pdfInputRef.current
+      ) {
+        pdfInputRef.current.value =
+          "";
+      }
+    };
 
   // =========================================================
   // SUBMIT
   // =========================================================
 
-  const handleSubmit = async (
-    event,
-  ) => {
-    event.preventDefault();
+  const handleSubmit =
+    async (
+      event,
+    ) => {
+      event.preventDefault();
 
-    if (!form.courseId) {
-      setError(
-        "Please select a course.",
-      );
-      return;
-    }
+      if (
+        !form.courseId
+      ) {
+        setError(
+          "Please select a course.",
+        );
 
-    if (!form.title.trim()) {
-      setError(
-        "Chapter title is required.",
-      );
-      return;
-    }
+        return;
+      }
 
-    setError("");
+      if (
+        !form.title.trim()
+      ) {
+        setError(
+          "Chapter title is required.",
+        );
 
-    await onSubmit?.({
-      ...form,
+        return;
+      }
 
-      slug: createSlug(
-        form.slug ||
-          form.title,
-      ),
+      setError("");
 
-      chapterNumber:
-        Number(
-          form.chapterNumber ||
-            1,
-        ),
+      await onSubmit?.({
+        ...form,
 
-      displayOrder:
-        Number(
-          form.displayOrder ||
-            1,
-        ),
+        slug:
+          createSlug(
+            form.slug ||
+              form.title,
+          ),
 
-      /*
-       * The browser File object is deliberately passed
-       * separately. ChapterManagement will upload it to
-       * Cloudinary before calling the Firestore service.
-       */
-      pdfFile,
+        chapterNumber:
+          Number(
+            form
+              .chapterNumber ||
+              1,
+          ),
 
-      removeExistingPdf,
-    });
-  };
+        displayOrder:
+          Number(
+            form
+              .displayOrder ||
+              1,
+          ),
+
+        // ===================================================
+        // ACADEMIC CONTENT
+        // ===================================================
+
+        chapterOverview:
+          form
+            .chapterOverview,
+
+        learningObjectives:
+          multilineTextToArray(
+            form
+              .learningObjectivesText,
+          ),
+
+        detailedContent:
+          form
+            .detailedContent,
+
+        keyPoints:
+          multilineTextToArray(
+            form
+              .keyPointsText,
+          ),
+
+        statutoryProvisions:
+          form
+            .statutoryProvisions,
+
+        importantCases:
+          form
+            .importantCases,
+
+        examFocus:
+          form.examFocus,
+
+        revisionNotes:
+          form
+            .revisionNotes,
+
+        // ===================================================
+        // UI-ONLY VALUES
+        // ===================================================
+
+        pdfFile,
+
+        removeExistingPdf,
+      });
+    };
 
   const hasExistingPdf =
-    Boolean(form.pdfUrl);
+    Boolean(
+      form.pdfUrl,
+    );
 
   const hasPdf =
     Boolean(
       pdfFile ||
-      hasExistingPdf,
+        hasExistingPdf,
     );
+
+  // =========================================================
+  // RENDER
+  // =========================================================
 
   return (
     <form
       className="ns-chapter-form"
-      onSubmit={handleSubmit}
+      onSubmit={
+        handleSubmit
+      }
     >
       {error && (
         <div className="ns-chapter-error">
@@ -378,8 +914,16 @@ export default function ChapterForm({
       )}
 
       {/* =====================================================
-          COURSE
+          BASIC INFORMATION
       ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaBookOpen />
+        }
+        title="Basic Information"
+        description="Core information used to identify and organise the chapter."
+      />
 
       <div className="ns-chapter-field ns-chapter-full">
         <label>
@@ -388,11 +932,17 @@ export default function ChapterForm({
 
         <select
           required
-          value={form.courseId}
-          onChange={(event) =>
+          value={
+            form.courseId
+          }
+          onChange={(
+            event,
+          ) =>
             updateField(
               "courseId",
-              event.target.value,
+              event
+                .target
+                .value,
             )
           }
         >
@@ -401,21 +951,25 @@ export default function ChapterForm({
           </option>
 
           {courses.map(
-            (course) => (
+            (
+              course,
+            ) => (
               <option
-                key={course.id}
-                value={course.id}
+                key={
+                  course.id
+                }
+                value={
+                  course.id
+                }
               >
-                {course.title}
+                {
+                  course.title
+                }
               </option>
             ),
           )}
         </select>
       </div>
-
-      {/* =====================================================
-          TITLE
-      ====================================================== */}
 
       <div className="ns-chapter-field ns-chapter-full">
         <label>
@@ -424,26 +978,41 @@ export default function ChapterForm({
 
         <input
           required
-          value={form.title}
-          onChange={(event) =>
+          value={
+            form.title
+          }
+          onChange={(
+            event,
+          ) =>
             handleTitleChange(
-              event.target.value,
+              event
+                .target
+                .value,
             )
           }
-          placeholder="Introduction to Consumer Law"
+          placeholder="Nature and Principles of Torts"
         />
       </div>
 
       <div className="ns-chapter-field">
-        <label>Slug</label>
+        <label>
+          Slug
+        </label>
 
         <input
-          value={form.slug}
-          onChange={(event) =>
+          value={
+            form.slug
+          }
+          onChange={(
+            event,
+          ) =>
             updateField(
               "slug",
+
               createSlug(
-                event.target.value,
+                event
+                  .target
+                  .value,
               ),
             )
           }
@@ -459,12 +1028,17 @@ export default function ChapterForm({
           type="number"
           min="1"
           value={
-            form.chapterNumber
+            form
+              .chapterNumber
           }
-          onChange={(event) =>
+          onChange={(
+            event,
+          ) =>
             updateField(
               "chapterNumber",
-              event.target.value,
+              event
+                .target
+                .value,
             )
           }
         />
@@ -479,28 +1053,43 @@ export default function ChapterForm({
           type="number"
           min="1"
           value={
-            form.displayOrder
+            form
+              .displayOrder
           }
-          onChange={(event) =>
+          onChange={(
+            event,
+          ) =>
             updateField(
               "displayOrder",
-              event.target.value,
+              event
+                .target
+                .value,
             )
           }
         />
       </div>
 
       <div className="ns-chapter-field">
-        <label>Status</label>
+        <label>
+          Status
+        </label>
 
         <select
-          value={form.status}
-          onChange={(event) => {
+          value={
+            form.status
+          }
+          onChange={(
+            event,
+          ) => {
             const status =
-              event.target.value;
+              event
+                .target
+                .value;
 
             setForm(
-              (current) => ({
+              (
+                current,
+              ) => ({
                 ...current,
 
                 status,
@@ -530,38 +1119,611 @@ export default function ChapterForm({
         <textarea
           rows="3"
           value={
-            form.shortDescription
+            form
+              .shortDescription
           }
-          onChange={(event) =>
+          onChange={(
+            event,
+          ) =>
             updateField(
               "shortDescription",
-              event.target.value,
+              event
+                .target
+                .value,
             )
           }
+          placeholder="A short description displayed in chapter lists and course pages."
+        />
+      </div>
+
+      {/* =====================================================
+          CHAPTER OVERVIEW
+      ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaBookOpen />
+        }
+        title="Chapter Overview"
+        description="Give students a clear introduction to what this chapter covers."
+      />
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Overview
+        </label>
+
+        <textarea
+          rows="5"
+          value={
+            form
+              .chapterOverview
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "chapterOverview",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder="Explain the scope, purpose and importance of this chapter..."
+        />
+      </div>
+
+      {/* =====================================================
+          LEARNING OBJECTIVES
+      ====================================================== */}
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Learning objectives
+        </label>
+
+        <textarea
+          rows="6"
+          value={
+            form
+              .learningObjectivesText
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "learningObjectivesText",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder={`Enter one learning objective per line.\nExample:\nUnderstand the historical development of tort law\nExplain the essential elements of a tort\nDistinguish injuria sine damno from damnum sine injuria`}
+        />
+
+        <small className="ns-field-help">
+          Enter one objective per line.
+        </small>
+      </div>
+
+      {/* =====================================================
+          DETAILED CONTENT
+      ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaBookOpen />
+        }
+        title="Detailed Chapter Content"
+        description="The main academic content students will read before the study materials."
+      />
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Detailed content
+        </label>
+
+        <textarea
+          rows="16"
+          value={
+            form
+              .detailedContent
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "detailedContent",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder={`Write the detailed chapter content here.
+
+You can organise it with headings, numbered points and paragraphs.
+
+Example:
+
+1. Introduction
+...
+2. Historical Development
+...
+3. Meaning of Tort
+...`}
+        />
+      </div>
+
+      {/* =====================================================
+          KEY POINTS
+      ====================================================== */}
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Key points
+        </label>
+
+        <textarea
+          rows="7"
+          value={
+            form
+              .keyPointsText
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "keyPointsText",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder={`Enter one important point per line.\nExample:\nA tort is primarily a civil wrong\nThe duty is generally imposed by law\nThe remedy is usually unliquidated damages`}
+        />
+
+        <small className="ns-field-help">
+          Enter one key point per line.
+        </small>
+      </div>
+
+      {/* =====================================================
+          STATUTORY PROVISIONS
+      ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaLandmark />
+        }
+        title="Statutory Provisions"
+        description="Add relevant sections, rules, constitutional provisions or statutory references."
+        action={
+          <button
+            type="button"
+            className="ns-add-item-button"
+            onClick={
+              addStatutoryProvision
+            }
+          >
+            <FaPlus />
+            Add Provision
+          </button>
+        }
+      />
+
+      <div className="ns-chapter-full">
+        {form
+          .statutoryProvisions
+          .length ===
+        0 ? (
+          <div className="ns-structured-empty">
+            No statutory provisions added.
+          </div>
+        ) : (
+          <div className="ns-structured-list">
+            {form
+              .statutoryProvisions
+              .map(
+                (
+                  item,
+                  index,
+                ) => (
+                  <div
+                    key={
+                      item.id ||
+                      index
+                    }
+                    className="ns-structured-card"
+                  >
+                    <div className="ns-structured-card-header">
+                      <strong>
+                        Provision{" "}
+                        {index +
+                          1}
+                      </strong>
+
+                      <button
+                        type="button"
+                        className="ns-inline-delete"
+                        onClick={() =>
+                          removeStatutoryProvision(
+                            index,
+                          )
+                        }
+                      >
+                        <FaTrash />
+                      </button>
+                    </div>
+
+                    <div className="ns-structured-grid">
+                      <div className="ns-chapter-field">
+                        <label>
+                          Title
+                        </label>
+
+                        <input
+                          value={
+                            item
+                              .title ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateStatutoryProvision(
+                              index,
+                              "title",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Motor Vehicles Act, 1988"
+                        />
+                      </div>
+
+                      <div className="ns-chapter-field">
+                        <label>
+                          Provision / Section
+                        </label>
+
+                        <input
+                          value={
+                            item
+                              .provision ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateStatutoryProvision(
+                              index,
+                              "provision",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Section 166"
+                        />
+                      </div>
+
+                      <div className="ns-chapter-field ns-structured-full">
+                        <label>
+                          Description
+                        </label>
+
+                        <textarea
+                          rows="3"
+                          value={
+                            item
+                              .description ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateStatutoryProvision(
+                              index,
+                              "description",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Explain why this provision is relevant to the chapter."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              )}
+          </div>
+        )}
+      </div>
+
+      {/* =====================================================
+          IMPORTANT CASES
+      ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaLandmark />
+        }
+        title="Important Cases"
+        description="Add leading cases students should remember for examinations and understanding the chapter."
+        action={
+          <button
+            type="button"
+            className="ns-add-item-button"
+            onClick={
+              addImportantCase
+            }
+          >
+            <FaPlus />
+            Add Case
+          </button>
+        }
+      />
+
+      <div className="ns-chapter-full">
+        {form
+          .importantCases
+          .length ===
+        0 ? (
+          <div className="ns-structured-empty">
+            No important cases added.
+          </div>
+        ) : (
+          <div className="ns-structured-list">
+            {form
+              .importantCases
+              .map(
+                (
+                  item,
+                  index,
+                ) => (
+                  <div
+                    key={
+                      item.id ||
+                      index
+                    }
+                    className="ns-structured-card"
+                  >
+                    <div className="ns-structured-card-header">
+                      <strong>
+                        Case{" "}
+                        {index +
+                          1}
+                      </strong>
+
+                      <button
+                        type="button"
+                        className="ns-inline-delete"
+                        onClick={() =>
+                          removeImportantCase(
+                            index,
+                          )
+                        }
+                      >
+                        <FaTrash />
+                      </button>
+                    </div>
+
+                    <div className="ns-structured-grid">
+                      <div className="ns-chapter-field">
+                        <label>
+                          Case name
+                        </label>
+
+                        <input
+                          value={
+                            item
+                              .caseName ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateImportantCase(
+                              index,
+                              "caseName",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Donoghue v Stevenson"
+                        />
+                      </div>
+
+                      <div className="ns-chapter-field">
+                        <label>
+                          Citation
+                        </label>
+
+                        <input
+                          value={
+                            item
+                              .citation ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateImportantCase(
+                              index,
+                              "citation",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="[1932] AC 562"
+                        />
+                      </div>
+
+                      <div className="ns-chapter-field ns-structured-full">
+                        <label>
+                          Principle
+                        </label>
+
+                        <input
+                          value={
+                            item
+                              .principle ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateImportantCase(
+                              index,
+                              "principle",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Neighbour principle and duty of care"
+                        />
+                      </div>
+
+                      <div className="ns-chapter-field ns-structured-full">
+                        <label>
+                          Short case summary
+                        </label>
+
+                        <textarea
+                          rows="4"
+                          value={
+                            item
+                              .summary ||
+                            ""
+                          }
+                          onChange={(
+                            event,
+                          ) =>
+                            updateImportantCase(
+                              index,
+                              "summary",
+                              event
+                                .target
+                                .value,
+                            )
+                          }
+                          placeholder="Briefly explain the facts and legal significance..."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              )}
+          </div>
+        )}
+      </div>
+
+      {/* =====================================================
+          EXAM FOCUS
+      ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaBookOpen />
+        }
+        title="Exam Focus & Revision"
+        description="Highlight what students should revise carefully for university and certification examinations."
+      />
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Exam focus
+        </label>
+
+        <textarea
+          rows="7"
+          value={
+            form
+              .examFocus
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "examFocus",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder="Important examination questions, concepts, distinctions and case-law points..."
         />
       </div>
 
       <div className="ns-chapter-field ns-chapter-full">
         <label>
-          Chapter notes
+          Revision notes
         </label>
 
         <textarea
           rows="7"
-          value={form.notes}
-          onChange={(event) =>
+          value={
+            form
+              .revisionNotes
+          }
+          onChange={(
+            event,
+          ) =>
             updateField(
-              "notes",
-              event.target.value,
+              "revisionNotes",
+              event
+                .target
+                .value,
             )
           }
-          placeholder="Optional introductory notes..."
+          placeholder="Compact revision notes for quick study..."
+        />
+      </div>
+
+      {/* =====================================================
+          LEGACY NOTES
+      ====================================================== */}
+
+      <div className="ns-chapter-field ns-chapter-full">
+        <label>
+          Internal / legacy notes
+        </label>
+
+        <textarea
+          rows="5"
+          value={
+            form.notes
+          }
+          onChange={(
+            event,
+          ) =>
+            updateField(
+              "notes",
+              event
+                .target
+                .value,
+            )
+          }
+          placeholder="Optional notes retained for compatibility with existing chapter records."
         />
       </div>
 
       {/* =====================================================
           PDF
       ====================================================== */}
+
+      <SectionHeader
+        icon={
+          <FaFilePdf />
+        }
+        title="Chapter PDF / Study Material"
+        description="Upload the downloadable/readable study PDF for this chapter."
+      />
 
       <div className="ns-chapter-full">
         <div className="ns-chapter-pdf">
@@ -578,9 +1740,7 @@ export default function ChapterForm({
                 </strong>
 
                 <p>
-                  Upload the chapter PDF
-                  directly from your
-                  computer.
+                  Upload the chapter PDF directly from your computer.
                 </p>
               </div>
             </div>
@@ -591,7 +1751,9 @@ export default function ChapterForm({
           </div>
 
           <input
-            ref={pdfInputRef}
+            ref={
+              pdfInputRef
+            }
             type="file"
             accept="application/pdf,.pdf"
             onChange={
@@ -615,15 +1777,11 @@ export default function ChapterForm({
               <FaUpload />
 
               <strong>
-                Choose PDF from
-                computer
+                Choose PDF from computer
               </strong>
 
               <span>
-                The PDF will be
-                uploaded to
-                Cloudinary when you
-                save the chapter.
+                The PDF will be uploaded to Cloudinary when you save the chapter.
               </span>
             </button>
           ) : (
@@ -632,18 +1790,22 @@ export default function ChapterForm({
 
               <div className="ns-pdf-file-details">
                 <strong>
-                  {pdfFile?.name ||
-                    form.pdfFileName ||
+                  {pdfFile
+                    ?.name ||
+                    form
+                      .pdfFileName ||
                     "Chapter PDF"}
                 </strong>
 
                 <span>
                   {pdfFile
                     ? formatFileSize(
-                        pdfFile.size,
+                        pdfFile
+                          .size,
                       )
                     : formatFileSize(
-                        form.pdfFileSize,
+                        form
+                          .pdfFileSize,
                       ) ||
                       "Existing PDF"}
                 </span>
@@ -701,7 +1863,8 @@ export default function ChapterForm({
           </div>
 
           {(uploadingPdf ||
-            uploadProgress > 0) && (
+            uploadProgress >
+              0) && (
             <div className="ns-pdf-progress">
               <div className="ns-pdf-progress-text">
                 <span>
@@ -711,7 +1874,10 @@ export default function ChapterForm({
                 </span>
 
                 <strong>
-                  {uploadProgress}%
+                  {
+                    uploadProgress
+                  }
+                  %
                 </strong>
               </div>
 
@@ -719,7 +1885,8 @@ export default function ChapterForm({
                 <div
                   className="ns-pdf-progress-bar"
                   style={{
-                    width: `${uploadProgress}%`,
+                    width:
+                      `${uploadProgress}%`,
                   }}
                 />
               </div>
@@ -732,13 +1899,7 @@ export default function ChapterForm({
             </strong>
 
             <span>
-              Students will read this
-              PDF inside the learning
-              portal. The download
-              option will be controlled
-              separately by paid
-              certification
-              eligibility.
+              Students will read this PDF inside the learning portal. Download access is controlled separately by certification entitlement.
             </span>
           </div>
         </div>
@@ -753,12 +1914,17 @@ export default function ChapterForm({
           <input
             type="checkbox"
             checked={
-              form.previewAvailable
+              form
+                .previewAvailable
             }
-            onChange={(event) =>
+            onChange={(
+              event,
+            ) =>
               updateField(
                 "previewAvailable",
-                event.target.checked,
+                event
+                  .target
+                  .checked,
               )
             }
           />
@@ -772,9 +1938,13 @@ export default function ChapterForm({
             checked={
               form.published
             }
-            onChange={(event) =>
+            onChange={(
+              event,
+            ) =>
               handlePublishedChange(
-                event.target.checked,
+                event
+                  .target
+                  .checked,
               )
             }
           />
@@ -783,12 +1953,18 @@ export default function ChapterForm({
         </label>
       </div>
 
+      {/* =====================================================
+          ACTIONS
+      ====================================================== */}
+
       <div className="ns-chapter-actions ns-chapter-full">
         {onCancel && (
           <Button
             type="button"
             variant="ghost"
-            onClick={onCancel}
+            onClick={
+              onCancel
+            }
             disabled={
               saving ||
               uploadingPdf
@@ -823,6 +1999,48 @@ export default function ChapterForm({
             gap: 16px;
           }
 
+          .ns-form-section-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-top: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 8px 0 12px;
+          }
+
+          .ns-form-section-heading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .ns-form-section-icon {
+            display: flex;
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9px;
+            background: #eff6ff;
+            color: #2563eb;
+          }
+
+          .ns-form-section-heading h3 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 14px;
+          }
+
+          .ns-form-section-heading p {
+            margin: 3px 0 0;
+            color: #64748b;
+            font-size: 10px;
+            line-height: 1.5;
+          }
+
           .ns-chapter-field {
             display: flex;
             flex-direction: column;
@@ -849,16 +2067,104 @@ export default function ChapterForm({
             outline: none;
           }
 
+          .ns-chapter-field textarea {
+            resize: vertical;
+          }
+
           .ns-chapter-field input:focus,
           .ns-chapter-field select:focus,
           .ns-chapter-field textarea:focus {
             border-color: #2563eb;
             box-shadow:
               0 0 0 3px
-              rgba(37, 99, 235, 0.12);
+              rgba(
+                37,
+                99,
+                235,
+                0.12
+              );
+          }
+
+          .ns-field-help {
+            color: #64748b;
+            font-size: 10px;
           }
 
           .ns-chapter-full {
+            grid-column: 1 / -1;
+          }
+
+          .ns-add-item-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: 1px solid #bfdbfe;
+            border-radius: 9px;
+            background: #eff6ff;
+            color: #2563eb;
+            cursor: pointer;
+            padding: 8px 10px;
+            font-size: 10px;
+            font-weight: 800;
+          }
+
+          .ns-structured-empty {
+            border: 1px dashed #cbd5e1;
+            border-radius: 11px;
+            background: #f8fafc;
+            color: #64748b;
+            padding: 14px;
+            font-size: 11px;
+          }
+
+          .ns-structured-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .ns-structured-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background: #f8fafc;
+            padding: 13px;
+          }
+
+          .ns-structured-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 12px;
+          }
+
+          .ns-structured-card-header strong {
+            color: #0f172a;
+            font-size: 11px;
+          }
+
+          .ns-inline-delete {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            background: #fef2f2;
+            color: #dc2626;
+            cursor: pointer;
+          }
+
+          .ns-structured-grid {
+            display: grid;
+            grid-template-columns:
+              repeat(2, minmax(0, 1fr));
+            gap: 12px;
+          }
+
+          .ns-structured-full {
             grid-column: 1 / -1;
           }
 
@@ -1119,15 +2425,19 @@ export default function ChapterForm({
           }
 
           @media (max-width: 700px) {
-            .ns-chapter-form {
+            .ns-chapter-form,
+            .ns-structured-grid {
               grid-template-columns: 1fr;
             }
 
-            .ns-chapter-full {
+            .ns-chapter-full,
+            .ns-structured-full {
               grid-column: auto;
             }
 
+            .ns-form-section-header,
             .ns-pdf-header {
+              align-items: flex-start;
               flex-direction: column;
             }
 
@@ -1142,5 +2452,38 @@ export default function ChapterForm({
         `}
       </style>
     </form>
+  );
+}
+
+// =========================================================
+// SECTION HEADER
+// =========================================================
+
+function SectionHeader({
+  icon,
+  title,
+  description,
+  action = null,
+}) {
+  return (
+    <div className="ns-form-section-header">
+      <div className="ns-form-section-heading">
+        <div className="ns-form-section-icon">
+          {icon}
+        </div>
+
+        <div>
+          <h3>
+            {title}
+          </h3>
+
+          <p>
+            {description}
+          </p>
+        </div>
+      </div>
+
+      {action}
+    </div>
   );
 }

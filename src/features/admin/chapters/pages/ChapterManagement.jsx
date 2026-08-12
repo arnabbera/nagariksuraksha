@@ -121,7 +121,9 @@ export default function ChapterManagement() {
   }, []);
 
   useEffect(() => {
-    if (selectedCourseId) {
+    if (
+      selectedCourseId
+    ) {
       loadChapters(
         selectedCourseId,
       );
@@ -147,7 +149,9 @@ export default function ChapterManagement() {
 
         const availableCourses =
           (
-            Array.isArray(result)
+            Array.isArray(
+              result,
+            )
               ? result
               : []
           )
@@ -208,6 +212,11 @@ export default function ChapterManagement() {
     async (
       courseId,
     ) => {
+      if (!courseId) {
+        setChapters([]);
+        return;
+      }
+
       try {
         setError("");
 
@@ -217,12 +226,16 @@ export default function ChapterManagement() {
           );
 
         const chapterList =
-          Array.isArray(result)
+          Array.isArray(
+            result,
+          )
             ? result
             : [];
 
         setChapters(
-          [...chapterList].sort(
+          [
+            ...chapterList,
+          ].sort(
             (
               first,
               second,
@@ -273,10 +286,11 @@ export default function ChapterManagement() {
   // HELPERS
   // =========================================================
 
-  const clearMessages = () => {
-    setMessage("");
-    setError("");
-  };
+  const clearMessages =
+    () => {
+      setMessage("");
+      setError("");
+    };
 
   const resetUploadState =
     () => {
@@ -308,60 +322,172 @@ export default function ChapterManagement() {
           0,
         );
 
-        // -----------------------------------------------------
-        // Extract temporary UI-only values.
-        // NEVER save File objects into Firestore.
-        // -----------------------------------------------------
+        // =====================================================
+        // DEBUG
+        // =====================================================
+        //
+        // This lets us confirm that the expanded ChapterForm
+        // is sending the new academic fields.
+        // =====================================================
+
+        console.log(
+          "CHAPTER FORM DATA:",
+          chapterData,
+        );
+
+        // =====================================================
+        // VALIDATION
+        // =====================================================
+
+        if (
+          !chapterData
+            ?.courseId
+        ) {
+          throw new Error(
+            "Please select a course.",
+          );
+        }
+
+        if (
+          !chapterData
+            ?.title
+            ?.trim()
+        ) {
+          throw new Error(
+            "Chapter title is required.",
+          );
+        }
+
+        // =====================================================
+        // REMOVE UI-ONLY DATA
+        // =====================================================
 
         const {
           pdfFile,
           removeExistingPdf,
+          learningObjectivesText,
+          keyPointsText,
           ...cleanChapterData
         } = chapterData;
 
-        // -----------------------------------------------------
-        // Existing PDF metadata
-        // -----------------------------------------------------
+        // =====================================================
+        // ACADEMIC CONTENT
+        // =====================================================
+        //
+        // ChapterForm should already provide these values.
+        // Explicitly setting them here guarantees that the
+        // service receives a predictable payload.
+        // =====================================================
+
+        const academicData = {
+          chapterOverview:
+            chapterData
+              .chapterOverview ||
+            "",
+
+          learningObjectives:
+            Array.isArray(
+              chapterData
+                .learningObjectives,
+            )
+              ? chapterData
+                  .learningObjectives
+              : [],
+
+          detailedContent:
+            chapterData
+              .detailedContent ||
+            "",
+
+          keyPoints:
+            Array.isArray(
+              chapterData
+                .keyPoints,
+            )
+              ? chapterData
+                  .keyPoints
+              : [],
+
+          statutoryProvisions:
+            Array.isArray(
+              chapterData
+                .statutoryProvisions,
+            )
+              ? chapterData
+                  .statutoryProvisions
+              : [],
+
+          importantCases:
+            Array.isArray(
+              chapterData
+                .importantCases,
+            )
+              ? chapterData
+                  .importantCases
+              : [],
+
+          examFocus:
+            chapterData
+              .examFocus ||
+            "",
+
+          revisionNotes:
+            chapterData
+              .revisionNotes ||
+            "",
+        };
+
+        // =====================================================
+        // EXISTING PDF METADATA
+        // =====================================================
 
         let finalPdfUrl =
-          cleanChapterData.pdfUrl ||
+          cleanChapterData
+            .pdfUrl ||
           "";
 
         let finalPdfStoragePath =
-          cleanChapterData.pdfStoragePath ||
+          cleanChapterData
+            .pdfStoragePath ||
           "";
 
         let finalPdfPublicId =
-          cleanChapterData.pdfPublicId ||
+          cleanChapterData
+            .pdfPublicId ||
           "";
 
         let finalPdfFileName =
-          cleanChapterData.pdfFileName ||
+          cleanChapterData
+            .pdfFileName ||
           "";
 
         let finalPdfFileSize =
           Number(
-            cleanChapterData.pdfFileSize ||
+            cleanChapterData
+              .pdfFileSize ||
               0,
           );
 
         let finalPdfContentType =
-          cleanChapterData.pdfContentType ||
+          cleanChapterData
+            .pdfContentType ||
           "";
 
         let finalPdfAssetId =
-          cleanChapterData.pdfAssetId ||
+          cleanChapterData
+            .pdfAssetId ||
           "";
 
         const previousPdfStoragePath =
-          editingChapter?.pdf
+          editingChapter
+            ?.pdf
             ?.storagePath ||
           editingChapter
             ?.pdfStoragePath ||
           "";
 
         // =====================================================
-        // UPLOAD NEW PDF TO CLOUDINARY
+        // UPLOAD NEW PDF
         // =====================================================
 
         if (pdfFile) {
@@ -370,9 +496,12 @@ export default function ChapterManagement() {
           );
 
           const chapterUploadId =
-            editingChapter?.id ||
-            cleanChapterData.slug ||
-            cleanChapterData.title ||
+            editingChapter
+              ?.id ||
+            cleanChapterData
+              .slug ||
+            cleanChapterData
+              .title ||
             `chapter-${Date.now()}`;
 
           newPdfUpload =
@@ -381,7 +510,8 @@ export default function ChapterManagement() {
                 pdfFile,
 
               courseId:
-                cleanChapterData.courseId,
+                cleanChapterData
+                  .courseId,
 
               chapterId:
                 chapterUploadId,
@@ -391,38 +521,48 @@ export default function ChapterManagement() {
             });
 
           finalPdfUrl =
-            newPdfUpload.downloadURL ||
-            newPdfUpload.secureUrl ||
+            newPdfUpload
+              .downloadURL ||
+            newPdfUpload
+              .secureUrl ||
             "";
 
           finalPdfStoragePath =
-            newPdfUpload.storagePath ||
-            newPdfUpload.publicId ||
+            newPdfUpload
+              .storagePath ||
+            newPdfUpload
+              .publicId ||
             "";
 
           finalPdfPublicId =
-            newPdfUpload.publicId ||
-            newPdfUpload.storagePath ||
+            newPdfUpload
+              .publicId ||
+            newPdfUpload
+              .storagePath ||
             "";
 
           finalPdfFileName =
-            newPdfUpload.originalFileName ||
+            newPdfUpload
+              .originalFileName ||
             pdfFile.name ||
             "";
 
           finalPdfFileSize =
             Number(
-              newPdfUpload.size ||
+              newPdfUpload
+                .size ||
                 pdfFile.size ||
                 0,
             );
 
           finalPdfContentType =
-            newPdfUpload.contentType ||
+            newPdfUpload
+              .contentType ||
             "application/pdf";
 
           finalPdfAssetId =
-            newPdfUpload.assetId ||
+            newPdfUpload
+              .assetId ||
             "";
         }
 
@@ -457,71 +597,81 @@ export default function ChapterManagement() {
         }
 
         // =====================================================
-        // FINAL FIRESTORE PAYLOAD
+        // FINAL SERVICE PAYLOAD
         // =====================================================
 
-        const finalChapterData = {
-          ...cleanChapterData,
+        const finalChapterData =
+          {
+            ...cleanChapterData,
 
-          pdfUrl:
-            finalPdfUrl,
+            ...academicData,
 
-          pdfStoragePath:
-            finalPdfStoragePath,
+            pdfUrl:
+              finalPdfUrl,
 
-          pdfPublicId:
-            finalPdfPublicId,
+            pdfStoragePath:
+              finalPdfStoragePath,
 
-          pdfFileName:
-            finalPdfFileName,
+            pdfPublicId:
+              finalPdfPublicId,
 
-          pdfFileSize:
-            finalPdfFileSize,
+            pdfFileName:
+              finalPdfFileName,
 
-          pdfContentType:
-            finalPdfContentType,
+            pdfFileSize:
+              finalPdfFileSize,
 
-          pdfAssetId:
-            finalPdfAssetId,
-        };
+            pdfContentType:
+              finalPdfContentType,
+
+            pdfAssetId:
+              finalPdfAssetId,
+          };
+
+        console.log(
+          "FINAL CHAPTER DATA:",
+          finalChapterData,
+        );
 
         // =====================================================
-        // UPDATE OR CREATE CHAPTER
+        // UPDATE / CREATE
         // =====================================================
+
+        let savedChapter =
+          null;
 
         if (
           editingChapter?.id
         ) {
-          await updateChapter(
-            editingChapter.id,
-            finalChapterData,
-            currentUserId,
-          );
+          savedChapter =
+            await updateChapter(
+              editingChapter.id,
+              finalChapterData,
+              currentUserId,
+            );
 
           setMessage(
             "Chapter updated successfully.",
           );
         } else {
-          await createChapter(
-            finalChapterData,
-            currentUserId,
-          );
+          savedChapter =
+            await createChapter(
+              finalChapterData,
+              currentUserId,
+            );
 
           setMessage(
             "Chapter created successfully.",
           );
         }
 
+        console.log(
+          "SAVED CHAPTER:",
+          savedChapter,
+        );
+
         // =====================================================
-        // OLD CLOUDINARY PDF CLEANUP
-        // =====================================================
-        //
-        // deleteStoredFile() currently does not physically
-        // delete Cloudinary assets because Cloudinary deletion
-        // requires an API secret on a backend.
-        //
-        // Calling it here keeps the architecture prepared for
-        // a future secure deletion endpoint.
+        // OLD PDF CLEANUP
         // =====================================================
 
         if (
@@ -548,19 +698,23 @@ export default function ChapterManagement() {
         }
 
         // =====================================================
-        // REFRESH UI
+        // RELOAD FROM FIRESTORE
         // =====================================================
 
-        setEditingChapter(
-          null,
-        );
+        const savedCourseId =
+          finalChapterData
+            .courseId;
 
         setSelectedCourseId(
-          finalChapterData.courseId,
+          savedCourseId,
         );
 
         await loadChapters(
-          finalChapterData.courseId,
+          savedCourseId,
+        );
+
+        setEditingChapter(
+          null,
         );
 
         resetUploadState();
@@ -573,7 +727,8 @@ export default function ChapterManagement() {
         );
 
         setError(
-          saveError?.message ||
+          saveError
+            ?.message ||
             "Unable to save chapter.",
         );
       } finally {
@@ -658,7 +813,8 @@ export default function ChapterManagement() {
         );
 
         if (
-          editingChapter?.id ===
+          editingChapter
+            ?.id ===
           chapter.id
         ) {
           setEditingChapter(
@@ -688,6 +844,33 @@ export default function ChapterManagement() {
     };
 
   // =========================================================
+  // EDIT
+  // =========================================================
+
+  const handleEdit =
+    (
+      chapter,
+    ) => {
+      clearMessages();
+      resetUploadState();
+
+      console.log(
+        "EDITING CHAPTER:",
+        chapter,
+      );
+
+      setEditingChapter(
+        chapter,
+      );
+
+      window.scrollTo({
+        top: 0,
+        behavior:
+          "smooth",
+      });
+    };
+
+  // =========================================================
   // LOADING
   // =========================================================
 
@@ -708,7 +891,7 @@ export default function ChapterManagement() {
     <div>
       <PageHeader
         title="Chapter Management"
-        description="Build chapters, upload study PDFs and organise the learning structure for every course."
+        description="Build chapters, academic content, study materials and organise the learning structure for every course."
         breadcrumbs={[
           "Admin",
           "Learning",
@@ -758,9 +941,7 @@ export default function ChapterManagement() {
             </strong>
 
             <p>
-              Select the course
-              whose chapters you
-              want to manage.
+              Select the course whose chapters you want to manage.
             </p>
           </div>
 
@@ -789,7 +970,9 @@ export default function ChapterManagement() {
             </option>
 
             {courses.map(
-              (course) => (
+              (
+                course,
+              ) => (
                 <option
                   key={
                     course.id
@@ -809,13 +992,11 @@ export default function ChapterManagement() {
       </Card>
 
       {/* =====================================================
-          CHAPTER MANAGEMENT
+          MANAGEMENT
       ====================================================== */}
 
       <div className="ns-chapter-layout">
-        {/* ===================================================
-            FORM
-        ==================================================== */}
+        {/* FORM */}
 
         <Card
           title={
@@ -825,7 +1006,8 @@ export default function ChapterManagement() {
           }
           subtitle={
             selectedCourse
-              ? selectedCourse.title
+              ? selectedCourse
+                  .title
               : "Select a course first"
           }
         >
@@ -867,9 +1049,7 @@ export default function ChapterManagement() {
           />
         </Card>
 
-        {/* ===================================================
-            CHAPTER LIST
-        ==================================================== */}
+        {/* CHAPTER LIST */}
 
         <Card
           title="Course Chapters"
@@ -891,13 +1071,38 @@ export default function ChapterManagement() {
           ) : (
             <div className="ns-chapter-list">
               {chapters.map(
-                (chapter) => {
+                (
+                  chapter,
+                ) => {
                   const hasPdf =
                     Boolean(
                       chapter
-                        ?.pdf?.url ||
+                        ?.pdf
+                        ?.url ||
                         chapter
                           ?.pdfUrl,
+                    );
+
+                  const hasAcademicContent =
+                    Boolean(
+                      chapter
+                        ?.content
+                        ?.overview ||
+                        chapter
+                          ?.content
+                          ?.detailedContent ||
+                        chapter
+                          ?.content
+                          ?.learningObjectives
+                          ?.length ||
+                        chapter
+                          ?.content
+                          ?.keyPoints
+                          ?.length ||
+                        chapter
+                          ?.content
+                          ?.importantCases
+                          ?.length,
                     );
 
                   return (
@@ -908,8 +1113,10 @@ export default function ChapterManagement() {
                       className="ns-chapter-card"
                     >
                       <div className="ns-chapter-number">
-                        {chapter.chapterNumber ||
-                          chapter.displayOrder}
+                        {chapter
+                          .chapterNumber ||
+                          chapter
+                            .displayOrder}
                       </div>
 
                       <div className="ns-chapter-info">
@@ -922,24 +1129,28 @@ export default function ChapterManagement() {
 
                           <span
                             className={
-                              chapter.published
+                              chapter
+                                .published
                                 ? "published"
                                 : "draft"
                             }
                           >
-                            {chapter.published
+                            {chapter
+                              .published
                               ? "Published"
                               : "Draft"}
                           </span>
                         </div>
 
                         <p>
-                          {chapter.shortDescription ||
+                          {chapter
+                            .shortDescription ||
                             "No description provided."}
                         </p>
 
                         <div className="ns-chapter-tags">
-                          {chapter.previewAvailable && (
+                          {chapter
+                            .previewAvailable && (
                             <span>
                               Free Preview
                             </span>
@@ -948,9 +1159,17 @@ export default function ChapterManagement() {
                           <span>
                             Order{" "}
                             {
-                              chapter.displayOrder
+                              chapter
+                                .displayOrder
                             }
                           </span>
+
+                          {hasAcademicContent && (
+                            <span className="content">
+                              <FaBookOpen />
+                              Content
+                            </span>
+                          )}
 
                           {hasPdf && (
                             <span className="pdf">
@@ -977,15 +1196,11 @@ export default function ChapterManagement() {
                         <button
                           type="button"
                           title="Edit chapter"
-                          onClick={() => {
-                            clearMessages();
-
-                            resetUploadState();
-
-                            setEditingChapter(
+                          onClick={() =>
+                            handleEdit(
                               chapter,
-                            );
-                          }}
+                            )
+                          }
                         >
                           <FaEdit />
                         </button>
@@ -993,7 +1208,8 @@ export default function ChapterManagement() {
                         <button
                           type="button"
                           title={
-                            chapter.published
+                            chapter
+                              .published
                               ? "Move to draft"
                               : "Publish"
                           }
@@ -1003,7 +1219,8 @@ export default function ChapterManagement() {
                             )
                           }
                         >
-                          {chapter.published ? (
+                          {chapter
+                            .published ? (
                             <FaEyeSlash />
                           ) : (
                             <FaEye />
@@ -1156,6 +1373,11 @@ export default function ChapterManagement() {
             padding: 3px 7px;
             font-size: 10px;
             font-weight: 700;
+          }
+
+          .ns-chapter-tags .content {
+            background: #dcfce7;
+            color: #166534;
           }
 
           .ns-chapter-tags .pdf {

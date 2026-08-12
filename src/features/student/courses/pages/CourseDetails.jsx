@@ -9,6 +9,8 @@ import {
   FaBookOpen,
   FaCheckCircle,
   FaClock,
+  FaFilePdf,
+  FaGraduationCap,
   FaLock,
   FaPlayCircle,
 } from "react-icons/fa";
@@ -33,6 +35,7 @@ import {
 } from "../../../../services/courseBookService";
 
 import {
+  enrollForCertification,
   enrollStudent,
   getStudentEnrollment,
 } from "../../../../services/studentEnrollmentService";
@@ -95,6 +98,11 @@ export default function CourseDetails() {
   const [
     enrolling,
     setEnrolling,
+  ] = useState(false);
+
+  const [
+    certificationEnrolling,
+    setCertificationEnrolling,
   ] = useState(false);
 
   const [
@@ -461,6 +469,85 @@ export default function CourseDetails() {
     };
 
   // =========================================================
+  // CERTIFICATION
+  // =========================================================
+
+  const certificationAvailable =
+    course?.certification?.available ??
+    course?.certificationAvailable ??
+    false;
+
+  const certificationFee =
+    Number(
+      course?.certification?.fee ??
+        course?.certificationFee ??
+        0,
+    );
+
+  const certification =
+    enrollment?.certification ||
+    null;
+
+  const certificationStatus =
+    certification?.status ||
+    "not-enrolled";
+
+  const certificationActive =
+    certificationStatus ===
+      "active" ||
+    certificationStatus ===
+      "completed";
+
+  const certificationPendingPayment =
+    certificationStatus ===
+    "pending-payment";
+
+  const handleCertificationEnroll =
+    async () => {
+      if (
+        !studentId ||
+        !course?.id
+      ) {
+        return;
+      }
+
+      try {
+        setCertificationEnrolling(
+          true,
+        );
+
+        setError("");
+
+        const updatedEnrollment =
+          await enrollForCertification(
+            studentId,
+            course.id,
+            studentId,
+          );
+
+        setEnrollment(
+          updatedEnrollment,
+        );
+      } catch (
+        certificationError
+      ) {
+        console.error(
+          "Unable to enroll for certification:",
+          certificationError,
+        );
+
+        setError(
+          certificationError?.message ||
+            "Unable to start certification enrollment.",
+        );
+      } finally {
+        setCertificationEnrolling(
+          false,
+        );
+      }
+    };
+
+  // =========================================================
   // CHAPTER UNLOCKING
   // =========================================================
 
@@ -790,6 +877,154 @@ export default function CourseDetails() {
           </div>
         </Card>
       </div>
+
+      {/* =====================================================
+          CERTIFICATION PROGRAM
+      ====================================================== */}
+
+      {certificationAvailable && (
+        <section className="ns-certification-section">
+          <div className="ns-certification-card">
+            <div className="ns-certification-heading">
+              <div className="ns-certification-icon">
+                <FaGraduationCap />
+              </div>
+
+              <div>
+                <h2>
+                  Certification Program
+                </h2>
+
+                <p>
+                  Upgrade this course to the NagarikSuraksha certification track.
+                </p>
+              </div>
+
+              <div className="ns-certification-fee">
+                {certificationFee > 0
+                  ? `₹${certificationFee}`
+                  : "Free"}
+              </div>
+            </div>
+
+            <div className="ns-certification-benefits">
+              <div>
+                <FaFilePdf />
+                <span>
+                  Download chapter PDFs
+                </span>
+              </div>
+
+              <div>
+                <FaCheckCircle />
+                <span>
+                  3 mandatory mock tests
+                </span>
+              </div>
+
+              <div>
+                <FaCheckCircle />
+                <span>
+                  NagarikSuraksha Admin-conducted final online examination
+                </span>
+              </div>
+
+              <div>
+                <FaCheckCircle />
+                <span>
+                  Digital certificate after passing
+                </span>
+              </div>
+
+              <div>
+                <FaCheckCircle />
+                <span>
+                  Unique Certificate ID and online verification
+                </span>
+              </div>
+            </div>
+
+            {!certificationActive &&
+              !certificationPendingPayment && (
+                <div className="ns-certification-action">
+                  <Button
+                    loading={
+                      certificationEnrolling
+                    }
+                    onClick={
+                      handleCertificationEnroll
+                    }
+                  >
+                    Enroll for Certification
+                  </Button>
+                </div>
+              )}
+
+            {certificationPendingPayment && (
+              <div className="ns-certification-status is-pending">
+                <strong>
+                  Payment Pending
+                </strong>
+
+                <span>
+                  Your certification enrollment request has been created. Payment activation will be connected after Cloudflare deployment.
+                </span>
+              </div>
+            )}
+
+            {certificationActive && (
+              <div className="ns-certification-active">
+                <div className="ns-certification-status is-active">
+                  <strong>
+                    Certification Active
+                  </strong>
+
+                  <span>
+                    Certification learning privileges are enabled for this course.
+                  </span>
+                </div>
+
+                <div className="ns-certification-access-grid">
+                  <div className="is-unlocked">
+                    <FaCheckCircle />
+                    <span>
+                      PDF Downloads Unlocked
+                    </span>
+                  </div>
+
+                  <div className="is-unlocked">
+                    <FaCheckCircle />
+                    <span>
+                      Mock Test 1 Available
+                    </span>
+                  </div>
+
+                  <div>
+                    <FaLock />
+                    <span>
+                      Mock Test 2 Locked
+                    </span>
+                  </div>
+
+                  <div>
+                    <FaLock />
+                    <span>
+                      Mock Test 3 Locked
+                    </span>
+                  </div>
+
+                  <div>
+                    <FaLock />
+                    <span>
+                      Final Examination Locked
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* =====================================================
           COURSE CHAPTERS
@@ -1273,6 +1508,163 @@ export default function CourseDetails() {
           }
 
           /* ==================================================
+             CERTIFICATION PROGRAM
+          ================================================== */
+
+          .ns-certification-section {
+            margin-bottom: 24px;
+          }
+
+          .ns-certification-card {
+            overflow: hidden;
+            border: 1px solid #dbeafe;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow:
+              0 8px 24px
+              rgba(
+                15,
+                23,
+                42,
+                0.05
+              );
+          }
+
+          .ns-certification-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 20px;
+          }
+
+          .ns-certification-icon {
+            display: flex;
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 21px;
+          }
+
+          .ns-certification-heading h2 {
+            margin: 0;
+            color: #0f172a;
+            font-size: 18px;
+          }
+
+          .ns-certification-heading p {
+            margin: 4px 0 0;
+            color: #64748b;
+            font-size: 12px;
+          }
+
+          .ns-certification-fee {
+            margin-left: auto;
+            border-radius: 999px;
+            background: #ecfdf5;
+            color: #047857;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 800;
+          }
+
+          .ns-certification-benefits {
+            display: grid;
+            grid-template-columns:
+              repeat(2, minmax(0, 1fr));
+            gap: 10px 18px;
+            padding: 18px 20px;
+          }
+
+          .ns-certification-benefits > div {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            color: #334155;
+            font-size: 12px;
+            line-height: 1.5;
+          }
+
+          .ns-certification-benefits svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: #16a34a;
+          }
+
+          .ns-certification-action {
+            border-top: 1px solid #e2e8f0;
+            padding: 16px 20px;
+          }
+
+          .ns-certification-status {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin: 0 20px 18px;
+            border-radius: 12px;
+            padding: 13px 14px;
+          }
+
+          .ns-certification-status strong {
+            font-size: 13px;
+          }
+
+          .ns-certification-status span {
+            font-size: 11px;
+            line-height: 1.5;
+          }
+
+          .ns-certification-status.is-pending {
+            border: 1px solid #fde68a;
+            background: #fffbeb;
+            color: #92400e;
+          }
+
+          .ns-certification-status.is-active {
+            border: 1px solid #bbf7d0;
+            background: #f0fdf4;
+            color: #166534;
+          }
+
+          .ns-certification-active {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 18px;
+          }
+
+          .ns-certification-access-grid {
+            display: grid;
+            grid-template-columns:
+              repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            padding: 0 20px 20px;
+          }
+
+          .ns-certification-access-grid > div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f8fafc;
+            color: #64748b;
+            padding: 10px 12px;
+            font-size: 11px;
+            font-weight: 700;
+          }
+
+          .ns-certification-access-grid
+            > div.is-unlocked {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+            color: #166534;
+          }
+
+          /* ==================================================
              CHAPTER SECTION
           ================================================== */
 
@@ -1583,6 +1975,26 @@ export default function CourseDetails() {
 
             .ns-course-detail-meta {
               gap: 6px;
+            }
+
+            .ns-certification-heading {
+              align-items: flex-start;
+              flex-wrap: wrap;
+            }
+
+            .ns-certification-fee {
+              margin-left: 0;
+            }
+
+            .ns-certification-benefits,
+            .ns-certification-access-grid {
+              grid-template-columns:
+                1fr;
+            }
+
+            .ns-certification-action {
+              display: flex;
+              flex-direction: column;
             }
 
             .ns-learning-chapter {

@@ -6,6 +6,8 @@ import "../shared/styles/global.css";
 import App from "./App";
 import { AuthProvider } from "../context/AuthContext";
 
+import "../data/exams/torts/runValidation";
+
 ReactDOM.createRoot(
   document.getElementById("root"),
 ).render(

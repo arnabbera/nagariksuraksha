@@ -9,6 +9,7 @@ import {
   FaChevronDown,
   FaChevronLeft,
   FaChevronRight,
+  FaClipboardCheck,
   FaCog,
   FaComments,
   FaDatabase,
@@ -128,6 +129,16 @@ const menuGroups = [
         label: "Recommended Books",
         path: "/admin/books",
         icon: FaBookOpen,
+      },
+
+      // =====================================================
+      // EXAMINATIONS
+      // =====================================================
+
+      {
+        label: "Examinations",
+        path: "/admin/exams",
+        icon: FaClipboardCheck,
       },
 
       {
