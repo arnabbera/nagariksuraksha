@@ -27,6 +27,14 @@ import ExamManagement from "../features/admin/exams/pages/ExamManagement";
 import LoginPage from "../features/auth/pages/LoginPage";
 
 // =========================================================
+// PUBLIC SEO PAGES
+// =========================================================
+
+import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPage";
+
+import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCourseDetailsPage";
+
+// =========================================================
 // STUDENT
 // =========================================================
 
@@ -58,13 +66,35 @@ export default function AppRouter() {
   return (
     <Routes>
       {/* =====================================================
-          PUBLIC
+          PUBLIC HOMEPAGE
       ====================================================== */}
 
       <Route
         path="/"
         element={<PublicLayout />}
       />
+
+      {/* =====================================================
+          PUBLIC SEO COURSE PAGES
+      ====================================================== */}
+
+      <Route
+        path="/llb-courses"
+        element={
+          <PublicCoursesPage />
+        }
+      />
+
+      <Route
+        path="/courses/:courseSlug"
+        element={
+          <PublicCourseDetailsPage />
+        }
+      />
+
+      {/* =====================================================
+          LOGIN
+      ====================================================== */}
 
       <Route
         path="/login"
@@ -84,10 +114,6 @@ export default function AppRouter() {
           element={<StudentDashboard />}
         />
 
-        {/* -----------------------------------------------
-            COURSES
-        ------------------------------------------------ */}
-
         <Route
           path="courses"
           element={<MyCourses />}
@@ -98,36 +124,20 @@ export default function AppRouter() {
           element={<CourseDetails />}
         />
 
-        {/* -----------------------------------------------
-            CHAPTER LEARNING
-        ------------------------------------------------ */}
-
         <Route
           path="learn/:courseId/:chapterId"
           element={<ChapterLearning />}
         />
-
-        {/* -----------------------------------------------
-            CERTIFICATION / MOCK TESTS
-        ------------------------------------------------ */}
 
         <Route
           path="mock-test/torts/:testNumber"
           element={<MockTestPage />}
         />
 
-        {/* -----------------------------------------------
-            FINAL EXAM
-        ------------------------------------------------ */}
-
         <Route
           path="final-exam/torts"
           element={<FinalExamPage />}
         />
-
-        {/* -----------------------------------------------
-            CERTIFICATES
-        ------------------------------------------------ */}
 
         <Route
           path="certificates"
@@ -138,10 +148,6 @@ export default function AppRouter() {
           }
         />
 
-        {/* -----------------------------------------------
-            DOWNLOADS
-        ------------------------------------------------ */}
-
         <Route
           path="downloads"
           element={
@@ -151,10 +157,6 @@ export default function AppRouter() {
           }
         />
 
-        {/* -----------------------------------------------
-            NOTIFICATIONS
-        ------------------------------------------------ */}
-
         <Route
           path="notifications"
           element={
@@ -163,10 +165,6 @@ export default function AppRouter() {
             </h2>
           }
         />
-
-        {/* -----------------------------------------------
-            PROFILE
-        ------------------------------------------------ */}
 
         <Route
           path="profile"
@@ -191,72 +189,40 @@ export default function AppRouter() {
           element={<Dashboard />}
         />
 
-        {/* -----------------------------------------------
-            HOMEPAGE CMS
-        ------------------------------------------------ */}
-
         <Route
           path="homepage"
           element={<HomepageCms />}
         />
-
-        {/* -----------------------------------------------
-            COURSES
-        ------------------------------------------------ */}
 
         <Route
           path="courses"
           element={<Courses />}
         />
 
-        {/* -----------------------------------------------
-            CHAPTERS
-        ------------------------------------------------ */}
-
         <Route
           path="chapters"
           element={<ChapterManagement />}
         />
-
-        {/* -----------------------------------------------
-            CHAPTER RESOURCES
-        ------------------------------------------------ */}
 
         <Route
           path="resources"
           element={<ResourceManagement />}
         />
 
-        {/* -----------------------------------------------
-            RECOMMENDED BOOKS
-        ------------------------------------------------ */}
-
         <Route
           path="books"
           element={<CourseBookManagement />}
         />
-
-        {/* -----------------------------------------------
-            EXAMINATION MANAGEMENT
-        ------------------------------------------------ */}
 
         <Route
           path="exams"
           element={<ExamManagement />}
         />
 
-        {/* -----------------------------------------------
-            TORTS - MOCK TEST ADMIN PREVIEW
-        ------------------------------------------------ */}
-
         <Route
           path="exams/torts/mock/:testNumber"
           element={<MockTestPage />}
         />
-
-        {/* -----------------------------------------------
-            TORTS - FINAL EXAM ADMIN PREVIEW
-        ------------------------------------------------ */}
 
         <Route
           path="exams/torts/final"
