@@ -12,22 +12,162 @@ import FAQ from "../components/FAQ";
 import ContactCTA from "../components/ContactCTA";
 import Footer from "../components/Footer";
 
+import SEO from "../../../shared/seo/SEO";
+
+import {
+  HOME_SEO,
+  SEO_CONFIG,
+} from "../../../constants/seoConfig";
+
+// =========================================================
+// HOMEPAGE STRUCTURED DATA
+// =========================================================
+
+const homepageStructuredData = {
+  "@context":
+    "https://schema.org",
+
+  "@graph": [
+    {
+      "@type":
+        "EducationalOrganization",
+
+      "@id":
+        `${SEO_CONFIG.siteUrl}/#organization`,
+
+      name:
+        "NagarikSuraksha",
+
+      url:
+        `${SEO_CONFIG.siteUrl}/`,
+
+      description:
+        "NagarikSuraksha provides LL.B courses, law notes, study materials, mock tests, legal awareness resources and certification preparation.",
+
+      areaServed: {
+        "@type":
+          "Country",
+
+        name:
+          "India",
+      },
+
+      knowsAbout: [
+        "LL.B",
+        "Legal Education",
+        "Law of Torts",
+        "Constitutional Law",
+        "Family Law",
+        "Contract Law",
+        "Consumer Protection Law",
+        "Motor Vehicles Law",
+        "Law Notes",
+        "Law Mock Tests",
+      ],
+    },
+
+    {
+      "@type":
+        "WebSite",
+
+      "@id":
+        `${SEO_CONFIG.siteUrl}/#website`,
+
+      url:
+        `${SEO_CONFIG.siteUrl}/`,
+
+      name:
+        "NagarikSuraksha",
+
+      publisher: {
+        "@id":
+          `${SEO_CONFIG.siteUrl}/#organization`,
+      },
+
+      inLanguage:
+        "en-IN",
+    },
+
+    {
+      "@type":
+        "WebPage",
+
+      "@id":
+        `${SEO_CONFIG.siteUrl}/#webpage`,
+
+      url:
+        `${SEO_CONFIG.siteUrl}/`,
+
+      name:
+        "NagarikSuraksha - LL.B Courses, Law Notes, Study Materials & Mock Tests",
+
+      description:
+        HOME_SEO.description,
+
+      isPartOf: {
+        "@id":
+          `${SEO_CONFIG.siteUrl}/#website`,
+      },
+
+      about: {
+        "@id":
+          `${SEO_CONFIG.siteUrl}/#organization`,
+      },
+
+      inLanguage:
+        "en-IN",
+    },
+  ],
+};
+
+// =========================================================
+// HOMEPAGE
+// =========================================================
+
 const HomePage = () => {
   return (
     <>
+      <SEO
+        title={
+          HOME_SEO.title
+        }
+        description={
+          HOME_SEO.description
+        }
+        keywords={
+          HOME_SEO.keywords
+        }
+        canonical={
+          HOME_SEO.canonical
+        }
+        structuredData={
+          homepageStructuredData
+        }
+      />
+
       <AnnouncementBar />
+
       <Header />
 
       <main>
         <Hero />
+
         <ServicesSection />
+
         <WhyChooseUs />
+
         <StatsSection />
+
         <LearningSection />
+
         <LatestUpdates />
+
         <VideosSection />
+
         <Testimonials />
+
         <FAQ />
+
         <ContactCTA />
       </main>
 

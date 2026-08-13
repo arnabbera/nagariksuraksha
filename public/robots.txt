@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /student/
+Disallow: /login
+
+Sitemap: https://www.nagariksuraksha.com/sitemap.xml
