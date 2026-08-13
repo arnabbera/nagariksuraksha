@@ -5,21 +5,10 @@ import {
 } from "react";
 
 import {
-  Document,
-  Page,
-  pdfjs,
-} from "react-pdf";
-
-import "react-pdf/dist/Page/AnnotationLayer.css";
-import "react-pdf/dist/Page/TextLayer.css";
-
-import {
   FaBalanceScale,
   FaBookOpen,
   FaCheck,
   FaCheckCircle,
-  FaChevronLeft,
-  FaChevronRight,
   FaFileAlt,
   FaFilePdf,
   FaGraduationCap,
@@ -66,16 +55,6 @@ import LoadingSpinner from "../../../../shared/components/LoadingSpinner";
 import PageHeader from "../../../../shared/components/PageHeader";
 
 import ChapterNavigation from "../components/ChapterNavigation";
-
-// =========================================================
-// PDF.JS WORKER
-// =========================================================
-
-pdfjs.GlobalWorkerOptions.workerSrc =
-  new URL(
-    "pdfjs-dist/build/pdf.worker.min.mjs",
-    import.meta.url,
-  ).toString();
 
 // =========================================================
 // HELPERS
@@ -193,7 +172,7 @@ const isEnrollmentActive = (
 };
 
 // =========================================================
-// CHAPTER LEARNING
+// COMPONENT
 // =========================================================
 
 export default function ChapterLearning() {
@@ -249,6 +228,16 @@ export default function ChapterLearning() {
   ] = useState(null);
 
   const [
+    enrollmentChecked,
+    setEnrollmentChecked,
+  ] = useState(false);
+
+  const [
+    accessDenied,
+    setAccessDenied,
+  ] = useState(false);
+
+  const [
     progress,
     setProgress,
   ] = useState(null);
@@ -274,68 +263,7 @@ export default function ChapterLearning() {
   ] = useState("");
 
   // =========================================================
-  // MAIN PDF STATE
-  // =========================================================
-
-  const [
-    pdfPageCount,
-    setPdfPageCount,
-  ] = useState(0);
-
-  const [
-    pdfPageNumber,
-    setPdfPageNumber,
-  ] = useState(1);
-
-  const [
-    pdfWidth,
-    setPdfWidth,
-  ] = useState(900);
-
-  // =========================================================
-  // RESPONSIVE PDF WIDTH
-  // =========================================================
-
-  useEffect(() => {
-    const updatePdfWidth =
-      () => {
-        const viewport =
-          window.innerWidth ||
-          1024;
-
-        const horizontalSpace =
-          viewport <= 768
-            ? 36
-            : 100;
-
-        setPdfWidth(
-          Math.max(
-            270,
-            Math.min(
-              900,
-              viewport -
-                horizontalSpace,
-            ),
-          ),
-        );
-      };
-
-    updatePdfWidth();
-
-    window.addEventListener(
-      "resize",
-      updatePdfWidth,
-    );
-
-    return () =>
-      window.removeEventListener(
-        "resize",
-        updatePdfWidth,
-      );
-  }, []);
-
-  // =========================================================
-  // LOAD
+  // LOAD LEARNING PAGE
   // =========================================================
 
   useEffect(() => {
@@ -366,6 +294,14 @@ export default function ChapterLearning() {
           "",
         );
 
+        setAccessDenied(
+          false,
+        );
+
+        setEnrollmentChecked(
+          false,
+        );
+
         setChapter(
           null,
         );
@@ -382,20 +318,9 @@ export default function ChapterLearning() {
           null,
         );
 
-        setEnrollment(
-          null,
-        );
-
-        setPdfPageCount(
-          0,
-        );
-
-        setPdfPageNumber(
-          1,
-        );
-
         // =====================================================
-        // COURSE
+        // STEP 1
+        // RESOLVE COURSE ONLY
         // =====================================================
 
         const courseData =
@@ -425,63 +350,80 @@ export default function ChapterLearning() {
         );
 
         // =====================================================
-        // ENROLLMENT
+        // STEP 2
+        // CHECK ENROLLMENT BEFORE LOADING CHAPTER / PDF
         // =====================================================
         //
-        // Enrollment is checked, but NOT required merely to
-        // read the chapter.
+        // IMPORTANT:
         //
-        // It controls:
+        // Normal students must be enrolled before we request:
         //
-        // - progress tracking
-        // - chapter completion
-        // - protected PDF download
-        // - certification features
+        // - chapter document
+        // - chapter PDF URL
+        // - chapter resources
+        // - chapter progress
+        //
+        // Therefore getChapterById() is deliberately NOT
+        // called until this check has passed.
         // =====================================================
 
         let enrollmentData =
           null;
 
         if (!isAdmin) {
-          try {
-            enrollmentData =
-              await getStudentEnrollment(
-                studentId,
-                realCourseId,
-              );
-
-            setEnrollment(
-              enrollmentData ||
-                null,
-            );
-          } catch (
-            enrollmentError
-          ) {
-            console.warn(
-              "Unable to load enrollment:",
-              enrollmentError,
+          enrollmentData =
+            await getStudentEnrollment(
+              studentId,
+              realCourseId,
             );
 
-            setEnrollment(
+          setEnrollment(
+            enrollmentData ||
               null,
-            );
-          }
-        }
-
-        const enrolled =
-          isAdmin ||
-          isEnrollmentActive(
-            enrollmentData,
           );
 
+          setEnrollmentChecked(
+            true,
+          );
+
+          if (
+            !isEnrollmentActive(
+              enrollmentData,
+            )
+          ) {
+            setAccessDenied(
+              true,
+            );
+
+            // -----------------------------------------------
+            // SECURITY:
+            //
+            // STOP HERE.
+            //
+            // No chapter document is loaded.
+            // No PDF URL is loaded.
+            // No resource document is loaded.
+            // -----------------------------------------------
+
+            return;
+          }
+        } else {
+          setEnrollmentChecked(
+            true,
+          );
+        }
+
         // =====================================================
-        // LOAD PUBLISHED CHAPTER CONTENT
+        // STEP 3
+        // ENROLLMENT PASSED
+        // NOW LOAD LEARNING CONTENT
         // =====================================================
 
         const [
           chapterData,
           chapterList,
           resourceList,
+          existingProgress,
         ] =
           await Promise.all([
             getChapterById(
@@ -493,6 +435,11 @@ export default function ChapterLearning() {
             ),
 
             getPublishedChapterResources(
+              chapterId,
+            ),
+
+            getStudentChapterProgress(
+              studentId,
               chapterId,
             ),
           ]);
@@ -514,6 +461,18 @@ export default function ChapterLearning() {
             null,
           );
 
+          setChapters(
+            [],
+          );
+
+          setResources(
+            [],
+          );
+
+          setProgress(
+            null,
+          );
+
           return;
         }
 
@@ -522,7 +481,7 @@ export default function ChapterLearning() {
         );
 
         // =====================================================
-        // CHAPTER LIST
+        // PUBLISHED CHAPTER LIST
         // =====================================================
 
         const safeChapterList =
@@ -581,44 +540,32 @@ export default function ChapterLearning() {
         );
 
         // =====================================================
-        // PROGRESS ONLY FOR ENROLLED STUDENTS / ADMIN
+        // PROGRESS
         // =====================================================
 
-        if (enrolled) {
-          const existingProgress =
-            await getStudentChapterProgress(
-              studentId,
-              chapterId,
-            );
-
-          if (
-            existingProgress
-          ) {
-            setProgress(
-              existingProgress,
-            );
-          } else {
-            const started =
-              await startChapter(
-                {
-                  studentId,
-
-                  courseId:
-                    realCourseId,
-
-                  chapterId,
-                },
-
-                studentId,
-              );
-
-            setProgress(
-              started,
-            );
-          }
-        } else {
+        if (
+          existingProgress
+        ) {
           setProgress(
-            null,
+            existingProgress,
+          );
+        } else {
+          const started =
+            await startChapter(
+              {
+                studentId,
+
+                courseId:
+                  realCourseId,
+
+                chapterId,
+              },
+
+              studentId,
+            );
+
+          setProgress(
+            started,
           );
         }
       } catch (
@@ -645,14 +592,8 @@ export default function ChapterLearning() {
     };
 
   // =========================================================
-  // ACCESS
+  // CERTIFICATION / DOWNLOAD ACCESS
   // =========================================================
-
-  const enrolled =
-    isAdmin ||
-    isEnrollmentActive(
-      enrollment,
-    );
 
   const certification =
     enrollment?.certification ||
@@ -679,31 +620,28 @@ export default function ChapterLearning() {
     true;
 
   // =========================================================
-  // READING ACCESS
+  // IMPORTANT
   //
-  // Every authenticated student may read the PDF.
+  // Reading:
+  // Any valid enrolled student may read the PDF.
+  //
+  // Download:
+  // Only Admin OR paid certification student with
+  // explicit pdfDownload access.
   // =========================================================
 
-  const canReadPdf =
+  const canViewChapterPdf =
     Boolean(
-      studentId,
+      isAdmin ||
+      isEnrollmentActive(
+        enrollment,
+      ),
     );
 
-  // =========================================================
-  // DOWNLOAD ACCESS
-  //
-  // Admin:
-  // YES
-  //
-  // Student:
-  // Requires active certification + payment + PDF entitlement.
-  // =========================================================
-
-  const canDownloadPdf =
+  const canDownloadChapterPdf =
     Boolean(
       isAdmin ||
       (
-        enrolled &&
         certificationActive &&
         certificationPaid &&
         certificationPdfAccess
@@ -711,7 +649,7 @@ export default function ChapterLearning() {
     );
 
   // =========================================================
-  // CONTENT
+  // ACADEMIC CONTENT
   // =========================================================
 
   const content =
@@ -744,8 +682,7 @@ export default function ChapterLearning() {
     Array.isArray(
       content.keyPoints,
     )
-      ? content
-          .keyPoints
+      ? content.keyPoints
       : [];
 
   const statutoryProvisions =
@@ -810,7 +747,7 @@ export default function ChapterLearning() {
     );
 
   // =========================================================
-  // MAIN PDF
+  // PDF
   // =========================================================
 
   const chapterPdfUrl =
@@ -838,7 +775,7 @@ export default function ChapterLearning() {
     );
 
   // =========================================================
-  // CHAPTER POSITION
+  // CURRENT CHAPTER POSITION
   // =========================================================
 
   const currentIndex =
@@ -876,7 +813,7 @@ export default function ChapterLearning() {
       : null;
 
   // =========================================================
-  // COMPLETED RESOURCE IDS
+  // COMPLETED RESOURCES
   // =========================================================
 
   const completedResourceIds =
@@ -891,7 +828,7 @@ export default function ChapterLearning() {
       : [];
 
   // =========================================================
-  // RESOURCE COMPLETE
+  // RESOURCE COMPLETION
   // =========================================================
 
   const handleResourceComplete =
@@ -899,9 +836,11 @@ export default function ChapterLearning() {
       resourceId,
     ) => {
       if (
-        !enrolled ||
         !course?.id ||
-        !resourceId
+        !resourceId ||
+        !isEnrollmentActive(
+          enrollment,
+        )
       ) {
         return;
       }
@@ -957,12 +896,17 @@ export default function ChapterLearning() {
     };
 
   // =========================================================
-  // CHAPTER COMPLETE
+  // CHAPTER COMPLETION
   // =========================================================
 
   const handleChapterComplete =
     async () => {
-      if (!enrolled) {
+      if (
+        !isAdmin &&
+        !isEnrollmentActive(
+          enrollment,
+        )
+      ) {
         return;
       }
 
@@ -1032,19 +976,96 @@ export default function ChapterLearning() {
     return (
       <LoadingSpinner
         fullPage
-        text="Loading chapter..."
+        text="Checking course access..."
       />
     );
   }
 
   // =========================================================
-  // NOT FOUND
+  // COURSE NOT FOUND
+  // =========================================================
+
+  if (!course) {
+    return (
+      <div>
+        {error && (
+          <div className="ns-learning-error">
+            {error}
+          </div>
+        )}
+
+        <Card>
+          Course not found.
+        </Card>
+      </div>
+    );
+  }
+
+  // =========================================================
+  // ENROLLMENT REQUIRED
+  // =========================================================
+  //
+  // IMPORTANT:
+  //
+  // At this point NO chapter document / PDF URL has been
+  // requested for the student.
   // =========================================================
 
   if (
-    !chapter ||
-    !course
+    !isAdmin &&
+    enrollmentChecked &&
+    accessDenied
   ) {
+    return (
+      <div className="ns-learning-page">
+        <PageHeader
+          title="Enrollment Required"
+          description={
+            course.title
+          }
+          breadcrumbs={[
+            "Student",
+            "My Courses",
+            course.title,
+          ]}
+        />
+
+        <div className="ns-enrollment-lock">
+          <div className="ns-enrollment-lock-icon">
+            <FaLock />
+          </div>
+
+          <h2>
+            Course Enrollment Required
+          </h2>
+
+          <p>
+            You must enroll in this course before accessing chapter content, study materials, PDFs or learning resources.
+          </p>
+
+          <button
+            type="button"
+            onClick={() =>
+              navigate(
+                `/student/courses/${course.slug}`,
+              )
+            }
+          >
+            <FaBookOpen />
+            Go to Course
+          </button>
+        </div>
+
+        <LearningStyles />
+      </div>
+    );
+  }
+
+  // =========================================================
+  // CHAPTER NOT FOUND
+  // =========================================================
+
+  if (!chapter) {
     return (
       <div>
         {error && (
@@ -1088,50 +1109,37 @@ export default function ChapterLearning() {
       )}
 
       {/* =====================================================
-          ACCESS / PROGRESS
+          PROGRESS
       ====================================================== */}
 
       <div className="ns-learning-progress-summary">
         <div>
           <span>
-            {enrolled
-              ? "Chapter Progress"
-              : "Learning Access"}
+            Chapter Progress
           </span>
 
           <strong>
-            {enrolled
-              ? `${Number(
-                  progress
-                    ?.progressPercentage ||
-                    0,
-                )}%`
-              : "Read Only"}
+            {Number(
+              progress
+                ?.progressPercentage ||
+                0,
+            )}
+            %
           </strong>
         </div>
 
-        {enrolled ? (
-          <div className="ns-learning-progress-track">
-            <div
-              style={{
-                width:
-                  `${Number(
-                    progress
-                      ?.progressPercentage ||
-                      0,
-                  )}%`,
-              }}
-            />
-          </div>
-        ) : (
-          <div className="ns-read-only-message">
-            <FaLock />
-
-            <span>
-              You may read this chapter. Enroll in the certification programme to unlock downloads, tests and progress tracking.
-            </span>
-          </div>
-        )}
+        <div className="ns-learning-progress-track">
+          <div
+            style={{
+              width:
+                `${Number(
+                  progress
+                    ?.progressPercentage ||
+                    0,
+                )}%`,
+            }}
+          />
+        </div>
       </div>
 
       {/* =====================================================
@@ -1483,7 +1491,10 @@ export default function ChapterLearning() {
           STUDY MATERIAL HEADER
       ====================================================== */}
 
-      {(hasChapterPdf ||
+      {((
+        hasChapterPdf &&
+        canViewChapterPdf
+      ) ||
         resources.length >
           0) && (
         <div className="ns-study-material-heading">
@@ -1501,18 +1512,18 @@ export default function ChapterLearning() {
             </h2>
 
             <p>
-              Read the chapter material directly inside NagarikSuraksha.
+              Read the PDF and complete the additional learning resources below.
             </p>
           </div>
         </div>
       )}
 
       {/* =====================================================
-          MAIN PDF
+          MAIN CHAPTER PDF
       ====================================================== */}
 
       {hasChapterPdf &&
-        canReadPdf && (
+        canViewChapterPdf && (
           <div className="ns-chapter-pdf-section">
             <div className="ns-chapter-pdf-heading">
               <div className="ns-chapter-pdf-title">
@@ -1526,7 +1537,7 @@ export default function ChapterLearning() {
                   </h2>
 
                   <p>
-                    Online reading material
+                    Read the complete study material below.
                   </p>
                 </div>
               </div>
@@ -1549,56 +1560,19 @@ export default function ChapterLearning() {
               </div>
             </div>
 
-            <ProtectedPdfReader
-              url={
-                chapterPdfUrl
-              }
-              pageNumber={
-                pdfPageNumber
-              }
-              pageCount={
-                pdfPageCount
-              }
-              width={
-                pdfWidth
-              }
-              onLoadSuccess={({
-                numPages,
-              }) => {
-                setPdfPageCount(
-                  numPages,
-                );
+            {/* ===============================================
+                PDF URL IS ONLY INSERTED AFTER ENROLLMENT
+            ================================================ */}
 
-                setPdfPageNumber(
-                  1,
-                );
-              }}
-              onPrevious={() =>
-                setPdfPageNumber(
-                  (
-                    current,
-                  ) =>
-                    Math.max(
-                      1,
-                      current - 1,
-                    ),
-                )
-              }
-              onNext={() =>
-                setPdfPageNumber(
-                  (
-                    current,
-                  ) =>
-                    Math.min(
-                      pdfPageCount,
-                      current + 1,
-                    ),
-                )
-              }
-            />
+            <div className="ns-pdf-reader">
+              <iframe
+                src={`${chapterPdfUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+                title={`${chapter.title} PDF`}
+              />
+            </div>
 
             <div className="ns-pdf-access">
-              {canDownloadPdf ? (
+              {canDownloadChapterPdf ? (
                 <a
                   href={
                     chapterPdfUrl
@@ -1622,7 +1596,7 @@ export default function ChapterLearning() {
                     </strong>
 
                     <span>
-                      You can read this PDF online. Download access is available after eligible certification enrollment.
+                      PDF download is available only with eligible paid certification access.
                     </span>
                   </div>
                 </div>
@@ -1733,23 +1707,19 @@ export default function ChapterLearning() {
                       <FaFilePdf />
 
                       <span>
-                        Online PDF Resource
+                        Read-only PDF resource
                       </span>
 
-                      {!canDownloadPdf && (
-                        <FaLock />
-                      )}
+                      <FaLock />
                     </div>
 
-                    <ProtectedResourcePdf
-                      url={
-                        resource.file
-                          .url
-                      }
-                      title={
-                        resource.title
-                      }
-                    />
+                    <div className="ns-resource-pdf-reader">
+                      <iframe
+                        src={`${resource.file.url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+                        title={`${resource.title} PDF`}
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
                   </div>
                 )}
 
@@ -1775,7 +1745,7 @@ export default function ChapterLearning() {
                   "download" &&
                   resource.file
                     ?.url && (
-                  canDownloadPdf ? (
+                  canDownloadChapterPdf ? (
                     <a
                       href={
                         resource.file
@@ -1799,15 +1769,14 @@ export default function ChapterLearning() {
                         </strong>
 
                         <span>
-                          Enrollment is required to download this material.
+                          Download access is reserved for eligible paid certification students.
                         </span>
                       </div>
                     </div>
                   )
                 )}
 
-                {!completed &&
-                  enrolled && (
+                {!completed && (
                   <button
                     type="button"
                     className="ns-mark-resource-complete"
@@ -1834,7 +1803,7 @@ export default function ChapterLearning() {
       </div>
 
       {/* =====================================================
-          NAVIGATION
+          CHAPTER NAVIGATION
       ====================================================== */}
 
       <ChapterNavigation
@@ -1863,294 +1832,11 @@ export default function ChapterLearning() {
           )
         }
         onComplete={
-          enrolled
-            ? handleChapterComplete
-            : undefined
+          handleChapterComplete
         }
       />
 
       <LearningStyles />
-    </div>
-  );
-}
-
-// =========================================================
-// PROTECTED MAIN PDF READER
-// =========================================================
-
-function ProtectedPdfReader({
-  url,
-  pageNumber,
-  pageCount,
-  width,
-  onLoadSuccess,
-  onPrevious,
-  onNext,
-}) {
-  return (
-    <div
-      className="ns-pdf-reader"
-      onContextMenu={(
-        event,
-      ) =>
-        event.preventDefault()
-      }
-    >
-      <div className="ns-pdf-reader-toolbar">
-        <div>
-          <FaLock />
-
-          <span>
-            Online Reader
-          </span>
-        </div>
-
-        <strong>
-          {pageCount
-            ? `Page ${pageNumber} of ${pageCount}`
-            : "Loading..."}
-        </strong>
-      </div>
-
-      <div className="ns-pdf-document">
-        <Document
-          file={
-            url
-          }
-          onLoadSuccess={
-            onLoadSuccess
-          }
-          loading={
-            <div className="ns-pdf-status">
-              Loading study material...
-            </div>
-          }
-          error={
-            <div className="ns-pdf-status error">
-              Unable to display this PDF.
-            </div>
-          }
-        >
-          <Page
-            pageNumber={
-              pageNumber
-            }
-            width={
-              width
-            }
-            renderAnnotationLayer
-            renderTextLayer
-          />
-        </Document>
-      </div>
-
-      {pageCount >
-        1 && (
-        <div className="ns-pdf-pagination">
-          <button
-            type="button"
-            disabled={
-              pageNumber <=
-              1
-            }
-            onClick={
-              onPrevious
-            }
-          >
-            <FaChevronLeft />
-            Previous
-          </button>
-
-          <strong>
-            {pageNumber} /{" "}
-            {pageCount}
-          </strong>
-
-          <button
-            type="button"
-            disabled={
-              pageNumber >=
-              pageCount
-            }
-            onClick={
-              onNext
-            }
-          >
-            Next
-            <FaChevronRight />
-          </button>
-        </div>
-      )}
-
-      <div className="ns-pdf-reader-notice">
-        <FaLock />
-
-        <span>
-          This material is provided for online reading. Download access is controlled separately.
-        </span>
-      </div>
-    </div>
-  );
-}
-
-// =========================================================
-// RESOURCE PDF READER
-// =========================================================
-
-function ProtectedResourcePdf({
-  url,
-  title,
-}) {
-  const [
-    pageCount,
-    setPageCount,
-  ] = useState(0);
-
-  const [
-    pageNumber,
-    setPageNumber,
-  ] = useState(1);
-
-  const [
-    width,
-    setWidth,
-  ] = useState(760);
-
-  useEffect(() => {
-    const updateWidth =
-      () => {
-        const viewport =
-          window.innerWidth ||
-          1024;
-
-        setWidth(
-          Math.max(
-            260,
-            Math.min(
-              760,
-              viewport - 80,
-            ),
-          ),
-        );
-      };
-
-    updateWidth();
-
-    window.addEventListener(
-      "resize",
-      updateWidth,
-    );
-
-    return () =>
-      window.removeEventListener(
-        "resize",
-        updateWidth,
-      );
-  }, []);
-
-  return (
-    <div
-      className="ns-resource-pdf-reader"
-      onContextMenu={(
-        event,
-      ) =>
-        event.preventDefault()
-      }
-    >
-      <Document
-        file={
-          url
-        }
-        onLoadSuccess={({
-          numPages,
-        }) => {
-          setPageCount(
-            numPages,
-          );
-
-          setPageNumber(
-            1,
-          );
-        }}
-        loading={
-          <div className="ns-pdf-status">
-            Loading{" "}
-            {title}...
-          </div>
-        }
-        error={
-          <div className="ns-pdf-status error">
-            Unable to display this PDF resource.
-          </div>
-        }
-      >
-        <Page
-          pageNumber={
-            pageNumber
-          }
-          width={
-            width
-          }
-          renderAnnotationLayer
-          renderTextLayer
-        />
-      </Document>
-
-      {pageCount >
-        1 && (
-        <div className="ns-pdf-pagination">
-          <button
-            type="button"
-            disabled={
-              pageNumber <=
-              1
-            }
-            onClick={() =>
-              setPageNumber(
-                (
-                  current,
-                ) =>
-                  Math.max(
-                    1,
-                    current -
-                      1,
-                  ),
-              )
-            }
-          >
-            <FaChevronLeft />
-            Previous
-          </button>
-
-          <strong>
-            {pageNumber} /{" "}
-            {pageCount}
-          </strong>
-
-          <button
-            type="button"
-            disabled={
-              pageNumber >=
-              pageCount
-            }
-            onClick={() =>
-              setPageNumber(
-                (
-                  current,
-                ) =>
-                  Math.min(
-                    pageCount,
-                    current +
-                      1,
-                  ),
-              )
-            }
-          >
-            Next
-            <FaChevronRight />
-          </button>
-        </div>
-      )}
     </div>
   );
 }
@@ -2194,7 +1880,7 @@ function AcademicSection({
 }
 
 // =========================================================
-// TEXT
+// TEXT CONTENT
 // =========================================================
 
 function ContentText({
@@ -2228,16 +1914,69 @@ function LearningStyles() {
           overflow-x: hidden;
         }
 
-        .ns-learning-error {
-          margin-bottom: 18px;
-          border: 1px solid #fecaca;
-          border-radius: 10px;
-          background: #fef2f2;
-          color: #b91c1c;
-          padding: 12px;
+        /* ================================================
+           ENROLLMENT LOCK
+        ================================================= */
+
+        .ns-enrollment-lock {
+          display: flex;
+          max-width: 720px;
+          margin: 40px auto;
+          align-items: center;
+          flex-direction: column;
+          border: 1px solid #e2e8f0;
+          border-radius: 18px;
+          background: #ffffff;
+          padding: 42px 28px;
+          text-align: center;
+          box-shadow:
+            0 8px 28px
+            rgba(15, 23, 42, .06);
         }
 
-        /* PROGRESS */
+        .ns-enrollment-lock-icon {
+          display: flex;
+          width: 66px;
+          height: 66px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: #fff7ed;
+          color: #ea580c;
+          font-size: 27px;
+        }
+
+        .ns-enrollment-lock h2 {
+          margin: 20px 0 8px;
+          color: #0f172a;
+          font-size: 22px;
+        }
+
+        .ns-enrollment-lock p {
+          max-width: 520px;
+          margin: 0;
+          color: #64748b;
+          font-size: 13px;
+          line-height: 1.7;
+        }
+
+        .ns-enrollment-lock button {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 22px;
+          border: none;
+          border-radius: 10px;
+          background: #2563eb;
+          color: #ffffff;
+          cursor: pointer;
+          padding: 11px 17px;
+          font-weight: 700;
+        }
+
+        /* ================================================
+           PROGRESS
+        ================================================= */
 
         .ns-learning-progress-summary {
           margin-bottom: 24px;
@@ -2250,7 +1989,6 @@ function LearningStyles() {
         .ns-learning-progress-summary > div:first-child {
           display: flex;
           justify-content: space-between;
-          gap: 15px;
           color: #475569;
           font-size: 13px;
           font-weight: 700;
@@ -2274,26 +2012,9 @@ function LearningStyles() {
           background: #2563eb;
         }
 
-        .ns-read-only-message {
-          display: flex;
-          align-items: flex-start;
-          gap: 8px;
-          margin-top: 11px;
-          border-radius: 9px;
-          background: #ffffff;
-          color: #475569;
-          padding: 10px 12px;
-          font-size: 11px;
-          line-height: 1.55;
-        }
-
-        .ns-read-only-message svg {
-          flex-shrink: 0;
-          margin-top: 2px;
-          color: #64748b;
-        }
-
-        /* ACADEMIC */
+        /* ================================================
+           ACADEMIC CONTENT
+        ================================================= */
 
         .ns-academic-content {
           display: flex;
@@ -2557,7 +2278,9 @@ function LearningStyles() {
           line-height: 1.65;
         }
 
-        /* STUDY MATERIAL */
+        /* ================================================
+           STUDY MATERIAL
+        ================================================= */
 
         .ns-study-material-heading {
           display: flex;
@@ -2598,7 +2321,9 @@ function LearningStyles() {
           font-size: 12px;
         }
 
-        /* PDF */
+        /* ================================================
+           PDF
+        ================================================= */
 
         .ns-chapter-pdf-section {
           margin-bottom: 22px;
@@ -2670,115 +2395,19 @@ function LearningStyles() {
           font-size: 10px;
         }
 
-        /* CUSTOM PDF READER */
-
         .ns-pdf-reader {
           width: 100%;
-          overflow: hidden;
-          background: #e2e8f0;
-          user-select: none;
-          -webkit-user-select: none;
+          height: min(82vh, 1000px);
+          min-height: 650px;
+          background: #334155;
         }
 
-        .ns-pdf-reader-toolbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 12px;
-          background: #1e293b;
-          color: #ffffff;
-          padding: 10px 14px;
-          font-size: 11px;
-        }
-
-        .ns-pdf-reader-toolbar > div {
-          display: flex;
-          align-items: center;
-          gap: 7px;
-          font-weight: 800;
-        }
-
-        .ns-pdf-reader-toolbar strong {
-          font-size: 10px;
-        }
-
-        .ns-pdf-document {
-          display: flex;
-          justify-content: center;
-          overflow: auto;
-          padding: 18px;
-        }
-
-        .ns-pdf-document .react-pdf__Page,
-        .ns-resource-pdf-reader .react-pdf__Page {
-          box-shadow:
-            0 5px 20px
-            rgba(15, 23, 42, .18);
-        }
-
-        .ns-pdf-document canvas,
-        .ns-resource-pdf-reader canvas {
+        .ns-pdf-reader iframe {
           display: block;
-          max-width: 100%;
-          height: auto !important;
-        }
-
-        .ns-pdf-pagination {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 14px;
-          border-top: 1px solid #cbd5e1;
-          background: #f8fafc;
-          padding: 11px;
-        }
-
-        .ns-pdf-pagination button {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          border: 1px solid #cbd5e1;
-          border-radius: 8px;
+          width: 100%;
+          height: 100%;
+          border: 0;
           background: #ffffff;
-          color: #1e293b;
-          cursor: pointer;
-          padding: 8px 13px;
-          font-size: 11px;
-          font-weight: 700;
-        }
-
-        .ns-pdf-pagination button:disabled {
-          cursor: not-allowed;
-          opacity: .4;
-        }
-
-        .ns-pdf-pagination strong {
-          color: #475569;
-          font-size: 11px;
-        }
-
-        .ns-pdf-reader-notice {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 7px;
-          border-top: 1px solid #fed7aa;
-          background: #fff7ed;
-          color: #9a3412;
-          padding: 9px 12px;
-          font-size: 10px;
-          text-align: center;
-        }
-
-        .ns-pdf-status {
-          padding: 55px 20px;
-          color: #475569;
-          text-align: center;
-          font-size: 12px;
-        }
-
-        .ns-pdf-status.error {
-          color: #b91c1c;
         }
 
         .ns-pdf-access {
@@ -2807,7 +2436,6 @@ function LearningStyles() {
 
         .ns-pdf-locked span {
           font-size: 10px;
-          line-height: 1.5;
         }
 
         .ns-pdf-download {
@@ -2823,7 +2451,9 @@ function LearningStyles() {
           text-decoration: none;
         }
 
-        /* RESOURCES */
+        /* ================================================
+           RESOURCES
+        ================================================= */
 
         .ns-learning-resource-list {
           display: flex;
@@ -2929,25 +2559,20 @@ function LearningStyles() {
 
         .ns-resource-pdf-label svg:last-child {
           margin-left: auto;
-          color: #64748b;
         }
 
         .ns-resource-pdf-reader {
-          display: flex;
           width: 100%;
-          flex-direction: column;
-          align-items: center;
-          overflow: auto;
-          background: #e2e8f0;
-          padding-top: 14px;
-          user-select: none;
-          -webkit-user-select: none;
+          height: min(70vh, 800px);
+          min-height: 520px;
+          background: #334155;
         }
 
-        .ns-resource-pdf-reader .ns-pdf-pagination {
-          box-sizing: border-box;
+        .ns-resource-pdf-reader iframe {
+          display: block;
           width: 100%;
-          margin-top: 14px;
+          height: 100%;
+          border: 0;
         }
 
         .ns-protected-download {
@@ -2977,18 +2602,19 @@ function LearningStyles() {
           line-height: 1.45;
         }
 
+        .ns-learning-error {
+          margin-bottom: 18px;
+          border: 1px solid #fecaca;
+          border-radius: 10px;
+          background: #fef2f2;
+          color: #b91c1c;
+          padding: 12px;
+        }
+
         @media (max-width: 768px) {
           .ns-objective-grid,
           .ns-case-list {
             grid-template-columns: 1fr;
-          }
-
-          .ns-academic-header {
-            padding: 14px;
-          }
-
-          .ns-academic-body {
-            padding: 15px;
           }
 
           .ns-chapter-pdf-heading {
@@ -3001,24 +2627,14 @@ function LearningStyles() {
             align-items: flex-start;
           }
 
-          .ns-pdf-document {
-            padding: 8px;
+          .ns-pdf-reader {
+            height: 68vh;
+            min-height: 430px;
           }
 
-          .ns-pdf-reader-toolbar {
-            padding: 9px 10px;
-          }
-
-          .ns-pdf-pagination {
-            gap: 7px;
-          }
-
-          .ns-pdf-pagination button {
-            padding: 8px 9px;
-          }
-
-          .ns-pdf-reader-notice {
-            align-items: flex-start;
+          .ns-resource-pdf-reader {
+            height: 62vh;
+            min-height: 400px;
           }
 
           .ns-learning-link,
@@ -3026,6 +2642,11 @@ function LearningStyles() {
             box-sizing: border-box;
             width: 100%;
             justify-content: center;
+          }
+
+          .ns-enrollment-lock {
+            margin: 24px 0;
+            padding: 30px 18px;
           }
         }
       `}
