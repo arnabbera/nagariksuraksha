@@ -18,7 +18,6 @@ import {
   FaPlayCircle,
   FaRegClock,
   FaShieldAlt,
-  FaSignInAlt,
   FaTasks,
   FaTrophy,
   FaUserGraduate,
@@ -44,22 +43,16 @@ import {
 // HELPERS
 // =========================================================
 
-const normalizePercentage = (
-  value,
-) =>
+const normalizePercentage = (value) =>
   Math.min(
     100,
     Math.max(
       0,
-      Number(
-        value || 0,
-      ),
+      Number(value || 0),
     ),
   );
 
-const getCourseSlug = (
-  course,
-) =>
+const getCourseSlug = (course) =>
   course?.slug ||
   course?.id ||
   "";
@@ -72,17 +65,11 @@ const getCourseTitle = (
   enrollment?.courseTitle ||
   "Course";
 
-const formatCurrency = (
-  value,
-) => {
+const formatCurrency = (value) => {
   const amount =
-    Number(
-      value || 0,
-    );
+    Number(value || 0);
 
-  if (
-    amount <= 0
-  ) {
+  if (amount <= 0) {
     return "Free";
   }
 
@@ -93,97 +80,31 @@ const formatCurrency = (
       currency: "INR",
       maximumFractionDigits: 0,
     },
-  ).format(
-    amount,
-  );
+  ).format(amount);
 };
 
 const getMockStatus = (
   certification,
   testNumber,
 ) =>
-  certification
-    ?.mockTests?.[
-      `test${testNumber}`
-    ]
-    ?.status ||
+  certification?.mockTests?.[
+    `test${testNumber}`
+  ]?.status ||
   "locked";
 
-const prettyStatus = (
-  value,
-) => {
+const prettyStatus = (value) => {
   if (!value) {
     return "Not Available";
   }
 
-  return String(
-    value,
-  )
-    .replace(
-      /-/g,
-      " ",
-    )
+  return String(value)
+    .replace(/-/g, " ")
     .replace(
       /\b\w/g,
-      (
-        letter,
-      ) =>
+      (letter) =>
         letter.toUpperCase(),
     );
 };
-
-const toDate = (
-  value,
-) => {
-  if (!value) {
-    return null;
-  }
-
-  if (
-    typeof value?.toDate ===
-    "function"
-  ) {
-    return value.toDate();
-  }
-
-  const date =
-    new Date(
-      value,
-    );
-
-  return Number.isNaN(
-    date.getTime(),
-  )
-    ? null
-    : date;
-};
-
-const formatDateTime = (
-  value,
-) => {
-  const date =
-    toDate(
-      value,
-    );
-
-  if (!date) {
-    return "Not available";
-  }
-
-  return new Intl.DateTimeFormat(
-    "en-IN",
-    {
-      dateStyle: "medium",
-      timeStyle: "short",
-    },
-  ).format(
-    date,
-  );
-};
-
-// =========================================================
-// COMPONENT
-// =========================================================
 
 const StudentDashboard = () => {
   const navigate =
@@ -195,8 +116,17 @@ const StudentDashboard = () => {
   } = useAuth();
 
   // =========================================================
-  // STUDENT ID
+  // AUTHENTICATED STUDENT
   // =========================================================
+
+  /*
+   * IMPORTANT:
+   *
+   * CourseDetails and ChapterLearning use Firebase UID
+   * as studentId.
+   *
+   * Dashboard must use the SAME identifier.
+   */
 
   const studentId =
     firebaseUser?.uid ||
@@ -223,16 +153,6 @@ const StudentDashboard = () => {
     profile?.enrollmentId ||
     "Student";
 
-  const loginCount =
-    Number(
-      profile?.loginCount ||
-        0,
-    );
-
-  const previousLogin =
-    profile?.previousLoginAt ||
-    null;
-
   // =========================================================
   // STATE
   // =========================================================
@@ -258,30 +178,18 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     if (!studentId) {
-      setEnrollmentRows(
-        [],
-      );
-
-      setLoading(
-        false,
-      );
-
+      setEnrollmentRows([]);
+      setLoading(false);
       return;
     }
 
-    let active =
-      true;
+    let active = true;
 
     const loadDashboard =
       async () => {
         try {
-          setLoading(
-            true,
-          );
-
-          setError(
-            "",
-          );
+          setLoading(true);
+          setError("");
 
           const enrollments =
             await getStudentEnrollments(
@@ -329,9 +237,7 @@ const StudentDashboard = () => {
               ),
             );
 
-          if (
-            active
-          ) {
+          if (active) {
             setEnrollmentRows(
               rows,
             );
@@ -344,9 +250,7 @@ const StudentDashboard = () => {
             dashboardError,
           );
 
-          if (
-            active
-          ) {
+          if (active) {
             setError(
               dashboardError
                 ?.message ||
@@ -358,12 +262,8 @@ const StudentDashboard = () => {
             );
           }
         } finally {
-          if (
-            active
-          ) {
-            setLoading(
-              false,
-            );
+          if (active) {
+            setLoading(false);
           }
         }
       };
@@ -371,12 +271,9 @@ const StudentDashboard = () => {
     loadDashboard();
 
     return () => {
-      active =
-        false;
+      active = false;
     };
-  }, [
-    studentId,
-  ]);
+  }, [studentId]);
 
   // =========================================================
   // SUMMARY
@@ -389,29 +286,36 @@ const StudentDashboard = () => {
 
       const certificationCourses =
         enrollmentRows.filter(
-          ({
-            enrollment,
-          }) =>
+          ({ enrollment }) =>
             hasActiveCertification(
               enrollment,
             ),
         ).length;
 
+      const completedCourses =
+        enrollmentRows.filter(
+          ({ enrollment }) =>
+            normalizePercentage(
+              enrollment
+                ?.progress
+                ?.percentage,
+            ) >= 100 ||
+            enrollment?.status ===
+              "completed",
+        ).length;
+
       const certificates =
         enrollmentRows.filter(
-          ({
-            enrollment,
-          }) =>
+          ({ enrollment }) =>
             enrollment
               ?.certification
               ?.certificate
               ?.status ===
-            "issued",
+              "issued",
         ).length;
 
       const overallProgress =
-        totalCourses >
-        0
+        totalCourses > 0
           ? Math.round(
               enrollmentRows.reduce(
                 (
@@ -435,12 +339,11 @@ const StudentDashboard = () => {
       return {
         totalCourses,
         certificationCourses,
+        completedCourses,
         certificates,
         overallProgress,
       };
-    }, [
-      enrollmentRows,
-    ]);
+    }, [enrollmentRows]);
 
   // =========================================================
   // NAVIGATION
@@ -463,12 +366,11 @@ const StudentDashboard = () => {
     );
   };
 
-  const openCourses =
-    () => {
-      navigate(
-        "/student/courses",
-      );
-    };
+  const openCourses = () => {
+    navigate(
+      "/student/courses",
+    );
+  };
 
   const openCertificates =
     () => {
@@ -493,23 +395,20 @@ const StudentDashboard = () => {
 
     const progress =
       normalizePercentage(
-        enrollment
-          ?.progress
+        enrollment?.progress
           ?.percentage,
       );
 
     const completedChapters =
       Number(
-        enrollment
-          ?.progress
+        enrollment?.progress
           ?.completedChapters ||
           0,
       );
 
     const totalChapters =
       Number(
-        enrollment
-          ?.progress
+        enrollment?.progress
           ?.totalChapters ||
           course?.totals
             ?.chapters ||
@@ -527,20 +426,17 @@ const StudentDashboard = () => {
       );
 
     const certificationStatus =
-      certification
-        ?.status ||
+      certification?.status ||
       "not-enrolled";
 
     const paymentStatus =
-      certification
-        ?.payment
+      certification?.payment
         ?.status ||
       "not-required";
 
     const certificationFee =
       Number(
-        certification
-          ?.fee ??
+        certification?.fee ??
           course
             ?.certification
             ?.fee ??
@@ -550,8 +446,7 @@ const StudentDashboard = () => {
       );
 
     const certificationAvailable =
-      course
-        ?.certification
+      course?.certification
         ?.available ??
       course
         ?.certificationAvailable ??
@@ -633,9 +528,7 @@ const StudentDashboard = () => {
                 <FaBookOpen />
               )}
 
-              {
-                statusLabel
-              }
+              {statusLabel}
             </span>
 
             <h3>
@@ -663,12 +556,8 @@ const StudentDashboard = () => {
           </span>
 
           <span>
-            {
-              completedChapters
-            }
-
-            {totalChapters >
-            0
+            {completedChapters}
+            {totalChapters > 0
               ? ` / ${totalChapters} chapters`
               : " chapters"}
           </span>
@@ -678,8 +567,7 @@ const StudentDashboard = () => {
           <div
             className="ns-progress-fill"
             style={{
-              width:
-                `${progress}%`,
+              width: `${progress}%`,
             }}
           />
         </div>
@@ -850,8 +738,9 @@ const StudentDashboard = () => {
               </strong>
 
               <span>
-                Complete payment to unlock PDF downloads,
-                mock tests and the certification track.
+                Complete payment to unlock PDF
+                downloads, mock tests and the
+                certification track.
               </span>
             </div>
           </div>
@@ -895,8 +784,7 @@ const StudentDashboard = () => {
           >
             <FaPlayCircle />
 
-            {progress >
-            0
+            {progress > 0
               ? "Continue Learning"
               : "Open Course"}
 
@@ -931,7 +819,7 @@ const StudentDashboard = () => {
   return (
     <div className="ns-student-dashboard">
       {/* =====================================================
-          HERO
+          WELCOME
       ====================================================== */}
 
       <section className="ns-dashboard-hero">
@@ -948,9 +836,9 @@ const StudentDashboard = () => {
 
           <p>
             Continue your legal learning,
-            monitor your course progress
-            and manage your certification
-            journey from one place.
+            monitor your course progress and
+            manage your certification journey
+            from one place.
           </p>
 
           <div className="ns-dashboard-hero-actions">
@@ -987,7 +875,6 @@ const StudentDashboard = () => {
                 alt={
                   displayName
                 }
-                referrerPolicy="no-referrer"
               />
             ) : (
               <FaUserGraduate />
@@ -996,9 +883,7 @@ const StudentDashboard = () => {
 
           <div>
             <strong>
-              {
-                displayName
-              }
+              {displayName}
             </strong>
 
             <span>
@@ -1025,7 +910,7 @@ const StudentDashboard = () => {
       )}
 
       {/* =====================================================
-          SUMMARY
+          SUMMARY CARDS
       ====================================================== */}
 
       <section className="ns-summary-grid">
@@ -1105,31 +990,6 @@ const StudentDashboard = () => {
             </strong>
           </div>
         </div>
-
-        <div className="ns-summary-card">
-          <div className="ns-summary-icon teal">
-            <FaSignInAlt />
-          </div>
-
-          <div>
-            <span>
-              Total Logins
-            </span>
-
-            <strong>
-              {
-                loginCount
-              }
-            </strong>
-
-            <small className="ns-login-last">
-              Previous login:{" "}
-              {formatDateTime(
-                previousLogin,
-              )}
-            </small>
-          </div>
-        </div>
       </section>
 
       {/* =====================================================
@@ -1144,13 +1004,15 @@ const StudentDashboard = () => {
             </span>
 
             <h2>
-              What You Get with NagarikSuraksha
+              What You Get with
+              NagarikSuraksha
             </h2>
 
             <p>
-              Learn law through structured course material
-              and upgrade to certification when you are
-              ready to test your knowledge.
+              Learn law through structured
+              course material and upgrade to
+              certification when you are ready
+              to test your knowledge.
             </p>
           </div>
         </div>
@@ -1182,7 +1044,7 @@ const StudentDashboard = () => {
             </h3>
 
             <p>
-              Read chapter PDFs online.
+              Read available chapter PDFs online.
               Certification students can receive
               PDF download access where enabled.
             </p>
@@ -1199,7 +1061,7 @@ const StudentDashboard = () => {
 
             <p>
               Certification courses provide
-              structured mock tests to help
+              structured mock tests to help you
               evaluate your preparation.
             </p>
           </div>
@@ -1214,8 +1076,8 @@ const StudentDashboard = () => {
             </h3>
 
             <p>
-              Complete the assessment pathway
-              and become eligible for a
+              Complete the required assessment
+              pathway and become eligible for a
               NagarikSuraksha course certificate.
             </p>
           </div>
@@ -1223,7 +1085,7 @@ const StudentDashboard = () => {
       </section>
 
       {/* =====================================================
-          MY COURSES
+          COURSES
       ====================================================== */}
 
       <section className="ns-dashboard-section">
@@ -1301,7 +1163,7 @@ const StudentDashboard = () => {
       </section>
 
       {/* =====================================================
-          CERTIFICATION
+          CERTIFICATION BENEFITS
       ====================================================== */}
 
       <section className="ns-certification-banner">
@@ -1397,7 +1259,7 @@ const StudentDashboard = () => {
       </section>
 
       {/* =====================================================
-          INFO
+          QUICK INFORMATION
       ====================================================== */}
 
       <section className="ns-dashboard-bottom-grid">
@@ -1443,7 +1305,7 @@ const StudentDashboard = () => {
       </section>
 
       {/* =====================================================
-          STYLES
+          RESPONSIVE CSS
       ====================================================== */}
 
       <style>
@@ -1462,11 +1324,13 @@ const StudentDashboard = () => {
             overflow-x: clip;
           }
 
-          .ns-student-dashboard button {
+          button {
             font-family: inherit;
           }
 
-          /* HERO */
+          /* ================================================
+             HERO
+          ================================================= */
 
           .ns-dashboard-hero {
             position: relative;
@@ -1552,6 +1416,7 @@ const StudentDashboard = () => {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+
             margin-top: 20px;
           }
 
@@ -1562,10 +1427,12 @@ const StudentDashboard = () => {
             gap: 8px;
 
             min-height: 42px;
+
             padding: 0 16px;
 
             border: 1px solid
               rgba(255,255,255,.4);
+
             border-radius: 10px;
 
             background: #ffffff;
@@ -1577,9 +1444,11 @@ const StudentDashboard = () => {
             font-weight: 800;
           }
 
-          .ns-dashboard-hero-actions button:last-child {
+          .ns-dashboard-hero-actions
+          button:last-child {
             background:
               rgba(255,255,255,.10);
+
             color: #ffffff;
           }
 
@@ -1594,6 +1463,7 @@ const StudentDashboard = () => {
 
             border: 1px solid
               rgba(255,255,255,.22);
+
             border-radius: 16px;
 
             background:
@@ -1615,6 +1485,7 @@ const StudentDashboard = () => {
 
             border: 2px solid
               rgba(255,255,255,.7);
+
             border-radius: 50%;
 
             background: #ffffff;
@@ -1660,13 +1531,17 @@ const StudentDashboard = () => {
             font-weight: 700;
           }
 
-          /* SUMMARY */
+          /* ================================================
+             SUMMARY
+          ================================================= */
 
           .ns-summary-grid {
             display: grid;
             grid-template-columns:
-              repeat(5, minmax(0, 1fr));
+              repeat(4, minmax(0, 1fr));
+
             gap: 14px;
+
             margin-bottom: 24px;
           }
 
@@ -1697,6 +1572,7 @@ const StudentDashboard = () => {
             justify-content: center;
 
             border-radius: 13px;
+
             font-size: 18px;
           }
 
@@ -1720,40 +1596,33 @@ const StudentDashboard = () => {
             color: #9333ea;
           }
 
-          .ns-summary-icon.teal {
-            background: #ecfeff;
-            color: #0891b2;
-          }
-
           .ns-summary-card > div:last-child {
             min-width: 0;
           }
 
           .ns-summary-card span {
             display: block;
+
             color: #64748b;
+
             font-size: 11px;
             font-weight: 700;
           }
 
           .ns-summary-card strong {
             display: block;
+
             margin-top: 3px;
+
             color: #0f172a;
+
             font-size: 23px;
             line-height: 1.1;
           }
 
-          .ns-login-last {
-            display: block;
-            margin-top: 5px;
-            color: #94a3b8;
-            font-size: 9px;
-            line-height: 1.35;
-            font-weight: 500;
-          }
-
-          /* SECTIONS */
+          /* ================================================
+             SECTIONS
+          ================================================= */
 
           .ns-dashboard-section {
             margin-bottom: 24px;
@@ -1782,8 +1651,11 @@ const StudentDashboard = () => {
 
           .ns-section-kicker {
             display: block;
+
             margin-bottom: 5px;
+
             color: #2563eb;
+
             font-size: 11px;
             font-weight: 800;
             letter-spacing: .08em;
@@ -1792,14 +1664,20 @@ const StudentDashboard = () => {
 
           .ns-section-heading h2 {
             margin: 0;
+
             color: #0f172a;
+
             font-size: 22px;
           }
 
           .ns-section-heading p {
             max-width: 760px;
-            margin: 6px 0 0;
+
+            margin:
+              6px 0 0;
+
             color: #64748b;
+
             font-size: 13px;
             line-height: 1.6;
           }
@@ -1822,20 +1700,26 @@ const StudentDashboard = () => {
             font-weight: 800;
           }
 
-          /* BENEFITS */
+          /* ================================================
+             BENEFITS
+          ================================================= */
 
           .ns-benefit-grid {
             display: grid;
             grid-template-columns:
               repeat(4, minmax(0, 1fr));
+
             gap: 14px;
           }
 
           .ns-benefit-card {
             min-width: 0;
+
             padding: 18px;
+
             border: 1px solid #e2e8f0;
             border-radius: 14px;
+
             background: #f8fafc;
           }
 
@@ -1858,18 +1742,24 @@ const StudentDashboard = () => {
 
           .ns-benefit-card h3 {
             margin: 0 0 7px;
+
             color: #0f172a;
+
             font-size: 14px;
           }
 
           .ns-benefit-card p {
             margin: 0;
+
             color: #64748b;
+
             font-size: 12px;
             line-height: 1.6;
           }
 
-          /* COURSES */
+          /* ================================================
+             COURSES
+          ================================================= */
 
           .ns-course-list {
             display: grid;
@@ -1878,9 +1768,12 @@ const StudentDashboard = () => {
 
           .ns-course-card {
             min-width: 0;
+
             padding: 20px;
+
             border: 1px solid #dbe3ef;
             border-radius: 16px;
+
             background:
               linear-gradient(
                 180deg,
@@ -1932,21 +1825,29 @@ const StudentDashboard = () => {
 
           .ns-course-card h3 {
             margin: 0;
+
             color: #0f172a;
+
             font-size: 18px;
           }
 
           .ns-course-card-top p {
             max-width: 750px;
-            margin: 6px 0 0;
+
+            margin:
+              6px 0 0;
+
             color: #64748b;
+
             font-size: 12px;
             line-height: 1.55;
           }
 
           .ns-course-percent {
             flex-shrink: 0;
+
             color: #2563eb;
+
             font-size: 20px;
             font-weight: 800;
           }
@@ -1956,7 +1857,8 @@ const StudentDashboard = () => {
             justify-content: space-between;
             gap: 10px;
 
-            margin: 16px 0 7px;
+            margin:
+              16px 0 7px;
 
             color: #64748b;
 
@@ -1971,11 +1873,13 @@ const StudentDashboard = () => {
             overflow: hidden;
 
             border-radius: 999px;
+
             background: #e2e8f0;
           }
 
           .ns-progress-fill {
             height: 100%;
+
             border-radius: inherit;
 
             background:
@@ -1993,7 +1897,9 @@ const StudentDashboard = () => {
             display: grid;
             grid-template-columns:
               repeat(4, minmax(0, 1fr));
+
             gap: 9px;
+
             margin-top: 16px;
           }
 
@@ -2004,6 +1910,7 @@ const StudentDashboard = () => {
             gap: 9px;
 
             padding: 11px;
+
             border-radius: 10px;
           }
 
@@ -2041,7 +1948,9 @@ const StudentDashboard = () => {
             font-size: 9px;
           }
 
-          /* CERTIFICATION PROGRESS */
+          /* ================================================
+             CERTIFICATION PROGRESS
+          ================================================= */
 
           .ns-certification-progress {
             margin-top: 14px;
@@ -2070,13 +1979,17 @@ const StudentDashboard = () => {
             display: grid;
             grid-template-columns:
               repeat(4, minmax(0, 1fr));
+
             gap: 8px;
           }
 
           .ns-exam-status-grid div {
             min-width: 0;
+
             padding: 9px;
+
             border-radius: 8px;
+
             background: #ffffff;
           }
 
@@ -2092,8 +2005,10 @@ const StudentDashboard = () => {
 
           .ns-exam-status-grid strong {
             margin-top: 3px;
+
             overflow: hidden;
             color: #0f172a;
+
             font-size: 10px;
             text-overflow: ellipsis;
           }
@@ -2149,6 +2064,7 @@ const StudentDashboard = () => {
             display: flex;
             flex-wrap: wrap;
             gap: 9px;
+
             margin-top: 16px;
           }
 
@@ -2172,6 +2088,7 @@ const StudentDashboard = () => {
 
           .ns-primary-action {
             border: 1px solid #2563eb;
+
             background: #2563eb;
             color: #ffffff;
           }
@@ -2183,11 +2100,14 @@ const StudentDashboard = () => {
 
           .ns-secondary-action {
             border: 1px solid #cbd5e1;
+
             background: #ffffff;
             color: #334155;
           }
 
-          /* CERTIFICATION BANNER */
+          /* ================================================
+             CERTIFICATION BANNER
+          ================================================= */
 
           .ns-certification-banner {
             display: grid;
@@ -2259,7 +2179,8 @@ const StudentDashboard = () => {
           .ns-certification-copy > p {
             max-width: 700px;
 
-            margin: 10px 0 0;
+            margin:
+              10px 0 0;
 
             color: #cbd5e1;
 
@@ -2271,7 +2192,9 @@ const StudentDashboard = () => {
             display: grid;
             grid-template-columns:
               repeat(2, minmax(0, 1fr));
+
             gap: 9px 18px;
+
             margin-top: 19px;
           }
 
@@ -2282,6 +2205,7 @@ const StudentDashboard = () => {
             gap: 8px;
 
             color: #e2e8f0;
+
             font-size: 11px;
           }
 
@@ -2346,8 +2270,11 @@ const StudentDashboard = () => {
           }
 
           .ns-certification-visual h3 {
-            margin: 0 0 13px;
+            margin:
+              0 0 13px;
+
             color: #ffffff;
+
             font-size: 15px;
           }
 
@@ -2382,12 +2309,15 @@ const StudentDashboard = () => {
             font-weight: 800;
           }
 
-          /* BOTTOM INFO */
+          /* ================================================
+             BOTTOM INFO
+          ================================================= */
 
           .ns-dashboard-bottom-grid {
             display: grid;
             grid-template-columns:
               repeat(2, minmax(0, 1fr));
+
             gap: 14px;
           }
 
@@ -2426,17 +2356,22 @@ const StudentDashboard = () => {
 
           .ns-info-panel h3 {
             margin: 0 0 5px;
+
             font-size: 13px;
           }
 
           .ns-info-panel p {
             margin: 0;
+
             color: #64748b;
+
             font-size: 11px;
             line-height: 1.6;
           }
 
-          /* EMPTY / LOADING */
+          /* ================================================
+             EMPTY / LOADING / ERROR
+          ================================================= */
 
           .ns-dashboard-loading,
           .ns-empty-learning {
@@ -2445,23 +2380,28 @@ const StudentDashboard = () => {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+
             text-align: center;
           }
 
           .ns-loading-spinner {
             width: 34px;
             height: 34px;
+
             margin-bottom: 12px;
+
             border: 3px solid #dbeafe;
             border-top-color: #2563eb;
             border-radius: 50%;
+
             animation:
               ns-spin .8s linear infinite;
           }
 
           @keyframes ns-spin {
             to {
-              transform: rotate(360deg);
+              transform:
+                rotate(360deg);
             }
           }
 
@@ -2489,13 +2429,18 @@ const StudentDashboard = () => {
 
           .ns-empty-learning h3 {
             margin: 0;
+
             font-size: 16px;
           }
 
           .ns-empty-learning p {
             max-width: 450px;
-            margin: 7px 0 15px;
+
+            margin:
+              7px 0 15px;
+
             color: #64748b;
+
             font-size: 12px;
             line-height: 1.6;
           }
@@ -2532,31 +2477,39 @@ const StudentDashboard = () => {
             font-size: 12px;
           }
 
-          /* LAPTOP / TABLET */
+          /* ================================================
+             LAPTOP / TABLET
+          ================================================= */
 
-          @media (max-width: 1250px) {
-            .ns-summary-grid {
-              grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-            }
-          }
-
-          @media (max-width: 1180px) {
+          @media (
+            max-width: 1180px
+          ) {
+            .ns-summary-grid,
             .ns-benefit-grid {
               grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(
+                  2,
+                  minmax(0, 1fr)
+                );
             }
 
             .ns-course-access-grid {
               grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(
+                  2,
+                  minmax(0, 1fr)
+                );
             }
           }
 
-          @media (max-width: 900px) {
+          @media (
+            max-width: 900px
+          ) {
             .ns-dashboard-hero {
-              align-items: flex-start;
-              flex-direction: column;
+              align-items:
+                flex-start;
+              flex-direction:
+                column;
             }
 
             .ns-dashboard-profile {
@@ -2564,13 +2517,9 @@ const StudentDashboard = () => {
               max-width: 420px;
             }
 
-            .ns-summary-grid {
-              grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-            }
-
             .ns-certification-banner {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
 
             .ns-certification-visual {
@@ -2578,9 +2527,13 @@ const StudentDashboard = () => {
             }
           }
 
-          /* MOBILE */
+          /* ================================================
+             MOBILE
+          ================================================= */
 
-          @media (max-width: 640px) {
+          @media (
+            max-width: 640px
+          ) {
             .ns-student-dashboard {
               width: 100%;
               max-width: 100vw;
@@ -2589,8 +2542,10 @@ const StudentDashboard = () => {
 
             .ns-dashboard-hero {
               gap: 20px;
+
               margin-bottom: 15px;
               padding: 20px 16px;
+
               border-radius: 14px;
             }
 
@@ -2604,7 +2559,8 @@ const StudentDashboard = () => {
 
             .ns-dashboard-hero-actions {
               display: grid;
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
               width: 100%;
             }
 
@@ -2624,15 +2580,23 @@ const StudentDashboard = () => {
 
             .ns-summary-grid {
               grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(
+                  2,
+                  minmax(0, 1fr)
+                );
+
               gap: 9px;
+
               margin-bottom: 15px;
             }
 
             .ns-summary-card {
-              align-items: flex-start;
-              flex-direction: column;
+              align-items:
+                flex-start;
+              flex-direction:
+                column;
               gap: 9px;
+
               padding: 13px;
             }
 
@@ -2650,12 +2614,15 @@ const StudentDashboard = () => {
             .ns-dashboard-section {
               margin-bottom: 15px;
               padding: 16px;
+
               border-radius: 14px;
             }
 
             .ns-heading-row {
-              align-items: flex-start;
-              flex-direction: column;
+              align-items:
+                flex-start;
+              flex-direction:
+                column;
               gap: 5px;
             }
 
@@ -2664,7 +2631,8 @@ const StudentDashboard = () => {
             }
 
             .ns-benefit-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
               gap: 9px;
             }
 
@@ -2689,17 +2657,22 @@ const StudentDashboard = () => {
             }
 
             .ns-course-access-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
 
             .ns-exam-status-grid {
               grid-template-columns:
-                repeat(2, minmax(0, 1fr));
+                repeat(
+                  2,
+                  minmax(0, 1fr)
+                );
             }
 
             .ns-course-actions {
               display: grid;
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
 
             .ns-primary-action,
@@ -2709,8 +2682,10 @@ const StudentDashboard = () => {
 
             .ns-certification-banner {
               gap: 20px;
+
               margin-bottom: 15px;
               padding: 20px 16px;
+
               border-radius: 14px;
             }
 
@@ -2719,7 +2694,8 @@ const StudentDashboard = () => {
             }
 
             .ns-certification-benefits {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
 
             .ns-certification-copy > button {
@@ -2727,20 +2703,27 @@ const StudentDashboard = () => {
             }
 
             .ns-dashboard-bottom-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
               gap: 9px;
             }
           }
 
-          /* SMALL MOBILE */
+          /* ================================================
+             SMALL MOBILE
+          ================================================= */
 
-          @media (max-width: 390px) {
+          @media (
+            max-width: 390px
+          ) {
             .ns-summary-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
 
             .ns-dashboard-hero {
-              padding: 18px 14px;
+              padding:
+                18px 14px;
             }
 
             .ns-dashboard-section {
@@ -2752,20 +2735,24 @@ const StudentDashboard = () => {
             }
 
             .ns-course-card-top {
-              flex-direction: column;
+              flex-direction:
+                column;
             }
 
             .ns-course-percent {
-              align-self: flex-start;
+              align-self:
+                flex-start;
             }
 
             .ns-progress-header {
-              flex-direction: column;
+              flex-direction:
+                column;
               gap: 3px;
             }
 
             .ns-exam-status-grid {
-              grid-template-columns: 1fr;
+              grid-template-columns:
+                1fr;
             }
           }
         `}
