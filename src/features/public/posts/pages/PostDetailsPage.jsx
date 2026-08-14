@@ -567,7 +567,18 @@ export default function PostDetailsPage() {
   const socialShareUrl =
     `https://nagariksuraksha-social-share.beraarnab.workers.dev/?slug=${encodeURIComponent(
       post.slug,
-    )}&v=3`;
+    )}&title=${encodeURIComponent(
+      post.title ||
+        "NagarikSuraksha",
+    )}&description=${encodeURIComponent(
+      post.excerpt ||
+        seo.description ||
+        "Legal learning, law notes and legal awareness.",
+    )}&image=${encodeURIComponent(
+      seo.image ||
+        desktopImage ||
+        "",
+    )}&v=4`;
 
   const shareTitle =
     post.title ||
