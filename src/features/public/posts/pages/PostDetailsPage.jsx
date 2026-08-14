@@ -559,19 +559,15 @@ export default function PostDetailsPage() {
       ? post.tags
       : [];
 
-	const shareUrl =
-  `${SEO_CONFIG.siteUrl}/#/posts/${post.slug}`;
-
-  const firebaseProjectId =
-    import.meta.env
-      .VITE_FIREBASE_PROJECT_ID;
+  const shareUrl =
+    `${SEO_CONFIG.siteUrl}/posts/${encodeURIComponent(
+      post.slug,
+    )}`;
 
   const socialShareUrl =
-    firebaseProjectId
-      ? `https://asia-south1-${firebaseProjectId}.cloudfunctions.net/socialShare?slug=${encodeURIComponent(
-          post.slug,
-        )}`
-      : shareUrl;
+    `https://nagariksuraksha-social-share.beraarnab.workers.dev/?slug=${encodeURIComponent(
+      post.slug,
+    )}`;
 
   const shareTitle =
     post.title ||
