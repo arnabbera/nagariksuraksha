@@ -578,7 +578,7 @@ export default function PostDetailsPage() {
       seo.image ||
         desktopImage ||
         "",
-    )}&v=4`;
+    )}&v=5`;
 
   const shareTitle =
     post.title ||
