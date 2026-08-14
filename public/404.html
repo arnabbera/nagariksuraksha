@@ -19,33 +19,20 @@
 
     <script>
       (function () {
-        var requestedPath =
-          window.location.pathname;
-
-        var requestedSearch =
-          window.location.search;
-
-        var requestedHash =
+        var requestedUrl =
+          window.location.pathname +
+          window.location.search +
           window.location.hash;
 
-        var requestedUrl =
-          requestedPath +
-          requestedSearch +
-          requestedHash;
-
-        try {
-          sessionStorage.setItem(
-            "spa_redirect",
+        var redirectUrl =
+          "/?spa_redirect=" +
+          encodeURIComponent(
             requestedUrl
           );
-        } catch (error) {
-          console.error(
-            "Unable to preserve SPA route:",
-            error
-          );
-        }
 
-        window.location.replace("/");
+        window.location.replace(
+          redirectUrl
+        );
       })();
     </script>
   </head>
