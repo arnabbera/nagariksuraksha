@@ -17,33 +17,38 @@ import {
 
 const restoreSpaRoute = () => {
   try {
-    const redirectUrl =
+    const searchParams =
+      new URLSearchParams(
+        window.location.search,
+      );
+
+    const queryRedirect =
+      searchParams.get(
+        "spa_redirect",
+      );
+
+    const storedRedirect =
       sessionStorage.getItem(
         "spa_redirect",
       );
 
-    if (!redirectUrl) {
-      return;
-    }
+    const redirectUrl =
+      queryRedirect ||
+      storedRedirect;
 
     sessionStorage.removeItem(
       "spa_redirect",
     );
 
-    const currentUrl =
-      window.location.pathname +
-      window.location.search +
-      window.location.hash;
-
-    if (
-      redirectUrl !== currentUrl
-    ) {
-      window.history.replaceState(
-        null,
-        "",
-        redirectUrl,
-      );
+    if (!redirectUrl) {
+      return;
     }
+
+    window.history.replaceState(
+      null,
+      "",
+      redirectUrl,
+    );
   } catch (error) {
     console.error(
       "Unable to restore SPA route:",
