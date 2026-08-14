@@ -227,12 +227,144 @@ export const updatePost =
       );
     }
 
+    const {
+      desktopImageUrl =
+        existing
+          ?.media
+          ?.desktop
+          ?.url ||
+        "",
+
+      desktopImagePublicId =
+        existing
+          ?.media
+          ?.desktop
+          ?.publicId ||
+        "",
+
+      desktopImageStoragePath =
+        existing
+          ?.media
+          ?.desktop
+          ?.storagePath ||
+        "",
+
+      desktopImageFileName =
+        existing
+          ?.media
+          ?.desktop
+          ?.fileName ||
+        "",
+
+      desktopImageSize =
+        existing
+          ?.media
+          ?.desktop
+          ?.size ||
+        0,
+
+      mobileImageUrl =
+        existing
+          ?.media
+          ?.mobile
+          ?.url ||
+        "",
+
+      mobileImagePublicId =
+        existing
+          ?.media
+          ?.mobile
+          ?.publicId ||
+        "",
+
+      mobileImageStoragePath =
+        existing
+          ?.media
+          ?.mobile
+          ?.storagePath ||
+        "",
+
+      mobileImageFileName =
+        existing
+          ?.media
+          ?.mobile
+          ?.fileName ||
+        "",
+
+      mobileImageSize =
+        existing
+          ?.media
+          ?.mobile
+          ?.size ||
+        0,
+
+      ...postFields
+    } = postData;
+
+    const media = {
+      desktop: {
+        ...existing
+          ?.media
+          ?.desktop,
+
+        url:
+          desktopImageUrl,
+
+        publicId:
+          desktopImagePublicId,
+
+        storagePath:
+          desktopImageStoragePath,
+
+        fileName:
+          desktopImageFileName,
+
+        size:
+          Number(
+            desktopImageSize ||
+              0,
+          ),
+
+        ratio:
+          "16:9",
+      },
+
+      mobile: {
+        ...existing
+          ?.media
+          ?.mobile,
+
+        url:
+          mobileImageUrl,
+
+        publicId:
+          mobileImagePublicId,
+
+        storagePath:
+          mobileImageStoragePath,
+
+        fileName:
+          mobileImageFileName,
+
+        size:
+          Number(
+            mobileImageSize ||
+              0,
+          ),
+
+        ratio:
+          "9:16",
+      },
+    };
+
     return postRepository.update(
       postId,
       {
-        ...postData,
+        ...postFields,
 
         slug,
+
+        media,
 
         updatedBy,
 
