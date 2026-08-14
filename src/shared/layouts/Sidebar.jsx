@@ -118,6 +118,12 @@ const menuGroups = [
         path: "/admin/chapters",
         icon: FaBookOpen,
       },
+	  
+	  {
+      label: "Law Notes",
+      path: "/admin/law-notes",
+      icon: FaFileAlt,
+	},
 
       {
         label: "Resources",

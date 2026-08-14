@@ -6,17 +6,46 @@ import {
   where,
 } from "firebase/firestore";
 
-import { COLLECTIONS } from "../constants/firestoreCollections";
-import { COURSE_STATUS } from "../constants/enums";
-import { BaseRepository } from "./BaseRepository";
+import {
+  COLLECTIONS,
+} from "../constants/firestoreCollections";
+
+import {
+  COURSE_STATUS,
+} from "../constants/enums";
+
+import {
+  BaseRepository,
+} from "./BaseRepository";
 
 class CourseRepository extends BaseRepository {
   constructor() {
-    super(COLLECTIONS.COURSES);
+    super(
+      COLLECTIONS.COURSES,
+    );
   }
 
   // =========================================================
   // PUBLISHED COURSES
+  // =========================================================
+  //
+  // IMPORTANT:
+  //
+  // Keep the Firestore query deliberately simple.
+  //
+  // Public/student security rules require:
+  //
+  // status == published
+  // deleted == false
+  //
+  // Additional catalogue filtering and ordering are performed
+  // in JavaScript. This avoids unnecessary Firestore composite
+  // indexes for combinations such as:
+  //
+  // status + deleted + featured + order
+  // status + deleted + courseType + order
+  // status + deleted + accessType + order
+  //
   // =========================================================
 
   async getPublishedCourses({
@@ -25,65 +54,21 @@ class CourseRepository extends BaseRepository {
     accessType = null,
     pageSize = 20,
   } = {}) {
-    const constraints = [
-      where(
-        "status",
-        "==",
-        COURSE_STATUS.PUBLISHED,
-      ),
-
-      where(
-        "deleted",
-        "==",
-        false,
-      ),
-    ];
-
-    if (featured !== null) {
-      constraints.push(
-        where(
-          "featured",
-          "==",
-          featured,
-        ),
-      );
-    }
-
-    if (courseType) {
-      constraints.push(
-        where(
-          "courseType",
-          "==",
-          courseType,
-        ),
-      );
-    }
-
-    if (accessType) {
-      constraints.push(
-        where(
-          "accessType",
-          "==",
-          accessType,
-        ),
-      );
-    }
-
-    constraints.push(
-      orderBy(
-        "order",
-        "asc",
-      ),
-    );
-
-    constraints.push(
-      limit(pageSize),
-    );
-
     const coursesQuery =
       query(
         this.collection(),
-        ...constraints,
+
+        where(
+          "status",
+          "==",
+          COURSE_STATUS.PUBLISHED,
+        ),
+
+        where(
+          "deleted",
+          "==",
+          false,
+        ),
       );
 
     const snapshot =
@@ -91,17 +76,137 @@ class CourseRepository extends BaseRepository {
         coursesQuery,
       );
 
-    return snapshot.docs.map(
-      (courseDocument) => ({
-        ...courseDocument.data(),
+    let courses =
+      snapshot.docs.map(
+        (
+          courseDocument,
+        ) => ({
+          ...courseDocument.data(),
 
-        /*
-         * Always put the actual Firestore
-         * document ID last so a stored "id"
-         * field cannot overwrite it.
-         */
-        id: courseDocument.id,
-      }),
+          /*
+           * Always use the real Firestore
+           * document ID.
+           */
+          id:
+            courseDocument.id,
+        }),
+      );
+
+    // =======================================================
+    // FEATURED FILTER
+    // =======================================================
+
+    if (
+      featured !==
+      null
+    ) {
+      courses =
+        courses.filter(
+          (
+            course,
+          ) =>
+            Boolean(
+              course.featured,
+            ) ===
+            Boolean(
+              featured,
+            ),
+        );
+    }
+
+    // =======================================================
+    // COURSE TYPE FILTER
+    // =======================================================
+
+    if (
+      courseType
+    ) {
+      courses =
+        courses.filter(
+          (
+            course,
+          ) =>
+            course.courseType ===
+            courseType,
+        );
+    }
+
+    // =======================================================
+    // ACCESS TYPE FILTER
+    // =======================================================
+
+    if (
+      accessType
+    ) {
+      courses =
+        courses.filter(
+          (
+            course,
+          ) =>
+            course.accessType ===
+            accessType,
+        );
+    }
+
+    // =======================================================
+    // SORT
+    // =======================================================
+
+    courses.sort(
+      (
+        first,
+        second,
+      ) => {
+        const firstOrder =
+          Number(
+            first.order ||
+              0,
+          );
+
+        const secondOrder =
+          Number(
+            second.order ||
+              0,
+          );
+
+        if (
+          firstOrder !==
+          secondOrder
+        ) {
+          return (
+            firstOrder -
+            secondOrder
+          );
+        }
+
+        return String(
+          first.title ||
+            "",
+        ).localeCompare(
+          String(
+            second.title ||
+              "",
+          ),
+        );
+      },
+    );
+
+    // =======================================================
+    // PAGE SIZE
+    // =======================================================
+
+    const safePageSize =
+      Math.max(
+        1,
+        Number(
+          pageSize ||
+            20,
+        ),
+      );
+
+    return courses.slice(
+      0,
+      safePageSize,
     );
   }
 
@@ -112,34 +217,31 @@ class CourseRepository extends BaseRepository {
   async getFeaturedCourses(
     pageSize = 6,
   ) {
-    return this.getPublishedCourses({
-      featured: true,
-      pageSize,
-    });
+    return this.getPublishedCourses(
+      {
+        featured: true,
+        pageSize,
+      },
+    );
   }
 
   // =========================================================
   // COURSE BY SLUG
   // =========================================================
+  //
+  // Public/student course lookup.
+  //
+  // Keep the published/deleted constraints in the query
+  // because Firestore security rules are not filters.
+  //
+  // =========================================================
 
-  async getBySlug(slug) {
+  async getBySlug(
+    slug,
+  ) {
     if (!slug) {
       return null;
     }
-
-    /*
-     * IMPORTANT:
-     *
-     * Student Firestore rules allow students
-     * to read only courses whose status is:
-     *
-     * published
-     *
-     * Firestore security rules are not filters.
-     *
-     * Therefore the query itself must constrain
-     * the result to published courses.
-     */
 
     const coursesQuery =
       query(
@@ -171,7 +273,9 @@ class CourseRepository extends BaseRepository {
         coursesQuery,
       );
 
-    if (snapshot.empty) {
+    if (
+      snapshot.empty
+    ) {
       return null;
     }
 
@@ -181,15 +285,17 @@ class CourseRepository extends BaseRepository {
     return {
       ...courseDocument.data(),
 
-      /*
-       * Actual Firestore document ID must win.
-       */
-      id: courseDocument.id,
+      id:
+        courseDocument.id,
     };
   }
 
   // =========================================================
   // DRAFT COURSES
+  // =========================================================
+  //
+  // This remains an admin operation.
+  //
   // =========================================================
 
   async getDraftCourses(
@@ -216,7 +322,9 @@ class CourseRepository extends BaseRepository {
           "desc",
         ),
 
-        limit(pageSize),
+        limit(
+          pageSize,
+        ),
       );
 
     const snapshot =
@@ -225,10 +333,13 @@ class CourseRepository extends BaseRepository {
       );
 
     return snapshot.docs.map(
-      (courseDocument) => ({
+      (
+        courseDocument,
+      ) => ({
         ...courseDocument.data(),
 
-        id: courseDocument.id,
+        id:
+          courseDocument.id,
       }),
     );
   }
@@ -237,7 +348,9 @@ class CourseRepository extends BaseRepository {
   // PUBLISH COURSE
   // =========================================================
 
-  async publish(id) {
+  async publish(
+    id,
+  ) {
     return this.update(
       id,
       {
@@ -254,7 +367,9 @@ class CourseRepository extends BaseRepository {
   // ARCHIVE COURSE
   // =========================================================
 
-  async archive(id) {
+  async archive(
+    id,
+  ) {
     return this.update(
       id,
       {
@@ -275,7 +390,10 @@ class CourseRepository extends BaseRepository {
     return this.update(
       id,
       {
-        featured,
+        featured:
+          Boolean(
+            featured,
+          ),
       },
     );
   }
@@ -298,17 +416,20 @@ class CourseRepository extends BaseRepository {
         totals: {
           semesters:
             Number(
-              semesters || 0,
+              semesters ||
+                0,
             ),
 
           subjects:
             Number(
-              subjects || 0,
+              subjects ||
+                0,
             ),
 
           chapters:
             Number(
-              chapters || 0,
+              chapters ||
+                0,
             ),
         },
       },
@@ -352,9 +473,11 @@ class CourseRepository extends BaseRepository {
       {
         deleted: false,
 
-        deletedAt: null,
+        deletedAt:
+          null,
 
-        deletedBy: null,
+        deletedBy:
+          null,
 
         updatedBy,
       },

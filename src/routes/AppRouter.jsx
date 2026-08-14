@@ -20,6 +20,14 @@ import CourseBookManagement from "../features/admin/books/pages/CourseBookManage
 
 import ExamManagement from "../features/admin/exams/pages/ExamManagement";
 
+import PostManagement from "../features/admin/posts/pages/PostManagement";
+
+// =========================================================
+// LAW NOTES - ADMIN
+// =========================================================
+
+import LawNoteManagement from "../features/admin/law-notes/pages/LawNoteManagement";
+
 // =========================================================
 // AUTH
 // =========================================================
@@ -33,6 +41,22 @@ import LoginPage from "../features/auth/pages/LoginPage";
 import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPage";
 
 import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCourseDetailsPage";
+
+// =========================================================
+// PUBLIC LAW NOTES
+// =========================================================
+
+import LawNotesIndexPage from "../features/public/lawNotes/pages/LawNotesIndexPage";
+
+import LawNoteDetailsPage from "../features/public/lawNotes/pages/LawNoteDetailsPage";
+
+// =========================================================
+// PUBLIC POSTS
+// =========================================================
+
+import PostsPage from "../features/public/posts/pages/PostsPage";
+
+import PostDetailsPage from "../features/public/posts/pages/PostDetailsPage";
 
 // =========================================================
 // STUDENT
@@ -89,6 +113,42 @@ export default function AppRouter() {
         path="/courses/:courseSlug"
         element={
           <PublicCourseDetailsPage />
+        }
+      />
+
+      {/* =====================================================
+          PUBLIC LAW NOTES
+      ====================================================== */}
+
+      <Route
+        path="/law-notes"
+        element={
+          <LawNotesIndexPage />
+        }
+      />
+
+      <Route
+        path="/law-notes/:noteSlug"
+        element={
+          <LawNoteDetailsPage />
+        }
+      />
+
+      {/* =====================================================
+          PUBLIC POSTS
+      ====================================================== */}
+
+      <Route
+        path="/posts"
+        element={
+          <PostsPage />
+        }
+      />
+
+      <Route
+        path="/posts/:postSlug"
+        element={
+          <PostDetailsPage />
         }
       />
 
@@ -194,6 +254,19 @@ export default function AppRouter() {
           element={<HomepageCms />}
         />
 
+        {/* =================================================
+            CONTENT MANAGER - POSTS
+        ================================================== */}
+
+        <Route
+          path="posts"
+          element={<PostManagement />}
+        />
+
+        {/* =================================================
+            COURSES
+        ================================================== */}
+
         <Route
           path="courses"
           element={<Courses />}
@@ -204,6 +277,19 @@ export default function AppRouter() {
           element={<ChapterManagement />}
         />
 
+        {/* =================================================
+            LAW NOTES
+        ================================================== */}
+
+        <Route
+          path="law-notes"
+          element={<LawNoteManagement />}
+        />
+
+        {/* =================================================
+            RESOURCES / BOOKS
+        ================================================== */}
+
         <Route
           path="resources"
           element={<ResourceManagement />}
@@ -213,6 +299,10 @@ export default function AppRouter() {
           path="books"
           element={<CourseBookManagement />}
         />
+
+        {/* =================================================
+            EXAMINATION
+        ================================================== */}
 
         <Route
           path="exams"
