@@ -564,6 +564,17 @@ export default function PostDetailsPage() {
       seo.canonical,
     );
 
+  const firebaseProjectId =
+    import.meta.env
+      .VITE_FIREBASE_PROJECT_ID;
+
+  const socialShareUrl =
+    firebaseProjectId
+      ? `https://asia-south1-${firebaseProjectId}.cloudfunctions.net/socialShare?slug=${encodeURIComponent(
+          post.slug,
+        )}`
+      : shareUrl;
+
   const shareTitle =
     post.title ||
     "NagarikSuraksha";
@@ -605,7 +616,7 @@ export default function PostDetailsPage() {
     () => {
       openShareWindow(
         `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          shareUrl,
+          socialShareUrl,
         )}`,
       );
     };
@@ -619,7 +630,7 @@ export default function PostDetailsPage() {
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(
           text,
         )}&url=${encodeURIComponent(
-          shareUrl,
+          socialShareUrl,
         )}`,
       );
     };
@@ -700,6 +711,7 @@ export default function PostDetailsPage() {
           seo.keywords
         }
         image={seo.image}
+        type="article"
         robots={
           seo.robots
         }
