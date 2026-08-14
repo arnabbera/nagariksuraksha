@@ -7,7 +7,11 @@ import {
 import {
   FaArrowLeft,
   FaCalendarAlt,
+  FaFacebookF,
+  FaInstagram,
+  FaLink,
   FaNewspaper,
+  FaShareAlt,
   FaTag,
 } from "react-icons/fa";
 
@@ -153,6 +157,73 @@ const renderContent = (
     );
 };
 
+
+const copyToClipboard = async (
+  value,
+) => {
+  if (!value) {
+    return false;
+  }
+
+  try {
+    if (
+      navigator?.clipboard &&
+      window?.isSecureContext
+    ) {
+      await navigator.clipboard.writeText(
+        value,
+      );
+
+      return true;
+    }
+
+    const textarea =
+      document.createElement(
+        "textarea",
+      );
+
+    textarea.value =
+      value;
+
+    textarea.setAttribute(
+      "readonly",
+      "",
+    );
+
+    textarea.style.position =
+      "fixed";
+
+    textarea.style.opacity =
+      "0";
+
+    document.body.appendChild(
+      textarea,
+    );
+
+    textarea.select();
+
+    const copied =
+      document.execCommand(
+        "copy",
+      );
+
+    document.body.removeChild(
+      textarea,
+    );
+
+    return copied;
+  } catch (
+    copyError
+  ) {
+    console.error(
+      "Unable to copy post link:",
+      copyError,
+    );
+
+    return false;
+  }
+};
+
 // =========================================================
 // PAGE
 // =========================================================
@@ -175,6 +246,11 @@ export default function PostDetailsPage() {
   const [
     error,
     setError,
+  ] = useState("");
+
+  const [
+    shareMessage,
+    setShareMessage,
   ] = useState("");
 
   useEffect(() => {
@@ -483,6 +559,133 @@ export default function PostDetailsPage() {
       ? post.tags
       : [];
 
+  const shareUrl =
+    absoluteUrl(
+      seo.canonical,
+    );
+
+  const shareTitle =
+    post.title ||
+    "NagarikSuraksha";
+
+  const shareText =
+    post.excerpt ||
+    seo.description ||
+    post.title ||
+    "Read this post on NagarikSuraksha.";
+
+  const showShareMessage = (
+    message,
+  ) => {
+    setShareMessage(
+      message,
+    );
+
+    window.setTimeout(
+      () => {
+        setShareMessage(
+          "",
+        );
+      },
+      2500,
+    );
+  };
+
+  const openShareWindow = (
+    url,
+  ) => {
+    window.open(
+      url,
+      "_blank",
+      "noopener,noreferrer,width=760,height=650",
+    );
+  };
+
+  const shareOnFacebook =
+    () => {
+      openShareWindow(
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          shareUrl,
+        )}`,
+      );
+    };
+
+  const shareOnX =
+    () => {
+      const text =
+        `${shareTitle} - NagarikSuraksha`;
+
+      openShareWindow(
+        `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          text,
+        )}&url=${encodeURIComponent(
+          shareUrl,
+        )}`,
+      );
+    };
+
+  const shareNative =
+    async () => {
+      if (
+        typeof navigator !==
+          "undefined" &&
+        typeof navigator.share ===
+          "function"
+      ) {
+        try {
+          await navigator.share({
+            title:
+              shareTitle,
+            text:
+              shareText,
+            url:
+              shareUrl,
+          });
+
+          return;
+        } catch (
+          shareError
+        ) {
+          if (
+            shareError?.name ===
+            "AbortError"
+          ) {
+            return;
+          }
+
+          console.error(
+            "Native sharing failed:",
+            shareError,
+          );
+        }
+      }
+
+      const copied =
+        await copyToClipboard(
+          shareUrl,
+        );
+
+      showShareMessage(
+        copied
+          ? "Post link copied. Open Instagram and paste/share the link."
+          : "Unable to open sharing. Please copy the browser URL manually.",
+      );
+    };
+
+  const copyPostLink =
+    async () => {
+      const copied =
+        await copyToClipboard(
+          shareUrl,
+        );
+
+      showShareMessage(
+        copied
+          ? "Post link copied."
+          : "Unable to copy the post link.",
+      );
+    };
+
   return (
     <>
       <SEO
@@ -557,6 +760,25 @@ export default function PostDetailsPage() {
               </p>
             )}
 
+            <ShareBar
+              onFacebook={
+                shareOnFacebook
+              }
+              onX={
+                shareOnX
+              }
+              onNativeShare={
+                shareNative
+              }
+              onCopy={
+                copyPostLink
+              }
+              message={
+                shareMessage
+              }
+              tone="hero"
+            />
+
             <Link
               to="/posts"
               className="ns-post-detail-back"
@@ -628,6 +850,26 @@ export default function PostDetailsPage() {
                   </div>
                 </div>
               )}
+
+              <div className="ns-post-detail-share-footer">
+                <ShareBar
+                  onFacebook={
+                    shareOnFacebook
+                  }
+                  onX={
+                    shareOnX
+                  }
+                  onNativeShare={
+                    shareNative
+                  }
+                  onCopy={
+                    copyPostLink
+                  }
+                  message={
+                    shareMessage
+                  }
+                />
+              </div>
             </article>
 
             <aside className="ns-post-detail-sidebar">
@@ -657,6 +899,100 @@ export default function PostDetailsPage() {
 
       <Footer />
     </>
+  );
+}
+
+
+// =========================================================
+// SHARE BAR
+// =========================================================
+
+function ShareBar({
+  onFacebook,
+  onX,
+  onNativeShare,
+  onCopy,
+  message = "",
+  tone = "",
+}) {
+  return (
+    <div
+      className={`ns-post-share ${
+        tone === "hero"
+          ? "hero"
+          : ""
+      }`}
+    >
+      <div className="ns-post-share-heading">
+        <FaShareAlt />
+
+        <span>
+          Share this post
+        </span>
+      </div>
+
+      <div className="ns-post-share-actions">
+        <button
+          type="button"
+          className="facebook"
+          onClick={
+            onFacebook
+          }
+          aria-label="Share this post on Facebook"
+        >
+          <FaFacebookF />
+          Facebook
+        </button>
+
+        <button
+          type="button"
+          className="x"
+          onClick={
+            onX
+          }
+          aria-label="Share this post on X"
+        >
+          <span className="ns-x-icon">
+            X
+          </span>
+          X
+        </button>
+
+        <button
+          type="button"
+          className="instagram"
+          onClick={
+            onNativeShare
+          }
+          aria-label="Share this post using Instagram or another installed app"
+        >
+          <FaInstagram />
+          Instagram / Share
+        </button>
+
+        <button
+          type="button"
+          className="copy"
+          onClick={
+            onCopy
+          }
+          aria-label="Copy post link"
+        >
+          <FaLink />
+          Copy Link
+        </button>
+      </div>
+
+      {message && (
+        <div
+          className="ns-post-share-message"
+          role="status"
+          aria-live="polite"
+        >
+          {message}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -948,6 +1284,142 @@ function PostDetailStyles() {
           font-weight: 800;
         }
 
+        .ns-post-share {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .ns-post-share.hero {
+          margin-top: 22px;
+        }
+
+        .ns-post-share-heading {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          color: #0f172a;
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        .ns-post-share.hero
+        .ns-post-share-heading {
+          color: #dbeafe;
+        }
+
+        .ns-post-share-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .ns-post-share-actions button {
+          display: inline-flex;
+          min-height: 38px;
+          align-items: center;
+          justify-content: center;
+          gap: 7px;
+          padding: 0 13px;
+          border: 1px solid transparent;
+          border-radius: 9px;
+          cursor: pointer;
+          font-family: inherit;
+          font-size: 10px;
+          font-weight: 800;
+          transition:
+            transform .18s ease,
+            opacity .18s ease,
+            box-shadow .18s ease;
+        }
+
+        .ns-post-share-actions button:hover {
+          transform: translateY(-1px);
+          box-shadow:
+            0 6px 15px rgba(15,23,42,.12);
+        }
+
+        .ns-post-share-actions button:active {
+          transform: translateY(0);
+        }
+
+        .ns-post-share-actions
+        button.facebook {
+          background: #1877f2;
+          color: #ffffff;
+        }
+
+        .ns-post-share-actions
+        button.x {
+          background: #000000;
+          color: #ffffff;
+        }
+
+        .ns-post-share-actions
+        button.instagram {
+          background:
+            linear-gradient(
+              135deg,
+              #833ab4,
+              #e1306c,
+              #f77737
+            );
+          color: #ffffff;
+        }
+
+        .ns-post-share-actions
+        button.copy {
+          border-color: #cbd5e1;
+          background: #ffffff;
+          color: #334155;
+        }
+
+        .ns-post-share.hero
+        .ns-post-share-actions
+        button.copy {
+          border-color:
+            rgba(255,255,255,.35);
+          background:
+            rgba(255,255,255,.12);
+          color: #ffffff;
+        }
+
+        .ns-x-icon {
+          display: inline-flex;
+          width: 14px;
+          height: 14px;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          font-weight: 900;
+          line-height: 1;
+        }
+
+        .ns-post-share-message {
+          width: fit-content;
+          max-width: 100%;
+          padding: 7px 10px;
+          border-radius: 7px;
+          background: #ecfdf5;
+          color: #047857;
+          font-size: 10px;
+          font-weight: 700;
+          line-height: 1.4;
+        }
+
+        .ns-post-share.hero
+        .ns-post-share-message {
+          background:
+            rgba(255,255,255,.14);
+          color: #ffffff;
+        }
+
+        .ns-post-detail-share-footer {
+          padding: 0 34px 34px;
+          border-top: 1px solid #f1f5f9;
+          padding-top: 25px;
+        }
+
         @media (max-width: 900px) {
           .ns-post-detail-layout {
             grid-template-columns: 1fr;
@@ -986,6 +1458,24 @@ function PostDetailStyles() {
 
           .ns-post-detail-tags {
             padding: 0 21px 24px;
+          }
+
+          .ns-post-detail-share-footer {
+            padding:
+              22px 21px 24px;
+          }
+
+          .ns-post-share-actions {
+            display: grid;
+            grid-template-columns:
+              repeat(
+                2,
+                minmax(0,1fr)
+              );
+          }
+
+          .ns-post-share-actions button {
+            width: 100%;
           }
         }
       `}

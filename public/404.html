@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="robots"
+      content="noindex"
+    />
+
+    <title>
+      NagarikSuraksha
+    </title>
+
+    <script>
+      (function () {
+        var requestedPath =
+          window.location.pathname;
+
+        var requestedSearch =
+          window.location.search;
+
+        var requestedHash =
+          window.location.hash;
+
+        var requestedUrl =
+          requestedPath +
+          requestedSearch +
+          requestedHash;
+
+        try {
+          sessionStorage.setItem(
+            "spa_redirect",
+            requestedUrl
+          );
+        } catch (error) {
+          console.error(
+            "Unable to preserve SPA route:",
+            error
+          );
+        }
+
+        window.location.replace("/");
+      })();
+    </script>
+  </head>
+
+  <body>
+    <p>
+      Redirecting to NagarikSuraksha...
+    </p>
+  </body>
+</html>
