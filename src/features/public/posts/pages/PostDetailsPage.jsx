@@ -559,10 +559,8 @@ export default function PostDetailsPage() {
       ? post.tags
       : [];
 
-  const shareUrl =
-    absoluteUrl(
-      seo.canonical,
-    );
+	const shareUrl =
+  `${SEO_CONFIG.siteUrl}/#/posts/${post.slug}`;
 
   const shareTitle =
     post.title ||
