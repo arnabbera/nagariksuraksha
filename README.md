@@ -15,16 +15,18 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
-## Social sharing function
+## Social sharing worker
 
-Facebook and X use the Firebase HTTPS function in `functions/index.js` so social crawlers receive post-specific Open Graph metadata before the React application loads.
+Facebook and X use the free Cloudflare Worker in `worker/social-share.js` so social crawlers receive post-specific Open Graph metadata before the React application loads.
 
-Deploy it after selecting the NagarikSuraksha Firebase project:
+Deploy it after signing in to Cloudflare:
 
 ```bash
-npm --prefix functions install
-firebase deploy --only functions:socialShare
+npx wrangler login
+npx wrangler secret put FIREBASE_API_KEY
+npx wrangler deploy
 ```
 
-The frontend derives the function URL from `VITE_FIREBASE_PROJECT_ID`. The function is deployed in `asia-south1` and reads published posts from the Firestore `posts` collection.
+When Wrangler asks for `FIREBASE_API_KEY`, paste the existing NagarikSuraksha Firebase Web API key. After deployment, set `VITE_SOCIAL_SHARE_BASE_URL` to the public Worker URL and rebuild the website.
 
+The Worker reads only published posts from the existing Firestore `posts` collection and redirects human visitors to the canonical NagarikSuraksha post.

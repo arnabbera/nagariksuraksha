@@ -562,13 +562,18 @@ export default function PostDetailsPage() {
 	const shareUrl =
   `${SEO_CONFIG.siteUrl}/#/posts/${post.slug}`;
 
-  const firebaseProjectId =
-    import.meta.env
-      .VITE_FIREBASE_PROJECT_ID;
+  const socialShareBaseUrl =
+    String(
+      import.meta.env
+        .VITE_SOCIAL_SHARE_BASE_URL ||
+        "",
+    )
+      .trim()
+      .replace(/\\\/$/, "");
 
   const socialShareUrl =
-    firebaseProjectId
-      ? `https://asia-south1-${firebaseProjectId}.cloudfunctions.net/socialShare?slug=${encodeURIComponent(
+    socialShareBaseUrl
+      ? `${socialShareBaseUrl}?slug=${encodeURIComponent(
           post.slug,
         )}`
       : shareUrl;

@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nagariksuraksha-social-share",
+  "main": "worker/social-share.js",
+  "compatibility_date": "2026-08-14",
+  "workers_dev": true,
+  "vars": {
+    "FIREBASE_PROJECT_ID": "nagariksuraksha-60adb",
+    "SITE_URL": "https://www.nagariksuraksha.com"
+  }
+}
