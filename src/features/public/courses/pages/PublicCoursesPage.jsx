@@ -39,9 +39,12 @@ import {
 const getCourseImage = (
   course,
 ) =>
+  course?.thumbnailUrl ||
+  course?.desktopImageUrl ||
+  course?.imageUrl ||
   course?.media?.thumbnailUrl ||
-  course?.media?.imageUrl ||
   course?.media?.desktopImageUrl ||
+  course?.media?.imageUrl ||
   "";
 
 const getCourseUrl = (
