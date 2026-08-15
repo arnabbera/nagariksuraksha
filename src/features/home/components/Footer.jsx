@@ -1,244 +1,54 @@
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
-  FaYoutube,
-  FaLinkedinIn,
-  FaInstagram,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaBalanceScale,
+  FaBalanceScale, FaEnvelope, FaFacebookF, FaInstagram,
+  FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaYoutube,
 } from "react-icons/fa";
+
+const practiceAreas = ["Civil Law", "Criminal Law", "Property Law", "Consumer Law", "Cyber Law", "Family Law", "Banking & SARFAESI", "Legal Documentation"];
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 text-slate-300">
-      {/* Top Footer */}
-
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Company */}
-
-          <div>
-            <div className="mb-5 flex items-center gap-3">
-              <FaBalanceScale
-                size={34}
-                className="text-yellow-400"
-              />
-
-              <div>
-                <h2 className="text-2xl font-bold text-white">
-                  NagarikSuraksha
-                </h2>
-
-                <p className="text-sm text-slate-400">
-                  Legal Learning & Consultancy
-                </p>
-              </div>
-            </div>
-
-            <p className="leading-7 text-slate-400">
-              Empowering citizens through legal awareness,
-              professional legal services and structured
-              legal education.
-            </p>
-
-            <div className="mt-6 flex gap-4">
-              <a
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-blue-600"
-              >
-                <FaFacebookF />
-              </a>
-
-              <a
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-red-600"
-              >
-                <FaYoutube />
-              </a>
-
-              <a
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-sky-600"
-              >
-                <FaLinkedinIn />
-              </a>
-
-              <a
-                href="#"
-                className="rounded-lg bg-slate-800 p-3 transition hover:bg-pink-600"
-              >
-                <FaInstagram />
-              </a>
-            </div>
+    <footer className="ns-footer">
+      <div className="ns-footer-container ns-footer-grid">
+        <section className="ns-footer-about">
+          <div className="ns-footer-brand">
+            <FaBalanceScale />
+            <div><h2>NagarikSuraksha</h2><p>Legal Learning & Consultancy</p></div>
           </div>
-
-          {/* Quick Links */}
-
-          <div>
-            <h3 className="mb-5 text-xl font-semibold text-white">
-              Quick Links
-            </h3>
-
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="hover:text-blue-400"
-                >
-                  Home
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/about"
-                  className="hover:text-blue-400"
-                >
-                  About Us
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-blue-400"
-                >
-                  Legal Services
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/learning"
-                  className="hover:text-blue-400"
-                >
-                  LL.B Learning
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/videos"
-                  className="hover:text-blue-400"
-                >
-                  Videos
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-blue-400"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          <p className="ns-footer-description">Empowering citizens through legal awareness, professional legal services and structured legal education.</p>
+          <div className="ns-footer-socials">
+            <a href="#" aria-label="NagarikSuraksha on Facebook"><FaFacebookF /></a>
+            <a href="#" aria-label="NagarikSuraksha on YouTube"><FaYoutube /></a>
+            <a href="#" aria-label="NagarikSuraksha on LinkedIn"><FaLinkedinIn /></a>
+            <a href="#" aria-label="NagarikSuraksha on Instagram"><FaInstagram /></a>
           </div>
+        </section>
 
-          {/* Practice Areas */}
+        <section><h3>Quick Links</h3><ul className="ns-footer-links">
+          <li><Link to="/">Home</Link></li><li><Link to="/about">About Us</Link></li>
+          <li><Link to="/">Legal Services</Link></li><li><Link to="/learning">LL.B Learning</Link></li>
+          <li><Link to="/videos">Videos</Link></li><li><Link to="/contact">Contact</Link></li>
+        </ul></section>
 
-          <div>
-            <h3 className="mb-5 text-xl font-semibold text-white">
-              Practice Areas
-            </h3>
+        <section><h3>Practice Areas</h3><ul className="ns-footer-links">{practiceAreas.map((area) => <li key={area}>{area}</li>)}</ul></section>
 
-            <ul className="space-y-3">
-              <li>Civil Law</li>
-              <li>Criminal Law</li>
-              <li>Property Law</li>
-              <li>Consumer Law</li>
-              <li>Cyber Law</li>
-              <li>Family Law</li>
-              <li>Banking & SARFAESI</li>
-              <li>Legal Documentation</li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-
-          <div>
-            <h3 className="mb-5 text-xl font-semibold text-white">
-              Contact
-            </h3>
-
-            <div className="space-y-5">
-              <div className="flex gap-4">
-                <FaPhoneAlt className="mt-1 text-blue-400" />
-
-                <div>
-                  <p className="text-sm text-slate-500">
-                    Phone
-                  </p>
-
-                  <p>+91 98300 15487</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <FaEnvelope className="mt-1 text-blue-400" />
-
-                <div>
-                  <p className="text-sm text-slate-500">
-                    Email
-                  </p>
-
-                  <p>beraarnab@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <FaMapMarkerAlt className="mt-1 text-blue-400" />
-
-                <div>
-                  <p className="text-sm text-slate-500">
-                    Office
-                  </p>
-
-                  <p>Kolkata, West Bengal, India</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <section><h3>Contact</h3><div className="ns-footer-contact">
+          <div><FaPhoneAlt /><span><small>Phone</small><a href="tel:+919830015487">+91 98300 15487</a></span></div>
+          <div><FaEnvelope /><span><small>Email</small><a href="mailto:beraarnab@gmail.com">beraarnab@gmail.com</a></span></div>
+          <div><FaMapMarkerAlt /><span><small>Office</small><p>Kolkata, West Bengal, India</p></span></div>
+        </div></section>
       </div>
 
-      {/* Bottom Footer */}
+      <div className="ns-footer-bottom"><div className="ns-footer-container">
+        <p>© {year} NagarikSuraksha. All Rights Reserved.</p>
+        <nav><Link to="/privacy-policy">Privacy Policy</Link><Link to="/terms">Terms & Conditions</Link><Link to="/disclaimer">Disclaimer</Link></nav>
+      </div></div>
 
-      <div className="border-t border-slate-800">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-slate-500 md:flex-row">
-          <p>
-            © {year} NagarikSuraksha. All Rights Reserved.
-          </p>
-
-          <div className="flex gap-6">
-            <Link
-              to="/privacy-policy"
-              className="hover:text-blue-400"
-            >
-              Privacy Policy
-            </Link>
-
-            <Link
-              to="/terms"
-              className="hover:text-blue-400"
-            >
-              Terms & Conditions
-            </Link>
-
-            <Link
-              to="/disclaimer"
-              className="hover:text-blue-400"
-            >
-              Disclaimer
-            </Link>
-          </div>
-        </div>
-      </div>
+      <style>{`
+        .ns-footer,.ns-footer *{box-sizing:border-box}.ns-footer{width:100%;background:#020617;color:#cbd5e1}.ns-footer-container{width:min(100% - 40px,1280px);margin:0 auto}.ns-footer-grid{display:grid;grid-template-columns:1.35fr .8fr .9fr 1fr;gap:44px;padding-top:64px;padding-bottom:58px}.ns-footer h2,.ns-footer h3,.ns-footer p{margin-top:0}.ns-footer h2{margin-bottom:3px;color:#fff;font-size:24px}.ns-footer h3{margin-bottom:20px;color:#fff;font-size:18px}.ns-footer-brand{display:flex;align-items:center;gap:13px}.ns-footer-brand>svg{width:36px;height:36px;flex:none;color:#facc15}.ns-footer-brand p{margin:0;color:#94a3b8;font-size:12px}.ns-footer-description{max-width:360px;margin:20px 0 0;color:#94a3b8;line-height:1.75}.ns-footer-socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.ns-footer-socials a{display:inline-flex;width:42px;height:42px;align-items:center;justify-content:center;border-radius:9px;background:#1e293b;color:#fff;transition:.2s}.ns-footer-socials a:hover{transform:translateY(-2px);background:#2563eb}.ns-footer-links{margin:0;padding:0;list-style:none}.ns-footer-links li{margin-bottom:12px;color:#94a3b8;line-height:1.45}.ns-footer a{color:inherit;text-decoration:none}.ns-footer-links a:hover,.ns-footer-bottom a:hover,.ns-footer-contact a:hover{color:#60a5fa}.ns-footer-contact{display:flex;flex-direction:column;gap:21px}.ns-footer-contact>div{display:flex;align-items:flex-start;gap:12px}.ns-footer-contact>div>svg{flex:none;margin-top:4px;color:#60a5fa}.ns-footer-contact span{min-width:0}.ns-footer-contact small{display:block;margin-bottom:4px;color:#64748b}.ns-footer-contact p,.ns-footer-contact a{display:block;margin:0;color:#cbd5e1;overflow-wrap:anywhere}.ns-footer-bottom{border-top:1px solid #1e293b}.ns-footer-bottom>.ns-footer-container{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:22px;padding-bottom:22px;color:#64748b;font-size:13px}.ns-footer-bottom p{margin:0}.ns-footer-bottom nav{display:flex;flex-wrap:wrap;gap:24px}@media(max-width:950px){.ns-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.ns-footer-container{width:min(100% - 28px,1280px)}.ns-footer-grid{grid-template-columns:1fr;gap:34px;padding-top:48px;padding-bottom:42px}.ns-footer-bottom>.ns-footer-container{flex-direction:column;text-align:center}.ns-footer-bottom nav{justify-content:center;gap:15px 22px}}
+      `}</style>
     </footer>
   );
 };
