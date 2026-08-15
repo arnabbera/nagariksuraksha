@@ -1563,6 +1563,7 @@ export default function CourseDetails() {
 
           .ns-certification-section {
             margin-bottom: 24px;
+            scroll-margin-top: 104px;
           }
 
           .ns-certification-card {
