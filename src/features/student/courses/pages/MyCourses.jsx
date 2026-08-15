@@ -120,7 +120,7 @@ export default function MyCourses() {
     });
   }, [courses, searchText]);
 
-  const enrolledCount =
+  const assignedCount =
     enrollments.filter(
       (enrollment) =>
         enrollment &&
@@ -155,13 +155,13 @@ export default function MyCourses() {
       );
     } catch (enrollError) {
       console.error(
-        "Unable to enroll:",
+        "Unable to add course:",
         enrollError,
       );
 
       setError(
         enrollError?.message ||
-          "Unable to enroll in this course.",
+          "Unable to add this course to your assigned courses.",
       );
     } finally {
       setEnrollingCourseId("");
@@ -181,7 +181,7 @@ export default function MyCourses() {
     <div>
       <PageHeader
         title="My Courses"
-        description={`${enrolledCount} enrolled course(s). Explore NagarikSuraksha learning programmes and continue where you left off.`}
+        description={`${assignedCount} assigned course(s). Explore NagarikSuraksha learning programmes and continue where you left off.`}
         breadcrumbs={[
           "Student",
           "My Courses",
