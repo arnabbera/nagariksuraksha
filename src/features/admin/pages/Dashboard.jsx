@@ -29,6 +29,8 @@ const Dashboard = () => {
   const [stats, setStats] = useState({
     students: 0,
     courses: 0,
+    chapters: 0,
+    certifications: 0,
     articles: 0,
     videos: 0,
     legalServices: 0,
@@ -84,6 +86,16 @@ const Dashboard = () => {
         <Card>
           <h4>Courses</h4>
           <h1>{stats.courses}</h1>
+        </Card>
+
+        <Card>
+          <h4>Chapters</h4>
+          <h1>{stats.chapters}</h1>
+        </Card>
+
+        <Card>
+          <h4>Certifications</h4>
+          <h1>{stats.certifications}</h1>
         </Card>
 
         <Card>
