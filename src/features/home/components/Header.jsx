@@ -44,7 +44,7 @@ const Header = () => {
 
   const dropdownStyle = {
     position: "absolute",
-    top: "calc(100% + 10px)",
+    top: "100%",
     left: 0,
     background: "#fff",
     minWidth: "240px",
