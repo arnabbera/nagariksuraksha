@@ -1,29 +1,68 @@
-import { FaUsers, FaBookOpen, FaGraduationCap, FaBalanceScale } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import {
+  FaBookOpen,
+  FaCertificate,
+  FaListOl,
+  FaUsers,
+} from "react-icons/fa";
 
-const stats = [
-  {
-    icon: <FaUsers size={38} />,
-    value: "1000+",
-    label: "Registered Students",
-  },
-  {
-    icon: <FaBookOpen size={38} />,
-    value: "500+",
-    label: "Legal Articles",
-  },
-  {
-    icon: <FaGraduationCap size={38} />,
-    value: "100+",
-    label: "Video Lessons",
-  },
-  {
-    icon: <FaBalanceScale size={38} />,
-    value: "20+",
-    label: "Practice Areas",
-  },
-];
+import { getHomepageStatistics } from "../../../services/homepageStatsService";
+
+const initialStatistics = {
+  students: null,
+  courses: null,
+  chapters: null,
+  certifications: null,
+};
+
+const formatCount = (value, loading) => {
+  if (loading) return "…";
+  return Number.isFinite(value) ? value.toLocaleString("en-IN") : "—";
+};
 
 const StatsSection = () => {
+  const [statistics, setStatistics] = useState(initialStatistics);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+
+    getHomepageStatistics()
+      .then((result) => {
+        if (active) setStatistics(result);
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const stats = [
+    {
+      icon: <FaUsers size={38} />,
+      value: statistics.students,
+      label: "Registered Students",
+    },
+    {
+      icon: <FaBookOpen size={38} />,
+      value: statistics.courses,
+      label: "Courses",
+    },
+    {
+      icon: <FaListOl size={38} />,
+      value: statistics.chapters,
+      label: "Chapters",
+    },
+    {
+      icon: <FaCertificate size={38} />,
+      value: statistics.certifications,
+      label: "Certifications",
+    },
+  ];
+
   return (
     <section
       style={{
@@ -39,12 +78,7 @@ const StatsSection = () => {
           textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            fontSize: "42px",
-            marginBottom: "15px",
-          }}
-        >
+        <h2 style={{ fontSize: "42px", marginBottom: "15px" }}>
           NagarikSuraksha in Numbers
         </h2>
 
@@ -57,8 +91,7 @@ const StatsSection = () => {
             fontSize: "18px",
           }}
         >
-          Our mission is to make legal knowledge accessible, affordable and
-          practical for every citizen.
+          Live figures from the NagarikSuraksha learning platform.
         </p>
 
         <div
@@ -67,6 +100,7 @@ const StatsSection = () => {
             gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
             gap: "30px",
           }}
+          aria-busy={loading}
         >
           {stats.map((item) => (
             <div
@@ -96,7 +130,7 @@ const StatsSection = () => {
                   color: "#ffffff",
                 }}
               >
-                {item.value}
+                {formatCount(item.value, loading)}
               </h2>
 
               <p
