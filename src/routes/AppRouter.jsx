@@ -42,6 +42,8 @@ import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPag
 
 import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCourseDetailsPage";
 
+import LegalServiceDetailsPage from "../features/public/services/pages/LegalServiceDetailsPage";
+
 // =========================================================
 // PUBLIC LAW NOTES
 // =========================================================
@@ -113,6 +115,17 @@ export default function AppRouter() {
         path="/courses/:courseSlug"
         element={
           <PublicCourseDetailsPage />
+        }
+      />
+
+      {/* =====================================================
+          PUBLIC LEGAL SERVICES
+      ====================================================== */}
+
+      <Route
+        path="/services/:serviceSlug"
+        element={
+          <LegalServiceDetailsPage />
         }
       />
 
