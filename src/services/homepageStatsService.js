@@ -47,7 +47,7 @@ const resolveCount = async (counter) => {
   }
 };
 
-export const getHomepageStatistics = async () => {
+const loadHomepageStatistics = async () => {
   const [students, courses, chapters, certifications] =
     await Promise.all([
       resolveCount(getStudentCount),
@@ -78,6 +78,17 @@ export const getHomepageStatistics = async () => {
     chapters,
     certifications,
   };
+};
+
+
+let statisticsRequest = null;
+
+export const getHomepageStatistics = () => {
+  if (!statisticsRequest) {
+    statisticsRequest = loadHomepageStatistics();
+  }
+
+  return statisticsRequest;
 };
 
 export default getHomepageStatistics;
