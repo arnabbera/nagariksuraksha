@@ -1,87 +1,50 @@
 import {
-  collection,
   doc,
-  getCountFromServer,
   getDoc,
-  query,
-  where,
 } from "firebase/firestore";
 
-import { COURSE_STATUS } from "../constants/enums";
 import { COLLECTIONS } from "../constants/firestoreCollections";
 import { db } from "../firebase/firebase";
 
-const getCount = async (source) => {
-  const snapshot = await getCountFromServer(source);
-  return snapshot.data().count;
-};
-
-const getStudentCount = async () => {
-  try {
-    return await getCount(
-      query(
-        collection(db, COLLECTIONS.USERS),
-        where("role", "==", "student"),
-      ),
-    );
-  } catch (error) {
-    // The enrollment counter contains one entry for every student account
-    // and remains a safe fallback when public user-list access is restricted.
-    const counterSnapshot = await getDoc(
-      doc(db, COLLECTIONS.COUNTERS, "enrollments"),
-    );
-
-    if (!counterSnapshot.exists()) {
-      throw error;
-    }
-
-    return Number(counterSnapshot.data().currentValue || 0);
-  }
-};
-
-const resolveCount = async (counter) => {
-  try {
-    return await counter();
-  } catch (error) {
-    console.error("Unable to load a homepage statistic:", error);
-    return null;
-  }
+const normalizeCount = (value) => {
+  const count = Number(value);
+  return Number.isFinite(count) && count >= 0 ? count : null;
 };
 
 const loadHomepageStatistics = async () => {
-  const [students, courses, chapters, certifications] =
-    await Promise.all([
-      resolveCount(getStudentCount),
-      resolveCount(() =>
-        getCount(
-          query(
-            collection(db, COLLECTIONS.COURSES),
-            where("status", "==", COURSE_STATUS.PUBLISHED),
-            where("deleted", "==", false),
-          ),
-        ),
-      ),
-      resolveCount(() =>
-        getCount(
-          query(
-            collection(db, COLLECTIONS.COURSE_CHAPTERS),
-            where("published", "==", true),
-          ),
-        ),
-      ),
-      resolveCount(() =>
-        getCount(collection(db, COLLECTIONS.CERTIFICATES)),
-      ),
-    ]);
+  try {
+    const snapshot = await getDoc(
+      doc(db, COLLECTIONS.HOMEPAGE, "main"),
+    );
 
-  return {
-    students,
-    courses,
-    chapters,
-    certifications,
-  };
+    if (!snapshot.exists()) {
+      return {
+        students: null,
+        courses: null,
+        chapters: null,
+        certifications: null,
+      };
+    }
+
+    const statistics = snapshot.data().liveStatistics || {};
+
+    return {
+      students: normalizeCount(statistics.students),
+      courses: normalizeCount(statistics.courses),
+      chapters: normalizeCount(statistics.chapters),
+      certifications: normalizeCount(statistics.certifications),
+    };
+  } catch (error) {
+    console.error("Unable to load public homepage statistics:", error);
+
+    return {
+      students: null,
+      courses: null,
+      chapters: null,
+      certifications: null,
+    };
+  }
 };
-
 
 let statisticsRequest = null;
 
