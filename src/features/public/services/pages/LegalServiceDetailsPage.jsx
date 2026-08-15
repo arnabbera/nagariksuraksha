@@ -1,4 +1,4 @@
-import { FaArrowLeft, FaCheckCircle, FaFileAlt } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaFileAlt } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import Header from "../../../home/components/Header";
 import Footer from "../../../home/components/Footer";
@@ -20,7 +20,7 @@ export default function LegalServiceDetailsPage() {
         <div className="ns-service-card"><h2>Service Overview</h2><p>Receive practical guidance on the available remedies, required documents and appropriate legal process for your {service.title.toLowerCase()} matter.</p></div>
         <div className="ns-service-card"><h2><FaCheckCircle /> How We Can Assist</h2><ul>{service.assistance.map((item) => <li key={item}><FaCheckCircle />{item}</li>)}</ul></div>
         <div className="ns-service-card"><h2><FaFileAlt /> Documents to Keep Ready</h2><ul>{service.documents.map((item) => <li key={item}><FaFileAlt />{item}</li>)}</ul></div>
-      </article><aside><div className="ns-service-cta"><h2>Need Guidance?</h2><p>Share a brief summary and the available documents for an initial consultation.</p><Link to="/contact">Request a Consultation</Link></div><div className="ns-service-note"><strong>Important</strong><p>This page provides general information. Advice depends on the facts, documents and applicable law in each matter.</p></div></aside></div></section>
+      </article><aside><div className="ns-service-cta"><h2>Need Guidance?</h2><p>Share a brief summary and the available documents for an initial consultation.</p><Link to="/#legal-consultation">Request a Free Consultation <FaArrowRight /></Link></div><div className="ns-service-note"><strong>Important</strong><p>This page provides general information. Advice depends on the facts, documents and applicable law in each matter.</p></div></aside></div></section>
     </main>
     <Footer /><Styles />
   </>;
