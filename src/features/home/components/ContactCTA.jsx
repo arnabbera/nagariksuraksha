@@ -20,8 +20,10 @@ const ContactCTA = () => {
 
           <div className="ns-contact-cta-actions">
             <a
-              href="mailto:beraarnab@gmail.com?subject=Free%20Legal%20Consultation%20Request"
+              href="https://wa.me/919830015487?text=Hello%20NagarikSuraksha%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation."
               className="primary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Request Free Consultation <FaArrowRight />
             </a>
