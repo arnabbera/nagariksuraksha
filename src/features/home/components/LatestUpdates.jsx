@@ -31,8 +31,10 @@ const updates = [
 const LatestUpdates = () => {
   return (
     <section
+      id="legal-updates"
       style={{
         padding: "90px 20px",
+        scrollMarginTop: "88px",
         background: "#ffffff",
       }}
     >
@@ -75,7 +77,7 @@ const LatestUpdates = () => {
           </div>
 
           <Link
-            to="/legal-updates"
+            to="/posts"
             style={{
               textDecoration: "none",
               color: "#2563eb",
@@ -168,7 +170,7 @@ const LatestUpdates = () => {
                 </p>
 
                 <Link
-                  to="/legal-updates"
+                  to="/posts"
                   style={{
                     color: "#2563eb",
                     textDecoration: "none",
