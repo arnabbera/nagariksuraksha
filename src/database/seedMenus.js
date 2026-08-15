@@ -98,7 +98,7 @@ const publicMenuItems = [
   {
     id: "videos",
     label: "Videos",
-    path: "/videos",
+    path: "/#latest-videos",
     order: 6,
     enabled: true,
   },

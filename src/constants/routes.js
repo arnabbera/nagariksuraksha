@@ -21,7 +21,7 @@ export const ROUTES = Object.freeze({
 
   LEGAL_UPDATES: "/legal-updates",
 
-  VIDEOS: "/videos",
+  VIDEOS: "/#latest-videos",
 
   LEARNING: "/learning",
 
