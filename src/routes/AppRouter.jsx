@@ -50,6 +50,7 @@ import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCour
 import LegalServiceDetailsPage from "../features/public/services/pages/LegalServiceDetailsPage";
 
 import DisclaimerPage from "../features/public/legal/pages/DisclaimerPage";
+import PrivacyPolicyPage from "../features/public/legal/pages/PrivacyPolicyPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -148,6 +149,11 @@ export default function AppRouter() {
       <Route
         path="/disclaimer"
         element={<DisclaimerPage />}
+      />
+
+      <Route
+        path="/privacy-policy"
+        element={<PrivacyPolicyPage />}
       />
 
       {/* =====================================================
