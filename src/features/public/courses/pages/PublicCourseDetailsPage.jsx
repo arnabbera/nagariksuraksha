@@ -39,14 +39,19 @@ import {
 const getDesktopImage = (
   course,
 ) =>
+  course?.desktopImageUrl ||
+  course?.thumbnailUrl ||
+  course?.imageUrl ||
   course?.media?.desktopImageUrl ||
-  course?.media?.imageUrl ||
   course?.media?.thumbnailUrl ||
+  course?.media?.imageUrl ||
   "";
 
 const getMobileImage = (
   course,
 ) =>
+  course?.mobileImageUrl ||
+  course?.thumbnailUrl ||
   course?.media?.mobileImageUrl ||
   course?.media?.thumbnailUrl ||
   getDesktopImage(course);
