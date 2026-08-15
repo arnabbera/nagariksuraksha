@@ -41,7 +41,10 @@ const videos = [
 const VideosSection = () => {
   return (
     <section
+      id="latest-videos"
       style={{
+        scrollMarginTop:
+          "88px",
         padding:
           "90px 20px",
         background:
