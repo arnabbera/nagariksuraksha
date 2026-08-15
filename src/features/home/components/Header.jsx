@@ -228,45 +228,26 @@ const Header = () => {
 
               {learningOpen && (
                 <div style={dropdownStyle}>
-                  <button
-                    type="button"
-                    onClick={handleGoogleLogin}
-                    disabled={loginLoading}
-                    style={{
-                      ...dropdownLink,
-                      width: "100%",
-                      border: "none",
-                      background: "#fff",
-                      textAlign: "left",
-                      cursor: loginLoading
-                        ? "not-allowed"
-                        : "pointer",
-                    }}
+                  <Link
+                    to="/llb-courses"
+                    style={dropdownLink}
+                    onClick={closeMenu}
                   >
                     LL.B Learning
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={handleGoogleLogin}
-                    disabled={loginLoading}
-                    style={{
-                      ...dropdownLink,
-                      width: "100%",
-                      border: "none",
-                      background: "#fff",
-                      textAlign: "left",
-                      cursor: loginLoading
-                        ? "not-allowed"
-                        : "pointer",
-                    }}
-                  >
-                    Certification
-                  </button>
+                  </Link>
 
                   <Link
-                    to="/resources"
+                    to="/login"
                     style={dropdownLink}
+                    onClick={closeMenu}
+                  >
+                    Certification
+                  </Link>
+
+                  <Link
+                    to="/law-notes"
+                    style={dropdownLink}
+                    onClick={closeMenu}
                   >
                     Free Legal Resources
                   </Link>
@@ -435,24 +416,22 @@ const Header = () => {
 
               {learningOpen && (
                 <div className="ns-mobile-submenu">
-                  <button
-                    type="button"
-                    onClick={handleGoogleLogin}
-                    disabled={loginLoading}
+                  <Link
+                    to="/llb-courses"
+                    onClick={closeMenu}
                   >
                     LL.B Learning
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={handleGoogleLogin}
-                    disabled={loginLoading}
-                  >
-                    Certification
-                  </button>
+                  </Link>
 
                   <Link
-                    to="/resources"
+                    to="/login"
+                    onClick={closeMenu}
+                  >
+                    Certification
+                  </Link>
+
+                  <Link
+                    to="/law-notes"
                     onClick={closeMenu}
                   >
                     Free Legal Resources
