@@ -255,12 +255,18 @@ const Header = () => {
               )}
             </div>
 
-            <NavLink
-              to="/legal-updates"
-              style={navStyle}
+            <Link
+              to="/#legal-updates"
+              style={{
+                color: "#1e293b",
+                textDecoration: "none",
+                fontWeight: 600,
+                padding: "8px 0",
+                whiteSpace: "nowrap",
+              }}
             >
               Legal Updates
-            </NavLink>
+            </Link>
 
             <NavLink
               to="/videos"
@@ -441,7 +447,7 @@ const Header = () => {
             </div>
 
             <Link
-              to="/legal-updates"
+              to="/#legal-updates"
               onClick={closeMenu}
             >
               Legal Updates
