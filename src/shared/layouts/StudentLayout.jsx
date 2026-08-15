@@ -27,8 +27,8 @@ const menuItems = [
     icon: FaBook,
   },
   {
-    label: "Certificates",
-    path: "/student/certificates",
+    label: "Certification",
+    path: "/student/certification",
     icon: FaCertificate,
   },
   {
