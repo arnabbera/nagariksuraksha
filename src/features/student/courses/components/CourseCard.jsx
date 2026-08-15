@@ -3,6 +3,7 @@ import {
   FaCheckCircle,
   FaClock,
   FaGraduationCap,
+  FaLock,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -19,7 +20,16 @@ const CourseCard = ({
       enrollment?.progress?.percentage || 0,
     );
 
-  const enrolled = Boolean(enrollment);
+  const assigned =
+    Boolean(
+      enrollment &&
+        enrollment.status !== "cancelled" &&
+        !enrollment.deleted,
+    );
+
+  const certificationPaymentCompleted =
+    enrollment?.certification?.payment
+      ?.status === "paid";
 
   const thumbnail =
     course?.media?.thumbnailUrl ||
@@ -46,12 +56,37 @@ const CourseCard = ({
           </div>
         )}
 
-        {enrolled && (
-          <span className="ns-enrolled-badge">
-            <FaCheckCircle />
+        <div className="ns-course-status-badges">
+          <span
+            className={`ns-course-status-badge ${
+              assigned
+                ? "is-active"
+                : "is-inactive"
+            }`}
+          >
+            {assigned ? (
+              <FaCheckCircle />
+            ) : (
+              <FaLock />
+            )}
+            Assigned
+          </span>
+
+          <span
+            className={`ns-course-status-badge ${
+              certificationPaymentCompleted
+                ? "is-active"
+                : "is-inactive"
+            }`}
+          >
+            {certificationPaymentCompleted ? (
+              <FaCheckCircle />
+            ) : (
+              <FaLock />
+            )}
             Enrolled
           </span>
-        )}
+        </div>
       </div>
 
       <div className="ns-student-course-body">
@@ -74,7 +109,7 @@ const CourseCard = ({
           </span>
         </div>
 
-        {enrolled && (
+        {assigned && (
           <div className="ns-student-progress">
             <div className="ns-student-progress-heading">
               <span>Progress</span>
@@ -96,7 +131,7 @@ const CourseCard = ({
         )}
 
         <div className="ns-student-course-actions">
-          {enrolled ? (
+          {assigned ? (
             <button
               type="button"
               onClick={handleOpen}
@@ -124,8 +159,8 @@ const CourseCard = ({
                 }
               >
                 {enrolling
-                  ? "Enrolling..."
-                  : "Enroll"}
+                  ? "Adding..."
+                  : "Add to My Courses"}
               </button>
             </>
           )}
@@ -164,19 +199,39 @@ const CourseCard = ({
             font-size: 52px;
           }
 
-          .ns-enrolled-badge {
+          .ns-course-status-badges {
             position: absolute;
             top: 12px;
             right: 12px;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 7px;
+            max-width: calc(100% - 24px);
+          }
+
+          .ns-course-status-badge {
+            display: inline-flex;
             align-items: center;
             gap: 6px;
+            border: 1px solid transparent;
             border-radius: 999px;
-            background: #dcfce7;
-            color: #166534;
             padding: 7px 10px;
             font-size: 11px;
             font-weight: 800;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+          }
+
+          .ns-course-status-badge.is-active {
+            border-color: #86efac;
+            background: #dcfce7;
+            color: #166534;
+          }
+
+          .ns-course-status-badge.is-inactive {
+            border-color: #cbd5e1;
+            background: rgba(248, 250, 252, 0.96);
+            color: #64748b;
           }
 
           .ns-student-course-body {
@@ -276,6 +331,19 @@ const CourseCard = ({
           .ns-student-course-actions button:disabled {
             cursor: not-allowed;
             opacity: .6;
+          }
+
+          @media (max-width: 420px) {
+            .ns-course-status-badges {
+              left: 10px;
+              right: 10px;
+              justify-content: flex-end;
+            }
+
+            .ns-course-status-badge {
+              padding: 6px 8px;
+              font-size: 10px;
+            }
           }
         `}
       </style>
