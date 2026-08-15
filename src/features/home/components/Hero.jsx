@@ -70,18 +70,19 @@ const Hero = () => {
 
           <div className="ns-hero-actions">
             <Link
-              to="/services"
+              to="/#legal-consultation"
               className="ns-hero-primary"
             >
-              Get Legal Consultation
+              Free Legal Consultation
               <FaArrowRight />
             </Link>
 
             <Link
-              to="/learning"
+              to="/llb-courses"
               className="ns-hero-secondary"
             >
-              Start LL.B Learning
+              Start Free LL.B Learning
+              <FaArrowRight />
             </Link>
           </div>
 
