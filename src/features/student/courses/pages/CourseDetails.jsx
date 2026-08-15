@@ -910,7 +910,10 @@ export default function CourseDetails() {
       ====================================================== */}
 
       {certificationAvailable && (
-        <section className="ns-certification-section">
+        <section
+          id="certification-enrollment"
+          className="ns-certification-section"
+        >
           <div className="ns-certification-card">
             <div className="ns-certification-heading">
               <div className="ns-certification-icon">
@@ -982,7 +985,7 @@ export default function CourseDetails() {
                       handleCertificationEnroll
                     }
                   >
-                    Enroll for Certification
+                    Enrollment for Certification
                   </Button>
                 </div>
               )}
