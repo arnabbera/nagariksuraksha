@@ -1,6 +1,10 @@
 import { useState } from "react";
+import {
+  FaGoogle,
+  FaInfoCircle,
+  FaShieldAlt,
+} from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
 
 import {
   getUserRole,
@@ -40,24 +44,27 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-100 px-4">
-      <section className="w-full max-w-md rounded-3xl bg-white p-8 shadow-xl">
-        <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
+    <main className="student-login-page">
+      <section className="student-login-card">
+        <div className="student-login-brand" aria-hidden="true">
+          <FaShieldAlt />
+        </div>
+
+        <div className="student-login-heading">
+          <p className="student-login-eyebrow">
             NagarikSuraksha
           </p>
 
-          <h1 className="mt-3 text-3xl font-bold text-slate-950">
-            Student Login
-          </h1>
+          <h1>Student Login</h1>
 
-          <p className="mt-3 leading-7 text-slate-600">
-            Sign in using your Google account to access the learning portal.
+          <p>
+            Sign in securely with your Google account to access courses,
+            learning materials, mock tests and certificates.
           </p>
         </div>
 
         {error && (
-          <div className="mt-6 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-700">
+          <div className="student-login-error" role="alert">
             {error}
           </div>
         )}
@@ -66,18 +73,211 @@ export default function LoginPage() {
           type="button"
           onClick={handleGoogleLogin}
           disabled={isLoading}
-          className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl bg-blue-700 px-5 py-4 font-semibold text-white transition hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
+          className="student-login-google"
         >
           <FaGoogle />
 
           {isLoading ? "Signing in..." : "Continue with Google"}
         </button>
 
-        <p className="mt-6 text-center text-sm leading-6 text-slate-500">
-          The administrator uses the same login. The account
-          beraarnab@gmail.com will automatically open the Admin Dashboard.
+        <p className="student-login-role-note">
+          Students and administrators use the same secure sign-in. You will
+          automatically be directed to the correct dashboard.
         </p>
+
+        <aside className="student-login-disclaimers" aria-label="Important disclaimers">
+          <div className="student-login-disclaimer-title">
+            <FaInfoCircle />
+            <h2>Important Disclaimers</h2>
+          </div>
+
+          <ol>
+            <li>
+              NagarikSuraksha is an independent private educational portal. We
+              are not affiliated with, endorsed by, or connected to any
+              government agency or educational board.
+            </li>
+
+            <li>
+              The ₹99 fee covers access to course material PDFs, mock tests,
+              and an appreciation/completion certificate. It does not provide
+              an accredited academic degree, professional qualification, or
+              government licence.
+            </li>
+          </ol>
+        </aside>
       </section>
+
+      <style>{`
+        .student-login-page {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 40px 20px;
+          background:
+            radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 34%),
+            linear-gradient(145deg, #0f172a 0%, #173376 58%, #2563eb 100%);
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .student-login-card {
+          width: min(100%, 580px);
+          padding: 42px;
+          border: 1px solid rgba(255, 255, 255, 0.75);
+          border-radius: 24px;
+          background: rgba(255, 255, 255, 0.98);
+          box-shadow: 0 28px 70px rgba(15, 23, 42, 0.28);
+        }
+
+        .student-login-brand {
+          width: 62px;
+          height: 62px;
+          display: grid;
+          place-items: center;
+          margin: 0 auto 18px;
+          border-radius: 18px;
+          background: #dbeafe;
+          color: #2563eb;
+          font-size: 28px;
+        }
+
+        .student-login-heading {
+          text-align: center;
+        }
+
+        .student-login-eyebrow {
+          margin: 0;
+          color: #2563eb;
+          font-family: Arial, sans-serif;
+          font-size: 12px;
+          font-weight: 800;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+        }
+
+        .student-login-heading h1 {
+          margin: 10px 0 0;
+          color: #0f172a;
+          font-size: clamp(32px, 6vw, 44px);
+          line-height: 1.1;
+        }
+
+        .student-login-heading > p:last-child {
+          max-width: 460px;
+          margin: 14px auto 0;
+          color: #64748b;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          line-height: 1.65;
+        }
+
+        .student-login-error {
+          margin-top: 22px;
+          padding: 12px 14px;
+          border: 1px solid #fecaca;
+          border-radius: 12px;
+          background: #fef2f2;
+          color: #b91c1c;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+        }
+
+        .student-login-google {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          margin-top: 28px;
+          padding: 15px 20px;
+          border: 0;
+          border-radius: 12px;
+          background: #2563eb;
+          color: #ffffff;
+          cursor: pointer;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          box-shadow: 0 12px 24px rgba(37, 99, 235, 0.24);
+          transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .student-login-google:hover:not(:disabled) {
+          background: #1d4ed8;
+          transform: translateY(-1px);
+        }
+
+        .student-login-google:disabled {
+          cursor: not-allowed;
+          opacity: 0.65;
+        }
+
+        .student-login-role-note {
+          margin: 16px 0 0;
+          color: #64748b;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          line-height: 1.55;
+          text-align: center;
+        }
+
+        .student-login-disclaimers {
+          margin-top: 26px;
+          padding: 20px;
+          border: 1px solid #bfdbfe;
+          border-radius: 16px;
+          background: #eff6ff;
+        }
+
+        .student-login-disclaimer-title {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          color: #1d4ed8;
+        }
+
+        .student-login-disclaimer-title h2 {
+          margin: 0;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+        }
+
+        .student-login-disclaimers ol {
+          margin: 14px 0 0;
+          padding-left: 22px;
+          color: #334155;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+
+        .student-login-disclaimers li + li {
+          margin-top: 10px;
+        }
+
+        @media (max-width: 640px) {
+          .student-login-page {
+            align-items: flex-start;
+            padding: 22px 14px;
+          }
+
+          .student-login-card {
+            padding: 28px 20px;
+            border-radius: 18px;
+          }
+
+          .student-login-brand {
+            width: 54px;
+            height: 54px;
+            font-size: 24px;
+          }
+
+          .student-login-disclaimers {
+            padding: 16px;
+          }
+        }
+      `}</style>
     </main>
   );
 }
