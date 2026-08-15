@@ -13,7 +13,7 @@ const courses = [
     description:
       "Comprehensive LL.B learning portal with notes, videos, quizzes and progress tracking.",
     button: "Start Learning",
-    link: "/learning",
+    link: "/llb-courses",
     color: "#2563eb",
   },
   {
@@ -22,7 +22,7 @@ const courses = [
     description:
       "Complete assessments and earn professional digital certificates after successful completion.",
     button: "Get Certified",
-    link: "/certification",
+    link: "/login",
     color: "#16a34a",
   },
   {
@@ -31,7 +31,7 @@ const courses = [
     description:
       "Access free Bare Acts, important judgments, legal articles and study materials.",
     button: "Explore Resources",
-    link: "/resources",
+    link: "/law-notes",
     color: "#ea580c",
   },
 ];
