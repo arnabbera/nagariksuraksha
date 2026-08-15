@@ -275,7 +275,7 @@ const Header = () => {
             </NavLink>
 
             <NavLink
-              to="/contact"
+              to="/#legal-consultation"
               style={navStyle}
             >
               Contact
@@ -451,7 +451,7 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/contact"
+              to="/#legal-consultation"
               onClick={closeMenu}
             >
               Contact
