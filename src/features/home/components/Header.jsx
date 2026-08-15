@@ -261,7 +261,7 @@ const Header = () => {
             </Link>
 
             <NavLink
-              to="/videos"
+              to="/#latest-videos"
               style={navStyle}
             >
               Videos
@@ -437,7 +437,7 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/videos"
+              to="/#latest-videos"
               onClick={closeMenu}
             >
               Videos
