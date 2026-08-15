@@ -15,7 +15,7 @@ export const ROUTES = Object.freeze({
 
   ABOUT: "/about",
 
-  CONTACT: "/contact",
+  CONTACT: "/#legal-consultation",
 
   LEGAL_SERVICES: "/services",
 

@@ -105,7 +105,7 @@ const publicMenuItems = [
   {
     id: "contact",
     label: "Contact",
-    path: "/contact",
+    path: "/#legal-consultation",
     order: 7,
     enabled: true,
   },
