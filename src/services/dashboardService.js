@@ -29,7 +29,15 @@ export const savePublicHomepageStatistics = async (statistics) => {
   return liveStatistics;
 };
 
+export const refreshPublicHomepageStatistics = async () => {
+  const statistics =
+    await dashboardRepository.getPublicHomepageStatistics();
+
+  return savePublicHomepageStatistics(statistics);
+};
+
 export default {
   getDashboardStatistics,
   savePublicHomepageStatistics,
+  refreshPublicHomepageStatistics,
 };
