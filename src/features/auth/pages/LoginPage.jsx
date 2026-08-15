@@ -85,26 +85,51 @@ export default function LoginPage() {
           automatically be directed to the correct dashboard.
         </p>
 
-        <aside className="student-login-disclaimers" aria-label="Important disclaimers">
+        <aside
+          className="student-login-disclaimers"
+          aria-label="Terms and disclaimer"
+        >
           <div className="student-login-disclaimer-title">
             <FaInfoCircle />
-            <h2>Important Disclaimers</h2>
+            <h2>Terms &amp; Disclaimer</h2>
           </div>
 
-          <ol>
-            <li>
-              NagarikSuraksha is an independent private educational portal. We
-              are not affiliated with, endorsed by, or connected to any
-              government agency or educational board.
-            </li>
+          <div className="student-login-disclaimer-section">
+            <h3>1. Independent Entity Disclaimer</h3>
+            <p>
+              Nagarik Suraksha is an independent, private educational portal.
+              We are <strong>not</strong> affiliated with, endorsed by,
+              accredited by, or connected to any government agency,
+              university, or official educational board.
+            </p>
+          </div>
 
-            <li>
-              The ₹99 fee covers access to course material PDFs, mock tests,
-              and an appreciation/completion certificate. It does not provide
-              an accredited academic degree, professional qualification, or
-              government licence.
-            </li>
-          </ol>
+          <div className="student-login-disclaimer-section">
+            <h3>2. Free Course Access</h3>
+            <p>
+              Accessing and studying course content on this platform is
+              <strong> 100% free</strong>. There are no hidden fees or
+              mandatory charges required to access the learning materials.
+            </p>
+          </div>
+
+          <div className="student-login-disclaimer-section">
+            <h3>3. Optional Certification &amp; Fees</h3>
+            <p>
+              Obtaining a certificate is completely optional. The
+              <strong> ₹99 fee</strong> solely covers administrative costs,
+              access to downloadable course PDFs, practice mock tests, and a
+              digital Certificate of Completion.
+            </p>
+
+            <p className="student-login-important-notice">
+              <strong>Important Notice:</strong> The certificate issued by
+              Nagarik Suraksha is an appreciation/completion document for
+              personal learning only. It <strong>does not</strong> constitute
+              an accredited academic degree, official diploma, professional
+              licence, or government qualification.
+            </p>
+          </div>
         </aside>
       </section>
 
@@ -122,7 +147,7 @@ export default function LoginPage() {
         }
 
         .student-login-card {
-          width: min(100%, 580px);
+          width: min(100%, 680px);
           padding: 42px;
           border: 1px solid rgba(255, 255, 255, 0.75);
           border-radius: 24px;
@@ -243,17 +268,34 @@ export default function LoginPage() {
           font-size: 16px;
         }
 
-        .student-login-disclaimers ol {
-          margin: 14px 0 0;
-          padding-left: 22px;
+        .student-login-disclaimer-section {
+          margin-top: 16px;
+          padding-top: 16px;
+          border-top: 1px solid #bfdbfe;
           color: #334155;
           font-family: Arial, sans-serif;
-          font-size: 13px;
-          line-height: 1.6;
         }
 
-        .student-login-disclaimers li + li {
-          margin-top: 10px;
+        .student-login-disclaimer-section h3 {
+          margin: 0 0 7px;
+          color: #0f172a;
+          font-size: 14px;
+          line-height: 1.45;
+        }
+
+        .student-login-disclaimer-section p {
+          margin: 0;
+          font-size: 13px;
+          line-height: 1.65;
+        }
+
+        .student-login-important-notice {
+          margin-top: 12px !important;
+          padding: 12px 14px;
+          border-left: 4px solid #f59e0b;
+          border-radius: 8px;
+          background: #fffbeb;
+          color: #78350f;
         }
 
         @media (max-width: 640px) {
