@@ -473,7 +473,7 @@ const StudentDashboard = () => {
   const openCertificates =
     () => {
       navigate(
-        "/student/certificates",
+        "/student/certification",
       );
     };
 

@@ -277,8 +277,18 @@ export default function AppRouter() {
         />
 
         <Route
-          path="certificates"
+          path="certification"
           element={<StudentCertificatesPage />}
+        />
+
+        <Route
+          path="certificates"
+          element={
+            <Navigate
+              to="/student/certification"
+              replace
+            />
+          }
         />
 
         <Route
