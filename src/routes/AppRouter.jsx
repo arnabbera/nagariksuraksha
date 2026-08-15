@@ -49,6 +49,8 @@ import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCour
 
 import LegalServiceDetailsPage from "../features/public/services/pages/LegalServiceDetailsPage";
 
+import DisclaimerPage from "../features/public/legal/pages/DisclaimerPage";
+
 // =========================================================
 // PUBLIC LAW NOTES
 // =========================================================
@@ -137,6 +139,15 @@ export default function AppRouter() {
       <Route
         path="/about"
         element={<AboutPage />}
+      />
+
+      {/* =====================================================
+          PUBLIC LEGAL INFORMATION
+      ====================================================== */}
+
+      <Route
+        path="/disclaimer"
+        element={<DisclaimerPage />}
       />
 
       {/* =====================================================
