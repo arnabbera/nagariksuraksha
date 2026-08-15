@@ -36,6 +36,8 @@ class DashboardRepository {
     const [
       students,
       courses,
+      chapters,
+      certifications,
       articles,
       videos,
       legalServices,
@@ -47,7 +49,14 @@ class DashboardRepository {
 
       this.countDocuments(COLLECTIONS.COURSES, [
         where("status", "==", COURSE_STATUS.PUBLISHED),
+        where("deleted", "==", false),
       ]),
+
+      this.countDocuments(COLLECTIONS.COURSE_CHAPTERS, [
+        where("published", "==", true),
+      ]),
+
+      this.countDocuments(COLLECTIONS.CERTIFICATES),
 
       this.countDocuments(COLLECTIONS.CONTENT, [
         where(
@@ -100,6 +109,8 @@ class DashboardRepository {
     return {
       students,
       courses,
+      chapters,
+      certifications,
       articles,
       videos,
       legalServices,
