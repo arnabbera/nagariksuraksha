@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 
 import { loginWithGoogle } from "../../../services/authService";
+import { LEGAL_SERVICES } from "../../public/services/data/legalServices";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -177,25 +178,16 @@ const Header = () => {
 
               {servicesOpen && (
                 <div style={dropdownStyle}>
-                  {[
-                    "Civil Law",
-                    "Criminal Law",
-                    "Consumer Law",
-                    "Property Law",
-                    "Cyber Law",
-                    "Banking & SARFAESI",
-                    "Family Law",
-                    "Constitutional Law",
-                  ].map((service) => (
+                  {LEGAL_SERVICES.map((service) => (
                     <Link
-                      key={service}
-                      to="/services"
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
                       style={dropdownLink}
                       onClick={() =>
                         setServicesOpen(false)
                       }
                     >
-                      {service}
+                      {service.title}
                     </Link>
                   ))}
                 </div>
@@ -376,22 +368,13 @@ const Header = () => {
 
               {servicesOpen && (
                 <div className="ns-mobile-submenu">
-                  {[
-                    "Civil Law",
-                    "Criminal Law",
-                    "Consumer Law",
-                    "Property Law",
-                    "Cyber Law",
-                    "Banking & SARFAESI",
-                    "Family Law",
-                    "Constitutional Law",
-                  ].map((service) => (
+                  {LEGAL_SERVICES.map((service) => (
                     <Link
-                      key={service}
-                      to="/services"
+                      key={service.slug}
+                      to={`/services/${service.slug}`}
                       onClick={closeMenu}
                     >
-                      {service}
+                      {service.title}
                     </Link>
                   ))}
                 </div>
