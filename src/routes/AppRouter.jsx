@@ -41,6 +41,8 @@ import LoginPage from "../features/auth/pages/LoginPage";
 // PUBLIC SEO PAGES
 // =========================================================
 
+import AboutPage from "../features/public/about/pages/AboutPage";
+
 import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPage";
 
 import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCourseDetailsPage";
@@ -111,6 +113,15 @@ export default function AppRouter() {
       <Route
         path="/"
         element={<PublicLayout />}
+      />
+
+      {/* =====================================================
+          ABOUT
+      ====================================================== */}
+
+      <Route
+        path="/about"
+        element={<AboutPage />}
       />
 
       {/* =====================================================
