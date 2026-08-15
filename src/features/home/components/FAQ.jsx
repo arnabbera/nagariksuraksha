@@ -25,12 +25,12 @@ const faqItems = [
   {
     question: "Who can access the Admin Dashboard?",
     answer:
-      "Only the Google account beraarnab@gmail.com can access the Admin Dashboard. All other authenticated Google accounts are treated as students.",
+      "Only the authorized NagarikSuraksha administrator can access the Admin Dashboard. All other authenticated Google accounts are treated as students.",
   },
   {
     question: "Can students download PDF study materials?",
     answer:
-      "Students can read available learning materials after login. PDF download access will be enabled according to the applicable subscription or certification plan.",
+      "Students can read available learning materials after login. PDF download access is enabled according to the applicable subscription or certification plan.",
   },
 ];
 
@@ -44,55 +44,40 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-slate-50 px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
-            Frequently Asked Questions
-          </p>
-
-          <h2 className="text-3xl font-bold text-slate-950 sm:text-4xl">
-            Common Questions About NagarikSuraksha
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+    <section className="ns-faq-section">
+      <div className="ns-faq-container">
+        <header className="ns-faq-heading">
+          <p>Frequently Asked Questions</p>
+          <h2>Common Questions About NagarikSuraksha</h2>
+          <span>
             Find answers about public access, student login, learning
             materials, enrollment and certification.
-          </p>
-        </div>
+          </span>
+        </header>
 
-        <div className="space-y-4">
+        <div className="ns-faq-list">
           {faqItems.map((item, index) => {
             const isOpen = activeIndex === index;
+            const answerId = `ns-faq-answer-${index}`;
 
             return (
               <article
                 key={item.question}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                className={`ns-faq-item${isOpen ? " is-open" : ""}`}
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
+                  aria-controls={answerId}
                 >
-                  <span className="text-base font-semibold text-slate-900 sm:text-lg">
-                    {item.question}
-                  </span>
-
-                  <FaChevronDown
-                    aria-hidden="true"
-                    className={`shrink-0 text-blue-700 transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <span>{item.question}</span>
+                  <FaChevronDown aria-hidden="true" />
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-slate-100 px-5 py-5 sm:px-6">
-                    <p className="leading-7 text-slate-600">
-                      {item.answer}
-                    </p>
+                  <div id={answerId} className="ns-faq-answer">
+                    <p>{item.answer}</p>
                   </div>
                 )}
               </article>
@@ -100,6 +85,10 @@ export default function FAQ() {
           })}
         </div>
       </div>
+
+      <style>{`
+        .ns-faq-section,.ns-faq-section *{box-sizing:border-box}.ns-faq-section{padding:82px 20px;background:#f8fafc}.ns-faq-container{width:min(100%,900px);margin:0 auto}.ns-faq-heading{margin-bottom:42px;text-align:center}.ns-faq-heading>p{margin:0 0 11px;color:#2563eb;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.ns-faq-heading h2{margin:0;color:#0f172a;font-size:clamp(30px,4vw,43px);line-height:1.2}.ns-faq-heading>span{display:block;max-width:690px;margin:16px auto 0;color:#64748b;font-size:17px;line-height:1.7}.ns-faq-list{display:flex;flex-direction:column;gap:14px}.ns-faq-item{overflow:hidden;border:1px solid #e2e8f0;border-radius:15px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.05);transition:border-color .2s,box-shadow .2s}.ns-faq-item.is-open{border-color:#bfdbfe;box-shadow:0 12px 30px rgba(37,99,235,.09)}.ns-faq-item>button{display:flex;width:100%;min-height:68px;align-items:center;justify-content:space-between;gap:20px;border:0;background:#fff;color:#0f172a;padding:19px 22px;cursor:pointer;font:inherit;text-align:left}.ns-faq-item>button span{font-size:17px;font-weight:700;line-height:1.45}.ns-faq-item>button svg{flex:none;color:#2563eb;transition:transform .2s}.ns-faq-item.is-open>button svg{transform:rotate(180deg)}.ns-faq-answer{border-top:1px solid #eff6ff;background:#f8fbff;padding:18px 22px 21px}.ns-faq-answer p{margin:0;color:#475569;font-size:16px;line-height:1.75}@media(max-width:640px){.ns-faq-section{padding:58px 14px}.ns-faq-heading{margin-bottom:30px}.ns-faq-heading>span{font-size:15px}.ns-faq-item>button{min-height:60px;padding:16px}.ns-faq-item>button span{font-size:15px}.ns-faq-answer{padding:16px}.ns-faq-answer p{font-size:14px}}
+      `}</style>
     </section>
   );
 }
