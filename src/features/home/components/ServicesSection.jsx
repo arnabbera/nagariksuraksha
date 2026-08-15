@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import {
   FaBalanceScale,
   FaGavel,
@@ -12,48 +13,56 @@ import {
 
 const services = [
   {
+    slug: "civil-law",
     title: "Civil Law",
     icon: <FaBalanceScale size={36} />,
     description:
       "Property disputes, injunctions, recovery suits, partition, contracts and civil litigation.",
   },
   {
+    slug: "criminal-law",
     title: "Criminal Law",
     icon: <FaGavel size={36} />,
     description:
       "Criminal defence, FIR assistance, anticipatory bail, regular bail and trial matters.",
   },
   {
+    slug: "property-law",
     title: "Property Law",
     icon: <FaHome size={36} />,
     description:
       "Property verification, registration, mutation, title search and legal due diligence.",
   },
   {
+    slug: "cyber-law",
     title: "Cyber Law",
     icon: <FaLaptopCode size={36} />,
     description:
       "Online fraud, cyber crime, social media complaints and digital evidence guidance.",
   },
   {
+    slug: "family-law",
     title: "Family Law",
     icon: <FaUsers size={36} />,
     description:
       "Divorce, maintenance, child custody, domestic violence and family settlements.",
   },
   {
+    slug: "consumer-protection",
     title: "Consumer Protection",
     icon: <FaShieldAlt size={36} />,
     description:
       "Consumer complaints, defective products, banking disputes and compensation claims.",
   },
   {
+    slug: "banking-sarfaesi",
     title: "Banking & SARFAESI",
     icon: <FaUniversity size={36} />,
     description:
       "Home loan disputes, SARFAESI matters, DRT proceedings and banking litigation.",
   },
   {
+    slug: "corporate-law",
     title: "Corporate Law",
     icon: <FaBuilding size={36} />,
     description:
@@ -158,21 +167,21 @@ const ServicesSection = () => {
                 {service.description}
               </p>
 
-              <button
+              <Link
+                to={`/services/${service.slug}`}
                 style={{
-                  border: "none",
-                  background: "transparent",
                   color: "#2563eb",
                   fontWeight: 600,
-                  cursor: "pointer",
-                  display: "flex",
+                  display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
+                  textDecoration: "none",
                 }}
+                aria-label={`Learn more about ${service.title}`}
               >
                 Learn More
                 <FaArrowRight />
-              </button>
+              </Link>
             </div>
           ))}
         </div>
