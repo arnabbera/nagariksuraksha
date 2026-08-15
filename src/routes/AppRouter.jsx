@@ -85,6 +85,8 @@ import MockTestPage from "../features/student/exams/pages/MockTestPage";
 
 import FinalExamPage from "../features/student/exams/pages/FinalExamPage";
 
+import StudentCertificatesPage from "../features/student/certificates/pages/StudentCertificatesPage";
+
 // =========================================================
 // LAYOUTS
 // =========================================================
@@ -276,11 +278,7 @@ export default function AppRouter() {
 
         <Route
           path="certificates"
-          element={
-            <h2>
-              Certificates
-            </h2>
-          }
+          element={<StudentCertificatesPage />}
         />
 
         <Route
