@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import {
   FaArrowRight,
   FaBalanceScale,
@@ -8,7 +10,37 @@ import {
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import { getHomepageStatistics } from "../../../services/homepageStatsService";
+
+const formatCount = (value, loading) => {
+  if (loading) return "…";
+  return Number.isFinite(value) ? value.toLocaleString("en-IN") : "—";
+};
+
 const Hero = () => {
+  const [statistics, setStatistics] = useState({
+    students: null,
+    courses: null,
+    chapters: null,
+  });
+  const [statisticsLoading, setStatisticsLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+
+    getHomepageStatistics()
+      .then((result) => {
+        if (active) setStatistics(result);
+      })
+      .finally(() => {
+        if (active) setStatisticsLoading(false);
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
   const features = [
     {
       icon: <FaBalanceScale />,
@@ -86,22 +118,26 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="ns-hero-stats">
+          <div className="ns-hero-stats" aria-busy={statisticsLoading}>
             <div>
-              <strong>1000+</strong>
-              <span>Students</span>
+              <strong>
+                {formatCount(statistics.students, statisticsLoading)}
+              </strong>
+              <span>Registered Students</span>
             </div>
 
             <div>
-              <strong>500+</strong>
-              <span>
-                Legal Articles
-              </span>
-            </div>
-
-            <div>
-              <strong>50+</strong>
+              <strong>
+                {formatCount(statistics.courses, statisticsLoading)}
+              </strong>
               <span>Courses</span>
+            </div>
+
+            <div>
+              <strong>
+                {formatCount(statistics.chapters, statisticsLoading)}
+              </strong>
+              <span>Chapters</span>
             </div>
           </div>
         </motion.div>
