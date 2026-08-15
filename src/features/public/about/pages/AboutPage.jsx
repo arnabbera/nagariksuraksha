@@ -149,7 +149,7 @@ export default function AboutPage() {
             </div>
             <div className="ns-about-actions">
               <Link to="/llb-courses">Explore Courses</Link>
-              <Link to="/contact" className="secondary">Contact Us</Link>
+              <Link to="/#legal-consultation" className="secondary">Request a Free Consultation</Link>
             </div>
           </div>
         </section>
