@@ -7,6 +7,7 @@ import {
   where,
 } from "firebase/firestore";
 
+import { COURSE_STATUS } from "../constants/enums";
 import { COLLECTIONS } from "../constants/firestoreCollections";
 import { db } from "../firebase/firebase";
 
@@ -55,6 +56,7 @@ const loadHomepageStatistics = async () => {
         getCount(
           query(
             collection(db, COLLECTIONS.COURSES),
+            where("status", "==", COURSE_STATUS.PUBLISHED),
             where("deleted", "==", false),
           ),
         ),
@@ -63,7 +65,7 @@ const loadHomepageStatistics = async () => {
         getCount(
           query(
             collection(db, COLLECTIONS.COURSE_CHAPTERS),
-            where("deleted", "==", false),
+            where("published", "==", true),
           ),
         ),
       ),
