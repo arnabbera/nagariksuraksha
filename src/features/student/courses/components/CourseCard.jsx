@@ -1,4 +1,5 @@
 import {
+  FaAward,
   FaBookOpen,
   FaCheckCircle,
   FaClock,
@@ -39,6 +40,12 @@ const CourseCard = ({
   const handleOpen = () => {
     navigate(
       `/student/courses/${course.id}`,
+    );
+  };
+
+  const handleCertificationOpen = () => {
+    navigate(
+      `/student/courses/${course.id}#certification-enrollment`,
     );
   };
 
@@ -131,39 +138,29 @@ const CourseCard = ({
         )}
 
         <div className="ns-student-course-actions">
-          {assigned ? (
-            <button
-              type="button"
-              onClick={handleOpen}
-            >
-              <FaBookOpen />
-              {progress > 0
-                ? "Continue Learning"
-                : "Start Learning"}
-            </button>
-          ) : (
-            <>
-              <button
-                type="button"
-                className="secondary"
-                onClick={handleOpen}
-              >
-                View Course
-              </button>
+          <button
+            type="button"
+            onClick={
+              assigned
+                ? handleOpen
+                : () => onEnroll?.(course)
+            }
+            disabled={enrolling}
+          >
+            <FaBookOpen />
+            {enrolling
+              ? "Preparing Course..."
+              : "Start Free Learning"}
+          </button>
 
-              <button
-                type="button"
-                disabled={enrolling}
-                onClick={() =>
-                  onEnroll?.(course)
-                }
-              >
-                {enrolling
-                  ? "Adding..."
-                  : "Add to My Courses"}
-              </button>
-            </>
-          )}
+          <button
+            type="button"
+            className="certification"
+            onClick={handleCertificationOpen}
+          >
+            <FaAward />
+            Enrollment for Certification
+          </button>
         </div>
       </div>
 
@@ -302,7 +299,8 @@ const CourseCard = ({
           }
 
           .ns-student-course-actions {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 10px;
             margin-top: 20px;
           }
@@ -322,10 +320,14 @@ const CourseCard = ({
             font-weight: 700;
           }
 
-          .ns-student-course-actions button.secondary {
-            border: 1px solid #bfdbfe;
-            background: #eff6ff;
-            color: #2563eb;
+          .ns-student-course-actions button.certification {
+            border: 1px solid #f59e0b;
+            background: #fffbeb;
+            color: #b45309;
+          }
+
+          .ns-student-course-actions button.certification:hover {
+            background: #fef3c7;
           }
 
           .ns-student-course-actions button:disabled {
