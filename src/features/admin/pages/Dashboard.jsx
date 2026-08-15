@@ -16,7 +16,10 @@ import EmptyState from "../../../shared/components/EmptyState";
 import LoadingSpinner from "../../../shared/components/LoadingSpinner";
 import PageHeader from "../../../shared/components/PageHeader";
 
-import { getDashboardStatistics } from "../../../services/dashboardService";
+import {
+  getDashboardStatistics,
+  savePublicHomepageStatistics,
+} from "../../../services/dashboardService";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -42,6 +45,8 @@ const Dashboard = () => {
 
       const result =
         await getDashboardStatistics();
+
+      await savePublicHomepageStatistics(result);
 
       setStats(result);
     } catch (error) {
