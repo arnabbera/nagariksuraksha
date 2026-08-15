@@ -820,7 +820,11 @@ export default function CourseDetails() {
                     : "is-inactive"
                 }`}
               >
-                <FaCheckCircle />
+                {enrollment ? (
+                  <FaCheckCircle />
+                ) : (
+                  <FaLock />
+                )}
                 Assigned
               </span>
 
@@ -831,7 +835,11 @@ export default function CourseDetails() {
                     : "is-inactive"
                 }`}
               >
-                <FaCheckCircle />
+                {certificationPaymentCompleted ? (
+                  <FaCheckCircle />
+                ) : (
+                  <FaLock />
+                )}
                 Enrolled
               </span>
             </div>
