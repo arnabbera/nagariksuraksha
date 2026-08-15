@@ -502,6 +502,10 @@ export default function CourseDetails() {
     certificationStatus ===
     "pending-payment";
 
+  const certificationPaymentCompleted =
+    certification?.payment?.status ===
+    "paid";
+
   const handleCertificationEnroll =
     async () => {
       if (
@@ -809,12 +813,27 @@ export default function CourseDetails() {
                   : "Chapters"}
               </span>
 
-              {enrollment && (
-                <span className="ns-enrolled-badge">
-                  <FaCheckCircle />
-                  Enrolled
-                </span>
-              )}
+              <span
+                className={`ns-course-state-badge ${
+                  enrollment
+                    ? "is-active"
+                    : "is-inactive"
+                }`}
+              >
+                <FaCheckCircle />
+                Assigned
+              </span>
+
+              <span
+                className={`ns-course-state-badge ${
+                  certificationPaymentCompleted
+                    ? "is-active"
+                    : "is-inactive"
+                }`}
+              >
+                <FaCheckCircle />
+                Enrolled
+              </span>
             </div>
 
             {/* COURSE PROGRESS */}
@@ -870,7 +889,7 @@ export default function CourseDetails() {
                     handleEnroll
                   }
                 >
-                  Enroll in Course
+                  Add to My Courses
                 </Button>
               </div>
             )}
@@ -1427,10 +1446,30 @@ export default function CourseDetails() {
           }
 
           .ns-course-detail-meta
-            .ns-enrolled-badge {
+            .ns-course-state-badge {
+            border: 1px solid #cbd5e1;
+
+            background: #f8fafc;
+
+            color: #64748b;
+          }
+
+          .ns-course-detail-meta
+            .ns-course-state-badge.is-active {
+            border-color: #86efac;
+
             background: #dcfce7;
 
             color: #166534;
+          }
+
+          .ns-course-detail-meta
+            .ns-course-state-badge.is-inactive {
+            border-color: #cbd5e1;
+
+            background: #f8fafc;
+
+            color: #64748b;
           }
 
           /* ==================================================
