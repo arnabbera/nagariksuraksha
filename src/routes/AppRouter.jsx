@@ -1,7 +1,10 @@
+import { useEffect } from "react";
+
 import {
   Navigate,
   Route,
   Routes,
+  useLocation,
 } from "react-router-dom";
 
 // =========================================================
@@ -89,6 +92,16 @@ import StudentLayout from "../shared/layouts/StudentLayout";
 // =========================================================
 
 export default function AppRouter() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto",
+    });
+  }, [pathname]);
+
   return (
     <Routes>
       {/* =====================================================
