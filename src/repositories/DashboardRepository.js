@@ -1,6 +1,7 @@
 import {
   collection,
   getCountFromServer,
+  getDocs,
   query,
   where,
 } from "firebase/firestore";
@@ -32,31 +33,53 @@ class DashboardRepository {
     return snapshot.data().count;
   }
 
-  async getStatistics() {
+  async countPublishedCourses() {
+    const snapshot = await getDocs(
+      query(
+        collection(db, COLLECTIONS.COURSES),
+        where("status", "==", COURSE_STATUS.PUBLISHED),
+      ),
+    );
+
+    return snapshot.docs.filter(
+      (course) => course.data().deleted !== true,
+    ).length;
+  }
+
+  async getPublicHomepageStatistics() {
     const [
       students,
       courses,
       chapters,
       certifications,
+    ] = await Promise.all([
+      this.countDocuments(COLLECTIONS.USERS, [
+        where("role", "==", USER_ROLES.STUDENT),
+      ]),
+      this.countPublishedCourses(),
+      this.countDocuments(COLLECTIONS.COURSE_CHAPTERS, [
+        where("published", "==", true),
+      ]),
+      this.countDocuments(COLLECTIONS.CERTIFICATES),
+    ]);
+
+    return {
+      students,
+      courses,
+      chapters,
+      certifications,
+    };
+  }
+
+  async getStatistics() {
+    const [
+      publicStatistics,
       articles,
       videos,
       legalServices,
       pendingComments,
     ] = await Promise.all([
-      this.countDocuments(COLLECTIONS.USERS, [
-        where("role", "==", USER_ROLES.STUDENT),
-      ]),
-
-      this.countDocuments(COLLECTIONS.COURSES, [
-        where("status", "==", COURSE_STATUS.PUBLISHED),
-        where("deleted", "==", false),
-      ]),
-
-      this.countDocuments(COLLECTIONS.COURSE_CHAPTERS, [
-        where("published", "==", true),
-      ]),
-
-      this.countDocuments(COLLECTIONS.CERTIFICATES),
+      this.getPublicHomepageStatistics(),
 
       this.countDocuments(COLLECTIONS.CONTENT, [
         where(
@@ -107,10 +130,7 @@ class DashboardRepository {
     ]);
 
     return {
-      students,
-      courses,
-      chapters,
-      certifications,
+      ...publicStatistics,
       articles,
       videos,
       legalServices,
