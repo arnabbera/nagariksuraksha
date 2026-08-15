@@ -51,6 +51,7 @@ import LegalServiceDetailsPage from "../features/public/services/pages/LegalServ
 
 import DisclaimerPage from "../features/public/legal/pages/DisclaimerPage";
 import PrivacyPolicyPage from "../features/public/legal/pages/PrivacyPolicyPage";
+import TermsPage from "../features/public/legal/pages/TermsPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -154,6 +155,11 @@ export default function AppRouter() {
       <Route
         path="/privacy-policy"
         element={<PrivacyPolicyPage />}
+      />
+
+      <Route
+        path="/terms"
+        element={<TermsPage />}
       />
 
       {/* =====================================================
