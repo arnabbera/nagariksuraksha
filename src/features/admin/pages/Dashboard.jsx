@@ -18,7 +18,7 @@ import PageHeader from "../../../shared/components/PageHeader";
 
 import {
   getDashboardStatistics,
-  savePublicHomepageStatistics,
+  refreshPublicHomepageStatistics,
 } from "../../../services/dashboardService";
 
 const Dashboard = () => {
@@ -45,12 +45,24 @@ const Dashboard = () => {
     try {
       setLoading(true);
 
-      const result =
-        await getDashboardStatistics();
+      const [dashboardResult, publicStatisticsResult] =
+        await Promise.allSettled([
+          getDashboardStatistics(),
+          refreshPublicHomepageStatistics(),
+        ]);
 
-      await savePublicHomepageStatistics(result);
+      if (dashboardResult.status === "fulfilled") {
+        setStats(dashboardResult.value);
+      } else {
+        console.error(dashboardResult.reason);
+      }
 
-      setStats(result);
+      if (publicStatisticsResult.status === "rejected") {
+        console.error(
+          "Unable to refresh public homepage statistics:",
+          publicStatisticsResult.reason,
+        );
+      }
     } catch (error) {
       console.error(error);
     } finally {
