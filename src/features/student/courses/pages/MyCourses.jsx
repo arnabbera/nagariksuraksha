@@ -12,8 +12,8 @@ import {
 } from "../../../../services/courseService";
 
 import {
-  enrollStudent,
   getStudentEnrollments,
+  hasPaidCourseAccess,
 } from "../../../../services/studentEnrollmentService";
 
 import EmptyState from "../../../../shared/components/EmptyState";
@@ -22,14 +22,12 @@ import PageHeader from "../../../../shared/components/PageHeader";
 
 import CourseCard from "../components/CourseCard";
 
-export default function MyCourses() {
+export default function MyCourses({ view = "available" }) {
   const { firebaseUser, profile } = useAuth();
 
   const [courses, setCourses] = useState([]);
   const [enrollments, setEnrollments] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [enrollingCourseId, setEnrollingCourseId] =
-    useState("");
   const [searchText, setSearchText] = useState("");
   const [error, setError] = useState("");
 
@@ -100,14 +98,19 @@ export default function MyCourses() {
     const query =
       searchText.trim().toLowerCase();
 
-    if (!query) {
-      return courses;
-    }
-
     return courses.filter((course) => {
       if (!course) {
         return false;
       }
+
+      const paid = hasPaidCourseAccess(
+        enrollmentMap[course.id],
+      );
+
+      if (view === "enrolled" && !paid) return false;
+      if (view === "available" && paid) return false;
+
+      if (!query) return true;
 
       return (
         course.title
@@ -118,55 +121,11 @@ export default function MyCourses() {
           .includes(query)
       );
     });
-  }, [courses, searchText]);
+  }, [courses, enrollmentMap, searchText, view]);
 
-  const assignedCount =
-    enrollments.filter(
-      (enrollment) =>
-        enrollment &&
-        enrollment.status !== "cancelled" &&
-        !enrollment.deleted,
-    ).length;
-
-  const handleEnroll = async (course) => {
-    if (!course?.id || !studentId) {
-      return;
-    }
-
-    try {
-      setError("");
-      setEnrollingCourseId(course.id);
-
-      await enrollStudent(
-        studentId,
-        course.id,
-        studentId,
-      );
-
-      const updatedEnrollments =
-        await getStudentEnrollments(
-          studentId,
-        );
-
-      setEnrollments(
-        Array.isArray(updatedEnrollments)
-          ? updatedEnrollments
-          : [],
-      );
-    } catch (enrollError) {
-      console.error(
-        "Unable to add course:",
-        enrollError,
-      );
-
-      setError(
-        enrollError?.message ||
-          "Unable to add this course to your assigned courses.",
-      );
-    } finally {
-      setEnrollingCourseId("");
-    }
-  };
+  const enrolledCount = enrollments.filter(
+    hasPaidCourseAccess,
+  ).length;
 
   if (loading) {
     return (
@@ -180,11 +139,13 @@ export default function MyCourses() {
   return (
     <div>
       <PageHeader
-        title="My Courses"
-        description={`${assignedCount} assigned course(s). Explore NagarikSuraksha learning programmes and continue where you left off.`}
+        title={view === "enrolled" ? "Enrolled Courses" : "Available Courses"}
+        description={view === "enrolled"
+          ? `${enrolledCount} paid course(s). Continue your enrolled courses.`
+          : "Choose a course and complete the ₹99 payment to join and view it."}
         breadcrumbs={[
           "Student",
-          "My Courses",
+          view === "enrolled" ? "Enrolled Courses" : "Available Courses",
         ]}
       />
 
@@ -213,7 +174,9 @@ export default function MyCourses() {
         <EmptyState
           icon="📚"
           title="No courses available"
-          description="Published NagarikSuraksha courses will appear here."
+          description={view === "enrolled"
+            ? "Courses appear here after successful ₹99 payment."
+            : "All published courses have already been enrolled."}
         />
       ) : (
         <div className="ns-student-course-grid">
@@ -231,11 +194,7 @@ export default function MyCourses() {
                     course.id
                   ] || null
                 }
-                enrolling={
-                  enrollingCourseId ===
-                  course.id
-                }
-                onEnroll={handleEnroll}
+                view={view}
               />
             ))}
         </div>
