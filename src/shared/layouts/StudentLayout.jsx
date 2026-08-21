@@ -22,8 +22,13 @@ const menuItems = [
     end: true,
   },
   {
-    label: "My Courses",
-    path: "/student/courses",
+    label: "Available Courses",
+    path: "/student/available-courses",
+    icon: FaBook,
+  },
+  {
+    label: "Enrolled Courses",
+    path: "/student/enrolled-courses",
     icon: FaBook,
   },
   {
