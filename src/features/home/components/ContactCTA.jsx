@@ -28,7 +28,7 @@ const ContactCTA = () => {
               Request Free Consultation <FaArrowRight />
             </a>
             <Link to="/llb-courses" className="secondary">
-              Start Free LL.B Learning <FaArrowRight />
+              Explore LL.B Courses <FaArrowRight />
             </Link>
           </div>
         </div>
