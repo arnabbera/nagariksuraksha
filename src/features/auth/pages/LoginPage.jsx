@@ -105,19 +105,18 @@ export default function LoginPage() {
           </div>
 
           <div className="student-login-disclaimer-section">
-            <h3>2. Free Course Access</h3>
+            <h3>2. Individual Course Enrollment</h3>
             <p>
-              Accessing and studying course content on this platform is
-              <strong> 100% free</strong>. There are no hidden fees or
-              mandatory charges required to access the learning materials.
+              Each course requires a one-time <strong>₹99 enrollment fee</strong>.
+              After successful payment, that course and its learning materials
+              become available under Enrolled Courses in the student portal.
             </p>
           </div>
 
           <div className="student-login-disclaimer-section">
-            <h3>3. Optional Certification &amp; Fees</h3>
+            <h3>3. Certification Included</h3>
             <p>
-              Obtaining a certificate is completely optional. The
-              <strong> ₹99 fee</strong> solely covers administrative costs,
+              The <strong>₹99 individual course fee</strong> covers course access,
               access to downloadable course PDFs, practice mock tests, and a
               digital Certificate of Completion.
             </p>
