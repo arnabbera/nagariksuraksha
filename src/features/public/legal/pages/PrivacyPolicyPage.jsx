@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
                 <p>We use the minimal data collected solely to:</p>
 
                 <ul>
-                  <li>Authenticate your account and grant access to free courses.</li>
+                  <li>Authenticate your account and grant access to courses you have paid to enroll in.</li>
                   <li>Display your correct name on your Completion Certificate.</li>
                   <li>Maintain your test history and course progress.</li>
                   <li>
