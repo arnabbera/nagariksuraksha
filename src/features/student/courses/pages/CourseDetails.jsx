@@ -472,17 +472,9 @@ export default function CourseDetails() {
   // CERTIFICATION
   // =========================================================
 
-  const certificationAvailable =
-    course?.certification?.available ??
-    course?.certificationAvailable ??
-    false;
+  const certificationAvailable = true;
 
-  const certificationFee =
-    Number(
-      course?.certification?.fee ??
-        course?.certificationFee ??
-        0,
-    );
+  const certificationFee = 99;
 
   const certification =
     enrollment?.certification ||
@@ -505,6 +497,9 @@ export default function CourseDetails() {
   const certificationPaymentCompleted =
     certification?.payment?.status ===
     "paid";
+
+  const hasCourseAccess =
+    certificationPaymentCompleted;
 
   const handleCertificationEnroll =
     async () => {
@@ -559,14 +554,7 @@ export default function CourseDetails() {
     chapter,
     index,
   ) => {
-    if (
-      chapter.previewAvailable ===
-      true
-    ) {
-      return true;
-    }
-
-    if (!enrollment) {
+    if (!hasCourseAccess) {
       return false;
     }
 
@@ -658,7 +646,9 @@ export default function CourseDetails() {
         }
         breadcrumbs={[
           "Student",
-          "My Courses",
+          certificationPaymentCompleted
+            ? "Enrolled Courses"
+            : "Available Courses",
           course.title,
         ]}
       />
@@ -815,21 +805,6 @@ export default function CourseDetails() {
 
               <span
                 className={`ns-course-state-badge ${
-                  enrollment
-                    ? "is-active"
-                    : "is-inactive"
-                }`}
-              >
-                {enrollment ? (
-                  <FaCheckCircle />
-                ) : (
-                  <FaLock />
-                )}
-                Assigned
-              </span>
-
-              <span
-                className={`ns-course-state-badge ${
                   certificationPaymentCompleted
                     ? "is-active"
                     : "is-inactive"
@@ -846,7 +821,7 @@ export default function CourseDetails() {
 
             {/* COURSE PROGRESS */}
 
-            {enrollment && (
+            {certificationPaymentCompleted && (
               <div className="ns-course-progress-summary">
                 <div className="ns-course-progress-heading">
                   <span>
@@ -887,18 +862,9 @@ export default function CourseDetails() {
               </div>
             )}
 
-            {!enrollment && (
+            {!certificationPaymentCompleted && (
               <div className="ns-course-enroll-action">
-                <Button
-                  loading={
-                    enrolling
-                  }
-                  onClick={
-                    handleEnroll
-                  }
-                >
-                  Add to My Courses
-                </Button>
+                <p>Pay ₹99 once to join this course and unlock all chapters, study PDFs, mock tests and the final examination.</p>
               </div>
             )}
           </div>
@@ -922,11 +888,11 @@ export default function CourseDetails() {
 
               <div>
                 <h2>
-                  Certification Program
+                  Course Enrollment
                 </h2>
 
                 <p>
-                  Upgrade this course to the NagarikSuraksha certification track.
+                  Join this individual course to access its complete learning and certification track.
                 </p>
               </div>
 
@@ -985,7 +951,7 @@ export default function CourseDetails() {
                       handleCertificationEnroll
                     }
                   >
-                    Enrollment for Certification
+                    Enroll and Pay ₹99
                   </Button>
                 </div>
               )}
@@ -997,7 +963,7 @@ export default function CourseDetails() {
                 </strong>
 
                 <span>
-                  Your certification enrollment request has been created. Payment activation will be connected after Cloudflare deployment.
+                  Your course enrollment request has been created. Complete the ₹99 payment to unlock this course.
                 </span>
               </div>
             )}
@@ -1006,11 +972,11 @@ export default function CourseDetails() {
               <div className="ns-certification-active">
                 <div className="ns-certification-status is-active">
                   <strong>
-                    Certification Active
+                    Course Enrolled
                   </strong>
 
                   <span>
-                    Certification learning privileges are enabled for this course.
+                    Full learning and certification access is enabled for this course.
                   </span>
                 </div>
 

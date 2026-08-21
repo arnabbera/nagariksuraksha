@@ -14,7 +14,7 @@ export default function DisclaimerPage() {
     <>
       <SEO
         title="Terms & Disclaimer | NagarikSuraksha"
-        description="NagarikSuraksha terms covering independent status, free course access and optional certification."
+        description="NagarikSuraksha terms covering independent status, paid course access and completion certification."
         canonical="/disclaimer"
         robots="index, follow"
       />
@@ -27,7 +27,7 @@ export default function DisclaimerPage() {
             <span>LEGAL INFORMATION</span>
             <h1>Terms &amp; Disclaimer</h1>
             <p>
-              Important information about free learning access, optional
+              Important information about individual course enrollment,
               certification and the status of Nagarik Suraksha.
             </p>
           </div>
@@ -59,11 +59,11 @@ export default function DisclaimerPage() {
             <article className="ns-terms-card">
               <div className="ns-terms-icon"><FaBookOpen /></div>
               <div>
-                <h2>2. Free Course Access</h2>
+                <h2>2. Course Access and Fee</h2>
                 <p>
-                  Accessing and studying course content on this platform is{" "}
-                  <strong>100% free</strong>. There are no hidden fees or
-                  mandatory charges required to access the learning materials.
+                  Each course requires a one-time <strong>₹99 enrollment fee</strong>.
+                  Successful payment unlocks that individual course, its chapter
+                  materials, downloadable PDFs, three mock tests and final test.
                 </p>
               </div>
             </article>
@@ -71,10 +71,9 @@ export default function DisclaimerPage() {
             <article className="ns-terms-card">
               <div className="ns-terms-icon"><FaCertificate /></div>
               <div>
-                <h2>3. Optional Certification &amp; Fees</h2>
+                <h2>3. Completion Certification</h2>
                 <p>
-                  Obtaining a certificate is completely optional. The{" "}
-                  <strong>₹99 fee</strong> solely covers administrative costs,
+                  The <strong>₹99 individual course fee</strong> covers course access,
                   access to downloadable course PDFs, practice mock tests, and
                   a digital Certificate of Completion.
                 </p>

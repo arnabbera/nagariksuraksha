@@ -253,7 +253,17 @@ export default function AppRouter() {
 
         <Route
           path="courses"
-          element={<MyCourses />}
+          element={<Navigate to="/student/available-courses" replace />}
+        />
+
+        <Route
+          path="available-courses"
+          element={<MyCourses view="available" />}
+        />
+
+        <Route
+          path="enrolled-courses"
+          element={<MyCourses view="enrolled" />}
         />
 
         <Route

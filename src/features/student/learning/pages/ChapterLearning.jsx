@@ -684,10 +684,10 @@ export default function ChapterLearning() {
   // Every authenticated student may read the PDF.
   // =========================================================
 
-  const canReadPdf =
-    Boolean(
-      studentId,
-    );
+  const canReadPdf = Boolean(
+    isAdmin ||
+      (enrolled && certificationActive && certificationPaid),
+  );
 
   // =========================================================
   // DOWNLOAD ACCESS
@@ -1055,6 +1055,30 @@ export default function ChapterLearning() {
 
         <Card>
           Chapter not found.
+        </Card>
+      </div>
+    );
+  }
+
+  if (!canReadPdf) {
+    return (
+      <div className="ns-learning-page">
+        <PageHeader
+          title="Course Enrollment Required"
+          description={course.title}
+          breadcrumbs={["Student", "Available Courses", course.title]}
+        />
+        <Card>
+          <div style={{ textAlign: "center", padding: "28px 16px" }}>
+            <FaLock style={{ color: "#d97706", fontSize: 38, marginBottom: 14 }} />
+            <h2 style={{ margin: "0 0 10px" }}>Pay ₹99 to unlock this course</h2>
+            <p style={{ color: "#64748b", margin: "0 0 20px" }}>
+              Chapter content is available only after successful enrollment payment for this individual course.
+            </p>
+            <Button onClick={() => navigate(`/student/courses/${course.slug}#certification-enrollment`)}>
+              Go to Course Enrollment
+            </Button>
+          </div>
         </Card>
       </div>
     );

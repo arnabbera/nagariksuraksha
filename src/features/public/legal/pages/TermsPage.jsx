@@ -18,7 +18,7 @@ export default function TermsPage() {
     <>
       <SEO
         title="Terms and Conditions | NagarikSuraksha"
-        description="Read the NagarikSuraksha terms for free courses, optional certification, accounts, payments, permitted use and liability."
+        description="Read the NagarikSuraksha terms for course enrollment, certification, accounts, payments, permitted use and liability."
         canonical="/terms"
         robots="index, follow"
       />
@@ -54,16 +54,14 @@ export default function TermsPage() {
             <TermsCard icon={<FaFileContract />} title="1. Scope of Services">
               <ul>
                 <li>
-                  <strong>Free Course Access:</strong> Nagarik Suraksha
-                  provides free access to online educational course content.
-                  Users can register and study course modules without any
-                  mandatory charges.
+                  <strong>Individual Course Access:</strong> Each Nagarik Suraksha
+                  course requires a ₹99 one-time enrollment fee. Successful
+                  payment unlocks only the selected course.
                 </li>
                 <li>
-                  <strong>Optional Certification:</strong> Access to
-                  downloadable PDF study materials, practice mock tests, and a
-                  digital Completion Certificate is optional and available
-                  upon payment of a <strong>₹99 one-time fee</strong>.
+                  <strong>Included Benefits:</strong> The course fee includes
+                  course viewing, downloadable PDF study materials, three mock
+                  tests, the final examination, and certificate eligibility.
                 </li>
               </ul>
             </TermsCard>

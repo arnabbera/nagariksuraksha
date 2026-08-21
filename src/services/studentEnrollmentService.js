@@ -47,6 +47,18 @@ export const getStudentEnrollment = async (
     courseId,
   );
 
+// A student receives course access only after the individual
+// course payment has been confirmed. Keeping this check in one
+// place prevents list, details and chapter pages from disagreeing.
+export const hasPaidCourseAccess = (enrollment) =>
+  Boolean(
+    enrollment &&
+      enrollment.status !== "cancelled" &&
+      !enrollment.deleted &&
+      enrollment?.certification?.payment?.status ===
+        CERTIFICATION_PAYMENT_STATUS.PAID,
+  );
+
 // =========================================================
 // NORMAL COURSE ENROLLMENT
 // =========================================================
@@ -347,18 +359,6 @@ export const enrollForCertification = async (
   // CHECK CERTIFICATION AVAILABILITY
   // -------------------------------------------------------
 
-  const available =
-    course.certification
-      ?.available ??
-    course.certificationAvailable ??
-    false;
-
-  if (!available) {
-    throw new Error(
-      "Certification is not available for this course.",
-    );
-  }
-
   const certification =
     getCertification(
       enrollment,
@@ -381,13 +381,7 @@ export const enrollForCertification = async (
   // CERTIFICATION FEE
   // -------------------------------------------------------
 
-  const fee =
-    Number(
-      course.certification
-        ?.fee ??
-        course.certificationFee ??
-        0,
-    );
+  const fee = 99;
 
   const freeCertification =
     fee <= 0;
@@ -786,6 +780,8 @@ export default {
   getStudentEnrollments,
 
   getStudentEnrollment,
+
+  hasPaidCourseAccess,
 
   enrollStudent,
 
