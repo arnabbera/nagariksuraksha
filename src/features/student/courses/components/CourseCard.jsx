@@ -11,21 +11,13 @@ import { useNavigate } from "react-router-dom";
 const CourseCard = ({
   course,
   enrollment = null,
-  onEnroll,
-  enrolling = false,
+  view = "available",
 }) => {
   const navigate = useNavigate();
 
   const progress =
     Number(
       enrollment?.progress?.percentage || 0,
-    );
-
-  const assigned =
-    Boolean(
-      enrollment &&
-        enrollment.status !== "cancelled" &&
-        !enrollment.deleted,
     );
 
   const certificationPaymentCompleted =
@@ -39,13 +31,11 @@ const CourseCard = ({
 
   const handleOpen = () => {
     navigate(
-      `/student/courses/${course.id}`,
-    );
-  };
-
-  const handleCertificationOpen = () => {
-    navigate(
-      `/student/courses/${course.id}#certification-enrollment`,
+      `/student/courses/${course.id}${
+        certificationPaymentCompleted
+          ? ""
+          : "#certification-enrollment"
+      }`,
     );
   };
 
@@ -64,21 +54,6 @@ const CourseCard = ({
         )}
 
         <div className="ns-course-status-badges">
-          <span
-            className={`ns-course-status-badge ${
-              assigned
-                ? "is-active"
-                : "is-inactive"
-            }`}
-          >
-            {assigned ? (
-              <FaCheckCircle />
-            ) : (
-              <FaLock />
-            )}
-            Assigned
-          </span>
-
           <span
             className={`ns-course-status-badge ${
               certificationPaymentCompleted
@@ -116,7 +91,7 @@ const CourseCard = ({
           </span>
         </div>
 
-        {assigned && (
+        {certificationPaymentCompleted && (
           <div className="ns-student-progress">
             <div className="ns-student-progress-heading">
               <span>Progress</span>
@@ -140,26 +115,12 @@ const CourseCard = ({
         <div className="ns-student-course-actions">
           <button
             type="button"
-            onClick={
-              assigned
-                ? handleOpen
-                : () => onEnroll?.(course)
-            }
-            disabled={enrolling}
+            onClick={handleOpen}
           >
-            <FaBookOpen />
-            {enrolling
-              ? "Preparing Course..."
-              : "Start Free Learning"}
-          </button>
-
-          <button
-            type="button"
-            className="certification"
-            onClick={handleCertificationOpen}
-          >
-            <FaAward />
-            Enrollment for Certification
+            {certificationPaymentCompleted ? <FaBookOpen /> : <FaAward />}
+            {certificationPaymentCompleted
+              ? "Continue Course"
+              : "Join Course — ₹99"}
           </button>
         </div>
       </div>
