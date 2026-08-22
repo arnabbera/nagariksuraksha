@@ -87,6 +87,8 @@ import FinalExamPage from "../features/student/exams/pages/FinalExamPage";
 
 import StudentCertificatesPage from "../features/student/certificates/pages/StudentCertificatesPage";
 
+import StudentProfilePage from "../features/student/profile/pages/StudentProfilePage";
+
 // =========================================================
 // LAYOUTS
 // =========================================================
@@ -321,11 +323,7 @@ export default function AppRouter() {
 
         <Route
           path="profile"
-          element={
-            <h2>
-              Profile
-            </h2>
-          }
+          element={<StudentProfilePage />}
         />
       </Route>
 
