@@ -18,18 +18,33 @@ const pillars = [
     title: "Legal Awareness",
     description:
       "Clear information that helps citizens understand legal rights, remedies and processes.",
+    details: [
+      "Plain-language explanations of legal rights and responsibilities.",
+      "Awareness of common legal procedures, remedies and important documents.",
+      "Educational articles and updates that help citizens make informed decisions.",
+    ],
   },
   {
     icon: <FaGraduationCap />,
     title: "Structured Learning",
     description:
       "Organised legal learning resources for students, supported by courses, notes and assessments.",
+    details: [
+      "Course-wise chapters arranged in a clear learning sequence.",
+      "Study notes, chapter resources and revision-focused material.",
+      "Quizzes, mock tests and assessments that support self-paced learning.",
+    ],
   },
   {
     icon: <FaHandshake />,
     title: "Practical Guidance",
     description:
       "A practical starting point for identifying documents, next steps and suitable professional support.",
+    details: [
+      "Guidance on preparing relevant facts and supporting documents.",
+      "A clearer understanding of possible next steps for common concerns.",
+      "Direction towards suitable professional assistance when individual legal advice is required.",
+    ],
   },
 ];
 
@@ -114,6 +129,14 @@ export default function AboutPage() {
                   <div className="ns-about-icon">{pillar.icon}</div>
                   <h3>{pillar.title}</h3>
                   <p>{pillar.description}</p>
+                  <details className="ns-about-more">
+                    <summary>Know More</summary>
+                    <ul>
+                      {pillar.details.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                    </ul>
+                  </details>
                 </article>
               ))}
             </div>
@@ -182,6 +205,15 @@ function Styles() {
       .ns-about-icon{display:flex;width:62px;height:62px;align-items:center;justify-content:center;margin-bottom:22px;border-radius:16px;background:#dbeafe;color:#2563eb;font-size:27px}
       .ns-about-card h3,.ns-about-values h3{margin:0 0 10px;color:#0f172a;font-size:21px}
       .ns-about-card p,.ns-about-values p{margin:0;color:#64748b;line-height:1.75}
+      .ns-about-more{margin-top:22px;border-top:1px solid #e2e8f0;padding-top:18px}
+      .ns-about-more summary{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid #2563eb;border-radius:9px;color:#1d4ed8;font-size:14px;font-weight:800;cursor:pointer;list-style:none;transition:background .2s,color .2s}
+      .ns-about-more summary::-webkit-details-marker{display:none}
+      .ns-about-more summary::after{content:"+";font-size:18px;line-height:1}
+      .ns-about-more[open] summary{background:#2563eb;color:#fff}
+      .ns-about-more[open] summary::after{content:"−"}
+      .ns-about-more ul{margin:18px 0 0;padding-left:20px;color:#475569}
+      .ns-about-more li{margin:0 0 10px;line-height:1.65}
+      .ns-about-more li::marker{color:#2563eb}
       .ns-about-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
       .ns-about-values article{display:flex;gap:16px;padding:24px;border-radius:16px;background:#f8fafc}
       .ns-about-values article>span{display:flex;width:44px;height:44px;flex:none;align-items:center;justify-content:center;border-radius:12px;background:#dbeafe;color:#2563eb;font-size:19px}
