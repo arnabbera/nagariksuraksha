@@ -1,10 +1,8 @@
 import { useState } from "react";
 import {
   FaBars,
-  FaBell,
   FaBook,
   FaCertificate,
-  FaDownload,
   FaHome,
   FaSignOutAlt,
   FaTimes,
@@ -35,16 +33,6 @@ const menuItems = [
     label: "Certification",
     path: "/student/certification",
     icon: FaCertificate,
-  },
-  {
-    label: "Downloads",
-    path: "/student/downloads",
-    icon: FaDownload,
-  },
-  {
-    label: "Notifications",
-    path: "/student/notifications",
-    icon: FaBell,
   },
   {
     label: "Profile",
