@@ -581,33 +581,8 @@ export default function CourseDetails() {
   // CHAPTER UNLOCKING
   // =========================================================
 
-  const isChapterUnlocked = (
-    chapter,
-    index,
-  ) => {
-    if (!hasCourseAccess) {
-      return false;
-    }
-
-    if (index === 0) {
-      return true;
-    }
-
-    const previousChapter =
-      chapters[
-        index - 1
-      ];
-
-    if (!previousChapter) {
-      return false;
-    }
-
-    return Boolean(
-      progressMap[
-        previousChapter.id
-      ]?.completed,
-    );
-  };
+  const isChapterUnlocked = () =>
+    Boolean(hasCourseAccess);
 
   // =========================================================
   // OPEN CHAPTER
