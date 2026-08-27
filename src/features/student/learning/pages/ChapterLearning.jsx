@@ -1071,7 +1071,7 @@ export default function ChapterLearning() {
         <Card>
           <div style={{ textAlign: "center", padding: "28px 16px" }}>
             <FaLock style={{ color: "#d97706", fontSize: 38, marginBottom: 14 }} />
-            <h2 style={{ margin: "0 0 10px" }}>Pay ₹99 to unlock this course</h2>
+            <h2 style={{ margin: "0 0 10px" }}>Pay ₹49 to unlock this course</h2>
             <p style={{ color: "#64748b", margin: "0 0 20px" }}>
               Chapter content is available only after successful enrollment payment for this individual course.
             </p>
