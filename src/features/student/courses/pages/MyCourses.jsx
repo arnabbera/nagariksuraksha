@@ -142,7 +142,7 @@ export default function MyCourses({ view = "available" }) {
         title={view === "enrolled" ? "Enrolled Courses" : "Available Courses"}
         description={view === "enrolled"
           ? `${enrolledCount} paid course(s). Continue your enrolled courses.`
-          : "Choose a course and complete the ₹99 payment to join and view it."}
+          : "Choose a course and complete the ₹49 payment to join and view it."}
         breadcrumbs={[
           "Student",
           view === "enrolled" ? "Enrolled Courses" : "Available Courses",
@@ -175,7 +175,7 @@ export default function MyCourses({ view = "available" }) {
           icon="📚"
           title="No courses available"
           description={view === "enrolled"
-            ? "Courses appear here after successful ₹99 payment."
+            ? "Courses appear here after successful ₹49 payment."
             : "All published courses have already been enrolled."}
         />
       ) : (
