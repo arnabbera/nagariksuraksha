@@ -223,6 +223,13 @@ export default function AppRouter() {
       />
 
       <Route
+        path="/articles"
+        element={
+          <PostsPage />
+        }
+      />
+
+      <Route
         path="/posts/:postSlug"
         element={
           <PostDetailsPage />
