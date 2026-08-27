@@ -91,12 +91,23 @@ const requireStudent = async (request) => {
   return payload.sub;
 };
 
+const getFirebaseServiceAccountJson = (env) =>
+  env.FIREBASE_SERVICE_ACCOUNT_JSON ||
+  env.FIREBASE_SERVICE_ACCOUNT ||
+  env.FIREBASE_SERVICE_ACCOUNT_;
+
+const getRazorpayCredentials = (env) => ({
+  keyId: env.RAZORPAY_KEY_ID || env.key_id,
+  keySecret: env.RAZORPAY_KEY_SECRET || env.key_secret,
+});
+
 const parseServiceAccount = (env) => {
-  if (!env.FIREBASE_SERVICE_ACCOUNT_JSON) {
+  const serviceAccountJson = getFirebaseServiceAccountJson(env);
+  if (!serviceAccountJson) {
     fail("Firebase backend credentials are not configured.", 503);
   }
   try {
-    const account = JSON.parse(env.FIREBASE_SERVICE_ACCOUNT_JSON);
+    const account = JSON.parse(serviceAccountJson);
     if (!account.client_email || !account.private_key) throw new Error();
     if (account.project_id && account.project_id !== FIREBASE_PROJECT_ID) throw new Error();
     return account;
@@ -226,13 +237,14 @@ const updateEnrollment = async ({ enrollment, token, topLevelFields }) => {
 };
 
 const razorpayRequest = async (env, path, init = {}) => {
-  if (!env.RAZORPAY_KEY_ID || !env.RAZORPAY_KEY_SECRET) {
+  const { keyId, keySecret } = getRazorpayCredentials(env);
+  if (!keyId || !keySecret) {
     fail("Razorpay is not configured yet.", 503);
   }
   const response = await fetch(`https://api.razorpay.com/v1${path}`, {
     ...init,
     headers: {
-      authorization: `Basic ${btoa(`${env.RAZORPAY_KEY_ID}:${env.RAZORPAY_KEY_SECRET}`)}`,
+      authorization: `Basic ${btoa(`${keyId}:${keySecret}`)}`,
       "content-type": "application/json",
       ...init.headers,
     },
@@ -288,7 +300,7 @@ const createOrder = async (request, env) => {
     updatedBy: { stringValue: studentId },
   } });
   return {
-    keyId: env.RAZORPAY_KEY_ID,
+    keyId: getRazorpayCredentials(env).keyId,
     orderId: order.id,
     amount: COURSE_FEE_PAISE,
     currency: CURRENCY,
@@ -336,7 +348,9 @@ const verifyPayment = async (request, env) => {
   if (getFirestoreValue(fields, "certification.payment.orderId")?.stringValue !== orderId) {
     fail("Payment order does not match this enrollment.", 403);
   }
-  if (!(await signaturesMatch(env.RAZORPAY_KEY_SECRET, `${orderId}|${paymentId}`, signature))) {
+  const { keySecret } = getRazorpayCredentials(env);
+  if (!keySecret) fail("Razorpay is not configured yet.", 503);
+  if (!(await signaturesMatch(keySecret, `${orderId}|${paymentId}`, signature))) {
     fail("Payment verification failed.", 403);
   }
   const [order, payment] = await Promise.all([
@@ -375,7 +389,16 @@ const verifyPayment = async (request, env) => {
 const handleApi = async (request, env, url) => {
   if (url.pathname === "/api/health") {
     if (request.method !== "GET") fail("Method not allowed.", 405);
-    return { ok: true, service: "nagariksuraksha", runtime: "cloudflare-worker" };
+    const { keyId, keySecret } = getRazorpayCredentials(env);
+    return {
+      ok: true,
+      service: "nagariksuraksha",
+      runtime: "cloudflare-worker",
+      configuration: {
+        razorpay: Boolean(keyId && keySecret),
+        firebaseAdmin: Boolean(getFirebaseServiceAccountJson(env)),
+      },
+    };
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
   if (url.pathname === "/api/razorpay/verify-payment") return verifyPayment(request, env);
