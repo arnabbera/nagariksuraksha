@@ -1,6 +1,10 @@
 import { initializeApp } from "firebase-admin/app";
-import { getFirestore } from "firebase-admin/firestore";
-import { onRequest } from "firebase-functions/v2/https";
+import { FieldValue, getFirestore } from "firebase-admin/firestore";
+import { defineSecret } from "firebase-functions/params";
+import { HttpsError, onCall, onRequest } from "firebase-functions/v2/https";
+import Razorpay from "razorpay";
+import { Buffer } from "node:buffer";
+import crypto from "node:crypto";
 
 initializeApp();
 
@@ -8,6 +12,51 @@ const db = getFirestore();
 
 const SITE_URL = "https://www.nagariksuraksha.com";
 const DEFAULT_IMAGE = `${SITE_URL}/favicon.svg`;
+const COURSE_FEE_PAISE = 4900;
+const RAZORPAY_KEY_ID = defineSecret("RAZORPAY_KEY_ID");
+const RAZORPAY_KEY_SECRET = defineSecret("RAZORPAY_KEY_SECRET");
+
+const paymentFunctionOptions = {
+  region: "asia-south1",
+  secrets: [RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET],
+};
+
+const requireStudent = (request) => {
+  const studentId = request.auth?.uid;
+
+  if (!studentId) {
+    throw new HttpsError("unauthenticated", "Please sign in before making a payment.");
+  }
+
+  return studentId;
+};
+
+const getEnrollment = async (studentId, courseId) => {
+  const enrollmentDocument = await db
+    .collection("studentEnrollments")
+    .doc(`${studentId}_${courseId}`)
+    .get();
+
+  if (
+    !enrollmentDocument.exists ||
+    enrollmentDocument.data()?.studentId !== studentId ||
+    enrollmentDocument.data()?.courseId !== courseId ||
+    enrollmentDocument.data()?.deleted === true
+  ) {
+    throw new HttpsError(
+      "failed-precondition",
+      "Start the course enrollment before continuing to payment.",
+    );
+  }
+
+  return enrollmentDocument;
+};
+
+const getRazorpay = () =>
+  new Razorpay({
+    key_id: RAZORPAY_KEY_ID.value(),
+    key_secret: RAZORPAY_KEY_SECRET.value(),
+  });
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -172,6 +221,154 @@ export const socialShare = onRequest(
           notFound: true,
         }),
       );
+    }
+  },
+);
+
+export const createCoursePayment = onCall(
+  paymentFunctionOptions,
+  async (request) => {
+    const studentId = requireStudent(request);
+    const courseId = String(request.data?.courseId || "").trim();
+
+    if (!courseId) {
+      throw new HttpsError("invalid-argument", "Course ID is required.");
+    }
+
+    const enrollmentDocument = await getEnrollment(studentId, courseId);
+    const enrollment = enrollmentDocument.data();
+
+    if (enrollment.certification?.payment?.status === "paid") {
+      throw new HttpsError("already-exists", "This course is already paid and enrolled.");
+    }
+
+    try {
+      const order = await getRazorpay().orders.create({
+        amount: COURSE_FEE_PAISE,
+        currency: "INR",
+        receipt: `ns_${Date.now()}_${studentId.slice(0, 8)}`,
+        notes: {
+          studentId,
+          courseId,
+          enrollmentId: enrollmentDocument.id,
+        },
+      });
+
+      await enrollmentDocument.ref.update({
+        "certification.status": "pending-payment",
+        "certification.fee": 49,
+        "certification.payment.status": "pending",
+        "certification.payment.provider": "razorpay",
+        "certification.payment.orderId": order.id,
+        "certification.payment.amount": COURSE_FEE_PAISE,
+        "certification.payment.currency": "INR",
+        "certification.payment.createdAt": FieldValue.serverTimestamp(),
+        updatedAt: FieldValue.serverTimestamp(),
+        updatedBy: studentId,
+      });
+
+      return {
+        keyId: RAZORPAY_KEY_ID.value(),
+        orderId: order.id,
+        amount: COURSE_FEE_PAISE,
+        currency: "INR",
+        courseId,
+      };
+    } catch (error) {
+      console.error("Unable to create Razorpay course order:", error);
+      throw new HttpsError("internal", "Unable to start payment. Please try again.");
+    }
+  },
+);
+
+export const verifyCoursePayment = onCall(
+  paymentFunctionOptions,
+  async (request) => {
+    const studentId = requireStudent(request);
+    const courseId = String(request.data?.courseId || "").trim();
+    const orderId = String(request.data?.razorpayOrderId || "").trim();
+    const paymentId = String(request.data?.razorpayPaymentId || "").trim();
+    const signature = String(request.data?.razorpaySignature || "").trim();
+
+    if (!courseId || !orderId || !paymentId || !signature) {
+      throw new HttpsError("invalid-argument", "Incomplete Razorpay payment details.");
+    }
+
+    const enrollmentDocument = await getEnrollment(studentId, courseId);
+    const enrollment = enrollmentDocument.data();
+    const storedOrderId = enrollment.certification?.payment?.orderId;
+
+    if (enrollment.certification?.payment?.status === "paid") {
+      return { enrollmentId: enrollmentDocument.id, status: "paid" };
+    }
+
+    if (!storedOrderId || storedOrderId !== orderId) {
+      throw new HttpsError("permission-denied", "Payment order does not match this enrollment.");
+    }
+
+    const expectedSignature = crypto
+      .createHmac("sha256", RAZORPAY_KEY_SECRET.value())
+      .update(`${orderId}|${paymentId}`)
+      .digest("hex");
+
+    const suppliedSignature = Buffer.from(signature, "utf8");
+    const verifiedSignature = Buffer.from(expectedSignature, "utf8");
+
+    if (
+      suppliedSignature.length !== verifiedSignature.length ||
+      !crypto.timingSafeEqual(suppliedSignature, verifiedSignature)
+    ) {
+      throw new HttpsError("permission-denied", "Payment verification failed.");
+    }
+
+    try {
+      const razorpay = getRazorpay();
+      const [order, payment] = await Promise.all([
+        razorpay.orders.fetch(orderId),
+        razorpay.payments.fetch(paymentId),
+      ]);
+
+      const validPayment =
+        order.status === "paid" &&
+        payment.status === "captured" &&
+        payment.order_id === orderId &&
+        Number(order.amount) === COURSE_FEE_PAISE &&
+        Number(payment.amount) === COURSE_FEE_PAISE &&
+        order.currency === "INR" &&
+        payment.currency === "INR";
+
+      if (!validPayment) {
+        throw new HttpsError(
+          "failed-precondition",
+          "Payment is not captured yet. Please wait briefly and try again.",
+        );
+      }
+
+      await enrollmentDocument.ref.update({
+        accessType: "certification",
+        "certification.status": "active",
+        "certification.activatedAt": FieldValue.serverTimestamp(),
+        "certification.payment.status": "paid",
+        "certification.payment.provider": "razorpay",
+        "certification.payment.paymentId": paymentId,
+        "certification.payment.reference": orderId,
+        "certification.payment.paidAt": FieldValue.serverTimestamp(),
+        "certification.access.pdfDownload": true,
+        "certification.access.mockTests": true,
+        "certification.access.finalExam": false,
+        "certification.mockTests.test1.status": "available",
+        updatedAt: FieldValue.serverTimestamp(),
+        updatedBy: "razorpay-verification",
+      });
+
+      return { enrollmentId: enrollmentDocument.id, status: "paid" };
+    } catch (error) {
+      if (error instanceof HttpsError) {
+        throw error;
+      }
+
+      console.error("Unable to verify Razorpay course payment:", error);
+      throw new HttpsError("internal", "Unable to verify payment. Please contact support.");
     }
   },
 );
