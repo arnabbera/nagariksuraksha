@@ -11,6 +11,9 @@ import {
   subscribeToAuthentication,
 } from "../services/authService";
 import { userRepository } from "../repositories/UserRepository";
+import {
+  updateStudentProfile,
+} from "../services/studentProfileService";
 
 export const AuthContext = createContext(null);
 
@@ -98,6 +101,38 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const saveProfile = async ({
+    displayName,
+    photoFile = null,
+  }) => {
+    if (!firebaseUser) {
+      throw new Error(
+        "You must be signed in to update your profile.",
+      );
+    }
+
+    const updatedProfile =
+      await updateStudentProfile({
+        firebaseUser,
+        displayName,
+        currentPhotoURL:
+          profile?.photoURL ||
+          firebaseUser.photoURL ||
+          "",
+        photoFile,
+      });
+
+    setProfile(
+      updatedProfile,
+    );
+
+    setFirebaseUser(
+      firebaseUser,
+    );
+
+    return updatedProfile;
+  };
+
   const refreshProfile = async () => {
     if (!firebaseUser?.uid) {
       setProfile(null);
@@ -127,6 +162,7 @@ export function AuthProvider({ children }) {
 
       signIn,
       signOut,
+      saveProfile,
       refreshProfile,
     }),
     [
