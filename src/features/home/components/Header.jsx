@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
   Link,
   NavLink,
-  useNavigate,
 } from "react-router-dom";
 
 import {
@@ -11,15 +10,11 @@ import {
   FaTimes,
   FaBalanceScale,
   FaChevronDown,
-  FaUserGraduate,
 } from "react-icons/fa";
 
-import { loginWithGoogle } from "../../../services/authService";
 import { LEGAL_SERVICES } from "../../public/services/data/legalServices";
 
 const Header = () => {
-  const navigate = useNavigate();
-
   const [menuOpen, setMenuOpen] =
     useState(false);
 
@@ -28,12 +23,6 @@ const Header = () => {
 
   const [learningOpen, setLearningOpen] =
     useState(false);
-
-  const [loginLoading, setLoginLoading] =
-    useState(false);
-
-  const [loginError, setLoginError] =
-    useState("");
 
   const navStyle = ({ isActive }) => ({
     color: isActive ? "#2563eb" : "#1e293b",
@@ -67,53 +56,6 @@ const Header = () => {
     setMenuOpen(false);
     setServicesOpen(false);
     setLearningOpen(false);
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      setLoginLoading(true);
-      setLoginError("");
-
-      const { profile } =
-        await loginWithGoogle();
-
-      closeMenu();
-
-      navigate(
-        profile?.role === "admin"
-          ? "/admin"
-          : "/student",
-        {
-          replace: true,
-        },
-      );
-    } catch (error) {
-      console.error(
-        "Google login failed:",
-        error,
-      );
-
-      if (
-        error?.code ===
-        "auth/popup-closed-by-user"
-      ) {
-        setLoginError("");
-      } else if (
-        error?.code ===
-        "auth/popup-blocked"
-      ) {
-        setLoginError(
-          "Google login popup was blocked. Please allow popups and try again.",
-        );
-      } else {
-        setLoginError(
-          error?.message ||
-            "Google login failed. Please try again.",
-        );
-      }
-    } finally {
-      setLoginLoading(false);
-    }
   };
 
   return (
@@ -243,36 +185,25 @@ const Header = () => {
                   >
                     Free Legal Resources
                   </Link>
+
+                  <Link to="/#legal-updates" style={dropdownLink} onClick={closeMenu}>
+                    Legal Updates
+                  </Link>
+
+                  <Link to="/#latest-videos" style={dropdownLink} onClick={closeMenu}>
+                    Learning Videos
+                  </Link>
+
+                  <Link to="/posts" style={dropdownLink} onClick={closeMenu}>
+                    Posts
+                  </Link>
+
+                  <Link to="/articles" style={dropdownLink} onClick={closeMenu}>
+                    Articles
+                  </Link>
                 </div>
               )}
             </div>
-
-            <Link
-              to="/#legal-updates"
-              style={{
-                color: "#1e293b",
-                textDecoration: "none",
-                fontWeight: 600,
-                padding: "8px 0",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Legal Updates
-            </Link>
-
-            <NavLink
-              to="/#latest-videos"
-              style={navStyle}
-            >
-              Videos
-            </NavLink>
-
-            <NavLink
-              to="/posts"
-              style={navStyle}
-            >
-              Posts
-            </NavLink>
 
             <NavLink
               to="/#legal-consultation"
@@ -280,19 +211,6 @@ const Header = () => {
             >
               Contact
             </NavLink>
-
-            <button
-              type="button"
-              onClick={handleGoogleLogin}
-              disabled={loginLoading}
-              className="ns-header-login"
-            >
-              <FaUserGraduate />
-
-              {loginLoading
-                ? "Signing in..."
-                : "Student Login"}
-            </button>
           </nav>
 
           {/* MOBILE HAMBURGER */}
@@ -319,12 +237,6 @@ const Header = () => {
             )}
           </button>
         </div>
-
-        {loginError && (
-          <div className="ns-header-error">
-            {loginError}
-          </div>
-        )}
 
         {/* MOBILE MENU */}
 
@@ -425,30 +337,25 @@ const Header = () => {
                   >
                     Free Legal Resources
                   </Link>
+
+                  <Link to="/#legal-updates" onClick={closeMenu}>
+                    Legal Updates
+                  </Link>
+
+                  <Link to="/#latest-videos" onClick={closeMenu}>
+                    Learning Videos
+                  </Link>
+
+                  <Link to="/posts" onClick={closeMenu}>
+                    Posts
+                  </Link>
+
+                  <Link to="/articles" onClick={closeMenu}>
+                    Articles
+                  </Link>
                 </div>
               )}
             </div>
-
-            <Link
-              to="/#legal-updates"
-              onClick={closeMenu}
-            >
-              Legal Updates
-            </Link>
-
-            <Link
-              to="/#latest-videos"
-              onClick={closeMenu}
-            >
-              Videos
-            </Link>
-
-            <Link
-              to="/posts"
-              onClick={closeMenu}
-            >
-              Posts
-            </Link>
 
             <Link
               to="/#legal-consultation"
@@ -456,19 +363,6 @@ const Header = () => {
             >
               Contact
             </Link>
-
-            <button
-              type="button"
-              className="ns-mobile-login"
-              onClick={handleGoogleLogin}
-              disabled={loginLoading}
-            >
-              <FaUserGraduate />
-
-              {loginLoading
-                ? "Signing in..."
-                : "Student Login"}
-            </button>
           </nav>
         )}
       </header>
