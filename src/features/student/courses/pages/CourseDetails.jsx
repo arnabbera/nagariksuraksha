@@ -41,6 +41,10 @@ import {
 } from "../../../../services/studentEnrollmentService";
 
 import {
+  payForCourseWithRazorpay,
+} from "../../../../services/razorpayPaymentService";
+
+import {
   getStudentCourseProgress,
 } from "../../../../services/studentProgressService";
 
@@ -501,7 +505,7 @@ export default function CourseDetails() {
   const hasCourseAccess =
     certificationPaymentCompleted;
 
-  const handleCertificationEnroll =
+  const handleCertificationPayment =
     async () => {
       if (
         !studentId ||
@@ -517,11 +521,38 @@ export default function CourseDetails() {
 
         setError("");
 
-        const updatedEnrollment =
-          await enrollForCertification(
+        let updatedEnrollment = enrollment;
+
+        if (!certificationPendingPayment) {
+          updatedEnrollment =
+            await enrollForCertification(
+              studentId,
+              course.id,
+              studentId,
+            );
+
+          setEnrollment(
+            updatedEnrollment,
+          );
+        }
+
+        await payForCourseWithRazorpay({
+          courseId: course.id,
+          courseTitle: course.title,
+          studentName:
+            profile?.displayName ||
+            firebaseUser?.displayName ||
+            "",
+          studentEmail:
+            firebaseUser?.email ||
+            profile?.email ||
+            "",
+        });
+
+        updatedEnrollment =
+          await getStudentEnrollment(
             studentId,
             course.id,
-            studentId,
           );
 
         setEnrollment(
@@ -948,7 +979,7 @@ export default function CourseDetails() {
                       certificationEnrolling
                     }
                     onClick={
-                      handleCertificationEnroll
+                      handleCertificationPayment
                     }
                   >
                     Enroll and Pay ₹99
@@ -965,6 +996,18 @@ export default function CourseDetails() {
                 <span>
                   Your course enrollment request has been created. Complete the ₹99 payment to unlock this course.
                 </span>
+
+                <Button
+                  loading={
+                    certificationEnrolling
+                  }
+                  onClick={
+                    handleCertificationPayment
+                  }
+                  style={{ marginTop: "12px" }}
+                >
+                  Continue Payment ₹99
+                </Button>
               </div>
             )}
 
