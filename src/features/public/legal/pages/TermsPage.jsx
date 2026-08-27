@@ -55,7 +55,7 @@ export default function TermsPage() {
               <ul>
                 <li>
                   <strong>Individual Course Access:</strong> Each Nagarik Suraksha
-                  course requires a ₹99 one-time enrollment fee. Successful
+                  course requires a ₹49 one-time enrollment fee. Successful
                   payment unlocks only the selected course.
                 </li>
                 <li>
@@ -117,12 +117,12 @@ export default function TermsPage() {
             <TermsCard icon={<FaMoneyCheckAlt />} title="4. Payments & Refunds">
               <ul>
                 <li>
-                  All payments of ₹99 for certification access are processed
+                  All payments of ₹49 for certification access are processed
                   securely through authorized third-party payment gateways
                   (e.g., Razorpay, Paytm, Cashfree).
                 </li>
                 <li>
-                  <strong>Refund Policy:</strong> The ₹99 fee is{" "}
+                  <strong>Refund Policy:</strong> The ₹49 fee is{" "}
                   <strong>non-refundable</strong> once payment is completed and
                   access to PDFs, mock tests, or certificate generation
                   features has been unlocked.
