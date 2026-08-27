@@ -86,8 +86,8 @@ const VideosSection = () => {
                   "10px",
               }}
             >
-              Latest Video
-              Lessons
+              Latest Learning
+              Videos
             </h2>
 
             <p
@@ -124,7 +124,7 @@ const VideosSection = () => {
                 600,
             }}
           >
-            View All Videos
+            View All Learning Videos
 
             <FaArrowRight />
           </Link>

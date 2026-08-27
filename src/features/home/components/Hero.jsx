@@ -177,21 +177,6 @@ const Hero = () => {
             )}
           </div>
 
-          <div className="ns-hero-enrollment">
-            <strong>
-              🎓 Student Login
-            </strong>
-
-            <span>
-              Automatic Enrollment ID
-              Generation
-            </span>
-
-            <small>
-              Example:
-              NS-05082026-000001
-            </small>
-          </div>
         </motion.div>
       </div>
 
