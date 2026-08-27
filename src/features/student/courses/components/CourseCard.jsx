@@ -120,7 +120,7 @@ const CourseCard = ({
             {certificationPaymentCompleted ? <FaBookOpen /> : <FaAward />}
             {certificationPaymentCompleted
               ? "Continue Course"
-              : "Join Course — ₹99"}
+              : "Join Course — ₹49"}
           </button>
         </div>
       </div>
