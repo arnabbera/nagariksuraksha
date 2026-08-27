@@ -1,10 +1,4 @@
-import { getFunctions, httpsCallable } from "firebase/functions";
-
-import app from "../firebase/firebase";
-
-const functions = getFunctions(app, "asia-south1");
-const createCoursePayment = httpsCallable(functions, "createCoursePayment");
-const verifyCoursePayment = httpsCallable(functions, "verifyCoursePayment");
+import { auth } from "../firebase/firebase";
 
 const CHECKOUT_SCRIPT = "https://checkout.razorpay.com/v1/checkout.js";
 
@@ -35,8 +29,30 @@ const loadRazorpayCheckout = () => {
   });
 };
 
-const callableMessage = (error, fallback) =>
-  error?.message?.replace(/^Firebase:\s*/i, "") || fallback;
+const callPaymentApi = async (path, data) => {
+  const user = auth.currentUser;
+
+  if (!user) {
+    throw new Error("Please sign in before making a payment.");
+  }
+
+  const token = await user.getIdToken();
+  const response = await fetch(path, {
+    method: "POST",
+    headers: {
+      authorization: `Bearer ${token}`,
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  const result = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    throw new Error(result.error || "Payment service is temporarily unavailable.");
+  }
+
+  return result;
+};
 
 export const payForCourseWithRazorpay = async ({
   courseId,
@@ -49,10 +65,9 @@ export const payForCourseWithRazorpay = async ({
   let order;
 
   try {
-    const response = await createCoursePayment({ courseId });
-    order = response.data;
+    order = await callPaymentApi("/api/razorpay/create-order", { courseId });
   } catch (error) {
-    throw new Error(callableMessage(error, "Unable to start payment."), {
+    throw new Error(error?.message || "Unable to start payment.", {
       cause: error,
     });
   }
@@ -84,7 +99,7 @@ export const payForCourseWithRazorpay = async ({
       },
       handler: async (payment) => {
         try {
-          const response = await verifyCoursePayment({
+          const response = await callPaymentApi("/api/razorpay/verify-payment", {
             courseId,
             razorpayOrderId: payment.razorpay_order_id,
             razorpayPaymentId: payment.razorpay_payment_id,
@@ -92,9 +107,9 @@ export const payForCourseWithRazorpay = async ({
           });
 
           settled = true;
-          resolve(response.data);
+          resolve(response);
         } catch (error) {
-          finishWithError(callableMessage(error, "Payment verification failed."));
+          finishWithError(error?.message || "Payment verification failed.");
         }
       },
     });
