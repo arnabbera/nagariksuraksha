@@ -381,7 +381,7 @@ export const enrollForCertification = async (
   // CERTIFICATION FEE
   // -------------------------------------------------------
 
-  const fee = 99;
+  const fee = 49;
 
   const freeCertification =
     fee <= 0;

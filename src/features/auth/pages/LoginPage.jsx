@@ -107,7 +107,7 @@ export default function LoginPage() {
           <div className="student-login-disclaimer-section">
             <h3>2. Individual Course Enrollment</h3>
             <p>
-              Each course requires a one-time <strong>₹99 enrollment fee</strong>.
+              Each course requires a one-time <strong>₹49 enrollment fee</strong>.
               After successful payment, that course and its learning materials
               become available under Enrolled Courses in the student portal.
             </p>
@@ -116,7 +116,7 @@ export default function LoginPage() {
           <div className="student-login-disclaimer-section">
             <h3>3. Certification Included</h3>
             <p>
-              The <strong>₹99 individual course fee</strong> covers course access,
+              The <strong>₹49 individual course fee</strong> covers course access,
               access to downloadable course PDFs, practice mock tests, and a
               digital Certificate of Completion.
             </p>

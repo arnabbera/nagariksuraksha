@@ -41,6 +41,10 @@ import {
 } from "../../../../services/studentEnrollmentService";
 
 import {
+  payForCourseWithRazorpay,
+} from "../../../../services/razorpayPaymentService";
+
+import {
   getStudentCourseProgress,
 } from "../../../../services/studentProgressService";
 
@@ -474,7 +478,7 @@ export default function CourseDetails() {
 
   const certificationAvailable = true;
 
-  const certificationFee = 99;
+  const certificationFee = 49;
 
   const certification =
     enrollment?.certification ||
@@ -501,7 +505,7 @@ export default function CourseDetails() {
   const hasCourseAccess =
     certificationPaymentCompleted;
 
-  const handleCertificationEnroll =
+  const handleCertificationPayment =
     async () => {
       if (
         !studentId ||
@@ -517,11 +521,38 @@ export default function CourseDetails() {
 
         setError("");
 
-        const updatedEnrollment =
-          await enrollForCertification(
+        let updatedEnrollment = enrollment;
+
+        if (!certificationPendingPayment) {
+          updatedEnrollment =
+            await enrollForCertification(
+              studentId,
+              course.id,
+              studentId,
+            );
+
+          setEnrollment(
+            updatedEnrollment,
+          );
+        }
+
+        await payForCourseWithRazorpay({
+          courseId: course.id,
+          courseTitle: course.title,
+          studentName:
+            profile?.displayName ||
+            firebaseUser?.displayName ||
+            "",
+          studentEmail:
+            firebaseUser?.email ||
+            profile?.email ||
+            "",
+        });
+
+        updatedEnrollment =
+          await getStudentEnrollment(
             studentId,
             course.id,
-            studentId,
           );
 
         setEnrollment(
@@ -864,7 +895,7 @@ export default function CourseDetails() {
 
             {!certificationPaymentCompleted && (
               <div className="ns-course-enroll-action">
-                <p>Pay ₹99 once to join this course and unlock all chapters, study PDFs, mock tests and the final examination.</p>
+                <p>Pay ₹49 once to join this course and unlock all chapters, study PDFs, mock tests and the final examination.</p>
               </div>
             )}
           </div>
@@ -948,10 +979,10 @@ export default function CourseDetails() {
                       certificationEnrolling
                     }
                     onClick={
-                      handleCertificationEnroll
+                      handleCertificationPayment
                     }
                   >
-                    Enroll and Pay ₹99
+                    Enroll and Pay ₹49
                   </Button>
                 </div>
               )}
@@ -963,8 +994,20 @@ export default function CourseDetails() {
                 </strong>
 
                 <span>
-                  Your course enrollment request has been created. Complete the ₹99 payment to unlock this course.
+                  Your course enrollment request has been created. Complete the ₹49 payment to unlock this course.
                 </span>
+
+                <Button
+                  loading={
+                    certificationEnrolling
+                  }
+                  onClick={
+                    handleCertificationPayment
+                  }
+                  style={{ marginTop: "12px" }}
+                >
+                  Continue Payment ₹49
+                </Button>
               </div>
             )}
 

@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
                     generation history.
                   </li>
                   <li>
-                    <strong>Payment Details:</strong> When you pay the ₹99 fee
+                    <strong>Payment Details:</strong> When you pay the ₹49 fee
                     for certification, your payment is processed directly by
                     our authorized payment gateway partners (e.g., Razorpay,
                     Paytm, Cashfree). <strong>We never receive or store your
