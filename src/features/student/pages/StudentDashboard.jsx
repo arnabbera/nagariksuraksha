@@ -32,12 +32,14 @@ import { useAuth } from "../../../hooks/useAuth";
 
 import {
   getCourseById,
+  getPublishedCourses,
 } from "../../../services/courseService";
 
 import {
   getCertificationAccess,
   getStudentEnrollments,
   hasActiveCertification,
+  hasPaidCourseAccess,
 } from "../../../services/studentEnrollmentService";
 
 // =========================================================
@@ -243,6 +245,11 @@ const StudentDashboard = () => {
   ] = useState([]);
 
   const [
+    publishedCourses,
+    setPublishedCourses,
+  ] = useState([]);
+
+  const [
     loading,
     setLoading,
   ] = useState(true);
@@ -258,14 +265,6 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     if (!studentId) {
-      setEnrollmentRows(
-        [],
-      );
-
-      setLoading(
-        false,
-      );
-
       return;
     }
 
@@ -283,10 +282,17 @@ const StudentDashboard = () => {
             "",
           );
 
-          const enrollments =
-            await getStudentEnrollments(
+          const [
+            enrollments,
+            courses,
+          ] = await Promise.all([
+            getStudentEnrollments(
               studentId,
-            );
+            ),
+            getPublishedCourses({
+              pageSize: 100,
+            }),
+          ]);
 
           const safeEnrollments =
             Array.isArray(
@@ -335,6 +341,12 @@ const StudentDashboard = () => {
             setEnrollmentRows(
               rows,
             );
+
+            setPublishedCourses(
+              Array.isArray(courses)
+                ? courses
+                : [],
+            );
           }
         } catch (
           dashboardError
@@ -354,6 +366,10 @@ const StudentDashboard = () => {
             );
 
             setEnrollmentRows(
+              [],
+            );
+
+            setPublishedCourses(
               [],
             );
           }
@@ -382,13 +398,41 @@ const StudentDashboard = () => {
   // SUMMARY
   // =========================================================
 
+  const paidEnrollmentRows =
+    useMemo(
+      () =>
+        enrollmentRows.filter(
+          ({ enrollment }) =>
+            hasPaidCourseAccess(
+              enrollment,
+            ),
+        ),
+      [enrollmentRows],
+    );
+
   const dashboardSummary =
     useMemo(() => {
       const totalCourses =
-        enrollmentRows.length;
+        paidEnrollmentRows.length;
+
+      const paidCourseIds =
+        new Set(
+          paidEnrollmentRows.map(
+            ({ enrollment }) =>
+              enrollment?.courseId,
+          ),
+        );
+
+      const availableCourses =
+        publishedCourses.filter(
+          (course) =>
+            !paidCourseIds.has(
+              course.id,
+            ),
+        ).length;
 
       const certificationCourses =
-        enrollmentRows.filter(
+        paidEnrollmentRows.filter(
           ({
             enrollment,
           }) =>
@@ -398,7 +442,7 @@ const StudentDashboard = () => {
         ).length;
 
       const certificates =
-        enrollmentRows.filter(
+        paidEnrollmentRows.filter(
           ({
             enrollment,
           }) =>
@@ -413,7 +457,7 @@ const StudentDashboard = () => {
         totalCourses >
         0
           ? Math.round(
-              enrollmentRows.reduce(
+              paidEnrollmentRows.reduce(
                 (
                   total,
                   {
@@ -434,12 +478,14 @@ const StudentDashboard = () => {
 
       return {
         totalCourses,
+        availableCourses,
         certificationCourses,
         certificates,
         overallProgress,
       };
     }, [
-      enrollmentRows,
+      paidEnrollmentRows,
+      publishedCourses,
     ]);
 
   // =========================================================
@@ -1031,6 +1077,25 @@ const StudentDashboard = () => {
       <section className="ns-summary-grid">
         <div className="ns-summary-card">
           <div className="ns-summary-icon blue">
+            <FaGraduationCap />
+          </div>
+
+          <div>
+            <span>
+              Available Courses
+            </span>
+
+            <strong>
+              {
+                dashboardSummary
+                  .availableCourses
+              }
+            </strong>
+          </div>
+        </div>
+
+        <div className="ns-summary-card">
+          <div className="ns-summary-icon blue">
             <FaBookOpen />
           </div>
 
@@ -1264,10 +1329,10 @@ const StudentDashboard = () => {
               Loading your courses...
             </span>
           </div>
-        ) : enrollmentRows.length >
+        ) : paidEnrollmentRows.length >
           0 ? (
           <div className="ns-course-list">
-            {enrollmentRows.map(
+            {paidEnrollmentRows.map(
               renderCourseCard,
             )}
           </div>
@@ -1665,7 +1730,7 @@ const StudentDashboard = () => {
           .ns-summary-grid {
             display: grid;
             grid-template-columns:
-              repeat(5, minmax(0, 1fr));
+              repeat(3, minmax(0, 1fr));
             gap: 14px;
             margin-bottom: 24px;
           }
