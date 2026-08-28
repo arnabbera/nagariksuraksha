@@ -84,6 +84,7 @@ import ChapterLearning from "../features/student/learning/pages/ChapterLearning"
 import MockTestPage from "../features/student/exams/pages/MockTestPage";
 
 import FinalExamPage from "../features/student/exams/pages/FinalExamPage";
+import CourseAssessmentPage from "../features/student/exams/pages/CourseAssessmentPage";
 
 import StudentCertificatesPage from "../features/student/certificates/pages/StudentCertificatesPage";
 import StudentProfilePage from "../features/student/profile/pages/StudentProfilePage";
@@ -292,6 +293,16 @@ export default function AppRouter() {
         <Route
           path="final-exam/torts"
           element={<FinalExamPage />}
+        />
+
+        <Route
+          path="courses/:courseId/mock-tests/:testNumber"
+          element={<CourseAssessmentPage examType="mock" />}
+        />
+
+        <Route
+          path="courses/:courseId/final-exam"
+          element={<CourseAssessmentPage examType="final" />}
         />
 
         <Route

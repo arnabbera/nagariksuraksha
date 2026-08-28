@@ -505,6 +505,18 @@ export default function CourseDetails() {
   const hasCourseAccess =
     certificationPaymentCompleted;
 
+  const certificationMockTests =
+    certification?.mockTests || {};
+
+  const mockCompleted = (testNumber) =>
+    ["passed", "failed", "completed"].includes(
+      certificationMockTests[`test${testNumber}`]?.status,
+    );
+
+  const mockTest2Available = mockCompleted(1);
+  const mockTest3Available = mockCompleted(2);
+  const finalExamAvailable = [1, 2, 3].every(mockCompleted);
+
   const handleCertificationPayment =
     async () => {
       if (
@@ -1006,33 +1018,52 @@ export default function CourseDetails() {
                     </span>
                   </div>
 
-                  <div className="is-unlocked">
+                  <button
+                    type="button"
+                    className="is-unlocked"
+                    onClick={() => navigate(`/student/courses/${course.slug}/mock-tests/1`)}
+                  >
                     <FaCheckCircle />
                     <span>
-                      Mock Test 1 Available
+                      Start Mock Test 1
                     </span>
-                  </div>
+                  </button>
 
-                  <div>
-                    <FaLock />
+                  <button
+                    type="button"
+                    className={mockTest2Available ? "is-unlocked" : ""}
+                    disabled={!mockTest2Available}
+                    onClick={() => navigate(`/student/courses/${course.slug}/mock-tests/2`)}
+                  >
+                    {mockTest2Available ? <FaCheckCircle /> : <FaLock />}
                     <span>
-                      Mock Test 2 Locked
+                      {mockTest2Available ? "Start Mock Test 2" : "Mock Test 2 Locked"}
                     </span>
-                  </div>
+                  </button>
 
-                  <div>
-                    <FaLock />
+                  <button
+                    type="button"
+                    className={mockTest3Available ? "is-unlocked" : ""}
+                    disabled={!mockTest3Available}
+                    onClick={() => navigate(`/student/courses/${course.slug}/mock-tests/3`)}
+                  >
+                    {mockTest3Available ? <FaCheckCircle /> : <FaLock />}
                     <span>
-                      Mock Test 3 Locked
+                      {mockTest3Available ? "Start Mock Test 3" : "Mock Test 3 Locked"}
                     </span>
-                  </div>
+                  </button>
 
-                  <div>
-                    <FaLock />
+                  <button
+                    type="button"
+                    className={finalExamAvailable ? "is-unlocked" : ""}
+                    disabled={!finalExamAvailable}
+                    onClick={() => navigate(`/student/courses/${course.slug}/final-exam`)}
+                  >
+                    {finalExamAvailable ? <FaCheckCircle /> : <FaLock />}
                     <span>
-                      Final Examination Locked
+                      {finalExamAvailable ? "Start Final Examination" : "Final Examination Locked"}
                     </span>
-                  </div>
+                  </button>
                 </div>
               </div>
             )}
@@ -1679,7 +1710,8 @@ export default function CourseDetails() {
             padding: 0 20px 20px;
           }
 
-          .ns-certification-access-grid > div {
+          .ns-certification-access-grid > div,
+          .ns-certification-access-grid > button {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -1690,10 +1722,19 @@ export default function CourseDetails() {
             padding: 10px 12px;
             font-size: 11px;
             font-weight: 700;
+            text-align: left;
+          }
+
+          .ns-certification-access-grid > button:not(:disabled) {
+            cursor: pointer;
+          }
+
+          .ns-certification-access-grid > button:disabled {
+            cursor: not-allowed;
           }
 
           .ns-certification-access-grid
-            > div.is-unlocked {
+            > .is-unlocked {
             border-color: #bbf7d0;
             background: #f0fdf4;
             color: #166534;
