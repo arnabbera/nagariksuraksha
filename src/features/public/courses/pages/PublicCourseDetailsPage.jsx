@@ -56,28 +56,6 @@ const getMobileImage = (
   course?.media?.thumbnailUrl ||
   getDesktopImage(course);
 
-const formatFee = (
-  value,
-  currency = "INR",
-) => {
-  const amount =
-    Number(value || 0);
-
-  if (amount <= 0) {
-    return "Free";
-  }
-
-  return new Intl.NumberFormat(
-    "en-IN",
-    {
-      style: "currency",
-      currency:
-        currency || "INR",
-      maximumFractionDigits: 0,
-    },
-  ).format(amount);
-};
-
 const getRobots = (
   course,
 ) => {
@@ -602,7 +580,7 @@ export default function PublicCourseDetailsPage() {
                   className="primary-course-cta"
                   to="/login"
                 >
-                  Enroll at ₹49
+                  Enroll for ₹49
                   <FaArrowRight />
                 </Link>
 
@@ -830,7 +808,7 @@ export default function PublicCourseDetailsPage() {
                   className="sidebar-login-button"
                   to="/login"
                 >
-                  Enroll at ₹49
+                  Enroll for ₹49
                   <FaArrowRight />
                 </Link>
               </div>
@@ -856,57 +834,6 @@ export default function PublicCourseDetailsPage() {
             </aside>
           </div>
         </section>
-
-        {/* CERTIFICATION */}
-
-        {certification
-          ?.available && (
-          <section className="public-certification-section">
-            <div className="course-page-container certification-grid">
-              <div>
-                <span className="content-label light">
-                  Certification
-                </span>
-
-                <h2>
-                  Learn. Test Your
-                  Knowledge. Earn a
-                  Certificate.
-                </h2>
-
-                <p>
-                  Certification enrollment
-                  provides the additional
-                  assessment and credential
-                  benefits configured for
-                  this course.
-                </p>
-              </div>
-
-              <div className="certification-box">
-                <FaCertificate />
-
-                <div>
-                  <span>
-                    Certification Fee
-                  </span>
-
-                  <strong>
-                    {formatFee(
-                      certification.fee,
-                      certification.currency,
-                    )}
-                  </strong>
-
-                  <Link to="/login">
-                    View Certification
-                    <FaArrowRight />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* SEO TEXT */}
 
@@ -1338,94 +1265,6 @@ export default function PublicCourseDetailsPage() {
               line-height: 1.55;
             }
 
-            .public-certification-section {
-              padding: 55px 0;
-              background:
-                linear-gradient(
-                  135deg,
-                  #111827,
-                  #1e3a8a
-                );
-              color: white;
-            }
-
-            .certification-grid {
-              display: grid;
-              grid-template-columns:
-                minmax(0, 1fr)
-                minmax(260px, .45fr);
-              gap: 40px;
-              align-items: center;
-            }
-
-            .content-label.light {
-              color: #fde68a;
-            }
-
-            .public-certification-section h2 {
-              margin: 0;
-              max-width: 650px;
-              color: white;
-              font-size:
-                clamp(
-                  25px,
-                  4vw,
-                  38px
-                );
-            }
-
-            .public-certification-section p {
-              max-width: 700px;
-              color: #cbd5e1;
-              font-size: 13px;
-              line-height: 1.7;
-            }
-
-            .certification-box {
-              display: flex;
-              align-items: center;
-              gap: 15px;
-              padding: 20px;
-              border: 1px solid
-                rgba(255,255,255,.15);
-              border-radius: 14px;
-              background:
-                rgba(255,255,255,.08);
-            }
-
-            .certification-box > svg {
-              flex-shrink: 0;
-              color: #fde047;
-              font-size: 35px;
-            }
-
-            .certification-box span,
-            .certification-box strong {
-              display: block;
-            }
-
-            .certification-box span {
-              color: #cbd5e1;
-              font-size: 10px;
-            }
-
-            .certification-box strong {
-              margin-top: 3px;
-              color: white;
-              font-size: 20px;
-            }
-
-            .certification-box a {
-              display: inline-flex;
-              align-items: center;
-              gap: 6px;
-              margin-top: 7px;
-              color: #fde047;
-              text-decoration: none;
-              font-size: 10px;
-              font-weight: 800;
-            }
-
             .course-seo-section {
               padding: 60px 0;
               background: #f8fafc;
@@ -1524,9 +1363,6 @@ export default function PublicCourseDetailsPage() {
                 max-width: none;
               }
 
-              .certification-grid {
-                grid-template-columns: 1fr;
-              }
             }
 
             @media (max-width: 640px) {
@@ -1569,10 +1405,6 @@ export default function PublicCourseDetailsPage() {
 
               .learning-benefits-grid {
                 grid-template-columns: 1fr;
-              }
-
-              .public-certification-section {
-                padding: 45px 0;
               }
 
               .course-seo-section {
