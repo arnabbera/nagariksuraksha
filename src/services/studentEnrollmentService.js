@@ -773,6 +773,126 @@ export const activateCertification = async (
 };
 
 // =========================================================
+// COURSE ASSESSMENT RESULTS
+// =========================================================
+
+export const saveMockTestResult = async (
+  studentId,
+  courseId,
+  testNumber,
+  result,
+) => {
+  const enrollment =
+    await getStudentEnrollment(studentId, courseId);
+
+  if (!hasPaidCourseAccess(enrollment)) {
+    throw new Error("Paid course enrollment is required.");
+  }
+
+  const number = Number(testNumber);
+  if (![1, 2, 3].includes(number)) {
+    throw new Error("Invalid mock test number.");
+  }
+
+  const certification = enrollment.certification || {};
+  const mockTests = certification.mockTests || {};
+  const completedAt = new Date();
+  const passed = result.percentage >= Number(result.passPercentage || 50);
+  const updatedMockTests = {
+    ...mockTests,
+    [`test${number}`]: {
+      ...(mockTests[`test${number}`] || {}),
+      testNumber: number,
+      status: passed ? "passed" : "failed",
+      passed,
+      score: result.score,
+      maximumMarks: result.maximumMarks,
+      percentage: result.percentage,
+      completedAt,
+    },
+  };
+
+  if (number < 3) {
+    updatedMockTests[`test${number + 1}`] = {
+      ...(mockTests[`test${number + 1}`] || {}),
+      testNumber: number + 1,
+      status: "available",
+    };
+  }
+
+  const allCompleted = [1, 2, 3].every((candidate) =>
+    ["passed", "failed", "completed"].includes(
+      updatedMockTests[`test${candidate}`]?.status,
+    ),
+  );
+
+  return studentEnrollmentRepository.update(enrollment.id, {
+    certification: {
+      ...certification,
+      access: {
+        ...(certification.access || {}),
+        finalExam: allCompleted,
+      },
+      mockTests: updatedMockTests,
+      finalExam: {
+        ...(certification.finalExam || {}),
+        eligible: allCompleted,
+        status: allCompleted
+          ? "available"
+          : certification.finalExam?.status || "locked",
+      },
+    },
+    updatedBy: studentId,
+  });
+};
+
+export const saveFinalExamResult = async (
+  studentId,
+  courseId,
+  result,
+) => {
+  const enrollment =
+    await getStudentEnrollment(studentId, courseId);
+
+  if (!hasPaidCourseAccess(enrollment)) {
+    throw new Error("Paid course enrollment is required.");
+  }
+
+  const certification = enrollment.certification || {};
+  const allMocksCompleted = [1, 2, 3].every((number) =>
+    ["passed", "failed", "completed"].includes(
+      certification.mockTests?.[`test${number}`]?.status,
+    ),
+  );
+
+  if (!allMocksCompleted) {
+    throw new Error("Complete all three mock tests first.");
+  }
+
+  const passed = result.percentage >= Number(result.passPercentage || 80);
+  const completedAt = new Date();
+
+  return studentEnrollmentRepository.update(enrollment.id, {
+    certification: {
+      ...certification,
+      status: passed ? CERTIFICATION_STATUS.COMPLETED : CERTIFICATION_STATUS.ACTIVE,
+      completedAt: passed ? completedAt : certification.completedAt || null,
+      finalExam: {
+        ...(certification.finalExam || {}),
+        eligible: true,
+        status: passed ? "passed" : "failed",
+        passed,
+        score: result.score,
+        maximumMarks: result.maximumMarks,
+        percentage: result.percentage,
+        completedAt,
+      },
+    },
+    updatedBy: studentId,
+  });
+};
+
+// =========================================================
 // DEFAULT EXPORT
 // =========================================================
 
@@ -790,6 +910,10 @@ export default {
   enrollForCertification,
 
   activateCertification,
+
+  saveMockTestResult,
+
+  saveFinalExamResult,
 
   hasActiveCertification,
 
