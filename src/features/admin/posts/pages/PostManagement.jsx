@@ -48,6 +48,9 @@ export default function PostManagement() {
   const formRef =
     useRef(null);
 
+  const templateInitializedRef =
+    useRef(false);
+
   const [
     posts,
     setPosts,
@@ -116,16 +119,18 @@ export default function PostManagement() {
             result,
           )
             ? result
-            : [];
+              : [];
+
+        const activePosts =
+          safePosts.filter(
+            (
+              post,
+            ) =>
+              !post.deleted,
+          );
 
         setPosts(
-          safePosts
-            .filter(
-              (
-                post,
-              ) =>
-                !post.deleted,
-            )
+          activePosts
             .sort(
               (
                 first,
@@ -141,6 +146,34 @@ export default function PostManagement() {
                 ),
             ),
         );
+
+        if (
+          !templateInitializedRef.current
+        ) {
+          templateInitializedRef.current =
+            true;
+
+          const matanginiPostExists =
+            activePosts.some(
+              (
+                post,
+              ) =>
+                post.slug ===
+                MATANGINI_HAZRA_POST_TEMPLATE.slug,
+            );
+
+          if (
+            !matanginiPostExists
+          ) {
+            setEditingPost({
+              ...MATANGINI_HAZRA_POST_TEMPLATE,
+            });
+
+            setMessage(
+              "The Matangini Hazra article is ready below. Upload both images, review it and select Save Post.",
+            );
+          }
+        }
       } catch (
         loadError
       ) {
