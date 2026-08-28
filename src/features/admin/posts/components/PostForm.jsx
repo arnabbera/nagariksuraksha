@@ -667,6 +667,21 @@ export default function PostForm({
         return;
       }
 
+      const isNewPost =
+        !post?.id;
+
+      if (
+        isNewPost &&
+        (!desktopFile ||
+          !mobileFile)
+      ) {
+        setImageError(
+          "Upload both the 16:9 desktop image and the 9:16 mobile image before creating this post.",
+        );
+
+        return;
+      }
+
       try {
         setUploadingImages(
           true,
