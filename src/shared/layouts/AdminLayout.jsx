@@ -1,12 +1,40 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+
+import { useAuth } from "../../hooks/useAuth";
 
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 
 const AdminLayout = () => {
+  const {
+    firebaseUser,
+    loading,
+    role,
+  } = useAuth();
+
   const [mobileSidebarOpen, setMobileSidebarOpen] =
     useState(false);
+
+  if (loading) {
+    return (
+      <div className="ns-admin-auth-loading">
+        Verifying administrator access...
+      </div>
+    );
+  }
+
+  if (
+    !firebaseUser ||
+    role !== "admin"
+  ) {
+    return (
+      <Navigate
+        to="/login"
+        replace
+      />
+    );
+  }
 
   return (
     <div className="ns-admin-shell">
