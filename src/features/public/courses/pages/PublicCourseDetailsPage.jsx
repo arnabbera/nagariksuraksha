@@ -452,6 +452,41 @@ export default function PublicCourseDetailsPage() {
         0,
     );
 
+  const assessmentInformation =
+    course?.assessments ||
+    certification?.assessments ||
+    {};
+
+  const mockTestCount =
+    Number(
+      assessmentInformation
+        ?.mockTests
+        ?.count ||
+        assessmentInformation
+          ?.mockTestCount ||
+        3,
+    );
+
+  const mockTestQuestionCount =
+    Number(
+      assessmentInformation
+        ?.mockTests
+        ?.questionsPerTest ||
+        assessmentInformation
+          ?.mockTestQuestionCount ||
+        50,
+    );
+
+  const finalTestQuestionCount =
+    Number(
+      assessmentInformation
+        ?.finalTest
+        ?.questionCount ||
+        assessmentInformation
+          ?.finalTestQuestionCount ||
+        50,
+    );
+
   // =======================================================
   // RENDER
   // =======================================================
@@ -738,61 +773,58 @@ export default function PublicCourseDetailsPage() {
                   </strong>
                 </div>
 
-                {course.duration && (
-                  <div className="info-row">
-                    <span>
-                      Duration
-                    </span>
-
-                    <strong>
-                      {
-                        course.duration
-                      }
-                    </strong>
-                  </div>
-                )}
-
                 <div className="info-row">
                   <span>
-                    Learning Access
+                    Mock Tests
                   </span>
 
                   <strong>
-                    {course.accessType ===
-                    "free-learning"
-                      ? "Free Learning"
-                      : course.accessType}
+                    {mockTestCount}
                   </strong>
                 </div>
 
                 <div className="info-row">
                   <span>
-                    Certification
+                    Questions per Mock Test
+                  </span>
+
+                  <strong>
+                    {mockTestQuestionCount}
+                  </strong>
+                </div>
+
+                <div className="info-row">
+                  <span>
+                    Final Certification Test
+                  </span>
+
+                  <strong>
+                    1 Test
+                  </strong>
+                </div>
+
+                <div className="info-row">
+                  <span>
+                    Final Test Questions
+                  </span>
+
+                  <strong>
+                    {finalTestQuestionCount}
+                  </strong>
+                </div>
+
+                <div className="info-row">
+                  <span>
+                    Certificate
                   </span>
 
                   <strong>
                     {certification
-                      ?.available
-                      ? "Available"
-                      : "Not Available"}
+                      ?.available === false
+                      ? "Not Available"
+                      : "Digital Certificate"}
                   </strong>
                 </div>
-
-                {certification
-                  ?.available && (
-                  <div className="info-row">
-                    <span>
-                      Certification Fee
-                    </span>
-
-                    <strong>
-                      {formatFee(
-                        certification.fee,
-                        certification.currency,
-                      )}
-                    </strong>
-                  </div>
-                )}
 
                 <Link
                   className="sidebar-login-button"
