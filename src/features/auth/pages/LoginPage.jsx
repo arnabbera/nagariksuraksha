@@ -6,13 +6,11 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-import {
-  getUserRole,
-  loginWithGoogle,
-} from "../../../firebase/auth";
+import { useAuth } from "../../../hooks/useAuth";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const { signIn } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -22,10 +20,9 @@ export default function LoginPage() {
       setIsLoading(true);
       setError("");
 
-      const user = await loginWithGoogle();
-      const role = getUserRole(user.email);
+      const { profile } = await signIn();
 
-      navigate(role === "admin" ? "/admin" : "/student", {
+      navigate(profile?.role === "admin" ? "/admin" : "/student", {
         replace: true,
       });
     } catch (loginError) {
