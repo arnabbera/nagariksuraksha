@@ -602,7 +602,7 @@ export default function PublicCourseDetailsPage() {
                   className="primary-course-cta"
                   to="/login"
                 >
-                  Start Learning
+                  Enroll at ₹49
                   <FaArrowRight />
                 </Link>
 
@@ -830,7 +830,7 @@ export default function PublicCourseDetailsPage() {
                   className="sidebar-login-button"
                   to="/login"
                 >
-                  Start Course
+                  Enroll at ₹49
                   <FaArrowRight />
                 </Link>
               </div>
@@ -939,6 +939,70 @@ export default function PublicCourseDetailsPage() {
               Explore More LL.B Courses
               <FaArrowRight />
             </Link>
+          </div>
+        </section>
+
+        {/* TERMS AND DISCLAIMER */}
+
+        <section className="course-terms-section">
+          <div className="course-page-container">
+            <div className="course-terms-heading">
+              <span className="content-label">
+                Please Read Before Enrollment
+              </span>
+
+              <h2>
+                Terms &amp; Disclaimer
+              </h2>
+            </div>
+
+            <div className="course-terms-grid">
+              <article>
+                <h3>
+                  1. Independent Entity Disclaimer
+                </h3>
+
+                <p>
+                  Nagarik Suraksha is an independent, private educational portal. We are <strong>not</strong> affiliated with, endorsed by, accredited by, or connected to any government agency, university, or official educational board.
+                </p>
+              </article>
+
+              <article>
+                <h3>
+                  2. Individual Course Enrollment
+                </h3>
+
+                <p>
+                  Each course requires a one-time <strong>₹49 enrollment fee</strong>. After successful payment, that course and its learning materials become available under Enrolled Courses in the student portal.
+                </p>
+              </article>
+
+              <article>
+                <h3>
+                  3. Certification Included
+                </h3>
+
+                <p>
+                  The <strong>₹49 individual course fee</strong> covers course access, access to downloadable course PDFs, practice mock tests, and a digital Certificate of Completion.
+                </p>
+
+                <p className="course-important-notice">
+                  <strong>Important Notice:</strong> The certificate issued by Nagarik Suraksha is an appreciation/completion document for personal learning only. It <strong>does not</strong> constitute an accredited academic degree, official diploma, professional licence, or government qualification.
+                </p>
+              </article>
+            </div>
+
+            <div className="course-terms-links">
+              <Link to="/terms">
+                Read Full Terms
+                <FaArrowRight />
+              </Link>
+
+              <Link to="/disclaimer">
+                Read Full Disclaimer
+                <FaArrowRight />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -1383,6 +1447,70 @@ export default function PublicCourseDetailsPage() {
               font-weight: 800;
             }
 
+            .course-terms-section {
+              border-top: 1px solid #e2e8f0;
+              background: #ffffff;
+              padding: 65px 0;
+            }
+
+            .course-terms-heading h2 {
+              margin: 0;
+              color: #0f172a;
+              font-size: clamp(24px, 3vw, 32px);
+            }
+
+            .course-terms-grid {
+              display: grid;
+              gap: 16px;
+              margin-top: 24px;
+            }
+
+            .course-terms-grid article {
+              border: 1px solid #e2e8f0;
+              border-radius: 14px;
+              background: #f8fafc;
+              padding: 20px;
+            }
+
+            .course-terms-grid h3 {
+              margin: 0 0 9px;
+              color: #0f172a;
+              font-size: 16px;
+            }
+
+            .course-terms-grid p {
+              margin: 0;
+              color: #475569;
+              font-size: 13px;
+              line-height: 1.75;
+            }
+
+            .course-terms-grid .course-important-notice {
+              margin-top: 14px;
+              border-left: 4px solid #d97706;
+              border-radius: 8px;
+              background: #fffbeb;
+              color: #78350f;
+              padding: 12px 14px;
+            }
+
+            .course-terms-links {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 18px;
+              margin-top: 22px;
+            }
+
+            .course-terms-links a {
+              display: inline-flex;
+              align-items: center;
+              gap: 7px;
+              color: #2563eb;
+              font-size: 12px;
+              font-weight: 800;
+              text-decoration: none;
+            }
+
             @media (max-width: 900px) {
               .course-hero-grid {
                 grid-template-columns: 1fr;
@@ -1448,6 +1576,10 @@ export default function PublicCourseDetailsPage() {
               }
 
               .course-seo-section {
+                padding: 45px 0;
+              }
+
+              .course-terms-section {
                 padding: 45px 0;
               }
             }
