@@ -56,28 +56,6 @@ const getCourseUrl = (
     ""
   }`;
 
-const formatFee = (
-  value,
-  currency = "INR",
-) => {
-  const amount =
-    Number(value || 0);
-
-  if (amount <= 0) {
-    return "Free";
-  }
-
-  return new Intl.NumberFormat(
-    "en-IN",
-    {
-      style: "currency",
-      currency:
-        currency || "INR",
-      maximumFractionDigits: 0,
-    },
-  ).format(amount);
-};
-
 // =========================================================
 // STRUCTURED DATA
 // =========================================================
@@ -370,11 +348,6 @@ export default function PublicCoursesPage() {
                           course,
                         );
 
-                      const certification =
-                        course
-                          ?.certification ||
-                        {};
-
                       return (
                         <article
                           className="public-course-card"
@@ -447,29 +420,6 @@ export default function PublicCoursesPage() {
                                   .description ||
                                 "Explore this structured law course from NagarikSuraksha."}
                             </p>
-
-                            {certification
-                              ?.available && (
-                              <div className="certification-info">
-                                <FaCertificate />
-
-                                <span>
-                                  Certification
-                                  available
-                                  {Number(
-                                    certification
-                                      .fee ||
-                                      0,
-                                  ) >
-                                  0
-                                    ? ` — ${formatFee(
-                                        certification.fee,
-                                        certification.currency,
-                                      )}`
-                                    : ""}
-                                </span>
-                              </div>
-                            )}
 
                             <Link
                               className="course-link"
@@ -831,19 +781,6 @@ export default function PublicCoursesPage() {
               line-height: 1.65;
               -webkit-box-orient: vertical;
               -webkit-line-clamp: 4;
-            }
-
-            .certification-info {
-              display: flex;
-              align-items: center;
-              gap: 7px;
-              margin-top: auto;
-              padding: 10px;
-              border-radius: 9px;
-              background: #f0fdf4;
-              color: #047857;
-              font-size: 11px;
-              font-weight: 700;
             }
 
             .course-link {
