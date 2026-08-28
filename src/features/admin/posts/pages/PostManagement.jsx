@@ -9,6 +9,7 @@ import {
   FaArchive,
   FaEdit,
   FaEye,
+  FaFlag,
   FaPlus,
   FaSearch,
   FaStar,
@@ -16,6 +17,7 @@ import {
 } from "react-icons/fa";
 
 import PostForm from "../components/PostForm";
+import { MATANGINI_HAZRA_POST_TEMPLATE } from "../data/matanginiHazraPost";
 
 import {
   useAuth,
@@ -241,6 +243,17 @@ export default function PostManagement() {
       setEditingPost(
         null,
       );
+
+      scrollToForm();
+    };
+
+  const handleMatanginiHazraPost =
+    () => {
+      clearMessages();
+
+      setEditingPost({
+        ...MATANGINI_HAZRA_POST_TEMPLATE,
+      });
 
       scrollToForm();
     };
@@ -532,16 +545,29 @@ export default function PostManagement() {
           "Posts",
         ]}
         actions={
-          <Button
-            leftIcon={
-              <FaPlus />
-            }
-            onClick={
-              handleNewPost
-            }
-          >
-            New Post
-          </Button>
+          <div className="ns-post-header-actions">
+            <Button
+              leftIcon={
+                <FaFlag />
+              }
+              onClick={
+                handleMatanginiHazraPost
+              }
+            >
+              Matangini Hazra Post
+            </Button>
+
+            <Button
+              leftIcon={
+                <FaPlus />
+              }
+              onClick={
+                handleNewPost
+              }
+            >
+              New Post
+            </Button>
+          </div>
         }
       />
 
@@ -565,13 +591,15 @@ export default function PostManagement() {
       >
         <Card
           title={
-            editingPost
+            editingPost?.id
               ? "Edit Post"
               : "Create Post"
           }
           subtitle={
-            editingPost
+            editingPost?.id
               ? `Editing: ${editingPost.title}`
+              : editingPost
+                ? "Review the prepared article, upload both images and publish when ready."
               : "Write the post, upload 16:9 and 9:16 images, and configure SEO."
           }
         >
@@ -856,6 +884,13 @@ export default function PostManagement() {
           .ns-post-management,
           .ns-post-management * {
             box-sizing: border-box;
+          }
+
+          .ns-post-header-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 9px;
           }
 
           .ns-post-admin-layout {
