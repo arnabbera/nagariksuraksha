@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useCallback,
   useMemo,
   useState,
 } from "react";
@@ -22,8 +23,13 @@ import PageHeader from "../../../../shared/components/PageHeader";
 
 import CourseCard from "../components/CourseCard";
 
+import {
+  createAdminCourseEnrollment,
+  isAdministrator,
+} from "../../../../utils/adminCourseAccess";
+
 export default function MyCourses({ view = "available" }) {
-  const { firebaseUser, profile } = useAuth();
+  const { firebaseUser, profile, role } = useAuth();
 
   const [courses, setCourses] = useState([]);
   const [enrollments, setEnrollments] = useState([]);
@@ -34,13 +40,9 @@ export default function MyCourses({ view = "available" }) {
   const studentId =
     firebaseUser?.uid || profile?.uid || "";
 
-  useEffect(() => {
-    if (studentId) {
-      loadData();
-    }
-  }, [studentId]);
+  const isAdmin = isAdministrator({ role, profile });
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
       setLoading(true);
       setError("");
@@ -52,7 +54,9 @@ export default function MyCourses({ view = "available" }) {
         getPublishedCourses({
           pageSize: 100,
         }),
-        getStudentEnrollments(studentId),
+        isAdmin
+          ? Promise.resolve([])
+          : getStudentEnrollments(studentId),
       ]);
 
       setCourses(
@@ -78,7 +82,16 @@ export default function MyCourses({ view = "available" }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [isAdmin, studentId]);
+
+  useEffect(() => {
+    if (!studentId) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(loadData, 0);
+    return () => window.clearTimeout(timer);
+  }, [loadData, studentId]);
 
   const enrollmentMap = useMemo(() => {
     return Object.fromEntries(
@@ -103,9 +116,11 @@ export default function MyCourses({ view = "available" }) {
         return false;
       }
 
-      const paid = hasPaidCourseAccess(
-        enrollmentMap[course.id],
-      );
+      const paid =
+        isAdmin ||
+        hasPaidCourseAccess(
+          enrollmentMap[course.id],
+        );
 
       if (view === "enrolled" && !paid) return false;
       if (view === "available" && paid) return false;
@@ -121,11 +136,13 @@ export default function MyCourses({ view = "available" }) {
           .includes(query)
       );
     });
-  }, [courses, enrollmentMap, searchText, view]);
+  }, [courses, enrollmentMap, isAdmin, searchText, view]);
 
-  const enrolledCount = enrollments.filter(
-    hasPaidCourseAccess,
-  ).length;
+  const enrolledCount = isAdmin
+    ? courses.length
+    : enrollments.filter(
+        hasPaidCourseAccess,
+      ).length;
 
   if (loading) {
     return (
@@ -141,7 +158,9 @@ export default function MyCourses({ view = "available" }) {
       <PageHeader
         title={view === "enrolled" ? "Enrolled Courses" : "Available Courses"}
         description={view === "enrolled"
-          ? `${enrolledCount} paid course(s). Continue your enrolled courses.`
+          ? isAdmin
+            ? `${enrolledCount} course(s). Administrator access is enabled for every published course.`
+            : `${enrolledCount} paid course(s). Continue your enrolled courses.`
           : "Choose a course and complete the ₹49 payment to join and view it."}
         breadcrumbs={[
           "Student",
@@ -190,11 +209,15 @@ export default function MyCourses({ view = "available" }) {
                 key={course.id}
                 course={course}
                 enrollment={
-                  enrollmentMap[
-                    course.id
-                  ] || null
+                  isAdmin
+                    ? createAdminCourseEnrollment(
+                        course,
+                        studentId,
+                      )
+                    : enrollmentMap[
+                        course.id
+                      ] || null
                 }
-                view={view}
               />
             ))}
         </div>
