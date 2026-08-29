@@ -467,17 +467,9 @@ export default function CourseDetails() {
     isAdmin ||
     certificationPaymentCompleted;
 
-  const certificationMockTests =
-    certification?.mockTests || {};
-
-  const mockCompleted = (testNumber) =>
-    ["passed", "failed", "completed"].includes(
-      certificationMockTests[`test${testNumber}`]?.status,
-    );
-
-  const mockTest2Available = isAdmin || mockCompleted(1);
-  const mockTest3Available = isAdmin || mockCompleted(2);
-  const finalExamAvailable = isAdmin || [1, 2, 3].every(mockCompleted);
+  const mockTest2Available = hasCourseAccess;
+  const mockTest3Available = hasCourseAccess;
+  const finalExamAvailable = hasCourseAccess;
 
   const handleCertificationPayment =
     async () => {
