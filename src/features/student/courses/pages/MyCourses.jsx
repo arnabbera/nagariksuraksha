@@ -9,6 +9,7 @@ import { FaSearch } from "react-icons/fa";
 import { useAuth } from "../../../../hooks/useAuth";
 
 import {
+  getAllCourses,
   getPublishedCourses,
 } from "../../../../services/courseService";
 
@@ -48,20 +49,24 @@ export default function MyCourses({ view = "available" }) {
       setError("");
 
       const [
-        publishedCourses,
+        courseData,
         studentEnrollments,
       ] = await Promise.all([
-        getPublishedCourses({
-          pageSize: 100,
-        }),
+        isAdmin
+          ? getAllCourses()
+          : getPublishedCourses({
+              pageSize: 100,
+            }),
         isAdmin
           ? Promise.resolve([])
           : getStudentEnrollments(studentId),
       ]);
 
       setCourses(
-        Array.isArray(publishedCourses)
-          ? publishedCourses
+        Array.isArray(courseData)
+          ? courseData.filter(
+              (course) => course?.deleted !== true,
+            )
           : [],
       );
 
@@ -116,14 +121,20 @@ export default function MyCourses({ view = "available" }) {
         return false;
       }
 
-      const paid =
-        isAdmin ||
-        hasPaidCourseAccess(
+      if (isAdmin) {
+        const approved = course.status === "published";
+        const awaitingApproval = course.status === "draft";
+
+        if (view === "enrolled" && !approved) return false;
+        if (view === "available" && !awaitingApproval) return false;
+      } else {
+        const paid = hasPaidCourseAccess(
           enrollmentMap[course.id],
         );
 
-      if (view === "enrolled" && !paid) return false;
-      if (view === "available" && paid) return false;
+        if (view === "enrolled" && !paid) return false;
+        if (view === "available" && paid) return false;
+      }
 
       if (!query) return true;
 
@@ -139,10 +150,14 @@ export default function MyCourses({ view = "available" }) {
   }, [courses, enrollmentMap, isAdmin, searchText, view]);
 
   const enrolledCount = isAdmin
-    ? courses.length
+    ? courses.filter((course) => course.status === "published").length
     : enrollments.filter(
         hasPaidCourseAccess,
       ).length;
+
+  const awaitingApprovalCount = isAdmin
+    ? courses.filter((course) => course.status === "draft").length
+    : 0;
 
   if (loading) {
     return (
@@ -159,9 +174,11 @@ export default function MyCourses({ view = "available" }) {
         title={view === "enrolled" ? "Enrolled Courses" : "Available Courses"}
         description={view === "enrolled"
           ? isAdmin
-            ? `${enrolledCount} course(s). Administrator access is enabled for every published course.`
+            ? `${enrolledCount} approved course(s). Administrator access is enabled.`
             : `${enrolledCount} paid course(s). Continue your enrolled courses.`
-          : "Choose a course and complete the ₹49 payment to join and view it."}
+          : isAdmin
+            ? `${awaitingApprovalCount} draft course(s) awaiting content review and final approval.`
+            : "Choose a course and complete the ₹49 payment to join and view it."}
         breadcrumbs={[
           "Student",
           view === "enrolled" ? "Enrolled Courses" : "Available Courses",
@@ -194,8 +211,12 @@ export default function MyCourses({ view = "available" }) {
           icon="📚"
           title="No courses available"
           description={view === "enrolled"
-            ? "Courses appear here after successful ₹49 payment."
-            : "All published courses have already been enrolled."}
+            ? isAdmin
+              ? "Approved courses appear here after final publication."
+              : "Courses appear here after successful ₹49 payment."
+            : isAdmin
+              ? "No draft courses are awaiting final approval."
+              : "All published courses have already been enrolled."}
         />
       ) : (
         <div className="ns-student-course-grid">
@@ -209,7 +230,7 @@ export default function MyCourses({ view = "available" }) {
                 key={course.id}
                 course={course}
                 enrollment={
-                  isAdmin
+                  isAdmin && course.status === "published"
                     ? createAdminCourseEnrollment(
                         course,
                         studentId,
@@ -217,6 +238,9 @@ export default function MyCourses({ view = "available" }) {
                     : enrollmentMap[
                         course.id
                       ] || null
+                }
+                adminDraft={
+                  isAdmin && course.status === "draft"
                 }
               />
             ))}

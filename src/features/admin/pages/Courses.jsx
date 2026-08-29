@@ -67,10 +67,6 @@ export default function Courses() {
     firebaseUser?.uid ||
     "system";
 
-  useEffect(() => {
-    loadCourses();
-  }, []);
-
   const loadCourses = async () => {
     try {
       setLoading(true);
@@ -79,8 +75,7 @@ export default function Courses() {
       const result =
         await getAllCourses();
 
-      setCourses(
-        result
+      const sortedCourses = result
           .filter(
             (course) =>
               !course.deleted,
@@ -89,8 +84,27 @@ export default function Courses() {
             (first, second) =>
               Number(first.order || 0) -
               Number(second.order || 0),
-          ),
+          );
+
+      setCourses(sortedCourses);
+
+      const editCourseId = new URLSearchParams(
+        window.location.search,
+      ).get("edit");
+
+      const requestedCourse = sortedCourses.find(
+        (course) => course.id === editCourseId,
       );
+
+      if (requestedCourse) {
+        setEditingCourse(requestedCourse);
+        window.setTimeout(() => {
+          courseFormRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
     } catch (loadError) {
       console.error(
         "Unable to load courses:",
@@ -104,6 +118,11 @@ export default function Courses() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const timer = window.setTimeout(loadCourses, 0);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const filteredCourses = useMemo(() => {
     const searchQuery =
@@ -213,7 +232,10 @@ export default function Courses() {
       if (editingCourse?.id) {
         await updateCourse(
           editingCourse.id,
-          courseData,
+          {
+            ...courseData,
+            status: editingCourse.status,
+          },
           currentUserId,
         );
 
@@ -222,12 +244,15 @@ export default function Courses() {
         );
       } else {
         await createCourse(
-          courseData,
+          {
+            ...courseData,
+            status: "draft",
+          },
           currentUserId,
         );
 
         setMessage(
-          "Course created successfully.",
+          "Course created as a draft. Review its content under Available Courses before final approval.",
         );
       }
 
@@ -252,6 +277,14 @@ export default function Courses() {
   const handlePublish = async (
     courseId,
   ) => {
+    const confirmed = window.confirm(
+      "Final approve this course? It will move to Enrolled Courses for the administrator and become visible to students for enrollment.",
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
     try {
       clearMessages();
 
@@ -260,7 +293,7 @@ export default function Courses() {
       );
 
       setMessage(
-        "Course published successfully.",
+        "Course received final approval and is now published for student enrollment.",
       );
 
       await loadCourses();
@@ -638,14 +671,16 @@ export default function Courses() {
                         "published" ? (
                           <button
                             type="button"
-                            title="Publish course"
+                            title="Final Approve & Publish"
+                            className="is-final-approval"
                             onClick={() =>
                               handlePublish(
                                 course.id,
                               )
                             }
                           >
-                            âœ“
+                            ✓
+                            <span>Final Approve</span>
                           </button>
                         ) : (
                           <button
@@ -882,6 +917,17 @@ export default function Courses() {
             border-color: #fecaca;
             background: #fef2f2;
             color: #dc2626;
+          }
+
+          .ns-course-actions button.is-final-approval {
+            width: auto;
+            padding: 0 11px;
+            gap: 6px;
+            border-color: #86efac;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 11px;
+            font-weight: 800;
           }
 
           .ns-course-alert {
