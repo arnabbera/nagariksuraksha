@@ -11,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 const CourseCard = ({
   course,
   enrollment = null,
-  view = "available",
 }) => {
   const navigate = useNavigate();
 
