@@ -13,6 +13,8 @@ import {
   updateCourseBook,
 } from "../repositories/CourseBookRepository";
 
+import { generalPrinciplesOfContractBooks } from "../data/courses/generalPrinciplesOfContract";
+
 // =========================================================
 // GET ALL BOOKS FOR ADMIN
 // =========================================================
@@ -41,8 +43,24 @@ export const getPublishedBooksByCourse =
       return [];
     }
 
-    return getPublishedCourseBooks(
-      courseId,
+    const storedBooks =
+      await getPublishedCourseBooks(
+        courseId,
+      );
+
+    const bookMap = new Map(
+      generalPrinciplesOfContractBooks
+        .filter((book) => book.courseId === courseId)
+        .map((book) => [book.id, book]),
+    );
+
+    for (const book of storedBooks || []) {
+      if (book?.id) bookMap.set(book.id, book);
+    }
+
+    return [...bookMap.values()].sort(
+      (first, second) =>
+        Number(first.displayOrder || 0) - Number(second.displayOrder || 0),
     );
   };
 
