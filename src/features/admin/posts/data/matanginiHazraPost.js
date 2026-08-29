@@ -9,7 +9,7 @@ export const MATANGINI_HAZRA_POST_TEMPLATE = {
     "Remembering Matangini Hazra, the courageous Gandhian freedom fighter from Bengal who led a Quit India procession at Tamluk and held the tricolour high until her final breath.",
 
   category:
-    "Indian Freedom Movement",
+    "Indian Freedom Fighter",
 
   tags: [
     "Matangini Hazra",
