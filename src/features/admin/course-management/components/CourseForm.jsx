@@ -1264,14 +1264,7 @@ const CourseForm = ({
           value={
             form.status
           }
-          onChange={(
-            event,
-          ) =>
-            updateField(
-              "status",
-              event.target.value,
-            )
-          }
+          disabled
         >
           <option value="draft">
             Draft
@@ -1285,6 +1278,10 @@ const CourseForm = ({
             Archived
           </option>
         </select>
+
+        <small>
+          New courses remain Draft until Final Approve &amp; Publish is selected from Course Management.
+        </small>
       </div>
 
       <div className="ns-course-options">
