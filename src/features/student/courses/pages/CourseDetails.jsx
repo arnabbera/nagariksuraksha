@@ -1,4 +1,5 @@
 ﻿import {
+  useCallback,
   useEffect,
   useMemo,
   useState,
@@ -36,7 +37,6 @@ import {
 
 import {
   enrollForCertification,
-  enrollStudent,
   getStudentEnrollment,
 } from "../../../../services/studentEnrollmentService";
 
@@ -62,12 +62,17 @@ export default function CourseDetails() {
   const {
     firebaseUser,
     profile,
+    role,
   } = useAuth();
 
   const studentId =
     firebaseUser?.uid ||
     profile?.uid ||
     "";
+
+  const isAdmin =
+    role === "admin" ||
+    profile?.role === "admin";
 
   const [
     course,
@@ -100,11 +105,6 @@ export default function CourseDetails() {
   ] = useState(true);
 
   const [
-    enrolling,
-    setEnrolling,
-  ] = useState(false);
-
-  const [
     certificationEnrolling,
     setCertificationEnrolling,
   ] = useState(false);
@@ -123,22 +123,8 @@ export default function CourseDetails() {
   // LOAD COURSE
   // =========================================================
 
-  useEffect(() => {
-    if (
-      !courseSlug ||
-      !studentId
-    ) {
-      return;
-    }
-
-    loadCourse();
-  }, [
-    courseSlug,
-    studentId,
-  ]);
-
   const loadCourse =
-    async () => {
+    useCallback(async () => {
       try {
         setLoading(true);
         setError("");
@@ -193,10 +179,12 @@ export default function CourseDetails() {
               realCourseId,
             ),
 
-            getStudentEnrollment(
-              studentId,
-              realCourseId,
-            ),
+            isAdmin
+              ? Promise.resolve(null)
+              : getStudentEnrollment(
+                  studentId,
+                  realCourseId,
+                ),
 
             getStudentCourseProgress(
               studentId,
@@ -325,7 +313,23 @@ export default function CourseDetails() {
       } finally {
         setLoading(false);
       }
-    };
+    }, [courseSlug, isAdmin, studentId]);
+
+  useEffect(() => {
+    if (
+      !courseSlug ||
+      !studentId
+    ) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(
+      loadCourse,
+      0,
+    );
+
+    return () => window.clearTimeout(timer);
+  }, [courseSlug, loadCourse, studentId]);
 
   // =========================================================
   // COURSE IMAGES
@@ -428,51 +432,6 @@ export default function CourseDetails() {
       : 0;
 
   // =========================================================
-  // ENROLL
-  // =========================================================
-
-  const handleEnroll =
-    async () => {
-      if (!course?.id) {
-        setError(
-          "Unable to determine the course ID.",
-        );
-
-        return;
-      }
-
-      try {
-        setEnrolling(true);
-        setError("");
-
-        const result =
-          await enrollStudent(
-            studentId,
-            course.id,
-            studentId,
-          );
-
-        setEnrollment(
-          result,
-        );
-      } catch (
-        enrollError
-      ) {
-        console.error(
-          "Unable to enroll:",
-          enrollError,
-        );
-
-        setError(
-          enrollError?.message ||
-            "Unable to enroll.",
-        );
-      } finally {
-        setEnrolling(false);
-      }
-    };
-
-  // =========================================================
   // CERTIFICATION
   // =========================================================
 
@@ -489,6 +448,7 @@ export default function CourseDetails() {
     "not-enrolled";
 
   const certificationActive =
+    isAdmin ||
     certificationStatus ===
       "active" ||
     certificationStatus ===
@@ -499,10 +459,12 @@ export default function CourseDetails() {
     "pending-payment";
 
   const certificationPaymentCompleted =
+    isAdmin ||
     certification?.payment?.status ===
     "paid";
 
   const hasCourseAccess =
+    isAdmin ||
     certificationPaymentCompleted;
 
   const certificationMockTests =
@@ -513,9 +475,9 @@ export default function CourseDetails() {
       certificationMockTests[`test${testNumber}`]?.status,
     );
 
-  const mockTest2Available = mockCompleted(1);
-  const mockTest3Available = mockCompleted(2);
-  const finalExamAvailable = [1, 2, 3].every(mockCompleted);
+  const mockTest2Available = isAdmin || mockCompleted(1);
+  const mockTest3Available = isAdmin || mockCompleted(2);
+  const finalExamAvailable = isAdmin || [1, 2, 3].every(mockCompleted);
 
   const handleCertificationPayment =
     async () => {
@@ -915,7 +877,9 @@ export default function CourseDetails() {
               </div>
 
               <div className="ns-certification-fee">
-                {certificationFee > 0
+                {isAdmin
+                  ? "Admin Access"
+                  : certificationFee > 0
                   ? `₹${certificationFee}`
                   : "Free"}
               </div>
