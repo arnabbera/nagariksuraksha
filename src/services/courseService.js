@@ -75,7 +75,7 @@ export const getCourseBySlug = async (slug) => {
 };
 
 export const getAllCourses = async () =>
-  courseRepository.getAll();
+  mergeCourses(await courseRepository.getAll());
 
 export const createCourse = async (
   courseData,
