@@ -14,10 +14,29 @@ const FREEDOM_FIGHTER_TERMS = [
   "matangini hazra",
   "gandhi buri",
   "martyr",
+  "15 august",
+  "freedom won",
+  "netaji",
+  "subhas chandra bose",
+  "free india",
 ];
 
+const FREEDOM_FIGHTER_SLUGS = new Set([
+  "15-august-freedom-won-constitution-protected",
+  "netaji-subhas-chandra-bose-the-leader-who-dreamed-of-a-free-india",
+]);
+
 export const isFreedomFighterPost = (post = {}) => {
+  const normalizedSlug = String(post.slug || "")
+    .toLowerCase()
+    .replace(/^-+|-+$/g, "");
+
+  if (FREEDOM_FIGHTER_SLUGS.has(normalizedSlug)) {
+    return true;
+  }
+
   const searchableText = [
+    post.slug,
     post.category,
     post.title,
     post.excerpt,
@@ -36,4 +55,3 @@ export const getPostDisplayCategory = (post = {}) =>
   isFreedomFighterPost(post)
     ? POST_CATEGORIES.FREEDOM_FIGHTER
     : POST_CATEGORIES.LEGAL_ARTICLE;
-
