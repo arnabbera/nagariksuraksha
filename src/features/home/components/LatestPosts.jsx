@@ -219,13 +219,13 @@ const LatestPosts = () => {
       title: POST_CATEGORIES.FREEDOM_FIGHTER,
       description:
         "Stories of the courageous people who shaped India’s independence movement.",
-      posts: posts.filter(isFreedomFighterPost).slice(0, 4),
+      posts: posts.filter(isFreedomFighterPost),
     },
     {
       title: POST_CATEGORIES.LEGAL_ARTICLE,
       description:
         "Legal awareness, court decisions and practical explanations of Indian law.",
-      posts: posts.filter((post) => !isFreedomFighterPost(post)).slice(0, 4),
+      posts: posts.filter((post) => !isFreedomFighterPost(post)),
     },
   ];
 
