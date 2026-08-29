@@ -4,6 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { useAuth } from "../../../../hooks/useAuth";
 import { cpcFinalExam, cpcMockTests } from "../../../../data/exams/cpc/assessments";
+import {
+  CONTRACT_COURSE_SLUG,
+  contractFinalExam,
+  contractMockTests,
+} from "../../../../data/exams/contracts/assessments";
 import { getCourseBySlug } from "../../../../services/courseService";
 import {
   getStudentEnrollment,
@@ -22,7 +27,12 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
   const { firebaseUser, profile, role } = useAuth();
   const studentId = firebaseUser?.uid || profile?.uid || "";
   const number = Number(testNumber || 1);
-  const assessment = examType === "final" ? cpcFinalExam : cpcMockTests[number];
+  const courseAssessments = courseSlug === CONTRACT_COURSE_SLUG
+    ? { final: contractFinalExam, mocks: contractMockTests }
+    : { final: cpcFinalExam, mocks: cpcMockTests };
+  const assessment = examType === "final"
+    ? courseAssessments.final
+    : courseAssessments.mocks[number];
 
   const [course, setCourse] = useState(null);
   const [enrollment, setEnrollment] = useState(null);
