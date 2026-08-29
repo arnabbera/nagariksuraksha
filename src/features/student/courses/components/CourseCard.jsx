@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 const CourseCard = ({
   course,
   enrollment = null,
+  adminDraft = false,
 }) => {
   const navigate = useNavigate();
 
@@ -29,6 +30,11 @@ const CourseCard = ({
     "";
 
   const handleOpen = () => {
+    if (adminDraft) {
+      navigate(`/admin/courses?edit=${encodeURIComponent(course.id)}`);
+      return;
+    }
+
     navigate(
       `/student/courses/${course.id}${
         certificationPaymentCompleted
@@ -65,7 +71,11 @@ const CourseCard = ({
             ) : (
               <FaLock />
             )}
-            Enrolled
+            {adminDraft
+              ? "Draft Review"
+              : certificationPaymentCompleted
+                ? "Enrolled"
+                : "Available"}
           </span>
         </div>
       </div>
@@ -116,8 +126,10 @@ const CourseCard = ({
             type="button"
             onClick={handleOpen}
           >
-            {certificationPaymentCompleted ? <FaBookOpen /> : <FaAward />}
-            {certificationPaymentCompleted
+            {adminDraft || certificationPaymentCompleted ? <FaBookOpen /> : <FaAward />}
+            {adminDraft
+              ? "Edit & Verify Course"
+              : certificationPaymentCompleted
               ? "Continue Course"
               : "Join Course — ₹49"}
           </button>
