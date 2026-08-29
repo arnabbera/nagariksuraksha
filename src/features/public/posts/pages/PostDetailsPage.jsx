@@ -133,6 +133,38 @@ const absoluteUrl = (
   }`;
 };
 
+const renderInlineContent = (text) => {
+  const normalized = String(text || "").replace(/\s*\n\s*/g, " ");
+  const tokenPattern = /(\[[\s\S]*?\]\(https?:\/\/[^)]+\)|\*\*[\s\S]*?\*\*)/g;
+
+  return normalized.split(tokenPattern).filter(Boolean).map((part, index) => {
+    const linkMatch = part.match(/^\[([\s\S]*?)\]\((https?:\/\/[^)]+)\)$/);
+
+    if (linkMatch) {
+      return (
+        <a
+          key={`${index}-${linkMatch[2]}`}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {renderInlineContent(linkMatch[1])}
+        </a>
+      );
+    }
+
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={`${index}-${part.slice(2, 20)}`}>
+          {part.slice(2, -2).replace(/\s*\n\s*/g, " ")}
+        </strong>
+      );
+    }
+
+    return part;
+  });
+};
+
 const renderContent = (
   content,
 ) => {
@@ -144,17 +176,27 @@ const renderContent = (
     return null;
   }
 
-  return text
-    .split(/\n{2,}/)
-    .map(
-      (paragraph, index) => (
-        <p
-          key={`${index}-${paragraph.slice(0, 24)}`}
-        >
-          {paragraph}
-        </p>
-      ),
+  return text.split(/\n{2,}/).map((block, index) => {
+    const lines = block.split("\n");
+
+    if (lines.every((line) => line.trim().startsWith("- "))) {
+      return (
+        <ul key={`${index}-${block.slice(0, 24)}`}>
+          {lines.map((line) => (
+            <li key={line.slice(0, 48)}>
+              {renderInlineContent(line.trim().slice(2))}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    return (
+      <p key={`${index}-${block.slice(0, 24)}`}>
+        {renderInlineContent(block)}
+      </p>
     );
+  });
 };
 
 
