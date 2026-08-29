@@ -194,12 +194,12 @@ const Header = () => {
                     Learning Videos
                   </Link>
 
-                  <Link to="/posts" style={dropdownLink} onClick={closeMenu}>
-                    Posts
+                  <Link to="/#indian-freedom-fighter" style={dropdownLink} onClick={closeMenu}>
+                    Indian Freedom Fighter
                   </Link>
 
-                  <Link to="/articles" style={dropdownLink} onClick={closeMenu}>
-                    Articles
+                  <Link to="/#legal-article" style={dropdownLink} onClick={closeMenu}>
+                    Legal Article
                   </Link>
                 </div>
               )}
@@ -346,12 +346,12 @@ const Header = () => {
                     Learning Videos
                   </Link>
 
-                  <Link to="/posts" onClick={closeMenu}>
-                    Posts
+                  <Link to="/#indian-freedom-fighter" onClick={closeMenu}>
+                    Indian Freedom Fighter
                   </Link>
 
-                  <Link to="/articles" onClick={closeMenu}>
-                    Articles
+                  <Link to="/#legal-article" onClick={closeMenu}>
+                    Legal Article
                   </Link>
                 </div>
               )}

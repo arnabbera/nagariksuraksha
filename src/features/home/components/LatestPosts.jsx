@@ -18,6 +18,12 @@ import {
   getPublishedPosts,
 } from "../../../services/postService";
 
+import {
+  getPostDisplayCategory,
+  isFreedomFighterPost,
+  POST_CATEGORIES,
+} from "../../../utils/postCategories";
+
 const formatDate = (
   value,
 ) => {
@@ -68,6 +74,70 @@ const formatDate = (
   }
 };
 
+const PostCard = ({ post }) => {
+  const imageUrl =
+    post?.media?.desktop?.url ||
+    post?.media?.mobile?.url ||
+    "";
+
+  const date = formatDate(
+    post.publishedAt || post.createdAt,
+  );
+
+  return (
+    <article className="ns-post-card">
+      <Link
+        to={`/posts/${post.slug}`}
+        className="ns-post-image-link"
+      >
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={post.title || "NagarikSuraksha article"}
+            loading="lazy"
+          />
+        ) : (
+          <div className="ns-post-placeholder">
+            <FaNewspaper />
+          </div>
+        )}
+      </Link>
+
+      <div className="ns-post-card-body">
+        <div className="ns-post-meta">
+          <span>
+            <FaTag />
+            {getPostDisplayCategory(post)}
+          </span>
+
+          {date && (
+            <span>
+              <FaCalendarAlt />
+              {date}
+            </span>
+          )}
+        </div>
+
+        <h3>
+          <Link to={`/posts/${post.slug}`}>
+            {post.title}
+          </Link>
+        </h3>
+
+        {post.excerpt && <p>{post.excerpt}</p>}
+
+        <Link
+          to={`/posts/${post.slug}`}
+          className="ns-post-read-more"
+        >
+          Read Full Article
+          <FaArrowRight />
+        </Link>
+      </div>
+    </article>
+  );
+};
+
 const LatestPosts = () => {
   const [
     posts,
@@ -100,7 +170,7 @@ const LatestPosts = () => {
             await getPublishedPosts(
               {
                 pageSize:
-                  4,
+                  50,
               },
             );
 
@@ -112,10 +182,7 @@ const LatestPosts = () => {
             Array.isArray(
               data,
             )
-              ? data.slice(
-                  0,
-                  4,
-                )
+              ? data
               : [],
           );
         } catch (
@@ -147,6 +214,21 @@ const LatestPosts = () => {
     };
   }, []);
 
+  const contentGroups = [
+    {
+      title: POST_CATEGORIES.FREEDOM_FIGHTER,
+      description:
+        "Stories of the courageous people who shaped India’s independence movement.",
+      posts: posts.filter(isFreedomFighterPost).slice(0, 4),
+    },
+    {
+      title: POST_CATEGORIES.LEGAL_ARTICLE,
+      description:
+        "Legal awareness, court decisions and practical explanations of Indian law.",
+      posts: posts.filter((post) => !isFreedomFighterPost(post)).slice(0, 4),
+    },
+  ];
+
   return (
     <section className="ns-latest-posts">
       <div className="ns-latest-posts-container">
@@ -154,21 +236,19 @@ const LatestPosts = () => {
           <div>
             <span className="ns-latest-posts-label">
               <FaNewspaper />
-              Legal Articles &
-              Updates
+              Knowledge &
+              Awareness
             </span>
 
             <h2>
-              Latest Posts
+              Featured Reading
             </h2>
 
             <p>
-              Read the latest
-              legal awareness
-              articles, educational
-              posts and important
-              updates from
-              NagarikSuraksha.
+              Explore Indian freedom
+              fighters separately from
+              legal articles and public
+              legal education.
             </p>
           </div>
 
@@ -176,7 +256,7 @@ const LatestPosts = () => {
             to="/posts"
             className="ns-posts-view-all"
           >
-            View All Posts
+            View All Articles
             <FaArrowRight />
           </Link>
         </div>
@@ -184,7 +264,7 @@ const LatestPosts = () => {
         {loading && (
           <div className="ns-post-status">
             Loading latest
-            posts...
+            articles...
           </div>
         )}
 
@@ -200,7 +280,7 @@ const LatestPosts = () => {
           posts.length ===
             0 && (
             <div className="ns-post-status">
-              No published posts
+              No published articles
               are available yet.
             </div>
           )}
@@ -209,110 +289,35 @@ const LatestPosts = () => {
           !error &&
           posts.length >
             0 && (
-            <div className="ns-post-grid">
-              {posts.map(
-                (post) => {
-                  const imageUrl =
-                    post
-                      ?.media
-                      ?.desktop
-                      ?.url ||
-                    post
-                      ?.media
-                      ?.mobile
-                      ?.url ||
-                    "";
+            <div className="ns-post-groups">
+              {contentGroups.map((group) => (
+                <section
+                  className="ns-post-group"
+                  key={group.title}
+                  id={
+                    group.title === POST_CATEGORIES.FREEDOM_FIGHTER
+                      ? "indian-freedom-fighter"
+                      : "legal-article"
+                  }
+                >
+                  <div className="ns-post-group-heading">
+                    <h3>{group.title}</h3>
+                    <p>{group.description}</p>
+                  </div>
 
-                  const date =
-                    formatDate(
-                      post.publishedAt ||
-                        post.createdAt,
-                    );
-
-                  return (
-                    <article
-                      key={
-                        post.id
-                      }
-                      className="ns-post-card"
-                    >
-                      <Link
-                        to={`/posts/${post.slug}`}
-                        className="ns-post-image-link"
-                      >
-                        {imageUrl ? (
-                          <img
-                            src={
-                              imageUrl
-                            }
-                            alt={
-                              post.title ||
-                              "NagarikSuraksha post"
-                            }
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="ns-post-placeholder">
-                            <FaNewspaper />
-                          </div>
-                        )}
-                      </Link>
-
-                      <div className="ns-post-card-body">
-                        <div className="ns-post-meta">
-                          {post.category && (
-                            <span>
-                              <FaTag />
-
-                              {
-                                post.category
-                              }
-                            </span>
-                          )}
-
-                          {date && (
-                            <span>
-                              <FaCalendarAlt />
-
-                              {
-                                date
-                              }
-                            </span>
-                          )}
-                        </div>
-
-                        <h3>
-                          <Link
-                            to={`/posts/${post.slug}`}
-                          >
-                            {
-                              post.title
-                            }
-                          </Link>
-                        </h3>
-
-                        {post.excerpt && (
-                          <p>
-                            {
-                              post.excerpt
-                            }
-                          </p>
-                        )}
-
-                        <Link
-                          to={`/posts/${post.slug}`}
-                          className="ns-post-read-more"
-                        >
-                          Read Full
-                          Post
-
-                          <FaArrowRight />
-                        </Link>
-                      </div>
-                    </article>
-                  );
-                },
-              )}
+                  {group.posts.length > 0 ? (
+                    <div className="ns-post-grid">
+                      {group.posts.map((post) => (
+                        <PostCard key={post.id} post={post} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="ns-post-status">
+                      No {group.title.toLowerCase()} articles are available yet.
+                    </div>
+                  )}
+                </section>
+              ))}
             </div>
           )}
       </div>
@@ -334,6 +339,33 @@ const LatestPosts = () => {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
+          }
+
+          .ns-post-groups {
+            display: grid;
+            gap: 64px;
+          }
+
+          .ns-post-group {
+            scroll-margin-top: 96px;
+          }
+
+          .ns-post-group-heading {
+            margin-bottom: 24px;
+          }
+
+          .ns-post-group-heading h3 {
+            margin: 0 0 8px;
+            color: #0f172a;
+            font-size: clamp(26px, 3vw, 34px);
+            line-height: 1.2;
+          }
+
+          .ns-post-group-heading p {
+            margin: 0;
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.7;
           }
 
           .ns-latest-posts-heading {
