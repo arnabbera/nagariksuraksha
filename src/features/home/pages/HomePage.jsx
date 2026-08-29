@@ -7,6 +7,7 @@ import StatsSection from "../components/StatsSection";
 import LearningSection from "../components/LearningSection";
 import LatestUpdates from "../components/LatestUpdates";
 import VideosSection from "../components/VideosSection";
+import LatestPosts from "../components/LatestPosts";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import ContactCTA from "../components/ContactCTA";
@@ -163,6 +164,8 @@ const HomePage = () => {
         <LatestUpdates />
 
         <VideosSection />
+
+        <LatestPosts />
 
         <Testimonials />
 
