@@ -1,5 +1,6 @@
 import {
   useEffect,
+  useCallback,
   useMemo,
   useRef,
   useState,
@@ -10,6 +11,7 @@ import {
   FaEdit,
   FaEye,
   FaFlag,
+  FaLandmark,
   FaPlus,
   FaSearch,
   FaStar,
@@ -18,6 +20,7 @@ import {
 
 import PostForm from "../components/PostForm";
 import { MATANGINI_HAZRA_POST_TEMPLATE } from "../data/matanginiHazraPost";
+import { NEGLIGENT_HOME_LOAN_SANCTIONS_POST_TEMPLATE } from "../data/negligentHomeLoanSanctionsPost";
 
 import {
   useAuth,
@@ -96,12 +99,8 @@ export default function PostManagement() {
     firebaseUser?.uid ||
     "system";
 
-  useEffect(() => {
-    loadPosts();
-  }, []);
-
   const loadPosts =
-    async () => {
+    useCallback(async () => {
       try {
         setLoading(
           true,
@@ -153,24 +152,24 @@ export default function PostManagement() {
           templateInitializedRef.current =
             true;
 
-          const matanginiPostExists =
+          const negligentLoanPostExists =
             activePosts.some(
               (
                 post,
               ) =>
                 post.slug ===
-                MATANGINI_HAZRA_POST_TEMPLATE.slug,
+                NEGLIGENT_HOME_LOAN_SANCTIONS_POST_TEMPLATE.slug,
             );
 
           if (
-            !matanginiPostExists
+            !negligentLoanPostExists
           ) {
             setEditingPost({
-              ...MATANGINI_HAZRA_POST_TEMPLATE,
+              ...NEGLIGENT_HOME_LOAN_SANCTIONS_POST_TEMPLATE,
             });
 
             setMessage(
-              "The Matangini Hazra article is ready below. Upload both images, review it and select Save Post.",
+              "The negligent home loan sanctions article is ready below with the supplied text unchanged. Upload both images, review it and select Save Post.",
             );
           }
         }
@@ -190,7 +189,16 @@ export default function PostManagement() {
           false,
         );
       }
-    };
+    }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(
+      loadPosts,
+      0,
+    );
+
+    return () => window.clearTimeout(timer);
+  }, [loadPosts]);
 
   const filteredPosts =
     useMemo(() => {
@@ -286,6 +294,17 @@ export default function PostManagement() {
 
       setEditingPost({
         ...MATANGINI_HAZRA_POST_TEMPLATE,
+      });
+
+      scrollToForm();
+    };
+
+  const handleNegligentHomeLoanPost =
+    () => {
+      clearMessages();
+
+      setEditingPost({
+        ...NEGLIGENT_HOME_LOAN_SANCTIONS_POST_TEMPLATE,
       });
 
       scrollToForm();
@@ -579,6 +598,17 @@ export default function PostManagement() {
         ]}
         actions={
           <div className="ns-post-header-actions">
+            <Button
+              leftIcon={
+                <FaLandmark />
+              }
+              onClick={
+                handleNegligentHomeLoanPost
+              }
+            >
+              Home Loan Liability Article
+            </Button>
+
             <Button
               leftIcon={
                 <FaFlag />
