@@ -1,5 +1,10 @@
 import { createChapterModel } from "../models/ChapterModel";
 import chapterRepository from "../repositories/ChapterRepository";
+import { generalPrinciplesOfContractChapters } from "../data/courses/generalPrinciplesOfContract";
+
+const bundledChapters = [
+  ...generalPrinciplesOfContractChapters,
+];
 
 const createSlug = (value = "") =>
   value
@@ -44,8 +49,25 @@ export const getPublishedChaptersByCourse =
       return [];
     }
 
-    return chapterRepository.getPublishedByCourse(
-      courseId,
+    const storedChapters =
+      await chapterRepository.getPublishedByCourse(
+        courseId,
+      );
+
+    const chapterMap = new Map(
+      bundledChapters
+        .filter((chapter) => chapter.courseId === courseId)
+        .map((chapter) => [chapter.id, chapter]),
+    );
+
+    for (const chapter of storedChapters || []) {
+      if (chapter?.id) chapterMap.set(chapter.id, chapter);
+    }
+
+    return [...chapterMap.values()].sort(
+      (first, second) =>
+        Number(first.displayOrder || first.chapterNumber || 0) -
+        Number(second.displayOrder || second.chapterNumber || 0),
     );
   };
 
@@ -62,9 +84,12 @@ export const getChapterById = async (
     );
   }
 
-  return chapterRepository.getById(
-    chapterId,
-  );
+  const storedChapter =
+    await chapterRepository.getById(
+      chapterId,
+    );
+
+  return storedChapter || bundledChapters.find((chapter) => chapter.id === chapterId) || null;
 };
 
 // =========================================================
