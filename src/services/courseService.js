@@ -1,5 +1,26 @@
 import { createCourseModel } from "../models/CourseModel";
 import courseRepository from "../repositories/CourseRepository";
+import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinciplesOfContract";
+
+const bundledCourses = [
+  generalPrinciplesOfContractCourse,
+];
+
+const mergeCourses = (courses = []) => {
+  const courseMap = new Map(
+    bundledCourses.map((course) => [course.id, course]),
+  );
+
+  for (const course of courses || []) {
+    if (course?.id) courseMap.set(course.id, course);
+  }
+
+  return [...courseMap.values()].sort(
+    (first, second) =>
+      Number(first.order || 0) - Number(second.order || 0) ||
+      String(first.title || "").localeCompare(String(second.title || "")),
+  );
+};
 
 const normalizeSlug = (value = "") =>
   value
@@ -9,18 +30,37 @@ const normalizeSlug = (value = "") =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
-export const getPublishedCourses = async (options = {}) =>
-  courseRepository.getPublishedCourses(options);
+export const getPublishedCourses = async (options = {}) => {
+  const storedCourses = await courseRepository.getPublishedCourses(options);
+  const pageSize = Math.max(1, Number(options.pageSize || 20));
+
+  return mergeCourses(storedCourses)
+    .filter((course) => course.status === "published" && course.deleted !== true)
+    .filter((course) =>
+      options.featured === null || options.featured === undefined
+        ? true
+        : Boolean(course.featured) === Boolean(options.featured),
+    )
+    .filter((course) =>
+      options.courseType ? course.courseType === options.courseType : true,
+    )
+    .filter((course) =>
+      options.accessType ? course.accessType === options.accessType : true,
+    )
+    .slice(0, pageSize);
+};
 
 export const getFeaturedCourses = async (pageSize = 6) =>
-  courseRepository.getFeaturedCourses(pageSize);
+  getPublishedCourses({ featured: true, pageSize });
 
 export const getCourseById = async (courseId) => {
   if (!courseId) {
     throw new Error("Course ID is required.");
   }
 
-  return courseRepository.getById(courseId);
+  const storedCourse = await courseRepository.getById(courseId);
+
+  return storedCourse || bundledCourses.find((course) => course.id === courseId) || null;
 };
 
 export const getCourseBySlug = async (slug) => {
@@ -28,7 +68,10 @@ export const getCourseBySlug = async (slug) => {
     return null;
   }
 
-  return courseRepository.getBySlug(normalizeSlug(slug));
+  const normalizedSlug = normalizeSlug(slug);
+  const storedCourse = await courseRepository.getBySlug(normalizedSlug);
+
+  return storedCourse || bundledCourses.find((course) => course.slug === normalizedSlug) || null;
 };
 
 export const getAllCourses = async () =>
