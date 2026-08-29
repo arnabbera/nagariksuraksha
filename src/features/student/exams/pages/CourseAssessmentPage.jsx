@@ -16,13 +16,10 @@ import Card from "../../../../shared/components/Card";
 import LoadingSpinner from "../../../../shared/components/LoadingSpinner";
 import PageHeader from "../../../../shared/components/PageHeader";
 
-const completed = (test) =>
-  ["passed", "failed", "completed"].includes(test?.status);
-
 export default function CourseAssessmentPage({ examType = "mock" }) {
   const { courseId: courseSlug, testNumber } = useParams();
   const navigate = useNavigate();
-  const { firebaseUser, profile } = useAuth();
+  const { firebaseUser, profile, role } = useAuth();
   const studentId = firebaseUser?.uid || profile?.uid || "";
   const number = Number(testNumber || 1);
   const assessment = examType === "final" ? cpcFinalExam : cpcMockTests[number];
@@ -59,11 +56,8 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
     [assessment],
   );
   const currentQuestion = questions[currentIndex];
-  const paid = hasPaidCourseAccess(enrollment);
-  const mockTests = enrollment?.certification?.mockTests || {};
-  const prerequisiteSatisfied = examType === "mock"
-    ? number === 1 || completed(mockTests[`test${number - 1}`])
-    : [1, 2, 3].every((candidate) => completed(mockTests[`test${candidate}`]));
+  const isAdmin = role === "admin" || profile?.role === "admin";
+  const paid = isAdmin || hasPaidCourseAccess(enrollment);
 
   const calculatedResult = useMemo(() => {
     let correct = 0;
@@ -107,19 +101,15 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
     return <Card>{error || "Assessment not found."}</Card>;
   }
 
-  if (!paid || !prerequisiteSatisfied) {
+  if (!paid) {
     return (
       <div>
         <PageHeader title="Assessment Locked" description={course.title} />
         <Card>
           <div className="ns-assessment-locked">
             <FaLock />
-            <h2>{!paid ? "Paid enrollment required" : "Complete the previous assessment first"}</h2>
-            <p>{!paid
-              ? "Enroll in this course before attempting its assessments."
-              : examType === "final"
-                ? "Complete Mock Tests 1, 2 and 3 to unlock the final examination."
-                : `Complete Mock Test ${number - 1} to unlock this test.`}</p>
+            <h2>Paid enrollment required</h2>
+            <p>Enroll in this course before attempting its assessments.</p>
             <Button onClick={() => navigate(`/student/courses/${course.slug}`)}>Return to Course</Button>
           </div>
         </Card>

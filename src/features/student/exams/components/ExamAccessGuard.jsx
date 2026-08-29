@@ -1,12 +1,8 @@
-import React from "react";
-
 import { useAuth } from "../../../../hooks/useAuth";
 
 import {
   CERTIFICATION_PAYMENT_STATUS,
   CERTIFICATION_STATUS,
-  FINAL_EXAM_STATUS,
-  MOCK_TEST_STATUS,
 } from "../../../../models/StudentEnrollmentModel";
 
 // =========================================================
@@ -17,8 +13,6 @@ export default function ExamAccessGuard({
   enrollment,
 
   examType = "mock",
-
-  mockTestNumber = 1,
 
   children,
 }) {
@@ -175,102 +169,6 @@ export default function ExamAccessGuard({
       );
     }
 
-    const testNumber =
-      Number(
-        mockTestNumber ||
-          1,
-      );
-
-    const mockTests =
-      certification.mockTests ||
-      {};
-
-    const currentTest =
-      mockTests[
-        `test${testNumber}`
-      ];
-
-    // =====================================================
-    // TEST MUST EXIST
-    // =====================================================
-
-    if (!currentTest) {
-      return (
-        <>
-          <LockedExam
-            title={`Mock Test ${testNumber} Not Available`}
-            message="This Mock Test has not yet been configured."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // MOCK TEST 2 REQUIRES MOCK TEST 1 COMPLETION
-    // =====================================================
-
-    if (
-      testNumber === 2 &&
-      !isMockCompleted(
-        mockTests.test1,
-      )
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Mock Test 2 Locked"
-            message="Complete Mock Test 1 before attempting Mock Test 2."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // MOCK TEST 3 REQUIRES MOCK TEST 2 COMPLETION
-    // =====================================================
-
-    if (
-      testNumber === 3 &&
-      !isMockCompleted(
-        mockTests.test2,
-      )
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Mock Test 3 Locked"
-            message="Complete Mock Test 2 before attempting Mock Test 3."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // CURRENT TEST STATUS
-    // =====================================================
-
-    if (
-      currentTest.status ===
-      MOCK_TEST_STATUS.LOCKED
-    ) {
-      return (
-        <>
-          <LockedExam
-            title={`Mock Test ${testNumber} Locked`}
-            message="This Mock Test is currently locked."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
     return (
       <>
         {children}
@@ -287,156 +185,6 @@ export default function ExamAccessGuard({
   if (
     examType === "final"
   ) {
-    const mockTests =
-      certification.mockTests ||
-      {};
-
-    const allMocksCompleted =
-      isMockCompleted(
-        mockTests.test1,
-      ) &&
-      isMockCompleted(
-        mockTests.test2,
-      ) &&
-      isMockCompleted(
-        mockTests.test3,
-      );
-
-    // =====================================================
-    // ALL THREE MOCK TESTS REQUIRED
-    // =====================================================
-
-    if (!allMocksCompleted) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Locked"
-            message="Complete Mock Test 1, Mock Test 2 and Mock Test 3 before becoming eligible for the Final Examination."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    const finalExam =
-      certification.finalExam;
-
-    // =====================================================
-    // ADMIN APPROVAL REQUIRED
-    // =====================================================
-
-    if (
-      !finalExam?.eligible
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Approval Pending"
-            message="You have completed all three Mock Tests. NagarikSuraksha Admin must approve your Final Examination eligibility."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // FINAL EXAM NOT SCHEDULED
-    // =====================================================
-
-    if (
-      finalExam.status ===
-        FINAL_EXAM_STATUS.LOCKED ||
-      finalExam.status ===
-        FINAL_EXAM_STATUS.ELIGIBLE ||
-      finalExam.status ===
-        FINAL_EXAM_STATUS.NOT_SCHEDULED
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Not Scheduled"
-            message="You are eligible for the Final Examination, but NagarikSuraksha Admin has not yet scheduled it."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // FINAL EXAM SCHEDULED
-    // =====================================================
-
-    if (
-      finalExam.status ===
-      FINAL_EXAM_STATUS.SCHEDULED
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Scheduled"
-            message={
-              finalExam.scheduledAt
-                ? `Your Final Examination is scheduled for ${formatDateTime(
-                    finalExam.scheduledAt,
-                  )}.`
-                : "Your Final Examination has been scheduled. Please return at the scheduled time."
-            }
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // ALREADY COMPLETED
-    // =====================================================
-
-    if (
-      [
-        FINAL_EXAM_STATUS.SUBMITTED,
-        FINAL_EXAM_STATUS.PASSED,
-        FINAL_EXAM_STATUS.FAILED,
-        FINAL_EXAM_STATUS.ABSENT,
-      ].includes(
-        finalExam.status,
-      )
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Completed"
-            message="This Final Examination attempt has already been completed."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
-    // =====================================================
-    // ONLY IN-PROGRESS EXAM MAY OPEN
-    // =====================================================
-
-    if (
-      finalExam.status !==
-      FINAL_EXAM_STATUS.IN_PROGRESS
-    ) {
-      return (
-        <>
-          <LockedExam
-            title="Final Examination Locked"
-            message="The Final Examination is not currently available."
-          />
-
-          <ExamAccessGuardStyles />
-        </>
-      );
-    }
-
     return (
       <>
         {children}
@@ -460,74 +208,6 @@ export default function ExamAccessGuard({
       <ExamAccessGuardStyles />
     </>
   );
-}
-
-// =========================================================
-// MOCK TEST COMPLETION CHECK
-// =========================================================
-
-function isMockCompleted(
-  test,
-) {
-  if (!test) {
-    return false;
-  }
-
-  return [
-    MOCK_TEST_STATUS.COMPLETED,
-    MOCK_TEST_STATUS.PASSED,
-    MOCK_TEST_STATUS.FAILED,
-  ].includes(
-    test.status,
-  );
-}
-
-// =========================================================
-// DATE FORMATTER
-// =========================================================
-
-function formatDateTime(
-  value,
-) {
-  if (!value) {
-    return "";
-  }
-
-  try {
-    let date;
-
-    if (
-      typeof value?.toDate ===
-      "function"
-    ) {
-      date =
-        value.toDate();
-    } else {
-      date =
-        new Date(value);
-    }
-
-    if (
-      Number.isNaN(
-        date.getTime(),
-      )
-    ) {
-      return "";
-    }
-
-    return date.toLocaleString(
-      "en-IN",
-      {
-        dateStyle:
-          "medium",
-
-        timeStyle:
-          "short",
-      },
-    );
-  } catch {
-    return "";
-  }
 }
 
 // =========================================================

@@ -678,11 +678,8 @@ export const activateCertification = async (
           mockTests:
             true,
 
-          // Final exam remains locked.
-          // It will be unlocked only after
-          // all three mock tests are completed.
           finalExam:
-            false,
+            true,
         },
 
         // =================================================
@@ -717,9 +714,6 @@ export const activateCertification = async (
                 : "available",
           },
 
-          // Mock Test 2 remains locked until
-          // Mock Test 1 requirement is satisfied.
-
           test2: {
             ...(
               certification
@@ -731,15 +725,10 @@ export const activateCertification = async (
             testNumber: 2,
 
             status:
-              certification
-                .mockTests
-                ?.test2
-                ?.status ||
-              "locked",
+              certification.mockTests?.test2?.status === "passed"
+                ? "passed"
+                : "available",
           },
-
-          // Mock Test 3 remains locked until
-          // Mock Test 2 requirement is satisfied.
 
           test3: {
             ...(
@@ -752,11 +741,9 @@ export const activateCertification = async (
             testNumber: 3,
 
             status:
-              certification
-                .mockTests
-                ?.test3
-                ?.status ||
-              "locked",
+              certification.mockTests?.test3?.status === "passed"
+                ? "passed"
+                : "available",
           },
         },
       },
