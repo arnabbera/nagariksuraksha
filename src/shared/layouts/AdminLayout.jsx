@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 import { useAuth } from "../../hooks/useAuth";
+import { isAdminEmail } from "../../services/authService";
 
-import Sidebar from "./Sidebar";
-import Topbar from "./Topbar";
+import AdminHeader from "./AdminHeader";
 
 const AdminLayout = () => {
   const {
@@ -12,9 +11,6 @@ const AdminLayout = () => {
     loading,
     role,
   } = useAuth();
-
-  const [mobileSidebarOpen, setMobileSidebarOpen] =
-    useState(false);
 
   if (loading) {
     return (
@@ -26,7 +22,8 @@ const AdminLayout = () => {
 
   if (
     !firebaseUser ||
-    role !== "admin"
+    role !== "admin" ||
+    !isAdminEmail(firebaseUser.email)
   ) {
     return (
       <Navigate
@@ -38,26 +35,13 @@ const AdminLayout = () => {
 
   return (
     <div className="ns-admin-shell">
-      <Sidebar
-        mobileOpen={mobileSidebarOpen}
-        onCloseMobile={() =>
-          setMobileSidebarOpen(false)
-        }
-      />
+      <AdminHeader />
 
-      <div className="ns-admin-main">
-        <Topbar
-          onOpenSidebar={() =>
-            setMobileSidebarOpen(true)
-          }
-        />
-
-        <main className="ns-admin-content">
-          <div className="ns-admin-content-inner">
-            <Outlet />
-          </div>
-        </main>
-      </div>
+      <main className="ns-admin-content">
+        <div className="ns-admin-content-inner">
+          <Outlet />
+        </div>
+      </main>
 
       <style>
         {`
@@ -67,28 +51,18 @@ const AdminLayout = () => {
             color: #0f172a;
           }
 
-          .ns-admin-main {
-            min-height: 100vh;
-            margin-left: 288px;
-            transition: margin-left 0.25s ease;
-          }
-
           .ns-admin-content {
-            min-height: calc(100vh - 80px);
-            padding: 28px;
+            min-height: calc(100vh - 78px);
+            padding: 36px 24px 64px;
           }
 
           .ns-admin-content-inner {
             width: 100%;
-            max-width: 1600px;
+            max-width: 1280px;
             margin: 0 auto;
           }
 
           @media (max-width: 1023px) {
-            .ns-admin-main {
-              margin-left: 0;
-            }
-
             .ns-admin-content {
               padding: 20px;
             }
