@@ -32,6 +32,10 @@ import {
   getPublishedCourses,
 } from "../../../../services/courseService";
 
+import {
+  getPublishedChaptersByCourse,
+} from "../../../../services/chapterService";
+
 // =========================================================
 // HELPERS
 // =========================================================
@@ -141,14 +145,55 @@ export default function PublicCoursesPage() {
           const result =
             await getPublishedCourses();
 
+          const coursesWithChapterCounts =
+            await Promise.all(
+              (Array.isArray(result)
+                ? result
+                : []
+              ).map(async (course) => {
+                const storedTotal = Number(
+                  course?.totals?.chapters || 0,
+                );
+
+                if (storedTotal > 0) {
+                  return {
+                    ...course,
+                    publishedChapterCount: storedTotal,
+                  };
+                }
+
+                try {
+                  const chapters =
+                    await getPublishedChaptersByCourse(
+                      course.id,
+                    );
+
+                  return {
+                    ...course,
+                    publishedChapterCount: Array.isArray(chapters)
+                      ? chapters.length
+                      : 0,
+                  };
+                } catch (chapterError) {
+                  console.warn(
+                    `Unable to count chapters for ${course.id}:`,
+                    chapterError,
+                  );
+
+                  return {
+                    ...course,
+                    publishedChapterCount: storedTotal,
+                  };
+                }
+              }),
+            );
+
           if (!active) {
             return;
           }
 
           setCourses(
-            Array.isArray(result)
-              ? result
-              : [],
+            coursesWithChapterCounts,
           );
         } catch (loadError) {
           console.error(
@@ -348,6 +393,28 @@ export default function PublicCoursesPage() {
                           course,
                         );
 
+                      const assessmentInformation =
+                        course?.assessments ||
+                        course?.certification?.assessments ||
+                        {};
+
+                      const chapterCount = Number(
+                        course?.publishedChapterCount ??
+                        course?.totals?.chapters ??
+                        0,
+                      );
+
+                      const mockTestCount = Number(
+                        assessmentInformation?.mockTests?.count ||
+                        assessmentInformation?.mockTestCount ||
+                        3,
+                      );
+
+                      const certificationIncluded =
+                        course?.certification?.available ??
+                        course?.certificationAvailable ??
+                        true;
+
                       return (
                         <article
                           className="public-course-card"
@@ -382,23 +449,24 @@ export default function PublicCoursesPage() {
                               <span>
                                 <FaBookOpen />
 
-                                {Number(
-                                  course
-                                    ?.totals
-                                    ?.chapters ||
-                                    0,
-                                )}{" "}
+                                {chapterCount}{" "}
                                 Chapters
                               </span>
 
-                              {course
-                                ?.duration && (
-                                <span>
-                                  {
-                                    course.duration
-                                  }
-                                </span>
-                              )}
+                              <span>
+                                <FaCheckCircle />
+
+                                {mockTestCount}{" "}
+                                Mock Tests
+                              </span>
+
+                              <span>
+                                <FaCertificate />
+
+                                {certificationIncluded
+                                  ? "Certification Included"
+                                  : "No Certification"}
+                              </span>
                             </div>
 
                             <h3>
@@ -742,19 +810,31 @@ export default function PublicCoursesPage() {
             }
 
             .course-meta {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 8px 14px;
-              margin-bottom: 10px;
-              color: #64748b;
+              display: grid;
+              grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+              gap: 7px;
+              margin-bottom: 13px;
               font-size: 11px;
               font-weight: 700;
             }
 
             .course-meta span {
-              display: inline-flex;
+              display: flex;
               align-items: center;
-              gap: 5px;
+              gap: 6px;
+              min-width: 0;
+              border: 1px solid #dbeafe;
+              border-radius: 9px;
+              background: #eff6ff;
+              color: #1e40af;
+              padding: 7px 8px;
+              line-height: 1.35;
+            }
+
+            .course-meta span svg {
+              flex-shrink: 0;
+              color: #2563eb;
             }
 
             .course-card-content h3 {
@@ -951,6 +1031,10 @@ export default function PublicCoursesPage() {
               }
 
               .course-grid {
+                grid-template-columns: 1fr;
+              }
+
+              .course-meta {
                 grid-template-columns: 1fr;
               }
 
