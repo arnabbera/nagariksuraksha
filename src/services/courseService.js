@@ -128,8 +128,14 @@ export const updateCourse = async (
     throw new Error("Course ID is required.");
   }
 
-  const existingCourse =
+  const storedCourse =
     await courseRepository.getById(courseId);
+
+  const existingCourse =
+    storedCourse ||
+    bundledCourses.find(
+      (course) => course.id === courseId,
+    );
 
   if (!existingCourse) {
     throw new Error("Course not found.");
@@ -153,6 +159,37 @@ export const updateCourse = async (
     );
   }
 
+  if (!storedCourse) {
+    const persistedDraft = createCourseModel({
+      ...courseData,
+      id: courseId,
+      slug,
+      totalSemesters:
+        courseData.totalSemesters ??
+        existingCourse.totals?.semesters ??
+        0,
+      totalSubjects:
+        courseData.totalSubjects ??
+        existingCourse.totals?.subjects ??
+        0,
+      totalChapters:
+        courseData.totalChapters ??
+        existingCourse.totals?.chapters ??
+        0,
+      status: "draft",
+      createdBy:
+        existingCourse.createdBy || updatedBy,
+      updatedBy,
+      version:
+        Number(existingCourse.version || 1) + 1,
+    });
+
+    return courseRepository.create(
+      courseId,
+      persistedDraft,
+    );
+  }
+
   return courseRepository.update(courseId, {
     ...courseData,
     slug,
@@ -162,8 +199,26 @@ export const updateCourse = async (
   });
 };
 
-export const publishCourse = async (courseId) =>
-  courseRepository.publish(courseId);
+export const publishCourse = async (courseId) => {
+  const storedCourse =
+    await courseRepository.getById(courseId);
+
+  if (!storedCourse) {
+    const bundledCourse = bundledCourses.find(
+      (course) => course.id === courseId,
+    );
+
+    if (bundledCourse) {
+      throw new Error(
+        "Edit and save this draft course before final approval.",
+      );
+    }
+
+    throw new Error("Course not found.");
+  }
+
+  return courseRepository.publish(courseId);
+};
 
 export const archiveCourse = async (courseId) =>
   courseRepository.archive(courseId);

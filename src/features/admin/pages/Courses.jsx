@@ -304,7 +304,8 @@ export default function Courses() {
       );
 
       setError(
-        "Unable to publish the course.",
+        publishError?.message ||
+          "Unable to publish the course.",
       );
     }
   };
