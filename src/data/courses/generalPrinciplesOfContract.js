@@ -21,7 +21,7 @@ export const generalPrinciplesOfContractCourse = createCourseModel({
   featured: false,
   order: 5,
   totalChapters: 8,
-  status: "published",
+  status: "draft",
   createdBy: "system",
   updatedBy: "system",
   seo: {
@@ -248,4 +248,3 @@ export const generalPrinciplesOfContractBooks = [
     published: true,
   }),
 ];
-
