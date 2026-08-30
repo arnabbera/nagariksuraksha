@@ -1,9 +1,11 @@
 import { createChapterModel } from "../models/ChapterModel";
 import chapterRepository from "../repositories/ChapterRepository";
 import { generalPrinciplesOfContractChapters } from "../data/courses/generalPrinciplesOfContract";
+import { familyLawIChapters } from "../data/courses/familyLawI";
 
 const bundledChapters = [
   ...generalPrinciplesOfContractChapters,
+  ...familyLawIChapters,
 ];
 
 const createSlug = (value = "") =>
@@ -57,11 +59,13 @@ export const getPublishedChaptersByCourse =
     const chapterMap = new Map(
       bundledChapters
         .filter((chapter) => chapter.courseId === courseId)
-        .map((chapter) => [chapter.id, chapter]),
+        .map((chapter) => [chapter.slug || chapter.id, chapter]),
     );
 
     for (const chapter of storedChapters || []) {
-      if (chapter?.id) chapterMap.set(chapter.id, chapter);
+      if (chapter?.id) {
+        chapterMap.set(chapter.slug || chapter.id, chapter);
+      }
     }
 
     return [...chapterMap.values()].sort(
