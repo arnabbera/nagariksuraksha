@@ -119,6 +119,11 @@ export default function CourseDetails() {
     setImageError,
   ] = useState(false);
 
+  const [
+    showCourseDetails,
+    setShowCourseDetails,
+  ] = useState(false);
+
   // =========================================================
   // LOAD COURSE
   // =========================================================
@@ -467,6 +472,10 @@ export default function CourseDetails() {
     isAdmin ||
     certificationPaymentCompleted;
 
+  const isCivilProcedureCourse =
+    course?.slug ===
+    "code-of-civil-procedure-and-limitation";
+
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
   const finalExamAvailable = hasCourseAccess;
@@ -749,12 +758,62 @@ export default function CourseDetails() {
               Course Overview
             </h2>
 
-            <p>
-              {course.description ||
-                course.shortDescription ||
-                "Course details will be available soon."}
-            </p>
+            {isCivilProcedureCourse ? (
+              <>
+                <h3 className="ns-course-overview-title">
+                  Code of Civil Procedure and Limitation
+                </h3>
 
+                <p>
+                  The course <strong>Code of Civil Procedure and Limitation</strong>{" "}
+                  provides a systematic and practical understanding of the
+                  procedural framework governing civil litigation in India. It
+                  primarily examines the <strong>Code of Civil Procedure, 1908
+                  (CPC)</strong> and the <strong>Limitation Act, 1963</strong>,
+                  enabling students to understand how civil rights and remedies
+                  are pursued and enforced before courts.
+                </p>
+
+                <button
+                  type="button"
+                  className="ns-course-more-details-button"
+                  aria-expanded={showCourseDetails}
+                  onClick={() =>
+                    setShowCourseDetails(
+                      (currentValue) =>
+                        !currentValue,
+                    )
+                  }
+                >
+                  {showCourseDetails
+                    ? "Hide Details"
+                    : "More Details"}
+                </button>
+
+                {showCourseDetails &&
+                  course.description && (
+                    <div className="ns-course-expanded-details">
+                      <h3>
+                        Course Details
+                      </h3>
+
+                      <p>
+                        {course.description}
+                      </p>
+                    </div>
+                  )}
+              </>
+            ) : (
+              <p>
+                {course.description ||
+                  course.shortDescription ||
+                  "Course details will be available soon."}
+              </p>
+            )}
+
+            {(!isCivilProcedureCourse ||
+              showCourseDetails) && (
+              <>
             <div className="ns-course-detail-meta">
               <span>
                 <FaClock />
@@ -838,6 +897,8 @@ export default function CourseDetails() {
               <div className="ns-course-enroll-action">
                 <p>Pay ₹49 once to join this course and unlock all chapters, study PDFs, mock tests and the final examination.</p>
               </div>
+            )}
+              </>
             )}
           </div>
         </Card>
@@ -1391,6 +1452,64 @@ export default function CourseDetails() {
             line-height: 1.75;
 
             white-space: pre-line;
+          }
+
+          .ns-course-overview-title {
+            margin:
+              2px 0 10px;
+
+            color: #0f172a;
+
+            font-size: 17px;
+          }
+
+          .ns-course-more-details-button {
+            align-self: flex-start;
+
+            margin-bottom: 18px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #2563eb;
+
+            color: #ffffff;
+
+            cursor: pointer;
+
+            padding:
+              10px 16px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+          }
+
+          .ns-course-more-details-button:hover {
+            background: #1d4ed8;
+          }
+
+          .ns-course-expanded-details {
+            margin-bottom: 18px;
+
+            border-top:
+              1px solid #e2e8f0;
+
+            padding-top: 18px;
+          }
+
+          .ns-course-expanded-details h3 {
+            margin:
+              0 0 10px;
+
+            color: #0f172a;
+
+            font-size: 16px;
+          }
+
+          .ns-course-expanded-details p {
+            margin: 0;
           }
 
           /* ==================================================
