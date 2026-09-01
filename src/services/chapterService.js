@@ -2,10 +2,12 @@ import { createChapterModel } from "../models/ChapterModel";
 import chapterRepository from "../repositories/ChapterRepository";
 import { generalPrinciplesOfContractChapters } from "../data/courses/generalPrinciplesOfContract";
 import { familyLawIChapters } from "../data/courses/familyLawI";
+import { criminalLawIChapters } from "../data/courses/criminalLawI";
 
 const bundledChapters = [
   ...generalPrinciplesOfContractChapters,
   ...familyLawIChapters,
+  ...criminalLawIChapters,
 ];
 
 const createSlug = (value = "") =>
@@ -34,8 +36,46 @@ export const getChaptersByCourse = async (
     return [];
   }
 
-  return chapterRepository.getByCourse(
-    courseId,
+  const storedChapters =
+    await chapterRepository.getByCourse(
+      courseId,
+    );
+
+  const chapterMap = new Map(
+    bundledChapters
+      .filter(
+        (chapter) =>
+          chapter.courseId === courseId,
+      )
+      .map(
+        (chapter) => [
+          chapter.id,
+          chapter,
+        ],
+      ),
+  );
+
+  for (const chapter of storedChapters || []) {
+    if (chapter?.id) {
+      chapterMap.set(
+        chapter.id,
+        chapter,
+      );
+    }
+  }
+
+  return [...chapterMap.values()].sort(
+    (first, second) =>
+      Number(
+        first.displayOrder ||
+          first.chapterNumber ||
+          0,
+      ) -
+      Number(
+        second.displayOrder ||
+          second.chapterNumber ||
+          0,
+      ),
   );
 };
 
@@ -156,9 +196,16 @@ export const updateChapter = async (
     );
   }
 
-  const existingChapter =
+  const storedChapter =
     await chapterRepository.getById(
       chapterId,
+    );
+
+  const existingChapter =
+    storedChapter ||
+    bundledChapters.find(
+      (chapter) =>
+        chapter.id === chapterId,
     );
 
   if (!existingChapter) {
@@ -433,6 +480,12 @@ export const updateChapter = async (
             1,
         ) + 1,
     });
+
+  if (!storedChapter) {
+    return chapterRepository.create(
+      updatedChapter,
+    );
+  }
 
   return chapterRepository.update(
     chapterId,
