@@ -813,17 +813,91 @@ export default function CourseDetails() {
                 </button>
 
                 {showCourseDetails &&
-                  course.description && (
+                  (isTortsCourse ? (
                     <div className="ns-course-expanded-details">
                       <h3>
                         Course Details
                       </h3>
 
                       <p>
-                        {course.description}
+                        This course provides a comprehensive study of civil
+                        wrongs, road-accident liability, and consumer protection
+                        law in India. It connects legal principles with statutory
+                        provisions, important judicial decisions, and practical
+                        problem-solving.
                       </p>
+
+                      <h4>
+                        Law of Torts
+                      </h4>
+
+                      <p>
+                        Students examine the nature and essential elements of a
+                        tort, general defences, vicarious and State liability,
+                        negligence, nuisance, defamation, trespass, strict and
+                        absolute liability, and the remedies available to an
+                        injured person.
+                      </p>
+
+                      <h4>
+                        Motor Vehicles Law
+                      </h4>
+
+                      <p>
+                        The course explains important provisions of the Motor
+                        Vehicles Act, 1988, including licensing and registration,
+                        compulsory third-party insurance, liability arising from
+                        motor accidents, Motor Accident Claims Tribunals,
+                        compensation, and claims involving death or bodily injury.
+                      </p>
+
+                      <h4>
+                        Consumer Protection Law
+                      </h4>
+
+                      <p>
+                        Students learn the Consumer Protection Act, 2019,
+                        consumer rights, defects in goods, deficiency in
+                        services, unfair trade practices, product liability,
+                        e-commerce transactions, consumer commissions, and the
+                        remedies available to consumers.
+                      </p>
+
+                      <h4>
+                        Learning Approach
+                      </h4>
+
+                      <ul>
+                        <li>
+                          Understand the essential principles and statutory rules.
+                        </li>
+                        <li>
+                          Apply legal concepts to practical situations and
+                          problem questions.
+                        </li>
+                        <li>
+                          Study important judicial decisions and their legal
+                          reasoning.
+                        </li>
+                        <li>
+                          Prepare systematically for LL.B examinations, mock
+                          tests, and the final certification assessment.
+                        </li>
+                      </ul>
                     </div>
-                  )}
+                  ) : (
+                    course.description && (
+                      <div className="ns-course-expanded-details">
+                        <h3>
+                          Course Details
+                        </h3>
+
+                        <p>
+                          {course.description}
+                        </p>
+                      </div>
+                    )
+                  ))}
               </>
             ) : (
               <p>
@@ -1532,6 +1606,32 @@ export default function CourseDetails() {
 
           .ns-course-expanded-details p {
             margin: 0;
+          }
+
+          .ns-course-expanded-details h4 {
+            margin:
+              18px 0 7px;
+
+            color: #1e3a8a;
+
+            font-size: 14px;
+          }
+
+          .ns-course-expanded-details ul {
+            margin:
+              8px 0 0;
+
+            padding-left: 20px;
+
+            color: #64748b;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+          }
+
+          .ns-course-expanded-details li + li {
+            margin-top: 5px;
           }
 
           /* ==================================================
