@@ -102,6 +102,11 @@ export default function PublicCourseDetailsPage() {
     setError,
   ] = useState("");
 
+  const [
+    showCourseDetails,
+    setShowCourseDetails,
+  ] = useState(false);
+
   // =======================================================
   // LOAD COURSE
   // =======================================================
@@ -465,6 +470,10 @@ export default function PublicCourseDetailsPage() {
         50,
     );
 
+  const isCivilProcedureCourse =
+    course.slug ===
+    "code-of-civil-procedure-and-limitation";
+
   // =======================================================
   // RENDER
   // =======================================================
@@ -632,11 +641,23 @@ export default function PublicCourseDetailsPage() {
               </span>
 
               <h2>
-                About {course.title}
+                {isCivilProcedureCourse
+                  ? "Code of Civil Procedure and Limitation"
+                  : `About ${course.title}`}
               </h2>
 
               <div className="course-description">
-                {course.description ? (
+                {isCivilProcedureCourse ? (
+                  <p>
+                    The course <strong>Code of Civil Procedure and Limitation</strong>{" "}
+                    provides a systematic and practical understanding of the
+                    procedural framework governing civil litigation in India. It
+                    primarily examines the <strong>Code of Civil Procedure, 1908
+                    (CPC)</strong> and the <strong>Limitation Act, 1963</strong>,
+                    enabling students to understand how civil rights and remedies
+                    are pursued and enforced before courts.
+                  </p>
+                ) : course.description ? (
                   course.description
                     .split("\n")
                     .filter(Boolean)
@@ -664,6 +685,57 @@ export default function PublicCourseDetailsPage() {
                 )}
               </div>
 
+              {isCivilProcedureCourse && (
+                <button
+                  type="button"
+                  className="course-more-details-button"
+                  aria-expanded={showCourseDetails}
+                  onClick={() =>
+                    setShowCourseDetails(
+                      (currentValue) =>
+                        !currentValue,
+                    )
+                  }
+                >
+                  {showCourseDetails
+                    ? "Hide Details"
+                    : "More Details"}
+                </button>
+              )}
+
+              {isCivilProcedureCourse &&
+                showCourseDetails &&
+                course.description && (
+                  <div className="course-expanded-details">
+                    <h3>
+                      Course Details
+                    </h3>
+
+                    {course.description
+                      .split("\n")
+                      .filter(Boolean)
+                      .map(
+                        (
+                          paragraph,
+                          index,
+                        ) => (
+                          <p
+                            key={
+                              index
+                            }
+                          >
+                            {
+                              paragraph
+                            }
+                          </p>
+                        ),
+                      )}
+                  </div>
+                )}
+
+              {(!isCivilProcedureCourse ||
+                showCourseDetails) && (
+                <>
               <div className="what-you-learn">
                 <h2>
                   What You Get from This
@@ -729,6 +801,9 @@ export default function PublicCourseDetailsPage() {
                   </div>
                 </div>
               </div>
+
+                </>
+              )}
             </article>
 
             {/* SIDEBAR */}
@@ -1147,6 +1222,40 @@ export default function PublicCourseDetailsPage() {
               color: #475569;
               font-size: 14px;
               line-height: 1.8;
+            }
+
+            .course-more-details-button {
+              margin-top: 18px;
+              border: 0;
+              border-radius: 10px;
+              background: #2563eb;
+              color: #ffffff;
+              cursor: pointer;
+              padding: 11px 18px;
+              font-size: 12px;
+              font-weight: 800;
+            }
+
+            .course-more-details-button:hover {
+              background: #1d4ed8;
+            }
+
+            .course-expanded-details {
+              margin-top: 22px;
+              border-top: 1px solid #e2e8f0;
+              padding-top: 20px;
+            }
+
+            .course-expanded-details h3 {
+              margin: 0 0 12px;
+              color: #0f172a;
+              font-size: 18px;
+            }
+
+            .course-expanded-details p {
+              margin: 0 0 12px;
+              color: #475569;
+              line-height: 1.75;
             }
 
             .what-you-learn {
