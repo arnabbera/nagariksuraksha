@@ -476,6 +476,14 @@ export default function CourseDetails() {
     course?.slug ===
     "code-of-civil-procedure-and-limitation";
 
+  const isTortsCourse =
+    course?.slug ===
+    "law-of-torts-mv-and-cp-laws";
+
+  const hasExpandableCourseOverview =
+    isCivilProcedureCourse ||
+    isTortsCourse;
+
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
   const finalExamAvailable = hasCourseAccess;
@@ -758,21 +766,35 @@ export default function CourseDetails() {
               Course Overview
             </h2>
 
-            {isCivilProcedureCourse ? (
+            {hasExpandableCourseOverview ? (
               <>
                 <h3 className="ns-course-overview-title">
-                  Code of Civil Procedure and Limitation
+                  {isCivilProcedureCourse
+                    ? "Code of Civil Procedure and Limitation"
+                    : "Law of Torts, MV and CP Laws"}
                 </h3>
 
-                <p>
-                  The course <strong>Code of Civil Procedure and Limitation</strong>{" "}
-                  provides a systematic and practical understanding of the
-                  procedural framework governing civil litigation in India. It
-                  primarily examines the <strong>Code of Civil Procedure, 1908
-                  (CPC)</strong> and the <strong>Limitation Act, 1963</strong>,
-                  enabling students to understand how civil rights and remedies
-                  are pursued and enforced before courts.
-                </p>
+                {isCivilProcedureCourse ? (
+                  <p>
+                    The course <strong>Code of Civil Procedure and Limitation</strong>{" "}
+                    provides a systematic and practical understanding of the
+                    procedural framework governing civil litigation in India. It
+                    primarily examines the <strong>Code of Civil Procedure, 1908
+                    (CPC)</strong> and the <strong>Limitation Act, 1963</strong>,
+                    enabling students to understand how civil rights and remedies
+                    are pursued and enforced before courts.
+                  </p>
+                ) : (
+                  <p>
+                    The course <strong>Law of Torts, MV and CP Laws</strong>{" "}
+                    provides a systematic and practical understanding of the Law
+                    of Torts, Motor Vehicles Law, and Consumer Protection Law. It
+                    examines fundamental principles, civil liabilities, remedies,
+                    compensation, and important statutory provisions, enabling
+                    students to understand how legal rights and claims are
+                    protected and enforced.
+                  </p>
+                )}
 
                 <button
                   type="button"
@@ -811,7 +833,7 @@ export default function CourseDetails() {
               </p>
             )}
 
-            {(!isCivilProcedureCourse ||
+            {(!hasExpandableCourseOverview ||
               showCourseDetails) && (
               <>
             <div className="ns-course-detail-meta">
