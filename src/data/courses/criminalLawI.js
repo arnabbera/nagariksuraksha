@@ -944,22 +944,188 @@ Use the following sequence:
   {
     title: "False Evidence and Offences against Public Justice",
     shortDescription:
-      "Giving and fabricating false evidence and related offences that interfere with the administration of justice.",
+      "A detailed study of giving and fabricating false evidence, aggravated forms, threats to witnesses, false certificates and declarations, and their effect on public justice.",
     overview:
-      "This unit explains offences that corrupt evidence, obstruct judicial proceedings or otherwise undermine public justice.",
-    detailedContent:
-      "Giving false evidence; fabricating false evidence; punishment for false evidence; aggravated forms; using evidence known to be false; issuing false certificates and declarations; causing disappearance of evidence; giving false information; and corresponding provisions under the Bharatiya Nyaya Sanhita, 2023.",
+      "The administration of justice depends upon truthful testimony and reliable documentary, electronic and circumstantial evidence. This chapter examines IPC Sections 191–200 and their principal counterparts in BNS Sections 227–237. It distinguishes giving false evidence from fabricating it, explains the legal duty to speak the truth, materiality and the required mental state, compares punishment in judicial and other proceedings, and analyses aggravated liability where false evidence is intended to procure conviction for a grave offence. It also covers witness intimidation, corrupt use of evidence known to be false, false certificates and declarations, and a practical method for solving problems involving testimony, records and electronic evidence.",
+    learningObjectives: [
+      "Define giving false evidence and identify the legal duty, false statement and required mental state.",
+      "Distinguish an objectively incorrect statement from criminal false evidence.",
+      "Explain fabrication through artificial circumstances, false entries, documents and electronic records.",
+      "Identify the additional intention and materiality requirements for fabricated evidence.",
+      "Compare punishment for false evidence in judicial and non-judicial proceedings.",
+      "Analyse aggravated liability intended to procure conviction for capital or other serious offences.",
+      "Explain liability for threatening a person to give false evidence.",
+      "Apply the offences relating to use of evidence, certificates and declarations known to be false.",
+      "Compare IPC Sections 191–200 with BNS Sections 227–237.",
+      "Evaluate oral, documentary and electronic evidence through an ingredient-based problem method.",
+    ],
+    detailedContent: `1. Public Justice and the Need for Truthful Evidence
+
+Courts, tribunals, arbitrators and public authorities make decisions from evidence placed before them. Deliberately corrupting that material can convict an innocent person, defeat a lawful claim, protect an offender or undermine confidence in legal institutions. False-evidence offences therefore protect the decision-making process rather than merely the private interests of one party.
+
+Not every error, inconsistency or failed recollection is criminal. The law requires a legal duty to state the truth or a deliberate act of fabrication, the prescribed knowledge or belief, and any additional statutory intention or material connection.
+
+2. Giving False Evidence under IPC Section 191
+
+A person gives false evidence when, being legally bound by an oath or an express provision of law to state the truth, or being legally bound to make a declaration upon a subject, that person makes a statement which is false and which the person knows or believes to be false or does not believe to be true.
+
+The statement may be verbal or otherwise. A statement about the speaker's belief may itself be false: a person who claims to believe something that the person does not actually believe may give false evidence even if the underlying fact later proves true.
+
+3. BNS Section 227
+
+BNS Section 227 substantially carries forward the definition of giving false evidence. The essential questions remain:
+
+(a) was the person legally bound to state the truth or make the declaration;
+(b) was a statement made;
+(c) was the statement false; and
+(d) did the person know or believe it was false, or not believe it to be true?
+
+An interpreter or translator legally bound to interpret truly may commit the offence by deliberately giving a translation not believed to be true. A good-faith statement of genuine belief is not false evidence merely because that belief is factually mistaken.
+
+4. Legal Duty and the Mental Element
+
+The duty to speak truthfully may arise from an oath, statutory obligation or legally required declaration. A casual lie outside such a duty may be immoral and may constitute another offence, but it does not automatically satisfy the false-evidence definition.
+
+Knowledge, belief and absence of belief must be proved from the circumstances. Negligence, confusion, poor memory, misunderstanding a question or an innocent mistake is not enough. Deliberate evasiveness may be relevant, but the prosecution must identify the statement alleged to be false and establish the accused's state of mind.
+
+5. Contradictions and Hostile Testimony
+
+Two inconsistent statements do not automatically prove which one is false or that either was made with the statutory mental state. The surrounding evidence must establish falsity and conscious departure from truth.
+
+A witness being declared hostile is an evidentiary event, not a conviction for false evidence. A court may accept reliable portions of testimony while rejecting others. Criminal liability requires an independent application of the statutory ingredients and applicable procedural safeguards.
+
+6. Fabricating False Evidence under IPC Section 192
+
+A person fabricates false evidence by causing a circumstance to exist, making a false entry in a book or record, or making a document or electronic record containing a false statement, with the required intention that it appear in evidence in a judicial proceeding or a proceeding taken by law before a public servant or arbitrator.
+
+The person must also intend that the artificial circumstance, entry or statement cause the decision-maker to entertain an erroneous opinion on a point material to the result. Planting an object, manufacturing a record or creating a false digital trail can therefore constitute fabrication when these elements are proved.
+
+7. BNS Section 228
+
+BNS Section 228 substantially retains the fabrication rule and expressly refers to books, records, electronic records, documents and electronic records containing false statements. Fabrication can occur before proceedings begin if the evidence is created with the required intended use.
+
+The offence differs from giving false evidence. Giving false evidence centres on a false statement made while legally bound to speak truthfully. Fabrication centres on intentionally creating a false circumstance or evidentiary item designed to mislead a legally authorised decision-maker on a material point.
+
+8. Materiality and Intended Use
+
+For fabrication, the erroneous opinion intended must concern a point material to the result of the proceeding. Materiality is assessed in relation to the issues the authority must decide; a wholly irrelevant false detail will not satisfy this element merely because it is untrue.
+
+Actual admission or successful deception is not always necessary where the offence is defined by the creation of false evidence with the prescribed intention. The prosecution must nevertheless prove the contemplated proceeding or legally authorised process and the intended evidentiary effect.
+
+9. Punishment under IPC Section 193 and BNS Section 229
+
+The law distinguishes false evidence in a stage of a judicial proceeding from false evidence in other cases. Under BNS Section 229, intentional giving or fabrication in a judicial proceeding, or fabrication for use in such a proceeding, may be punished with imprisonment up to seven years and fine up to ten thousand rupees.
+
+In other cases covered by the section, punishment may extend to three years and fine up to five thousand rupees. IPC Section 193 follows the corresponding distinction, although a transition answer should state the applicable statutory wording and date rather than assume all fine provisions are identical.
+
+10. Meaning of a Stage of Judicial Proceeding
+
+The statutory explanation extends the concept beyond testimony delivered inside a courtroom. An investigation directed by law preliminary to a judicial proceeding, and conducted by a public servant authorised by law, may form a stage of a judicial proceeding. Proceedings must be classified from their legal character, not their physical location.
+
+The answer should identify the authority, source of power, nature of the inquiry, purpose of the evidence and whether the evidence was given in or fabricated for the legally recognised stage.
+
+11. False Evidence to Procure Conviction for a Capital Offence
+
+IPC Section 194 and BNS Section 230 create aggravated liability where a person gives or fabricates false evidence intending, or knowing it to be likely, to cause another person to be convicted of an offence punishable with death.
+
+The provision imposes severe punishment and further addresses the consequence where an innocent person is convicted and executed because of that false evidence. The prosecution must prove the accused's special intention or knowledge, the nature of the target offence and, for consequence-based punishment, the required causal result.
+
+12. False Evidence Concerning Other Serious Offences
+
+IPC Section 195 and BNS Section 231 address false evidence intended or known to be likely to procure conviction for an offence punishable with imprisonment for life or the specified serious term of imprisonment. The punishment is linked to the punishment that could be imposed for the target offence within the statutory rule.
+
+A careful answer identifies the exact offence for which conviction was sought, its lawful punishment, the accused's intention or knowledge, and whether the false evidence was capable of producing that result.
+
+13. Threatening a Person to Give False Evidence
+
+IPC Section 195A and BNS Section 232 punish threats of injury to a person's body, reputation or property, or to the body or reputation of a person in whom that person is interested, when made with intent to cause the person to give false evidence.
+
+BNS Section 232 also provides consequence-based liability where an innocent person is convicted and severely sentenced because of false evidence induced by the threat. The offence protects witness autonomy as well as the accuracy of adjudication. The threat, target, intended influence and resulting evidence must be proved separately.
+
+14. Using Evidence Known to Be False
+
+IPC Section 196 and BNS Section 233 punish a person who corruptly uses or attempts to use as true or genuine evidence which that person knows to be false or fabricated. The user need not have personally created the evidence.
+
+The prosecution must prove the use or attempt, corrupt character and actual knowledge. Mere reliance on evidence later found unreliable is insufficient where the user honestly believed it to be genuine.
+
+15. False Certificates
+
+IPC Section 197 and BNS Section 234 address issuing or signing a certificate required by law to be given or signed, or relating to a fact for which the certificate is legally admissible in evidence, where the certificate is false in a material point and the maker knows or believes it to be false.
+
+IPC Section 198 and BNS Section 235 punish corrupt use or attempted use of such a certificate as true while knowing it to be materially false. Medical, official, educational or other certificates fall within the provision only when the statutory legal-use conditions are satisfied.
+
+16. False Declarations
+
+IPC Section 199 and BNS Section 236 apply to a declaration which a court, public servant or other person is legally bound or authorised to receive as evidence of a fact. A materially false statement made in such a declaration with knowledge, belief in falsity or absence of belief in truth is punished as false evidence.
+
+IPC Section 200 and BNS Section 237 punish corrupt use or attempted use of such a declaration as true, knowing it to be false in a material point. A declaration does not fall outside the provision merely because a technical informality affects admissibility, subject to the statutory explanation.
+
+17. Electronic and Digital Evidence
+
+False entries, altered metadata, fabricated messages, edited recordings, synthetic media, manipulated logs and forged electronic records may engage these offences when the required creation, intended use, materiality and mental state are proved.
+
+Digital evidence must be authenticated and preserved with a reliable chain of custody. Investigators and courts should distinguish original data, copies, automated records, user-generated content and later alteration. Technical proof of manipulation must be connected to the accused and to the intended legal proceeding.
+
+18. Procedure and Safeguards
+
+False-evidence prosecutions connected with court proceedings are subject to procedural requirements designed to prevent retaliatory or casually initiated cases. The court ordinarily considers whether action is legally permissible and expedient in the interests of justice under the applicable procedural law.
+
+These safeguards do not reduce the seriousness of deliberate perjury or fabrication. They ensure that prosecution follows the authorised route, is based on material falsehood and is not used merely because testimony was disbelieved or a party lost the case.
+
+19. Date of Conduct and IPC-to-BNS Transition
+
+The BNS came into force on 1 July 2024. Pre-commencement conduct is assessed under the IPC and applicable savings provisions; later conduct is assessed under the BNS. Article 20(1) prevents retrospective criminalisation or enhancement of punishment.
+
+BNS Sections 227–237 substantially reorganise IPC Sections 191–200 and the inserted witness-threat provision in Section 195A. Students should compare ingredients and punishments rather than relying on a mechanical numbering table.
+
+20. Method for Solving Problems
+
+Use the following sequence:
+
+(a) identify the exact statement, circumstance, entry, document or electronic record;
+(b) determine whether the allegation is giving or fabricating false evidence;
+(c) establish the legal duty, proceeding and competent authority;
+(d) prove objective falsity and the accused's knowledge, belief or absence of genuine belief;
+(e) for fabrication, prove intended evidentiary use and materiality;
+(f) classify the proceeding as judicial or otherwise;
+(g) identify any intention to procure conviction for a grave offence;
+(h) examine threats, use, certificates or declarations under their separate provisions;
+(i) establish causation for any aggravated consequence;
+(j) authenticate documentary and electronic evidence;
+(k) apply procedural safeguards and the law governing the date of conduct; and
+(l) reach a separate reasoned conclusion for each alleged act and accused person.`,
     keyPoints: [
-      "Giving and fabricating false evidence",
-      "False certificates and declarations",
-      "Use of evidence known to be false",
-      "Disappearance of evidence",
-      "Protection of the administration of justice",
+      "False-evidence offences protect the integrity of legally authorised decision-making.",
+      "A factual error is not automatically criminal; the prescribed mental element must be proved.",
+      "Giving false evidence requires a legal duty to state the truth or make the declaration.",
+      "A statement about belief may be false where the speaker does not genuinely hold that belief.",
+      "Fabrication involves creating a circumstance, entry, document or electronic record intended to mislead on a material point.",
+      "Giving false evidence and fabricating false evidence are distinct offences with different act requirements.",
+      "Materiality is assessed against the issues relevant to the result of the proceeding.",
+      "Judicial-proceeding false evidence attracts a more serious punishment category.",
+      "Aggravated liability applies when false evidence is intended or known likely to procure conviction for specified grave offences.",
+      "Threatening a person to give false evidence is independently punishable.",
+      "A person may be liable for corruptly using false evidence even without having fabricated it.",
+      "False-certificate offences require a certificate legally required or admissible in evidence and falsity on a material point.",
+      "False-declaration offences require a declaration legally receivable as evidence of a fact.",
+      "Contradictory or hostile testimony does not by itself prove criminal false evidence.",
+      "Electronic fabrication requires authentication, attribution, intended legal use and proof of the mental element.",
+      "Procedural safeguards prevent false-evidence prosecution from becoming a routine response to rejected testimony.",
+      "BNS Sections 227–237 reorganise the central IPC false-evidence provisions.",
+      "The date of conduct determines whether the IPC or BNS applies.",
+      "Every answer should separate falsity, duty, knowledge, materiality, intended use, proceeding and consequence.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 191–200",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Indian Penal Code, 1860 — Sections 191–193",
+      "Indian Penal Code, 1860 — Sections 194–195A",
+      "Indian Penal Code, 1860 — Sections 196–200",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 227–229",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 230–232",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 233–237",
+      "Constitution of India — Article 20(1)",
     ],
+    examFocus:
+      "Identify whether the conduct is giving false evidence, fabrication, threat, use, certificate or declaration. Prove the legal duty and mental element, then address materiality, intended evidentiary use, classification of the proceeding and any aggravated intention or consequence. Comparative answers should map IPC Sections 191–200 and 195A to BNS Sections 227–237 while noting the applicable date and any punishment differences.",
   },
   {
     title: "Offences against the Human Body",
