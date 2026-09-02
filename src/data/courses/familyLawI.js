@@ -545,6 +545,77 @@ For maintenance, identify the claimant and exact section, prove the relationship
         "Distinguish natural, testamentary and de facto guardians.",
         "Apply the welfare-of-the-minor principle to custody and guardianship disputes.",
       ],
+      detailedContent: `
+1. Introduction and relationship with the general law
+
+The Hindu Minority and Guardianship Act, 1956 codifies specified rules concerning minority and guardianship among Hindus. It does not form a complete procedural code. Section 2 expressly states that the Act supplements the Guardians and Wards Act, 1890. The two statutes must therefore be read together: the 1956 Act identifies personal-law status and powers, while the 1890 Act supplies important court powers, procedure and welfare standards.
+
+The controlling idea is protection of the child rather than assertion of an adult's proprietary claim. Guardianship of the person, custody, and guardianship of property are related but distinct. A person may have a statutory status without being entitled to immediate physical custody where welfare points elsewhere.
+
+2. Definitions — Section 4
+
+Section 4 defines a minor as a person who has not completed eighteen years. A guardian is a person having the care of the minor's person, property, or both, and includes natural, testamentary and court-appointed or court-declared guardians. A natural guardian is one of the guardians mentioned in Section 6.
+
+These definitions must be applied with the Majority Act, 1875, the Guardians and Wards Act and special statutes where relevant. In a problem, identify separately who presently cares for the child, who claims legal guardianship, and who controls each item of property.
+
+3. Natural guardians — Section 6
+
+Section 6 identifies natural guardians of a Hindu minor in the situations it covers. For a boy or unmarried girl, the text names the father and after him the mother, while providing that custody of a child below five years shall ordinarily be with the mother. In Githa Hariharan v. Reserve Bank of India, the Supreme Court interpreted “after” to mean absence in the sense of the father's non-availability or indifference, not only his death. The provision must be applied consistently with equality and the child's welfare.
+
+For a child described by the statute as illegitimate, Section 6 names the mother and after her the father. The section also contains a rule concerning a married girl. These status rules do not displace the paramount welfare requirement in Section 13 or the court's powers under the Guardians and Wards Act.
+
+A person ceases to be entitled to act as natural guardian upon ceasing to be Hindu or completely and finally renouncing the world. A stepfather or stepmother is not included merely by the statutory expressions father and mother.
+
+4. Adopted child and testamentary guardians — Sections 7 and 9
+
+Section 7 states the statutory rule concerning natural guardianship of an adopted son, naming the adoptive father and after him the adoptive mother. Adoption also affects family ties under the Hindu Adoptions and Maintenance Act, 1956; the provisions must be read together and applied in a welfare-oriented manner.
+
+Section 9 regulates appointment of testamentary guardians by will. The power, commencement and revival of such guardianship depend on the identity and status of the appointing parent and the statutory conditions. A testamentary guardian has the rights of a natural guardian subject to the Act, the will and the overriding welfare of the minor. The right may cease when the minor marries where the statute so provides.
+
+5. Powers of a natural guardian — Section 8
+
+A natural guardian may do acts necessary, reasonable and proper for the benefit of the minor or the realisation, protection or benefit of the minor's estate. The guardian cannot bind the minor by a personal covenant. The statutory power is fiduciary and must be exercised for the minor, not for the guardian's convenience or benefit.
+
+Without prior permission of the court, the natural guardian cannot mortgage, charge, sell, gift, exchange or otherwise transfer the minor's immovable property, nor lease it beyond the limits stated in Section 8. A disposal in contravention is voidable at the instance of the minor or a person claiming under the minor; it is not correctly described as automatically void in every case.
+
+The court may grant permission only in case of necessity or evident advantage to the minor. The application and procedure are linked to the Guardians and Wards Act. A purchaser dealing with a guardian must verify authority and prior permission instead of assuming that family relationship creates unrestricted power.
+
+6. Persons incapable of acting and de facto guardians — Sections 10 and 11
+
+Section 10 provides that a minor is incapable of acting as guardian of the property of another minor. Section 11 bars a person from disposing of or dealing with a Hindu minor's property merely on the ground that the person is a de facto guardian.
+
+A de facto caregiver may perform daily care in fact, but factual custody alone does not confer statutory power to alienate property. Necessary protective steps should be taken through a lawful guardian or court order.
+
+7. Undivided interest in joint family property — Section 12
+
+Where a minor has an undivided interest in joint family property and the property is under the management of an adult family member, no guardian is ordinarily appointed for that undivided interest. The proviso preserves the High Court's jurisdiction.
+
+This rule must be distinguished from the minor's separate property and from a transaction requiring scrutiny of the manager's power under Hindu joint-family law. The absence of a court-appointed guardian does not remove fiduciary duties or judicial protection against an unauthorised alienation.
+
+8. Paramount welfare principle — Section 13
+
+Section 13 makes the welfare of the minor the paramount consideration in appointment or declaration of any guardian by a court. No person is entitled to guardianship merely by statutory or testamentary status if the court considers that guardianship inconsistent with the child's welfare.
+
+Welfare is broad. It includes physical safety, emotional security, health, education, stability, moral and ethical upbringing, continuity of care, meaningful relationships and the child's intelligent preference where age and maturity permit. Financial superiority alone is not decisive. In Nil Ratan Kundu v. Abhijit Kundu and Mausami Moitra Ganguli v. Jayant Ganguli, the Supreme Court emphasised a holistic welfare assessment rather than rigid parental rights.
+
+9. Guardians and Wards Act, 1890
+
+Sections 7 and 17 of the 1890 Act empower the court to appoint or declare a guardian when welfare requires and list relevant considerations. Section 12 permits interlocutory protection and temporary custody orders. Section 19 restricts appointment in specified circumstances involving a living parent not found unfit, but it remains subject to constitutional and welfare-based interpretation.
+
+Section 25 concerns return of a ward removed from the guardian's custody, again controlled by welfare. Sections 29 and 31 regulate alienation of property by a court-appointed guardian and the grant of permission. Do not apply Section 8 of HMGA and Sections 29–31 of the 1890 Act interchangeably without identifying the type of guardian.
+
+10. Custody, visitation and the child's voice
+
+Custody orders are not permanent declarations immune from change. Courts may vary arrangements when circumstances or welfare require. Visitation and shared contact are designed for the child's benefit, not as rewards or punishment for parents. Safety concerns, domestic violence, coercion, relocation, schooling and the child's emotional needs require careful, evidence-based assessment.
+
+In Rosy Jacob v. Jacob A. Chakramakkal, the Supreme Court explained that children are not property and custody orders remain capable of adjustment. In Roxann Sharma v. Arun Sharma, the Court discussed the statutory preference concerning custody of a child below five while maintaining welfare as the governing consideration.
+
+11. Problem-solving and examination method
+
+Begin by identifying the child's age, religion, family status, present caregiver and the nature of the property. Classify the claimant as natural, testamentary, court-appointed or de facto guardian. For property transactions, select Section 8, Section 11, Section 12 or the Guardians and Wards Act rules as appropriate and determine whether prior permission was required.
+
+For custody, state Section 13 first: welfare is paramount. Then assess continuity, safety, education, emotional bonds, capacity of caregivers and the child's intelligent preference. Distinguish legal guardianship, physical custody, visitation and property management, and avoid treating any adult's statutory priority as absolute.
+      `.trim(),
       keyPoints: [
         "The Hindu Minority and Guardianship Act supplements the Guardians and Wards Act, 1890.",
         "Section 6 identifies natural guardians subject to welfare-based interpretation.",
@@ -552,7 +623,48 @@ For maintenance, identify the claimant and exact section, prove the relationship
         "Section 11 bars a de facto guardian from dealing with a minor's property merely on that status.",
         "Under Section 13, the welfare of the minor is the paramount consideration.",
       ],
-      provisions: ["Sections 4–9", "Section 11", "Section 13", "Guardians and Wards Act, 1890"],
+      provisions: [
+        "Hindu Minority and Guardianship Act, 1956 — Sections 2–4",
+        "Hindu Minority and Guardianship Act, 1956 — Sections 6–9",
+        "Hindu Minority and Guardianship Act, 1956 — Sections 10–13",
+        "Guardians and Wards Act, 1890 — Sections 7, 12, 17, 19 and 25",
+        "Guardians and Wards Act, 1890 — Sections 29 and 31",
+        "Hindu Adoptions and Maintenance Act, 1956 — Section 12",
+      ],
+      importantCases: [
+        {
+          caseName: "Githa Hariharan v. Reserve Bank of India",
+          citation: "Supreme Court of India (1999)",
+          principle: "In Section 6, “after” does not mean only after the father's death; the mother may act when he is absent through non-availability or indifference.",
+        },
+        {
+          caseName: "Jijabai Vithalrao Gajre v. Pathankhan",
+          citation: "Supreme Court of India (1970)",
+          principle: "Where the father was effectively absent from the child's affairs, the mother who cared for the child was recognised in the guardianship analysis.",
+        },
+        {
+          caseName: "Rosy Jacob v. Jacob A. Chakramakkal",
+          citation: "Supreme Court of India (1973)",
+          principle: "Children are not property; custody orders remain subject to variation according to welfare.",
+        },
+        {
+          caseName: "Nil Ratan Kundu v. Abhijit Kundu",
+          citation: "Supreme Court of India (2008)",
+          principle: "The child's welfare is broad and paramount, extending beyond money or physical comfort.",
+        },
+        {
+          caseName: "Mausami Moitra Ganguli v. Jayant Ganguli",
+          citation: "Supreme Court of India (2008)",
+          principle: "No rigid formula governs custody; the court evaluates the total circumstances and the child's best interests.",
+        },
+        {
+          caseName: "Roxann Sharma v. Arun Sharma",
+          citation: "Supreme Court of India (2015)",
+          principle: "The statutory rule concerning custody below five years was considered within the overriding welfare framework.",
+        },
+      ],
+      examFocus:
+        "Prepare the definitions in Section 4; natural and testamentary guardians; Githa Hariharan's interpretation of Section 6; restrictions and consequences under Section 8; de facto guardians; undivided joint-family interests; and the paramount welfare rule in Section 13. Compare natural-guardian property powers with court-appointed guardian powers under the Guardians and Wards Act, and distinguish guardianship, custody and visitation.",
     },
     {
       title: "Special Marriage Act, 1954",
