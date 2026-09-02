@@ -492,12 +492,17 @@ export default function CourseDetails() {
     course?.slug ===
     "criminal-law-i-transitioning-from-ipc-to-bns";
 
+  const isPublicInternationalLawCourse =
+    course?.slug ===
+    "public-international-law";
+
   const hasExpandableCourseOverview =
     isCivilProcedureCourse ||
     isTortsCourse ||
     isConstitutionalLawCourse ||
     isFamilyLawCourse ||
-    isCriminalLawCourse;
+    isCriminalLawCourse ||
+    isPublicInternationalLawCourse;
 
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
@@ -792,7 +797,9 @@ export default function CourseDetails() {
                         ? "Indian Constitutional Law – I"
                         : isFamilyLawCourse
                           ? "Family Law – I: Hindu Law"
-                          : "Criminal Law I (Transitioning from IPC to BNS)"}
+                          : isCriminalLawCourse
+                            ? "Criminal Law I (Transitioning from IPC to BNS)"
+                            : "Public International Law"}
                 </h3>
 
                 {isCivilProcedureCourse ? (
@@ -828,11 +835,18 @@ export default function CourseDetails() {
                     property, succession, marriage, adoption, maintenance and
                     guardianship.
                   </p>
-                ) : (
+                ) : isCriminalLawCourse ? (
                   <p>
                     <strong>Criminal Law I</strong> introduces the foundational
                     principles of criminal liability and the transition from the
                     Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.
+                  </p>
+                ) : (
+                  <p>
+                    <strong>Public International Law</strong> introduces the
+                    rules governing States and other international actors,
+                    including sources, recognition, jurisdiction, treaties,
+                    dispute settlement and the United Nations.
                   </p>
                 )}
 
