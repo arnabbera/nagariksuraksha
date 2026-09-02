@@ -608,7 +608,9 @@ export default function PublicCourseDetailsPage() {
                 course.slug ===
                   "criminal-law-i-transitioning-from-ipc-to-bns" ||
                 course.slug ===
-                  "code-of-civil-procedure-and-limitation"
+                  "code-of-civil-procedure-and-limitation" ||
+                course.slug ===
+                  "family-law-i"
                   ? "course-hero-media-full-image"
                   : ""
               }`}
