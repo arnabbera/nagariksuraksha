@@ -1130,23 +1130,236 @@ Use the following sequence:
   {
     title: "Offences against the Human Body",
     shortDescription:
-      "Culpable homicide, murder, suicide, hurt, restraint, confinement, assault, kidnapping, abduction and sexual offences.",
+      "A detailed study of homicide, suicide-related offences, hurt, restraint, confinement, force, assault, kidnapping, abduction and sexual offences under the IPC-to-BNS transition.",
     overview:
-      "This unit provides a systematic study of the principal offences affecting life, bodily integrity, liberty and sexual autonomy.",
-    detailedContent:
-      "Culpable homicide and murder; exceptions and punishment; causing death by negligence; abetment of suicide; attempt to murder; hurt and grievous hurt; wrongful restraint and wrongful confinement; criminal force and assault; kidnapping and abduction; rape and other sexual offences; and the transition from IPC Sections 299–377 to the corresponding BNS provisions.",
+      "Offences against the human body protect life, bodily integrity, liberty and sexual autonomy. This chapter studies the syllabus range of IPC Sections 299–377 and explains its substantial reorganisation under the Bharatiya Nyaya Sanhita, 2023. Homicide, hurt, wrongful restraint and confinement, criminal force, assault, kidnapping and abduction are principally located in BNS Sections 100–146, while sexual offences are primarily organised in BNS Sections 63–99. The chapter distinguishes culpable homicide from murder, intention from knowledge and negligence, hurt from grievous hurt, restraint from confinement, force from assault, and kidnapping from abduction. It also explains consent, sexual-offence structure, attempts, causation, group liability and the importance of applying the statute in force on the date of conduct.",
+    learningObjectives: [
+      "Distinguish culpable homicide, murder and causing death by negligence.",
+      "Apply the four murder clauses and five statutory exceptions to murder.",
+      "Analyse causation, intention, knowledge and transferred liability in homicide problems.",
+      "Explain abetment of suicide and distinguish it from attempt-related offences.",
+      "Differentiate hurt, grievous hurt and aggravated forms involving weapons, victims or purposes.",
+      "Distinguish wrongful restraint from wrongful confinement.",
+      "Explain force, criminal force and assault and identify their aggravated forms.",
+      "Distinguish kidnapping from lawful guardianship, kidnapping from India and abduction.",
+      "Explain the statutory ingredients of rape, consent and major aggravated sexual offences.",
+      "Map the IPC syllabus to the reorganised BNS provisions without assuming a mechanical one-to-one correspondence.",
+    ],
+    detailedContent: `1. Protected Interests and Statutory Structure
+
+This group of offences protects human life, physical and mental integrity, freedom of movement and sexual autonomy. The IPC historically placed the principal provisions in Sections 299–377. The BNS reorganises them: sexual offences against women and children appear mainly in Chapter V, Sections 63–99, while offences affecting life, hurt, liberty, force, kidnapping, trafficking and related conduct appear mainly in Chapter VI, Sections 100–146.
+
+The reorganisation makes concept-based learning essential. The date of conduct must be fixed first, followed by the applicable statute, precise offence, definitions, exceptions and punishment provision.
+
+2. Culpable Homicide
+
+IPC Section 299 and BNS Section 100 define culpable homicide. A person commits culpable homicide by causing death through an act done:
+
+(a) with the intention of causing death;
+(b) with the intention of causing bodily injury likely to cause death; or
+(c) with knowledge that the act is likely to cause death.
+
+The prosecution must prove death, causation and one of these mental states. Intention generally represents a conscious objective, while knowledge concerns awareness of the likely consequence. The distinction influences whether the offence is murder or culpable homicide not amounting to murder.
+
+3. Causation in Homicide
+
+The accused's conduct must be a legally relevant cause of death. A victim's physical weakness, disease or vulnerability does not ordinarily break causation merely because a healthier person might have survived. Nor is causation necessarily broken because prompt or skilful treatment could have prevented death.
+
+An independent, unforeseeable intervening event may require separate analysis. Medical evidence assists the court, but legal causation is determined from the entire chain of conduct, injury, treatment and death.
+
+4. Murder
+
+IPC Section 300 and BNS Section 101 provide that culpable homicide is murder, subject to the statutory exceptions, where the act causing death falls within one of four principal categories:
+
+(a) intention to cause death;
+(b) intention to cause bodily injury known by the offender to be likely to cause that particular person's death;
+(c) intention to cause bodily injury which is sufficient in the ordinary course of nature to cause death; or
+(d) knowledge that the act is so imminently dangerous that it must in all probability cause death or such bodily injury, and doing it without excuse for incurring that risk.
+
+The clauses must be applied separately. Premeditation is relevant evidence but is not an ingredient of every form of murder.
+
+5. Exceptions to Murder
+
+The five principal exceptions retained in BNS Section 101 concern:
+
+(a) grave and sudden provocation, subject to its provisos;
+(b) exceeding private defence in good faith without premeditation and without intending more harm than necessary;
+(c) a public servant or person assisting one who exceeds lawful power in good faith for advancement of public justice, without ill-will;
+(d) sudden fight without premeditation, in the heat of passion upon a sudden quarrel, without undue advantage or cruel or unusual conduct; and
+(e) death or risk of death suffered with the consent of a person above eighteen years.
+
+An exception reduces murder to culpable homicide not amounting to murder; it does not automatically make the killing lawful. Each condition and exclusion must be proved from the facts.
+
+6. Punishment for Homicide
+
+Under the BNS, punishment for murder is principally in Section 103, while culpable homicide not amounting to murder is punished under Section 105. BNS Section 104 separately addresses murder by a person under sentence of imprisonment for life.
+
+IPC punishment provisions lie principally in Sections 302 and 304. A complete answer first classifies the homicide under the definition and exceptions and only then cites the punishment provision.
+
+7. Causing Death by Negligence
+
+IPC Section 304A and BNS Section 106 apply where death results from a rash or negligent act not amounting to culpable homicide. Criminal negligence requires a legally blameworthy departure from the required standard, not merely an unfortunate result or ordinary civil negligence.
+
+BNS Section 106 contains differentiated rules, including specified treatment of registered medical practitioners performing medical procedures and a distinct provision concerning rash and negligent driving followed by escape without reporting. Application requires attention to the text in force and any commencement or judicial developments relevant to the alleged date.
+
+8. Dowry Death and Organised Group Murder
+
+IPC Section 304B and BNS Section 80 address dowry death through special ingredients involving the death of a woman within the statutory period after marriage, otherwise than under normal circumstances, and dowry-related cruelty or harassment soon before death.
+
+BNS Section 103(2) separately addresses murder committed by a group of five or more persons acting in concert on specified identity-related grounds. These provisions should not be merged with ordinary murder analysis; their special ingredients and evidentiary rules must be proved.
+
+9. Abetment of Suicide
+
+IPC Sections 305–306 and BNS Sections 107–108 address abetment of suicide, with a special aggravated provision for a child, person of unsound mind, delirious person or person in a state of intoxication.
+
+Suicide alone does not prove abetment. The prosecution must establish instigation, conspiracy accompanied by the required act or illegal omission, or intentional aid, together with a sufficiently proximate link to the suicide. Ordinary disagreement, criticism or strained relations cannot automatically substitute for the statutory act and mental element.
+
+10. Attempt to Murder and Related Attempts
+
+IPC Section 307 and BNS Section 109 punish an act done with such intention or knowledge and under such circumstances that, if death were caused, the act would amount to murder. Actual injury is not necessary for the basic attempt, although injury may affect punishment.
+
+IPC Section 308 and BNS Section 110 similarly concern attempt to commit culpable homicide not amounting to murder. The distinction depends on the hypothetical liability had death occurred, assessed from intention, knowledge, circumstances, weapon, target, force, injury and surrounding conduct.
+
+11. Hurt and Voluntarily Causing Hurt
+
+IPC Section 319 and BNS Section 114 define hurt as causing bodily pain, disease or infirmity. IPC Sections 321 and 323 and BNS Section 115 address voluntarily causing hurt through the required intention or knowledge.
+
+Physical injury visible to the eye is not always necessary; bodily pain, disease or infirmity may suffice. The prosecution must still prove causation and the applicable mental state.
+
+12. Grievous Hurt
+
+IPC Section 320 and BNS Section 116 enumerate grievous hurt categories, including emasculation; permanent loss of sight or hearing; privation or permanent impairment of a member or joint; permanent disfiguration of head or face; fracture or dislocation of bone or tooth; and hurt endangering life or causing the specified period of severe bodily pain or inability to follow ordinary pursuits.
+
+The injury must fall within a statutory category. The seriousness of pain alone does not permit a court to invent an additional category. Medical evidence should address the exact clause alleged.
+
+13. Aggravated Hurt Offences
+
+BNS Sections 117–125 address voluntarily causing grievous hurt, hurt or grievous hurt by dangerous weapons or means, hurt to extort property or confession, hurt to deter a public servant, poison-related hurt, acid attacks and acts endangering life or personal safety. Their IPC antecedents were distributed principally across Sections 322–338.
+
+Each aggravated offence adds a circumstance, purpose, victim category, means or consequence. A correct charge cannot rest merely on proof of basic hurt.
+
+14. Wrongful Restraint and Wrongful Confinement
+
+Wrongful restraint prevents a person from proceeding in a direction in which that person has a right to proceed. Wrongful confinement totally restrains a person within circumscribed limits.
+
+IPC Sections 339–348 contain definitions, punishment and aggravated forms. BNS Sections 126–127 consolidate these rules. Confinement is an aggravated species of restraint; the key distinction is partial obstruction of movement versus complete restriction within boundaries.
+
+15. Force, Criminal Force and Assault
+
+IPC Sections 349–351 correspond principally to BNS Sections 128–130. Force concerns causing motion, change of motion or cessation of motion in the statutorily described manner. Criminal force requires intentional use of force without consent to commit an offence or with the prescribed intention or knowledge of injury, fear or annoyance.
+
+Assault occurs through a gesture or preparation causing a person present to apprehend imminent use of criminal force. Physical contact is not necessary for assault, while criminal force requires force. Mere words do not by themselves constitute assault, though words may give meaning to gestures or preparations.
+
+16. Punishment and Aggravated Assault
+
+BNS Sections 131–136 address punishment for assault or criminal force and aggravated forms involving public servants, intent to dishonour, attempted wrongful confinement and grave provocation. IPC antecedents lie principally in Sections 352–358.
+
+The prosecution should identify consent, intention or knowledge, apprehension of imminence, actual force, victim status and the aggravating purpose. Separate sexual offences involving assault against women are principally located in BNS Sections 74–79.
+
+17. Kidnapping
+
+IPC Section 359 recognises kidnapping from India and kidnapping from lawful guardianship. BNS Section 137 consolidates these forms. Kidnapping from India concerns conveying a person beyond India without legally valid consent. Kidnapping from lawful guardianship concerns taking or enticing a child or person of unsound mind out of the keeping of a lawful guardian without the guardian's consent, subject to the statutory exception.
+
+Kidnapping is complete upon the prohibited taking or enticing. The child's willingness does not replace the guardian's legally relevant consent where the provision applies.
+
+18. Abduction
+
+IPC Section 362 and BNS Section 138 define abduction through compelling a person by force, or inducing a person by deceitful means, to go from any place. Abduction by itself is generally not punishable unless accompanied by a prohibited purpose under another provision.
+
+Unlike kidnapping from lawful guardianship, abduction can concern a person of any age, requires force or deceitful inducement, and may continue as the person is moved. The exact purpose—such as murder, secret confinement, forced marriage or exploitation—determines the substantive offence.
+
+19. Aggravated Kidnapping, Trafficking and Exploitation
+
+BNS Sections 139–146 cover kidnapping or maiming a child for begging, kidnapping or abduction for murder or ransom, importation, concealment, trafficking, exploitation of a trafficked person and habitual dealing in slaves. IPC antecedents were spread mainly across Sections 363–374.
+
+These offences have distinct victim, purpose, conduct and knowledge requirements. Trafficking should be analysed from recruitment, transport, harbouring, transfer or receipt, the prohibited means and the purpose of exploitation under the statutory definition.
+
+20. Rape under IPC and BNS
+
+IPC Section 375 historically defined rape and Section 376 and its sub-sections prescribed punishment and aggravated forms. BNS Section 63 defines rape and Sections 64–71 contain punishment and specified aggravated situations, gang rape, repeat offending and related rules.
+
+The offence is defined through specified acts and legally relevant circumstances, including acts against will, without consent, consent affected by fear or misconception in the stated circumstances, incapacity to understand, statutory age, and inability to communicate consent. Penetration to the statutory extent is sufficient; completion does not require emission.
+
+21. Consent and Sexual Autonomy
+
+BNS Section 63 explains consent as an unequivocal voluntary agreement communicated by words, gestures or verbal or non-verbal communication to participate in the specific sexual act. Absence of physical resistance alone does not constitute consent.
+
+Consent must relate to the specific act and be legally valid at the relevant time. Submission caused by fear is not necessarily consent. The statutory age rule operates regardless of factual agreement. Evidence must be assessed without stereotypes about expected behaviour, delay, clothing, prior relationship or resistance.
+
+22. Aggravated Sexual Offences
+
+BNS Sections 64–71 address punishment for rape, rape in specified aggravated circumstances, intercourse by husband during separation, intercourse by a person in authority, intercourse by deceitful means or false promise within Section 69, gang rape and repeat offenders. Sections 72–73 protect the identity of victims and regulate publication concerning proceedings.
+
+Sections 74–79 address assault or criminal force to outrage modesty, sexual harassment, disrobing, voyeurism, stalking and words or gestures insulting modesty. Sexual offences against children must also be analysed under the Protection of Children from Sexual Offences Act, 2012 where applicable.
+
+23. Marital Exception and Statutory Limits
+
+The statutory rape definition retains an exception for sexual acts by a man with his own wife where the wife is not under eighteen years of age, while BNS Section 67 separately addresses specified intercourse by a husband during separation. The legal and constitutional treatment of marital sexual violence is a developing and sensitive area; answers must state the enacted text, relevant binding decisions and current legal position without converting policy debate into statutory language.
+
+24. Historical IPC Section 377 and the BNS Transition
+
+IPC Section 377 historically addressed specified sexual acts described as against the order of nature. Its application to consensual sexual conduct between adults in private was constitutionally read down before the IPC was replaced.
+
+The BNS does not reproduce IPC Section 377 as a directly equivalent standalone provision. Conduct involving children, lack of consent, assault, hurt, trafficking or other prohibited circumstances may engage other BNS provisions or special laws, but a comparison must not invent an equivalent section where Parliament has not enacted one.
+
+25. Evidence, Medical Examination and Victim Dignity
+
+Medical evidence may corroborate injuries, timing, biological material or other facts, but absence of injury does not by itself disprove a sexual offence or assault. Consent is a legal and factual question, not a medical diagnosis.
+
+Investigations and trials must protect privacy, identity and dignity. Electronic communications, location data and recordings require authentication and contextual interpretation. Character assumptions cannot replace proof of consent or the accused's statutory mental element.
+
+26. Method for Solving Problems
+
+Use the following sequence:
+
+(a) fix the date and applicable IPC or BNS provision;
+(b) identify the protected interest, conduct, circumstance and consequence;
+(c) prove causation where injury or death is required;
+(d) identify intention, knowledge, rashness or negligence precisely;
+(e) for homicide, apply culpable homicide first, then murder clauses and exceptions;
+(f) classify hurt under the exact statutory category and aggravation;
+(g) distinguish restraint from confinement and assault from criminal force;
+(h) distinguish kidnapping from abduction and identify any prohibited purpose;
+(i) for sexual offences, identify the specified act and legally relevant consent circumstance;
+(j) consider age, authority, relationship, group conduct and special legislation;
+(k) authenticate medical, documentary and electronic evidence; and
+(l) reach a separate reasoned conclusion on the definition, exception and punishment provision.`,
     keyPoints: [
-      "Culpable homicide and murder",
-      "Suicide-related offences and attempts",
-      "Hurt and grievous hurt",
-      "Wrongful restraint and confinement",
-      "Assault and criminal force",
-      "Kidnapping, abduction and sexual offences",
+      "Culpable homicide is the genus and murder is its aggravated species, subject to statutory exceptions.",
+      "Homicide requires proof of death, legal causation and the prescribed intention or knowledge.",
+      "The four murder clauses and five exceptions must be applied separately.",
+      "Causing death by negligence applies only where the conduct does not amount to culpable homicide.",
+      "Suicide alone does not prove abetment; instigation, qualifying conspiracy or intentional aid must be established.",
+      "Attempt liability is assessed from the intention, knowledge, circumstances and act done, even if death does not result.",
+      "Hurt includes bodily pain, disease or infirmity.",
+      "Grievous hurt must fall within an enumerated statutory category.",
+      "Wrongful restraint partially obstructs lawful movement; wrongful confinement totally restricts movement within limits.",
+      "Assault creates apprehension of imminent criminal force; criminal force requires actual force.",
+      "Kidnapping and abduction have different age, consent, means and continuity requirements.",
+      "Abduction ordinarily becomes punishable when connected to a specified unlawful purpose.",
+      "Sexual offences are mainly in BNS Sections 63–99, separate from the BNS human-body chapter.",
+      "Consent means unequivocal voluntary agreement to the specific sexual act; absence of resistance alone is not consent.",
+      "Statutory age rules operate independently of factual willingness.",
+      "Medical injury is not an indispensable condition for proving every sexual offence.",
+      "BNS Sections 100–146 principally cover homicide, hurt, liberty, assault, kidnapping and trafficking.",
+      "The BNS does not contain a directly equivalent standalone reproduction of IPC Section 377.",
+      "The date of conduct controls whether the IPC or BNS applies under Article 20(1).",
+      "Every answer should separate definition, exception, aggravation and punishment provisions.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 299–377",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Indian Penal Code, 1860 — Sections 299–311",
+      "Indian Penal Code, 1860 — Sections 319–338",
+      "Indian Penal Code, 1860 — Sections 339–358",
+      "Indian Penal Code, 1860 — Sections 359–377",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 63–99",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 100–113",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 114–136",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 137–146",
+      "Protection of Children from Sexual Offences Act, 2012 — relevant provisions",
+      "Constitution of India — Articles 14, 15, 19, 20(1) and 21",
     ],
+    examFocus:
+      "For homicide, establish culpable homicide, test the murder clauses, apply each claimed exception and then select punishment. For bodily injury and liberty offences, classify the exact conduct and aggravation. For kidnapping and sexual offences, identify age, consent, means, purpose and special-law overlap. Comparative answers must explain that BNS Sections 63–99 and 100–146 reorganise the IPC syllabus and must not assume every IPC provision, particularly Section 377, has a direct BNS equivalent.",
   },
   {
     title: "Property, Marriage, Defamation, Intimidation and Attempts",
