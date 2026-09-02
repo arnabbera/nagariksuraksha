@@ -147,5 +147,149 @@ In V. Tulasamma v. Sesha Reddy, the Supreme Court gave Section 14(1) a broad int
     previewAvailable: false,
     status: "published",
   }),
-];
+  ...[
+    {
+      title: "Hindu Marriage Act, 1955",
+      slug: "hindu-marriage-act-1955",
+      shortDescription:
+        "Study the conditions and ceremonies of Hindu marriage, void and voidable marriages, matrimonial remedies, divorce and maintenance under the Hindu Marriage Act, 1955.",
+      overview:
+        "This unit introduces the statutory framework governing Hindu marriages. It covers application of the Act, essential conditions, ceremonies and registration, restitution of conjugal rights, judicial separation, nullity, divorce, legitimacy of children and matrimonial reliefs.",
+      objectives: [
+        "Explain the statutory conditions and ceremonies of a valid Hindu marriage.",
+        "Distinguish void and voidable marriages.",
+        "Identify the grounds and requirements for matrimonial remedies and divorce.",
+        "Apply the provisions relating to maintenance, custody and legitimacy.",
+      ],
+      keyPoints: [
+        "Section 5 states the conditions of a Hindu marriage.",
+        "Section 7 recognises customary rites and ceremonies, including saptapadi where applicable.",
+        "Sections 11 and 12 distinguish void and voidable marriages.",
+        "Sections 9, 10, 13 and 13B provide the principal matrimonial remedies.",
+        "Sections 24 to 26 address interim support, permanent alimony and child custody.",
+      ],
+      provisions: ["Sections 5–8", "Sections 9–13B", "Sections 16 and 24–26"],
+    },
+    {
+      title: "Hindu Succession Act, 1956",
+      slug: "hindu-succession-act-1956",
+      shortDescription:
+        "Examine intestate succession, coparcenary rights, classes of heirs and succession to the property of Hindu males and females.",
+      overview:
+        "This unit studies the codified rules of Hindu intestate succession. It explains the amended coparcenary rights of daughters, succession to male and female Hindus, the statutory classes and order of heirs, distribution rules, disqualifications and testamentary succession.",
+      objectives: [
+        "Explain the devolution of coparcenary interest under amended Section 6.",
+        "Apply the rules governing succession to a Hindu male dying intestate.",
+        "Apply the general and source-based rules governing a female Hindu's property.",
+        "Calculate shares among heirs in problem questions.",
+      ],
+      keyPoints: [
+        "A daughter is a coparcener by birth with the same statutory rights and liabilities as a son.",
+        "Sections 8 to 13 govern intestate succession to a Hindu male.",
+        "Section 14 generally makes qualifying property of a female Hindu her absolute property.",
+        "Sections 15 and 16 govern succession to a female Hindu's property.",
+        "The source of inherited property may be decisive under Section 15(2).",
+      ],
+      provisions: ["Section 6", "Sections 8–13", "Sections 14–16", "Section 30"],
+    },
+    {
+      title: "Hindu Adoptions and Maintenance Act, 1956",
+      slug: "hindu-adoptions-and-maintenance-act-1956",
+      shortDescription:
+        "Understand the legal requirements and effects of Hindu adoption and the statutory maintenance rights of spouses, children, parents and dependants.",
+      overview:
+        "This unit covers capacity to adopt and to give a child in adoption, eligibility of the child, mandatory adoption conditions and legal effects. It also examines maintenance rights of a wife, widowed daughter-in-law, children, aged parents and dependants.",
+      objectives: [
+        "Identify every statutory requirement for a valid Hindu adoption.",
+        "Explain who may adopt, give in adoption and be adopted.",
+        "Describe the legal effects and irrevocability of a valid adoption.",
+        "Apply statutory maintenance rights and factors determining amount.",
+      ],
+      keyPoints: [
+        "An adoption contrary to the mandatory statutory provisions is void.",
+        "Sections 7 and 8 regulate the capacity of male and female Hindus to adopt.",
+        "Sections 9 to 11 regulate giving in adoption, eligibility and other conditions.",
+        "Section 12 states the principal effects of adoption and Section 15 bars cancellation of a valid adoption.",
+        "Sections 18 to 22 govern important maintenance claims.",
+      ],
+      provisions: ["Sections 5–12", "Section 15", "Sections 18–23"],
+    },
+    {
+      title: "Hindu Minority and Guardianship Act, 1956",
+      slug: "hindu-minority-and-guardianship-act-1956",
+      shortDescription:
+        "Study natural and testamentary guardians, restrictions on dealings with a minor's property and the paramount welfare principle.",
+      overview:
+        "This unit explains minority and guardianship under Hindu law in conjunction with the Guardians and Wards Act, 1890. It covers natural and testamentary guardians, their powers and limitations, de facto guardians and the overriding importance of the minor's welfare.",
+      objectives: [
+        "Identify natural guardians under the statutory scheme.",
+        "Explain a guardian's powers and restrictions concerning a minor's property.",
+        "Distinguish natural, testamentary and de facto guardians.",
+        "Apply the welfare-of-the-minor principle to custody and guardianship disputes.",
+      ],
+      keyPoints: [
+        "The Hindu Minority and Guardianship Act supplements the Guardians and Wards Act, 1890.",
+        "Section 6 identifies natural guardians subject to welfare-based interpretation.",
+        "Section 8 restricts specified transactions involving a minor's immovable property.",
+        "Section 11 bars a de facto guardian from dealing with a minor's property merely on that status.",
+        "Under Section 13, the welfare of the minor is the paramount consideration.",
+      ],
+      provisions: ["Sections 4–9", "Section 11", "Section 13", "Guardians and Wards Act, 1890"],
+    },
+    {
+      title: "Special Marriage Act, 1954",
+      slug: "special-marriage-act-1954",
+      shortDescription:
+        "Examine civil marriage, notice and solemnisation, registration, matrimonial remedies and succession consequences under the Special Marriage Act, 1954.",
+      overview:
+        "This unit studies the secular statutory form of marriage available under the Special Marriage Act. It covers conditions, notice, objections, solemnisation and registration, void and voidable marriages, judicial separation, divorce and the principal legal consequences of marriage under the Act.",
+      objectives: [
+        "Explain the conditions and procedure for solemnising a civil marriage.",
+        "Analyse notice, objection and registration requirements.",
+        "Distinguish void and voidable marriages under the Act.",
+        "Apply the statutory grounds for judicial separation and divorce.",
+      ],
+      keyPoints: [
+        "Section 4 states the conditions relating to solemnisation of a special marriage.",
+        "The Act prescribes notice, publication, objection and solemnisation procedures.",
+        "Three witnesses sign the statutory marriage certificate with the parties and Marriage Officer.",
+        "The Act separately regulates void, voidable and dissoluble marriages.",
+        "Succession consequences must be examined under Sections 19 to 21A and the applicable succession law.",
+      ],
+      provisions: ["Sections 4–14", "Sections 15–18", "Sections 19–21A", "Sections 22–28"],
+    },
+  ].map((unit, unitIndex) => {
+    const chapterNumber = unitIndex + 4;
 
+    return createChapterModel({
+      id: `${FAMILY_LAW_I_COURSE_ID}-unit-${chapterNumber}`,
+      courseId: FAMILY_LAW_I_COURSE_ID,
+      title: unit.title,
+      slug: `unit-${chapterNumber}-${unit.slug}`,
+      shortDescription: unit.shortDescription,
+      chapterOverview: unit.overview,
+      learningObjectives: unit.objectives,
+      detailedContent: unit.overview,
+      keyPoints: unit.keyPoints,
+      statutoryProvisions: unit.provisions.map((provision, provisionIndex) => ({
+        id: `family-law-i-unit-${chapterNumber}-provision-${provisionIndex + 1}`,
+        title: provision,
+        provision,
+        description: `Core statutory reading for Family Law – I Unit ${chapterNumber}.`,
+      })),
+      examFocus:
+        `Revise the statutory scheme, key definitions, essential conditions, legal consequences and problem-based application covered in Unit ${chapterNumber}.`,
+      revisionNotes: unit.keyPoints.join("; "),
+      notes: unit.overview,
+      chapterNumber,
+      displayOrder: chapterNumber,
+      quizId: `family-law-i-unit-${chapterNumber}-quiz`,
+      quizRequired: true,
+      passingPercentage: 80,
+      maximumAttempts: 3,
+      published: true,
+      previewAvailable: false,
+      status: "published",
+    });
+  }),
+];
