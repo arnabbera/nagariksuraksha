@@ -1303,24 +1303,332 @@ For extradition and asylum:
   {
     title: "Treaties",
     shortDescription:
-      "Formation, application, interpretation, validity, amendment, termination and suspension of treaties.",
+      "A detailed study of treaty formation, consent, reservations, application, interpretation, validity, amendment, termination and suspension.",
     overview:
-      "This unit studies the law of treaties with primary reference to the Vienna Convention on the Law of Treaties, 1969.",
-    detailedContent:
-      "Meaning and classification of treaties; treaty-making capacity and authority; negotiation, adoption and authentication; signature, ratification, accession and entry into force; reservations and objections; pacta sunt servanda and good-faith performance; treaties and third States; interpretation under Articles 31–33; amendment and modification; invalidity arising from error, fraud, corruption, coercion or conflict with jus cogens; termination, withdrawal and suspension; material breach, supervening impossibility and fundamental change of circumstances; depositaries and registration; and treaty-making and implementation in India.",
+      "Treaties are a principal source of international law and the primary instrument through which States and international organisations create specific legal obligations. This chapter studies the treaty process from negotiation to entry into force and examines reservations, observance, application, interpretation, third-State effects, amendment, invalidity and termination. The Vienna Convention on the Law of Treaties, 1969 provides the central framework, many provisions of which reflect customary international law. The chapter concludes with depositaries, registration and the constitutional distinction between treaty-making and domestic implementation in India.",
+    learningObjectives: [
+      "Define a treaty and distinguish it from political declarations, memoranda and non-binding arrangements.",
+      "Classify treaties by parties, participation, subject matter, form and law-making function.",
+      "Explain treaty-making capacity and the authority to represent a State.",
+      "Describe negotiation, adoption and authentication of a treaty text.",
+      "Distinguish signature, ratification, acceptance, approval, accession and exchange of instruments.",
+      "Determine when a treaty enters into force and operates provisionally.",
+      "Define a reservation and distinguish it from an interpretative declaration.",
+      "Apply the object-and-purpose test and explain acceptance of and objection to reservations.",
+      "Explain pacta sunt servanda, good faith, non-retroactivity and territorial application.",
+      "Apply the general rule of treaty interpretation under Articles 31–33 of the Vienna Convention.",
+      "Explain the position of third States and the creation of third-party rights or obligations.",
+      "Distinguish amendment of a treaty from inter se modification among some parties.",
+      "Apply the grounds of invalidity, including error, fraud, corruption, coercion and conflict with jus cogens.",
+      "Apply termination and suspension rules, including breach, impossibility and fundamental change of circumstances.",
+      "Explain the role of depositaries, registration and publication.",
+      "Analyse treaty-making and implementation under the Constitution of India.",
+    ],
+    detailedContent: `1. Meaning of a Treaty
+
+Article 2(1)(a) of the Vienna Convention on the Law of Treaties, 1969 defines a treaty for the Convention as an international agreement concluded between States in written form and governed by international law, whether embodied in one instrument or in two or more related instruments and whatever its particular designation.
+
+An instrument may therefore be called a convention, covenant, charter, protocol, statute, exchange of notes, agreed minutes or memorandum and still be a treaty. The decisive considerations are the parties, their intention to create legal obligations, the governing legal order and the substance of the arrangement.
+
+The 1969 Convention principally governs treaties between States. Agreements involving international organisations are addressed by other rules, including the 1986 Vienna Convention, much of which has not entered into force, and customary international law. Oral international agreements are not deprived of legal force merely because they fall outside the Convention's written-form definition.
+
+2. Treaties and Non-Binding Instruments
+
+Not every international document is a treaty. A joint political declaration, communiqué, memorandum of understanding or statement of principles may be intended as a non-binding arrangement. Conversely, a document titled “memorandum” may create legal obligations.
+
+Intention is assessed objectively from the language, context, subject matter, form, authority of signatories, dispute provisions, registration practice and subsequent conduct. Words such as “shall,” entry-into-force clauses and formal ratification requirements may indicate legal intention, but no single expression is conclusive.
+
+3. Classification of Treaties
+
+Treaties may be bilateral or multilateral; open or closed; constituent, contractual or law-making; universal, regional or local; self-executing or non-self-executing in domestic constitutional usage; and temporary or indefinite.
+
+A constituent treaty establishes an international organisation. A law-making treaty formulates general standards intended for broad participation. A contractual treaty regulates a particular exchange or relationship. These categories assist analysis but do not alter the binding character of a valid treaty.
+
+4. Capacity to Conclude Treaties
+
+Every State possesses capacity to conclude treaties. International organisations possess treaty capacity within their functions and constituent instruments. Federal units, dependent territories or other entities may possess limited capacity where constitutional law and international acceptance permit.
+
+A State cannot ordinarily avoid international responsibility merely by relying on its internal allocation of treaty authority. Article 46 provides a narrow exception where consent was expressed in manifest violation of an internal rule of fundamental importance concerning competence to conclude treaties.
+
+5. Full Powers and Representation
+
+A person may represent a State for adopting or authenticating a treaty text or expressing consent if they produce appropriate full powers or if practice and circumstances show that the parties intended to treat that person as authorised.
+
+Heads of State, Heads of Government and Ministers for Foreign Affairs may perform all treaty acts without producing full powers. Heads of diplomatic missions may adopt treaty texts between the accrediting and receiving States, and accredited representatives to a conference or organisation may adopt texts in that forum, within Article 7.
+
+An unauthorised act has no legal effect unless subsequently confirmed by the State.
+
+6. Negotiation, Adoption and Authentication
+
+Negotiation develops the proposed obligations and institutional arrangements. Adoption fixes the agreed text. Under Article 9, adoption normally occurs by consent of all participating States, while an international conference may adopt by a two-thirds vote of States present and voting unless the same majority decides on another rule.
+
+Authentication establishes the text as authentic and definitive. It may occur through a procedure specified in the treaty, agreed by participants, or through signature, signature ad referendum or initialling under Article 10.
+
+7. Means of Expressing Consent
+
+Consent to be bound may be expressed by signature, exchange of instruments, ratification, acceptance, approval, accession or another agreed means.
+
+Signature itself creates consent where the treaty so provides, the negotiating States agreed, or the representative's authority shows that intention. Where ratification is required, signature authenticates the text and triggers the Article 18 obligation not to defeat the treaty's object and purpose pending a final decision.
+
+Ratification is the international act by which a State establishes its consent to be bound; it must be distinguished from any domestic constitutional approval preceding it. Acceptance and approval have effects similar to ratification. Accession allows a State that did not sign within the original period to become a party under the treaty's terms.
+
+8. Exchange, Deposit and Notification
+
+Consent may become effective through exchange of instruments, deposit with a depositary, or notification to contracting States or the depositary. The treaty specifies the required act.
+
+Domestic approval alone does not complete an international ratification when deposit of an instrument is required. Equally, international ratification does not automatically make a treaty domestically enforceable if constitutional law requires implementing legislation.
+
+9. Entry into Force and Provisional Application
+
+A treaty enters into force in the manner and on the date it provides or as the negotiating States agree. A multilateral treaty often requires a specified number of ratifications and then enters into force separately for later parties after their consent becomes effective.
+
+Before entry into force, a treaty or part of it may be applied provisionally if the treaty so provides or the negotiating States otherwise agree. Provisional application creates legal duties according to its terms and may be terminated by notice unless the treaty or agreement provides otherwise.
+
+10. Duty Before Entry into Force
+
+Article 18 requires a State to refrain from acts defeating the object and purpose of a treaty after signing subject to ratification, until it makes clear its intention not to become a party, and after expressing consent pending entry into force, provided entry into force is not unduly delayed.
+
+This limited interim obligation is not identical to full performance of every treaty provision. It protects the bargain from being deliberately undermined before binding operation begins.
+
+11. Meaning of a Reservation
+
+A reservation is a unilateral statement, however phrased or named, made when signing, ratifying, accepting, approving or acceding, by which a State purports to exclude or modify the legal effect of specified treaty provisions in their application to that State.
+
+An interpretative declaration states the declaring State's understanding without purporting to exclude or modify legal effect. Classification depends on substance rather than title. A conditional interpretation that limits consent may operate as a reservation.
+
+12. Permissibility of Reservations
+
+Article 19 permits a reservation unless the treaty prohibits it, allows only specified reservations not including the proposed one, or the reservation is incompatible with the treaty's object and purpose.
+
+The object-and-purpose test protects the treaty's essential integrity while allowing broad participation. Special regimes may establish monitoring bodies or specific rules for assessing reservations. A reservation to a peremptory norm cannot permit conduct prohibited by jus cogens.
+
+13. Acceptance and Objection
+
+The effect of a reservation depends on treaty rules and the responses of other parties. Acceptance may establish treaty relations between the reserving and accepting States with the reserved provision modified to the extent of the reservation.
+
+An objection does not automatically prevent the treaty from entering into force between the objecting and reserving States unless the objector clearly expresses that intention. Otherwise, the provision to which the reservation relates may not apply between them to the extent of the reservation.
+
+The constituent instrument of an international organisation may require acceptance by its competent organ. Unanimous acceptance may be necessary where limited participation and full application among all parties are essential conditions of the treaty.
+
+14. Reservations to the Genocide Convention
+
+In its 1951 advisory opinion, the ICJ rejected a rigid unanimity rule for reservations to the Genocide Convention and used compatibility with the treaty's object and purpose as the central standard. The opinion influenced Articles 19–23 of the Vienna Convention.
+
+The case also shows that reservation rules must respond to the character, purpose and participation structure of the particular multilateral treaty.
+
+15. Pacta Sunt Servanda and Good Faith
+
+Article 26 states that every treaty in force is binding upon the parties and must be performed in good faith. Pacta sunt servanda is the foundation of treaty stability. Good faith prohibits evasion through artificial interpretation or conduct defeating agreed obligations.
+
+Article 27 provides that a party may not invoke internal law as justification for failure to perform a treaty, without prejudice to the narrow Article 46 rule concerning manifest violations of fundamental internal competence rules.
+
+16. Application in Time and Territory
+
+Under Article 28, treaty provisions do not bind a party regarding acts, facts or situations that ceased before entry into force unless a different intention appears. This is the principle of non-retroactivity, distinct from continuing situations or later procedural use of earlier facts.
+
+Under Article 29, a treaty is binding upon each party in respect of its entire territory unless a different intention appears. Special territorial clauses, federal arrangements and territorial-status rules may alter application.
+
+17. Successive Treaties on the Same Subject
+
+Article 30 addresses successive treaties relating to the same subject, subject to Article 103 of the UN Charter. Where all parties to the earlier treaty are parties to the later treaty, the earlier applies only to the extent compatible with the later. Where participation differs, relations between two States are governed by the treaty to which both are parties.
+
+Conflict analysis must also consider lex specialis, lex posterior, jus cogens and whether the instruments truly regulate the same subject.
+
+18. General Rule of Interpretation
+
+Article 31 requires a treaty to be interpreted in good faith according to the ordinary meaning of its terms in their context and in light of its object and purpose. These elements form one integrated rule rather than a rigid sequence.
+
+Context includes the text, preamble and annexes, and specified agreements or instruments connected with conclusion. Together with context, account is taken of subsequent agreements regarding interpretation, subsequent practice establishing agreement, and relevant rules of international law applicable between the parties. A special meaning is given if the parties so intended.
+
+Interpretation must neither isolate words from their context nor replace the agreed text with a subjective view of purpose.
+
+19. Supplementary Means and Multiple Languages
+
+Article 32 permits recourse to supplementary means, including preparatory work and circumstances of conclusion, to confirm the Article 31 meaning or resolve ambiguity, obscurity, manifest absurdity or unreasonableness.
+
+Under Article 33, each authenticated language text is equally authoritative unless the treaty provides otherwise. A difference should be reconciled by adopting the meaning that best reconciles the texts, having regard to object and purpose.
+
+20. Treaties and Third States
+
+The rule pacta tertiis nec nocent nec prosunt means that a treaty creates neither obligations nor rights for a third State without its consent. Under Article 35, a third-State obligation requires an intention by the parties to create it and express written acceptance by the third State.
+
+A treaty right may arise for a third State under Article 36 where the parties intend to accord it and the third State assents; assent may be presumed unless the treaty provides otherwise. Treaty rules may separately become binding on third States as customary international law.
+
+21. Amendment and Modification
+
+A treaty may be amended by agreement of the parties. A multilateral amendment must follow the treaty and Vienna Convention rules concerning notice, participation and consent. A State is not bound by an amendment it has not accepted merely because other parties adopt it.
+
+Inter se modification occurs when some parties modify treaty operation only among themselves. It is permitted where the treaty allows it or where it does not affect other parties' rights or obligations and is compatible with effective execution of the treaty's object and purpose.
+
+22. Validity and Separability
+
+The validity of a treaty or consent may be impeached only through international-law rules such as those in the Vienna Convention. Grounds are narrowly framed to protect stability.
+
+Whether an invalidity ground affects the entire treaty or only clauses depends on separability requirements. A party may lose the right to invoke a ground through express agreement or conduct amounting to acquiescence after becoming aware of the facts, except for specified fundamental grounds.
+
+23. Error, Fraud and Corruption
+
+Article 48 permits error where it relates to a fact or situation assumed to exist when the treaty was concluded and forming an essential basis of consent. A State cannot rely on an error to which it contributed or where circumstances put it on notice.
+
+Fraudulent conduct by another negotiating State may invalidate consent under Article 49. Corruption of a representative directly or indirectly by another negotiating State may be invoked under Article 50.
+
+24. Coercion
+
+Article 51 renders consent without legal effect where procured by coercion of a State representative through acts or threats directed against that person.
+
+Article 52 makes a treaty void where its conclusion was procured by the threat or use of force in violation of the principles of the UN Charter. This protects free consent and the prohibition on unlawful force.
+
+25. Jus Cogens
+
+Article 53 makes a treaty void at conclusion if it conflicts with a peremptory norm of general international law—a norm accepted and recognised by the international community of States as a whole as one from which no derogation is permitted and which can be modified only by a later norm of the same character.
+
+Under Article 64, if a new peremptory norm emerges, an existing treaty conflicting with it becomes void and terminates. Jus cogens must be identified through rigorous legal evidence rather than assertion.
+
+26. Termination, Withdrawal and Suspension by Agreement
+
+A treaty may terminate, permit withdrawal or be suspended according to its provisions or at any time by consent of all parties after consultation. A treaty containing no withdrawal clause is not ordinarily subject to unilateral denunciation unless the parties intended it or such a right is implied by the treaty's nature.
+
+Notice requirements protect stability and allow parties to manage consequences. Termination releases future performance but does not ordinarily erase rights, obligations or legal situations created through prior execution.
+
+27. Material Breach
+
+Article 60 defines material breach as repudiation not sanctioned by the Convention or violation of a provision essential to the accomplishment of the treaty's object or purpose.
+
+For bilateral treaties, material breach may justify termination or suspension by the injured party. Multilateral treaties require more complex rules concerning unanimous response, specially affected parties and radical alteration of each party's position. Humanitarian provisions protecting persons are specially safeguarded from reciprocal suspension.
+
+28. Supervening Impossibility
+
+Article 61 permits impossibility where permanent disappearance or destruction of an indispensable object makes performance impossible. Temporary impossibility may justify suspension rather than termination.
+
+A party cannot invoke impossibility if it results from that party's breach of the treaty or another international obligation owed to a treaty party. Mere increased expense or difficulty is insufficient.
+
+29. Fundamental Change of Circumstances
+
+Article 62, rebus sic stantibus, is an exceptional and narrowly applied ground. The unforeseen change must concern circumstances constituting an essential basis of consent and must radically transform the extent of obligations still to be performed.
+
+It cannot be invoked for a boundary treaty or where the change results from the invoking party's breach. Stability of treaties requires restrictive application. In Gabčíkovo-Nagymaros, the ICJ rejected Hungary's grounds for termination and emphasised the stringent Vienna Convention conditions.
+
+30. Severance of Diplomatic Relations and Armed Conflict
+
+Severance of diplomatic or consular relations does not by itself affect treaty relations unless such relations are indispensable for application. The Vienna Convention does not comprehensively determine the effect of armed conflict on treaties.
+
+Modern analysis considers the treaty's terms, subject matter, intention, applicable conflict law and whether continued operation is compatible with hostilities. Humanitarian, boundary, human-rights and institutional treaties may continue according to their nature and applicable rules.
+
+31. Procedure for Invoking Invalidity or Termination
+
+A party invoking invalidity, termination, withdrawal or suspension must notify other parties of the measure and reasons. If an objection arises, parties must seek a solution through peaceful means. Additional procedures apply to unresolved disputes under the Convention.
+
+Unilateral announcement does not automatically establish a valid ground. The party must comply with substantive and procedural rules and continue performing while the treaty remains legally operative.
+
+32. Depositaries, Registration and Publication
+
+A depositary may be one or more States, an international organisation or its chief administrative officer. Functions include custody of the original text, receiving signatures and instruments, examining formal validity, notifying parties, registering the treaty and addressing errors.
+
+Article 102 of the UN Charter requires UN members to register treaties and international agreements with the Secretariat and provides that an unregistered agreement may not be invoked before a UN organ. Non-registration does not by itself make the treaty void.
+
+33. Treaty-Making in India
+
+The Union executive ordinarily conducts foreign relations and concludes treaties under Article 73 and relevant Union List entries. The Constitution does not impose a universal requirement of prior parliamentary approval for every treaty.
+
+Executive treaty-making cannot amend the Constitution, override an Act of Parliament or by itself alter enforceable domestic rights where legislation is required. Parliament may legislate under Article 253 to implement any treaty, agreement, convention or international decision, notwithstanding the ordinary federal distribution of subjects.
+
+In Maganbhai Ishwarbhai Patel v. Union of India, the Supreme Court distinguished entry into an international agreement from implementation requiring legislation where domestic law or rights must change.
+
+34. Examination and Problem-Solving Method
+
+For a treaty problem:
+(a) identify the instrument and determine whether it is legally binding;
+(b) identify parties, capacity and representative authority;
+(c) determine the means and date of consent and entry into force;
+(d) identify reservations, acceptances and objections;
+(e) apply Articles 31–33 to interpret the relevant provision;
+(f) consider temporal, territorial and third-State application;
+(g) distinguish amendment from inter se modification;
+(h) test each asserted invalidity, termination or suspension ground strictly;
+(i) check jus cogens, Article 103 and procedural requirements; and
+(j) distinguish international obligation from domestic enforceability.`,
     keyPoints: [
-      "Formation and entry into force",
-      "Reservations and objections",
-      "Pacta sunt servanda",
-      "Treaty interpretation",
-      "Invalidity and jus cogens",
-      "Termination and suspension",
+      "A treaty is an international agreement governed by international law; its title is not decisive.",
+      "Legal intention distinguishes treaties from political and non-binding arrangements.",
+      "States possess treaty capacity, while international organisations act within their constituent functions.",
+      "Consent may be expressed by signature, ratification, acceptance, approval, accession, exchange or another agreed means.",
+      "Entry into force and domestic enforceability are separate questions.",
+      "A reservation purports to exclude or modify legal effect; an interpretative declaration ordinarily explains meaning only.",
+      "Reservations must comply with treaty limits and the object-and-purpose test.",
+      "Pacta sunt servanda requires treaties in force to be performed in good faith.",
+      "A party cannot invoke internal law as justification for treaty non-performance, subject to the narrow Article 46 rule.",
+      "Articles 31–33 create an integrated method using text, context, object and purpose, subsequent practice and supplementary means.",
+      "A treaty creates no obligations or rights for a third State without the legally required consent.",
+      "Amendment binds accepting parties; inter se modification must protect other parties and the treaty's object and purpose.",
+      "Error, fraud, corruption, coercion and conflict with jus cogens are narrowly regulated grounds of invalidity.",
+      "Material breach, impossibility and fundamental change are not interchangeable and must satisfy strict conditions.",
+      "UN registration affects invocation before UN organs but does not determine a treaty's validity.",
+      "In India, the executive generally concludes treaties while Parliament implements them through Article 253 where domestic law must change.",
     ],
     provisions: [
-      "Vienna Convention on the Law of Treaties, 1969",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 2–18",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 19–30",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 31–41",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 42–72",
       "Charter of the United Nations, 1945 — Article 102",
-      "Constitution of India — Article 253",
+      "Charter of the United Nations, 1945 — Article 103",
+      "Constitution of India — Articles 73, 246 and 253",
+      "Constitution of India — Seventh Schedule, Union List Entries 10–14",
     ],
+    importantCases: [
+      {
+        caseName: "Reservations to the Convention on the Prevention and Punishment of the Crime of Genocide",
+        citation: "ICJ Reports 1951, p. 15",
+        principle:
+          "Compatibility with a multilateral treaty's object and purpose is central to the permissibility of reservations.",
+        summary:
+          "The advisory opinion rejected a rigid unanimity approach and shaped the modern Vienna Convention reservation framework.",
+      },
+      {
+        caseName: "Temple of Preah Vihear (Cambodia v. Thailand)",
+        citation: "ICJ Reports 1962, p. 6",
+        principle:
+          "Conduct, acceptance and failure to object may have important legal consequences in determining agreement and preclusion.",
+        summary:
+          "The Court examined Thailand's conduct concerning a boundary map and its later inability to deny the accepted settlement.",
+      },
+      {
+        caseName: "Aegean Sea Continental Shelf (Greece v. Turkey)",
+        citation: "ICJ Reports 1978, p. 3",
+        principle:
+          "Whether a communiqué or similar instrument is binding depends on its terms and the circumstances, not its designation alone.",
+        summary:
+          "The Court interpreted a joint communiqué to determine whether it constituted consent to ICJ jurisdiction.",
+      },
+      {
+        caseName: "Territorial Dispute (Libyan Arab Jamahiriya v. Chad)",
+        citation: "ICJ Reports 1994, p. 6",
+        principle:
+          "Treaty interpretation begins with the text read in context and in light of object and purpose; boundary settlements possess stability.",
+        summary:
+          "The ICJ interpreted the 1955 Treaty of Friendship and Good-Neighbourliness to determine the parties' boundary.",
+      },
+      {
+        caseName: "Gabčíkovo-Nagymaros Project (Hungary/Slovakia)",
+        citation: "ICJ Reports 1997, p. 7",
+        principle:
+          "Necessity, impossibility, material breach and fundamental change have distinct and stringent requirements and did not justify unilateral treaty termination on the facts.",
+        summary:
+          "The Court applied Vienna Convention rules and customary principles to suspension, breach and attempted termination of the 1977 project treaty.",
+      },
+      {
+        caseName: "Maganbhai Ishwarbhai Patel v. Union of India",
+        citation: "(1970) 3 SCC 400",
+        principle:
+          "India's executive may conclude international agreements, but legislation is required where implementation changes domestic law or legal rights.",
+        summary:
+          "The Supreme Court distinguished treaty-making at the international level from municipal implementation under the Constitution.",
+      },
+    ],
+    examFocus:
+      "Structure treaty answers chronologically: definition and legal intention, capacity and authority, adoption and authentication, consent and entry into force, reservations, performance, interpretation, third parties, amendment, invalidity and termination. Apply Articles 31–33 as one integrated interpretation rule, and never treat breach as automatically terminating a treaty. Indian-law questions must distinguish executive treaty-making from legislative implementation under Article 253.",
+    revisionNotes:
+      "A treaty is an international agreement governed by international law, whatever its name. Consent may be expressed through signature, ratification, accession or another agreed means. Reservations are controlled by treaty terms and the object-and-purpose test. Treaties in force must be performed in good faith and interpreted through text, context, object and purpose under Articles 31–33. Third States are not bound without consent. Invalidity and termination grounds are narrowly regulated to protect stability. In India, the Union executive generally concludes treaties, while Parliament legislates under Article 253 when domestic implementation is required.",
   },
   {
     title: "Amicable Means of Settlement of Disputes",
