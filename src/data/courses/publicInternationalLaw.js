@@ -231,23 +231,233 @@ For a problem question, identify the relevant international actors, the alleged 
   {
     title: "Sources of International Law",
     shortDescription:
-      "Treaties, custom, general principles, judicial decisions, scholarly writings and other law-forming materials.",
+      "A systematic study of treaties, custom, general principles, subsidiary means and other materials used to identify rules of international law.",
     overview:
-      "This unit examines the recognised sources used to identify rules of international law and the interaction among treaty, custom and general legal principles.",
-    detailedContent:
-      "Article 38(1) of the Statute of the International Court of Justice; international conventions; international custom as general practice accepted as law; State practice and opinio juris; persistent objection; regional and local custom; general principles of law; judicial decisions and teachings as subsidiary means; resolutions of international organisations; unilateral acts; soft law; equity; jus cogens obligations; and questions of hierarchy and conflict among sources.",
+      "International law has no single universal legislature. Its rules must therefore be identified through accepted law-creating processes and authoritative legal materials. Article 38(1) of the Statute of the International Court of Justice provides the conventional starting point by referring to international conventions, international custom and general principles of law, while treating judicial decisions and the teachings of highly qualified publicists as subsidiary means. This chapter explains each category, the evidence required to establish it, the interaction among sources and the place of resolutions, unilateral acts, soft law, equity, peremptory norms and obligations owed to the international community.",
+    learningObjectives: [
+      "Explain the framework contained in Article 38(1) of the Statute of the International Court of Justice.",
+      "Distinguish formal sources of legal obligation from evidence and subsidiary means used to determine legal rules.",
+      "Explain how treaties create obligations and how treaty rules may interact with customary international law.",
+      "Identify the two constituent elements of customary international law: general practice and acceptance as law.",
+      "Evaluate relevant forms of State practice and evidence of opinio juris.",
+      "Apply the rules relating to persistent objection, regional custom and local custom.",
+      "Explain the function and method of identifying general principles of law.",
+      "Assess the legal weight of judicial decisions, scholarly writings and decisions of international organisations.",
+      "Explain when unilateral declarations may create international legal obligations.",
+      "Distinguish binding law from soft-law instruments while recognising the latter's legal relevance.",
+      "Explain equity, jus cogens, obligations erga omnes and questions of hierarchy among international rules.",
+      "Use a structured method to identify the source and legal status of a claimed international rule.",
+    ],
+    detailedContent: `1. Meaning and Importance of Sources
+
+The sources of international law are the recognised processes and materials through which international legal rules are created, identified and proved. Because there is no universal legislature possessing general authority over all States, the lawyer must ask both where an alleged rule comes from and what evidence establishes its legal character.
+
+A useful distinction is drawn between formal sources and material evidence. A formal source is a law-creating process that gives a rule its legal quality, such as treaty agreement or customary law formation. Material sources or evidence help establish the existence, content and interpretation of a rule, such as diplomatic correspondence, legislation, judgments and scholarly analysis. The categories sometimes overlap, and international practice does not always use the terminology consistently.
+
+2. Article 38(1) of the ICJ Statute
+
+Article 38(1) directs the International Court of Justice, whose function is to decide disputes submitted to it in accordance with international law, to apply:
+
+(a) international conventions establishing rules expressly recognised by the contesting States;
+(b) international custom, as evidence of a general practice accepted as law;
+(c) the general principles of law recognised by nations; and
+(d) subject to Article 59, judicial decisions and the teachings of the most highly qualified publicists as subsidiary means for determining rules of law.
+
+Article 38(2) additionally permits the Court to decide a case ex aequo et bono—according to what is fair and good—if the parties agree.
+
+Article 38 was drafted as a direction to a court rather than as an exhaustive constitutional code for every international law-making process. Nevertheless, it is widely accepted as the principal framework for discussing sources. Later developments require attention to acts and resolutions of international organisations, unilateral acts, soft law, peremptory norms and specialised regulatory processes.
+
+3. International Conventions and Treaties
+
+A treaty is an international agreement governed by international law. It may be bilateral or multilateral and may be called a treaty, convention, covenant, charter, protocol, exchange of notes or another name. Its title is not decisive; legal intention, governing law and the nature of the instrument are central.
+
+Treaties create legal obligations for their parties. The foundational rule pacta sunt servanda requires every treaty in force to be performed by its parties in good faith. A treaty generally neither creates obligations nor rights for a third State without the conditions recognised by treaty law.
+
+Treaty law and customary law must be distinguished. A treaty binds because of the valid consent of its parties, whereas a customary rule may bind generally through practice accepted as law. The same substantive rule may exist simultaneously in both forms. A multilateral treaty may codify an existing custom, crystallise an emerging customary rule or contribute to the later development of custom if sufficiently widespread and representative practice accompanied by opinio juris follows.
+
+4. Meaning of Customary International Law
+
+Article 38(1)(b) describes international custom as evidence of a general practice accepted as law. Modern analysis identifies two constituent elements:
+
+(a) a general practice; and
+(b) acceptance of that practice as law, commonly called opinio juris.
+
+Neither repeated conduct alone nor a statement of legal belief without corresponding practice ordinarily establishes a customary rule. The two elements must be separately examined, even though the same material may sometimes provide evidence relevant to both.
+
+5. State Practice
+
+State practice includes physical and verbal conduct of States. Relevant forms may include diplomatic acts and correspondence; executive conduct; legislation and administrative regulations; decisions of national courts; military manuals and operational conduct; treaty practice; official legal opinions; statements before international organisations; pleadings before courts; protests; votes and explanations of vote; and, in appropriate circumstances, inaction.
+
+Practice must be attributable to the State. Conduct of executive, legislative, judicial and other State organs may all be relevant, although its weight depends on authority, clarity, consistency and context.
+
+To support a general custom, practice must be sufficiently widespread, representative and consistent. Universal participation is not required. The participation of States specially affected by the alleged rule may carry particular significance, but no State possesses a unilateral veto over custom merely because it is powerful. The period required depends on the circumstances; no fixed duration is necessary if the practice and legal acceptance are sufficiently clear.
+
+6. Opinio Juris
+
+Opinio juris distinguishes legal custom from habit, convenience, courtesy and political choice. The relevant question is whether States engage in or accept the practice with a sense that international law requires, permits or authorises it.
+
+Evidence may include official statements, diplomatic correspondence, legal opinions, government publications, national judgments, treaty provisions, conduct connected with resolutions of international organisations, pleadings and reactions to the conduct of other States. Silence or failure to react may provide evidence only where the circumstances called for a response and the State was in a position to react.
+
+Motives may be mixed. A State may comply with a rule for legal, political and practical reasons simultaneously. The inquiry is whether acceptance as law is sufficiently established, not whether legal obligation was the sole motive.
+
+7. Persistent Objector
+
+A State that clearly and persistently objects to a customary rule while that rule is in the process of formation may, under the persistent-objector doctrine, avoid being bound by that rule once it emerges. The objection must be timely, maintained and known to other States.
+
+Objection after a general rule has already formed does not ordinarily free a State from it. The doctrine cannot be used to avoid a peremptory norm of general international law. The burden rests on the objecting State to establish the required consistency and timing.
+
+8. Regional, Local and Particular Custom
+
+Custom may develop among a limited group of States or between two States. A party relying on regional or local custom must prove a constant and uniform practice accepted as law among the States concerned. The narrower the alleged custom, the more specifically its acceptance by the relevant States must be demonstrated.
+
+In the Asylum case, the ICJ required Colombia to establish the alleged regional rule concerning unilateral qualification of an offence for diplomatic asylum and found that the evidence did not demonstrate a constant and uniform usage accepted as law by the relevant States.
+
+9. General Principles of Law
+
+General principles of law prevent gaps in the legal system and provide foundational concepts needed for coherent adjudication. Under the traditional comparative method, a principle common to the world's principal legal systems may be transposed to the international plane when compatible with the structure of international law.
+
+Examples commonly discussed include good faith, estoppel, res judicata, reparation for legal wrong, procedural fairness, burden of proof and the principle that no one should be judge in their own cause. A domestic rule should not be mechanically transferred; the decision-maker must identify a genuinely shared principle and determine that it can appropriately operate internationally.
+
+Principles may also be inherent in the international legal system itself, such as sovereign equality and the legal personality necessary for international institutions to perform their functions. General principles are not a licence to decide according to personal notions of fairness.
+
+10. Judicial Decisions
+
+Article 38(1)(d) classifies judicial decisions as subsidiary means for determining rules of law. Under Article 59, an ICJ decision is binding only between the parties and in respect of that particular case. International law therefore does not apply a formal doctrine of binding precedent identical to stare decisis in common-law systems.
+
+Nevertheless, the ICJ and other tribunals regularly refer to earlier reasoning for consistency and legal certainty. The authority of a decision depends on the court's jurisdiction, the quality and relevance of its reasoning, its treatment of sources and its acceptance in later practice. Advisory opinions, arbitral awards, specialised tribunal decisions and national judgments may all assist in identifying or interpreting international law. National judgments may additionally constitute State practice.
+
+11. Teachings of Publicists
+
+The writings of highly qualified publicists are also subsidiary means, not independent legislation. Scholarly works can organise practice, trace doctrine, compare authorities and expose competing interpretations. Their weight depends on expertise, independence, methodological care, representativeness and support in primary legal materials.
+
+Modern access to treaties, official records and judgments means that scholarship should guide the investigation rather than replace proof of practice and opinio juris. Collective expert work, including that of the International Law Commission, may be particularly influential, but its legal significance must be assessed through its mandate, methodology, reception by States and relationship to existing law.
+
+12. Resolutions and Acts of International Organisations
+
+The legal effect of a resolution depends on the constituent instrument of the organisation, the organ adopting it, the wording used and the applicable voting and competence rules. Some decisions are binding because a treaty grants the organ decision-making power. Other resolutions are recommendatory.
+
+A non-binding resolution may still be legally relevant. It may provide evidence of opinio juris, record or interpret an existing rule, contribute to the development of a new customary rule, guide treaty negotiation or influence subsequent practice. Voting patterns alone must be assessed cautiously; reservations, abstentions and explanations of vote may reveal whether States regarded the text as law, aspiration or political policy.
+
+13. Unilateral Acts of States
+
+A State may assume a legal obligation through a clear unilateral declaration when it intends to be bound and the declaration is made publicly by an authority competent to represent the State. The Nuclear Tests cases demonstrate that good faith may require such a commitment to be respected without reciprocal acceptance by another State.
+
+Intention is determined objectively from the language, subject matter, circumstances and authority of the speaker. Because a unilateral statement may restrict State freedom, the alleged obligation should not be inferred lightly. Political announcements, negotiating positions and vague expressions of hope ordinarily lack the required legal intention.
+
+14. Soft Law
+
+Soft law describes non-binding standards, declarations, guidelines, codes, principles and programmes that influence international conduct without themselves creating treaty or customary obligations. It may offer flexibility, facilitate consensus, guide institutions, shape expectations and prepare the ground for later binding rules.
+
+Soft law must not be presented as binding merely because it is important. Its provisions may nevertheless restate existing law, provide evidence relevant to custom, influence treaty interpretation, be incorporated into binding instruments or guide domestic implementation. Each proposition must therefore be classified independently.
+
+15. Equity and Ex Aequo et Bono
+
+Equity may operate within the law to interpret and apply legal rules fairly, particularly where a rule directs an equitable solution. This is equity infra legem. Equity cannot ordinarily override applicable law merely because a different outcome appears fair.
+
+Decision ex aequo et bono under Article 38(2) is different: it allows the Court to decide according to fairness beyond strict legal rules, but only with the parties' consent. The distinction protects the requirement that international disputes ordinarily be resolved according to law.
+
+16. Jus Cogens and Obligations Erga Omnes
+
+A peremptory norm of general international law, or jus cogens, is a norm accepted and recognised by the international community of States as a whole as one from which no derogation is permitted and which can be modified only by a later norm having the same character. Under the Vienna Convention on the Law of Treaties, a treaty conflicting with a peremptory norm is void, and the emergence of a new peremptory norm renders a conflicting existing treaty void and terminated.
+
+Obligations erga omnes are obligations owed to the international community as a whole. All States have a legal interest in their protection. Jus cogens concerns hierarchical superiority and non-derogability, while erga omnes concerns the direction and legal interest of the obligation. The concepts overlap but are not identical.
+
+17. Hierarchy and Conflict Among Sources
+
+Article 38 does not establish a simple ranking in which treaties always prevail over custom or custom always prevails over general principles. Treaty and custom may coexist. As between particular parties, ordinary conflict rules include lex specialis, lex posterior and interpretation aimed at harmonisation.
+
+Some superior rules affect this otherwise horizontal structure. Article 103 of the UN Charter gives Charter obligations priority over conflicting obligations under another international agreement. Jus cogens invalidates incompatible treaty provisions and bars derogation. Procedural rules governing jurisdiction and applicable law must also be distinguished from the substantive hierarchy of norms.
+
+18. Method for Identifying a Rule
+
+When answering a problem, use the following sequence:
+
+(a) state the precise alleged rule;
+(b) identify whether it is claimed as treaty, custom, general principle or another category;
+(c) for a treaty, identify the parties, entry into force, relevant provision and any reservation;
+(d) for custom, prove general practice and opinio juris separately;
+(e) consider persistent objection or particular custom where relevant;
+(f) use cases and scholarship as subsidiary support rather than substitutes for the primary source;
+(g) determine the legal relevance of resolutions, unilateral statements or soft-law texts;
+(h) check for jus cogens, Article 103 or another conflict rule; and
+(i) give a reasoned conclusion on existence, content, scope and applicability.`,
     keyPoints: [
-      "Article 38(1) of the ICJ Statute",
-      "Treaties and conventions",
-      "State practice and opinio juris",
-      "General principles of law",
-      "Subsidiary means and soft law",
-      "Jus cogens and hierarchy",
+      "Article 38(1) is the principal starting point for identifying the sources of international law, though it is not an exhaustive world constitution.",
+      "Treaties create binding obligations for their parties and must be performed in good faith.",
+      "Treaty and customary rules may coexist; treaties may codify, crystallise or help generate custom.",
+      "Customary international law requires both sufficiently general practice and acceptance of that practice as law.",
+      "State practice may be physical or verbal and may come from executive, legislative, judicial and other State organs.",
+      "Opinio juris distinguishes legal custom from habit, courtesy, convenience and policy.",
+      "Persistent objection must be clear, timely and maintained while the customary rule is forming.",
+      "A party relying on regional or local custom must prove practice and legal acceptance among the States concerned.",
+      "General principles fill gaps and support coherent adjudication but must be identified through a recognised legal method.",
+      "Judicial decisions and qualified scholarly writings are subsidiary means rather than independent law-making authorities.",
+      "International-organisation resolutions may be binding, evidential or recommendatory depending on their legal basis and context.",
+      "A clear public unilateral declaration made with an intention to be bound may create a legal obligation for the declaring State.",
+      "Soft law is not binding merely because it is influential, but it can shape interpretation, practice and later legal development.",
+      "Jus cogens concerns non-derogable superior norms; obligations erga omnes are owed to the international community as a whole.",
+      "Article 103 of the UN Charter gives Charter obligations priority over conflicting treaty obligations.",
     ],
     provisions: [
-      "Statute of the International Court of Justice — Article 38",
-      "Vienna Convention on the Law of Treaties, 1969 — Article 53",
+      "Statute of the International Court of Justice — Articles 38 and 59",
+      "Charter of the United Nations, 1945 — Articles 25 and 103",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 26, 34–38, 53 and 64",
+      "International Law Commission — Conclusions on Identification of Customary International Law, 2018",
     ],
+    importantCases: [
+      {
+        caseName: "North Sea Continental Shelf Cases",
+        citation: "ICJ Reports 1969, p. 3",
+        principle:
+          "Custom requires sufficiently widespread and representative practice, including that of specially affected States, accompanied by a belief that the practice is legally obligatory.",
+        summary:
+          "The ICJ examined whether the treaty rule of equidistance had become customary international law and clarified the relationship among treaties, practice and opinio juris.",
+      },
+      {
+        caseName: "Asylum (Colombia v. Peru)",
+        citation: "ICJ Reports 1950, p. 266",
+        principle:
+          "A party alleging regional or local custom must prove a constant and uniform usage accepted as law by the States concerned.",
+        summary:
+          "Colombia did not establish the claimed Latin American customary rule permitting unilateral and binding qualification of the offence for diplomatic asylum.",
+      },
+      {
+        caseName: "Military and Paramilitary Activities in and against Nicaragua (Nicaragua v. United States)",
+        citation: "ICJ Reports 1986, p. 14",
+        principle:
+          "Customary law may exist alongside treaty law, and perfect conformity of practice is unnecessary where contrary conduct is generally treated as a breach rather than a new rule.",
+        summary:
+          "The Court identified and applied customary rules on non-use of force and non-intervention independently of parallel Charter provisions.",
+      },
+      {
+        caseName: "Nuclear Tests (Australia v. France; New Zealand v. France)",
+        citation: "ICJ Reports 1974, pp. 253 and 457",
+        principle:
+          "A public unilateral declaration made with an intention to be bound may create a legal obligation, which must be performed in good faith.",
+        summary:
+          "The Court treated authoritative French statements concerning atmospheric nuclear testing as legally significant unilateral commitments.",
+      },
+      {
+        caseName: "Factory at Chorzów (Germany v. Poland)",
+        citation: "PCIJ, Series A, No. 17 (1928)",
+        principle:
+          "Reparation must, so far as possible, wipe out the consequences of an illegal act—a foundational principle of international responsibility.",
+        summary:
+          "The Permanent Court articulated a general remedial principle frequently relied upon in international adjudication.",
+      },
+      {
+        caseName: "Barcelona Traction, Light and Power Company, Limited",
+        citation: "ICJ Reports 1970, p. 3",
+        principle:
+          "The Court distinguished ordinary bilateral obligations from obligations owed towards the international community as a whole.",
+        summary:
+          "The judgment is a principal authority for the concept of obligations erga omnes and the legal interest of all States in their protection.",
+      },
+    ],
+    examFocus:
+      "Begin with Article 38(1) and distinguish primary law-creating processes from subsidiary means. For custom, always analyse State practice and opinio juris separately, then consider consistency, representativeness, specially affected States, persistent objection and particular custom. In hierarchy questions, distinguish jus cogens, erga omnes and Article 103 rather than treating them as interchangeable concepts.",
+    revisionNotes:
+      "Article 38(1) identifies treaties, custom and general principles, with judicial decisions and qualified writings as subsidiary means. Treaties bind their parties; custom requires general practice plus opinio juris; general principles support completeness and coherence. Resolutions, unilateral declarations and soft law have differing legal effects that must be assessed contextually. Jus cogens is non-derogable, erga omnes identifies obligations owed to the international community, and Article 103 gives Charter obligations priority over conflicting treaty commitments.",
   },
   {
     title:
