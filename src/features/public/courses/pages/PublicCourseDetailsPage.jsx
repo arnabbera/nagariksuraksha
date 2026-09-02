@@ -612,7 +612,9 @@ export default function PublicCourseDetailsPage() {
                 course.slug ===
                   "family-law-i" ||
                 course.slug ===
-                  "public-international-law"
+                  "public-international-law" ||
+                course.slug ===
+                  "law-of-torts-mv-and-cp-laws"
                   ? "course-hero-media-full-image"
                   : ""
               }`}
