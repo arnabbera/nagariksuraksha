@@ -1364,26 +1364,273 @@ Use the following sequence:
   {
     title: "Property, Marriage, Defamation, Intimidation and Attempts",
     shortDescription:
-      "Property offences and selected offences relating to marriage, cruelty, reputation, intimidation and attempts.",
+      "A detailed study of property offences and selected offences relating to marriage, cruelty, reputation, intimidation, insult and incomplete criminal conduct.",
     overview:
-      "This unit studies major property offences together with important offences relating to marriage, cruelty, reputation, threats and incomplete offences.",
-    detailedContent:
-      "Theft, extortion, robbery and dacoity; criminal misappropriation; criminal breach of trust; receiving stolen property; cheating; mischief; criminal trespass; offences relating to marriage; cruelty by husband or relatives of husband; defamation; criminal intimidation, insult and annoyance; attempt to commit offences; and comparative treatment under the Bharatiya Nyaya Sanhita, 2023.",
+      "This final unit examines offences affecting possession, ownership, entrustment, economic decision-making, property security, marriage, reputation and personal peace. It covers the syllabus ranges of IPC Sections 378–462, 493–498A, 499–502 and 503–511 and explains their reorganisation under the Bharatiya Nyaya Sanhita, 2023. Property offences are principally consolidated in BNS Sections 303–334; marriage-related offences and cruelty appear mainly in Sections 80–86; criminal intimidation, insult and public misconduct are in Sections 351–355; defamation is in Section 356; and general attempt liability is relocated to Section 62. The chapter emphasises possession, consent, dishonesty, entrustment, deception, delivery, fear, damage, entry, marital status, reputation, intention and proximity to completion.",
+    learningObjectives: [
+      "Distinguish theft, extortion, robbery and dacoity through their separate statutory ingredients.",
+      "Explain the BNS offence of snatching and its relationship to theft.",
+      "Differentiate criminal misappropriation from criminal breach of trust.",
+      "Apply the rules concerning stolen property and dishonest receipt or retention.",
+      "Distinguish cheating from breach of contract and identify cheating by personation.",
+      "Explain mischief, criminal trespass, house-trespass and house-breaking.",
+      "Analyse deceitful cohabitation, bigamy, fraudulent marriage ceremonies and cruelty.",
+      "Apply the ingredients, exceptions and explanations of criminal defamation.",
+      "Explain criminal intimidation, intentional insult, public misconduct and general attempt liability.",
+      "Map the selected IPC provisions to the reorganised BNS framework without assuming identical wording or punishment.",
+    ],
+    detailedContent: `1. Protected Interests and the BNS Reorganisation
+
+Property offences protect possession, ownership, entrusted interests and freedom of economic choice. The remaining offences in this unit protect marital status and safety, reputation, personal security and public peace. The IPC arranged many of them near the end of the Code; the BNS substantially reorganises them by subject.
+
+The BNS places theft through house-breaking mainly in Sections 303–334, marriage and cruelty mainly in Sections 80–86, intimidation and related misconduct in Sections 351–355, defamation in Section 356, and the general attempt provision in Section 62. The date of conduct determines which statute applies.
+
+2. Core Property Concepts
+
+Property offences frequently turn on possession, ownership, consent, movement, delivery, entrustment, deception and intention. Possession is not identical to legal title: theft can be committed against the person in possession even where ownership is disputed.
+
+"Dishonestly" concerns intention to cause wrongful gain or wrongful loss. A bona fide claim of right may negate dishonesty on appropriate facts, but a mere assertion of ownership does not excuse coercive or deceptive conduct. Consent may be express or implied but must be legally meaningful in context.
+
+3. Theft under IPC Section 378 and BNS Section 303
+
+Theft occurs when a person, intending dishonestly to take movable property out of another person's possession without that person's consent, moves the property in order to such taking.
+
+The essential ingredients are movable property, possession of another, absence of consent, dishonest intention and movement. The offence is complete with the relevant movement; successful escape or permanent deprivation is not indispensable. Property attached to the earth becomes capable of theft when severed in the circumstances recognised by law.
+
+BNS Section 303 substantially retains the definition and also provides specified treatment for first-time theft below the statutory value where property is restored, including community service under its conditions.
+
+4. Snatching and Aggravated Theft
+
+BNS Section 304 creates the distinct offence of snatching where, to commit theft, the offender suddenly, forcibly or quickly seizes, secures, grabs or takes away movable property from a person or that person's possession. It is not a standalone IPC offence by that name, though the conduct was prosecutable under other IPC provisions depending on the facts.
+
+BNS Sections 305–307 address theft in specified places or means of transport, theft by a clerk or servant, and theft after preparation for causing death, hurt, restraint or fear. Each requires proof of the additional aggravating circumstance.
+
+5. Extortion
+
+IPC Section 383 and BNS Section 308 define extortion through intentionally putting a person in fear of injury and thereby dishonestly inducing that person to deliver property, valuable security or something signed or sealed capable of conversion into valuable security.
+
+Unlike theft, extortion involves delivery induced by fear. The injury may concern the person threatened or another person. BNS Section 308 consolidates punishment and aggravated forms involving fear of death, grievous hurt or accusations of serious offences.
+
+6. Robbery
+
+Robbery is an aggravated form of theft or extortion. Under IPC Section 390 and BNS Section 309, theft becomes robbery when, for committing the theft, carrying away or attempting to carry away the property, the offender voluntarily causes or attempts to cause death, hurt, wrongful restraint or fear of instant death, instant hurt or instant restraint.
+
+Extortion becomes robbery when the offender is sufficiently present, puts the person in fear of instant death, hurt or wrongful restraint, and thereby induces delivery then and there. The immediacy of fear and delivery distinguishes robbery from ordinary extortion.
+
+7. Dacoity
+
+Dacoity is robbery committed or attempted conjointly by five or more persons, including persons present and aiding. IPC Section 391 and BNS Section 310 preserve the numerical and conjoint-action foundation.
+
+BNS Sections 310–313 contain punishment for dacoity, aggravated consequences, preparation, assembly and belonging to gangs of robbers or dacoits. Every accused person's participation, knowledge and connection to the common design must be proved; presence near the location alone is insufficient.
+
+8. Death, Hurt and Weapons during Robbery or Dacoity
+
+IPC Sections 394–398 and BNS Sections 309–312 address voluntarily causing hurt, causing death, attempts while armed with deadly weapons and related aggravated circumstances. Liability may depend on whether the accused personally caused harm or participated in a dacoity where one conjoint participant committed murder.
+
+The answer should identify the underlying theft or extortion, the conversion to robbery, the number of participants, the weapon or injury, and the precise aggravated provision.
+
+9. Criminal Misappropriation
+
+IPC Section 403 and BNS Section 314 punish dishonest misappropriation or conversion to one's own use of movable property. Initial possession may be innocent; liability may arise when the person later forms dishonest intention and converts or appropriates the property.
+
+Temporary dishonest misappropriation may suffice. Finding property is not automatically criminal, but appropriation without reasonable steps in circumstances where the owner can be discovered may establish the offence.
+
+10. Misappropriation of Deceased Person's Property
+
+IPC Section 404 and BNS Section 315 create an aggravated offence where property was in a deceased person's possession at death, has not since come into lawful possession of a person entitled to it, and is dishonestly misappropriated with knowledge of those circumstances.
+
+Enhanced treatment may apply where the offender was employed by the deceased. The prosecution must prove the special status of the property in addition to dishonest conversion.
+
+11. Criminal Breach of Trust
+
+IPC Section 405 and BNS Section 316 require entrustment of property or dominion over it, followed by dishonest misappropriation, conversion, use or disposal in violation of a legal direction or contract governing the trust, or wilfully suffering another person to do so.
+
+Entrustment is the central distinction from misappropriation. Ownership need not pass to the accused; the property or control is handed over for a defined purpose. Mere failure to return property or breach of a civil obligation does not automatically prove dishonest intention.
+
+BNS Section 316 consolidates ordinary and aggravated punishment, including specified categories such as carriers, clerks, servants, public servants, bankers, merchants, brokers, attorneys and agents.
+
+12. Stolen Property
+
+IPC Sections 410–414 and BNS Section 317 address stolen property and dishonest receipt, retention, habitual dealing or assistance in concealment or disposal. Property may retain its stolen character where possession was transferred through theft, extortion, robbery, criminal misappropriation or breach of trust under the statutory definition.
+
+Knowledge or reason to believe that the property is stolen must be proved. Recent possession, suspicious price, altered marks, concealment and false explanations may be relevant circumstances, but possession alone is not an automatic substitute for the mental element.
+
+13. Cheating
+
+IPC Section 415 and BNS Section 318 define cheating through deception and fraudulent or dishonest inducement to deliver or retain property, or intentional inducement to do or omit something which the person would not do or omit if not deceived and which causes or is likely to cause specified harm.
+
+For property-delivery cheating, dishonest intention must ordinarily exist when the inducement is made. A later failure to perform a genuine promise is not by itself cheating. The court examines representations, concealment of facts, surrounding documents, conduct at inception and the causal link between deception and action.
+
+14. Cheating by Personation
+
+IPC Section 416 and BNS Section 319 cover cheating by pretending to be another person, knowingly substituting one person for another, or representing that a person is someone other than who that person really is. The person impersonated may be real or imaginary.
+
+Digital identity misuse, fake profiles or substituted credentials may satisfy the offence when the statutory deception and cheating ingredients are established, alongside any applicable special cyber law.
+
+15. Fraudulent Dealings with Property and Creditors
+
+BNS Sections 320–323 consolidate dishonest or fraudulent removal or concealment of property to prevent distribution among creditors, preventing a debt from becoming available, executing deeds containing false consideration, and fraudulent removal or concealment of property.
+
+Their IPC antecedents principally lie in Sections 421–424. These offences require the particular property, claim, deed, creditor impact and dishonest or fraudulent intention stated in the relevant section.
+
+16. Mischief
+
+IPC Section 425 and BNS Section 324 define mischief through intention or knowledge of likelihood of causing wrongful loss or damage and causing destruction of property or a change in property or its situation that destroys or diminishes value or utility or affects it injuriously.
+
+The offender need not intend loss to the owner of the property and may, in appropriate circumstances, commit mischief concerning jointly owned or personally owned property where another has a legally protected interest. Actual diminution or injurious effect and the required intention or knowledge must be proved.
+
+17. Aggravated Mischief
+
+BNS Sections 324–328 consolidate punishment and aggravated mischief involving specified value, government or local-authority property, animals, irrigation or water supply, roads, bridges, drainage, navigation, fire, explosives, railways, aircraft, vessels and intentional running aground or ashore.
+
+IPC antecedents were distributed mainly across Sections 426–440. A problem answer should not cite basic mischief alone where the means, property or consequence invokes a special provision.
+
+18. Criminal Trespass and House-Trespass
+
+IPC Section 441 and BNS Section 329 define criminal trespass through entry into property in another's possession with intent to commit an offence or to intimidate, insult or annoy a person in possession, or unlawful remaining after lawful entry with such intent.
+
+House-trespass is criminal trespass into a building, tent or vessel used as a human dwelling, place of worship or place for custody of property under the statutory definition. Title disputes do not displace the need to prove possession and prohibited intention at entry or unlawful remaining.
+
+19. Lurking House-Trespass and House-Breaking
+
+BNS Section 330 defines lurking house-trespass and house-breaking, including the specified methods of entry or departure. Sections 331–334 provide punishment and aggravated consequences involving timing, intended offences, preparation for hurt or restraint, and grievous hurt or death.
+
+IPC antecedents lie principally in Sections 443–462. The prosecution must prove criminal trespass first, then the dwelling or custody character, concealment or prescribed method, and any aggravation.
+
+20. Deceitful Cohabitation and Fraudulent Marriage Ceremony
+
+IPC Section 493 and BNS Section 81 address a man deceitfully causing a woman who is not lawfully married to him to believe that she is lawfully married and to cohabit or have sexual intercourse in that belief.
+
+IPC Section 496 and BNS Section 83 address dishonestly or fraudulently going through a marriage ceremony knowing that no lawful marriage is thereby created. These offences require more than a failed or void marriage; the specified deception, belief, knowledge and conduct must be proved.
+
+21. Bigamy
+
+IPC Sections 494–495 and BNS Section 82 address marrying again during the lifetime of a spouse where the later marriage is void by reason of the subsisting marriage, subject to statutory exceptions. Concealment of the former marriage from the person with whom the later marriage is contracted aggravates liability.
+
+The prosecution must prove the first valid marriage, its subsistence, the legally relevant second marriage and performance of essential ceremonies or statutory requirements. Mere cohabitation or reputation does not always prove a legally solemnised second marriage for criminal liability.
+
+22. Enticing or Detaining a Married Woman
+
+IPC Section 498 and BNS Section 84 address taking, enticing, concealing or detaining a married woman with the stated knowledge or reason to believe and the prohibited intent. The provision must be distinguished from kidnapping, abduction, trafficking and sexual offences, each of which has separate ingredients.
+
+The language and contemporary constitutional context require careful statutory application without treating an adult woman as property. Her autonomy and the precise prohibited conduct remain central factual considerations.
+
+23. Cruelty by Husband or Relative
+
+IPC Section 498A corresponds principally to BNS Sections 85–86. Section 85 punishes a husband or relative who subjects a woman to cruelty; Section 86 defines cruelty.
+
+Cruelty includes wilful conduct likely to drive the woman to suicide or cause grave injury or danger to life, limb or health, whether mental or physical, and harassment aimed at coercing her or a related person to meet an unlawful demand for property or valuable security, or because of failure to meet it.
+
+Ordinary marital disagreement does not automatically satisfy the offence, while mental cruelty need not leave visible injury. The relationship, conduct, gravity, demand, purpose, continuity and evidence must be assessed fairly.
+
+24. Dowry Death and Related Overlap
+
+BNS Section 80, corresponding to IPC Section 304B, addresses dowry death. Although located outside the original IPC Sections 493–498A range, it is closely connected to cruelty and dowry harassment.
+
+Where a woman's unnatural death occurs within the statutory period after marriage and dowry-related cruelty or harassment soon before death is alleged, the special ingredients and applicable evidentiary presumptions require separate analysis. Charges for cruelty, dowry death, abetment of suicide or homicide must not be treated as interchangeable.
+
+25. Defamation
+
+IPC Section 499 and BNS Section 356 define criminal defamation through making or publishing an imputation concerning a person, intending to harm, or knowing or having reason to believe that it will harm, that person's reputation, subject to explanations and exceptions.
+
+An imputation may be expressed by words, signs or visible representations. Reputation concerns estimation in the eyes of others; communication only to the person concerned raises a different publication question. Defamation may concern a deceased person, company, association or collection of persons where statutory conditions are met.
+
+26. Defamation Exceptions and Punishment
+
+The statutory exceptions protect categories such as true imputations made for public good, good-faith opinion on public conduct of public servants or public questions, substantially true reports of court proceedings, good-faith censure by lawful authority, accusations to authorised persons, protection of interests and cautions for good or public good.
+
+Truth alone is not always sufficient for the criminal exception; public good is a question of fact. Good faith requires due care and attention. IPC Sections 500–502 separately punish defamation, printing or engraving and sale of defamatory matter. BNS Section 356 consolidates the definition, exceptions and punishment-related rules and includes community service as a possible punishment for the basic offence.
+
+27. Criminal Intimidation
+
+IPC Section 503 and BNS Section 351 define criminal intimidation through threatening injury to person, reputation or property, or to the person or reputation of someone in whom the victim is interested, with intent to cause alarm or compel an act not legally required or an omission of something legally entitled to be done.
+
+The prosecution must prove the threat and prohibited intent; mere abusive language or an empty outburst does not automatically establish intimidation. Anonymous threats and threats of specified grave harm receive distinct treatment under the punishment provisions.
+
+28. Intentional Insult and Public Misconduct
+
+IPC Section 504 and BNS Section 352 punish intentional insult with provocation, intending or knowing it likely that the provocation will cause the person to break public peace or commit another offence.
+
+IPC Section 505 historically addressed statements conducing to public mischief; corresponding BNS subject matter is principally reorganised in Section 353. IPC Section 510 concerning drunken misconduct in public corresponds principally to BNS Section 355. Each requires its own public element, mental state and statutory conditions.
+
+29. Statements Conducing to Public Mischief
+
+BNS Section 353 addresses making, publishing or circulating false information, rumours or reports, including through electronic means, with specified intent or likelihood concerning mutiny, fear or alarm leading to offences against the State or public tranquillity, incitement between classes, and related conduct.
+
+The provision contains a good-faith exception where the person had reasonable grounds to believe the matter true and acted without the prohibited intent. Speech cases must be assessed in full context with Articles 19(1)(a) and 19(2).
+
+30. Attempt under IPC Section 511 and BNS Section 62
+
+Attempt begins when, with the required intention, a person does an act towards commission of an offence after conduct has crossed beyond mere preparation. The act need not be the final act, but it must have sufficient proximity and unequivocal connection to the intended offence under the governing principles.
+
+IPC Section 511 provided general punishment for attempting offences punishable with imprisonment for life or other imprisonment where no express attempt provision existed. BNS Section 62 relocates the general attempt rule near the general principles and applies where the BNS makes no express provision for the attempt.
+
+31. Preparation, Attempt and Completion
+
+Preparation consists of arranging means or measures; it is generally not punishable unless a statute specifically provides otherwise, as with preparation for dacoity. Attempt is punishable because execution has begun, while completion requires every element of the substantive offence.
+
+Impossibility does not automatically defeat attempt where the accused, with criminal intention, acts towards the offence under circumstances as believed. Abandonment after a punishable attempt has begun does not necessarily erase liability, though voluntary withdrawal before that stage may remain relevant.
+
+32. Date of Conduct and Transition
+
+The BNS came into force on 1 July 2024. Earlier conduct is assessed under the IPC and savings provisions; later conduct under the BNS. Article 20(1) bars retrospective criminalisation and retrospective enhancement of punishment.
+
+Because this unit is heavily reorganised, section numbers should never be substituted mechanically. The answer must compare definitions, explanations, exceptions, punishment and any new offence such as snatching or relocated rule such as general attempt.
+
+33. Method for Solving Problems
+
+Use the following sequence:
+
+(a) fix the date and applicable statute;
+(b) identify the property, possession, owner or entrusted interest;
+(c) determine consent, movement, delivery, fear, force, deception or entry;
+(d) identify dishonesty, fraud, knowledge, reason to believe or prohibited intention;
+(e) distinguish theft, extortion, robbery and dacoity;
+(f) distinguish misappropriation, breach of trust, receipt of stolen property and cheating;
+(g) identify damage or trespass and every aggravating circumstance;
+(h) for marriage offences, prove valid status, ceremonies, deception, cruelty or demand as applicable;
+(i) for defamation, prove imputation, publication and reputational mens rea, then test each claimed exception;
+(j) for intimidation or insult, prove the threat or provocation and its intended effect;
+(k) for attempt, identify the intended offence and act crossing beyond preparation; and
+(l) cite the precise definition and punishment provisions before reaching a reasoned conclusion.`,
     keyPoints: [
-      "Theft, extortion, robbery and dacoity",
-      "Misappropriation and criminal breach of trust",
-      "Cheating, mischief and criminal trespass",
-      "Marriage-related offences and cruelty",
-      "Defamation and criminal intimidation",
-      "Liability for attempt",
+      "Theft requires dishonest movement of movable property from another's possession without consent.",
+      "BNS Section 304 separately recognises snatching as sudden, forcible or quick taking in order to commit theft.",
+      "Extortion involves delivery induced by fear; theft involves taking without consent.",
+      "Robbery is aggravated theft or extortion involving specified instant violence or fear.",
+      "Dacoity requires five or more persons conjointly committing or attempting robbery or aiding it.",
+      "Misappropriation may begin with innocent possession; criminal breach of trust requires entrustment or dominion.",
+      "Receipt of stolen property requires knowledge or reason to believe in its stolen character.",
+      "Cheating requires deception and the specified inducement; later breach of a genuine promise is not automatically criminal.",
+      "Mischief requires damage or injurious change plus intention or knowledge of wrongful loss or damage.",
+      "Criminal trespass requires entry or unlawful remaining with a prohibited intention.",
+      "Bigamy requires proof of a subsisting valid first marriage and a legally relevant second marriage.",
+      "Cruelty includes grave wilful conduct and specified harassment for unlawful property demands.",
+      "Dowry death, cruelty, suicide abetment and homicide have separate ingredients and cannot be merged casually.",
+      "Defamation requires an imputation, publication and intention, knowledge or reason to believe reputational harm.",
+      "Good faith in a defamation exception requires due care and attention.",
+      "Criminal intimidation requires a threat plus intent to cause alarm or compel prohibited action or omission.",
+      "Intentional insult becomes criminal under the provision only with the required provocation and public-peace connection.",
+      "Attempt requires conduct beyond preparation towards the intended offence.",
+      "BNS Section 62 contains the general attempt rule where no express attempt provision exists.",
+      "The BNS reorganises this unit across Sections 62, 80–86 and 303–356 rather than retaining the IPC sequence.",
+      "Every problem should identify possession, consent, delivery, entrustment, deception, harm and mens rea separately.",
     ],
     provisions: [
       "Indian Penal Code, 1860 — Sections 378–462",
       "Indian Penal Code, 1860 — Sections 493–498A",
       "Indian Penal Code, 1860 — Sections 499–502",
       "Indian Penal Code, 1860 — Sections 503–511",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Bharatiya Nyaya Sanhita, 2023 — Section 62",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 80–86",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 303–313",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 314–323",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 324–334",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 351–356",
+      "Constitution of India — Articles 19(1)(a), 19(2), 20(1) and 21",
     ],
+    examFocus:
+      "For property offences, identify possession, consent, movement or delivery, force or fear, entrustment, deception and dishonest intention before selecting the offence. For marriage, cruelty and defamation, prove every special relationship, publication, harm and exception. For attempt, state the intended offence and show why the conduct crossed preparation. Comparative answers should explain the BNS reorganisation across Sections 62, 80–86 and 303–356 and identify material changes such as snatching and community service.",
   },
 ];
 
