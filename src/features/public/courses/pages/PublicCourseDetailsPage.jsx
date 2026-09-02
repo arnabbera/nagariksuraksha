@@ -610,7 +610,9 @@ export default function PublicCourseDetailsPage() {
                 course.slug ===
                   "code-of-civil-procedure-and-limitation" ||
                 course.slug ===
-                  "family-law-i"
+                  "family-law-i" ||
+                course.slug ===
+                  "public-international-law"
                   ? "course-hero-media-full-image"
                   : ""
               }`}
