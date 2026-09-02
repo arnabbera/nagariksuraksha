@@ -3,11 +3,13 @@ import chapterRepository from "../repositories/ChapterRepository";
 import { generalPrinciplesOfContractChapters } from "../data/courses/generalPrinciplesOfContract";
 import { familyLawIChapters } from "../data/courses/familyLawI";
 import { criminalLawIChapters } from "../data/courses/criminalLawI";
+import { publicInternationalLawChapters } from "../data/courses/publicInternationalLaw";
 
 const bundledChapters = [
   ...generalPrinciplesOfContractChapters,
   ...familyLawIChapters,
   ...criminalLawIChapters,
+  ...publicInternationalLawChapters,
 ];
 
 const createSlug = (value = "") =>
