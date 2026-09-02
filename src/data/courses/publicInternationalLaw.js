@@ -1633,24 +1633,330 @@ For a treaty problem:
   {
     title: "Amicable Means of Settlement of Disputes",
     shortDescription:
-      "Negotiation, good offices, mediation, inquiry, conciliation, arbitration, judicial settlement and regional arrangements.",
+      "A detailed study of negotiation, good offices, mediation, inquiry, conciliation, arbitration, judicial settlement, United Nations procedures and regional arrangements.",
     overview:
-      "This unit explains the obligation to settle international disputes peacefully and compares diplomatic, political, arbitral and judicial methods.",
-    detailedContent:
-      "Meaning of an international dispute; prohibition on threat or use of force and the duty of peaceful settlement; negotiation; consultation; good offices; mediation; inquiry and fact-finding; conciliation; arbitration; judicial settlement before the International Court of Justice and other tribunals; jurisdiction based on consent; contentious and advisory proceedings; settlement through regional agencies or arrangements; role of the Security Council and General Assembly; differences among binding and non-binding procedures; and selection of an appropriate settlement method.",
+      "International law requires States to settle their disputes by peaceful means so that international peace, security and justice are not endangered. This chapter explains the meaning of an international dispute and systematically compares diplomatic methods—negotiation, consultation, good offices, mediation, inquiry and conciliation—with binding legal methods such as arbitration and judicial settlement. It also examines International Court of Justice jurisdiction and procedure, the roles of United Nations organs and regional arrangements, compliance with settlements, and the practical considerations governing the choice and sequencing of procedures.",
+    learningObjectives: [
+      "Define an international dispute and distinguish a dispute from a political situation or mere difference of views.",
+      "Explain the duty of peaceful settlement under the United Nations Charter and customary international law.",
+      "Relate peaceful settlement to the prohibition on the threat or use of force.",
+      "Distinguish political or diplomatic methods from binding legal methods of settlement.",
+      "Explain negotiation and consultation as direct methods of dispute settlement.",
+      "Differentiate good offices from mediation.",
+      "Explain the purpose and procedure of international inquiry and fact-finding.",
+      "Describe conciliation and distinguish it from mediation and arbitration.",
+      "Explain the consensual basis, constitution and procedure of international arbitration.",
+      "Identify the legal effect of an arbitral award and the limited grounds on which it may be challenged.",
+      "Explain the jurisdiction of the International Court of Justice in contentious cases.",
+      "Distinguish special agreement, compromissory clauses, optional-clause declarations and forum prorogatum.",
+      "Describe provisional measures, intervention, judgments and advisory opinions of the ICJ.",
+      "Analyse the roles of the Security Council, General Assembly and Secretary-General in peaceful settlement.",
+      "Explain peaceful settlement through regional agencies and arrangements.",
+      "Select and apply an appropriate settlement method to a hypothetical international dispute.",
+    ],
+    detailedContent: `1. Meaning of an International Dispute
+
+An international dispute is a disagreement on a point of law or fact, a conflict of legal views or interests between subjects of international law. The existence of a dispute is determined objectively from the positions and conduct of the parties; one party's formal denial is not necessarily decisive.
+
+A dispute ordinarily requires that the claim of one party is positively opposed by another. A broad “situation” may create international friction without crystallising into specific opposing legal claims. This distinction matters because treaties and institutions sometimes confer authority over disputes, situations or both.
+
+Disputes may concern territory, boundaries, treaty interpretation, diplomatic protection, use of force, trade, investment, environment, maritime rights or responsibility for internationally wrongful acts. They may contain both legal and political elements.
+
+2. Fundamental Duty of Peaceful Settlement
+
+Article 2(3) of the United Nations Charter requires Members to settle their international disputes by peaceful means in such a manner that international peace, security and justice are not endangered. Article 33(1) specifically directs parties to a dispute likely to endanger international peace and security to seek a solution through negotiation, enquiry, mediation, conciliation, arbitration, judicial settlement, regional arrangements or other peaceful means of their own choice.
+
+The duty requires genuine pursuit of peaceful methods, but it does not normally compel acceptance of one particular procedure unless a treaty or prior consent does so. Parties must act in good faith and avoid conduct that aggravates or extends the dispute.
+
+3. Peaceful Settlement and the Prohibition of Force
+
+Article 2(4) prohibits the threat or use of force against the territorial integrity or political independence of a State or otherwise inconsistently with the purposes of the United Nations. Peaceful settlement and the prohibition of force are complementary pillars of the Charter system.
+
+The inability of negotiations to produce agreement does not authorise force. Any claimed exception must rest on a distinct legal basis, such as individual or collective self-defence under Article 51 or Security Council authorisation under Chapter VII, and must satisfy its own conditions.
+
+4. Free Choice of Means
+
+States generally retain freedom to choose suitable peaceful means. The method may be prescribed by a treaty, accepted after a dispute arises, or combined in stages. Parties commonly begin with negotiation, move to mediation or fact-finding, and use arbitration or adjudication if settlement remains impossible.
+
+No universal hierarchy makes one peaceful method superior in every case. Article 33 lists alternatives without an obligatory sequence. However, a specific treaty may require consultation or negotiation before adjudication, making the precondition part of jurisdiction or admissibility.
+
+5. Diplomatic and Legal Methods
+
+Diplomatic methods seek an agreed solution and ordinarily produce non-binding proposals unless incorporated into a treaty or other binding settlement. They include negotiation, consultation, good offices, mediation, inquiry and conciliation.
+
+Legal methods entrust the dispute to an independent tribunal applying law and result in a binding decision. Arbitration and judicial settlement are the principal legal methods. The dividing line is functional: a conciliation commission proposes terms, whereas an arbitral tribunal renders an award.
+
+6. Negotiation
+
+Negotiation is direct discussion between the parties with a view to resolving their differences. It is flexible, confidential if the parties wish, inexpensive and capable of addressing legal, political, economic and technical concerns together.
+
+Negotiation may occur through diplomatic correspondence, meetings, joint commissions, conferences or heads of government. It succeeds only through agreement; no third party imposes a result. Unequal bargaining power, delay and entrenched positions are potential weaknesses.
+
+Where a treaty requires negotiation, the obligation usually demands meaningful engagement rather than a guaranteed settlement. Parties should exchange views, consider proposals and attempt to reconcile competing interests in good faith.
+
+7. Consultation
+
+Consultation is a structured exchange of information and views, often required before a State adopts a measure affecting another State. It can prevent a disagreement from developing into a formal dispute and is common in environmental, trade and resource-sharing treaties.
+
+Consultation may be narrower than negotiation, but the terms frequently overlap. Compliance depends on the governing instrument. A duty to consult generally requires timely notice, relevant information and a real opportunity to discuss the proposed action; it does not automatically confer a veto.
+
+8. Good Offices
+
+In good offices, a third party brings disputing parties into contact, restores communication or provides facilities for dialogue. The third party does not ordinarily participate actively in the substance of negotiations or propose settlement terms.
+
+Good offices may be offered by a State, international organisation, Secretary-General, regional body or respected individual. The parties' consent remains essential, and they retain control over the result.
+
+9. Mediation
+
+Mediation involves a more active third party who participates in discussions, identifies common ground, frames issues and may propose terms of settlement. Recommendations are normally non-binding unless accepted by the parties.
+
+An effective mediator must possess the parties' confidence, impartiality, knowledge and sufficient diplomatic influence. Mediation permits creative solutions beyond the remedies a court could order, but success depends on continued consent and political willingness.
+
+Good offices may develop into mediation if the third party begins addressing substance with the parties' approval.
+
+10. Inquiry and Fact-Finding
+
+An international commission of inquiry investigates disputed facts through evidence, documents, site visits, experts and hearings. It is especially useful when political disagreement is intensified by conflicting accounts of an incident.
+
+Inquiry ordinarily clarifies facts without deciding legal responsibility. The report is generally non-binding unless the parties agree otherwise. Accurate fact-finding can narrow issues, support negotiation and prevent escalation.
+
+The Hague Conventions of 1899 and 1907 promoted international commissions of inquiry. Modern fact-finding is also conducted by United Nations organs, treaty bodies and specially constituted commissions.
+
+11. Conciliation
+
+Conciliation combines investigation with settlement proposals. An independent commission examines facts and law, hears the parties and issues a report recommending terms for resolution.
+
+Unlike mediation, conciliation is normally more formal and institutionalised. Unlike arbitration, its final report is ordinarily not binding. Some treaties make conciliation compulsory in the sense that one party can initiate the procedure, while leaving acceptance of the proposed outcome voluntary.
+
+12. Arbitration
+
+International arbitration is the settlement of a dispute by judges chosen by the parties on the basis of law, resulting in a binding award. Consent is expressed through a special arbitration agreement after the dispute, an arbitration clause in an earlier treaty, or another binding instrument.
+
+The parties can select arbitrators, seat, language, procedure, applicable law and scope of issues. This flexibility is valuable for technical disputes and matters requiring confidentiality or specialist knowledge.
+
+13. The Compromis and Constitution of a Tribunal
+
+The arbitration agreement or compromis identifies the parties, dispute, questions submitted, applicable law, tribunal composition, procedure and effect of the award. Clear drafting defines the tribunal's jurisdiction.
+
+Tribunals commonly consist of three or five members, with each side appointing an arbitrator and agreement on a presiding arbitrator. Appointing authorities or institutional rules prevent deadlock. Arbitrators must be independent and impartial.
+
+14. Arbitral Procedure and Applicable Law
+
+Proceedings generally include written pleadings, documentary and expert evidence, oral hearings, jurisdictional objections, provisional measures and deliberation. The parties must receive equal treatment and a proper opportunity to present their case.
+
+The tribunal applies the law chosen in the arbitration agreement and relevant rules of international law. It may decide ex aequo et bono—according to fairness beyond strict legal rules—only if the parties expressly authorise it.
+
+15. Arbitral Award, Finality and Challenge
+
+An award is binding on the parties and must be performed in good faith. It does not create a general precedent binding third States, though it may be persuasive authority.
+
+International awards are usually final. Limited grounds concerning excess of jurisdiction, corruption, serious procedural irregularity or invalidity of the arbitration agreement may permit challenge where the governing instrument allows. A disagreement over interpretation may be referred back to the tribunal if the agreement provides.
+
+16. Permanent Court of Arbitration
+
+The Permanent Court of Arbitration was established under the 1899 Hague Convention and continued under the 1907 Convention. Despite its name, it is not a standing court with permanent judges. It provides an institutional framework, registry and administrative support for tribunals constituted for particular disputes.
+
+The PCA administers disputes involving States, State entities, international organisations and private parties under applicable consent and rules. Its work may concern territory, maritime boundaries, investment, environment, contracts and other international matters.
+
+17. Judicial Settlement
+
+Judicial settlement submits a dispute to a permanent international court established by treaty. Courts follow constitutive statutes and procedural rules, apply international law and issue binding judgments in cases within their jurisdiction.
+
+The International Court of Justice is the principal judicial organ of the United Nations. Other courts and tribunals operate in specialised or regional fields, including the International Tribunal for the Law of the Sea and regional human-rights courts.
+
+18. Consent as the Basis of ICJ Jurisdiction
+
+The ICJ has no general compulsory jurisdiction over all disputes merely because States are UN Members. Contentious jurisdiction rests on State consent. Consent may be given through:
+
+(a) a special agreement submitting an existing dispute;
+(b) a compromissory clause in a treaty covering disputes about that treaty;
+(c) reciprocal optional-clause declarations under Article 36(2) of the Statute; or
+(d) forum prorogatum, where a respondent subsequently and unequivocally accepts jurisdiction.
+
+Jurisdiction must exist at the relevant date and within the subject-matter, personal and temporal scope of consent. Reservations to optional-clause declarations and reciprocity may limit jurisdiction.
+
+19. Jurisdiction, Admissibility and Applicable Law
+
+Jurisdiction concerns the Court's legal power to decide the dispute. Admissibility asks whether an otherwise jurisdictional claim is fit for judicial determination, considering matters such as exhaustion of local remedies, nationality of claims, indispensable third parties or abuse of process.
+
+Under Article 38 of its Statute, the Court applies treaties, international custom, general principles of law and, as subsidiary means, judicial decisions and teachings of highly qualified publicists. The Court may decide ex aequo et bono only if the parties agree.
+
+20. ICJ Contentious Procedure
+
+A case begins by special agreement or unilateral application relying on an existing title of jurisdiction. Written pleadings and oral hearings address preliminary objections, facts, evidence and legal submissions. The Court may join cases or permit intervention under Articles 62 and 63 where statutory conditions are met.
+
+Only States may be parties in contentious cases. International organisations may provide information in appropriate circumstances but cannot appear as contentious parties before the ICJ.
+
+21. Provisional Measures
+
+Article 41 authorises the ICJ to indicate provisional measures to preserve the respective rights of the parties pending final judgment. The Court examines prima facie jurisdiction, plausibility of asserted rights, a link between those rights and requested measures, and real and imminent risk of irreparable prejudice requiring urgency.
+
+Provisional measures are legally binding. The Court may also direct parties not to aggravate or extend the dispute. These measures protect rights without prejudging the merits.
+
+22. ICJ Judgments and Compliance
+
+An ICJ judgment is final, without appeal, and binding only between the parties and in respect of that particular case under Articles 59 and 60 of the Statute. Interpretation may be requested if the meaning or scope of a judgment is disputed. Revision is available only under the narrow conditions of Article 61 when a decisive previously unknown fact is discovered.
+
+Under Article 94 of the UN Charter, each Member undertakes to comply with an ICJ decision in a case to which it is a party. If a party fails to perform, the other may approach the Security Council, which may make recommendations or decide measures; political and veto considerations can affect that process.
+
+23. Advisory Opinions
+
+The General Assembly and Security Council may request an advisory opinion on any legal question. Other authorised UN organs and specialised agencies may request opinions on legal questions arising within the scope of their activities.
+
+Advisory opinions are not formally binding unless another instrument gives them that effect. They nevertheless carry substantial legal authority, clarify international law and guide institutional action. The advisory function differs from contentious jurisdiction and does not require transforming States into unwilling parties to a binding case.
+
+24. Security Council under Chapter VI
+
+Article 34 permits the Security Council to investigate any dispute or situation that may lead to international friction or endanger peace. Under Article 35, Members and, subject to stated conditions, non-members may bring disputes or situations to its attention.
+
+The Council may recommend appropriate procedures or methods under Article 36, take account of procedures already adopted by the parties, and remember that legal disputes should as a general rule be referred to the ICJ. Under Article 37, parties must refer an unresolved qualifying dispute to the Council if continuation is likely to endanger peace. Article 38 permits recommendations at the request of all parties.
+
+Chapter VI recommendations are generally distinguishable from binding enforcement action under Chapter VII.
+
+25. General Assembly and Secretary-General
+
+The General Assembly may discuss and recommend principles and measures within the Charter's allocation of functions, subject particularly to Article 12 while the Security Council is exercising its functions regarding a dispute or situation. Assembly recommendations are generally non-binding but may facilitate consensus, fact-finding and institutional action.
+
+The Secretary-General uses good offices, mediation, special envoys and preventive diplomacy. Article 99 authorises the Secretary-General to bring to the Security Council's attention any matter that may threaten international peace and security.
+
+26. Regional Agencies and Arrangements
+
+Article 33 recognises resort to regional agencies or arrangements. Chapter VIII, especially Article 52, encourages peaceful settlement of local disputes through regional mechanisms before referral to the Security Council where appropriate.
+
+Regional bodies may provide negotiation forums, mediation, fact-finding, conciliation, courts or political processes. Their proximity and contextual knowledge can assist settlement, but action must remain consistent with the UN Charter. Enforcement action by regional arrangements is subject to Article 53 and generally requires Security Council authorisation.
+
+27. Binding and Non-Binding Outcomes
+
+Negotiation produces a binding result only when the parties embody agreement in a legally binding instrument. Good offices, mediation, inquiry and conciliation ordinarily result in non-binding reports or proposals. Arbitration and judicial settlement produce binding decisions for the parties within the tribunal's jurisdiction.
+
+The binding character of the outcome should not be confused with whether entry into the procedure is voluntary or compulsory. A treaty may permit compulsory conciliation whose recommendation remains non-binding, or compulsory adjudication based on consent given in advance.
+
+28. Compliance and Implementation
+
+Settlement is effective only if implemented. Compliance may be promoted through precise terms, timetables, monitoring, verification, guarantees, joint commissions, reciprocal performance and procedures for interpreting the settlement.
+
+Awards and judgments create international obligations, but domestic implementation may require constitutional or legislative action. Failure to comply may generate further international responsibility and allow recourse to mechanisms provided by the governing treaty or institutional framework.
+
+29. Choosing an Appropriate Method
+
+Parties should consider consent, urgency, need for confidentiality, factual uncertainty, technical complexity, importance of legal precedent, desired remedies, preservation of relations, cost, enforceability and power imbalance.
+
+Negotiation is suitable where compromise is possible; inquiry where facts are disputed; mediation where communication is blocked; conciliation where formal independent proposals may help; arbitration where flexibility and expertise are important; and judicial settlement where an authoritative legal ruling is required.
+
+Hybrid and sequential clauses can combine advantages, but poorly drafted multi-stage procedures may cause delay and jurisdictional disputes.
+
+30. Examination and Problem-Solving Method
+
+For a problem question:
+(a) identify the dispute and the opposing legal claims;
+(b) identify the Charter and treaty duties to settle peacefully;
+(c) check whether a prior agreement prescribes negotiation, consultation, arbitration or adjudication;
+(d) determine whether procedural preconditions were fulfilled;
+(e) distinguish non-binding diplomatic methods from binding legal settlement;
+(f) establish the precise basis and scope of tribunal jurisdiction;
+(g) consider provisional protection, evidence, applicable law and remedies;
+(h) identify the legal effect and compliance mechanism; and
+(i) recommend a proportionate method or sequence suited to the dispute.`,
     keyPoints: [
-      "Duty of peaceful settlement",
-      "Negotiation and consultation",
-      "Good offices and mediation",
-      "Inquiry and conciliation",
-      "Arbitration and judicial settlement",
-      "United Nations and regional mechanisms",
+      "An international dispute is an objectively ascertainable disagreement involving opposing legal or factual claims.",
+      "Articles 2(3) and 33 of the UN Charter require peaceful settlement without ordinarily imposing one universal method.",
+      "The peaceful-settlement duty complements the Article 2(4) prohibition on the threat or use of force.",
+      "Negotiation is direct and flexible; consultation commonly requires timely information and a genuine exchange of views.",
+      "Good offices restore communication, while mediation involves active participation and possible settlement proposals.",
+      "Inquiry determines disputed facts; conciliation also recommends non-binding terms of settlement.",
+      "Arbitration is consensual, flexible and binding, with the parties influencing tribunal composition and procedure.",
+      "The Permanent Court of Arbitration is an institutional framework supporting tribunals, not a permanently sitting court.",
+      "The ICJ's contentious jurisdiction always rests on State consent.",
+      "ICJ consent may arise through special agreement, compromissory clause, optional-clause declarations or forum prorogatum.",
+      "Only States may be parties in ICJ contentious proceedings.",
+      "ICJ provisional measures are binding and preserve plausible rights against urgent irreparable prejudice.",
+      "ICJ judgments are final and binding only between the parties and for the particular case.",
+      "Advisory opinions are generally non-binding but possess substantial legal authority.",
+      "Chapter VI empowers the Security Council principally to investigate and recommend peaceful procedures or terms.",
+      "Regional arrangements may settle local disputes peacefully but must operate consistently with the UN Charter.",
+      "The legal effect of an outcome depends on the chosen process and instrument, not simply the presence of a third party.",
+      "Method selection should consider consent, urgency, factual complexity, confidentiality, relations, remedies and enforceability.",
     ],
     provisions: [
-      "Charter of the United Nations, 1945 — Articles 2(3), 2(4) and 33–38",
-      "Statute of the International Court of Justice",
-      "Hague Conventions for the Pacific Settlement of International Disputes",
+      "Charter of the United Nations, 1945 — Articles 1(1), 2(3) and 2(4)",
+      "Charter of the United Nations, 1945 — Chapter VI, Articles 33–38",
+      "Charter of the United Nations, 1945 — Articles 11–12, 52–54, 94 and 99",
+      "Statute of the International Court of Justice — Articles 34–38",
+      "Statute of the International Court of Justice — Articles 41, 59–63 and 65–68",
+      "Hague Convention for the Pacific Settlement of International Disputes, 1899",
+      "Hague Convention for the Pacific Settlement of International Disputes, 1907",
+      "Manila Declaration on the Peaceful Settlement of International Disputes, 1982",
     ],
+    importantCases: [
+      {
+        caseName: "Mavrommatis Palestine Concessions",
+        citation: "PCIJ, Series A, No. 2 (1924)",
+        principle:
+          "A dispute is a disagreement on a point of law or fact, or a conflict of legal views or interests between parties.",
+        summary:
+          "The Permanent Court supplied the classic definition used to determine whether an international dispute exists.",
+      },
+      {
+        caseName: "Northern Cameroons (Cameroon v. United Kingdom)",
+        citation: "ICJ Reports 1963, p. 15",
+        principle:
+          "The judicial function requires that a judgment have practical consequence and not merely pronounce on an abstract or moot disagreement.",
+        summary:
+          "The Court declined to adjudicate where the circumstances meant its judgment could not effectively affect the parties' legal relations.",
+      },
+      {
+        caseName: "North Sea Continental Shelf",
+        citation: "ICJ Reports 1969, p. 3",
+        principle:
+          "An obligation to negotiate requires meaningful negotiations with a view to agreement, not formal participation while insisting on an unchanged position.",
+        summary:
+          "The Court directed the parties to negotiate delimitation in good faith according to equitable principles and relevant circumstances.",
+      },
+      {
+        caseName: "Corfu Channel (United Kingdom v. Albania)",
+        citation: "ICJ Reports 1949, p. 4",
+        principle:
+          "International adjudication rests on consent, and circumstantial evidence may be important where territorial control makes direct proof unavailable.",
+        summary:
+          "The Court decided responsibility and reparation arising from mine explosions in Albanian waters while addressing evidence and sovereignty.",
+      },
+      {
+        caseName: "Nuclear Tests (Australia v. France; New Zealand v. France)",
+        citation: "ICJ Reports 1974, pp. 253 and 457",
+        principle:
+          "The Court determines objectively whether a dispute continues to exist and will not decide a case where the claim has lost its object.",
+        summary:
+          "France's public unilateral commitments removed the basis for further judicial determination of the applicants' requests.",
+      },
+      {
+        caseName: "LaGrand (Germany v. United States of America)",
+        citation: "ICJ Reports 2001, p. 466",
+        principle:
+          "Provisional measures indicated under Article 41 of the ICJ Statute are legally binding.",
+        summary:
+          "The Court clarified the binding effect of provisional measures while deciding violations of consular-notification obligations.",
+      },
+      {
+        caseName: "Aegean Sea Continental Shelf (Greece v. Turkey)",
+        citation: "ICJ Reports 1978, p. 3",
+        principle:
+          "ICJ jurisdiction requires a valid and sufficiently clear expression of State consent covering the dispute.",
+        summary:
+          "The Court found that the relied-on instruments did not provide jurisdiction over the continental-shelf dispute.",
+      },
+      {
+        caseName: "Island of Palmas (Netherlands/United States)",
+        citation: "RIAA, Vol. II, p. 829 (1928)",
+        principle:
+          "A validly constituted arbitral tribunal can settle territorial title through a final, reasoned award applying international law.",
+        summary:
+          "The arbitrator preferred the Netherlands' continuous and peaceful display of authority over the United States' derivative discovery claim.",
+      },
+    ],
+    examFocus:
+      "Begin by defining an international dispute and stating Articles 2(3), 2(4) and 33 of the UN Charter. Classify each method as diplomatic or legal and state whether its result is binding. In an ICJ problem, identify the exact title, scope and date of consent before addressing admissibility or merits. Distinguish good offices from mediation, inquiry from conciliation, and the PCA from a permanent court. Conclude by matching the procedure to the dispute's urgency, factual complexity, political sensitivity and need for an enforceable ruling.",
+    revisionNotes:
+      "States must settle international disputes peacefully and may generally choose negotiation, consultation, good offices, mediation, inquiry, conciliation, arbitration, judicial settlement or regional processes. Diplomatic methods normally depend on agreed acceptance of the outcome; arbitration and adjudication yield binding decisions. Arbitration offers procedural flexibility, while the ICJ is a permanent court whose contentious jurisdiction rests on State consent. Chapter VI enables Security Council investigation and recommendations, the Secretary-General may use good offices, and regional arrangements may address local disputes consistently with the Charter.",
   },
   {
     title:
