@@ -161,6 +161,63 @@ In V. Tulasamma v. Sesha Reddy, the Supreme Court gave Section 14(1) a broad int
         "Identify the grounds and requirements for matrimonial remedies and divorce.",
         "Apply the provisions relating to maintenance, custody and legitimacy.",
       ],
+      detailedContent: `
+1. Introduction and scope of the Act
+
+The Hindu Marriage Act, 1955 is a central codifying statute governing marriage and matrimonial relief among persons to whom it applies. Section 2 defines its application, while Section 4 gives the Act overriding effect in matters for which it makes provision. The Act introduced a statutory framework of monogamy, matrimonial remedies, divorce and judicial supervision while continuing to recognise lawful customary marriage ceremonies.
+
+The statute must be read with the Family Courts Act, 1984, the procedural law applicable to matrimonial proceedings, the Prohibition of Child Marriage Act, 2006 and other protective legislation. A problem should begin by confirming that the parties and the disputed marriage fall within the Act.
+
+2. Conditions of a Hindu marriage — Section 5
+
+Section 5 states the principal conditions. Neither party may have a spouse living at the time of marriage. The parties must possess the mental capacity required by clause (ii). The bridegroom must have completed twenty-one years and the bride eighteen years. The parties must not be within the degrees of prohibited relationship or be sapindas of each other unless a valid custom or usage governing both permits the marriage.
+
+Not every breach has the same consequence. Contravention of the monogamy, prohibited-relationship or sapinda conditions attracts the void-marriage rule in Section 11. Other contraventions must be analysed under the particular statutory provision rather than automatically being described as void.
+
+3. Ceremonies and registration — Sections 7 and 8
+
+Section 7 permits solemnisation according to the customary rites and ceremonies of either party. Where those rites include saptapadi, the marriage becomes complete and binding when the seventh step is taken. The party relying on a marriage must prove the ceremonies essential under the applicable custom; a mere assertion, photograph or certificate cannot invariably replace proof of solemnisation where validity is disputed.
+
+Section 8 provides for registration to facilitate proof. Registration creates an important public record but the relationship between registration and essential solemnisation must be examined under the Act and applicable State rules. The Supreme Court in Seema v. Ashwani Kumar emphasised registration of marriages as an important safeguard.
+
+4. Restitution of conjugal rights and judicial separation — Sections 9 and 10
+
+Section 9 permits a spouse to seek restitution where the other has withdrawn from the petitioner's society without reasonable excuse. The petitioner must establish withdrawal; the person who asserts a reasonable excuse bears the statutory burden concerning that excuse. A decree is not a licence for physical compulsion and is enforced only through lawful civil procedure. In Saroj Rani v. Sudarshan Kumar Chadha, the Supreme Court upheld Section 9 while explaining its matrimonial purpose.
+
+Judicial separation under Section 10 relieves the parties from the obligation to cohabit but does not dissolve the marriage. The marriage continues unless a decree of divorce is later granted. Resumption of cohabitation may lead to rescission of the decree.
+
+5. Void and voidable marriages — Sections 11 and 12
+
+A marriage is void under Section 11 when it contravenes Section 5(i), 5(iv) or 5(v): a subsisting spouse, prohibited relationship, or sapinda relationship without a valid customary exception. A decree under Section 11 declares an invalidity that exists from the beginning.
+
+A voidable marriage under Section 12 remains valid until annulled by a competent court. The statutory grounds include specified incapacity or non-consummation, contravention of the mental-capacity condition, consent obtained by force or qualifying fraud, and the respondent's pregnancy by another person at the time of marriage, each subject to the conditions and bars stated in the provision.
+
+Section 16 protects the legitimacy of children of void and voidable marriages within its statutory framework. Legitimacy does not convert the marriage itself into a valid marriage, and property consequences must be stated carefully in light of the statutory text and binding precedent.
+
+6. Divorce and mutual consent — Sections 13 and 13B
+
+Section 13 provides grounds including adultery, cruelty, desertion for the statutory period, conversion, specified mental disorder, communicable venereal disease, renunciation of the world and not being heard of as alive for seven years. The current statutory text must be used; repealed historical grounds should not be presented as current law. Additional grounds are available to a wife under Section 13(2).
+
+Cruelty may be physical or mental. In Samar Ghosh v. Jaya Ghosh, the Supreme Court supplied illustrative guidance while stressing that no exhaustive formula can decide every marriage. Desertion requires both separation and the intention to desert, without consent and reasonable cause, throughout the statutory period.
+
+Section 13B provides divorce by mutual consent. The parties must satisfy the statutory separation and agreement requirements, and consent must continue until the decree. In Amardeep Singh v. Harveen Kaur, the Supreme Court held that the waiting period in Section 13B(2) is directory and may be waived by the competent court when the stated considerations are satisfied. The Supreme Court's special power under Article 142, discussed in Shilpa Sailesh v. Varun Sreenivasan, must not be confused with the ordinary statutory power of family courts.
+
+7. Bars, procedure and jurisdiction
+
+Section 14 ordinarily restricts presentation of a divorce petition within one year of marriage, subject to the statutory exceptional-hardship or exceptional-depravity proviso. Section 15 regulates remarriage after divorce. Section 17 addresses bigamy and applies the penal consequences specified by law. In Lily Thomas v. Union of India, the Supreme Court held that conversion does not by itself dissolve a subsisting Hindu marriage or permit a second marriage during its continuance.
+
+Section 19 governs territorial jurisdiction. Sections 21 and 21B connect proceedings to civil procedure and encourage expeditious trial. Section 23 requires the court to be satisfied about the ground for relief and applicable bars, including taking advantage of one's own wrong, collusion and improper delay where relevant. Courts should attempt reconciliation where the law and circumstances make it appropriate, without compromising safety or legal rights.
+
+8. Financial relief, custody and property — Sections 24 to 27
+
+Section 24 provides maintenance pendente lite and expenses of proceedings to a spouse lacking sufficient independent income. Section 25 permits permanent alimony and maintenance, having regard to the statutory factors and later changes in circumstances. These provisions are gender-neutral in their text and are remedies connected with proceedings under the Act.
+
+Section 26 empowers the court to pass interim and final orders concerning custody, maintenance and education of minor children, with the welfare of the child remaining central. Section 27 concerns property presented at or about the time of marriage that may belong jointly to both spouses. These remedies should be distinguished from independent maintenance, domestic-violence, guardianship and property proceedings under other laws.
+
+9. Problem-solving method
+
+For an examination problem: establish application of the Act; identify whether a valid marriage was solemnised; select the exact relief and provision; prove each statutory ingredient; consider limitation, jurisdiction and bars; and state the appropriate ancillary relief. Keep void marriage, annulment, judicial separation and divorce analytically separate. Where facts raise violence, coercion, child marriage or unlawful dowry, identify the additional protective statutes instead of treating the dispute only as a matrimonial case.
+      `.trim(),
       keyPoints: [
         "Section 5 states the conditions of a Hindu marriage.",
         "Section 7 recognises customary rites and ceremonies, including saptapadi where applicable.",
@@ -168,7 +225,50 @@ In V. Tulasamma v. Sesha Reddy, the Supreme Court gave Section 14(1) a broad int
         "Sections 9, 10, 13 and 13B provide the principal matrimonial remedies.",
         "Sections 24 to 26 address interim support, permanent alimony and child custody.",
       ],
-      provisions: ["Sections 5–8", "Sections 9–13B", "Sections 16 and 24–26"],
+      provisions: [
+        "Hindu Marriage Act, 1955 — Sections 2 and 4",
+        "Hindu Marriage Act, 1955 — Sections 5–8",
+        "Hindu Marriage Act, 1955 — Sections 9–13B",
+        "Hindu Marriage Act, 1955 — Sections 14–17",
+        "Hindu Marriage Act, 1955 — Sections 19, 21B and 23",
+        "Hindu Marriage Act, 1955 — Sections 24–27",
+        "Prohibition of Child Marriage Act, 2006",
+        "Family Courts Act, 1984",
+      ],
+      importantCases: [
+        {
+          caseName: "Seema v. Ashwani Kumar",
+          citation: "Supreme Court of India (2006)",
+          principle: "Registration of marriages is an important safeguard and States were directed to frame appropriate rules.",
+        },
+        {
+          caseName: "Saroj Rani v. Sudarshan Kumar Chadha",
+          citation: "Supreme Court of India (1984)",
+          principle: "The Court upheld Section 9 and explained the object of restitution of conjugal rights.",
+        },
+        {
+          caseName: "Samar Ghosh v. Jaya Ghosh",
+          citation: "Supreme Court of India (2007)",
+          principle: "Mental cruelty depends on the cumulative facts; the Court provided illustrative, non-exhaustive guidance.",
+        },
+        {
+          caseName: "Amardeep Singh v. Harveen Kaur",
+          citation: "Supreme Court of India (2017)",
+          principle: "The waiting period under Section 13B(2) is directory and may be waived when the governing considerations are met.",
+        },
+        {
+          caseName: "Lily Thomas v. Union of India",
+          citation: "Supreme Court of India (2000)",
+          principle: "Conversion does not dissolve an existing Hindu marriage or validate a second marriage during its subsistence.",
+        },
+        {
+          caseName: "Shilpa Sailesh v. Varun Sreenivasan",
+          citation: "Supreme Court of India (2023)",
+          principle: "The Supreme Court explained its Article 142 power concerning complete justice and irretrievable breakdown of marriage.",
+        },
+      ],
+      examFocus:
+        "Prepare the application and overriding effect of the Act; conditions and ceremonies under Sections 5 and 7; registration; restitution and judicial separation; void and voidable marriages; divorce grounds; mutual-consent divorce; legitimacy; jurisdiction and statutory bars; maintenance, custody and property relief. Clearly distinguish the ordinary powers of matrimonial courts from the Supreme Court's Article 142 jurisdiction.",
     },
     {
       title: "Hindu Succession Act, 1956",
@@ -269,7 +369,7 @@ In V. Tulasamma v. Sesha Reddy, the Supreme Court gave Section 14(1) a broad int
       shortDescription: unit.shortDescription,
       chapterOverview: unit.overview,
       learningObjectives: unit.objectives,
-      detailedContent: unit.overview,
+      detailedContent: unit.detailedContent || unit.overview,
       keyPoints: unit.keyPoints,
       statutoryProvisions: unit.provisions.map((provision, provisionIndex) => ({
         id: `family-law-i-unit-${chapterNumber}-provision-${provisionIndex + 1}`,
@@ -277,10 +377,16 @@ In V. Tulasamma v. Sesha Reddy, the Supreme Court gave Section 14(1) a broad int
         provision,
         description: `Core statutory reading for Family Law – I Unit ${chapterNumber}.`,
       })),
+      importantCases: (unit.importantCases || []).map((item, caseIndex) => ({
+        id: `family-law-i-unit-${chapterNumber}-case-${caseIndex + 1}`,
+        ...item,
+        summary: item.principle,
+      })),
       examFocus:
+        unit.examFocus ||
         `Revise the statutory scheme, key definitions, essential conditions, legal consequences and problem-based application covered in Unit ${chapterNumber}.`,
       revisionNotes: unit.keyPoints.join("; "),
-      notes: unit.overview,
+      notes: unit.detailedContent || unit.overview,
       chapterNumber,
       displayOrder: chapterNumber,
       quizId: `family-law-i-unit-${chapterNumber}-quiz`,
