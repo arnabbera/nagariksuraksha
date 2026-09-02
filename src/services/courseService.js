@@ -2,10 +2,12 @@ import { createCourseModel } from "../models/CourseModel";
 import courseRepository from "../repositories/CourseRepository";
 import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinciplesOfContract";
 import { criminalLawICourse } from "../data/courses/criminalLawI";
+import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 
 const bundledCourses = [
   generalPrinciplesOfContractCourse,
   criminalLawICourse,
+  publicInternationalLawCourse,
 ];
 
 const mergeCourses = (courses = []) => {
