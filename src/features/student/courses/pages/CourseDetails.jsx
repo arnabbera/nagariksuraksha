@@ -480,9 +480,14 @@ export default function CourseDetails() {
     course?.slug ===
     "law-of-torts-mv-and-cp-laws";
 
+  const isConstitutionalLawCourse =
+    course?.slug ===
+    "indian-constitutional-law-i";
+
   const hasExpandableCourseOverview =
     isCivilProcedureCourse ||
-    isTortsCourse;
+    isTortsCourse ||
+    isConstitutionalLawCourse;
 
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
@@ -771,7 +776,9 @@ export default function CourseDetails() {
                 <h3 className="ns-course-overview-title">
                   {isCivilProcedureCourse
                     ? "Code of Civil Procedure and Limitation"
-                    : "Law of Torts, MV and CP Laws"}
+                    : isTortsCourse
+                      ? "Law of Torts, MV and CP Laws"
+                      : "Indian Constitutional Law – I"}
                 </h3>
 
                 {isCivilProcedureCourse ? (
@@ -784,7 +791,7 @@ export default function CourseDetails() {
                     enabling students to understand how civil rights and remedies
                     are pursued and enforced before courts.
                   </p>
-                ) : (
+                ) : isTortsCourse ? (
                   <p>
                     The course <strong>Law of Torts, MV and CP Laws</strong>{" "}
                     provides a systematic and practical understanding of the Law
@@ -793,6 +800,12 @@ export default function CourseDetails() {
                     compensation, and important statutory provisions, enabling
                     students to understand how legal rights and claims are
                     protected and enforced.
+                  </p>
+                ) : (
+                  <p>
+                    <strong>Indian Constitutional Law – I</strong> introduces the
+                    foundations, principles, fundamental rights, duties and
+                    institutions established by the Constitution of India.
                   </p>
                 )}
 
