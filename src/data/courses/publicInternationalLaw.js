@@ -711,24 +711,296 @@ For an international-versus-municipal-law problem:
   {
     title: "Recognition and State Jurisdiction",
     shortDescription:
-      "Recognition of States and governments and the bases, limits and immunities connected with State jurisdiction.",
+      "A detailed study of Statehood, recognition of States and governments, and the bases, limits and immunities governing State jurisdiction.",
     overview:
-      "This unit studies recognition in international law and the principles determining when a State may prescribe, adjudicate and enforce its laws.",
-    detailedContent:
-      "Statehood and recognition; declaratory and constitutive theories; recognition de facto and de jure; express and implied recognition; conditional recognition; recognition of governments, belligerency and insurgency; legal consequences and withdrawal; non-recognition; territorial, nationality, passive-personality, protective and universal jurisdiction; conflicts of jurisdiction; extraterritorial jurisdiction; enforcement limits; sovereign immunity; diplomatic and consular immunities; and jurisdiction over ships and aircraft.",
+      "Recognition concerns the legal and political response of existing States to a new State, government or other authority claiming international status. Jurisdiction concerns a State's legal competence to prescribe rules, adjudicate disputes and enforce decisions. This chapter begins with the criteria and continuity of Statehood, then compares declaratory and constitutive theories of recognition, its forms, consequences and limits. It proceeds to territorial, nationality, passive-personality, protective and universal jurisdiction, before examining extraterritorial enforcement, concurrent claims, sovereign and official immunity, and jurisdiction over ships and aircraft.",
+    learningObjectives: [
+      "Explain the legal criteria of Statehood and distinguish creation, continuity and extinction of States.",
+      "Define recognition and distinguish recognition of a State from recognition of a government.",
+      "Compare declaratory and constitutive theories of recognition.",
+      "Distinguish de facto and de jure, express and implied, and individual and collective recognition.",
+      "Explain conditional recognition, premature recognition, withdrawal and the duty of non-recognition.",
+      "Assess the legal consequences of recognition and non-recognition before international and domestic institutions.",
+      "Distinguish recognition of insurgency and belligerency from recognition of Statehood.",
+      "Separate prescriptive, adjudicative and enforcement jurisdiction.",
+      "Apply territorial, nationality, passive-personality, protective and universal jurisdiction.",
+      "Analyse subjective and objective territoriality and jurisdiction over transnational and cyber conduct.",
+      "Explain limits arising from non-intervention, reasonableness, comity and competing jurisdictional claims.",
+      "Distinguish State immunity, diplomatic immunity, consular immunity and immunity of State officials.",
+      "Apply flag-State, port-State, coastal-State and aircraft jurisdiction principles.",
+    ],
+    detailedContent: `1. Statehood and Recognition
+
+Statehood is an objective legal status; recognition is the act by which an existing State acknowledges or accepts an entity's international status or a government's authority to represent a State. The concepts are connected but should not be treated as identical. An entity may satisfy the legal criteria of Statehood despite limited diplomatic recognition, while extensive political support cannot by itself cure the absence of essential legal requirements.
+
+Recognition has both legal and political dimensions. Each State ordinarily decides whether and how to recognise another entity, subject to international duties such as the obligation not to recognise as lawful a situation created by a serious breach of a peremptory norm.
+
+2. Criteria of Statehood
+
+Article 1 of the Montevideo Convention states the widely used criteria: a permanent population, defined territory, government and capacity to enter into relations with other States.
+
+A permanent population does not require a fixed minimum number. A defined territory does not require every boundary to be undisputed. Government concerns an organised authority capable of exercising effective control, although effectiveness may be evaluated flexibly where an established State faces occupation, civil conflict or temporary loss of control. Capacity for international relations reflects independence from the legal authority of another State.
+
+Modern analysis also considers legality, particularly self-determination and the prohibition on acquisition of territory by force. The Montevideo criteria are central but do not make serious violations irrelevant.
+
+3. Creation, Continuity and Extinction of States
+
+A State may emerge through decolonisation, dissolution, separation, merger or other lawful political transformation. Questions of succession determine the treatment of treaties, property, debts, nationality and membership in international organisations.
+
+The criteria for initially establishing Statehood must not be mechanically applied to an existing State's continuity. Temporary occupation, governmental collapse, displacement of population or climate-related loss of habitability does not automatically terminate a State. International practice strongly favours continuity and stability.
+
+Extinction ordinarily requires the permanent disappearance of the State as a legal entity, for example through lawful merger or absorption. A mere change of government or constitution does not extinguish the State.
+
+4. Meaning and Objects of Recognition
+
+Recognition may concern a State, a government, belligerency, insurgency, territorial status or another legal situation. Recognition of a State accepts its international personality. Recognition of a government concerns whether an authority is accepted as entitled to represent an already existing State.
+
+Many States avoid formal recognition of governments and instead maintain, suspend or alter diplomatic dealings. This reduces the appearance of judging the legitimacy of another country's constitutional order, but practical decisions concerning credentials, immunities, assets and treaty relations remain necessary.
+
+5. Constitutive Theory
+
+Under the constitutive theory, an entity becomes an international person, at least in relation to the recognising State, through recognition by existing States. The theory emphasises the practical importance of acceptance for diplomacy, treaty relations and access to institutions.
+
+Its weakness is that it can make legal existence depend on political discretion and produce inconsistent personality: an entity could be a State for one country but not another. It also struggles to explain the rights and duties of an unrecognised entity that objectively satisfies Statehood criteria.
+
+6. Declaratory Theory
+
+The declaratory theory holds that recognition acknowledges an existing factual and legal situation rather than creating Statehood. Article 3 of the Montevideo Convention states that the political existence of a State is independent of recognition by other States.
+
+This theory better protects objective criteria and sovereign equality, but recognition remains practically important. Diplomatic relations, domestic court access, immunity, property and participation in organisations may be affected by the recognising State's position. Modern practice generally favours a declaratory account while accepting these important practical effects.
+
+7. De Facto and De Jure Recognition
+
+De facto recognition is provisional or limited acknowledgement that an authority exercises effective control, often where stability or permanence remains uncertain. De jure recognition is fuller and more final acceptance of legal status.
+
+The distinction concerns the intention and scope of the recognising State and must be inferred from official language and conduct. De facto recognition is not identical to informal contact, and de jure recognition does not necessarily require a particular ceremonial formula.
+
+8. Express, Implied and Collective Recognition
+
+Express recognition occurs through an official declaration, diplomatic note or other clear statement. Implied recognition may be inferred from conduct showing an intention to recognise, such as establishing full diplomatic relations or concluding a bilateral treaty that necessarily treats the entity as a State.
+
+Not every interaction implies recognition. Humanitarian contact, negotiations, participation in a multilateral conference or conclusion of a technical arrangement may be accompanied by an express reservation. Intention and context are decisive.
+
+Recognition is usually an individual act, but admission to an international organisation may supply strong collective evidence. UN membership does not compel every member to establish bilateral diplomatic relations, and organisational admission must be distinguished from recognition by each State.
+
+9. Conditional and Premature Recognition
+
+A State may link recognition to commitments concerning minority rights, democracy, borders or other matters. If the entity already satisfies Statehood requirements, failure to honour a political condition does not ordinarily erase its existence, though it may create separate responsibility where a legal undertaking was made.
+
+Premature recognition occurs when an outside State recognises an entity before the legal and factual conditions are established, particularly during an unresolved secession. It may violate the principles of sovereignty and non-intervention. Recognition must not be used as a device for unlawful intervention.
+
+10. Recognition of Governments
+
+Recognition of a government traditionally focused on effective control, stability, independence and willingness to fulfil international obligations. Other approaches have considered constitutional legitimacy, democratic authority and popular acceptance. State practice is inconsistent and no universal political test governs every case.
+
+A change of government does not affect the identity of the State or automatically terminate its treaties. Disputes over representation may affect control of diplomatic premises, access to State assets, immunities, credentials and authority to appear before courts.
+
+11. Insurgency and Belligerency
+
+Insurgency describes an organised uprising reaching a level that may require limited practical acknowledgement. Belligerency historically involved recognition that an armed conflict had reached a scale and organisation justifying application of the laws of war and neutrality between the established government and organised rebels.
+
+Recognition of belligerency does not recognise the rebel authority as a State. Contemporary international humanitarian law applies many minimum obligations according to objective conflict classifications, reducing reliance on formal recognition.
+
+12. Legal Consequences of Recognition
+
+Recognition may enable diplomatic relations, treaty dealings and acknowledgement of governmental acts. In domestic law it may influence standing before courts, immunity, access to assets and the treatment of legislative, executive and judicial acts of the recognised authority.
+
+The precise consequences depend on the recognising State's constitutional law and the form of recognition. Courts frequently treat recognition as a matter primarily for the executive, especially where a decision would affect foreign relations.
+
+Non-recognition does not mean that every act within the territory is legally ignored. Courts may give limited effect to matters such as births, marriages and private transactions where necessary to protect inhabitants and justice, without recognising the unlawful authority itself.
+
+13. Withdrawal and Non-Recognition
+
+Withdrawal of recognition of a government may occur when it loses effective authority or legitimacy under the recognising State's policy. Withdrawal of recognition of an existing State is more difficult because Statehood is not ordinarily extinguished by another State's unilateral decision.
+
+International law may require non-recognition of territorial acquisition or another situation created by a serious breach of a peremptory norm. The duty prevents an unlawful situation from acquiring legitimacy through acceptance. States must distinguish mandatory non-recognition from ordinary political non-recognition.
+
+14. Meaning and Types of State Jurisdiction
+
+Jurisdiction is a State's lawful competence to regulate persons, property, conduct and events. It has three forms:
+
+(a) prescriptive jurisdiction—the authority to make legal rules applicable to conduct;
+(b) adjudicative jurisdiction—the authority of courts or tribunals to hear and determine cases; and
+(c) enforcement jurisdiction—the authority to compel compliance through arrest, search, seizure, punishment or execution.
+
+A State may possess a valid basis to prescribe law while lacking authority to enforce it in another State's territory. Enforcement abroad normally requires consent, treaty cooperation or another rule of international law.
+
+15. Territorial Principle
+
+Territoriality is the primary basis of jurisdiction. A State may regulate conduct occurring within its land territory, internal waters, territorial sea and airspace.
+
+Subjective territoriality applies where the conduct begins within the State. Objective territoriality applies where conduct initiated abroad is completed or produces a constituent effect within the State. The effects doctrine extends regulation to foreign conduct producing substantial domestic effects, but expansive use can create conflict and should be supported by a genuine connection and reasonable exercise.
+
+Territorial questions involving online conduct depend on factors such as the location of actors, systems, targeted resources, victims and effects. Mere internet accessibility should not automatically create unlimited global jurisdiction.
+
+16. Nationality Principle
+
+The active-nationality principle permits a State to regulate conduct of its nationals abroad. Nationality supplies a continuing legal connection between the person and the State. Domestic law determines nationality subject to international limits.
+
+The principle may apply to natural persons, corporations and, under specialised rules, ships and aircraft. Questions of dual nationality and corporate nationality can complicate its operation.
+
+17. Passive-Personality Principle
+
+Passive personality bases jurisdiction on the nationality of the victim. Historically controversial, it is now more widely accepted, especially for terrorism and serious violence against nationals abroad.
+
+The principle should be applied with a genuine connection and attention to legality, foreseeability and competing claims. Victim nationality alone should not be used without statutory authority.
+
+18. Protective Principle
+
+The protective principle allows a State to regulate foreign conduct threatening its essential security or governmental functions even when committed by non-nationals abroad. Examples include counterfeiting currency, espionage, falsification of official documents and attacks on national security.
+
+Because the principle reaches beyond territory and nationality, the protected interest must be sufficiently fundamental and the exercise must not become a pretext for regulating ordinary foreign conduct.
+
+19. Universal Jurisdiction
+
+Universal jurisdiction permits prosecution of certain exceptionally grave offences without requiring territory, offender nationality or victim nationality as the jurisdictional link. Piracy is the classic example. International law and treaties also support forms of universal or treaty-based jurisdiction for crimes such as genocide, war crimes, torture and crimes against humanity, though the precise scope, conditions and immunities remain subject to law and State practice.
+
+Universal jurisdiction differs from the jurisdiction of an international criminal tribunal. A national court exercising universal jurisdiction acts under national law supported by an international basis; an international tribunal derives jurisdiction from its constitutive instrument.
+
+20. Concurrent Jurisdiction and Restraint
+
+More than one State may possess a valid basis for jurisdiction over the same conduct. International law often manages rather than eliminates concurrency. States use consultation, extradition, mutual legal assistance, transfer of proceedings, comity and prosecutorial discretion.
+
+Relevant considerations include territorial connection, location of evidence, nationality of accused and victims, seriousness, fairness, likelihood of effective prosecution and avoidance of double jeopardy where applicable. Jurisdiction must be distinguished from admissibility and forum choice.
+
+21. Limits on Enforcement Jurisdiction
+
+A State generally may not send officials into another State to arrest a person, search premises, seize evidence or execute a judgment without consent or other legal authority. Such action may violate territorial sovereignty and non-intervention.
+
+Lawful cooperation occurs through extradition, mutual legal assistance, police cooperation, letters rogatory, transfer treaties and consent. Remote digital investigations may also raise sovereignty and data-jurisdiction issues.
+
+22. State Immunity
+
+State immunity is a procedural bar preventing one State's courts from exercising jurisdiction over another State in circumstances recognised by international law. Under the restrictive doctrine, immunity generally protects sovereign or public acts (acta jure imperii) but may not cover commercial or private acts (acta jure gestionis), subject to applicable national legislation and international rules.
+
+Immunity from adjudication must be distinguished from immunity from execution. Measures against State property ordinarily face stricter requirements, especially where the property serves diplomatic, military, central-bank or other sovereign functions.
+
+In Jurisdictional Immunities of the State, the ICJ treated immunity as a procedural rule distinct from the substantive lawfulness of the underlying conduct.
+
+23. Immunity of State Officials
+
+Certain serving high officials—especially Heads of State, Heads of Government and Foreign Ministers—enjoy personal immunity and inviolability before foreign national courts while in office. This immunity covers official and private acts during the term but is temporary.
+
+Functional immunity protects official acts attributable to the State and may continue after office. Its scope in proceedings concerning international crimes remains contested and must be distinguished from immunity before an international tribunal operating under a valid legal instrument.
+
+The Arrest Warrant case confirmed the personal immunity and inviolability of an incumbent Foreign Minister before foreign national criminal jurisdiction, while explaining that immunity does not mean permanent impunity.
+
+24. Diplomatic and Consular Immunities
+
+Diplomatic agents enjoy inviolability and broad immunity from the receiving State's criminal jurisdiction, with specified civil and administrative exceptions under the Vienna Convention on Diplomatic Relations. Diplomatic premises, archives and communications receive special protection.
+
+Consular officers possess more limited, primarily functional immunity under the Vienna Convention on Consular Relations. Immunity belongs to the legal framework enabling functions, not to the individual as a personal benefit. The sending State may waive immunity under the applicable rules.
+
+25. Ships and Maritime Jurisdiction
+
+A ship ordinarily has the nationality of the State whose flag it is entitled to fly, and the flag State exercises jurisdiction on the high seas. Coastal States exercise sovereignty in internal waters and the territorial sea, subject to rights such as innocent passage. They possess functional rights in the contiguous zone, exclusive economic zone and continental shelf under the law of the sea.
+
+Piracy is subject to universal jurisdiction on the high seas. Port States may regulate foreign vessels voluntarily present in port, subject to international obligations. Warships and other government vessels operated for non-commercial purposes enjoy special immunities.
+
+26. Aircraft and Airspace
+
+A State has complete and exclusive sovereignty over the airspace above its territory. Aircraft nationality is based principally on registration. The State of registration, territorial State, landing State and States connected to offender or victim may possess jurisdiction under aviation treaties and domestic law.
+
+Civil aircraft must be distinguished from State aircraft. Hijacking, sabotage and other aviation offences are addressed through treaties requiring States to establish jurisdiction and cooperate in prosecution or extradition.
+
+27. Examination and Problem-Solving Method
+
+For recognition questions:
+(a) identify whether the issue concerns a State, government or other status;
+(b) apply the criteria of Statehood where relevant;
+(c) compare declaratory and constitutive theories;
+(d) identify the form and intention of recognition;
+(e) consider premature recognition or mandatory non-recognition; and
+(f) state the legal and practical consequences.
+
+For jurisdiction questions:
+(a) separate prescription, adjudication and enforcement;
+(b) identify the statutory rule;
+(c) establish territory, nationality, passive personality, protection, universality or another recognised link;
+(d) consider concurrent claims and reasonableness;
+(e) check State, diplomatic, consular or official immunity; and
+(f) identify whether international cooperation is required for enforcement.`,
     keyPoints: [
-      "Criteria of Statehood",
-      "Declaratory and constitutive theories",
-      "De facto and de jure recognition",
-      "Bases of State jurisdiction",
-      "Extraterritorial jurisdiction",
-      "State and diplomatic immunities",
+      "The Montevideo criteria are permanent population, defined territory, government and capacity for international relations.",
+      "Recognition acknowledges a State or accepts a government's authority to represent it; the two objects must be distinguished.",
+      "The constitutive theory treats recognition as creating personality, while the declaratory theory treats it as acknowledging existing Statehood.",
+      "Modern law generally favours the declaratory theory, although recognition has significant practical legal effects.",
+      "Recognition may be de facto or de jure, express or implied, individual or collective.",
+      "Premature recognition may violate sovereignty and non-intervention.",
+      "States must not recognise as lawful a situation created by a serious breach of a peremptory norm.",
+      "Jurisdiction must be divided into prescriptive, adjudicative and enforcement jurisdiction.",
+      "Territoriality is primary, but nationality, passive personality, protection and universality provide additional bases.",
+      "A valid basis to prescribe does not automatically authorise enforcement within another State's territory.",
+      "Concurrent jurisdiction is managed through cooperation, comity and forum-related considerations.",
+      "State immunity is procedural and differs from the substantive legality of the underlying conduct.",
+      "Personal immunity of specified serving high officials is temporary; functional immunity concerns official acts.",
+      "Diplomatic immunity is broader than consular functional immunity.",
+      "Flag, coastal, port and registration principles allocate jurisdiction over ships and aircraft.",
     ],
     provisions: [
       "Montevideo Convention on the Rights and Duties of States, 1933 — Article 1",
-      "Vienna Convention on Diplomatic Relations, 1961",
-      "Vienna Convention on Consular Relations, 1963",
+      "Charter of the United Nations, 1945 — Articles 2(1), 2(4) and 2(7)",
+      "International Law Commission Articles on State Responsibility, 2001 — Articles 40–41",
+      "United Nations Convention on Jurisdictional Immunities of States and Their Property, 2004",
+      "Vienna Convention on Diplomatic Relations, 1961 — Articles 22, 29, 31 and 32",
+      "Vienna Convention on Consular Relations, 1963 — Articles 41 and 43",
+      "United Nations Convention on the Law of the Sea, 1982 — Articles 2, 17, 27, 56, 92 and 105",
+      "Chicago Convention on International Civil Aviation, 1944 — Articles 1 and 17",
     ],
+    importantCases: [
+      {
+        caseName: "Tinoco Arbitration (Great Britain v. Costa Rica)",
+        citation: "(1923) 1 RIAA 369",
+        principle:
+          "Recognition by other States is evidence but is not conclusive of a government's effective existence and authority.",
+        summary:
+          "Chief Justice Taft evaluated the acts of an unrecognised Costa Rican government by examining its actual control and conduct.",
+      },
+      {
+        caseName: "S.S. Lotus (France v. Turkey)",
+        citation: "PCIJ, Series A, No. 10 (1927)",
+        principle:
+          "The judgment is a foundational authority in debates over territorial effects, concurrent criminal jurisdiction and limits on State freedom.",
+        summary:
+          "The Permanent Court considered Turkish criminal jurisdiction following a high-seas collision between French and Turkish vessels.",
+      },
+      {
+        caseName: "Arrest Warrant of 11 April 2000 (DRC v. Belgium)",
+        citation: "ICJ Reports 2002, p. 3",
+        principle:
+          "An incumbent Foreign Minister enjoys immunity from criminal jurisdiction and inviolability before foreign national courts while in office.",
+        summary:
+          "Belgium's circulation of an arrest warrant failed to respect the immunity of the serving Congolese Foreign Minister; the Court distinguished immunity from impunity.",
+      },
+      {
+        caseName: "Jurisdictional Immunities of the State (Germany v. Italy)",
+        citation: "ICJ Reports 2012, p. 99",
+        principle:
+          "State immunity is a procedural rule that must be distinguished from the substantive legality of the conduct alleged.",
+        summary:
+          "The ICJ held that Italy had violated Germany's jurisdictional immunity by permitting specified civil claims based on sovereign wartime acts.",
+      },
+      {
+        caseName: "Island of Palmas (Netherlands v. United States)",
+        citation: "(1928) 2 RIAA 829",
+        principle:
+          "Territorial sovereignty entails the exclusive right to display State functions and a corresponding duty to protect the rights of other States.",
+        summary:
+          "The arbitration emphasised peaceful and continuous display of authority in resolving competing territorial claims.",
+      },
+      {
+        caseName: "Legal Consequences for States of the Continued Presence of South Africa in Namibia",
+        citation: "ICJ Reports 1971, p. 16",
+        principle:
+          "States were required not to recognise the legality of South Africa's continued presence, while avoiding harm to the inhabitants from wholesale invalidation of civil acts.",
+        summary:
+          "The advisory opinion explains both mandatory non-recognition and the limited treatment of acts necessary for the local population.",
+      },
+    ],
+    examFocus:
+      "For recognition, begin with Statehood criteria and clearly distinguish recognition of a State from recognition of a government. Compare declaratory and constitutive theories, identify the form of recognition, and discuss legal effects and non-recognition. For jurisdiction, separate prescription, adjudication and enforcement, apply each jurisdictional basis, and then test territorial sovereignty and any applicable State or official immunity.",
+    revisionNotes:
+      "Statehood is assessed principally through population, territory, government and capacity for international relations. Recognition generally declares rather than creates Statehood, but has important practical effects. Jurisdiction includes prescription, adjudication and enforcement and may rest on territory, nationality, passive personality, protection or universality. Enforcement in foreign territory normally requires consent or cooperation. State, diplomatic, consular and official immunities are distinct procedural protections, while maritime and aviation jurisdiction use flag, coastal, port, territorial and registration connections.",
   },
   {
     title: "Nationality, Extradition and Asylum",
