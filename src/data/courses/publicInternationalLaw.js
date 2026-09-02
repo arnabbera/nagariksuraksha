@@ -1005,24 +1005,300 @@ For jurisdiction questions:
   {
     title: "Nationality, Extradition and Asylum",
     shortDescription:
-      "Nationality, statelessness, diplomatic protection, extradition and territorial or diplomatic asylum.",
+      "A detailed study of nationality, statelessness, diplomatic protection, extradition, asylum, refugee status and non-refoulement.",
     overview:
-      "This unit examines the legal bond of nationality and the rules governing surrender and protection of persons across national boundaries.",
-    detailedContent:
-      "Meaning and importance of nationality; acquisition by birth, descent, naturalisation, registration and incorporation of territory; loss, renunciation and deprivation; dual nationality and statelessness; nationality of corporations; genuine-link principle; diplomatic protection; meaning and basis of extradition; extradition treaties and domestic law; double criminality, speciality, political-offence exception, non bis in idem, human-rights limitations and rule of non-inquiry; meaning and forms of asylum; territorial and diplomatic asylum; refugees, non-refoulement and distinction between asylum and extradition.",
+      "Nationality is the legal bond connecting a person to a State and providing the basis for rights, duties and diplomatic protection. Extradition is the formal surrender of an accused or convicted person by one State to another, while asylum is protection granted against the authority of another State. This chapter explains acquisition and loss of nationality, dual nationality, statelessness, corporate nationality and diplomatic protection; the legal basis, conditions, exceptions and procedure of extradition; and territorial asylum, diplomatic asylum, refugee status and the principle of non-refoulement, with special reference to Indian law.",
+    learningObjectives: [
+      "Define nationality and distinguish it from citizenship, domicile, residence and ethnic identity.",
+      "Explain acquisition of nationality by birth, descent, naturalisation, registration and territorial change.",
+      "Analyse loss, renunciation, deprivation and deprivation-related safeguards.",
+      "Explain dual or multiple nationality and identify problems arising from competing nationality claims.",
+      "Define statelessness and distinguish de jure from de facto statelessness.",
+      "Explain nationality of corporations, ships and aircraft.",
+      "Apply the genuine-link principle within its proper context and limits.",
+      "Explain the requirements and consequences of diplomatic protection.",
+      "Define extradition and distinguish it from deportation, expulsion, rendition and transfer to an international tribunal.",
+      "Apply double criminality, speciality, non bis in idem, political-offence and human-rights principles.",
+      "Explain extradition procedure and the aut dedere aut judicare obligation where applicable.",
+      "Distinguish territorial asylum from diplomatic asylum.",
+      "Apply the refugee definition, exclusion and cessation provisions and the principle of non-refoulement.",
+      "Explain the Indian legal framework governing nationality, extradition and refugees.",
+    ],
+    detailedContent: `1. Meaning of Nationality
+
+Nationality is the legal bond between an individual and a State under which the individual belongs to that State for international purposes. It ordinarily creates reciprocal relations of allegiance and protection and supplies a basis for the State to regulate its nationals abroad and exercise diplomatic protection.
+
+International law generally permits each State to determine under its law who its nationals are, but that competence is not unlimited. Rules concerning non-discrimination, avoidance of statelessness, genuine connection in particular international claims and human rights may affect recognition of nationality internationally.
+
+2. Nationality and Related Concepts
+
+Nationality and citizenship are often used interchangeably, but some legal systems distinguish nationality as the international bond from citizenship as the status carrying full domestic political rights. The meaning depends on the relevant law.
+
+Domicile is a person's legally recognised permanent home; residence describes factual presence; habitual residence focuses on stable factual connection. Race, ethnicity, language and religion do not by themselves determine nationality. A person may reside permanently in one State while remaining a national of another.
+
+3. Acquisition by Birth and Descent
+
+Nationality may be acquired by jus soli, based on birth in the territory, or jus sanguinis, based on descent from a national parent. States frequently combine these principles and impose qualifications concerning parental status, residence or registration.
+
+Foundlings and children who would otherwise be stateless commonly receive safeguards under national and international law. Birth registration is important evidence of identity but is not always itself a grant of nationality.
+
+4. Naturalisation, Registration and Territorial Change
+
+Naturalisation grants nationality following an application and satisfaction of conditions such as residence, good character, language knowledge, integration or renunciation of another nationality. Registration or declaration may provide a simplified process for spouses, descendants or persons with an established connection.
+
+Nationality may also change through State succession, transfer of territory, option, adoption or legitimation. International standards seek a genuine connection, individual choice where feasible and prevention of statelessness, especially for habitual residents of affected territory.
+
+5. Loss, Renunciation and Deprivation
+
+Nationality may be lost automatically under legislation, voluntarily renounced, or withdrawn by the State. Renunciation ordinarily requires possession or acquisition of another nationality to avoid statelessness.
+
+Deprivation may be permitted on limited grounds such as nationality obtained by fraud, but arbitrary deprivation is prohibited by Article 15 of the Universal Declaration of Human Rights. Safeguards include legality, legitimate purpose, proportionality, non-discrimination, procedural fairness, review and careful consideration of statelessness.
+
+6. Dual and Multiple Nationality
+
+Dual nationality arises when two States simultaneously regard a person as their national, often because their birth and descent rules overlap. Each State may generally treat the person as its national while the person is within its territory.
+
+Competing claims may affect diplomatic protection, military service, taxation and consular assistance. International tribunals have considered dominant or effective nationality by examining habitual residence, family ties, participation in public life and other factual connections. This approach must be applied within the relevant treaty or claim framework.
+
+7. Statelessness
+
+A de jure stateless person is not considered a national by any State under the operation of its law. De facto statelessness describes a person who formally has nationality but cannot obtain effective protection, although the term is not identical to the treaty definition.
+
+Statelessness can result from conflicting nationality laws, discrimination, State succession, gaps in birth registration, deprivation or loss without acquisition of another nationality. It may obstruct education, employment, travel, property ownership, healthcare and legal identity.
+
+The 1954 Convention addresses the status and treatment of stateless persons. The 1961 Convention seeks to reduce statelessness through safeguards at birth, during territorial change and against nationality loss or deprivation.
+
+8. Nationality of Corporations, Ships and Aircraft
+
+Corporate nationality is commonly connected to incorporation, registered office or seat of management. In Barcelona Traction, the ICJ generally treated the State of incorporation as entitled to exercise diplomatic protection of the company, while recognising that special circumstances may require separate analysis.
+
+Ships possess the nationality of the State whose flag they are entitled to fly, subject to the law of the sea. Aircraft possess the nationality of the State of registration. These legal connections allocate regulatory authority and responsibility but are not identical to nationality of natural persons.
+
+9. The Genuine-Link Principle
+
+In Nottebohm, the ICJ declined to allow Liechtenstein to exercise diplomatic protection against Guatemala because the naturalisation lacked the genuine connection necessary to make that nationality opposable in the circumstances of the claim.
+
+The judgment did not establish a universal rule allowing every State to disregard another State's nationality law whenever it considers the connection insufficient. Its principle arose in diplomatic protection and exceptional facts involving rapid wartime naturalisation. The case must therefore be cited with its context and limits.
+
+10. Diplomatic Protection
+
+Diplomatic protection is the invocation by a State, through diplomatic action or international proceedings, of the responsibility of another State for injury caused by an internationally wrongful act to a national of the first State.
+
+The traditional requirements are nationality of claims and exhaustion of local remedies. The injured person should generally possess the claimant State's nationality at the relevant times, subject to recognised exceptions. Available and effective local remedies in the respondent State ordinarily must be exhausted before an international claim is pursued.
+
+Diplomatic protection belongs to the State at the international level and is generally discretionary, although human-rights considerations and domestic law may influence that discretion. It differs from consular assistance and from an individual's direct petition under a human-rights treaty.
+
+11. Meaning and Purpose of Extradition
+
+Extradition is the formal process by which one State surrenders a person found in its territory to another State for prosecution or enforcement of a sentence for an extraditable offence. It prevents territory from becoming a safe haven while protecting sovereignty and individual rights through legal procedure.
+
+There is no universal general duty to extradite merely because another State requests surrender. The duty ordinarily arises from a treaty, domestic legislation, reciprocity or a specialised international convention.
+
+12. Extradition and Related Measures
+
+Deportation or expulsion removes a non-national under immigration law and is not a substitute for extradition safeguards where its true purpose is criminal surrender. Rendition is a broader term for transfer and may be unlawful if conducted outside legal procedure. Transfer to an international criminal court depends on the tribunal's statute and is often called surrender rather than extradition.
+
+Abduction of a suspect from foreign territory may violate sovereignty and human rights even if the forum State's domestic court later claims jurisdiction. Lawful cooperation should proceed through authorised mechanisms.
+
+13. Extraditable Offence and Double Criminality
+
+Treaties and legislation define extraditable offences, often through a minimum punishment threshold rather than a closed list. Double criminality requires that the underlying conduct be criminal in both the requesting and requested States.
+
+The offences need not bear identical names or contain identical wording. Courts compare the essential conduct and criminal character. The requirement protects individuals from surrender for conduct the requested State does not criminalise.
+
+14. Rule of Speciality
+
+The rule of speciality restricts the requesting State from prosecuting or punishing the surrendered person for an earlier offence other than the offence for which extradition was granted, unless the requested State consents or another recognised exception applies.
+
+Speciality protects the requested State's sovereign decision and the individual against circumvention. It may also restrict re-extradition to a third State without consent.
+
+15. Political-Offence Exception
+
+Traditional extradition law permits refusal for an offence considered political. Pure political offences are directed against the State without ordinary criminal elements; relative political offences combine political purpose with an ordinary offence.
+
+Courts have used incidence, predominance and proportionality approaches to assess the connection. Modern treaties exclude genocide, terrorism, aircraft hijacking, hostage-taking, attacks on protected persons and other grave crimes from the political-offence exception.
+
+Refusal may also be required where the request is a pretext to prosecute a person because of race, religion, nationality, ethnic origin, political opinion, sex or another protected status.
+
+16. Other Grounds for Refusal
+
+Extradition may be refused where the person has already been finally tried for the same conduct (non bis in idem), limitation has expired, amnesty applies, the offence is purely military, prosecution is discriminatory, the requesting court lacks basic independence, or surrender would be unjust or oppressive under applicable law.
+
+Some States do not extradite their own nationals and instead consider domestic prosecution. Fiscal offences are increasingly extraditable under modern arrangements. Each ground must be derived from the applicable treaty and legislation.
+
+17. Human-Rights Limitations
+
+A requested State must consider whether extradition would expose the person to a real risk of torture, cruel or inhuman treatment, flagrant denial of justice or another serious human-rights violation. Capital punishment may require reliable assurances that the death penalty will not be imposed or carried out.
+
+Assurances must be specific, credible, capable of fulfilment and subject to monitoring. Extradition adjudication is not a full trial on guilt, but courts cannot ignore substantial and foreseeable rights risks.
+
+18. Evidence, Prima Facie Case and Procedure
+
+Extradition procedure ordinarily involves a diplomatic or designated-authority request, provisional arrest where authorised, judicial inquiry into statutory conditions, executive decision and surrender. The requesting State must supply documents identifying the person, offence, legal provisions, warrant or conviction and evidence required by the applicable arrangement.
+
+Some systems require a prima facie evidentiary case; others apply a more limited certification standard. The extradition court does not ordinarily conduct the criminal trial. Identity, legal conditions, bars and fairness are examined without deciding final guilt.
+
+19. Aut Dedere Aut Judicare
+
+Aut dedere aut judicare means extradite or prosecute. Particular treaties require a State in whose territory an alleged offender is found to submit the case to competent authorities if it does not extradite. The obligation arises from the relevant convention; it is not automatically identical for every offence.
+
+Its purpose is to prevent impunity for specified crimes such as torture, attacks on protected persons or certain aviation offences. Domestic jurisdiction and criminal legislation must support effective compliance.
+
+20. Extradition Law in India
+
+The Extradition Act, 1962 governs extradition to and from India. It operates through extradition treaties and arrangements, statutory notifications and procedures applicable to foreign States. The Central Government has a central role, while magistrates or courts conduct inquiries where the Act requires.
+
+Indian proceedings examine whether the offence is extraditable, whether the statutory evidentiary standard is met and whether a legal bar applies. Treaty terms and the Act must be read together. Extradition is distinct from deportation under immigration or foreigner-control laws.
+
+21. Meaning and Basis of Asylum
+
+Asylum is protection granted by a State to a person seeking refuge from the authority or danger of another State. Article 14 of the Universal Declaration of Human Rights recognises the right to seek and enjoy asylum from persecution, subject to stated limitations. It does not create an unlimited right to compel admission by any chosen State.
+
+The grant of territorial asylum is an exercise of territorial sovereignty constrained by refugee law, human rights and other obligations. Asylum must be distinguished from temporary refuge, immigration status and diplomatic protection.
+
+22. Territorial Asylum
+
+Territorial asylum is granted within the territory of the protecting State. The territorial State decides admission and status subject to non-refoulement and applicable treaty or domestic rules. Another State generally has no right to demand surrender outside extradition or other lawful procedures.
+
+Asylum protects against persecution rather than ordinary accountability for serious non-political crime. Exclusion clauses prevent specified persons responsible for grave crimes from obtaining Convention refugee protection.
+
+23. Diplomatic Asylum
+
+Diplomatic asylum is refuge given in an embassy, consulate, warship or other premises outside the ordinary territorial asylum context. Diplomatic premises are inviolable but do not become the territory of the sending State.
+
+General international law does not recognise an unrestricted unilateral right to grant diplomatic asylum binding on the territorial State. Such a right may arise from a regional treaty, established local custom or exceptional humanitarian necessity. In the Asylum case, Colombia failed to prove the claimed regional custom against Peru.
+
+24. Refugee Status
+
+The 1951 Refugee Convention, as modified by the 1967 Protocol, defines a refugee as a person outside the country of nationality or former habitual residence who, owing to a well-founded fear of persecution for race, religion, nationality, membership of a particular social group or political opinion, is unable or unwilling to avail themselves of that country's protection.
+
+Refugee status is declaratory: a person becomes a refugee by satisfying the legal definition, not merely when formal recognition is issued. Assessment requires a forward-looking risk, a Convention ground, failure of national protection and consideration of internal protection where legally appropriate.
+
+25. Exclusion and Cessation
+
+Exclusion clauses deny Convention refugee protection to persons with serious reasons for considering that they committed crimes against peace, war crimes, crimes against humanity, serious non-political crimes outside the country of refuge or acts contrary to UN purposes and principles.
+
+Cessation clauses end refugee status when protection is no longer necessary under defined conditions, such as voluntary re-availment of national protection, acquisition of new nationality or fundamental and durable change in circumstances. Exclusion, cessation and cancellation serve different legal functions.
+
+26. Non-Refoulement
+
+Article 33(1) of the Refugee Convention prohibits returning a refugee in any manner to the frontiers of territories where life or freedom would be threatened for a Convention reason. The principle applies to rejection, removal, extradition and other transfer where the prohibited risk exists.
+
+Article 33(2) contains limited security and serious-crime exceptions for Convention refugee protection. Separate prohibitions under the law against torture and certain human-rights instruments may be absolute and permit no balancing. The applicable legal basis must therefore be identified precisely.
+
+Indirect or chain refoulement occurs where transfer to an intermediate State foreseeably leads to onward removal to danger. Effective assessment, procedures and safeguards are required.
+
+27. Asylum and Extradition
+
+An extradition request may overlap with a claim to asylum. The decision-maker must distinguish legitimate prosecution from persecution, apply the political-offence and discrimination rules, assess human-rights risks and observe non-refoulement.
+
+Refugee status does not create blanket immunity from prosecution. A person may be extradited for an ordinary serious offence if legal conditions and protection requirements are satisfied. Conversely, extradition cannot be used to bypass protection owed against persecution or torture.
+
+28. Refugees and Asylum in India
+
+India is not a party to the 1951 Refugee Convention or its 1967 Protocol and does not have a single comprehensive refugee statute. Refugees and asylum seekers are addressed through constitutional protections, general legislation concerning foreigners, executive policy and judicial decisions.
+
+Articles 14 and 21 of the Constitution protect persons, not only citizens, within their scope. Indian courts have considered non-refoulement and protection from arbitrary expulsion through constitutional and international-law principles, while also recognising the Union's authority over admission and removal. Outcomes depend on facts, status, national security and applicable law.
+
+29. Examination and Problem-Solving Method
+
+For nationality and diplomatic protection:
+(a) identify each claimed nationality and its legal basis;
+(b) distinguish nationality validity from opposability for a claim;
+(c) examine continuity and effective connection where relevant;
+(d) determine whether local remedies were exhausted; and
+(e) distinguish corporate, individual and State claims.
+
+For extradition and asylum:
+(a) identify the treaty and domestic statute;
+(b) test extraditable offence and double criminality;
+(c) apply speciality, non bis in idem and refusal grounds;
+(d) examine evidence and procedure;
+(e) assess political motivation, persecution, torture and fair-trial risk;
+(f) apply refugee status, exclusion and non-refoulement separately; and
+(g) conclude whether surrender, refusal, prosecution or protective conditions are legally appropriate.`,
     keyPoints: [
-      "Acquisition and loss of nationality",
-      "Dual nationality and statelessness",
-      "Diplomatic protection",
-      "Principles of extradition",
-      "Territorial and diplomatic asylum",
-      "Refugees and non-refoulement",
+      "Nationality is the legal bond between an individual and a State for international purposes.",
+      "Nationality may arise through birth, descent, naturalisation, registration or territorial change.",
+      "Arbitrary deprivation of nationality is prohibited, and nationality loss should not create statelessness without lawful justification.",
+      "Dual nationality may require analysis of dominant or effective connection in a particular legal context.",
+      "A stateless person is not considered a national by any State under the operation of its law.",
+      "The Nottebohm genuine-link principle arose in diplomatic protection and should not be treated as a universal licence to reject nationality.",
+      "Diplomatic protection generally requires nationality of claims and exhaustion of effective local remedies.",
+      "Extradition requires a treaty, statute, reciprocity or another recognised legal basis; there is no unlimited general duty to surrender.",
+      "Double criminality compares the underlying conduct, not merely the names of offences.",
+      "Speciality limits prosecution to the offence for which surrender was granted, subject to recognised exceptions.",
+      "Political-offence protection is narrowed by modern treaties excluding terrorism and other grave crimes.",
+      "Extradition may be barred by a real risk of torture, flagrant injustice or other serious rights violations.",
+      "Diplomatic asylum is exceptional and is not a general right opposable to the territorial State.",
+      "Refugee status requires a well-founded fear of persecution connected to a Convention ground and lack of effective national protection.",
+      "Non-refoulement protects against direct and foreseeable indirect return to specified danger.",
+      "India applies the Extradition Act, 1962 and addresses refugees through constitutional law, general statutes and executive policy.",
     ],
     provisions: [
       "Universal Declaration of Human Rights, 1948 — Articles 14–15",
-      "Convention Relating to the Status of Refugees, 1951 — Article 33",
+      "Convention Relating to the Status of Refugees, 1951 — Articles 1 and 33",
+      "Protocol Relating to the Status of Refugees, 1967",
+      "Convention Relating to the Status of Stateless Persons, 1954",
+      "Convention on the Reduction of Statelessness, 1961",
+      "International Law Commission Draft Articles on Diplomatic Protection, 2006",
       "Extradition Act, 1962 (India)",
+      "Constitution of India — Articles 14 and 21",
     ],
+    importantCases: [
+      {
+        caseName: "Nottebohm (Liechtenstein v. Guatemala)",
+        citation: "ICJ Reports 1955, p. 4",
+        principle:
+          "On the exceptional facts, nationality lacking a genuine connection was not opposable to Guatemala for diplomatic protection.",
+        summary:
+          "The Court examined Nottebohm's rapid Liechtenstein naturalisation, residence and real connections and found the claim inadmissible.",
+      },
+      {
+        caseName: "Barcelona Traction, Light and Power Company, Limited",
+        citation: "ICJ Reports 1970, p. 3",
+        principle:
+          "The State of incorporation ordinarily has the right to exercise diplomatic protection of a corporation.",
+        summary:
+          "Belgium could not generally present an international claim merely on behalf of Belgian shareholders in a Canadian company.",
+      },
+      {
+        caseName: "Asylum (Colombia v. Peru)",
+        citation: "ICJ Reports 1950, p. 266",
+        principle:
+          "A general unilateral right of diplomatic asylum was not established; a party relying on regional custom must prove constant and uniform practice accepted as law.",
+        summary:
+          "Colombia could not bind Peru through its unilateral classification of the refugee's offence within its embassy.",
+      },
+      {
+        caseName: "Haya de la Torre (Colombia v. Peru)",
+        citation: "ICJ Reports 1951, p. 71",
+        principle:
+          "The unlawful grant of diplomatic asylum did not automatically require surrender of the refugee to the territorial State.",
+        summary:
+          "The Court distinguished termination of asylum from a mandatory method of ending it and left the parties to seek a practical solution.",
+      },
+      {
+        caseName: "Soering v. United Kingdom",
+        citation: "ECtHR, Application No. 14038/88 (1989)",
+        principle:
+          "Extradition may engage responsibility where substantial grounds show a real risk of prohibited inhuman or degrading treatment.",
+        summary:
+          "The European Court considered the foreseeable treatment awaiting the requested person in the receiving State.",
+      },
+      {
+        caseName: "National Human Rights Commission v. State of Arunachal Pradesh",
+        citation: "(1996) 1 SCC 742",
+        principle:
+          "The State must protect the life and liberty of every human being within India, including Chakma persons facing threatened expulsion and violence.",
+        summary:
+          "The Supreme Court directed constitutional protection while lawful citizenship applications and governmental processes continued.",
+      },
+    ],
+    examFocus:
+      "For nationality, distinguish nationality from citizenship and domicile, then address acquisition, loss, multiple nationality, statelessness and the limited context of Nottebohm. For extradition, identify the legal basis and apply double criminality, speciality, political offence, non bis in idem and human-rights bars. For asylum, distinguish territorial and diplomatic asylum and analyse refugee status, exclusion, cessation and non-refoulement separately.",
+    revisionNotes:
+      "Nationality is the international legal bond between a person and a State and may be acquired by birth, descent, naturalisation, registration or territorial change. Statelessness means absence of nationality under any State's law. Diplomatic protection generally requires nationality and exhaustion of local remedies. Extradition is formal surrender under treaty and statute, controlled by double criminality, speciality and refusal safeguards. Territorial asylum rests on sovereignty, diplomatic asylum is exceptional, and non-refoulement prohibits transfer to specified persecution or serious harm under applicable refugee and human-rights rules.",
   },
   {
     title: "Treaties",
