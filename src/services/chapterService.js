@@ -18,6 +18,53 @@ const createSlug = (value = "") =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
+const getDetailedContentLength = (chapter) =>
+  String(
+    chapter?.content?.detailedContent ||
+      chapter?.detailedContent ||
+      chapter?.notes ||
+      "",
+  ).trim().length;
+
+// Bundled course chapters are updated through reviewed source changes, while
+// Firestore may still contain an older chapter created during course setup.
+// Prefer the richer academic content, but retain Firestore-controlled fields
+// such as publication state, uploaded media, quiz settings and audit metadata.
+const mergeStoredAndBundledChapter = (
+  storedChapter,
+  bundledChapter,
+) => {
+  if (!storedChapter) {
+    return bundledChapter || null;
+  }
+
+  if (!bundledChapter) {
+    return storedChapter;
+  }
+
+  if (
+    getDetailedContentLength(bundledChapter) <=
+    getDetailedContentLength(storedChapter)
+  ) {
+    return storedChapter;
+  }
+
+  return {
+    ...bundledChapter,
+    ...storedChapter,
+    shortDescription:
+      bundledChapter.shortDescription ||
+      storedChapter.shortDescription,
+    content: {
+      ...(storedChapter.content || {}),
+      ...(bundledChapter.content || {}),
+    },
+    notes:
+      bundledChapter.notes ||
+      storedChapter.notes,
+  };
+};
+
 // =========================================================
 // ADMIN - ALL CHAPTERS
 // =========================================================
@@ -57,9 +104,15 @@ export const getChaptersByCourse = async (
 
   for (const chapter of storedChapters || []) {
     if (chapter?.id) {
+      const bundledChapter =
+        chapterMap.get(chapter.id);
+
       chapterMap.set(
         chapter.id,
-        chapter,
+        mergeStoredAndBundledChapter(
+          chapter,
+          bundledChapter,
+        ),
       );
     }
   }
@@ -104,7 +157,22 @@ export const getPublishedChaptersByCourse =
 
     for (const chapter of storedChapters || []) {
       if (chapter?.id) {
-        chapterMap.set(chapter.slug || chapter.id, chapter);
+        const chapterKey =
+          chapter.slug || chapter.id;
+        const bundledChapter =
+          chapterMap.get(chapterKey) ||
+          bundledChapters.find(
+            (item) =>
+              item.id === chapter.id,
+          );
+
+        chapterMap.set(
+          chapterKey,
+          mergeStoredAndBundledChapter(
+            chapter,
+            bundledChapter,
+          ),
+        );
       }
     }
 
@@ -133,7 +201,16 @@ export const getChapterById = async (
       chapterId,
     );
 
-  return storedChapter || bundledChapters.find((chapter) => chapter.id === chapterId) || null;
+  const bundledChapter =
+    bundledChapters.find(
+      (chapter) =>
+        chapter.id === chapterId,
+    );
+
+  return mergeStoredAndBundledChapter(
+    storedChapter,
+    bundledChapter,
+  );
 };
 
 // =========================================================
