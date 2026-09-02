@@ -9,6 +9,11 @@ import {
   contractFinalExam,
   contractMockTests,
 } from "../../../../data/exams/contracts/assessments";
+import {
+  CRIMINAL_LAW_I_COURSE_SLUG,
+  criminalLawIFinalExam,
+  criminalLawIMockTests,
+} from "../../../../data/exams/criminalLawI/assessments";
 import { getCourseBySlug } from "../../../../services/courseService";
 import {
   getStudentEnrollment,
@@ -27,12 +32,24 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
   const { firebaseUser, profile, role } = useAuth();
   const studentId = firebaseUser?.uid || profile?.uid || "";
   const number = Number(testNumber || 1);
-  const courseAssessments = courseSlug === CONTRACT_COURSE_SLUG
-    ? { final: contractFinalExam, mocks: contractMockTests }
-    : { final: cpcFinalExam, mocks: cpcMockTests };
+  const assessmentRegistry = {
+    "code-of-civil-procedure-and-limitation": {
+      final: cpcFinalExam,
+      mocks: cpcMockTests,
+    },
+    [CONTRACT_COURSE_SLUG]: {
+      final: contractFinalExam,
+      mocks: contractMockTests,
+    },
+    [CRIMINAL_LAW_I_COURSE_SLUG]: {
+      final: criminalLawIFinalExam,
+      mocks: criminalLawIMockTests,
+    },
+  };
+  const courseAssessments = assessmentRegistry[courseSlug];
   const assessment = examType === "final"
-    ? courseAssessments.final
-    : courseAssessments.mocks[number];
+    ? courseAssessments?.final
+    : courseAssessments?.mocks?.[number];
 
   const [course, setCourse] = useState(null);
   const [enrollment, setEnrollment] = useState(null);
