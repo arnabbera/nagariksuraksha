@@ -463,23 +463,250 @@ When answering a problem, use the following sequence:
     title:
       "Subjects of International Law and Relation with Municipal Law",
     shortDescription:
-      "International legal personality and the interaction between international and domestic legal systems.",
+      "A detailed study of international legal personality and the interaction between international and domestic legal systems, with special reference to India.",
     overview:
-      "This unit identifies the entities capable of possessing international rights and duties and explains how international law operates within municipal legal systems.",
-    detailedContent:
-      "Meaning of international legal personality; States as primary subjects; international organisations; individuals; peoples and self-determination; corporations, non-governmental organisations and other participants; acquisition and extent of rights, duties and capacity; monism and dualism; transformation, incorporation and adoption; international-law rules in domestic courts; treaty implementation; customary international law; conflict between international and municipal law; and the approach of the Constitution and courts of India.",
+      "A subject of international law is an entity possessing rights, duties or legal capacities under the international legal order. States remain its primary and most complete subjects, but modern law also recognises international organisations, individuals, peoples and other entities to differing and function-specific degrees. The second part of this chapter examines how international law and municipal law relate to one another. It compares monist and dualist theories, explains incorporation and transformation, and studies the Indian constitutional framework governing treaties, customary rules and domestic implementation.",
+    learningObjectives: [
+      "Define international legal personality and distinguish subjects from objects, actors and beneficiaries of international law.",
+      "Explain why States possess the fullest international legal personality.",
+      "Identify the international rights, duties and capacities of international organisations.",
+      "Explain the position of individuals under human-rights, humanitarian, criminal and consular law.",
+      "Assess the status of peoples, national liberation movements, insurgents and belligerents.",
+      "Evaluate the limited international role of corporations, non-governmental organisations and other non-State actors.",
+      "Distinguish objective, derivative, functional, general and special legal personality.",
+      "Compare monist and dualist explanations of the relationship between international and municipal law.",
+      "Distinguish incorporation, adoption, transformation and specific legislative implementation.",
+      "Explain how treaties and customary international law operate before domestic courts.",
+      "Analyse India's constitutional allocation of treaty-making and treaty-implementing powers.",
+      "Apply Articles 51(c), 73, 246 and 253 of the Constitution of India to international-law questions.",
+    ],
+    detailedContent: `1. Meaning of a Subject of International Law
+
+A subject of international law is an entity capable, to some extent, of possessing international rights and duties and of exercising legal capacities on the international plane. Relevant capacities may include concluding treaties, presenting international claims, enjoying privileges or immunities, incurring international responsibility, participating in international institutions and invoking dispute-settlement procedures.
+
+International personality is not an all-or-nothing status. Different entities possess different rights and capacities according to the rules creating or recognising them. The ICJ explained in Reparation for Injuries that subjects of law in a legal system need not be identical in nature or in the extent of their rights.
+
+2. Subjects, Objects, Actors and Beneficiaries
+
+Traditional writers distinguished subjects, which possess legal personality, from objects, whose interests are regulated without independent legal capacity. Modern law makes that rigid division inadequate. An individual may possess enforceable human rights and incur direct criminal responsibility while lacking the general treaty-making competence of a State.
+
+An international actor influences international relations but is not necessarily a legal person. A beneficiary receives protection or advantage under a rule but may not possess an independent procedure to enforce it. The correct inquiry is therefore functional: what particular right, duty or capacity does the relevant rule confer upon the entity?
+
+3. States as Primary Subjects
+
+States are the original and primary subjects of international law. They possess general international personality rather than personality limited to a specific constitutive instrument. A State normally has territory, population, government and capacity to conduct international relations. It enjoys sovereign equality, territorial integrity and political independence and is bound by applicable treaties, custom and general international law.
+
+States may conclude treaties, establish international organisations, recognise other States and governments, exercise jurisdiction, present international claims, incur responsibility and participate in the formation of customary law. Their legal equality does not depend on equality of territory, population, wealth or political power.
+
+4. International Organisations
+
+An international organisation is generally created by States through a treaty or other instrument governed by international law and possesses its own institutional structure. Its personality is derivative because it arises from its constituent instrument and functional because its powers are connected to its purposes and functions.
+
+In Reparation for Injuries, the ICJ held that the United Nations possesses international personality and the capacity to bring an international claim for injury to the organisation and its agents. The Court inferred powers necessary for the effective performance of UN functions. International organisations may conclude agreements, own property, employ staff, enjoy privileges and immunities and bear responsibility, but their competence is limited by the principle of speciality.
+
+Article 104 of the UN Charter separately requires that the United Nations enjoy in each member's territory the legal capacity necessary to exercise its functions and fulfil its purposes. Domestic legal capacity and international legal personality are connected but conceptually distinct.
+
+5. Individuals as Subjects
+
+Classical international law largely treated individuals through the State of nationality. Modern law increasingly confers rights and duties directly upon them. Human-rights treaties recognise individual rights; some regional systems allow individual petitions; humanitarian law protects persons in armed conflict; consular law can confer individual rights; refugee law protects qualifying persons; and international criminal law imposes direct responsibility for crimes such as genocide, crimes against humanity and war crimes.
+
+In LaGrand, the ICJ recognised that Article 36(1) of the Vienna Convention on Consular Relations creates individual rights as well as rights of the sending State. International tribunals after the Second World War established that individuals cannot hide behind the abstract personality of the State when international law imposes personal criminal responsibility.
+
+Individuals nevertheless do not possess the same general capacities as States. Their international standing depends on the relevant treaty, institution or legal regime.
+
+6. Peoples and the Right of Self-Determination
+
+The UN Charter and common Article 1 of the two 1966 Human Rights Covenants recognise the right of peoples to self-determination. A people may freely determine its political status and pursue its economic, social and cultural development. The principle played a central role in decolonisation and has been recognised as having an erga omnes character.
+
+Identifying a “people” and determining the consequences of self-determination can be difficult outside the colonial context. International law generally protects the territorial integrity of States while supporting internal self-determination through representative government and equal participation. The principle does not automatically confer a general unilateral right of secession in every case.
+
+7. National Liberation Movements, Insurgents and Belligerents
+
+National liberation movements have obtained limited status in particular historical and institutional contexts, especially decolonisation and participation in international organisations. Their capacities depend on recognition and applicable legal instruments.
+
+Organised armed groups may bear direct obligations under international humanitarian law, including common Article 3 of the Geneva Conventions and applicable rules for non-international armed conflict. Recognition of insurgency or belligerency historically affected the legal relations among the territorial State, the organised group and third States. Such recognition does not necessarily amount to recognition of Statehood.
+
+8. Corporations and Investors
+
+Corporations are created under municipal law, but international law may grant them specific rights and procedural capacities. Investment treaties can permit a foreign investor to bring a claim directly against a host State before an arbitral tribunal. Human-rights systems may protect certain corporate rights, while international standards increasingly address corporate conduct.
+
+These limited capacities do not give corporations general international personality equivalent to States. Corporations ordinarily remain governed by domestic law, and the international responsibility of States must be distinguished from corporate civil or criminal liability under national law.
+
+9. Non-Governmental Organisations and Other Participants
+
+Non-governmental organisations influence treaty negotiations, supply expertise, monitor compliance and may obtain consultative status before international bodies. The International Committee of the Red Cross has distinctive functions under humanitarian law. Religious entities, indigenous communities, multinational enterprises and other bodies may possess special rights or roles.
+
+Participation and influence must not be confused with complete legal personality. The legal status of each entity depends on the particular rules, agreements and institutional arrangements applicable to it.
+
+10. Types and Tests of International Personality
+
+International personality may be original or derivative, general or limited, objective or opposable only to particular parties, and express or implied. States possess original and general personality. Organisations ordinarily possess derivative and functional personality. Individuals and non-State entities possess rights and capacities within particular regimes.
+
+Evidence of personality includes the ability to hold international rights and duties, conclude international agreements, make claims, enjoy immunities, participate in institutions or incur direct responsibility. No single capacity is indispensable in every case. The entity's constitutive instrument, applicable treaties, customary law, judicial decisions and practice must be examined together.
+
+11. The Relationship between International and Municipal Law
+
+International law governs rights and duties on the international plane; municipal law operates within a State. International law ordinarily leaves each State to choose the domestic method of performing its obligations, but a State cannot rely on its internal law as justification for failure to perform a treaty. International responsibility may therefore arise even where the domestic constitution prevented or complicated compliance.
+
+Domestic courts, however, apply their own constitution and rules concerning the reception of international law. The international validity of an obligation and its direct enforceability in a national court are separate questions.
+
+12. Monism
+
+Monist theory treats international and municipal law as parts of a single legal order. An international rule may operate domestically without a separate legislative act, subject to the constitutional structure of the State. Some monist approaches give international law priority; others explain the unity of law differently.
+
+Monism highlights the need for coherent legal obligation and facilitates direct domestic application. It does not describe every constitutional system, and even broadly monist States may distinguish self-executing from non-self-executing treaty provisions.
+
+13. Dualism
+
+Dualist theory treats international and municipal law as distinct systems because they regulate different relations, arise from different sources and operate through different institutions. A treaty binds the State internationally but does not, without constitutional or legislative reception, automatically alter domestic rights and duties.
+
+Dualism protects the constitutional role of the legislature and democratic law-making. Strict separation may nevertheless create a gap between an international promise and the remedies available to individuals within the State.
+
+14. Incorporation, Adoption and Transformation
+
+Under incorporation or adoption, a rule of international law becomes part of municipal law through a constitutional rule or judicial doctrine without being rewritten in legislation. Customary international law is often received through this method, provided it does not conflict with legislation or controlling constitutional rules.
+
+Transformation requires an international rule, especially a treaty rule, to be converted into domestic law through legislation. Specific implementation occurs when the legislature enacts provisions needed to give effect to particular treaty obligations. The terminology varies among legal systems, so the actual constitutional rule is more important than the label.
+
+15. Treaties in Domestic Courts
+
+A treaty may bind a State internationally from its entry into force while remaining non-enforceable by individuals in domestic courts until implemented. Some constitutions make certain treaties directly applicable; others require legislation. Courts may still use an unimplemented treaty as an interpretative aid where domestic law is ambiguous and the treaty does not contradict legislation.
+
+When legislation is enacted to implement a treaty, domestic courts apply that legislation according to constitutional principles. A later inconsistent statute may control domestically in some systems, even though the State remains internationally responsible for treaty breach.
+
+16. Customary International Law in Domestic Courts
+
+Many common-law systems treat customary international law as part of the common law unless it conflicts with a statute or binding judicial authority. Courts first require adequate proof of the customary rule. Clear legislation ordinarily prevails domestically, while the resulting international consequences remain governed by international law.
+
+Custom cannot override a written constitution. Courts commonly prefer, where the text permits, an interpretation consistent with international obligations.
+
+17. Indian Constitutional Framework
+
+Article 51(c), a Directive Principle of State Policy, directs the State to foster respect for international law and treaty obligations in the dealings of organised peoples with one another. It guides interpretation and State policy but is not independently enforceable as a fundamental right.
+
+Article 73 extends the Union executive power to matters on which Parliament may legislate and to the exercise of rights, authority and jurisdiction exercisable by the Government of India by virtue of a treaty or agreement, subject to the Constitution and parliamentary legislation.
+
+Article 246 read with the Seventh Schedule distributes legislative competence. Union List entries relevant to international affairs include foreign affairs, diplomatic and consular representation, the United Nations, participation in international conferences, treaties and agreements with foreign countries, and implementation of treaties.
+
+Article 253 empowers Parliament to make any law for implementing a treaty, agreement or convention with another country, or a decision made at an international conference, association or other body. This power may operate notwithstanding the ordinary federal distribution reflected in Article 246.
+
+18. Treaty-Making and Implementation in India
+
+Treaty-making is generally exercised by the Union executive. A treaty that changes domestic law, affects private rights, creates offences, imposes taxation, requires expenditure or otherwise needs enforceable municipal rules ordinarily requires parliamentary legislation. The executive cannot use a treaty to amend the Constitution or override an existing statute.
+
+Indian courts may refer to international conventions when interpreting constitutional and statutory provisions, particularly where domestic law contains a gap and the international norm is consistent with fundamental rights and existing legislation. An unimplemented treaty cannot be used to displace a clear contrary statute.
+
+19. Leading Indian Judicial Principles
+
+In Maganbhai Ishwarbhai Patel v. Union of India, the Supreme Court distinguished the executive act of entering an international agreement from the need for legislation where implementation changes domestic law or affects citizens' rights.
+
+In Jolly George Varghese v. Bank of Cochin, the Court recognised the interpretative relevance of the International Covenant on Civil and Political Rights but held that a covenant provision does not automatically become enforceable municipal law without legislative transformation.
+
+In Vishaka v. State of Rajasthan, the Court used the Convention on the Elimination of All Forms of Discrimination against Women to help formulate protections against workplace sexual harassment where domestic law was silent and the convention was consistent with fundamental rights.
+
+In Gramophone Company of India Ltd. v. Birendra Bahadur Pandey, the Court stated that rules of international law may be accommodated in municipal law unless they conflict with an Act of Parliament.
+
+20. Conflict and Harmonious Interpretation
+
+On the international plane, a State cannot escape responsibility by pleading its constitution, legislation or judicial decisions. On the domestic plane, the Constitution governs, and courts apply binding legislation. The two planes must not be confused.
+
+Courts often presume that the legislature does not intend to violate international law and, where reasonably possible, interpret domestic law consistently with international obligations. Harmonious interpretation cannot rewrite clear statutory language or bypass constitutional limits.
+
+21. Problem-Solving Method
+
+For a legal-personality problem:
+(a) identify the entity;
+(b) identify the asserted international right, duty or capacity;
+(c) locate its source in a treaty, custom, constituent instrument or other rule;
+(d) determine whether the personality is general or function-specific; and
+(e) distinguish legal status from political influence.
+
+For an international-versus-municipal-law problem:
+(a) identify the international rule and whether it binds India internationally;
+(b) identify the relevant constitutional provision;
+(c) ask whether implementing legislation exists;
+(d) determine whether the rule is treaty-based or customary;
+(e) check for conflict with the Constitution or statute;
+(f) consider harmonious interpretation; and
+(g) distinguish the domestic remedy from any international responsibility.`,
     keyPoints: [
-      "International legal personality",
-      "States and international organisations",
-      "Individuals and other participants",
-      "Monism and dualism",
-      "Incorporation and transformation",
-      "Indian constitutional approach",
+      "International personality is the capacity to possess international rights, duties or legal powers; its extent differs among entities.",
+      "States are the primary subjects and possess general international legal personality.",
+      "International organisations have derivative, functional personality governed by their constituent instruments and necessary powers.",
+      "Individuals possess direct rights and duties in fields including human rights, consular law, humanitarian law and international criminal law.",
+      "Peoples possess a right of self-determination, but this does not create a general automatic right of unilateral secession.",
+      "Corporations, NGOs and armed groups may have limited rights, duties or participation without acquiring State-like personality.",
+      "Monism views international and municipal law as one legal order; dualism treats them as distinct systems.",
+      "International validity and domestic enforceability are separate questions.",
+      "A State cannot invoke internal law as justification for failing to perform an international obligation.",
+      "Incorporation receives a rule directly; transformation gives domestic effect through legislation.",
+      "Article 51(c) directs India to foster respect for international law and treaty obligations.",
+      "Article 253 empowers Parliament to legislate for implementing treaties and international decisions.",
+      "The Union executive generally makes treaties, but legislation is required when domestic law or private rights must be changed.",
+      "Indian courts may use consistent international norms as interpretative aids but cannot override the Constitution or clear legislation.",
     ],
     provisions: [
       "Constitution of India — Articles 51(c), 73, 246 and 253",
-      "Charter of the United Nations, 1945",
+      "Constitution of India — Seventh Schedule, Union List Entries 10–14",
+      "Charter of the United Nations, 1945 — Articles 1(2), 2(1), 104 and 105",
+      "Vienna Convention on the Law of Treaties, 1969 — Articles 26 and 27",
+      "International Covenant on Civil and Political Rights, 1966 — Article 1",
+      "International Covenant on Economic, Social and Cultural Rights, 1966 — Article 1",
     ],
+    importantCases: [
+      {
+        caseName: "Reparation for Injuries Suffered in the Service of the United Nations",
+        citation: "ICJ Reports 1949, p. 174",
+        principle:
+          "The United Nations has international legal personality and capacities necessary to perform its functions and protect its agents.",
+        summary:
+          "The advisory opinion established that subjects of international law need not be identical and that an organisation may possess functional and implied powers.",
+      },
+      {
+        caseName: "LaGrand (Germany v. United States of America)",
+        citation: "ICJ Reports 2001, p. 466",
+        principle:
+          "Article 36(1) of the Vienna Convention on Consular Relations creates individual rights as well as rights of the sending State.",
+        summary:
+          "The judgment demonstrates that individuals may be direct holders of rights under international law.",
+      },
+      {
+        caseName: "Maganbhai Ishwarbhai Patel v. Union of India",
+        citation: "(1970) 3 SCC 400",
+        principle:
+          "The executive may enter treaties, but legislation is needed where implementation changes domestic law or affects enforceable rights.",
+        summary:
+          "The Supreme Court explained the constitutional distinction between making an international agreement and giving it municipal legal effect.",
+      },
+      {
+        caseName: "Jolly George Varghese v. Bank of Cochin",
+        citation: "(1980) 2 SCC 360",
+        principle:
+          "An international covenant does not automatically become enforceable domestic law without legislative incorporation, though it may aid interpretation.",
+        summary:
+          "The Court considered the ICCPR while applying Indian civil-procedure law and maintained the distinction between treaty obligation and municipal enforceability.",
+      },
+      {
+        caseName: "Vishaka v. State of Rajasthan",
+        citation: "(1997) 6 SCC 241",
+        principle:
+          "International conventions consistent with fundamental rights may guide constitutional interpretation where domestic law contains a gap.",
+        summary:
+          "The Supreme Court relied upon CEDAW principles while framing binding safeguards against workplace sexual harassment pending legislation.",
+      },
+      {
+        caseName: "Gramophone Company of India Ltd. v. Birendra Bahadur Pandey",
+        citation: "(1984) 2 SCC 534",
+        principle:
+          "Courts should respect established international law unless it conflicts with an Act of Parliament.",
+        summary:
+          "The judgment supports harmonious construction while recognising the controlling force of contrary domestic legislation.",
+      },
+    ],
+    examFocus:
+      "For a legal-personality question, avoid a binary list of subjects and objects. Define personality functionally, then compare the nature and extent of the capacities held by States, organisations, individuals, peoples and other actors. For municipal-law questions, distinguish international binding force from domestic enforceability and apply Articles 51(c), 73, 246 and 253 with the leading Indian cases.",
+    revisionNotes:
+      "States possess original and general international personality; organisations possess derivative and functional personality; individuals and other actors hold specific rights, duties or capacities under particular regimes. Monism treats international and municipal law as one order, while dualism treats them as separate. India generally requires legislation where a treaty must change domestic law or affect rights. Articles 51(c), 73, 246 and 253 frame the constitutional relationship, and courts favour consistent interpretation without allowing unimplemented treaties to override the Constitution or clear statutes.",
   },
   {
     title: "Recognition and State Jurisdiction",
