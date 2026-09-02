@@ -484,10 +484,15 @@ export default function CourseDetails() {
     course?.slug ===
     "indian-constitutional-law-i";
 
+  const isFamilyLawCourse =
+    course?.slug ===
+    "family-law-i";
+
   const hasExpandableCourseOverview =
     isCivilProcedureCourse ||
     isTortsCourse ||
-    isConstitutionalLawCourse;
+    isConstitutionalLawCourse ||
+    isFamilyLawCourse;
 
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
@@ -778,7 +783,9 @@ export default function CourseDetails() {
                     ? "Code of Civil Procedure and Limitation"
                     : isTortsCourse
                       ? "Law of Torts, MV and CP Laws"
-                      : "Indian Constitutional Law – I"}
+                      : isConstitutionalLawCourse
+                        ? "Indian Constitutional Law – I"
+                        : "Family Law – I: Hindu Law"}
                 </h3>
 
                 {isCivilProcedureCourse ? (
@@ -801,11 +808,18 @@ export default function CourseDetails() {
                     students to understand how legal rights and claims are
                     protected and enforced.
                   </p>
-                ) : (
+                ) : isConstitutionalLawCourse ? (
                   <p>
                     <strong>Indian Constitutional Law – I</strong> introduces the
                     foundations, principles, fundamental rights, duties and
                     institutions established by the Constitution of India.
+                  </p>
+                ) : (
+                  <p>
+                    <strong>Family Law – I: Hindu Law</strong> introduces the
+                    sources and principles of Hindu law, family relationships,
+                    property, succession, marriage, adoption, maintenance and
+                    guardianship.
                   </p>
                 )}
 
