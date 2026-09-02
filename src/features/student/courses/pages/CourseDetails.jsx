@@ -488,11 +488,16 @@ export default function CourseDetails() {
     course?.slug ===
     "family-law-i";
 
+  const isCriminalLawCourse =
+    course?.slug ===
+    "criminal-law-i-transitioning-from-ipc-to-bns";
+
   const hasExpandableCourseOverview =
     isCivilProcedureCourse ||
     isTortsCourse ||
     isConstitutionalLawCourse ||
-    isFamilyLawCourse;
+    isFamilyLawCourse ||
+    isCriminalLawCourse;
 
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
@@ -785,7 +790,9 @@ export default function CourseDetails() {
                       ? "Law of Torts, MV and CP Laws"
                       : isConstitutionalLawCourse
                         ? "Indian Constitutional Law – I"
-                        : "Family Law – I: Hindu Law"}
+                        : isFamilyLawCourse
+                          ? "Family Law – I: Hindu Law"
+                          : "Criminal Law I (Transitioning from IPC to BNS)"}
                 </h3>
 
                 {isCivilProcedureCourse ? (
@@ -814,12 +821,18 @@ export default function CourseDetails() {
                     foundations, principles, fundamental rights, duties and
                     institutions established by the Constitution of India.
                   </p>
-                ) : (
+                ) : isFamilyLawCourse ? (
                   <p>
                     <strong>Family Law – I: Hindu Law</strong> introduces the
                     sources and principles of Hindu law, family relationships,
                     property, succession, marriage, adoption, maintenance and
                     guardianship.
+                  </p>
+                ) : (
+                  <p>
+                    <strong>Criminal Law I</strong> introduces the foundational
+                    principles of criminal liability and the transition from the
+                    Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.
                   </p>
                 )}
 
