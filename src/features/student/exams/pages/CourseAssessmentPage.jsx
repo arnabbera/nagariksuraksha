@@ -14,6 +14,11 @@ import {
   criminalLawIFinalExam,
   criminalLawIMockTests,
 } from "../../../../data/exams/criminalLawI/assessments";
+import {
+  PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG,
+  publicInternationalLawFinalExam,
+  publicInternationalLawMockTests,
+} from "../../../../data/exams/publicInternationalLaw/assessments";
 import { getCourseBySlug } from "../../../../services/courseService";
 import {
   getStudentEnrollment,
@@ -44,6 +49,10 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
     [CRIMINAL_LAW_I_COURSE_SLUG]: {
       final: criminalLawIFinalExam,
       mocks: criminalLawIMockTests,
+    },
+    [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
+      final: publicInternationalLawFinalExam,
+      mocks: publicInternationalLawMockTests,
     },
   };
   const courseAssessments = assessmentRegistry[courseSlug];
