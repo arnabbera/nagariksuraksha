@@ -763,22 +763,183 @@ Use the following sequence:
   {
     title: "Offences against Public Tranquillity",
     shortDescription:
-      "Unlawful assembly, rioting, common object, affray and related offences affecting public peace.",
+      "A detailed study of unlawful assembly, membership, common-object liability, rioting, armed rioting, dispersal orders, affray and offences affecting public peace.",
     overview:
-      "This unit examines group-based criminality and offences that disturb public order and communal peace.",
-    detailedContent:
-      "Unlawful assembly and common object; liability of members; rioting and armed rioting; provocation and suppression of riots; promoting enmity; imputations prejudicial to national integration; affray; and comparative treatment under the Bharatiya Nyaya Sanhita, 2023.",
+      "Public tranquillity offences protect collective peace and lawful public order. This chapter focuses on IPC Sections 141–152 and their principal consolidation in BNS Sections 189–191 and 195. It explains when an assembly of five or more persons becomes unlawful, how intentional membership is proved, when every member becomes constructively liable for an offence committed in prosecution of the common object, and when force or violence converts an unlawful assembly into a riot. It also distinguishes unlawful assembly from criminal conspiracy, common intention and affray, and introduces closely related BNS provisions concerning provocation, riots, affray and public harmony.",
+    learningObjectives: [
+      "Define an unlawful assembly and identify each statutory common object.",
+      "Explain how a lawful assembly may subsequently become unlawful.",
+      "Determine when joining or continuing in an assembly amounts to intentional membership.",
+      "Distinguish common object under IPC Section 149 and BNS Section 190 from common intention and criminal conspiracy.",
+      "Apply constructive liability to offences committed in prosecution of a common object or known to be likely.",
+      "Explain the ingredients of rioting and armed rioting.",
+      "Analyse liability after a lawful command to disperse.",
+      "Explain liability for hiring, engaging, harbouring or going armed for an unlawful assembly.",
+      "Distinguish unlawful assembly and rioting from affray and peaceful protest.",
+      "Compare IPC Sections 141–152 with the consolidated BNS framework.",
+    ],
+    detailedContent: `1. Meaning and Purpose of Public Tranquillity
+
+Public tranquillity means the condition of collective peace in which people can exercise rights and public authorities can perform lawful functions without group violence, intimidation or disorder. These offences address the special danger created when several persons combine around a prohibited common object.
+
+The mere presence of a crowd is not criminal. The law requires the prescribed number of persons, a statutorily prohibited common object, knowledge of facts making the assembly unlawful, or other ingredients of the specific offence. Peaceful assembly remains protected by Article 19(1)(b), subject to reasonable restrictions under Article 19(3).
+
+2. Unlawful Assembly under IPC Section 141
+
+An assembly of five or more persons is an unlawful assembly if its common object is:
+
+(a) to overawe by criminal force or show of criminal force the Central or a State Government, Parliament, a State Legislature, or a public servant exercising lawful power;
+(b) to resist the execution of any law or legal process;
+(c) to commit mischief, criminal trespass or another offence;
+(d) by criminal force or show of criminal force, to take or obtain possession of property, deprive a person of a right of way, water or another incorporeal right, or enforce a right or supposed right; or
+(e) by criminal force or show of criminal force, to compel a person to do what that person is not legally bound to do, or omit what that person is legally entitled to do.
+
+An assembly lawful at its beginning may subsequently become unlawful if its common object changes. Conversely, individual misconduct does not automatically establish that every person present shared a prohibited common object.
+
+3. Common Object
+
+Common object is the shared objective of the assembly. It may be formed before the members gather or develop suddenly at the scene. It need not be the product of a formal agreement.
+
+The object is inferred from proved circumstances such as the nature of the assembly, words used, weapons carried, conduct, target, route, prior communications, division of roles and behaviour before, during and after the incident. Courts must avoid assuming a common object merely from proximity, family relationship or presence in a large crowd.
+
+4. Membership under IPC Sections 142–145
+
+Under IPC Section 142, a person becomes a member when, being aware of facts rendering the assembly unlawful, the person intentionally joins it or continues in it. Sections 143–145 prescribe punishment for membership, armed membership, and joining or remaining after the assembly has lawfully been commanded to disperse.
+
+Knowledge and intentional participation are essential. A passer-by, victim, observer, person trapped at the location or one who has clearly withdrawn is not automatically a member. Presence may be strong evidence when combined with conduct, but it is not an irrebuttable rule.
+
+5. BNS Section 189: Consolidated Unlawful-Assembly Rules
+
+BNS Section 189 consolidates the definition of unlawful assembly, membership and several related IPC offences. It retains the requirement of five or more persons and substantially preserves the five prohibited common objects.
+
+Its sub-sections address intentional membership; joining or continuing after a lawful command to disperse; armed membership; knowingly remaining in an assembly likely to disturb public peace after a command to disperse; hiring or promoting persons to join; harbouring hired persons; and being hired or going armed to assist the prohibited acts.
+
+The consolidation means that an answer should identify the relevant sub-section, not cite Section 189 generally without stating the particular conduct.
+
+6. Rioting under IPC Sections 146–148
+
+Rioting occurs when force or violence is used by an unlawful assembly, or by any member of it, in prosecution of the common object. Every member of that unlawful assembly is then guilty of rioting under the statutory rule.
+
+IPC Section 147 provides punishment for rioting. Section 148 provides enhanced punishment where the offender is armed with a deadly weapon or anything which, used as a weapon of offence, is likely to cause death.
+
+An unlawful assembly can exist without rioting; rioting requires force or violence. A violent incident involving fewer than five persons may constitute other offences but cannot satisfy the five-person foundation of unlawful assembly on those facts alone.
+
+7. Rioting under BNS Section 191
+
+BNS Section 191 consolidates the definition and punishment of rioting. Sub-section (1) defines the offence; sub-section (2) provides imprisonment up to two years, fine, or both; and sub-section (3) provides imprisonment up to five years, fine, or both where the rioter is armed with a deadly weapon or an object likely to cause death when used as a weapon.
+
+The BNS therefore places definition, ordinary punishment and armed-rioting punishment within one section while substantially retaining the underlying structure.
+
+8. Constructive Liability under IPC Section 149
+
+IPC Section 149 makes every member of an unlawful assembly guilty of an offence committed by any member where the offence is:
+
+(a) committed in prosecution of the common object; or
+(b) one which members knew to be likely to be committed in prosecution of that object.
+
+This is a rule of constructive liability, but it is not unlimited group punishment. The prosecution must prove an unlawful assembly, the accused's membership at the relevant time, the common object, the offence committed by a member, and the required connection or likelihood and knowledge.
+
+9. BNS Section 190
+
+BNS Section 190 substantially carries forward the common-object rule. If an offence is committed by a member in prosecution of the common object, or is one the members knew to be likely in prosecution of it, every person who was a member at the time is guilty of that offence.
+
+The provision does not require proof that each member performed the final physical act. It does require a reliable finding of membership and statutory connection. Liability must be assessed separately for each accused, particularly where a gathering is large or changes over time.
+
+10. Common Object, Common Intention and Conspiracy
+
+Common object requires an unlawful assembly of at least five persons and does not necessarily require a prior agreement. Common intention is a joint-liability principle connected with participation in a criminal act done in furtherance of a shared intention and does not require five persons.
+
+Criminal conspiracy centres on an agreement between at least two persons to pursue the unlawful object or means. The same evidence may raise more than one doctrine, but their ingredients cannot be treated as interchangeable.
+
+11. Liability for Hiring and Related Conduct
+
+IPC Section 150 makes a person who hires, engages, employs, promotes or connives at hiring persons to join an unlawful assembly punishable as a member and, within the statutory rule, for offences committed in pursuance of that hiring.
+
+Related IPC provisions outside the narrow Sections 141–152 range historically address harbouring hired persons and being hired or going armed. BNS Section 189 brings these related forms of liability into its consolidated sub-sections. Proof must connect the accused's conduct to the unlawful assembly; ordinary employment or association is insufficient.
+
+12. Assembly Ordered to Disperse
+
+IPC Section 145 concerns joining or continuing in an unlawful assembly knowing that it has been commanded in the manner prescribed by law to disperse. IPC Section 151 addresses knowingly joining or continuing in an assembly of five or more persons likely to disturb public peace after it has lawfully been commanded to disperse.
+
+BNS Section 189 separately reflects these situations. The prosecution must prove a lawful command, the accused's knowledge of it, continued or subsequent participation, and the character of the assembly. The legality and communication of the order are important factual questions.
+
+13. Assaulting a Public Servant Suppressing a Riot
+
+IPC Section 152 punishes assaulting, threatening to assault, obstructing, or attempting to obstruct a public servant who is endeavouring to disperse an unlawful assembly or suppress a riot or affray, and using or threatening criminal force against that public servant.
+
+BNS Section 195 addresses assault, obstruction or criminal force against a public servant performing this duty. Its punishment structure distinguishes the basic offence and the more serious use or threat of criminal force. The public servant must be acting in discharge of the relevant official duty.
+
+14. Provocation, Landholder Duties and Affray
+
+BNS Section 192 punishes malignant or wanton illegal provocation intended or known to be likely to cause rioting, with punishment depending on whether a riot occurs. Section 193 addresses specified failures of owners, occupiers, agents or managers to report, prevent, suppress or disperse an unlawful assembly or riot in the statutory circumstances.
+
+BNS Section 194 defines affray as two or more persons fighting in a public place and thereby disturbing public peace. Unlike unlawful assembly, affray needs only two persons and does not require one of the five common objects. Unlike rioting, it need not arise from an unlawful assembly.
+
+15. Public Harmony Provisions
+
+BNS Sections 196 and 197 address promoting enmity between groups and assertions prejudicial to national integration. Their IPC antecedents lie principally in Sections 153A and 153B, outside the requested Sections 141–152 syllabus range, but they are closely related to public tranquillity and are placed in the BNS chapter.
+
+These offences may involve speech and therefore require careful application of the statutory mental element, context, audience and constitutional protections. Mere unpopular opinion should not be equated with the prohibited promotion of enmity or disharmony.
+
+16. Peaceful Protest and Constitutional Protection
+
+Article 19(1)(a) protects speech and Article 19(1)(b) protects peaceful assembly without arms. These rights are subject to constitutionally permitted reasonable restrictions. A demonstration does not become an unlawful assembly merely because it criticises government or causes inconvenience.
+
+The legal question is whether five or more persons share one of the prohibited common objects and whether the accused knowingly and intentionally joins or continues. Violence, weaponry, coercive purpose, refusal after a lawful dispersal command and conduct of individual participants must be analysed in context.
+
+17. Evidence and Withdrawal
+
+Membership and common object may be proved through direct or circumstantial evidence, including reliable video, location evidence, communications, weapons, injuries, slogans, conduct and identified roles. Digital evidence must be authenticated, and group identification must not replace individual proof.
+
+A member may withdraw before the offence, but withdrawal must be real and communicated or manifested by clear conduct. Mere physical movement within the scene may not prove withdrawal. A person who joins later is assessed from the time of joining, not automatically from the assembly's beginning.
+
+18. Method for Solving Problems
+
+Use the following sequence:
+
+(a) identify whether at least five persons formed the assembly;
+(b) state the precise prohibited common object;
+(c) determine when the object arose or changed;
+(d) prove the accused's awareness and intentional membership;
+(e) identify any lawful command to disperse and knowledge of it;
+(f) determine whether force or violence made the offence rioting;
+(g) identify weapons and the armed-rioting rule;
+(h) for constructive liability, connect the offence to the common object or prove known likelihood;
+(i) distinguish common object from common intention and conspiracy;
+(j) examine withdrawal, late entry and individual roles;
+(k) identify the precise IPC section or BNS section and sub-section; and
+(l) apply constitutional protection to peaceful speech and assembly before reaching a reasoned conclusion.`,
     keyPoints: [
-      "Unlawful assembly and common object",
-      "Constructive liability of members",
-      "Rioting and armed rioting",
-      "Promoting enmity",
-      "Affray and public peace",
+      "An unlawful assembly requires at least five persons sharing one of the statutorily prohibited common objects.",
+      "A lawful assembly may subsequently become unlawful when its common object changes.",
+      "Membership requires awareness of the relevant facts and intentional joining or continuation.",
+      "Mere presence in a crowd does not automatically prove membership.",
+      "Common object may develop suddenly and does not require a formal prior agreement.",
+      "Rioting requires force or violence by an unlawful assembly or a member in prosecution of its common object.",
+      "An unlawful assembly may exist without rioting, but rioting under these provisions rests on an unlawful assembly.",
+      "Armed rioting attracts enhanced punishment under IPC Section 148 and BNS Section 191(3).",
+      "Constructive liability applies only when the offence advances the common object or was known to be likely in its prosecution.",
+      "Each accused's membership at the time of the offence must be established separately.",
+      "Common object, common intention and criminal conspiracy have distinct ingredients.",
+      "A lawful dispersal command and the accused's knowledge are essential to dispersal-related liability.",
+      "BNS Section 189 consolidates the definition, membership and several hiring and dispersal offences.",
+      "BNS Section 190 carries forward constructive common-object liability.",
+      "BNS Section 191 consolidates rioting and armed-rioting rules.",
+      "Affray requires fighting by two or more persons in a public place and disturbance of public peace.",
+      "Peaceful protest is constitutionally protected and must not be presumed unlawful merely because it is critical or inconvenient.",
+      "Every problem should identify number, common object, membership, force, weapon, dispersal order and statutory connection separately.",
     ],
     provisions: [
       "Indian Penal Code, 1860 — Sections 141–152",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Bharatiya Nyaya Sanhita, 2023 — Section 189",
+      "Bharatiya Nyaya Sanhita, 2023 — Section 190",
+      "Bharatiya Nyaya Sanhita, 2023 — Section 191",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 192–195",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 196–197 (related public-harmony provisions)",
+      "Constitution of India — Articles 19(1)(a), 19(1)(b), 19(2) and 19(3)",
     ],
+    examFocus:
+      "Start by proving five or more persons and stating the exact common object. Then establish the accused's knowing and intentional membership, determine whether force or violence created rioting, and apply constructive liability only after connecting the substantive offence to the common object or known likelihood. Comparative answers should explain how BNS Sections 189–191 consolidate the IPC rules and should distinguish unlawful assembly from common intention, conspiracy, affray and constitutionally protected peaceful protest.",
   },
   {
     title: "False Evidence and Offences against Public Justice",
