@@ -603,7 +603,14 @@ export default function PublicCourseDetailsPage() {
               </div>
             </div>
 
-            <div className="course-hero-media">
+            <div
+              className={`course-hero-media ${
+                course.slug ===
+                "criminal-law-i-transitioning-from-ipc-to-bns"
+                  ? "course-hero-media-full-image"
+                  : ""
+              }`}
+            >
               {desktopImage ? (
                 <picture>
                   {mobileImage && (
@@ -1170,6 +1177,15 @@ export default function PublicCourseDetailsPage() {
 
             .course-hero-media img {
               object-fit: cover;
+            }
+
+            .course-hero-media.course-hero-media-full-image {
+              aspect-ratio: 16 / 9;
+              background: #06182f;
+            }
+
+            .course-hero-media-full-image img {
+              object-fit: contain;
             }
 
             .course-image-fallback {
