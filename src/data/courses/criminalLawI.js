@@ -193,22 +193,191 @@ For an examination or practical problem, use the following sequence:
   {
     title: "Abetment",
     shortDescription:
-      "Instigation, conspiracy and intentional aid constituting abetment, together with liability and punishment.",
+      "A detailed study of instigation, abetment by conspiracy, intentional aid, the legal character of an abettor, cross-border abetment, and liability when the act or effect differs from what was intended.",
     overview:
-      "This unit examines how a person may incur criminal liability by encouraging, facilitating or assisting the commission of an offence.",
-    detailedContent:
-      "Abetment by instigation, conspiracy or intentional aid; abettor; abetment in India and outside India; liability where the act abetted is committed or differs from the intended act; punishment of abetment; and the corresponding treatment of abetment under the Bharatiya Nyaya Sanhita, 2023.",
+      "Abetment extends criminal responsibility to a person who intentionally encourages, plans or facilitates another person's conduct. The abettor may be liable even when the principal actor refuses, lacks legal capacity, acts with a different intention, performs a different act, or causes a different effect. This chapter explains IPC Sections 107–113 and their restructured counterparts in BNS Sections 45–53. It distinguishes the three statutory modes of abetment, identifies the mental connection required between the abettor and the act, explains when completion of the principal offence is unnecessary, and provides a method for analysing consequence-based liability.",
+    learningObjectives: [
+      "Define abetment and identify its three statutory modes.",
+      "Explain instigation through express words, conduct, wilful misrepresentation or wilful concealment.",
+      "Distinguish abetment by conspiracy from the independent offence of criminal conspiracy.",
+      "Determine when an act or illegal omission amounts to intentional aid.",
+      "Explain the legal meaning of abettor and why the principal actor need not be legally capable or guilty.",
+      "Analyse abetment committed across national borders under the IPC and BNS.",
+      "Apply the punishment rule where the act abetted is committed and no special punishment is provided.",
+      "Determine liability where the principal actor has a different intention, performs a different act or causes a different effect.",
+      "Distinguish abetment from mere knowledge, presence, association, common intention and attempt.",
+      "Compare IPC Sections 107–113 with BNS Sections 45–53.",
+    ],
+    detailedContent: `1. Meaning and Basis of Abetment
+
+A person may contribute to an offence without personally performing its final physical act. The law of abetment imposes responsibility where a person intentionally stimulates, coordinates or facilitates the doing of a thing by another. It prevents a person from escaping liability merely because another individual carried out the immediate act.
+
+Abetment is an independent form of criminal participation. Its existence depends on the abettor's conduct and mental state, not solely on the conviction of the person abetted. The act abetted need not always be completed, and the person induced or assisted need not always be legally capable of committing the offence.
+
+IPC Section 107 defines abetment of a thing. IPC Sections 108 and 108A explain the abettor and cross-border abetment. IPC Sections 109–113 regulate punishment and liability when the act, intention or effect differs. Under the BNS, these rules are reorganised principally in Sections 45–53, while Section 48 adds express coverage for abetment outside India of an offence committed in India.
+
+2. Three Modes of Abetment
+
+IPC Section 107 and BNS Section 45 recognise three distinct modes:
+
+(a) instigating a person to do a thing;
+(b) engaging in a conspiracy for doing that thing, followed by an act or illegal omission in pursuance of the conspiracy and in order to do that thing; or
+(c) intentionally aiding the doing of that thing by an act or illegal omission.
+
+The prosecution must identify and prove at least one statutory mode. Merely using the word abetment without showing instigation, the special conspiracy requirements, or intentional aid is insufficient.
+
+The thing abetted may be a positive act or an illegal omission. Liability must be connected to the particular conduct encouraged, planned or assisted.
+
+3. Abetment by Instigation
+
+To instigate is to goad, urge, provoke, incite, encourage or stimulate another person to act. Instigation may be conveyed through spoken or written words, directions, threats, deliberate conduct, or a calculated course of dealing. No fixed phrase is necessary; the court examines the meaning and effect of the conduct in its context.
+
+An angry or careless remark does not automatically become instigation. The alleged words or conduct must reveal the required intention and a sufficiently direct connection with the thing abetted. Context, persistence, authority, relationship between the parties, surrounding acts and proximity to the proposed conduct may all be relevant.
+
+Explanation 1 to IPC Section 107, retained in BNS Section 45, treats wilful misrepresentation or wilful concealment of a material fact that a person is bound to disclose as instigation when it voluntarily causes, procures, or attempts to cause or procure the thing to be done.
+
+The concealment must be wilful, the fact must be material, and there must be a duty to disclose it. Innocent error, silence without a legal duty, or an immaterial omission does not satisfy this rule.
+
+Instigation may be complete even if the person instigated refuses to act. For example, if A intentionally urges B to murder C and B refuses, A may nevertheless have committed abetment, subject to the applicable punishment provision.
+
+4. Abetment by Conspiracy
+
+The second mode requires:
+
+(a) an engagement between the abettor and one or more persons in a conspiracy for doing the thing; and
+(b) an act or illegal omission in pursuance of that conspiracy and in order to the doing of that thing.
+
+Agreement alone is not sufficient for abetment by conspiracy under this limb; the required act or illegal omission must follow. The act need not itself be illegal if it is done in pursuance of the plan and in order to accomplish the thing abetted.
+
+Abetment by conspiracy must be distinguished from the substantive offence of criminal conspiracy. For the abetment mode, the statutory act or illegal omission in pursuance is essential. Criminal conspiracy is separately defined and may, depending on its object, be complete upon agreement under its own statutory conditions. The two concepts overlap but are not interchangeable.
+
+A person need not communicate directly with every participant if the evidence proves intentional participation in the relevant plan and the required act or omission. Mere knowledge that others have formed a plan is not the same as engaging in it.
+
+5. Abetment by Intentional Aid
+
+A person intentionally aids when, by an act or illegal omission, that person deliberately facilitates the doing of the thing. Explanation 2 to IPC Section 107 and BNS Section 45 recognises aid where something is done before or at the time of commission in order to facilitate the act and the conduct in fact facilitates it.
+
+Aid may include supplying a weapon, providing transport, opening access, disabling security, keeping watch, sharing material information, or deliberately omitting a legal duty so that the act can occur. The form of assistance depends on the facts.
+
+The aid must be intentional. Mere presence, accidental assistance, passive knowledge, association with the offender, or failure to prevent an offence where no legal duty exists will not ordinarily constitute intentional aid. Presence may become relevant where it was intended to encourage, protect or facilitate the principal actor.
+
+An illegal omission can amount to aid where the alleged abettor was legally bound to act and deliberately failed to do so for the purpose of facilitating the thing. The source and content of the legal duty must be identified.
+
+6. Who Is an Abettor?
+
+IPC Section 108 and BNS Section 46 describe an abettor as a person who abets the commission of an offence or an act that would be an offence if performed by a person legally capable of committing it with the same intention or knowledge as the abettor.
+
+Several consequences follow:
+
+First, an illegal omission may be abetted even where the abettor is not personally bound to perform the omitted duty.
+
+Second, completion of the act abetted is not essential to the existence of abetment. The required consequence of the principal offence also need not occur.
+
+Third, the person abetted need not possess legal capacity, guilty intention or knowledge. A person who intentionally uses a child or a person of unsound mind as an instrument may remain liable as an abettor.
+
+Fourth, abetment of abetment is itself an offence. A may be liable for intentionally inducing B to induce C to commit an offence.
+
+Fifth, an abettor may participate through one mode while the intermediate participant uses another. The evidence must establish the mental and causal connection required by the relevant statutory provision.
+
+7. Mental Element of Abetment
+
+Abetment is not established by objective assistance alone. Instigation must be intentional; participation in the conspiracy must be conscious and directed to the thing; aid must be intentionally provided.
+
+The abettor's mens rea is assessed separately from that of the principal actor. The law expressly deals with situations in which the principal acts with a different intention or knowledge. The abettor's liability therefore depends on what the abettor intended, knew, facilitated and could legally foresee under the applicable provision.
+
+Motive may provide evidentiary context but does not replace proof of intention. A person may have a hostile motive yet not abet the offence; conversely, a person may intentionally aid for financial gain without sharing the principal actor's personal motive.
+
+8. Cross-Border Abetment
+
+IPC Section 108A and BNS Section 47 cover a person in India who abets an act outside India that would constitute an offence if committed in India.
+
+BNS Section 48 additionally states that a person outside India who abets an act in India, which would constitute an offence if committed in India, commits abetment under the BNS. This express two-way formulation is an important feature of the transition to the BNS.
+
+Cross-border questions require attention to the location of the abettor, the principal act, the intended consequence, the statutory jurisdiction rule, and applicable criminal procedure.
+
+9. Punishment Where the Act Abetted Is Committed
+
+IPC Section 109 and BNS Section 49 apply where the act abetted is committed in consequence of the abetment and the governing law contains no express provision for punishing that abetment. The abettor is then punished with the punishment provided for the principal offence.
+
+The expression in consequence of the abetment requires a connection between the abetment and the act. The principal act need not be performed in precisely the manner imagined, but the statutory rules governing variations must be applied.
+
+Where another provision specifically prescribes punishment for the particular abetment, that special provision governs instead of the general residual rule.
+
+10. Different Intention or Knowledge of the Principal Actor
+
+IPC Section 110 and BNS Section 50 address a case in which the person abetted performs the act with an intention or knowledge different from that of the abettor. The abettor is punished according to the offence that would have been committed if the act had been done with the abettor's intention or knowledge.
+
+This provision keeps the assessment of the abettor's culpability tied to the abettor's own mental state rather than automatically adopting the principal actor's state of mind.
+
+11. Different Act Done
+
+IPC Section 111 and BNS Section 51 extend liability where one act is abetted but a different act is done, provided the different act was a probable consequence of the abetment and was committed under the influence of the instigation, aid or conspiracy.
+
+The test is not whether any later act occurred, but whether the different act was sufficiently connected and was a probable consequence of what was abetted. A wholly independent act falling outside that connection should not automatically be attributed to the abettor.
+
+12. Cumulative Liability for the Act Abetted and the Act Done
+
+IPC Section 112 and BNS Section 52 apply where the different act for which the abettor is liable constitutes an offence distinct from the act abetted. The abettor may be punished for each offence.
+
+The provision prevents the additional distinct offence from being absorbed into the original abetment where the statutory conditions for liability are satisfied.
+
+13. Different Effect Caused
+
+IPC Section 113 and BNS Section 53 address a case where the act abetted produces an effect different from the effect intended by the abettor. Liability for the actual effect arises where the abettor knew that the act abetted was likely to cause that effect.
+
+Knowledge of likelihood is essential. The rule does not impose unlimited liability for every remote or unexpected result. The court must identify the intended effect, actual effect, abettor's knowledge, and causal relationship.
+
+14. Distinguishing Related Concepts
+
+Abetment and common intention are different. Abetment focuses on instigation, conspiracy with the required further act, or intentional aid. Common intention concerns joint participation in a criminal act in furtherance of a shared intention under its statutory rule.
+
+Abetment and criminal conspiracy are also different. Criminal conspiracy is a substantive offence based on an unlawful agreement under the applicable provision. Abetment by conspiracy requires the additional act or illegal omission specified in the definition of abetment.
+
+Abetment and attempt operate at different stages. Abetment concerns intentionally influencing or assisting another's conduct. Attempt concerns conduct by the accused moving sufficiently towards commission of an offence after preparation.
+
+Mere approval, knowledge, relationship, presence or failure to object is not automatically abetment. Each fact must be connected to a statutory mode and the required intention.
+
+15. Method for Solving Abetment Problems
+
+Use the following sequence:
+
+(a) identify the precise thing or offence allegedly abetted;
+(b) identify whether the allegation is instigation, conspiracy-based abetment, intentional aid, or more than one mode;
+(c) specify the words, acts, agreement or illegal omissions relied upon;
+(d) prove the abettor's required intention or knowledge;
+(e) determine whether the principal act was committed and whether it occurred in consequence of the abetment;
+(f) identify any difference in the principal actor's intention, the act performed or the effect caused;
+(g) apply IPC Sections 109–113 or BNS Sections 49–53 as appropriate;
+(h) consider territorial and cross-border rules;
+(i) distinguish abetment from mere presence, association, knowledge, common intention, conspiracy and attempt; and
+(j) reach a reasoned conclusion for each alleged abettor separately.`,
     keyPoints: [
-      "Meaning and essential elements of abetment",
-      "Instigation, conspiracy and intentional aid",
-      "Liability of an abettor",
-      "Punishment where the offence is or is not committed",
-      "IPC-to-BNS comparison",
+      "Abetment may be committed by instigation, conspiracy with the required further act or illegal omission, or intentional aid.",
+      "Instigation may arise through words, conduct, wilful misrepresentation or wilful concealment of a material fact that must be disclosed.",
+      "Abetment by conspiracy requires an act or illegal omission in pursuance of the plan and in order to do the thing.",
+      "Intentional aid must be deliberate and must facilitate the thing; accidental assistance or passive knowledge is insufficient.",
+      "Mere presence is not automatically abetment, but intended presence may encourage or facilitate an offence.",
+      "An illegal omission may constitute aid only where a legal duty to act exists and the omission is intentional.",
+      "The act abetted need not be completed for abetment to exist.",
+      "The principal actor need not be legally capable or share the abettor's guilty intention or knowledge.",
+      "Abetment of abetment is itself an offence.",
+      "IPC Section 108A and BNS Section 47 address abetment in India of an act outside India.",
+      "BNS Section 48 expressly covers abetment outside India of an offence committed in India.",
+      "IPC Section 109 and BNS Section 49 provide the residual punishment rule when the act is committed and no special punishment exists.",
+      "Liability may continue where the principal has a different intention, does a different probable act, or causes a different effect known to be likely.",
+      "IPC Sections 110–113 correspond principally to BNS Sections 50–53.",
+      "Abetment must be distinguished from common intention, substantive criminal conspiracy and attempt.",
+      "Each abetment problem should identify the mode, mens rea, connection, completed conduct, variation and applicable punishment provision.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 107–113",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Indian Penal Code, 1860 — Section 107",
+      "Indian Penal Code, 1860 — Sections 108–108A",
+      "Indian Penal Code, 1860 — Sections 109–113",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 45–48",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 49–53",
     ],
+    examFocus:
+      "For every problem, identify the exact mode of abetment and prove its mental element. Distinguish abetment by conspiracy from criminal conspiracy, and intentional aid from mere knowledge or presence. Where the principal conduct varies, apply the separate rules for different intention, different act, cumulative offences and different effect. Comparative answers should map IPC Sections 107–113 to BNS Sections 45–53 and specifically note the cross-border rule added in BNS Section 48.",
   },
   {
     title: "Criminal Conspiracy",
