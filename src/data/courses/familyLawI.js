@@ -404,6 +404,83 @@ For separate property of a male intestate, begin directly with Sections 8 to 10.
         "Describe the legal effects and irrevocability of a valid adoption.",
         "Apply statutory maintenance rights and factors determining amount.",
       ],
+      detailedContent: `
+1. Introduction, scope and structure
+
+The Hindu Adoptions and Maintenance Act, 1956 codifies two related fields of Hindu personal law. Chapter II regulates adoption, while Chapter III regulates maintenance. Section 2 identifies the persons to whom the Act applies, Section 3 defines important expressions, and Section 4 gives the Act overriding effect in matters for which it makes provision.
+
+Adoption creates a permanent legal parent-child relationship and affects status and succession. Consequently, every mandatory statutory requirement must be proved. Maintenance provisions protect specified family members and dependants, but the claimant, relationship, source of obligation and applicable remedy must be identified precisely.
+
+2. Requisites of a valid adoption — Sections 5 and 6
+
+Section 5 declares that an adoption made after commencement of the Act contrary to Chapter II is void. A void adoption creates no rights in the adoptive family and does not destroy rights in the birth family.
+
+Section 6 groups the essential requisites: the adopter must possess capacity and the right to adopt; the person giving the child must possess capacity; the child must be capable of being adopted; and the adoption must comply with all other statutory conditions. Consent or intention alone cannot cure non-compliance with a mandatory condition.
+
+3. Capacity to adopt — Sections 7 and 8
+
+Under Section 7, an adult male Hindu of sound mind has capacity to adopt a son or daughter. If he has a wife living, her consent is ordinarily mandatory unless she has completely and finally renounced the world, ceased to be Hindu, or has been declared by a competent court to be of unsound mind. Where more than one wife is living, the statutory rule concerning consent of each must be applied.
+
+Section 8 governs an adult female Hindu of sound mind. Its present text must be applied to determine capacity, including the effect of her marital status and the statutory circumstances concerning her husband. Capacity to adopt should not be confused with the separate question of who may lawfully give the child in adoption.
+
+4. Persons capable of giving in adoption — Section 9
+
+Only the father, mother or guardian may give a child in adoption. The father and mother have equal statutory rights, subject to the consent requirements and exceptions stated in Section 9. A guardian may give a child in adoption only with prior permission of the court and only in the circumstances specified by the Act.
+
+When deciding a guardian's request, the court must be satisfied that the adoption will be for the welfare of the child, having regard to the child's wishes according to age and understanding, and that no prohibited payment or reward has been received or agreed.
+
+5. Who may be adopted — Section 10
+
+A person may be adopted only if the statutory conditions are met. The person must be Hindu, must not already have been adopted, must ordinarily be unmarried unless a governing custom permits adoption of married persons, and must ordinarily be below fifteen years unless a governing custom permits adoption above that age. A party relying on a custom bears the burden of establishing a legally valid custom.
+
+6. Other mandatory conditions — Section 11
+
+Section 11 prevents specified conflicts and requires compliance with several safeguards. If a son is adopted, the adopter must not already have a Hindu son, son's son or son's son's son living at the time. If a daughter is adopted, the adopter must not already have a Hindu daughter or son's daughter living.
+
+Where a male adopts a female child, he must be at least twenty-one years older than the child; where a female adopts a male child, she must be at least twenty-one years older. The same child cannot be adopted simultaneously by two or more persons.
+
+Most importantly, the child must be actually given and taken in adoption with the intention of transferring the child from the birth family, or relevant place or family of upbringing, to the adoptive family. Datta homam is not essential, but the act of giving and taking is a substantive statutory requirement. In M. Vanaja v. M. Sarla Devi, the Supreme Court reaffirmed that mandatory spousal consent and actual giving and taking must be proved.
+
+7. Effects, property and proof — Sections 12 to 17
+
+Under Section 12, a validly adopted child is deemed the child of the adoptive parent for all purposes from the date of adoption, and ties in the birth family are replaced by adoptive ties, subject to the statutory provisos. The child cannot marry a person whom the child could not have married in the birth family. Property vested in the child before adoption continues to vest subject to attached obligations, and the adoption cannot divest an estate already vested in another person.
+
+Section 13 preserves the adoptive parents' power to dispose of their property unless an agreement provides otherwise. Section 14 identifies the adoptive mother in specified family situations. Section 15 makes a valid adoption irrevocable: neither adopter nor adopted child may cancel it, and the child cannot renounce adoptive status to return to the birth family.
+
+Section 16 creates a rebuttable presumption where a registered document recording adoption is signed by the persons giving and taking the child. Registration assists proof but does not validate an adoption that violates mandatory conditions. Section 17 prohibits payment or reward in consideration of adoption.
+
+8. Meaning and nature of maintenance — Sections 3 and 18
+
+Maintenance includes provision for food, clothing, residence, education and medical attendance and treatment; for an unmarried daughter it also includes reasonable marriage expenses. Section 18 recognises a Hindu wife's right to be maintained by her husband during her lifetime.
+
+Section 18(2) states grounds on which a wife may live separately without forfeiting maintenance, including desertion, cruelty, specified marital circumstances and another justifying cause. Section 18(3) states disqualifications under that provision. The right must be distinguished from interim or permanent relief connected with matrimonial proceedings under Sections 24 and 25 of the Hindu Marriage Act.
+
+9. Other maintenance rights — Sections 19 to 22
+
+Section 19 deals with maintenance of a widowed daughter-in-law by her father-in-law, subject to the claimant's inability to maintain herself from the sources listed and the statutory limits connected with coparcenary property. The obligation is not an unlimited personal liability detached from the section's conditions.
+
+Section 20 obliges a Hindu to maintain legitimate or illegitimate children and aged or infirm parents, subject to its terms. A child may claim during minority; the obligation toward an unmarried daughter who cannot maintain herself and toward aged or infirm parents is governed by the provision. The statutory reference to parent includes a childless stepmother.
+
+Sections 21 and 22 identify dependants of a deceased Hindu and impose a maintenance obligation upon heirs who inherit the estate, subject to the statutory distribution and conditions. Liability is connected to the estate inherited and is not automatically identical for every heir.
+
+10. Amount, alteration and protection of maintenance — Sections 23 to 28
+
+Section 23 lists factors for determining maintenance, including the parties' position and status, reasonable wants, justification for separate residence, the claimant's property and income, and the number of persons entitled. For dependants, the court also considers the net value of the estate, the dependant's relationship, testamentary provision and other statutory factors.
+
+Section 24 states that a claimant ceasing to be Hindu cannot claim maintenance under Chapter III. Section 25 permits alteration of maintenance upon a material change in circumstances. Section 26 gives specified debts priority over a dependant's maintenance claim. Under Section 27, maintenance does not automatically become a charge on an estate unless created by agreement, decree, will or otherwise. Section 28 protects maintenance rights against certain transferees with notice or gratuitous transferees, subject to its terms.
+
+11. Relationship with other remedies
+
+A claimant may encounter remedies under HAMA, the Hindu Marriage Act, general summary-maintenance law, the Protection of Women from Domestic Violence Act, 2005, or senior-citizen legislation. These remedies have different conditions, forums and purposes. Courts coordinate overlapping awards to provide fair support while preventing double recovery for the same period and purpose.
+
+In Rajnesh v. Neha, the Supreme Court issued guidance on disclosure, assessment and adjustment of maintenance across proceedings. In Chand Dhawan v. Jawaharlal Dhawan, the Court explained the distinct fields of permanent alimony under the Hindu Marriage Act and a wife's substantive maintenance claim under HAMA.
+
+12. Problem-solving and examination method
+
+For adoption, test Sections 6, 7 or 8, 9, 10 and every applicable clause of Section 11 in order. Then analyse effects under Section 12 and proof under Section 16. Never presume adoption solely from upbringing, nomination, mutation or a deed when mandatory acts are disputed.
+
+For maintenance, identify the claimant and exact section, prove the relationship and statutory conditions, examine separate residence or disqualification, calculate capacity and reasonable need under Section 23, disclose parallel proceedings, and distinguish personal liability from liability limited to inherited estate.
+      `.trim(),
       keyPoints: [
         "An adoption contrary to the mandatory statutory provisions is void.",
         "Sections 7 and 8 regulate the capacity of male and female Hindus to adopt.",
@@ -411,7 +488,49 @@ For separate property of a male intestate, begin directly with Sections 8 to 10.
         "Section 12 states the principal effects of adoption and Section 15 bars cancellation of a valid adoption.",
         "Sections 18 to 22 govern important maintenance claims.",
       ],
-      provisions: ["Sections 5–12", "Section 15", "Sections 18–23"],
+      provisions: [
+        "Hindu Adoptions and Maintenance Act, 1956 — Sections 2–6",
+        "Hindu Adoptions and Maintenance Act, 1956 — Sections 7–11",
+        "Hindu Adoptions and Maintenance Act, 1956 — Sections 12–17",
+        "Hindu Adoptions and Maintenance Act, 1956 — Sections 18–22",
+        "Hindu Adoptions and Maintenance Act, 1956 — Sections 23–28",
+        "Hindu Marriage Act, 1955 — Sections 24 and 25",
+        "Protection of Women from Domestic Violence Act, 2005",
+      ],
+      importantCases: [
+        {
+          caseName: "M. Vanaja v. M. Sarla Devi",
+          citation: "Supreme Court of India (2020)",
+          principle: "Mandatory requirements including applicable spousal consent and actual giving and taking must be proved for a valid adoption.",
+        },
+        {
+          caseName: "Ghisalal v. Dhapubai",
+          citation: "Supreme Court of India (2011)",
+          principle: "The consent required from a living wife under Section 7 is mandatory unless a statutory exception is established.",
+        },
+        {
+          caseName: "Lakshman Singh Kothari v. Rup Kanwar",
+          citation: "Supreme Court of India (1961)",
+          principle: "Giving and taking with the intention to transfer the child is fundamental to adoption; no rigid ceremonial form is universal.",
+        },
+        {
+          caseName: "Chand Dhawan v. Jawaharlal Dhawan",
+          citation: "Supreme Court of India (1993)",
+          principle: "The Court distinguished permanent alimony incidental to matrimonial decrees from a substantive maintenance claim under HAMA.",
+        },
+        {
+          caseName: "Rajnesh v. Neha",
+          citation: "Supreme Court of India (2020)",
+          principle: "Maintenance adjudication requires financial disclosure and coordination of overlapping proceedings and awards.",
+        },
+        {
+          caseName: "Abhilasha v. Parkash",
+          citation: "Supreme Court of India (2020)",
+          principle: "An unmarried Hindu daughter's substantive maintenance right under Section 20 must be pursued and adjudicated under the appropriate statutory framework.",
+        },
+      ],
+      examFocus:
+        "Prepare every requisite of a valid adoption under Sections 6 to 11; capacity and consent; actual giving and taking; effects, irrevocability and evidentiary presumption; maintenance rights of wife, widowed daughter-in-law, children, parents and dependants; factors fixing amount; alteration, charge and transfer; and coordination with other maintenance remedies. In problems, test every mandatory adoption condition separately.",
     },
     {
       title: "Hindu Minority and Guardianship Act, 1956",
