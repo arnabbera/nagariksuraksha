@@ -591,22 +591,174 @@ Use the following sequence:
   {
     title: "Offences against the State",
     shortDescription:
-      "Waging war, conspiracy against the State and the historical law of sedition during the transition from IPC to BNS.",
+      "A detailed study of waging war, conspiracy and preparation against the State, attacks on constitutional authorities, the historical offence of sedition, and BNS Section 152.",
     overview:
-      "This unit studies serious offences affecting the sovereignty, security and authority of the State, with special attention to the legal transition concerning sedition.",
-    detailedContent:
-      "Waging war against the Government of India; conspiracy and preparation to wage war; collecting arms; concealing plans; assault on high constitutional authorities; the historical offence of sedition under Section 124A of the IPC; constitutional controversies; and the corresponding sovereignty, unity and integrity provisions under the Bharatiya Nyaya Sanhita, 2023.",
+      "Offences against the State protect the sovereignty, unity, integrity and lawful constitutional authority of India from organised force and other grave threats. This chapter examines IPC Sections 121–124A and their transition to BNS Sections 147–152. It distinguishes waging war from ordinary public-order offences, explains conspiracy, preparation, collection of arms and concealment, analyses coercive attacks on the President or a Governor, and traces the movement from the historical sedition provision in IPC Section 124A to the differently framed offence in BNS Section 152. Particular attention is given to intention, constitutional free speech, the date of the alleged conduct and careful ingredient-based application.",
+    learningObjectives: [
+      "Explain the purpose and special character of offences against the State.",
+      "Distinguish waging war from riot, unlawful assembly, terrorism and ordinary violent crime.",
+      "Identify the ingredients of waging, attempting and abetting war under IPC Section 121 and BNS Section 147.",
+      "Apply the special conspiracy rule in IPC Section 121A and BNS Section 148.",
+      "Distinguish conspiracy, collection of arms, concealment, preparation and attempt.",
+      "Explain liability for assaulting or overawing the President or a Governor under IPC Section 124 and BNS Section 151.",
+      "Describe the historical ingredients and constitutional limits of IPC Section 124A.",
+      "Analyse BNS Section 152 without treating it as a simple renumbering of sedition.",
+      "Differentiate protected criticism and dissent from conduct satisfying the statutory offence.",
+      "Choose the applicable IPC or BNS provision according to the date of conduct and Article 20(1).",
+    ],
+    detailedContent: `1. Nature and Purpose of Offences against the State
+
+These offences address grave attacks upon the existence, sovereignty and lawful authority of the State. Their protected interest is broader than the safety of an individual office-holder or the maintenance of peace at one location. Because punishments are severe and constitutionally protected speech may be implicated, every statutory ingredient must be proved strictly.
+
+The chapter's historical IPC range is Sections 121–124A. Under the BNS, the closest provisions are Sections 147–152 in Chapter VII. Similar subject matter does not mean that every BNS provision is identical to its IPC predecessor.
+
+2. Waging War: Meaning and Legal Character
+
+"War" in this context is not confined to formally declared warfare between nations. It involves force directed against the Government of India with the object of challenging or overpowering governmental authority. The scale, organisation, object, weapons, targets and manner of the operation are relevant.
+
+An ordinary riot, local disturbance, private revenge attack or resistance to a particular official act does not automatically become waging war. The decisive inquiry is the common design: was the force directed against governmental authority as such? The prosecution must prove this object rather than rely only on the seriousness of violence.
+
+3. IPC Section 121 and BNS Section 147
+
+IPC Section 121 punishes a person who wages war against the Government of India, attempts to wage such war, or abets the waging of such war. BNS Section 147 substantially preserves these three forms of liability.
+
+The completed offence requires participation in waging war with the required knowledge and intention. Attempt applies when conduct has moved beyond preparation and is sufficiently proximate to waging war. Abetment applies according to the governing abetment rules even if the accused does not personally carry out the principal physical attack.
+
+Both provisions prescribe death or imprisonment for life and fine. The severity makes precise proof of the prohibited object and the accused's participation essential.
+
+4. Conspiracy to Wage War
+
+IPC Section 121A and BNS Section 148 punish conspiracy, whether formed within or beyond India, to commit an offence of waging, attempting or abetting war, or to overawe the Central Government or a State Government by criminal force or show of criminal force.
+
+For this special conspiracy offence, no act or illegal omission in pursuance of the conspiracy is necessary. The agreement itself is the gist, but the prosecution must still prove a genuine meeting of minds and the particular prohibited object. Mere association, radical opinion, discussion or presence is insufficient.
+
+Punishment may be imprisonment for life or imprisonment extending to ten years, together with fine.
+
+5. Collecting Arms or Making Preparations
+
+IPC Section 122 and BNS Section 149 address collecting men, arms or ammunition, or otherwise preparing to wage war, with the intention of waging war or being prepared to wage war against the Government of India.
+
+The offence combines an objective preparatory act with a specific intention. Possessing weapons or assembling persons is not enough without proof of the prohibited purpose. Conversely, an abstract intention without the statutory preparatory conduct does not satisfy this section.
+
+The offence is punishable with imprisonment for life or imprisonment extending to ten years and fine.
+
+6. Concealing a Design to Wage War
+
+IPC Section 123 and BNS Section 150 punish concealment, by an act or illegal omission, of the existence of a design to wage war where the concealment is intended to facilitate, or is known to be likely to facilitate, that design.
+
+The prosecution must establish the design, the accused's awareness of it, concealment by conduct or legally significant omission, and the required intention or knowledge concerning facilitation. Mere silence is not automatically criminal unless the statutory conditions, including an illegal omission where alleged, are proved.
+
+Punishment may extend to ten years and fine.
+
+7. Assaulting the President or a Governor
+
+IPC Section 124 and BNS Section 151 protect the lawful exercise of power by the President of India and a Governor. The offence covers assaulting, wrongfully restraining, attempting wrongfully to restrain, or overawing by criminal force or show of criminal force, with the intention of inducing or compelling the authority to exercise, or refrain from exercising, a lawful power.
+
+The offence is not established merely because the victim holds constitutional office. The prohibited conduct and the coercive intention relating to exercise of lawful power must both be proved. Punishment may extend to seven years and fine.
+
+8. Historical Sedition under IPC Section 124A
+
+IPC Section 124A historically punished words, signs, visible representations or other conduct that brought or attempted to bring into hatred or contempt, or excited or attempted to excite disaffection towards the Government established by law in India. "Disaffection" included disloyalty and feelings of enmity.
+
+Its explanations protected lawful disapprobation of government measures or administrative action when expressed with a view to lawful alteration and without exciting or attempting to excite hatred, contempt or disaffection. The distinction between government established by law and individual office-holders was important.
+
+IPC Section 124A historically provided imprisonment for life with possible fine, imprisonment up to three years with possible fine, or fine. It must now be studied principally for historical offences, constitutional development and comparison with the BNS.
+
+9. Constitutional Limit on the Historical Provision
+
+Article 19(1)(a) protects freedom of speech and expression, subject to reasonable restrictions under Article 19(2), including in the interests of the sovereignty and integrity of India, security of the State and public order.
+
+The judicially narrowed understanding of IPC Section 124A connected criminal liability to incitement to violence or a tendency to create public disorder, rather than treating strong criticism or political dissent by itself as sedition. A problem answer should examine the words, context, audience, intention, likely effect and connection to violence or public disorder.
+
+10. BNS Section 152: Sovereignty, Unity and Integrity
+
+BNS Section 152 does not use the word "sedition". It applies where a person, purposely or knowingly, by spoken or written words, signs, visible representation, electronic communication, use of financial means or otherwise, excites or attempts to excite secession, armed rebellion or subversive activities; encourages feelings of separatist activities; endangers the sovereignty, unity and integrity of India; or indulges in or commits such act.
+
+Punishment is imprisonment for life or imprisonment extending to seven years, and fine. The express inclusion of electronic communication and financial means is significant, but the prosecution must still prove the prescribed mental element and prohibited conduct.
+
+11. Lawful Criticism under BNS Section 152
+
+The explanation to Section 152 preserves comments expressing disapprobation of governmental measures or administrative or other governmental action with a view to obtaining their alteration by lawful means, provided they do not excite or attempt to excite the prohibited activities.
+
+Peaceful disagreement, scholarship, journalism, satire, protest and advocacy do not become offences merely because they are forceful or unpopular. Protection is not unlimited: the precise words, conduct, intention, context and connection to the listed activities must be examined.
+
+12. IPC Section 124A and BNS Section 152 Compared
+
+BNS Section 152 should not be described as IPC Section 124A with a new number. IPC Section 124A focused on hatred, contempt or disaffection towards the Government established by law. BNS Section 152 instead lists secession, armed rebellion, subversive activities, separatist feelings and danger to sovereignty, unity and integrity, and expressly covers electronic communications and financial means.
+
+Both contain an explanation protecting specified lawful criticism, but their ingredients and punishment structures differ. Comparative answers must state these differences before analysing the facts.
+
+13. Applicable Law and the Transition Date
+
+The BNS came into force on 1 July 2024. Alleged conduct before that date must be analysed under the applicable IPC law and savings provisions; conduct on or after that date is analysed under the BNS. Article 20(1) prevents retrospective creation of criminal liability and retrospective enhancement of punishment.
+
+If conduct spans both periods, each alleged act should be placed on a timeline and analysed under the law governing it. Courts, not labels used by investigators or parties, determine the legally applicable provision.
+
+14. Mens Rea and Evidentiary Assessment
+
+Intent, knowledge and purpose are commonly inferred from proved circumstances: communications, selection of targets, organisation, weapons, financing, instructions, concealment, coordinated conduct and statements made in context. Possession, association or ideology alone cannot replace proof of the statutory mental element.
+
+Digital evidence must be authenticated and interpreted in full context. Isolated extracts, forwarded material, parody, news reporting and private discussion may carry different meanings. Evidence of financing must connect the accused, funds and prohibited activity rather than rest on coincidence.
+
+15. Stages of Liability
+
+The provisions create a progression of distinct liability: agreement under the special conspiracy provision; collection or other preparation with the required intention; concealment intended or known to facilitate the design; attempt sufficiently proximate to waging war; and completed waging of war. Abetment may attach through its own rules.
+
+These stages must not be merged. The same facts may support alternative or additional charges, but every count requires its own ingredients and applicable punishment.
+
+16. Distinction from Public-Order and Other Offences
+
+Offences against the State differ from unlawful assembly and rioting, which principally concern public tranquillity, and from ordinary offences against persons or property. Serious violence does not by itself prove war against the Government.
+
+Where terrorism or other special legislation may be relevant, its separate definitions, sanctions and procedural safeguards must be considered. One statutory label cannot substitute for proof under another enactment.
+
+17. Method for Solving Problems
+
+Use the following sequence:
+
+(a) fix the date and identify whether the IPC or BNS applies;
+(b) identify the protected interest and exact statutory provision;
+(c) separate agreement, preparation, concealment, attempt, abetment and completion;
+(d) state the prohibited act and required mental element;
+(e) determine whether force was directed against governmental authority as such;
+(f) connect each accused separately to the alleged design;
+(g) assess speech in its full context and apply Articles 19(1)(a) and 19(2);
+(h) for BNS Section 152, identify the precise listed activity allegedly excited, encouraged or committed;
+(i) consider lawful criticism and other statutory explanations;
+(j) apply Article 20(1) and the repeal-and-savings framework; and
+(k) reach a reasoned conclusion on each offence without relying on labels alone.`,
     keyPoints: [
-      "Waging war and related preparatory offences",
-      "Conspiracy against the State",
-      "Collection of arms and concealment",
-      "Historical scope of sedition under the IPC",
-      "Transition to the BNS sovereignty framework",
+      "Waging war requires force directed against the Government of India with the prohibited object; serious violence alone is insufficient.",
+      "IPC Section 121 and BNS Section 147 punish waging, attempting to wage and abetting war.",
+      "IPC Section 121A and BNS Section 148 punish the special conspiracy at the agreement stage without requiring an overt act.",
+      "Collection of persons, arms or ammunition requires the specific intention stated in IPC Section 122 or BNS Section 149.",
+      "Concealment requires awareness of a design and intention or knowledge that concealment will facilitate it.",
+      "IPC Section 124 and BNS Section 151 require coercive conduct plus intention concerning exercise of lawful constitutional power.",
+      "IPC Section 124A is a historical provision for pre-BNS study and cannot be applied without its constitutional limits.",
+      "Strong criticism, dissent or disapprobation does not by itself establish the historical sedition offence.",
+      "BNS Section 152 does not use the term sedition and is not a simple renumbering of IPC Section 124A.",
+      "Section 152 expressly addresses secession, armed rebellion, subversive activities, separatist feelings and danger to sovereignty, unity and integrity.",
+      "BNS Section 152 expressly includes electronic communication and use of financial means.",
+      "The mental element under BNS Section 152 is purposely or knowingly.",
+      "The explanation to BNS Section 152 protects specified criticism seeking lawful alteration of governmental measures or action.",
+      "Article 19 protects speech subject to the reasonable restrictions listed in Article 19(2).",
+      "The BNS applies from 1 July 2024; Article 20(1) bars retrospective criminalisation or enhanced punishment.",
+      "Conspiracy, preparation, concealment, attempt, abetment and completed waging of war are distinct stages requiring separate proof.",
+      "Digital evidence, financial evidence and alleged speech must be authenticated and assessed in their complete context.",
+      "Every answer should identify the exact statutory ingredient instead of relying on broad labels such as anti-national or sedition.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 121–124A",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Indian Penal Code, 1860 — Section 121",
+      "Indian Penal Code, 1860 — Section 121A",
+      "Indian Penal Code, 1860 — Section 122",
+      "Indian Penal Code, 1860 — Section 123",
+      "Indian Penal Code, 1860 — Section 124",
+      "Indian Penal Code, 1860 — Section 124A (historical)",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 147–152",
+      "Constitution of India — Articles 19(1)(a), 19(2) and 20(1)",
     ],
+    examFocus:
+      "Fix the date of conduct before selecting the IPC or BNS. Distinguish conspiracy, preparation, concealment, attempt, abetment and completed waging of war, then prove the prohibited object and each accused person's mental connection. For speech problems, compare the historical IPC Section 124A with BNS Section 152 precisely, apply constitutional free-speech principles and lawful-criticism explanations, and never describe Section 152 as a mere renumbering of sedition.",
   },
   {
     title: "Offences against Public Tranquillity",
