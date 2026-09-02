@@ -1962,26 +1962,387 @@ For a problem question:
     title:
       "United Nations: Purposes, Principles, Membership and Principal Organs",
     shortDescription:
-      "The constitutional structure of the United Nations, its membership and six principal organs.",
+      "A detailed study of the United Nations Charter, purposes, principles, membership, legal personality and six principal organs.",
     overview:
-      "This unit studies the establishment, purposes and governing principles of the United Nations and the composition and functions of its principal organs.",
-    detailedContent:
-      "Historical background and establishment of the United Nations; legal personality; purposes under Article 1; principles under Article 2; original and admitted members; admission, suspension and expulsion; representation and withdrawal questions; General Assembly composition, voting and functions; Security Council composition, voting, veto and primary responsibility for international peace and security; Economic and Social Council; Trusteeship Council; International Court of Justice; Secretariat and Secretary-General; subsidiary organs and specialised agencies; Charter amendment; privileges and immunities; and contemporary questions of United Nations reform.",
+      "The United Nations is the central universal organisation for maintaining international peace and security, developing friendly relations, promoting international cooperation and harmonising State action. This chapter traces its establishment and legal personality, explains the purposes and principles of the Charter, examines admission and loss or suspension of membership rights, and systematically studies the composition, voting and functions of the General Assembly, Security Council, Economic and Social Council, Trusteeship Council, International Court of Justice and Secretariat. It also covers peacekeeping, subsidiary organs, specialised agencies, privileges and immunities, Charter amendment and contemporary reform debates.",
+    learningObjectives: [
+      "Explain the historical development from the League of Nations to the United Nations.",
+      "Describe the legal nature of the UN Charter as both a treaty and the constituent instrument of an international organisation.",
+      "Explain the international legal personality and implied powers of the United Nations.",
+      "State and apply the four purposes of the United Nations under Article 1.",
+      "Explain the governing principles in Article 2, including sovereign equality, good faith, peaceful settlement and non-use of force.",
+      "Analyse the domestic-jurisdiction limitation and its relationship with Charter enforcement action.",
+      "Distinguish original Members from States admitted under Article 4.",
+      "Explain admission, suspension, expulsion, withdrawal and representation questions.",
+      "Identify the six principal organs established by Article 7.",
+      "Explain the composition, voting and powers of the General Assembly.",
+      "Explain the composition, voting, veto and responsibilities of the Security Council.",
+      "Distinguish Security Council action under Chapters VI and VII.",
+      "Describe the constitutional basis and legal character of United Nations peacekeeping.",
+      "Explain the composition and coordinating functions of ECOSOC.",
+      "Describe the trusteeship system and the present status of the Trusteeship Council.",
+      "Explain the composition, jurisdiction and functions of the International Court of Justice.",
+      "Explain the role, independence and powers of the Secretary-General and Secretariat.",
+      "Distinguish principal organs, subsidiary organs, programmes and specialised agencies.",
+      "Explain UN privileges and immunities, budgetary arrangements and Charter amendment.",
+      "Evaluate major proposals for reform of the United Nations system.",
+    ],
+    detailedContent: `1. Historical Background
+
+The devastation of two world wars demonstrated the need for a universal organisation capable of combining collective security with economic, social and legal cooperation. The League of Nations, created after the First World War, made important contributions but was weakened by limited participation, unanimity requirements and inadequate enforcement machinery.
+
+During the Second World War, the Atlantic Charter of 1941, the Declaration by United Nations of 1942, the Moscow Declaration of 1943, the Dumbarton Oaks proposals of 1944 and the Yalta arrangements of 1945 progressively shaped the new organisation.
+
+Representatives of 50 States signed the UN Charter at San Francisco on 26 June 1945. The Charter entered into force on 24 October 1945 after the required ratifications. Poland signed later and is treated as an original Member, bringing the original membership to 51.
+
+2. Nature of the United Nations Charter
+
+The Charter is a multilateral treaty and the constituent instrument of an international organisation. It creates organs, distributes powers, imposes duties on Members and establishes procedures for collective action.
+
+Article 103 gives Charter obligations priority where they conflict with obligations under another international agreement. This rule concerns treaty obligations and does not by itself determine every question involving peremptory norms or the interpretation of a Council decision.
+
+The Charter must be interpreted in accordance with international law while recognising its constitutional and evolving institutional character. Practice of organs and Members can assist interpretation but cannot casually amend the text.
+
+3. International Legal Personality
+
+The UN possesses legal personality distinct from its Members. It can hold rights and duties, conclude agreements, own property, bring international claims and enjoy privileges necessary for its functions.
+
+In Reparation for Injuries, the ICJ held that the organisation was intended to exercise functions and possess rights explainable only on the basis of international personality and capacity to operate internationally. The UN is not a State and does not possess unlimited general competence; its powers derive from the Charter.
+
+4. Express and Implied Powers
+
+Express powers are stated in the Charter. Implied powers are those necessary for performing assigned functions effectively. They arise from the purposes, structure and responsibilities of the organisation, not from an unrestricted claim to sovereign power.
+
+The doctrine allows institutional effectiveness while preserving the principle that an international organisation acts within conferred competence. Whether a particular implied power exists depends on the Charter and the function concerned.
+
+5. Purpose One: International Peace and Security
+
+Article 1(1) makes maintenance of international peace and security the first purpose. The UN may take collective measures to prevent and remove threats to peace, suppress aggression or other breaches, and promote peaceful adjustment or settlement consistent with justice and international law.
+
+This purpose supports preventive diplomacy, mediation, peacekeeping, sanctions, authorisation of force and post-conflict peacebuilding, subject to the Charter's allocation of powers.
+
+6. Purpose Two: Friendly Relations and Self-Determination
+
+Article 1(2) seeks friendly relations among nations based on equal rights and self-determination of peoples and other measures to strengthen universal peace.
+
+Self-determination became central to decolonisation and remains relevant to peoples' political status and development. Its application must be assessed with territorial integrity, non-intervention, human rights and the particular legal context.
+
+7. Purpose Three: International Cooperation and Human Rights
+
+Article 1(3) calls for cooperation in solving international economic, social, cultural and humanitarian problems and in promoting respect for human rights and fundamental freedoms without prohibited distinction.
+
+The Charter provided the institutional foundation for later human-rights instruments, specialised agencies, development programmes, humanitarian activities and global cooperation.
+
+8. Purpose Four: Centre for Harmonising Action
+
+Article 1(4) aims to make the UN a centre for harmonising the actions of nations in attaining common ends. The organisation supplies permanent forums, procedures and institutions through which States coordinate responses to collective problems.
+
+This coordinating purpose does not create a world government. The UN depends on conferred legal powers, Member cooperation, assessed resources and political agreement.
+
+9. Sovereign Equality
+
+Article 2(1) declares that the organisation is based on the sovereign equality of all Members. Each Member has one vote in the General Assembly regardless of population, wealth or military power.
+
+Sovereign equality does not mean identical functions in every organ. The Charter itself grants permanent Security Council members a special voting position. States remain equal in legal personality even where institutional powers differ.
+
+10. Good-Faith Performance and Assistance
+
+Article 2(2) requires Members to fulfil Charter obligations in good faith. Article 2(5) requires assistance to the UN in Charter action and abstention from assisting a State against which the organisation takes preventive or enforcement action.
+
+Good faith guides exercise of rights and performance of duties. It does not independently enlarge an organ's competence beyond the Charter.
+
+11. Peaceful Settlement and Non-Use of Force
+
+Article 2(3) requires Members to settle international disputes peacefully so that peace, security and justice are not endangered. Article 2(4) prohibits the threat or use of force against territorial integrity or political independence or otherwise inconsistently with UN purposes.
+
+These principles are complemented by Chapter VI procedures, collective security under Chapter VII and the inherent right of individual or collective self-defence recognised by Article 51.
+
+12. Non-Members and International Peace
+
+Article 2(6) requires the organisation to ensure, so far as necessary for international peace and security, that States which are not Members act in accordance with Charter principles. The provision reflects the universal concern of peace and security while not converting every Charter obligation into a treaty duty for non-parties.
+
+Many foundational Charter rules, including significant aspects of the non-use of force, also exist in customary international law and bind States on that separate basis.
+
+13. Domestic Jurisdiction and Its Exception
+
+Article 2(7) prevents the UN from intervening in matters essentially within a State's domestic jurisdiction and does not require Members to submit such matters to Charter settlement. The principle does not prejudice enforcement measures under Chapter VII.
+
+Whether a matter is domestic can change as international obligations develop. Human rights, peace and security or treaty obligations may remove an issue from the sphere of exclusive domestic jurisdiction. Article 2(7) protects domestic competence but is not a shield against valid international obligations.
+
+14. Original Members
+
+Article 3 identifies original Members as States that participated in the San Francisco Conference or previously signed the Declaration by United Nations of 1 January 1942 and then signed and ratified the Charter under Article 110.
+
+Original and subsequently admitted Members enjoy the same membership status. The historical classification does not create superior legal rights for original Members, apart from distinct Charter provisions such as permanent Security Council membership.
+
+15. Admission of New Members
+
+Article 4 opens membership to peace-loving States that accept Charter obligations and, in the organisation's judgment, are able and willing to carry them out. Admission requires a General Assembly decision upon a Security Council recommendation.
+
+The conditions in Article 4 are exhaustive. Political organs exercise judgment in applying them, but they cannot legally add unrelated conditions. In the Security Council, a recommendation is a substantive decision and is subject to the permanent-member voting rule.
+
+16. Suspension and Expulsion
+
+Under Article 5, a Member against which preventive or enforcement action has been taken by the Security Council may be suspended by the General Assembly upon the Council's recommendation. Restoration of rights and privileges is by the Security Council.
+
+Article 6 permits expulsion of a Member that persistently violates Charter principles, again by Assembly decision upon Council recommendation. Formal suspension and expulsion have been rarely or never used in practice as drafted because of their grave legal and political consequences.
+
+17. Loss of Voting Rights for Arrears
+
+Article 19 denies a General Assembly vote to a Member whose financial arrears equal or exceed contributions due for the preceding two full years. The Assembly may permit voting where failure to pay is due to conditions beyond the Member's control.
+
+This is a specific voting disability and must be distinguished from suspension of membership under Article 5.
+
+18. Withdrawal and State Succession
+
+The Charter contains no express withdrawal clause. Indonesia announced withdrawal in 1965 but resumed participation in 1966; the episode was treated as a resumption of cooperation rather than a new admission and did not establish a clear general withdrawal procedure.
+
+State dissolution, unification and succession create distinct membership questions. Practice concerning the USSR/Russian Federation, Yugoslavia, Czechoslovakia and other States shows that outcomes depend on legal continuity, succession facts and institutional acceptance.
+
+19. Representation and Credentials
+
+Membership of a State must be distinguished from which government or representatives occupy its seat. Credentials are examined through General Assembly procedures. Recognition disputes may therefore be addressed institutionally without formally terminating the State's membership.
+
+The change in China's representation in 1971 illustrates a credentials and representation decision concerning the seat of China, including its permanent Security Council position.
+
+20. Principal and Subsidiary Organs
+
+Article 7 establishes six principal organs: the General Assembly, Security Council, Economic and Social Council, Trusteeship Council, International Court of Justice and Secretariat. Necessary subsidiary organs may be established under the Charter.
+
+Principal organs derive their status directly from the Charter. Subsidiary bodies derive authority from the establishing principal organ and cannot lawfully exceed the powers that organ may confer.
+
+21. General Assembly: Composition and Sessions
+
+All UN Members belong to the General Assembly, and each may have up to five representatives but only one vote. It is the organisation's universal deliberative, policymaking and representative organ.
+
+The Assembly meets in regular annual sessions, special sessions and emergency special sessions under applicable Charter and procedural rules. Its six main committees cover disarmament and security, economic and financial matters, social and humanitarian questions, decolonisation and special political matters, administration and budget, and legal affairs.
+
+22. General Assembly: Functions and Powers
+
+Articles 10–17 permit the Assembly to discuss Charter matters, make recommendations, promote cooperation, initiate studies, approve the budget, apportion expenses, elect members of organs and participate in appointments.
+
+Assembly resolutions are generally recommendations rather than binding legislation. They may nevertheless have legal effects in internal matters such as budget and elections, evidence agreement or opinio juris, interpret institutional powers, or contribute to formation of customary law when supported by State practice and legal conviction.
+
+23. General Assembly Voting
+
+Important questions under Article 18 require a two-thirds majority of Members present and voting. These include peace and security recommendations, election of non-permanent Council members, admission, suspension, expulsion, trusteeship and budgetary questions.
+
+Other questions are decided by a majority of Members present and voting, though the Assembly may determine additional categories requiring two-thirds. Abstentions are ordinarily excluded from “present and voting.” Consensus practice can produce decisions without a recorded vote.
+
+24. Article 12 and Uniting for Peace
+
+While the Security Council is exercising its Charter functions concerning a dispute or situation, Article 12 generally limits Assembly recommendations unless the Council requests them. The provision regulates institutional relations but does not eliminate the Assembly's ability to discuss matters or exercise separate powers.
+
+General Assembly Resolution 377 A (V), Uniting for Peace, created a procedure for emergency special sessions when lack of unanimity among permanent Council members prevents the Council from discharging its primary peace-and-security responsibility. The Assembly may recommend collective measures, but it does not acquire the Council's Chapter VII power to impose binding enforcement decisions.
+
+25. Security Council: Composition
+
+The Security Council has 15 members: five permanent members—China, France, the Russian Federation, the United Kingdom and the United States—and ten non-permanent members elected by the General Assembly for two-year terms with attention to contribution and equitable geographical distribution.
+
+The Council has primary, not exclusive, responsibility for international peace and security. Under Article 25, Members agree to accept and carry out its decisions in accordance with the Charter.
+
+26. Security Council Voting and Veto
+
+Each Council member has one vote. Procedural decisions require nine affirmative votes. Other decisions require nine affirmative votes including the concurring votes of permanent members under Article 27(3).
+
+In established practice, a permanent member's abstention does not constitute a veto. A negative vote by a permanent member blocks a substantive draft. Determining whether a question is procedural can itself be important. A party to a dispute must abstain in certain decisions under Chapter VI and Article 52(3), though the rule's operation has varied in practice.
+
+27. Chapter VI and Chapter VII
+
+Chapter VI concerns pacific settlement through investigation and recommendations. Its recommendations are generally non-binding. Chapter VII allows the Council to determine a threat to peace, breach of peace or act of aggression under Article 39 and decide binding measures.
+
+Article 41 measures not involving armed force include economic and diplomatic sanctions. Article 42 permits action by air, sea or land forces where Article 41 measures would be or have proved inadequate. Measures must remain within the Charter and are subject to interpretation and legal limits.
+
+28. Self-Defence and Collective Security
+
+Article 51 preserves the inherent right of individual or collective self-defence if an armed attack occurs, until the Security Council has taken necessary measures. Measures taken must be reported immediately to the Council.
+
+Self-defence is distinct from Council-authorised collective security. It is controlled by necessity, proportionality and the requirements of Article 51 and customary international law.
+
+29. United Nations Peacekeeping
+
+Peacekeeping is not expressly named in the Charter but developed through practice as an instrument for maintaining peace. Traditional principles include consent of the principal parties, impartiality and non-use of force except in self-defence and defence of the mandate.
+
+Modern multidimensional missions may protect civilians, support elections, monitor ceasefires, assist rule-of-law institutions and help implement peace agreements. Peacekeeping differs from peace enforcement, although robust mandates can complicate the boundary.
+
+30. Economic and Social Council
+
+ECOSOC consists of 54 Members elected by the General Assembly for staggered three-year terms. It coordinates economic, social, cultural, educational, health and related work and promotes human rights.
+
+It may conduct studies, make recommendations, prepare draft conventions, convene conferences, create commissions and consult non-governmental organisations under Article 71. ECOSOC coordinates relationships with specialised agencies through agreements approved by the General Assembly.
+
+31. Trusteeship Council
+
+The international trusteeship system supervised trust territories and promoted advancement toward self-government or independence. The Trusteeship Council examined reports and petitions and provided supervision under Chapters XII and XIII.
+
+After Palau, the final trust territory, became independent in 1994, the Council suspended regular operations. It remains one of the six principal organs and is composed of the five permanent Security Council members, meeting as occasion requires. Removing or assigning it a new role would raise Charter questions.
+
+32. International Court of Justice
+
+The ICJ is the principal judicial organ of the UN. Its Statute forms an integral part of the Charter. It consists of 15 independent judges elected separately by the General Assembly and Security Council for nine-year terms, with no two judges of the same nationality.
+
+Only States may be parties in contentious cases, and jurisdiction rests on consent. Judgments are final and binding between the parties for the particular case. The Court also gives advisory opinions at the request of authorised UN organs and agencies.
+
+33. Secretariat and Secretary-General
+
+The Secretariat comprises the Secretary-General and staff required by the organisation. Under Article 97, the General Assembly appoints the Secretary-General upon the Security Council's recommendation.
+
+The Secretary-General is the chief administrative officer, performs functions entrusted by principal organs, submits an annual report and may bring to the Council's attention any matter that may threaten peace under Article 99. Good offices, mediation, preventive diplomacy and public advocacy have made the office politically significant.
+
+34. Independence of the International Civil Service
+
+Under Article 100, the Secretary-General and staff must not seek or receive instructions from any government or external authority. Members undertake to respect their exclusively international character.
+
+Article 101 requires efficiency, competence and integrity as paramount considerations, with due regard to broad geographical recruitment. Independence is functional and does not exempt personnel from accountability under organisational rules.
+
+35. Specialised Agencies, Funds and Programmes
+
+Specialised agencies are autonomous international organisations linked with the UN through agreements under Articles 57 and 63. Examples include the ILO, FAO, UNESCO, WHO, IMF and World Bank institutions. Each has its own constitution, membership and legal personality.
+
+UN funds and programmes, such as UNICEF and UNDP, are generally subsidiary bodies created within the UN system rather than specialised agencies. Precise classification determines governance, finance and legal authority.
+
+36. Privileges and Immunities
+
+Article 105 grants the organisation and representatives of Members and officials the privileges and immunities necessary for independent performance of functions. The 1946 General Convention elaborates immunity of the UN, its property, assets, officials and experts.
+
+Immunity is functional, not a personal reward. The organisation should provide appropriate modes of settlement for certain disputes, and the Secretary-General may waive an official's immunity where it would impede justice and can be waived without prejudice to UN interests.
+
+37. Finance and Budget
+
+The General Assembly considers and approves the budget and apportions expenses among Members under Article 17. The Committee on Contributions advises on scales of assessment, while the Fifth Committee handles administrative and budgetary questions.
+
+Expenses properly incurred for organisational purposes are expenses of the organisation. Financial control is both legal and political because mandates depend on approved resources and Member contributions.
+
+38. Charter Amendment and General Review
+
+Article 108 amendments require adoption by a two-thirds General Assembly vote and ratification by two-thirds of Members, including all permanent Security Council members. Article 109 provides for a General Conference to review the Charter and similarly protects the ratification position of permanent members.
+
+The demanding procedure safeguards institutional stability but makes formal reform difficult. Some changes in practice have occurred through interpretation, resolutions and consistent institutional conduct without textual amendment.
+
+39. Reform of the United Nations
+
+Reform debates include Security Council enlargement, permanent and regional representation, veto restraint, working-method transparency, financing, peacekeeping effectiveness, General Assembly revitalisation and coordination across peace, development and human rights.
+
+Reform proposals must distinguish changes achievable through practice or rules of procedure from those requiring Charter amendment. Institutional legitimacy, representativeness, effectiveness and accountability may point in different directions.
+
+40. Examination and Problem-Solving Method
+
+For a UN problem:
+(a) identify the relevant purpose and principle;
+(b) identify the organ and its Charter competence;
+(c) distinguish principal from subsidiary bodies;
+(d) determine the voting rule and whether a veto applies;
+(e) classify the measure as a recommendation, internal decision or binding Charter decision;
+(f) check institutional limitations, including Articles 2(7), 12 and 24;
+(g) assess relations with other organs and Member duties under Articles 25 and 103;
+(h) distinguish peacekeeping, Chapter VI settlement, Chapter VII enforcement and Article 51 self-defence; and
+(i) support the answer with Charter articles and relevant judicial authority.`,
     keyPoints: [
-      "Establishment and legal personality of the UN",
-      "Purposes and principles",
-      "Membership, suspension and expulsion",
-      "General Assembly and Security Council",
-      "ECOSOC and Trusteeship Council",
-      "International Court of Justice and Secretariat",
-      "Voting, veto and UN reform",
+      "The Charter is both a treaty and the constituent instrument of the United Nations.",
+      "The UN has international legal personality and express or necessarily implied powers within its functions.",
+      "Article 1 addresses peace and security, friendly relations, cooperation and harmonisation of State action.",
+      "Article 2 includes sovereign equality, good faith, peaceful settlement, non-use of force, assistance and domestic jurisdiction.",
+      "Charter obligations prevail over conflicting treaty obligations under Article 103.",
+      "Admission under Article 4 requires satisfaction of the stated conditions, a Security Council recommendation and a General Assembly decision.",
+      "Suspension under Article 5 and expulsion under Article 6 also require Council recommendation and Assembly action.",
+      "Representation and credentials disputes concern who occupies a State's seat and are distinct from membership itself.",
+      "Article 7 establishes six principal organs; subsidiary organs derive authority from a principal organ.",
+      "The General Assembly includes all Members and normally makes recommendations, while possessing binding internal powers in areas such as budget and elections.",
+      "Important Assembly questions require a two-thirds majority of Members present and voting.",
+      "The Security Council has 15 members and primary responsibility for international peace and security.",
+      "A permanent member's negative vote blocks a substantive Council decision, while abstention is not treated as a veto.",
+      "Chapter VI mainly concerns non-binding recommendations; Chapter VII authorises binding measures after an Article 39 determination.",
+      "Peacekeeping developed through Charter practice and differs from enforcement action.",
+      "ECOSOC coordinates economic, social and related work and has 54 elected members.",
+      "The Trusteeship Council suspended regular operations in 1994 but remains a principal organ.",
+      "The ICJ is the principal judicial organ and has 15 independent judges.",
+      "The Secretary-General is chief administrative officer and may invoke Article 99 concerning threats to peace.",
+      "Specialised agencies are autonomous organisations linked to the UN and differ from UN funds and programmes.",
+      "Privileges and immunities exist to secure independent performance of organisational functions.",
+      "Charter amendment requires two-thirds adoption and ratification, including all permanent Security Council members.",
     ],
     provisions: [
       "Charter of the United Nations, 1945 — Articles 1–2",
-      "Charter of the United Nations, 1945 — Articles 3–6",
-      "Charter of the United Nations, 1945 — Articles 7–101",
-      "Statute of the International Court of Justice",
+      "Charter of the United Nations, 1945 — Articles 3–8 and 103–105",
+      "Charter of the United Nations, 1945 — Articles 9–22 (General Assembly)",
+      "Charter of the United Nations, 1945 — Articles 23–54 (Security Council and regional arrangements)",
+      "Charter of the United Nations, 1945 — Articles 55–72 (economic and social cooperation and ECOSOC)",
+      "Charter of the United Nations, 1945 — Articles 73–91 (trusteeship system and Trusteeship Council)",
+      "Charter of the United Nations, 1945 — Articles 92–101 (ICJ and Secretariat)",
+      "Charter of the United Nations, 1945 — Articles 108–109 (amendment and review)",
+      "Statute of the International Court of Justice — Articles 2–33 and 34–68",
+      "Convention on the Privileges and Immunities of the United Nations, 1946",
     ],
+    importantCases: [
+      {
+        caseName: "Conditions of Admission of a State to Membership in the United Nations",
+        citation: "ICJ Reports 1948, p. 57",
+        principle:
+          "The conditions for admission listed in Article 4(1) are exhaustive and cannot be supplemented by unrelated political conditions.",
+        summary:
+          "The Court interpreted the Charter criteria governing admission while recognising the judgment entrusted to the political organs.",
+      },
+      {
+        caseName: "Competence of the General Assembly for the Admission of a State",
+        citation: "ICJ Reports 1950, p. 4",
+        principle:
+          "The General Assembly cannot admit a State under Article 4 without a favourable Security Council recommendation.",
+        summary:
+          "The Court confirmed that admission is a constitutionally shared process requiring sequential action by both organs.",
+      },
+      {
+        caseName: "Reparation for Injuries Suffered in the Service of the United Nations",
+        citation: "ICJ Reports 1949, p. 174",
+        principle:
+          "The United Nations possesses objective international personality and capacities, including implied powers, necessary for its functions.",
+        summary:
+          "The Court held that the UN could present an international claim for injury to the organisation and its agent.",
+      },
+      {
+        caseName: "Effect of Awards of Compensation Made by the United Nations Administrative Tribunal",
+        citation: "ICJ Reports 1954, p. 47",
+        principle:
+          "The General Assembly validly created an independent tribunal whose final judgments it could not simply refuse to honour.",
+        summary:
+          "The opinion examined implied institutional power, judicial independence and the legal effect of internal tribunal awards.",
+      },
+      {
+        caseName: "Certain Expenses of the United Nations",
+        citation: "ICJ Reports 1962, p. 151",
+        principle:
+          "Expenditure incurred for operations serving Charter purposes may constitute expenses of the organisation under Article 17(2).",
+        summary:
+          "The Court addressed financing of UN operations and the distribution of responsibilities among principal organs.",
+      },
+      {
+        caseName: "Legal Consequences for States of the Continued Presence of South Africa in Namibia",
+        citation: "ICJ Reports 1971, p. 16",
+        principle:
+          "Security Council decisions must be interpreted from their terms, context and Charter basis; Article 25 is not confined only to Chapter VII.",
+        summary:
+          "The Court found South Africa's continued presence illegal and identified consequences for UN Members and other States.",
+      },
+      {
+        caseName: "Applicability of Article VI, Section 22, of the Convention on the Privileges and Immunities of the United Nations",
+        citation: "ICJ Reports 1989, p. 177",
+        principle:
+          "Experts performing missions for the UN enjoy functional privileges and immunities necessary for independent performance.",
+        summary:
+          "The Court interpreted expert-on-mission status and the functional character of UN immunity.",
+      },
+      {
+        caseName: "Difference Relating to Immunity from Legal Process of a Special Rapporteur",
+        citation: "ICJ Reports 1999, p. 62",
+        principle:
+          "A UN expert's official statements may attract immunity, and the Secretary-General has a central role in determining the scope of official functions.",
+        summary:
+          "The Court considered immunity of a Special Rapporteur and obligations of the State concerned under the General Convention.",
+      },
+    ],
+    examFocus:
+      "Organise an answer around the Charter provision conferring power. Begin with the UN's legal personality and Articles 1–2, then distinguish membership from representation. For organ questions, state composition, voting, functions and legal effect of decisions. Explain that the Assembly has universal representation but usually recommends, while the Council has primary peace-and-security responsibility and may take binding Chapter VII action. Distinguish a permanent-member abstention from a veto, Chapter VI from Chapter VII, peacekeeping from enforcement, principal from subsidiary organs, and specialised agencies from UN programmes.",
+    revisionNotes:
+      "The UN was established in 1945 by a Charter that is both a treaty and constituent instrument. Its four purposes appear in Article 1 and its governing principles in Article 2. Admission requires an Article 4 Council recommendation and Assembly decision. The six principal organs are the General Assembly, Security Council, ECOSOC, Trusteeship Council, ICJ and Secretariat. The Assembly is universal and principally recommendatory; the Council has primary peace-and-security responsibility and binding powers under Chapter VII. ECOSOC coordinates economic and social work, the Trusteeship Council has suspended regular operations, the ICJ performs contentious and advisory functions, and the Secretary-General leads the independent Secretariat. Article 103 prioritises Charter obligations, while Articles 108–109 make formal amendment demanding.",
   },
 ];
 
