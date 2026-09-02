@@ -283,6 +283,63 @@ For an examination problem: establish application of the Act; identify whether a
         "Apply the general and source-based rules governing a female Hindu's property.",
         "Calculate shares among heirs in problem questions.",
       ],
+      detailedContent: `
+1. Introduction, scope and purpose
+
+The Hindu Succession Act, 1956 codifies important rules of intestate succession among Hindus and governs matters expressly covered by it. Section 2 identifies the persons to whom the Act applies, Section 4 gives the statute overriding effect within its field, and Section 5 contains specified exclusions. The Act must be applied to the date of death, the character and source of the property, the identity of heirs, and any legally completed transaction affecting the estate.
+
+Succession opens on death. A good problem answer first classifies the property as separate property, coparcenary interest, or property owned by a female Hindu; determines whether there is a valid will; identifies the governing provision; and then calculates the statutory shares.
+
+2. Mitakshara coparcenary and amended Section 6
+
+The Hindu Succession (Amendment) Act, 2005 substituted Section 6. In a Mitakshara joint Hindu family, a daughter of a coparcener becomes a coparcener by birth in her own right, in the same manner as a son, with the same rights in coparcenary property and the same liabilities, subject to the statutory provisions. Marriage does not extinguish this status.
+
+When a coparcener dies after commencement of the amendment, the deceased's interest devolves by testamentary or intestate succession under the Act and not by survivorship. The share is identified through the statutory deemed-partition method immediately before death. The daughter receives the same share as a son, and the branch of a predeceased child is represented according to Section 6.
+
+In Vineeta Sharma v. Rakesh Sharma, the Supreme Court held that the daughter's right is by birth and the father need not have been alive on 9 September 2005. The statutory saving protects a disposition, alienation, partition or testamentary disposition completed before 20 December 2004. For this purpose, the special definition of partition in Section 6(5) generally requires a registered partition deed or a court decree, while the judgment recognises the narrow evidentiary treatment of an exceptional plea of oral partition.
+
+3. Succession to a Hindu male dying intestate — Sections 8 to 13
+
+Under Section 8, the property of a male Hindu dying intestate devolves first upon Class I heirs in the Schedule; if none, upon Class II heirs; then upon agnates; and finally upon cognates. Section 9 gives Class I heirs simultaneous priority, while entries in Class II exclude later entries. Agnates and cognates are ranked under the statutory preference rules.
+
+Section 10 provides the principal Class I distribution rules. The widow, or widows together, take one share. Each surviving son and daughter and the mother takes one share. The branch of each predeceased son or daughter takes the share that the predeceased child would have taken, divided within that branch according to the section.
+
+Sections 11 to 13 govern distribution among Class II heirs and the order of preference among agnates and cognates. The Schedule must be consulted rather than relying on assumptions about closeness of relationship.
+
+4. Nature of property inherited under Section 8
+
+Property inherited by a son under Section 8 from a father dying after commencement of the Act is not automatically coparcenary property in relation to the son's own children. In Commissioner of Wealth Tax v. Chander Sen and Yudhishter v. Ashok Kumar, the Supreme Court explained the statutory change from the older rule. The property may remain the heir's individual property unless an independent legal basis establishes otherwise.
+
+This distinction is essential: ancestral property in a loose family sense is not necessarily Mitakshara coparcenary property in law. A problem must trace how and when the property was acquired and how it devolved.
+
+5. Property of a female Hindu — Section 14
+
+Section 14(1) declares that qualifying property possessed by a female Hindu, acquired before or after the Act, is held by her as full owner and not as limited owner. Its Explanation broadly includes property acquired by inheritance, devise, partition, maintenance, gift, personal skill or exertion, purchase, prescription or otherwise, including Stridhan.
+
+Section 14(2) is a limited exception for property acquired for the first time under a gift, will, instrument, decree, order or award that itself prescribes a restricted estate. In V. Tulasamma v. Sesha Reddy, the Supreme Court distinguished an instrument recognising a pre-existing right, which may attract Section 14(1), from a genuinely new restricted grant under Section 14(2).
+
+6. Succession to a female Hindu — Sections 15 and 16
+
+Section 15(1) creates the general order: first, sons and daughters, including children of a predeceased son or daughter, and the husband; second, heirs of the husband; third, mother and father; fourth, heirs of the father; and fifth, heirs of the mother. Section 16 supplies the order and manner of distribution, including representation of a predeceased child.
+
+Section 15(2) creates source-based exceptions. In the absence of a son or daughter, including the children of a predeceased child, property inherited from the woman's father or mother devolves upon the heirs of the father. Property inherited from her husband or father-in-law devolves upon the heirs of the husband. Therefore, the source of the particular asset must be proved before selecting the heirs.
+
+7. General rules and disqualifications — Sections 18 to 29
+
+The Act provides rules on preference of full blood over half blood where the relationship is otherwise the same, computation of degrees, heirs taking per capita unless otherwise provided, and treatment of a child in the womb who is later born alive. Section 25 disqualifies a murderer from inheriting the property of the person murdered or succession furthered by the murder. Section 26 addresses descendants of a convert born after conversion, subject to its terms. Disease, defect or deformity is not by itself a disqualification under Section 28.
+
+If no qualified heir exists, Section 29 provides for escheat to the Government, subject to the same obligations and liabilities to which an heir would have been subject.
+
+8. Testamentary succession — Section 30
+
+Section 30 recognises testamentary disposition by a Hindu of property capable of being disposed of by will in accordance with the Indian Succession Act, 1925 or other applicable law. The provision includes the interest of a Mitakshara coparcener as property capable of testamentary disposition. A purported will must still satisfy capacity, execution, attestation and proof requirements under the applicable succession and evidence law.
+
+9. Share-calculation method
+
+For a Section 6 problem, draw the coparcenary immediately before death, calculate each coparcener's share at the deemed partition, place the deceased's share into the succession estate, identify Class I heirs and distribute it under Section 10. Add any share already received by an heir as a coparcener to the share received from the deceased's estate.
+
+For separate property of a male intestate, begin directly with Sections 8 to 10. For a female intestate, identify the source of each asset before applying Sections 15 and 16. State assumptions clearly, treat each branch separately and verify that the final fractions total the whole estate.
+      `.trim(),
       keyPoints: [
         "A daughter is a coparcener by birth with the same statutory rights and liabilities as a son.",
         "Sections 8 to 13 govern intestate succession to a Hindu male.",
@@ -290,7 +347,49 @@ For an examination problem: establish application of the Act; identify whether a
         "Sections 15 and 16 govern succession to a female Hindu's property.",
         "The source of inherited property may be decisive under Section 15(2).",
       ],
-      provisions: ["Section 6", "Sections 8–13", "Sections 14–16", "Section 30"],
+      provisions: [
+        "Hindu Succession Act, 1956 — Sections 2, 4 and 5",
+        "Hindu Succession Act, 1956 — Section 6",
+        "Hindu Succession Act, 1956 — Sections 8–13 and Schedule",
+        "Hindu Succession Act, 1956 — Sections 14–16",
+        "Hindu Succession Act, 1956 — Sections 18–29",
+        "Hindu Succession Act, 1956 — Section 30",
+        "Hindu Succession (Amendment) Act, 2005",
+      ],
+      importantCases: [
+        {
+          caseName: "Vineeta Sharma v. Rakesh Sharma",
+          citation: "Supreme Court of India (2020)",
+          principle: "A daughter is a coparcener by birth under amended Section 6; the father need not have been alive on 9 September 2005.",
+        },
+        {
+          caseName: "Danamma v. Amar",
+          citation: "Supreme Court of India (2018)",
+          principle: "The decision addressed daughters' shares under amended Section 6 and was later harmonised authoritatively in Vineeta Sharma.",
+        },
+        {
+          caseName: "Commissioner of Wealth Tax v. Chander Sen",
+          citation: "Supreme Court of India (1986)",
+          principle: "Property inherited by a son under Section 8 is held in his individual capacity under the statutory scheme, not automatically as HUF property with his sons.",
+        },
+        {
+          caseName: "Yudhishter v. Ashok Kumar",
+          citation: "Supreme Court of India (1987)",
+          principle: "The Court reaffirmed the post-1956 character of property devolving under Section 8.",
+        },
+        {
+          caseName: "V. Tulasamma v. Sesha Reddy",
+          citation: "Supreme Court of India (1977)",
+          principle: "Section 14(1) receives a broad construction where property is possessed in recognition of a pre-existing right.",
+        },
+        {
+          caseName: "Omprakash v. Radhacharan",
+          citation: "Supreme Court of India (2009)",
+          principle: "The source-based statutory rules in Section 15(2) govern qualifying inherited property of a female Hindu dying intestate.",
+        },
+      ],
+      examFocus:
+        "Prepare the scope and overriding effect of the Act; daughter’s coparcenary right and deemed partition under amended Section 6; Classes I and II, agnates and cognates; distribution under Sections 9 to 13; the character of property inherited under Section 8; absolute ownership under Section 14; general and source-based female succession under Sections 15 and 16; disqualifications, escheat and testamentary succession. Practise share calculations and state the Vineeta Sharma rules precisely.",
     },
     {
       title: "Hindu Adoptions and Maintenance Act, 1956",
