@@ -10,6 +10,11 @@ import {
   contractMockTests,
 } from "../../../../data/exams/contracts/assessments";
 import {
+  CONSTITUTIONAL_LAW_I_COURSE_SLUG,
+  constitutionalLawIFinalExam,
+  constitutionalLawIMockTests,
+} from "../../../../data/exams/constitutionalLawI/assessments";
+import {
   CRIMINAL_LAW_I_COURSE_SLUG,
   criminalLawIFinalExam,
   criminalLawIMockTests,
@@ -44,6 +49,10 @@ const assessmentRegistry = {
   [CONTRACT_COURSE_SLUG]: {
     final: contractFinalExam,
     mocks: contractMockTests,
+  },
+  [CONSTITUTIONAL_LAW_I_COURSE_SLUG]: {
+    final: constitutionalLawIFinalExam,
+    mocks: constitutionalLawIMockTests,
   },
   [CRIMINAL_LAW_I_COURSE_SLUG]: {
     final: criminalLawIFinalExam,
