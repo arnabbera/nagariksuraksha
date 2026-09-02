@@ -19,6 +19,11 @@ import {
   publicInternationalLawFinalExam,
   publicInternationalLawMockTests,
 } from "../../../../data/exams/publicInternationalLaw/assessments";
+import {
+  TORTS_COURSE_SLUG,
+  tortsFinalExam,
+  tortsMockTests,
+} from "../../../../data/exams/torts/courseAssessments";
 import { getCourseBySlug } from "../../../../services/courseService";
 import {
   getStudentEnrollment,
@@ -53,6 +58,10 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
     [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
       final: publicInternationalLawFinalExam,
       mocks: publicInternationalLawMockTests,
+    },
+    [TORTS_COURSE_SLUG]: {
+      final: tortsFinalExam,
+      mocks: tortsMockTests,
     },
   };
   const courseAssessments = assessmentRegistry[courseSlug];
