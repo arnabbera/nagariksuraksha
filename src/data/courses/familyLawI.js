@@ -679,6 +679,89 @@ For custody, state Section 13 first: welfare is paramount. Then assess continuit
         "Distinguish void and voidable marriages under the Act.",
         "Apply the statutory grounds for judicial separation and divorce.",
       ],
+      detailedContent: `
+1. Introduction, object and application
+
+The Special Marriage Act, 1954 provides a statutory civil form of marriage, a mechanism for registration of certain marriages celebrated in another form, and matrimonial relief including divorce. It enables eligible parties to marry without making validity depend upon the religious ceremony of either party. The Act must be distinguished from the Hindu Marriage Act, 1955 and the Foreign Marriage Act, 1969.
+
+Section 1 addresses extent and application, Section 2 contains definitions, and Section 3 concerns Marriage Officers. Before advising on procedure, identify the parties' residence and nationality, the proposed place of solemnisation, and whether they seek a new marriage under Chapter II or registration of an existing ceremony under Chapter III.
+
+2. Conditions for solemnisation — Section 4
+
+Section 4 states the substantive conditions for a special marriage. Neither party may have a spouse living. Each must possess the mental capacity prescribed by the section. The male must have completed twenty-one years and the female eighteen years. The parties must not be within prohibited degrees unless a custom governing at least one party permits the marriage and the statutory conditions concerning that custom are met.
+
+These conditions are separate from the procedural notice requirements. A Marriage Officer's completion of paperwork cannot validate a union that violates a substantive condition.
+
+3. Notice and publication — Sections 5 and 6
+
+The parties give written notice in the statutory form to the Marriage Officer of the district where at least one party has resided for not less than thirty days immediately before notice. Section 6 requires entry in the Marriage Notice Book and prescribes publication. Where a party is not permanently residing within the officer's district, the Act provides for transmission to the Marriage Officer of the relevant permanent-residence district.
+
+Notice and publication provisions engage privacy, dignity, personal liberty and safety concerns. Courts have examined how these provisions should operate constitutionally. Because the governing position may depend on binding precedent and administrative rules in the relevant jurisdiction, students must distinguish the enacted text from a particular court's interpretation and verify the current applicable law.
+
+4. Objections and inquiry — Sections 7 to 10
+
+An objection may be made during the thirty-day period only on the ground that the proposed marriage would contravene one or more conditions in Section 4. It is not a general opportunity for relatives or members of the public to veto an adult's lawful choice.
+
+The Marriage Officer records the objection and conducts the statutory inquiry within the prescribed period. If the objection is upheld, the parties have the appellate remedy provided by Section 8. Section 9 confers inquiry powers, and Section 10 addresses action where an objection appears connected with an offence. Adult choice and personal safety remain constitutionally important throughout the process.
+
+5. Declaration, form and certificate — Sections 11 to 13
+
+Before solemnisation, the parties and three witnesses sign the statutory declaration in the presence of the Marriage Officer. The marriage may be solemnised at the Marriage Officer's office or another permitted place and in any form chosen by the parties, but each party must make the statutory declaration accepting the other as lawful spouse.
+
+After solemnisation, the Marriage Officer enters the certificate in the Marriage Certificate Book. The parties and three witnesses sign it. The certificate is conclusive evidence that a marriage under the Act was solemnised and that the formalities concerning witnesses were complied with, subject to challenges permitted by law. Under Section 14, a notice lapses if the marriage is not solemnised within three calendar months, requiring a fresh notice.
+
+6. Registration of marriages celebrated in another form — Sections 15 to 18
+
+Chapter III is different from Chapter II. It permits registration under the Act of certain marriages already celebrated in another form when every condition in Section 15 is satisfied. These include a ceremony already performed, continued marital cohabitation, absence of a living spouse, mental capacity, statutory age, prohibited-relationship compliance and the residence condition.
+
+The Marriage Officer follows the public-notice, objection and inquiry process prescribed by Sections 16 and 17. Upon registration, Section 18 treats the marriage as one solemnised under the Act from the statutory date. Students should not describe a Chapter III registration application as if it were a notice to create a new marriage under Section 5.
+
+7. Family and succession consequences — Sections 19 to 21A
+
+Section 19 addresses the effect of a marriage under the Act on a member of an undivided Hindu, Buddhist, Sikh or Jain family, including severance from that family for the stated purpose. Section 20 addresses specified rights and disabilities linked to marriage under the Act.
+
+Section 21 generally applies the Indian Succession Act, 1925 to succession to the property of parties married under the Act and their children. Section 21A creates an important exception where both parties profess the Hindu, Buddhist, Sikh or Jain religion: Sections 19 and 21 do not apply, and the relevant Hindu succession framework continues. A problem must identify the religion of both parties instead of assuming that every Special Marriage Act marriage produces the same succession result.
+
+8. Restitution and judicial separation — Sections 22 and 23
+
+Section 22 provides restitution of conjugal rights where one spouse has withdrawn from the society of the other without reasonable excuse. The petitioner must prove withdrawal, while the statutory burden concerning reasonable excuse operates according to the section. A decree is enforceable only through lawful civil procedure and does not authorise physical compulsion.
+
+Section 23 provides judicial separation on the statutory grounds. Judicial separation suspends the duty to cohabit but does not dissolve the marriage. The court may rescind the decree when it considers it just and reasonable.
+
+9. Nullity and legitimacy — Sections 24 to 26
+
+Section 24 identifies void marriages, including marriages contravening specified Section 4 conditions and cases where the respondent was impotent at the time of marriage and institution of the suit, as stated by the provision. A void marriage is treated as null within the statutory scheme.
+
+Section 25 deals with voidable marriages and grounds including wilful refusal to consummate, specified pregnancy by another person, and consent obtained by coercion or fraud, subject to the section's conditions and bars. A voidable marriage remains effective unless annulled.
+
+Section 26 protects the legitimacy of children of void and voidable marriages within its terms. Legitimacy does not make the invalid or annulled marriage itself valid, and property consequences must be stated according to the statutory text and binding precedent.
+
+10. Divorce and mutual consent — Sections 27 and 28
+
+Section 27 states grounds for divorce, including adultery, desertion for the statutory period, imprisonment in the circumstances specified, cruelty, specified mental disorder, communicable venereal disease, absence for seven years, and failure to resume cohabitation after judicial separation or restitution decrees. The current enacted text and each ingredient must be checked; historical amendments should not be presented as current law without qualification.
+
+Section 28 provides divorce by mutual consent where the parties satisfy the separation, inability to live together and mutual-agreement requirements. Consent must be free and continue until the decree. Principles concerning genuine continuing consent and waiver of procedural waiting periods must be applied with the text of the Special Marriage Act and controlling precedent.
+
+Section 29 contains restrictions on presenting a divorce petition within the first year, subject to its proviso. Section 30 governs remarriage after a decree becomes final under the statutory conditions.
+
+11. Jurisdiction, procedure and ancillary relief
+
+Section 31 governs the court in which petitions may be presented. Sections 32 to 35 address procedural matters including contents and verification, in-camera proceedings and the duty of the court concerning relief. Section 34 requires attention to bars such as taking advantage of one's own wrong, collusion, condonation or delay where applicable.
+
+Sections 36 and 37 provide maintenance pendente lite and permanent alimony in the terms stated by the Act. Section 38 empowers orders concerning custody, maintenance and education of minor children. Section 39 governs appeals. These remedies should be coordinated with any independent relief available under maintenance, domestic-violence or guardianship legislation.
+
+12. Constitutional choice, privacy and equality
+
+The freedom of competent adults to select a spouse is protected by constitutional principles of dignity, privacy and personal liberty. In Lata Singh v. State of Uttar Pradesh and Shafin Jahan v. Asokan K.M., the Supreme Court strongly protected adult marital choice against family or community interference.
+
+In Supriyo v. Union of India, the Supreme Court considered claims concerning marriage equality and the Special Marriage Act. The Court did not judicially rewrite the Act to create a gender-neutral marriage regime, while the opinions discussed constitutional rights, State recognition and institutional roles. Students must state the actual holding carefully and distinguish constitutional reasoning from legislative policy proposals.
+
+13. Problem-solving and examination method
+
+First decide whether the case concerns solemnisation under Chapter II or registration under Chapter III. Test every Section 4 condition, residence and notice facts, permissible grounds of objection, declarations, witnesses and certificate. Then analyse family and succession consequences under Sections 19 to 21A.
+
+For matrimonial relief, identify whether the marriage is void, voidable, subsisting under judicial separation, or capable of divorce. Select the exact section and prove each ingredient, jurisdictional fact and statutory bar. Where safety or coercion is alleged, address constitutional protection and relevant criminal or protective remedies rather than treating family opposition as a lawful objection.
+      `.trim(),
       keyPoints: [
         "Section 4 states the conditions relating to solemnisation of a special marriage.",
         "The Act prescribes notice, publication, objection and solemnisation procedures.",
@@ -686,7 +769,50 @@ For custody, state Section 13 first: welfare is paramount. Then assess continuit
         "The Act separately regulates void, voidable and dissoluble marriages.",
         "Succession consequences must be examined under Sections 19 to 21A and the applicable succession law.",
       ],
-      provisions: ["Sections 4–14", "Sections 15–18", "Sections 19–21A", "Sections 22–28"],
+      provisions: [
+        "Special Marriage Act, 1954 — Sections 1–4",
+        "Special Marriage Act, 1954 — Sections 5–14",
+        "Special Marriage Act, 1954 — Sections 15–18",
+        "Special Marriage Act, 1954 — Sections 19–21A",
+        "Special Marriage Act, 1954 — Sections 22–30",
+        "Special Marriage Act, 1954 — Sections 31–39",
+        "Indian Succession Act, 1925",
+        "Foreign Marriage Act, 1969",
+      ],
+      importantCases: [
+        {
+          caseName: "Lata Singh v. State of Uttar Pradesh",
+          citation: "Supreme Court of India (2006)",
+          principle: "A competent adult is free to marry a person of choice, and unlawful threats or harassment require protection.",
+        },
+        {
+          caseName: "Seema v. Ashwani Kumar",
+          citation: "Supreme Court of India (2006)",
+          principle: "Registration of marriages is an important safeguard and States were directed to establish registration rules.",
+        },
+        {
+          caseName: "Shafin Jahan v. Asokan K.M.",
+          citation: "Supreme Court of India (2018)",
+          principle: "The choice of a spouse by a competent adult lies within individual autonomy, dignity and liberty.",
+        },
+        {
+          caseName: "Safiya Sultana v. State of Uttar Pradesh",
+          citation: "Allahabad High Court (2021)",
+          principle: "The Court interpreted notice publication in light of privacy and adult choice; its jurisdictional status must be distinguished from the enacted text and nationwide Supreme Court law.",
+        },
+        {
+          caseName: "Supriyo v. Union of India",
+          citation: "Supreme Court of India (2023)",
+          principle: "The Court declined to judicially rewrite the Special Marriage Act as a gender-neutral marriage code and discussed the constitutional and institutional dimensions of marriage recognition.",
+        },
+        {
+          caseName: "Sureshta Devi v. Om Prakash",
+          citation: "Supreme Court of India (1991)",
+          principle: "Mutual-consent divorce requires genuine consent continuing until the decree; the principle informs analysis of analogous mutual-consent provisions.",
+        },
+      ],
+      examFocus:
+        "Prepare Section 4 conditions; residence, notice, objections and inquiry; declaration, solemnisation and certificate; the distinction between Chapter II solemnisation and Chapter III registration; family and succession effects under Sections 19 to 21A; restitution, judicial separation, nullity, divorce and mutual consent; jurisdiction, maintenance and custody. Apply constitutional adult-choice principles while distinguishing statutory text, jurisdiction-specific rulings and the holding in Supriyo.",
     },
   ].map((unit, unitIndex) => {
     const chapterNumber = unitIndex + 4;
