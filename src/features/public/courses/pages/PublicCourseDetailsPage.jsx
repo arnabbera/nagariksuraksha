@@ -606,7 +606,9 @@ export default function PublicCourseDetailsPage() {
             <div
               className={`course-hero-media ${
                 course.slug ===
-                "criminal-law-i-transitioning-from-ipc-to-bns"
+                  "criminal-law-i-transitioning-from-ipc-to-bns" ||
+                course.slug ===
+                  "code-of-civil-procedure-and-limitation"
                   ? "course-hero-media-full-image"
                   : ""
               }`}
