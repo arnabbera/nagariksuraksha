@@ -20,6 +20,11 @@ import {
   criminalLawIMockTests,
 } from "../../../../data/exams/criminalLawI/assessments";
 import {
+  FAMILY_LAW_I_COURSE_SLUG,
+  familyLawIFinalExam,
+  familyLawIMockTests,
+} from "../../../../data/exams/familyLawI/assessments";
+import {
   PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG,
   publicInternationalLawFinalExam,
   publicInternationalLawMockTests,
@@ -57,6 +62,10 @@ const assessmentRegistry = {
   [CRIMINAL_LAW_I_COURSE_SLUG]: {
     final: criminalLawIFinalExam,
     mocks: criminalLawIMockTests,
+  },
+  [FAMILY_LAW_I_COURSE_SLUG]: {
+    final: familyLawIFinalExam,
+    mocks: familyLawIMockTests,
   },
   [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
     final: publicInternationalLawFinalExam,
