@@ -36,34 +36,48 @@ import Card from "../../../../shared/components/Card";
 import LoadingSpinner from "../../../../shared/components/LoadingSpinner";
 import PageHeader from "../../../../shared/components/PageHeader";
 
+const assessmentRegistry = {
+  "code-of-civil-procedure-and-limitation": {
+    final: cpcFinalExam,
+    mocks: cpcMockTests,
+  },
+  [CONTRACT_COURSE_SLUG]: {
+    final: contractFinalExam,
+    mocks: contractMockTests,
+  },
+  [CRIMINAL_LAW_I_COURSE_SLUG]: {
+    final: criminalLawIFinalExam,
+    mocks: criminalLawIMockTests,
+  },
+  [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
+    final: publicInternationalLawFinalExam,
+    mocks: publicInternationalLawMockTests,
+  },
+  [TORTS_COURSE_SLUG]: {
+    final: tortsFinalExam,
+    mocks: tortsMockTests,
+  },
+};
+
+const withTimeout = (promise, milliseconds, message) =>
+  Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      window.setTimeout(() => reject(new Error(message)), milliseconds);
+    }),
+  ]);
+
 export default function CourseAssessmentPage({ examType = "mock" }) {
   const { courseId: courseSlug, testNumber } = useParams();
   const navigate = useNavigate();
-  const { firebaseUser, profile, role } = useAuth();
+  const {
+    firebaseUser,
+    profile,
+    role,
+    loading: authLoading,
+  } = useAuth();
   const studentId = firebaseUser?.uid || profile?.uid || "";
   const number = Number(testNumber || 1);
-  const assessmentRegistry = {
-    "code-of-civil-procedure-and-limitation": {
-      final: cpcFinalExam,
-      mocks: cpcMockTests,
-    },
-    [CONTRACT_COURSE_SLUG]: {
-      final: contractFinalExam,
-      mocks: contractMockTests,
-    },
-    [CRIMINAL_LAW_I_COURSE_SLUG]: {
-      final: criminalLawIFinalExam,
-      mocks: criminalLawIMockTests,
-    },
-    [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
-      final: publicInternationalLawFinalExam,
-      mocks: publicInternationalLawMockTests,
-    },
-    [TORTS_COURSE_SLUG]: {
-      final: tortsFinalExam,
-      mocks: tortsMockTests,
-    },
-  };
   const courseAssessments = assessmentRegistry[courseSlug];
   const assessment = examType === "final"
     ? courseAssessments?.final
@@ -79,22 +93,76 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    if (!studentId || !courseSlug) return;
+    if (authLoading || !assessment || !courseSlug || !studentId) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
     (async () => {
+      const fallbackCourse = {
+        id: courseSlug,
+        slug: courseSlug,
+        title: assessment.title.replace(/\s+[–-]\s+(Mock Test \d+|Final Examination)$/i, ""),
+      };
+
       try {
         setLoading(true);
-        const courseData = await getCourseBySlug(courseSlug);
-        if (!courseData) throw new Error("Course not found.");
-        const enrollmentData = await getStudentEnrollment(studentId, courseData.id);
+        setError("");
+
+        let courseData = fallbackCourse;
+
+        try {
+          const storedCourse = await withTimeout(
+            getCourseBySlug(courseSlug),
+            8000,
+            "Course lookup timed out.",
+          );
+
+          if (storedCourse) courseData = storedCourse;
+        } catch (courseError) {
+          console.warn(
+            "Using bundled assessment course details:",
+            courseError,
+          );
+        }
+
+        if (cancelled) return;
         setCourse(courseData);
-        setEnrollment(enrollmentData);
+
+        try {
+          const enrollmentData = await withTimeout(
+            getStudentEnrollment(studentId, courseData.id),
+            8000,
+            "Enrollment verification timed out.",
+          );
+
+          if (!cancelled) setEnrollment(enrollmentData);
+        } catch (enrollmentError) {
+          console.error(
+            "Unable to verify assessment enrollment:",
+            enrollmentError,
+          );
+
+          if (!cancelled) {
+            setError(
+              "Unable to verify your course enrollment. Please refresh and try again.",
+            );
+          }
+        }
       } catch (loadError) {
-        setError(loadError?.message || "Unable to load this assessment.");
+        if (!cancelled) {
+          setError(loadError?.message || "Unable to load this assessment.");
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     })();
-  }, [courseSlug, studentId]);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [assessment, authLoading, courseSlug, studentId]);
 
   const questions = useMemo(
     () => assessment?.questions || [],
@@ -139,6 +207,18 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
       setSaving(false);
     }
   };
+
+  if (authLoading) {
+    return <LoadingSpinner fullPage text="Loading your account..." />;
+  }
+
+  if (!assessment || !courseSlug) {
+    return <Card>Assessment not found.</Card>;
+  }
+
+  if (!studentId) {
+    return <Card>Please sign in to open this assessment.</Card>;
+  }
 
   if (loading) return <LoadingSpinner fullPage text="Loading assessment..." />;
 
