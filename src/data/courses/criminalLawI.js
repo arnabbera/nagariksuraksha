@@ -382,22 +382,211 @@ Use the following sequence:
   {
     title: "Criminal Conspiracy",
     shortDescription:
-      "Agreement to commit an illegal act or a legal act by illegal means and the resulting criminal liability.",
+      "A detailed study of unlawful agreement, common design, overt-act requirements, circumstantial proof, continuing conspiracy, membership and punishment under IPC Sections 120A–120B and BNS Section 61.",
     overview:
-      "This unit explains the offence of criminal conspiracy, its essential agreement, evidentiary features and punishment.",
-    detailedContent:
-      "Meaning and ingredients of criminal conspiracy; agreement as the foundation of liability; distinction between conspiracy and abetment by conspiracy; proof through direct and circumstantial evidence; punishment; and the corresponding BNS framework.",
+      "Criminal conspiracy punishes the agreement through which two or more persons combine to pursue an illegal object or a lawful object by illegal means. Because coordinated criminal plans are commonly formed in secrecy, the law focuses on the meeting of minds and permits the agreement to be proved through connected circumstances. This chapter explains the statutory definition, the point at which the offence becomes complete, the different overt-act rules, the mental element, participation and withdrawal, evidentiary reasoning, punishment, and distinctions from abetment by conspiracy, common intention, unlawful assembly and attempt. It compares IPC Sections 120A–120B with the consolidated rule in BNS Section 61.",
+    learningObjectives: [
+      "Define criminal conspiracy and identify every element of the statutory agreement.",
+      "Distinguish an agreement to commit an offence from an agreement pursuing another illegal object or illegal means.",
+      "Explain when agreement alone completes the offence and when an overt act is additionally required.",
+      "Identify the mental element and common design necessary to make a person a party to the conspiracy.",
+      "Distinguish mere knowledge, association, discussion or presence from intentional participation.",
+      "Explain how a conspiracy may be proved through direct or circumstantial evidence.",
+      "Analyse the scope, duration, entry, continuation and termination of a conspiracy.",
+      "Apply the punishment categories under IPC Section 120B and BNS Section 61(2).",
+      "Distinguish criminal conspiracy from abetment by conspiracy, common intention, unlawful assembly and attempt.",
+      "Compare IPC Sections 120A–120B with BNS Section 61 and solve conspiracy-based legal problems.",
+    ],
+    detailedContent: `1. Nature and Purpose of Criminal Conspiracy
+
+Criminal conspiracy addresses collective criminal planning at the stage of agreement. The law recognises that a planned combination may create a danger greater than isolated individual conduct: participants can divide tasks, pool information and resources, conceal responsibility, and increase the likelihood that the unlawful object will be achieved.
+
+The offence does not require every conspirator to perform the final prohibited act. Liability rests on intentional membership in the unlawful agreement, subject to the statutory requirements concerning its object and any necessary act in pursuance.
+
+IPC Section 120A defines criminal conspiracy and Section 120B provides punishment. The BNS combines definition and punishment in Section 61 without materially abandoning the central agreement-based structure.
+
+2. Statutory Definition
+
+Under IPC Section 120A, two or more persons commit criminal conspiracy when they agree:
+
+(a) to do, or cause to be done, an illegal act; or
+(b) to do, or cause to be done, an act that is not illegal by illegal means.
+
+BNS Section 61(1) uses the same essential structure and refers to two or more persons agreeing with the common object to do or cause to be done an illegal act, or a lawful act by illegal means.
+
+The agreement is the foundation of the offence. A common intention existing independently in different minds is not enough; there must be a meeting of minds concerning the unlawful object or means. The agreement may be express or inferred from coordinated conduct and circumstances.
+
+The illegal act may be the ultimate objective or merely incidental to a broader plan. The explanation to the definition makes that distinction immaterial if the statutory requirements are otherwise satisfied.
+
+3. Meaning of Illegal Act and Illegal Means
+
+The planned object may itself be an offence, another act prohibited by law, or an act furnishing ground for civil action within the governing statutory definition of illegal. A conspiracy is therefore not confined to plans for offences alone.
+
+A lawful objective may become a criminal conspiracy when the parties agree to achieve it through illegal means. For example, obtaining a lawful commercial advantage does not protect an agreement to use forged documents, intimidation or bribery to secure that advantage.
+
+The prosecution must identify the alleged illegal object or illegal means with reasonable clarity. A vague allegation that the accused persons acted together, without identifying what they agreed to accomplish and how it was illegal, does not establish the statutory offence.
+
+4. Agreement as the Gist of the Offence
+
+The offence centres on consensus, not merely parallel behaviour. The parties need not execute a formal contract, meet in one place, use a particular form of words, or record the plan in writing. A tacit understanding may suffice if the evidence proves intentional agreement.
+
+The parties need not settle every operational detail. A conspirator may perform a specialised role and may not know every participant or every step, provided the evidence shows intentional participation in the common unlawful design.
+
+However, knowledge of another person's plan is not by itself agreement. Sympathy, family or business association, presence at a meeting, communication with an offender, or conduct consistent with innocence cannot automatically establish membership. The inference must arise from proved circumstances that reasonably demonstrate conscious commitment to the common design.
+
+5. When the Offence Becomes Complete
+
+The statutory proviso creates two categories.
+
+First, where the agreement is to commit an offence, the criminal conspiracy is complete upon the agreement itself. No separate overt act is required by the general definition, although later acts may be important evidence of the agreement and may constitute additional offences.
+
+Second, where the agreement concerns an illegal act that is not an offence, or a lawful act to be accomplished by illegal means, some act besides the agreement must be done by one or more parties in pursuance of it. The additional act demonstrates movement of the plan beyond bare consensus.
+
+The required act need not necessarily be independently illegal. It must be an act beyond the agreement, performed by a party in pursuance of the agreed design.
+
+6. Mens Rea and Common Design
+
+Criminal conspiracy requires intentional agreement. A person must know the essential unlawful object or means and intend to participate in advancing it. Accidental assistance or innocent interaction does not make a person a conspirator.
+
+A participant need not possess the same personal motive as others. One may seek money, another revenge, and another institutional advantage; differing motives do not prevent a common agreement concerning the unlawful object.
+
+Where a statute creates a specialised conspiracy offence with additional mental requirements, those requirements must also be proved. The general provision cannot be applied without regard to the wording of the alleged substantive offence.
+
+7. Single and Multiple Conspiracies
+
+A single conspiracy may contain several stages, transactions and participants where they are connected by one common unlawful design. Participants may enter at different times and perform different roles.
+
+Separate plans should not be treated as one conspiracy merely because they involve a common central person or resemble one another. The court considers the common objective, interdependence of activities, overlap of participants, time, place, methods and whether each group was aware of and benefited from the broader design.
+
+In a chain arrangement, each link may understand that success depends on other links. In a hub-and-spoke arrangement, separate dealings with a central person do not automatically establish one overall conspiracy unless the alleged spokes shared or knowingly contributed to the common design.
+
+8. Entry, Continuation and Withdrawal
+
+A person becomes liable upon intentionally joining the conspiracy while it exists. A later entrant is not automatically responsible for every act done before joining, although earlier events may explain the nature of the agreement and prove knowledge.
+
+A conspiracy may continue until its objective is achieved, abandoned, frustrated, or otherwise terminated. Acts of concealment are not automatically part of the original conspiracy; whether they are included depends on the proved scope of the agreement rather than an assumption that every conspirator always intends concealment.
+
+Withdrawal requires more than private change of mind. Clear communication or conduct inconsistent with continued participation may be relevant, but withdrawal does not erase liability already incurred. A withdrawing participant may also need to take reasonable steps appropriate to the circumstances if seeking to prevent further reliance on prior assistance.
+
+9. Proof of Conspiracy
+
+Direct evidence of an unlawful agreement is uncommon because conspiracies are usually secret. The agreement may be inferred from a coherent combination of proved circumstances, including communications, meetings, coordinated movements, division of roles, transfer of funds or materials, acquisition of instruments, false documentation, surveillance, concealment, and conduct before or during execution.
+
+Circumstantial proof must form a reliable chain pointing to intentional agreement. Each circumstance should first be proved; suspicion cannot replace evidence, and one ambiguous circumstance should not be stretched into a complete conspiracy.
+
+Acts and statements of participants may become relevant under the law of evidence when made in reference to the common design during its operation. The court must first have reasonable ground to believe that the conspiracy existed and must respect the statutory conditions governing relevance. Statements made after the common design ended require separate analysis and are not automatically admissible against all former participants.
+
+A confession or admission by one person cannot casually be treated as conclusive proof against everyone else. The applicable evidence law and procedural safeguards must be followed.
+
+10. Conduct Before, During and After the Agreement
+
+Pre-agreement conduct may provide background but ordinarily cannot make a person liable as a conspirator before joining. Conduct during the conspiracy can prove membership, object, role and continuation.
+
+Post-offence conduct may support an inference where it was contemplated by the common design or independently shows consciousness of guilt. But routine association, later silence or isolated assistance after completion does not necessarily prove participation in the original agreement.
+
+The prosecution and defence should therefore place every alleged act on a timeline: before formation, during operation, after achievement, or after termination.
+
+11. Punishment under IPC Section 120B
+
+IPC Section 120B divides punishment into two principal classes.
+
+Where the conspiracy is to commit an offence punishable with death, imprisonment for life, or rigorous imprisonment for a term of two years or more, and no express punishment is otherwise provided for that conspiracy, a party is punished in the same manner as if that person had abetted the offence.
+
+For other criminal conspiracies, punishment may extend to imprisonment of either description for six months, or fine, or both.
+
+If a special provision expressly punishes conspiracy to commit a particular offence, that provision must be considered instead of automatically applying the residual rule.
+
+12. Punishment under BNS Section 61
+
+BNS Section 61(2) substantially preserves the same two categories.
+
+A party to a conspiracy to commit an offence punishable with death, imprisonment for life, or rigorous imprisonment for two years or more is, where the BNS makes no express punishment for that conspiracy, punished as if the party had abetted the offence.
+
+A party to another criminal conspiracy may be punished with imprisonment of either description up to six months, or fine, or both.
+
+A sound answer should classify the object offence, check whether an express conspiracy punishment exists, and only then apply the relevant residual category.
+
+13. Criminal Conspiracy and Abetment by Conspiracy
+
+These concepts must not be confused.
+
+For criminal conspiracy under IPC Section 120A or BNS Section 61, an agreement to commit an offence is ordinarily complete without proof of an overt act.
+
+For abetment by conspiracy under IPC Section 107 or BNS Section 45, an act or illegal omission must occur in pursuance of the conspiracy and in order to the doing of the thing.
+
+Criminal conspiracy is a substantive offence. Abetment by conspiracy is one mode of participating in the thing abetted. The same facts may require analysis under both provisions, but the ingredients must be proved separately and duplication in punishment must be addressed according to law.
+
+14. Distinction from Common Intention
+
+Common intention is a principle of joint liability connected to participation in a criminal act done in furtherance of the shared intention. Criminal conspiracy punishes the antecedent agreement itself under its statutory conditions.
+
+Conspiracy does not invariably require presence at or participation in the final physical act. Common-intention liability ordinarily depends on participation in the criminal act, assessed under the applicable provision.
+
+Evidence may support both, but neither concept should be used as a substitute for proving the ingredients of the other.
+
+15. Distinction from Unlawful Assembly
+
+An unlawful assembly involves the statutorily required number of persons and a prohibited common object. Criminal conspiracy requires at least two persons and an agreement.
+
+Membership of an unlawful assembly may develop suddenly and may be inferred from assembly, conduct, weapons, purpose and surrounding facts. Conspiracy focuses on the agreement and may exist even where conspirators never gather as one assembly.
+
+16. Distinction from Attempt
+
+Conspiracy is complete at the agreement stage where the object is an offence. Attempt requires an act towards the commission of an offence that has passed beyond mere preparation under the governing rule.
+
+A person may be guilty of conspiracy even though execution never begins. If execution advances, attempt or the completed substantive offence may arise in addition, subject to legal rules governing charges and punishment.
+
+17. Defences and Common Analytical Errors
+
+A defence may challenge the existence of any agreement, the accused's knowledge of the unlawful object, intentional membership, identity, authenticity of communications, continuity of the plan, or the interpretation of ambiguous circumstances.
+
+Common errors include treating association as agreement, combining unrelated transactions into one conspiracy, assuming that every participant knew every fact, relying on acts after termination without proving continuing design, and failing to identify whether an overt act was statutorily required.
+
+The prosecution need not prove every detail of the plan, but it must prove the core agreement and the accused's intentional connection to it beyond the applicable standard.
+
+18. Method for Solving Conspiracy Problems
+
+Use the following sequence:
+
+(a) identify the persons alleged to have agreed;
+(b) state the exact illegal object or lawful object pursued by illegal means;
+(c) identify evidence of a meeting of minds;
+(d) classify whether the agreement is to commit an offence;
+(e) decide whether agreement alone is sufficient or an overt act is required;
+(f) prove the accused's knowledge and intentional participation;
+(g) define the scope and duration of the common design;
+(h) distinguish one overall conspiracy from multiple independent plans;
+(i) place each act and statement on the timeline;
+(j) determine the applicable offence and punishment category;
+(k) distinguish conspiracy from abetment, common intention, unlawful assembly and attempt; and
+(l) reach a separate reasoned conclusion for each accused person.`,
     keyPoints: [
-      "Agreement as the essence of conspiracy",
-      "Illegal act and legal act by illegal means",
-      "Overt act requirements",
-      "Proof of conspiracy",
-      "Distinction from abetment",
+      "Agreement is the gist of criminal conspiracy.",
+      "At least two persons must share a meeting of minds concerning the unlawful object or means.",
+      "The agreement may concern an illegal act or a lawful act to be achieved by illegal means.",
+      "Where the agreement is to commit an offence, agreement alone ordinarily completes the conspiracy.",
+      "For other conspiracies, an act beyond the agreement must be done in pursuance of it.",
+      "The overt act need not itself be illegal, but it must advance the agreed design.",
+      "Mere knowledge, association, discussion, presence or parallel conduct does not automatically prove agreement.",
+      "A conspirator need not know every participant or operational detail but must intentionally join the common design.",
+      "Different personal motives do not prevent one conspiracy where the unlawful object is shared.",
+      "Conspiracy is commonly proved through a connected chain of circumstances because direct evidence is rare.",
+      "Each incriminating circumstance must be proved; suspicion cannot substitute for evidence.",
+      "A later entrant is not automatically liable for conduct occurring before intentional entry into the conspiracy.",
+      "Withdrawal does not erase liability already incurred and must be shown by clear communication or conduct.",
+      "IPC Section 120B and BNS Section 61(2) retain two principal punishment categories.",
+      "Criminal conspiracy differs from abetment by conspiracy because the latter requires an act or illegal omission in pursuance.",
+      "Criminal conspiracy differs from common intention, which concerns joint liability for a criminal act.",
+      "Criminal conspiracy can exist before conduct reaches the stage of attempt.",
+      "Every conspiracy problem should identify the agreement, object, overt-act rule, participation, duration, proof and punishment separately.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 120A–120B",
-      "Bharatiya Nyaya Sanhita, 2023 — corresponding provisions",
+      "Indian Penal Code, 1860 — Section 120A",
+      "Indian Penal Code, 1860 — Section 120B",
+      "Bharatiya Nyaya Sanhita, 2023 — Section 61",
     ],
+    examFocus:
+      "Begin with the alleged agreement and state its precise unlawful object or means. Determine whether the object is an offence, because that controls whether agreement alone is sufficient or an additional overt act is required. Prove intentional membership through a connected evidentiary chain, define the scope and duration of the plan, and classify punishment correctly. Comparative answers should explain that IPC Sections 120A–120B are consolidated in BNS Section 61 while the central agreement-based structure remains substantially intact.",
   },
   {
     title: "Offences against the State",
