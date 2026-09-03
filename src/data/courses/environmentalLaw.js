@@ -3123,23 +3123,524 @@ Problem formula: actor + material + origin + purpose + date; classify the activi
   {
     title: "National Green Tribunal Act, 2010",
     shortDescription:
-      "Establishment, jurisdiction, procedure, relief, compensation and appellate functions of the National Green Tribunal.",
+      "A complete study of the NGT's constitution, original and appellate jurisdiction, procedure, environmental remedies, enforcement and judicial review.",
     overview:
-      "This unit explains the constitution and specialised jurisdiction of the National Green Tribunal, the environmental disputes it may hear and the principles governing relief, compensation and restoration.",
-    detailedContent:
-      "Objects and scheme of the National Green Tribunal Act, 2010; establishment, composition and qualifications; territorial and subject-matter jurisdiction; original and appellate jurisdiction; limitation; procedure and powers; application of natural justice; relief, compensation and restitution; liability principles; scheduled enactments; execution and appeal; exclusion and interaction of jurisdiction; and application of sustainable development, precautionary principle and polluter-pays principle.",
+      "The National Green Tribunal Act, 2010 creates India's specialist forum for civil environmental disputes. This unit develops a forum-first method: identify a substantial environmental question arising from a Schedule I enactment, select original, compensatory or appellate jurisdiction, calculate the correct limitation period, establish standing, preserve procedural fairness and frame relief that compensates victims and restores the environment. It also examines suo motu action, expert committees, environmental compensation, execution, Supreme Court appeals, High Court judicial review and current tribunal-independence doctrine.",
+    learningObjectives: [
+      "Explain the constitutional, international and institutional reasons for establishing the National Green Tribunal.",
+      "Distinguish the Tribunal's original, compensatory, restitutionary and appellate jurisdictions under sections 14, 15 and 16.",
+      "Apply the definition of a substantial question relating to the environment and the Schedule I gateway to factual problems.",
+      "Calculate the separate limitation periods for environmental disputes, compensation claims and statutory appeals.",
+      "Identify eligible applicants and explain the Tribunal's judicially recognised suo motu power.",
+      "Evaluate pleadings, scientific material, committee reports and hearings under the natural-justice framework in section 19.",
+      "Apply sustainable development, the precautionary principle and polluter-pays principle as mandatory statutory standards.",
+      "Differentiate victim compensation, property restitution, environmental restoration, penalties and compliance directions.",
+      "Explain execution, non-compliance, Supreme Court appeals, High Court supervision and the civil-court bar.",
+      "Use leading Supreme Court decisions to construct a complete, jurisdictionally sound NGT problem answer.",
+    ],
+    detailedContent: `
+1. Why a specialised environmental tribunal?
+
+Environmental disputes combine public law, private injury, technical evidence, diffuse harm and urgent ecological risk. Ordinary litigation may struggle with scientific uncertainty, multiple regulators and the need for continuing restoration. The Law Commission and the Supreme Court repeatedly supported environmental courts with judicial and scientific expertise. Parliament responded through the National Green Tribunal Act, 2010, which replaced the National Environment Tribunal Act, 1995 and National Environment Appellate Authority Act, 1997.
+
+The long title seeks effective and expeditious disposal of cases concerning environmental protection, conservation of forests and natural resources, enforcement of environmental legal rights, and relief and compensation for damage to persons and property. The Act also gives effect to decisions taken at the 1992 Rio Conference. Speed is important, but it does not displace jurisdiction, evidence, reasoned adjudication or natural justice.
+
+2. Constitutional and international foundations
+
+Article 21 protects life and dignity and has been interpreted to include a healthy environment. Article 48A directs the State to protect and improve the environment and safeguard forests and wildlife; Article 51A(g) imposes a corresponding citizen duty. Articles 14 and 21 also require fair, non-arbitrary environmental administration. Articles 32, 136, 226 and 227 preserve constitutional remedies and judicial supervision.
+
+Principle 10 of the Rio Declaration links environmental governance with information, participation and access to justice. Principles 15 and 16 support precaution and polluter pays. These ideas become directly operational in the NGT through section 20, but statutory text remains the starting point. International principles guide interpretation; they do not independently enlarge a limited statutory jurisdiction.
+
+3. Structure of the Act and key definitions
+
+The Act contains institutional provisions, jurisdiction and procedure, penalty and miscellaneous provisions, and three schedules. Section 2 defines accident, Chairperson, environment, environmental pollutant and pollution, handling, hazardous substance, injury, Judicial Member, Expert Member and person. These definitions connect the Act with the Environment (Protection) Act, 1986 and the Public Liability Insurance Act, 1991.
+
+The most important jurisdictional definition is section 2(1)(m), a substantial question relating to the environment. The definition does not mean every dispute mentioning trees, water, waste or pollution. It requires the statutory conditions discussed below and must be read with section 14 and Schedule I.
+
+4. Establishment, composition and tribunal independence
+
+Section 3 establishes the National Green Tribunal. Section 4 envisages a Chairperson with Judicial and Expert Members. Judicial members supply adjudicatory experience; expert members contribute practical knowledge in environmental science, engineering, administration and related disciplines. A properly constituted bench combines law and science without allowing either to replace proof and reasons.
+
+Appointments, qualifications, tenure and service conditions cannot now be studied only from the 2010 Act's original text. Later tribunal-reform legislation, rules and binding judgments interact with the parent Act. In Madras Bar Association v. Union of India, 2025 INSC 1330, the Supreme Court invalidated provisions of the Tribunal Reforms Act, 2021 that repeated previously condemned rules and directed that the controlling constitutional standards in the earlier Madras Bar Association decisions continue until valid corrective legislation. For an exam or live appointment dispute, state the relevant date and verify the legislation and notifications then in force.
+
+Current-law caution as at 3 September 2026: Parliament has passed the Tribunals Reforms Bill, 2026, proposing a National Tribunals Commission and repeal of the 2021 Act. A Bill is not applied as operative law merely because both Houses have passed it; assent, publication and commencement must be verified for the material date.
+
+5. Benches and territorial functioning
+
+The Principal Bench is at New Delhi, with zonal benches at Bhopal, Pune, Kolkata and Chennai and notified circuit sittings. Territorial allocation is an administrative and access-to-justice matter, not a source of subject-matter jurisdiction. Filing before the convenient bench cannot cure a dispute that fails sections 14, 15 or 16.
+
+Madhya Pradesh High Court Advocates Bar Association v. Union of India upheld the statutory scheme and held that an NGT bench need not be located in every State or at every principal seat of a High Court. A problem should distinguish territorial allocation, statutory jurisdiction and constitutional review.
+
+6. A jurisdiction-first method
+
+Before discussing merits, ask five questions. First, is the controversy civil rather than a criminal prosecution? Second, does it involve a substantial question relating to the environment or one of the reliefs in section 15? Third, does it arise from implementation of an enactment in Schedule I? Fourth, is the applicant challenging an order expressly appealable under section 16, or invoking sections 14 or 15? Fifth, is the proceeding within the correct limitation period?
+
+The pleaded label does not decide jurisdiction. A challenge called an original application may actually be a time-barred statutory appeal, while a claim described as compensation may principally seek review of a non-appealable administrative act. Identify the impugned action, source of power, environmental obligation, injury, relief and dates.
+
+7. Substantial question relating to the environment
+
+Section 2(1)(m) has two connected branches. A substantial question includes a direct violation of a specific statutory environmental obligation by which the community at large, other than an individual or group of individuals, is affected or likely to be affected; the gravity of environmental or property damage is substantial; or the damage to public health is broadly measurable. It also covers environmental consequences relating to a specific activity or a point source of pollution.
+
+The pleading should identify the precise statutory obligation, population or resource exposed, scale and duration of damage, pollution pathway, measurements and activity or source. A private boundary dispute with an incidental environmental allegation is not automatically transformed into an NGT case. Conversely, the absence of completed injury does not defeat a credible case of likely community-wide or serious harm.
+
+8. Section 14 original jurisdiction
+
+Section 14 gives the Tribunal jurisdiction over all civil cases where a substantial environmental question is involved, including enforcement of any legal right relating to the environment, and the question arises out of implementation of a Schedule I enactment. All three components matter: a civil case, a substantial environmental question or enforceable environmental right, and a Schedule I statutory connection.
+
+Original jurisdiction may address regulatory inaction, unlawful pollution, breach of consent or environmental-clearance conditions, waste-management failures, damage to forests or biodiversity under scheduled law, and threats requiring preventive relief. The Tribunal is not a general court for every ecological grievance, land-title issue, service dispute or criminal offence.
+
+9. Schedule I: the statutory gateway
+
+Schedule I lists the Water (Prevention and Control of Pollution) Act, 1974; Water (Prevention and Control of Pollution) Cess Act, 1977; Forest (Conservation) Act, 1980, now renamed the Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980; Air (Prevention and Control of Pollution) Act, 1981; Environment (Protection) Act, 1986; Public Liability Insurance Act, 1991; and Biological Diversity Act, 2002. The Water Cess Act was repealed in 2017, so its historical schedule entry must not be presented as a current levy.
+
+Because the Environment Act is scheduled, disputes under the EIA Notification, Coastal Regulation Zone notifications and waste-management rules can satisfy the gateway when the remaining elements are present. The Wildlife (Protection) Act, 1972, Indian Forest Act, 1927 and Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 are not themselves in Schedule I. Facts involving wildlife or forest rights may still fall within NGT jurisdiction if the pleaded question genuinely arises from a scheduled enactment; jurisdiction cannot be manufactured by citation alone.
+
+10. Civil cases, offences and overlapping forums
+
+The NGT decides civil environmental cases and statutory appeals. Criminal prosecution for an environmental offence remains with the competent criminal court under the relevant cognizance provisions. The same incident may generate regulatory directions, NGT restoration, civil injury claims and criminal prosecution, but each remedy has a distinct legal source and standard.
+
+Revenue, mining, municipal, planning and forest-rights statutes may produce overlapping issues. The NGT can examine the environmental legality within its statutory field, but it does not become the appellate authority under every connected enactment. Frame severable environmental relief without purporting to decide title, criminal guilt or a non-scheduled appeal beyond jurisdiction.
+
+11. Section 14 limitation and the cause of action
+
+An application under section 14 must be made within six months from the date on which the cause of action first arose. The Tribunal may allow a further period not exceeding sixty days if sufficient cause is shown. This outer extension is materially stricter than open-ended condonation provisions.
+
+The phrase first arose prevents a claimant from indefinitely renewing limitation merely by repeating representations or describing the continuing consequences of a completed decision. A genuinely recurring or continuing breach can generate a fresh cause when the legal wrong itself continues, but a continuing harmful effect is not necessarily a continuing cause of action. Build a chronology of decision, disclosure, commencement, discharge, inspection, knowledge and filing; then connect each requested relief to its cause.
+
+12. Section 15 relief, compensation and restitution
+
+Section 15 authorises relief and compensation to victims of pollution and other environmental damage arising under Schedule I enactments, restitution of damaged property and restitution of the environment. The three heads should be pleaded separately. Human loss may include death, illness, lost livelihood and reasonable response costs; property restitution concerns damaged interests; environmental restitution concerns ecological repair and public resources.
+
+Mantri Techzone Pvt. Ltd. v. Forward Foundation treated the restitution powers in section 15(1)(b) and (c) as substantial, independent remedial powers rather than a narrow appendage to individual compensation. Relief should nevertheless identify jurisdiction, responsible actors, damage, causal basis, method of assessment, restoration work, funding, monitoring and completion criteria.
+
+13. Five-year period for section 15 claims
+
+An application for relief, compensation or restitution under section 15 must be filed within five years from the date on which the cause for such relief or compensation first arose. The Tribunal may permit a further period not exceeding sixty days for sufficient cause. Do not import the six-month section 14 period or thirty-day section 16 period into a section 15 claim.
+
+A single proceeding may seek both enforcement and restoration. Analyse whether each prayer is governed by section 14, section 15 or both, and calculate limitation accordingly. Strategic relabelling cannot revive a stale challenge, but genuine later damage or a distinct continuing breach must be examined on its own facts.
+
+14. Schedule II and heads of compensation
+
+Schedule II guides compensation for death, permanent or temporary disability or injury, medical expenses, loss of wages and business, damage to private and public property, environmental degradation and restoration, harm to flora, fauna and biodiversity, loss to government or local authority and costs of responding to pollution. It supports a comprehensive remedial record rather than an undifferentiated lump sum.
+
+Compensation requires a rational evidentiary method. Relevant variables may include pollutant load, toxicity, duration, affected area, ecological sensitivity, number of victims, avoided compliance cost, unlawful economic benefit and technically costed remediation. A turnover figure may inform deterrence or ability to pay, but it cannot substitute for jurisdiction, hearing and a reasoned nexus to harm.
+
+15. Section 17: no-fault and shared liability
+
+Where death, injury to a person other than a workman, property damage or environmental damage results from an accident or adverse impact of an activity or operation or process under a Schedule I enactment, section 17 makes the responsible person liable without requiring proof of wrongful act, neglect or default. The statutory no-fault route addresses the difficulty of proving fault in hazardous and technically complex events.
+
+If damage cannot reasonably be attributed to one activity, operation, process or source, the Tribunal may apportion liability among those responsible on an equitable basis. No-fault liability does not eliminate proof of occurrence, damage, causal connection, identity and quantum. Distinguish it from the constitutional tort doctrine of absolute liability developed in the Oleum Gas Leak case.
+
+16. Section 16 appellate jurisdiction
+
+Section 16 provides appeals against the specific orders, decisions, directions or determinations listed in clauses (a) to (j). These include designated appellate orders and directions under the Water, Forest Conservation, Air, Environment, Public Liability Insurance and Biological Diversity statutes. The list is exhaustive in character: the NGT cannot treat every environment-related administrative act as a section 16 appeal.
+
+Identify the exact impugned order, statutory provision under which it was made, decision-maker, communication date and applicable clause of section 16. Tamil Nadu Pollution Control Board v. Sterlite Industries illustrates that statutory appellate jurisdiction must be exercised through the route Parliament provided; the Tribunal cannot assume a power merely because the merits concern pollution.
+
+17. Appellate limitation
+
+A section 16 appeal must ordinarily be filed within thirty days from communication of the order, decision or direction. The Tribunal may allow a further period not exceeding sixty days if satisfied that sufficient cause prevented timely filing. The practical outer window is therefore ninety days, subject to proof of communication and sufficient cause; it is not an automatic ninety-day limitation period.
+
+Obtain the signed order, proof of service, portal publication, email and date of actual communication. Distinguish absence of communication from ignorance despite available notice. If the challenge concerns a continuing violation rather than the legality of the appealable order, explain why original jurisdiction is independently available instead of disguising an appeal.
+
+18. Who may apply?
+
+Section 18 permits an application by the injured person, owner of damaged property, legal representative of a deceased person, authorised agent, and a person aggrieved, including a representative body or organisation. The Central Government, State Government, Union territory administration, Central or State Pollution Control Board, Pollution Control Committee, local authority and environmental authority may also apply in the situations specified.
+
+Environmental standing is deliberately wider than conventional private injury. A credible organisation or community representative need not own the polluted resource, but must provide an intelligible grievance and material. Broad standing does not remove limitation, Schedule I, civil-case or substantial-question requirements.
+
+19. Suo motu power
+
+The Act does not expressly use the phrase suo motu in its application provisions. Municipal Corporation of Greater Mumbai v. Ankita Sinha nevertheless held that the NGT may initiate proceedings on its own within its environmental domain. Its special, problem-solving role would be defeated if credible environmental information could not be acted upon merely because it arrived through a letter, news report or official material rather than a formally perfect application.
+
+Suo motu power is not unbounded. The subject must still fall within the Act, affected parties must receive notice and relied-on material, and the Tribunal must hear them before adverse final conclusions. Judicially recognised initiation does not authorise surprise liability or dispense with statutory limitation analysis where it applies.
+
+20. Section 19 procedure and natural justice
+
+The Tribunal is not bound by the Code of Civil Procedure, 1908 or the Indian Evidence Act, 1872. It is guided by natural justice and may regulate its own procedure. Flexibility helps the Tribunal respond to ecological urgency and technical complexity, but section 19 is not a licence to abandon fair adjudication or controlling statutory safeguards.
+
+The Tribunal has specified civil-court powers, including summoning and enforcing attendance, requiring discovery and production, receiving affidavit evidence, requisitioning public records, issuing commissions, reviewing decisions, dismissing for default and deciding ex parte. Proceedings are judicial proceedings for the relevant penal provisions, and the Tribunal is treated as a civil court for specified purposes.
+
+21. Pleadings and the evidentiary record
+
+A strong application states the applicant's standing, jurisdictional section, Schedule I link, environmental obligation, material dates, facts, scientific evidence, respondents, cause of action and precise interim and final relief. Annex the challenged order, consent or clearance, monitoring data, photographs with provenance, laboratory reports, maps, representations and service records.
+
+Respondents should receive all relied-on material and enough time to answer. Affidavits must identify the deponent's knowledge and sources. Expert opinion should disclose qualifications, data, assumptions, method, error or uncertainty and conclusions. The Tribunal may use a preponderance standard in civil adjudication while applying precaution to credible serious risk; precaution does not validate unsupported accusation.
+
+22. Expert committees and joint reports
+
+The NGT frequently appoints joint committees or obtains reports from pollution boards, district administration, research institutions and subject experts. These bodies assist fact-finding; they do not replace the Tribunal. The order should define membership, questions, methodology, inspection notice, sampling protocol, timelines and report service.
+
+Parties must ordinarily receive the report and a real opportunity to object, submit contrary evidence and seek clarification. The Tribunal must independently adjudicate disputed facts, record reasons and connect any liability or quantum to lawful evidence. Triveni Engineering and Industries Ltd. v. State of Uttar Pradesh, 2025 INSC 1060, set aside NGT orders that accepted an ad hoc committee report, failed to implead or hear the affected unit and imposed ₹18 crore compensation without adjudication. Statutory sampling safeguards cannot be bypassed by procedural informality.
+
+23. Interim and preventive relief
+
+Section 19's procedural powers and the nature of environmental jurisdiction permit protective interim directions where there is a prima facie statutory case, credible threat, urgency and a balance favouring prevention. Measures may include stopping a discharge, preserving a site, preventing felling, securing samples, requiring emergency containment, maintaining records or imposing monitored conditions.
+
+An interim order should identify jurisdiction, material, risk, duration and review mechanism. Precaution supports action before full scientific certainty where serious or irreversible harm is plausible; it does not excuse a permanent adverse order without hearing. Security, escrow, monitoring and time-bound compliance can preserve restoration while merits are decided.
+
+24. Section 20's mandatory environmental principles
+
+Section 20 directs the Tribunal to apply sustainable development, the precautionary principle and polluter-pays principle while passing any order, decision or award. The verb apply requires more than reciting slogans. The Tribunal should translate each relevant principle into findings, burdens, safeguards, costs and measurable directions.
+
+Sustainable development integrates ecological limits with legitimate development through lawful appraisal, alternatives, mitigation and intergenerational responsibility. Precaution addresses credible uncertainty by requiring anticipatory measures and, where appropriate, a burden on the proponent to demonstrate environmental acceptability. Polluter pays internalises prevention, control, victim compensation and restoration costs.
+
+25. Compensation, restitution and restoration plans
+
+Victim compensation places the affected person as nearly as money can in a legally recognised remedial position. Property restitution repairs or compensates damage to property. Environmental restitution restores the ecosystem or funds an equivalent scientifically justified response where complete restoration is impossible. These remedies may overlap but should not be conflated.
+
+A restoration order should state baseline condition, responsible entity, tasks, technical standards, milestones, budget, fund custody, independent monitoring, disclosure, community safeguards and exit criteria. Money deposited without a restoration plan may remain disconnected from ecological recovery. Administrative expenses should be transparent and funds should not become general revenue.
+
+26. Environmental compensation methodology
+
+Environmental compensation is restorative and deterrent, but it must be legally authorised and reasoned. The Tribunal should identify the violated duty, period, pollutants, affected receptors, evidence of damage or risk, applicable regulatory methodology, economic benefit and remediation cost. It should explain whether an amount compensates victims, restores ecology, recovers unlawful benefit, finances monitoring or addresses another recognised head.
+
+Mechanical reliance on turnover or an undisclosed formula creates arbitrariness. Triveni Engineering confirms that expert assistance, section 19 flexibility and polluter pays cannot displace notice, statutory sampling, independent adjudication and a rational connection between facts and quantum. A formula may structure discretion only when its variables and evidence are disclosed and contestable.
+
+27. Decisions, costs, review and majority
+
+Section 21 governs decision-making by majority. If members differ, the point of difference is stated and referred in the statutory manner. Orders should disclose jurisdiction, issues, evidence, applicable provisions, findings, environmental principles, relief, timelines and responsibility. Reasons permit compliance and meaningful appellate review.
+
+Section 19 recognises review power, and the procedural rules govern its exercise. Review corrects a qualifying error or considers legally admissible new matter; it is not an appeal in disguise. Costs under section 23 may reflect conduct and litigation expense, but should be distinguished from compensation, restoration cost and section 26 penalty.
+
+28. Appeal to the Supreme Court
+
+Section 22 permits an aggrieved person to appeal an award, decision or order of the Tribunal to the Supreme Court within ninety days from communication. The grounds are those specified in section 100 of the Code of Civil Procedure, so the appeal is oriented to a substantial question of law rather than a routine rehearing of every fact. The Supreme Court may permit a further period not exceeding sixty days for sufficient cause.
+
+The memorandum should formulate the substantial legal question: jurisdiction, statutory interpretation, limitation, procedural fairness, standard of review, legal basis of compensation or application of section 20. Sterlite Industries, Mantri Techzone, Ankita Sinha and Triveni Engineering demonstrate the breadth of section 22 oversight while respecting the Tribunal's specialist role.
+
+29. High Court judicial review and section 29
+
+Section 29 bars civil courts from entertaining matters the Tribunal is empowered to determine and bars injunctions against action under the Act. The bar promotes a specialised forum; it does not amend the Constitution. High Courts retain judicial review and superintendence under Articles 226 and 227.
+
+Madhya Pradesh High Court Advocates Bar Association held that sections 14 and 22 do not oust that basic-structure jurisdiction and upheld the direct Supreme Court appeal. Constitutional review is discretionary, not a substitute for bypassing the NGT or section 22 without justification. The claimant should explain forum competence, alternative remedy, urgency, natural-justice failure or jurisdictional error.
+
+30. Execution and enforcement
+
+Under section 25, an NGT order, decision or award is executable as a civil-court decree; the Tribunal has the powers of a civil court and may transmit the matter to a competent civil court for execution. Draft operative directions with identifiable obligors, deadlines, amounts, accounts, technical standards, reporting duties and consequences so that execution is possible.
+
+Section 26 separately penalises failure to comply. For a person, punishment may extend to three years' imprisonment or a fine up to ₹10 crore or both, with a continuing fine up to ₹25,000 per day after conviction. For a company, the fine may extend to ₹25 crore, with a continuing fine up to ₹1 lakh per day after conviction. Offences are non-cognisable. Sections 27 and 28 address companies and government departments; section 30 governs cognizance. Do not confuse execution of the remedial order with prosecution for disobedience.
+
+31. Section 33 and interaction with other laws
+
+Section 33 gives the Act overriding effect where there is inconsistency with another law. It does not erase every parallel remedy or confer jurisdiction the Act withholds. Harmonise the NGT Act with scheduled statutes, constitutional powers, criminal jurisdiction, specialised statutory appeals and later valid amendments.
+
+Bhopal Gas Peedith Mahila Udyog Sangathan v. Union of India emphasised routing matters within the NGT's specialised field to that forum and addressed transfer of pending environmental litigation. The principle is institutional competence, not automatic transfer of issues the NGT lacks power to decide.
+
+32. Problem-solving checklist
+
+Create a forum table with columns for impugned act, statutory source, jurisdictional section, Schedule I link, cause of action, limitation, applicant and relief. Separate an original dispute under section 14, a section 15 compensation or restitution claim and a section 16 appeal. Calculate each clock from its statutory trigger and plead sufficient cause within the limited extension where necessary.
+
+Next, build the merits record: duty, breach, source, pathway, affected community or resource, scientific proof, uncertainty, causation and responsible actors. Test notice, sampling, report disclosure and hearing. Finally, separate interim prevention, victim compensation, property restitution, environmental restoration, costs, execution and penalty. Apply all three section 20 principles to concrete directions and identify the correct route of challenge.
+    `.trim(),
     keyPoints: [
-      "Composition and jurisdiction of the NGT",
-      "Original and appellate proceedings",
-      "Limitation and procedure",
-      "Compensation and environmental restoration",
-      "Statutory environmental principles",
+      "The NGT is a specialist statutory tribunal combining judicial adjudication with environmental expertise.",
+      "Section 14 requires a civil case, a substantial environmental question or environmental legal right, and a Schedule I connection.",
+      "A substantial question is tested through a specific statutory obligation, scale or measurability of harm, or consequences of a specific activity or point source.",
+      "Schedule I is a jurisdictional gateway; not every environment-related enactment is included.",
+      "Section 14 applications ordinarily have six months plus a maximum condonable sixty days from when the cause first arose.",
+      "Section 15 separately authorises victim compensation, property restitution and environmental restitution, with five years plus a maximum sixty-day extension.",
+      "Section 17 creates no-fault liability in its statutory field and permits equitable apportionment where multiple sources are responsible.",
+      "Section 16 appeals lie only against the listed statutory decisions and ordinarily require filing within thirty days plus a maximum sixty-day extension.",
+      "Standing under section 18 includes affected persons, legal representatives, representative bodies, governments, boards and environmental authorities.",
+      "The Supreme Court has recognised NGT suo motu power, subject to statutory jurisdiction and natural justice.",
+      "Section 19 frees the NGT from strict CPC and Evidence Act procedure but requires disclosure, hearing and reasoned adjudication.",
+      "Expert and joint committees assist the Tribunal; they cannot replace adjudication or defeat statutory sampling safeguards.",
+      "Section 20 makes sustainable development, precaution and polluter pays mandatory decisional principles.",
+      "Environmental compensation needs legal authority, evidence, disclosed methodology and a rational nexus to harm or restoration.",
+      "Section 22 permits a Supreme Court appeal on section 100 CPC grounds within ninety days, with a maximum further sixty days for sufficient cause.",
+      "Articles 226 and 227 remain available for High Court judicial review despite sections 14, 22 and 29.",
+      "Section 25 provides decree-style execution; section 26 separately penalises non-compliance.",
+      "Appointments and tenure must be read with current tribunal-reform law and binding Supreme Court independence standards for the relevant date.",
     ],
     provisions: [
-      "National Green Tribunal Act, 2010 — Sections 14–22",
-      "National Green Tribunal Act, 2010 — Section 20",
-      "National Green Tribunal Act, 2010 — Schedule I",
+      {
+        id: "environmental-law-unit-8-constitution",
+        title: "Constitution of India — Articles 14 and 21",
+        detail:
+          "Anchor non-arbitrary environmental governance, fair procedure and the judicially recognised right to a healthy environment.",
+      },
+      {
+        id: "environmental-law-unit-8-directive-duties",
+        title: "Constitution of India — Articles 48A and 51A(g)",
+        detail:
+          "State policy and citizen duty support protection and improvement of the environment, forests and wildlife.",
+      },
+      {
+        id: "environmental-law-unit-8-constitutional-remedies",
+        title: "Constitution of India — Articles 32, 136, 226 and 227",
+        detail:
+          "Preserve Supreme Court and High Court constitutional remedies, special-leave power and High Court judicial review and superintendence.",
+      },
+      {
+        id: "environmental-law-unit-8-sections-2-3",
+        title: "NGT Act — Sections 2 and 3",
+        detail:
+          "Define central concepts, including substantial environmental question, and establish the National Green Tribunal.",
+      },
+      {
+        id: "environmental-law-unit-8-sections-4-13",
+        title: "NGT Act — Sections 4–13",
+        detail:
+          "Provide the Tribunal's composition and institutional framework, now requiring coordination with current tribunal-reform law and constitutional rulings.",
+      },
+      {
+        id: "environmental-law-unit-8-section-14",
+        title: "NGT Act — Section 14",
+        detail:
+          "Creates original jurisdiction over qualifying civil environmental disputes and fixes six months plus a maximum sixty-day extension.",
+      },
+      {
+        id: "environmental-law-unit-8-section-15",
+        title: "NGT Act — Section 15",
+        detail:
+          "Authorises relief and compensation to victims, restitution of property and restitution of the environment, subject to its five-year limitation rule.",
+      },
+      {
+        id: "environmental-law-unit-8-section-16",
+        title: "NGT Act — Section 16",
+        detail:
+          "Confers appeals only from enumerated environmental decisions, with thirty days plus a maximum condonable sixty days.",
+      },
+      {
+        id: "environmental-law-unit-8-section-17",
+        title: "NGT Act — Section 17",
+        detail:
+          "Provides no-fault liability and equitable apportionment for qualifying death, injury, property and environmental damage.",
+      },
+      {
+        id: "environmental-law-unit-8-section-18",
+        title: "NGT Act — Section 18",
+        detail:
+          "Identifies eligible applicants and the procedure for applications and appeals, while case law recognises suo motu initiation.",
+      },
+      {
+        id: "environmental-law-unit-8-section-19",
+        title: "NGT Act — Section 19",
+        detail:
+          "Makes natural justice controlling, permits procedural flexibility and grants specified civil-court powers.",
+      },
+      {
+        id: "environmental-law-unit-8-section-20",
+        title: "NGT Act — Section 20",
+        detail:
+          "Mandates application of sustainable development, precautionary principle and polluter-pays principle.",
+      },
+      {
+        id: "environmental-law-unit-8-sections-21-24",
+        title: "NGT Act — Sections 21–24",
+        detail:
+          "Govern majority decisions, Supreme Court appeals, costs and deposit of compensation or relief amounts.",
+      },
+      {
+        id: "environmental-law-unit-8-section-25",
+        title: "NGT Act — Section 25",
+        detail:
+          "Makes orders, decisions and awards executable as civil-court decrees and permits transmission for execution.",
+      },
+      {
+        id: "environmental-law-unit-8-sections-26-30",
+        title: "NGT Act — Sections 26–30",
+        detail:
+          "Address penalty for non-compliance, attribution to companies and departments, civil-court bar and cognizance of offences.",
+      },
+      {
+        id: "environmental-law-unit-8-section-33",
+        title: "NGT Act — Section 33",
+        detail:
+          "Gives the Act overriding effect to the extent of inconsistency with another law.",
+      },
+      {
+        id: "environmental-law-unit-8-schedule-i",
+        title: "NGT Act — Schedule I",
+        detail:
+          "Lists the central environmental enactments that supply the statutory jurisdictional gateway.",
+      },
+      {
+        id: "environmental-law-unit-8-schedule-ii",
+        title: "NGT Act — Schedule II",
+        detail:
+          "Lists heads under which compensation or relief may be claimed for persons, property, government loss and environmental restoration.",
+      },
+      {
+        id: "environmental-law-unit-8-schedule-iii",
+        title: "NGT Act — Schedule III",
+        detail:
+          "Contains consequential amendments creating NGT appellate links in the scheduled enactments.",
+      },
+      {
+        id: "environmental-law-unit-8-procedure-rules",
+        title: "National Green Tribunal (Practices and Procedure) Rules, 2011",
+        detail:
+          "Supply procedural rules on institution, pleadings, service, hearings, evidence, orders and related practice.",
+      },
+      {
+        id: "environmental-law-unit-8-tribunal-reforms",
+        title: "Tribunal reform legislation and rules",
+        detail:
+          "Must be checked with Madras Bar Association, 2025 INSC 1330 and any later validly commenced legislation for appointments, tenure and service conditions.",
+      },
+      {
+        id: "environmental-law-unit-8-rio",
+        title: "Rio Declaration, 1992 — Principles 10, 15 and 16",
+        detail:
+          "Support access to environmental justice, precaution and polluter-pays reasoning reflected in the statutory scheme.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-8-mc-mehta-oleum",
+        caseName: "M.C. Mehta v. Union of India (Oleum Gas Leak)",
+        citation: "(1987) 1 SCC 395",
+        principle:
+          "An enterprise carrying on hazardous or inherently dangerous activity bears an absolute and non-delegable duty, without the Rylands exceptions.",
+        summary:
+          "The judgment developed Indian absolute liability and helped establish the need for effective specialist environmental remedies.",
+      },
+      {
+        id: "environmental-law-unit-8-nayudu",
+        caseName: "A.P. Pollution Control Board v. Prof. M.V. Nayudu",
+        citation: "(1999) 2 SCC 718",
+        principle:
+          "Environmental adjudication requires access to scientific expertise and a principled response to uncertainty.",
+        summary:
+          "The Supreme Court's discussion of expert environmental courts influenced the institutional case for the NGT.",
+      },
+      {
+        id: "environmental-law-unit-8-bhopal-gas",
+        caseName: "Bhopal Gas Peedith Mahila Udyog Sangathan v. Union of India",
+        citation: "(2012) 8 SCC 326",
+        principle:
+          "Environmental matters within the specialist statutory field should ordinarily proceed before the NGT.",
+        summary:
+          "The Court addressed transfer and routing of pending environmental litigation after the NGT's establishment.",
+      },
+      {
+        id: "environmental-law-unit-8-sterlite-2013",
+        caseName: "Sterlite Industries (India) Ltd. v. Union of India",
+        citation: "(2013) 4 SCC 575",
+        principle:
+          "Supreme Court appellate review may test environmental liability, technical evidence, proportionality and remedial compensation arising from NGT proceedings.",
+        summary:
+          "The Court sustained stringent environmental consequences while independently examining the record and relief.",
+      },
+      {
+        id: "environmental-law-unit-8-tnpcb-sterlite",
+        caseName: "Tamil Nadu Pollution Control Board v. Sterlite Industries (India) Ltd.",
+        citation: "(2019) 19 SCC 479",
+        principle:
+          "The NGT's appellate power depends on a statutory route specifically conferred by section 16.",
+        summary:
+          "The Supreme Court set aside an NGT order made without the required appellate jurisdiction while preserving appropriate High Court remedies.",
+      },
+      {
+        id: "environmental-law-unit-8-mantri-techzone",
+        caseName: "Mantri Techzone Pvt. Ltd. v. Forward Foundation",
+        citation: "(2019) 18 SCC 494",
+        principle:
+          "Section 15 gives the NGT substantial power to order property and environmental restitution in addition to victim compensation.",
+        summary:
+          "The Court examined wetlands and construction impacts and clarified the remedial width and limits of restitutionary jurisdiction.",
+      },
+      {
+        id: "environmental-law-unit-8-hanuman-aroskar",
+        caseName: "Hanuman Laxman Aroskar v. Union of India",
+        citation: "(2019) 15 SCC 401",
+        principle:
+          "Environmental rule of law requires reasoned appraisal, disclosure and meaningful specialist review of the decision-making record.",
+        summary:
+          "The Supreme Court scrutinised an environmental clearance and the quality of the NGT's review rather than accepting unexplained conclusions.",
+      },
+      {
+        id: "environmental-law-unit-8-state-meghalaya",
+        caseName: "State of Meghalaya v. All Dimasa Students Union",
+        citation: "(2019) 8 SCC 177",
+        principle:
+          "Polluter pays supports recovery and restoration for widespread environmental harm, including failures surrounding illegal mining.",
+        summary:
+          "The Court addressed the NGT's response to coal-mining damage and the public responsibility to secure ecological restoration.",
+      },
+      {
+        id: "environmental-law-unit-8-nhai-lokmanch",
+        caseName: "Director General (Road Development), NHAI v. Aam Aadmi Lokmanch",
+        citation: "(2020) 4 SCC 126",
+        principle:
+          "The NGT can enforce scheduled environmental obligations and restorative remedies but must remain within the Act's jurisdictional framework.",
+        summary:
+          "The case considered infrastructure, environmental compliance and the Tribunal's continuing remedial supervision.",
+      },
+      {
+        id: "environmental-law-unit-8-alembic",
+        caseName: "Alembic Pharmaceuticals Ltd. v. Rohit Prajapati",
+        citation: "(2020) 17 SCC 157",
+        principle:
+          "Prior environmental clearance cannot routinely be replaced by ex post facto approval, while relief must be tailored to compliance and restoration.",
+        summary:
+          "The Court rejected regularisation as a normal substitute for prior appraisal and imposed compensation without treating closure as mechanically inevitable.",
+      },
+      {
+        id: "environmental-law-unit-8-ankita-sinha",
+        caseName: "Municipal Corporation of Greater Mumbai v. Ankita Sinha",
+        citation: "2021 SCC OnLine SC 897",
+        principle:
+          "The NGT has suo motu power within its environmental domain, coupled with a duty to follow natural justice.",
+        summary:
+          "The Supreme Court confirmed that credible environmental information can trigger Tribunal action even without a conventional application.",
+      },
+      {
+        id: "environmental-law-unit-8-mp-hc-bar",
+        caseName: "Madhya Pradesh High Court Advocates Bar Association v. Union of India",
+        citation: "2022 SCC OnLine SC 639",
+        principle:
+          "Sections 14 and 22 do not oust High Court jurisdiction under Articles 226 and 227; the direct section 22 Supreme Court appeal is valid.",
+        summary:
+          "The Court upheld the NGT's statutory structure and rejected the claim that a bench must exist in every State.",
+      },
+      {
+        id: "environmental-law-unit-8-triveni",
+        caseName: "Triveni Engineering and Industries Ltd. v. State of Uttar Pradesh",
+        citation: "2025 INSC 1060",
+        principle:
+          "Procedural flexibility cannot replace impleadment, hearing, statutory sampling, independent adjudication and a reasoned compensation method.",
+        summary:
+          "The Supreme Court set aside ₹18 crore environmental compensation imposed through untested committee findings and turnover alone.",
+      },
+      {
+        id: "environmental-law-unit-8-madras-bar-2025",
+        caseName: "Madras Bar Association v. Union of India",
+        citation: "2025 INSC 1330",
+        principle:
+          "Tribunal appointments, tenure and service conditions must respect separation of powers and judicial independence.",
+        summary:
+          "The Supreme Court struck down constitutionally defective provisions of the Tribunal Reforms Act, 2021 and continued its earlier controlling directions pending valid reform.",
+      },
+    ],
+    examFocus:
+      "Prepare the Act's long title, Rio background and constitutional Articles 14, 21, 48A and 51A(g); the institutional purpose of Judicial and Expert Members; section 2(1)(m)'s exact substantial-question tests; section 14's civil-case, environmental-right and Schedule I gateways; the seven Schedule I enactments and the consequences of the Water Cess Act's repeal; non-scheduled wildlife, forest-rights and criminal matters; the first-arose limitation rule; the six-month plus sixty-day section 14 period; section 15's three remedial heads and five-year plus sixty-day period; Schedule II compensation heads; section 17 no-fault and apportioned liability; section 16's exhaustive appeal routes and thirty-day plus sixty-day period; section 18 standing; Ankita Sinha suo motu power; section 19 natural justice and civil-court powers; committee reports, sampling and Triveni Engineering; interim relief; concrete application of all three section 20 principles; section 21 majority, review and costs; section 22's ninety-day Supreme Court appeal on section 100 CPC grounds plus a maximum sixty-day extension; Articles 226 and 227 after Madhya Pradesh High Court Advocates Bar Association; section 25 execution; sections 26–30 enforcement and cognizance; section 33; and current tribunal-independence law after Madras Bar Association, 2025 INSC 1330. In a problem, begin with jurisdiction and dates, then separate merits, evidence, hearing and each remedial head.",
+    revisionNotes: `
+Core purpose: a specialist judicial-and-expert forum for effective and expeditious civil environmental adjudication, legal environmental rights, compensation and restoration. Constitution: Articles 14 and 21; Articles 48A and 51A(g); constitutional review under Articles 32, 136, 226 and 227.
+
+Jurisdiction formula: civil case + substantial question/environmental legal right + implementation of a Schedule I enactment. Section 2(1)(m) asks for a direct breach of a specific environmental obligation affecting a community, substantial environmental/property damage, broadly measurable public-health harm, or consequences of a specific activity or point source.
+
+Schedule I: Water Act; repealed Water Cess Act as a historical entry; Van (Sanrakshan Evam Samvardhan) Adhiniyam/former Forest Conservation Act; Air Act; Environment Act; Public Liability Insurance Act; Biological Diversity Act. Wildlife Act, Indian Forest Act and Forest Rights Act are not independently scheduled.
+
+Three routes and clocks: section 14 original application = six months from cause first arising + maximum sixty days; section 15 compensation/restoration = five years + maximum sixty days; section 16 enumerated appeal = thirty days from communication + maximum sixty days. Repeated representation does not restart a completed cause. Distinguish a continuing wrong from continuing effects.
+
+Remedies: section 15 separates victim compensation, property restitution and environmental restitution. Schedule II structures heads of loss. Section 17 creates no-fault liability and equitable apportionment. A restoration plan needs baseline, tasks, budget, milestones, monitoring, disclosure and exit criteria. Turnover alone is not a lawful compensation method.
+
+Access and procedure: section 18 standing is broad; Ankita Sinha recognises suo motu power. Section 19 excludes strict CPC/Evidence Act application but requires natural justice. Committees assist; the NGT adjudicates. Serve reports, permit objections, respect statutory sampling and record reasons. Triveni Engineering is the modern fairness warning.
+
+Section 20: apply—not merely cite—sustainable development, precaution and polluter pays. Translate them into alternatives, safeguards, burden, prevention, internalised cost, compensation and restoration.
+
+Challenge and enforcement: section 22 Supreme Court appeal = ninety days on section 100 CPC grounds + maximum sixty days. High Courts retain Articles 226/227. Section 29 bars civil courts, not constitutional review. Section 25 executes as a decree. Section 26 separately punishes non-compliance: person up to three years/₹10 crore; company up to ₹25 crore; continuing daily fines apply after conviction.
+
+Institutional currency: read the parent Act with current tribunal-reform law and Supreme Court directions. Madras Bar Association, 2025 INSC 1330 controls independence, appointments and tenure until valid corrective law. As at 3 September 2026, do not treat the passed Tribunals Reforms Bill, 2026 as operative without verifying assent, publication and commencement.
+
+Case anchors: Nayudu — need for environmental expertise; Bhopal Gas Peedith — specialist forum; TNPCB v. Sterlite — no appellate jurisdiction without statute; Mantri Techzone — broad restitution; Hanuman Aroskar — reasoned environmental rule of law; Ankita Sinha — suo motu; M.P. High Court Advocates Bar Association — High Court review survives; Triveni Engineering — hearing and reasoned quantum; Madras Bar Association 2025 — tribunal independence.
+
+Problem formula: forum + statutory gateway + cause and limitation + standing + breach and proof + natural justice + section 20 principles + distinct remedies + execution + correct appellate or review route.
+    `.trim(),
+    notes: "",
   },
 ];
 
