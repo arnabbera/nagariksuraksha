@@ -7,6 +7,7 @@ const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 let firebaseKeysCache = null;
 let googleAccessTokenCache = null;
+const courseSocialMetaCache = new Map();
 
 const json = (body, init = {}) => Response.json(body, {
   ...init,
@@ -215,6 +216,159 @@ const getFirestoreValue = (root, path) => {
   return value;
 };
 
+const getFirestoreString = (fields, paths) => {
+  for (const path of paths) {
+    const value = getFirestoreValue(fields, path)?.stringValue;
+    if (value) return value;
+  }
+  return "";
+};
+
+const loadCourseSocialMeta = async (env, slug, canonicalUrl) => {
+  const cached = courseSocialMetaCache.get(slug);
+  if (cached?.expiresAt > Date.now()) return cached.value;
+
+  const token = await getGoogleAccessToken(env);
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:runQuery`,
+    {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{ collectionId: "courses" }],
+          where: {
+            fieldFilter: {
+              field: { fieldPath: "slug" },
+              op: "EQUAL",
+              value: { stringValue: slug },
+            },
+          },
+          limit: 1,
+        },
+      }),
+    },
+  );
+
+  if (!response.ok) {
+    console.error("Unable to load course social metadata", response.status);
+    return null;
+  }
+
+  const result = await response.json();
+  const fields = result.find((entry) => entry.document)?.document?.fields;
+  if (
+    !fields ||
+    fields.status?.stringValue !== "published" ||
+    fields.deleted?.booleanValue === true
+  ) return null;
+
+  const title = getFirestoreString(fields, ["seo.title", "title"]);
+  const description = getFirestoreString(fields, [
+    "seo.description",
+    "shortDescription",
+    "description",
+  ]);
+  const image = getFirestoreString(fields, [
+    "seo.ogImageUrl",
+    "desktopImageUrl",
+    "thumbnailUrl",
+    "imageUrl",
+    "media.desktopImageUrl",
+    "media.thumbnailUrl",
+    "media.imageUrl",
+  ]);
+
+  if (!title) return null;
+
+  const value = {
+    title: `${title} | NagarikSuraksha`,
+    description: description || `Explore ${title} on NagarikSuraksha.`,
+    image,
+    url: canonicalUrl,
+  };
+
+  courseSocialMetaCache.set(slug, {
+    value,
+    expiresAt: Date.now() + 10 * 60 * 1000,
+  });
+
+  return value;
+};
+
+const rewriteCourseSocialMetadata = (response, metadata) => {
+  const rewriter = new HTMLRewriter()
+    .on("title", {
+      element(element) {
+        element.setInnerContent(metadata.title);
+      },
+    })
+    .on('meta[name="description"]', {
+      element(element) {
+        element.setAttribute("content", metadata.description);
+      },
+    })
+    .on('link[rel="canonical"]', {
+      element(element) {
+        element.setAttribute("href", metadata.url);
+      },
+    })
+    .on('meta[property="og:type"]', {
+      element(element) {
+        element.setAttribute("content", "website");
+      },
+    })
+    .on('meta[property="og:title"]', {
+      element(element) {
+        element.setAttribute("content", metadata.title);
+      },
+    })
+    .on('meta[property="og:description"]', {
+      element(element) {
+        element.setAttribute("content", metadata.description);
+      },
+    })
+    .on('meta[property="og:url"]', {
+      element(element) {
+        element.setAttribute("content", metadata.url);
+      },
+    })
+    .on('meta[name="twitter:card"]', {
+      element(element) {
+        element.setAttribute("content", "summary_large_image");
+      },
+    })
+    .on('meta[name="twitter:title"]', {
+      element(element) {
+        element.setAttribute("content", metadata.title);
+      },
+    })
+    .on('meta[name="twitter:description"]', {
+      element(element) {
+        element.setAttribute("content", metadata.description);
+      },
+    });
+
+  if (metadata.image) {
+    rewriter.on("head", {
+      element(element) {
+        const image = metadata.image.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+        element.append(
+          `<meta property="og:image" content="${image}" />` +
+          `<meta property="og:image:secure_url" content="${image}" />` +
+          `<meta name="twitter:image" content="${image}" />`,
+          { html: true },
+        );
+      },
+    });
+  }
+
+  return rewriter.transform(response);
+};
+
 const updateEnrollment = async ({ enrollment, token, topLevelFields }) => {
   const query = new URLSearchParams();
   for (const fieldPath of Object.keys(topLevelFields)) {
@@ -419,6 +573,25 @@ export default {
         );
       }
     }
-    return env.ASSETS.fetch(request);
+    const assetResponse = await env.ASSETS.fetch(request);
+
+    const courseMatch = url.pathname.match(/^\/courses\/([^/]+)\/?$/);
+    if (
+      courseMatch &&
+      assetResponse.headers.get("content-type")?.includes("text/html")
+    ) {
+      try {
+        const slug = decodeURIComponent(courseMatch[1]).trim().toLowerCase();
+        const canonicalUrl = `${url.origin}/courses/${encodeURIComponent(slug)}`;
+        const metadata = await loadCourseSocialMeta(env, slug, canonicalUrl);
+        if (metadata) {
+          return rewriteCourseSocialMetadata(assetResponse, metadata);
+        }
+      } catch (error) {
+        console.error("Unable to prepare course social preview", error.message);
+      }
+    }
+
+    return assetResponse;
   },
 };
