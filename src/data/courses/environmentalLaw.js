@@ -2541,20 +2541,584 @@ Problem method: identify subject, territory and date; locate notification or sch
     shortDescription:
       "Conservation, sustainable use, access regulation and equitable benefit sharing under biodiversity law.",
     overview:
-      "This unit studies India's legal framework for conserving biological diversity, ensuring sustainable use and regulating access to biological resources and associated knowledge.",
-    detailedContent:
-      "Objectives and scope of the Biological Diversity Act, 2002; conservation and sustainable use; fair and equitable benefit sharing; National Biodiversity Authority, State Biodiversity Boards and Biodiversity Management Committees; People's Biodiversity Registers; access to biological resources and associated knowledge; approvals and intimations; benefit-sharing mechanisms; biodiversity heritage sites; offences, enforcement and the relationship with intellectual-property applications.",
+      "This unit provides a current and problem-oriented study of the Biological Diversity Act, 2002 as substantially amended in 2023, together with the Biological Diversity Rules, 2024, the Biological Diversity (Amendment) Rules, 2025 and the 2025 access-and-benefit-sharing Regulations. It explains how the law connects conservation and sustainable use with regulated access to Indian biological resources and associated traditional knowledge, fair and equitable benefit sharing, community institutions, biodiversity documentation, intellectual-property applications and administrative enforcement.",
+    learningObjectives: [
+      "Explain the three objectives of biodiversity law and their relationship with the Convention on Biological Diversity and Nagoya Protocol.",
+      "Interpret the amended definitions of access, biological resources, derivatives, benefit claimers, commercial utilisation and codified traditional knowledge.",
+      "Classify an applicant under section 3 or section 7 and select the competent authority, application, registration or intimation route.",
+      "Apply sections 3–7 to research, bio-survey, commercial utilisation, transfer of research results and intellectual-property activities.",
+      "Distinguish statutory exclusions and exemptions from approvals that remain necessary for a different activity or user.",
+      "Describe the composition and functions of the National Biodiversity Authority, State Biodiversity Boards, Union-territory Councils and Biodiversity Management Committees.",
+      "Explain People's Biodiversity Registers, community consultation, prior informed consent, mutually agreed terms and protection of traditional knowledge.",
+      "Calculate and critically analyse monetary and non-monetary benefit sharing under the 2025 Regulations.",
+      "Explain conservation planning, biodiversity heritage sites, threatened-species notifications, repositories and biodiversity funds.",
+      "Apply the post-2023 penalty, inspection, appeal and remedial framework to a biodiversity compliance problem.",
+    ],
+    detailedContent: `
+1. Purpose, structure and current legal framework
+
+The Biological Diversity Act, 2002 gives domestic effect to India's international biodiversity commitments. Its three connected objectives are conservation of biological diversity, sustainable use of its components and fair and equitable sharing of benefits arising from the use of biological resources and associated knowledge. Conservation is therefore not separate from access and benefit sharing: access is regulated so that use remains ecologically sustainable and benefits reach conservers and knowledge holders.
+
+The Biological Diversity (Amendment) Act, 2023 came into force on 1 April 2024 and substantially changed definitions, access categories, intellectual-property procedure, institutions, conservation planning and enforcement. The Biological Diversity Rules, 2024 superseded the 2004 Central Rules after their prescribed commencement period. The Biological Diversity (Amendment) Rules, 2025, effective 1 November 2025, altered the certificate-of-origin procedure for cultivated medicinal plants. The Biological Diversity (Access to Biological Resources and Knowledge Associated thereto and Fair and Equitable Sharing of Benefits) Regulations, 2025 superseded the 2014 ABS Regulations.
+
+A present-day answer must use this amended framework. Older judgments and the 2014 Regulations remain important for history, interpretation and transactions governed by the former regime, but their procedural forms and payment slabs should not be presented as current law.
+
+2. Convention on Biological Diversity and Nagoya Protocol
+
+The 1992 Convention on Biological Diversity rejects the idea that genetic resources are an unrestricted common heritage. States have sovereign rights over natural resources and may regulate access through national legislation. Article 1 states the three objectives reflected in the Indian Act. Articles 6–10 address planning, in-situ and ex-situ conservation and sustainable use; Article 8(j) concerns traditional knowledge, innovations and practices of indigenous and local communities; and Article 15 links access to prior informed consent, mutually agreed terms and fair benefit sharing.
+
+The Nagoya Protocol, adopted in 2010, develops the access-and-benefit-sharing framework. It addresses legal certainty, transparent access procedures, mutually agreed terms, compliance with provider-country law and the approval and involvement of indigenous and local communities where domestic law recognises their rights. India's amended preamble expressly refers to the Protocol.
+
+International instruments guide purposive interpretation but do not replace the Act, Rules or Regulations. In a problem, identify the binding domestic provision first, then use the Convention or Protocol to explain conservation, consent, community participation and equity.
+
+3. Constitutional and federal setting
+
+Article 48A directs the State to protect and improve the environment and safeguard forests and wildlife. Article 51A(g) makes protection of the natural environment, including forests, lakes, rivers and wildlife, and compassion for living creatures a fundamental duty. Article 21 supports protection of life, health and ecological conditions, while Articles 14 and 19 discipline arbitrary or disproportionate regulation. Article 243G, Article 243W and the Eleventh and Twelfth Schedules support decentralised environmental functions through Panchayats and Municipalities.
+
+Biodiversity overlaps with forests, wildlife, agriculture, fisheries, scientific research, patents, plant varieties, tribal rights and local government. The Act creates national, State and local institutions, but State biodiversity rules and local records remain operationally important. Approval under biodiversity law does not displace environmental clearance, forest diversion, wildlife, quarantine, seed, drug, export or community-rights requirements.
+
+4. What is biodiversity and why the Act regulates access
+
+Biological diversity means variability among living organisms from all sources and includes diversity within species, between species and of ecosystems. Genetic diversity supports crop resilience and medicines; species diversity maintains ecological functions; and ecosystem diversity covers forests, wetlands, coasts, grasslands, deserts, mountains and agricultural landscapes.
+
+Threats include habitat loss and fragmentation, over-exploitation, invasive alien species, pollution, climate change, illegal trade, monocultures and erosion of traditional knowledge. Regulation must therefore examine cumulative pressure, conservation status, regeneration, season, quantity and community dependence—not merely the market value of the sample.
+
+Access-and-benefit sharing responds to biopiracy: biological material or knowledge may be converted into research, patents or commercial products without authority, acknowledgment or return of benefits. The statute does not prohibit legitimate research and enterprise; it creates differentiated routes and benefit obligations according to actor, activity, resource and purpose.
+
+5. Core definitions after the 2023 amendment
+
+Section 2(a) defines access as collecting, procuring or possessing a biological resource occurring in or obtained from India, or associated traditional knowledge, for research, bio-survey or commercial utilisation. Section 2(c) includes plants, animals, microorganisms, parts of their genetic material and derivatives, excluding value-added products, having actual or potential use or value for humanity; human genetic material is excluded.
+
+A derivative is a naturally occurring biochemical compound or metabolism of biological resources even without functional units of heredity. A value-added product under section 2(p) contains portions or extracts of plants or animals in an unrecognisable and physically inseparable form. Classification depends on physical state, traceability, processing and intended use; calling an extract a finished product is not decisive.
+
+Benefit claimers are conservers of biological resources or by-products and creators or holders of associated traditional knowledge and related information, innovations and practices. For Indians, the amended definition excludes codified traditional knowledge—knowledge derived from authoritative books specified in the First Schedule to the Drugs and Cosmetics Act, 1940. This narrow statutory definition should not be confused with every written community record.
+
+6. Research, bio-survey and commercial utilisation
+
+Research means study or systematic investigation of a biological resource or technological application using biological systems, living organisms or derivatives to make or modify products or processes. Bio-survey and bio-utilisation concern survey or collection of species, subspecies, genes, components and extracts for a purpose covered by the Act.
+
+Commercial utilisation includes end uses for commercial purposes such as drugs, industrial enzymes, food flavours, fragrance, cosmetics, emulsifiers, oleoresins, colours and genetic intervention in agriculture and livestock. The definition excludes conventional breeding or traditional practices used in agriculture, horticulture, poultry, dairy farming, animal husbandry and bee-keeping. The facts still matter: a commercial R&D programme cannot avoid regulation merely by labelling sophisticated selection or analysis as conventional practice.
+
+Determine purpose at the time of access and monitor later change. Material initially accessed for non-commercial research may later support a patent, licence, scale-up or product. That later event can trigger a fresh registration, approval and benefit-sharing obligation.
+
+7. The actor-first classification: sections 3 and 7
+
+The first compliance question is who accesses the resource. Section 3(2) covers a non-citizen; an Indian citizen who is non-resident under the Income-tax Act; a body corporate, association or organisation not incorporated or registered in India; and an Indian-incorporated or registered body controlled by a foreigner within the meaning of section 2(27) of the Companies Act, 2013.
+
+The 2023 amendment replaced the former test based on any non-Indian participation in share capital or management with the narrower statutory control test. Control may arise directly or indirectly through appointment of a majority of directors, management or policy rights, shareholding, management rights or voting or shareholders' agreements. A cap-table percentage alone may not answer it.
+
+Persons not within section 3(2) generally follow section 7 for access to biological resources and associated knowledge for commercial utilisation. Nationality, residence, incorporation and control should be documented as of the relevant access and transaction dates; a later ownership change may change the route.
+
+8. Section 3: prior NBA approval for specified persons
+
+A section 3(2) person must obtain prior approval of the National Biodiversity Authority before accessing an Indian biological resource or associated traditional knowledge for research, bio-survey and bio-utilisation or commercial utilisation. The requirement covers resources occurring in or obtained from India and, where the statutory language applies, material deposited in repositories outside India.
+
+The application should identify the applicant and control structure, tax residence, resource and quantity, biological and geographical source, purpose, collection method, conservation status, local knowledge, collaborators, proposed transfer, expected results and benefits. Collection should begin only after approval and satisfaction of other permits.
+
+The NBA may grant approval with conditions, determine benefit sharing, restrict access or reject an activity that is detrimental or contrary to conservation, sustainable use or fair benefit sharing. Reasons and hearing requirements protect procedural fairness, but confidentiality must be reconciled with the statutory duty to place approval or rejection details in the public domain.
+
+9. Section 4: transfer of research results
+
+Section 4 requires prior written NBA approval before any person or entity shares or transfers, for monetary consideration or otherwise, results of research on an Indian biological resource or associated traditional knowledge to a section 3(2) person. It is the recipient's statutory class and the nature of the result—not simply physical export of a specimen—that activate the provision.
+
+Publication of research papers or dissemination at a seminar or workshop involving financial benefit may fall outside the section when done in accordance with Central Government guidelines. Where results are used for further research, registration with the NBA is necessary. Use for commercial utilisation or obtaining intellectual-property rights within or outside India requires prior NBA approval under the Act.
+
+A data-sharing agreement should therefore record permitted purpose, recipient status, onward-transfer controls, confidentiality, publication, commercialisation, IPR, benefit sharing and termination. De-identification or transfer through a cloud server does not by itself answer whether protected research results have been shared.
+
+10. Section 5: approved collaborative research
+
+Section 5 exempts section 3 from collaborative research projects involving transfer or exchange of biological resources or associated traditional knowledge between Indian institutions, including government-sponsored institutions, and institutions abroad when statutory conditions are satisfied. The project must conform to Central Government policy guidelines and be approved by the Central Government under those guidelines.
+
+The exemption is project-specific, not a blanket privilege for every university collaboration. Confirm the sponsoring institutions, approved protocol, material-transfer terms, quantities, destinations, repositories, principal investigator's reporting and prohibition on unauthorised commercial or IPR use. A change in partner, scope, resource or downstream purpose may require a new assessment.
+
+Publication, deposit, patenting and commercialisation are separate events. Even when access for the approved collaboration is exempt, a later transfer or commercial use outside its terms can attract sections 4 or 6.
+
+11. Section 6: intellectual-property rights
+
+Section 6 now creates actor-specific timing. A section 3(2) person applying anywhere for an IPR based on research or information concerning an Indian biological resource, including one deposited abroad, or associated traditional knowledge must obtain NBA approval before grant of the right. A section 7 person must register with the NBA before grant and obtain prior NBA approval when commercialising the granted IPR.
+
+This is no longer correctly described as a universal requirement to obtain NBA approval before filing every patent application. Nevertheless, disclosure and procedural steps must be planned early. Patent offices, foreign filing deadlines and NBA processing operate on different timetables, and an applicant should not wait until grant or product launch to assemble source and access records.
+
+Section 6 does not apply to rights under a Parliamentary plant-variety-protection law, and section 59A avoids duplicate approval to the extent an approval or right under that law does not require a similar approval under the Biodiversity Act. These are limited coordination provisions, not a wholesale exemption from access, benefit sharing or other activities.
+
+12. Section 7: Indian access for commercial utilisation
+
+A person outside section 3(2) must give prior intimation to the concerned State Biodiversity Board or Union-territory Biodiversity Council before accessing an Indian biological resource and associated knowledge for commercial utilisation. Sections 23(b) and 24 make clear that the Board regulates the activity by granting or rejecting approval and determines fair benefit sharing under NBA regulations.
+
+Under the 2025 Regulations, the prescribed prior intimation is filed digitally with the applicable fee and acceptance of model mutually agreed terms. The Board or Council may seek clarification, modify terms, hear the applicant and approve or reject. The Regulations provide a limited deemed-approval rule when there is no response within fifteen days, operating for one year; an applicant relying on it should preserve proof of a complete filing and verify that no query or rejection interrupted the period.
+
+The relevant Board is usually connected to the place from which the resource or knowledge is accessed. Multi-State sourcing requires a source-by-source assessment and coordination; corporate headquarters do not determine the ecological source.
+
+13. Section 7 exemptions and their limits
+
+Section 7 does not apply to codified traditional knowledge; cultivated medicinal plants and their products; local people and communities of the area, including growers and cultivators of biodiversity; and vaids, hakims and registered AYUSH practitioners practising indigenous medicine as a profession for sustenance and livelihood. The final group is protected in its livelihood practice, not necessarily in industrial manufacture or transfer to a commercial user.
+
+The cultivated-medicinal-plant exemption depends on a certificate of origin from the Biodiversity Management Committee. Under the 2025 Rules amendment, the BMC maintains cultivation records on the designated portal, the applicant uses the prescribed electronic form and the certificate is digitally generated. Wild collection cannot be converted into cultivated origin through a trader's declaration.
+
+Exemption from section 7 does not automatically exempt a later IPR, transfer to a foreign-controlled recipient, access to associated non-codified knowledge, wildlife or forest permission, export control or threatened-species restriction. Each activity must be tested independently.
+
+14. Section 40 and other exclusions
+
+Section 40 permits the Central Government, after consultation with the NBA, to notify that provisions of the Act do not apply to biological resources normally traded as commodities or derived items, including notified agricultural waste, and to cultivated medicinal plants and products for registered section 7 entities. The exemption cannot cover the IPR activities in section 6(1) and 6(2).
+
+A Normally Traded as Commodity notification must be read with its list, purpose, conditions and date. Commodity trade is not the same as access for research, bio-survey, proprietary product development or patenting. The person invoking an exemption should prove identity of the item, ordinary trade, source, quantity, processing and intended use.
+
+Human genetic material falls outside the statutory definition of biological resources, and a qualifying value-added product is also outside that definition. Ethical review, health law, data protection, wildlife, food, drug, quarantine and export rules may still apply. Exclusion from this Act is not legal immunity.
+
+15. Biological Diversity Rules, 2024 and digital procedure
+
+The 2024 Rules prescribe the NBA's procedure and current electronic forms for access, transfer of research results, IPR approval or registration, commercialisation, third-party transfer, foreign-origin resources and related matters. They also regulate the Authority's meetings, officers, expert committees, revocation, monitoring and reporting. Fees and forms depend on the applicant and activity.
+
+An application is a continuing representation. The applicant must give complete and accurate information, answer queries, notify material changes, sign the approval or benefit-sharing agreement and comply with reporting, source, quantity, transfer and payment conditions. Approval may be revoked for breach, false or misleading information or violation of agreed terms, subject to prescribed procedure.
+
+The compliance file should contain corporate-control and residence records, supplier invoices, collector permissions, source coordinates, species identification, certificate of origin, BMC consultation, material-transfer agreements, research protocol, repository accession, IPR documents, sales records, benefit calculations and proof of payment. A portal acknowledgement is not a substitute for the final legal instrument.
+
+16. National Biodiversity Authority
+
+Sections 8–17 establish the NBA as a statutory body corporate headquartered at Chennai, with possible regional offices. The amended composition includes a Chairperson; sixteen ex-officio members representing relevant Union ministries and institutions; four rotating representatives of State Biodiversity Boards; expert non-official members, including legal experts; and a Member-Secretary who serves as chief coordinating officer and convener.
+
+Under section 18, the NBA makes regulations with Central Government approval for access and fair benefit sharing; regulates sections 3, 4 and 6 by granting or rejecting approvals; advises the Central and State Governments; and may oppose wrongful IPR grants abroad involving Indian resources or traditional knowledge. It may constitute expert committees, impose conditions, monitor compliance and act through lawful delegation.
+
+The Authority combines scientific, administrative and distributive functions. Its order should identify jurisdiction, resource, activity, consultation, conservation evidence, mutually agreed terms, benefit claimant, conditions, reasons and review route.
+
+17. State Boards and Union-territory Councils
+
+Sections 22–25 establish State Biodiversity Boards and provide for Union-territory Biodiversity Councils. Their composition combines a knowledgeable Chairperson, State departmental representatives—including Panchayati Raj and tribal affairs—and non-official experts. State rules govern further procedure.
+
+Section 23 requires the Board to advise the State Government on conservation, sustainable use and fair benefit sharing; regulate section 7 activity by granting or rejecting approvals; and determine benefit sharing under NBA regulations. Under section 24, it may restrict or reject a detrimental activity after an opportunity of hearing and must place approval and rejection details in the public domain.
+
+The Board is not a passive inbox for intimation. It must assess legal category, conservation status, local dependence, source, quantity, supply chain and benefit terms. At the same time, a demand must have clear statutory and regulatory authority, use the current regime and respect prospectivity and natural justice.
+
+18. Biodiversity Management Committees
+
+Section 41 requires BMCs at Gram Panchayat level in rural areas and at the specified Nagar Panchayat, Municipal Committee or Municipal Corporation level in urban areas. A State may also constitute BMCs at intermediate or district Panchayat level. State law prescribes composition within the statutory range of seven to eleven members.
+
+BMC functions include conservation, sustainable use and documentation of biodiversity; preservation of habitats; conservation of landraces, folk varieties, farmers' varieties, cultivars, domesticated animal stocks and breeds, aquatic life and microorganisms; and chronicling associated traditional knowledge. BMCs also maintain cultivated medicinal-plant records and support certificates of origin.
+
+The NBA and Boards must consult the concerned BMC when deciding use of resources or knowledge within its territorial jurisdiction. BMCs may levy collection charges for commercial access in accordance with law. Consultation must be timely, informed and connected to the affected resource and people, not reduced to a signature obtained after the decision.
+
+19. People's Biodiversity Registers
+
+The People's Biodiversity Register records local ecosystems, species, biological resources, seasonal availability, uses, cultivars, breeds, conservation practices and associated knowledge through a participatory process. The BMC leads preparation with technical support from the Board and local knowledge holders. Verification, periodic updating, mapping and community validation are essential.
+
+A PBR can provide a conservation baseline, identify benefit claimers, support land-use and restoration planning and help resist misappropriation. It is not by itself a patent, title deed, automatic consent to access or proof that every entry is free for commercial use. Nor does writing knowledge in a PBR necessarily transform it into codified traditional knowledge under section 2(ea), which uses the specific Drugs and Cosmetics Act definition.
+
+Documentation can expose sacred, secret or commercially valuable knowledge. Access controls, confidentiality categories, community protocols, informed participation and careful public disclosure are therefore necessary. Absence of an entry does not prove absence of a community right or oral knowledge.
+
+20. Prior informed consent and mutually agreed terms
+
+The Nagoya model separates prior informed consent from mutually agreed terms. Consent concerns whether access may occur after disclosure of identity, resource, purpose, risks, expected benefits, transfers and withdrawal conditions. Mutually agreed terms govern quantity, duration, permitted use, benefit sharing, publication, IPR, confidentiality, third-party transfer, monitoring, dispute resolution and termination.
+
+Under the amended Act, section 21 directs the NBA to secure fair benefit sharing through mutually agreed terms between the applicant and the concerned BMC represented by the NBA. The 2024 Rules and 2025 Regulations structure consultation and model terms. Administrators should still identify and involve actual individual or community benefit claimers, especially where a particular knowledge holder or conservers supplied the resource.
+
+Consent must come from a representative process free from coercion and supported by understandable information. A collector's invoice, village official's letter or general research ethics approval is not automatically community consent under biodiversity law.
+
+21. Fair and equitable benefit sharing
+
+Section 21 treats benefit sharing as a condition of lawful access rather than a discretionary donation. Benefits may be monetary or non-monetary and should reflect the resource, knowledge contribution, conservation value, quantity, research or commercial stage, expected revenue, exclusivity, technology, risks and needs of claimers.
+
+Statutory modes include joint ownership of IPR with the NBA or identified benefit claimers, technology transfer, locating production or R&D to improve local living standards, associating Indian scientists and local people with research, venture funding, monetary compensation and other non-monetary benefits. Capacity building, community infrastructure, attribution, data return, conservation work and preferential licensing may be suitable if measurable and agreed.
+
+Equity concerns both amount and distribution. Payment into a fund without locating known knowledge holders may fail the statute's purpose; direct payment without safeguards may exclude women, customary users or neighbouring communities. The agreement should define beneficiaries, milestones, accounts, monitoring and grievance procedure.
+
+22. Benefit-sharing calculations under the 2025 Regulations
+
+For commercial access under sections 3 and 7, the 2025 Regulations use turnover-linked rates calculated on annual gross ex-factory sale of the relevant product excluding government taxes: nil up to ₹5 crore annual turnover, 0.2 per cent above ₹5 crore and up to ₹50 crore, 0.4 per cent above ₹50 crore and up to ₹250 crore, and 0.6 per cent above ₹250 crore. Persons above the prescribed annual-turnover threshold must file an annual statement of resources consumed and pay digitally.
+
+High-conservation or high-economic-value resources such as red sanders, sandalwood and agarwood, and notified threatened species, may attract an upfront payment of at least five per cent of auction proceeds, sale amount or purchase price. The Regulations also permit higher components where digital sequence information is involved and prescribe separate benefit sharing for IPR commercialisation, including own use and assignment or licensing.
+
+Do not apply a percentage mechanically to the entire company. Identify the responsible person, financial year, relevant resource, product, ex-factory sales, taxes, threshold, special category, IPR income and any exemption. Preserve audited working papers. A regulation may be amended, so use the text in force for the transaction year.
+
+23. Biodiversity funds and distribution
+
+Sections 27, 32 and 43 create National, State and Local Biodiversity Funds. They receive grants, charges, benefit-sharing amounts and other authorised sums. The amended provisions emphasise conservation, promotion and sustainable use, socio-economic development of source areas, benefit transfer to claimers, grants or loans to BMCs and other purposes of the Act.
+
+Where an individual, group or organisation is identifiable as the source or knowledge holder, the NBA may direct direct payment according to the agreement. Where the exact area cannot be identified, funds may support socio-economic development where the resource occurs. Local Biodiversity Funds may finance conservation and restoration, compatible community development and BMC administration.
+
+Fund use requires traceability, budgets, accounts, audits, outcome indicators and disclosure that protects confidential knowledge. Planting an unrelated species or financing general office expenses should not be described as benefit sharing without a statutory connection and documented community benefit.
+
+24. Conservation strategies and mainstreaming
+
+Section 36 requires national strategies, plans and programmes developed with States and Union territories for conservation, promotion and sustainable use. Measures include identifying and monitoring biodiversity-rich areas; in-situ and ex-situ conservation; protection of cultivars, folk varieties and landraces; research, training and education; impact assessment; biosafety; and respect and protection for local knowledge.
+
+Section 36B imposes corresponding State planning and mainstreaming responsibilities. Biodiversity must be integrated, as far as practicable, into relevant sectoral policies and cross-sectoral plans—agriculture, fisheries, forestry, infrastructure, mining, tourism, health and urban planning. Section 36A allows monitoring and regulation in India of access and use of foreign-country resources to meet international obligations.
+
+In-situ conservation protects ecosystems and viable populations in their natural surroundings; ex-situ conservation operates outside natural habitats through seed banks, botanical gardens, zoos, microbial collections and gene banks. Ex-situ custody does not erase origin, access conditions or benefit obligations.
+
+25. Biodiversity heritage sites and threatened species
+
+Under section 37, a State Government may notify areas of biodiversity importance as biodiversity heritage sites on the recommendation of the State Board. Before recommendation, the Board must consult the concerned local body and BMC. State rules should address management and measures for compensation or rehabilitation of economically affected people.
+
+A heritage-site notification should rest on ecological and cultural evidence, mapped boundaries, threats, customary use and a participatory management plan. It is not identical to a national park, sanctuary, eco-sensitive zone or heritage designation under another law; overlapping regimes must be mapped separately.
+
+Section 38 permits notification of species on the verge of extinction or likely to become extinct and regulation or prohibition of collection, with rehabilitation and preservation measures. The Central Government may delegate this power to a State, which must consult the NBA. Species schedules under wildlife law, red lists and section 38 notifications are different legal instruments.
+
+26. Repositories, specimens and foreign-origin resources
+
+Section 39 permits designation of repositories for categories of biological resources. Depositing voucher specimens supports taxonomic verification, traceability, reproducibility and enforcement. Approval conditions may require deposit, accession number, source metadata and restrictions on onward access.
+
+The 2025 Regulations provide a route for an Indian researcher to deposit a novel microbial strain in a foreign repository for publication while depositing the required voucher specimen in an Indian designated repository and informing the foreign repository of Indian access requirements. Taxonomic reference or publication should not become an undisclosed route to commercial transfer.
+
+For a biological resource or associated knowledge obtained from a foreign country and used in India for research, commercial utilisation or IPR, section 36A and rule 18 of the 2024 Rules require the prescribed declaration to the NBA. Compliance with the provider country's law and internationally recognised certificate or mutually agreed terms remains a separate obligation.
+
+27. Traditional knowledge, farmers and agrobiodiversity
+
+Traditional knowledge may identify medicinal properties, ecological indicators, seed traits, harvesting methods and conservation practices. Protection requires attribution, control over disclosure, fair benefits and respect for customary institutions. The Traditional Knowledge Digital Library can help patent examiners identify prior art, but defensive prevention of a wrongful patent does not itself compensate knowledge holders.
+
+Landraces, folk varieties, farmers' varieties and cultivars embody continuing farmer innovation. The Biodiversity Act, Protection of Plant Varieties and Farmers' Rights Act, Seed law, Forest Rights Act and intellectual-property rules may overlap. Section 59A prevents unnecessary duplicate approval only to the stated extent; it does not extinguish conservation duties or community benefit claims outside the protected right.
+
+The Kani–Jeevani experience is often studied as an early Indian benefit-sharing model involving knowledge of the arogyapacha plant. Neem, turmeric and basmati controversies illustrate how source disclosure and prior-art evidence can resist misappropriation, but they should not be inaccurately described as prosecutions under the 2002 Act.
+
+28. Patents and source disclosure
+
+The Patents Act independently requires disclosure of the source and geographical origin of biological material used in an invention where applicable. Failure or wrongful mention can support pre-grant or post-grant opposition and revocation. Section 3(j) excludes plants and animals in whole or part, other than microorganisms, and essentially biological processes for production or propagation, while genuinely patentable biotechnology still must satisfy novelty, inventive step, industrial application and other exclusions.
+
+Patentability and biodiversity approval are different questions. NBA approval does not make an invention patentable; a patent grant does not legalise unlawful access. The IPR applicant, inventor, assignee and commercialiser may have different obligations, so agreements should allocate filings, disclosure, NBA steps, benefit sharing and liability.
+
+Under section 18(4), the NBA may act on behalf of the Central Government to oppose IPR abroad involving Indian resources or associated traditional knowledge accessed without authority. Effective opposition requires reliable provenance records, prior art, community evidence and coordination with the relevant patent office.
+
+29. Digital sequence information and emerging issues
+
+Digital sequence information includes electronic genetic and molecular sequence data derived from biological resources. Although global negotiations continue over terminology and multilateral benefit sharing, the Indian 2025 Regulations expressly include DSI in several access and benefit-sharing provisions. The NBA's current implementation also treats Indian-origin sequence information, including data in overseas repositories, as potentially regulated.
+
+A DSI problem should identify the underlying resource and origin, date and terms of physical access, database or repository, downloader and controller, intended research or commercial use, associated traditional knowledge, transfer, IPR and product revenue. Open online availability does not conclusively establish unrestricted legal use.
+
+Synthetic biology, metagenomics and machine learning can make the link between a final product and a physical specimen less visible. Chain-of-provenance records, persistent accession identifiers, data licences and benefit triggers tied to commercial milestones are increasingly important.
+
+30. Penalties, inspection, appeal and remedies
+
+The 2023 amendment replaced imprisonment for contraventions of sections 3, 4, 6 and 7 with administrative monetary penalties. Section 55 prescribes a penalty from ₹1 lakh to ₹50 lakh; where damage exceeds that amount the penalty may be commensurate with damage, and a continuing failure may attract an additional penalty up to ₹1 crore. Attempt and abetment are included.
+
+Under section 55A, a Central Government-appointed adjudicating officer of the required seniority conducts an inquiry, may summon evidence and must give an opportunity of hearing. An appeal from the penalty order lies to the National Green Tribunal within sixty days. Section 55B authorises designated officers to inspect, survey, collect information, seize materials and records, compel attendance, issue search warrants and conduct inquiry within the statutory grant.
+
+Section 52A separately permits appeals to the NGT from benefit-sharing determinations or orders of the NBA or a Board in accordance with the NGT Act; the 2025 Regulations state a thirty-day route for covered orders. Section 53 authorises benefit claimers to seek recovery of benefits through the statutory mechanism, and section 54 allows injunction against threatened contravention on the prescribed application. In an exam problem distinguish regulatory approval, benefit recovery, monetary penalty, injunction, appeal and ecological restoration.
+
+31. Case-law development and temporal caution
+
+Divya Pharmacy v. Union of India held under the former framework that an Indian company could be required to share benefits and read the Act consistently with the Nagoya Protocol's community-centred purpose. In DCM Shriram Ltd. v. National Biodiversity Authority, the NGT upheld NBA conditions for a foreign-controlled seed company that had sought post-facto regularisation, treated its conventional-breeding claim as research on the facts and sustained upfront ABS under the then-applicable regime.
+
+Hygienic Research Institute Pvt. Ltd. v. State of Himachal Pradesh granted interim protection against pre-amendment benefit demands, stressing that the express 2023 power of State Boards to determine benefit sharing took effect only on 1 April 2024 and was prima facie substantive. These decisions must be placed on a timeline: the 2025 Regulations now expressly govern section 7 approvals and benefit sharing, while historical liabilities may depend on the text, notifications and regulations in force when access occurred.
+
+Broader Supreme Court decisions support ecocentric conservation, community participation, public trust, intergenerational equity and reasoned expert appraisal. They do not dispense with the elements of the Biodiversity Act.
+
+32. Problem-solving method and critical evaluation
+
+Start with actor, resource, origin, date, purpose and activity. Classify the material as biological resource, derivative, value-added product, traditional knowledge or DSI. Classify the person under section 3(2) or section 7. Then test a specific exclusion or exemption and identify the competent NBA, Board, Council, BMC or other authority.
+
+Separate access, research-result transfer, IPR application, IPR commercialisation, third-party transfer and product sale. For each event ask whether prior approval, registration, intimation, certificate, consent, mutually agreed terms or benefit sharing is required. Map forest, wildlife, community, patent, plant-variety, drug, quarantine and export law separately.
+
+Finally assess conservation impact, benefit claimers, consultation, evidence, payment calculation, continuing conditions, inspection and remedy. A strong answer states uncertainties: corporate control, DSI jurisdiction, codified-knowledge boundaries, overlapping claimers and confidentiality require fact-sensitive reasoning. The statute's legitimacy depends on achieving all three objectives rather than treating ease of access, conservation or revenue collection as the sole goal.
+    `.trim(),
     keyPoints: [
-      "Conservation and sustainable use",
-      "Access and benefit sharing",
-      "National and State biodiversity authorities",
-      "Biodiversity Management Committees",
-      "Traditional knowledge and biological resources",
+      "The 2023 amendment has operated since 1 April 2024; use the 2024 Rules, 2025 Rules amendment and 2025 ABS Regulations for current procedure.",
+      "The Act combines conservation, sustainable use and fair and equitable benefit sharing.",
+      "Access includes collecting, procuring or possessing an Indian resource or associated traditional knowledge for a regulated purpose.",
+      "Biological resources include genetic material and derivatives but exclude human genetic material and qualifying value-added products.",
+      "Section 3(2) foreign, non-resident and foreign-controlled persons need prior NBA approval for regulated access.",
+      "Other persons follow section 7 for commercial access through prior intimation and regulatory approval by the State Board or UT Council.",
+      "Transfer of research results and each IPR stage must be analysed separately under sections 4 and 6.",
+      "The section 7 livelihood, codified-knowledge and cultivated-medicinal-plant exemptions are activity-specific, not blanket immunity.",
+      "A cultivated medicinal plant needs a valid BMC-linked certificate of origin to obtain the exemption.",
+      "Normally Traded as Commodity protection depends on a current section 40 notification, the listed item and ordinary trade purpose.",
+      "NBA, State Boards or UT Councils and BMCs form a decentralised three-tier system.",
+      "A People's Biodiversity Register is a conservation and provenance record—not a patent, consent instrument or automatic public-domain dedication.",
+      "Prior informed consent and mutually agreed terms serve different functions and should identify actual benefit claimers.",
+      "Benefit sharing may be monetary or non-monetary and should be traceable to conservers, knowledge holders and source areas.",
+      "The 2025 Regulations use turnover-linked commercial rates and special rules for high-value resources, DSI and IPR commercialisation.",
+      "Biodiversity heritage sites, threatened-species notifications, repositories and funds support conservation beyond access licensing.",
+      "The Patents Act source-disclosure duty and biodiversity approval are cumulative but answer different legal questions.",
+      "Post-2023 contraventions principally attract administrative penalties, adjudication, inspection powers and NGT appeals.",
     ],
     provisions: [
-      "Biological Diversity Act, 2002",
-      "Biological Diversity Rules, 2004",
+      {
+        id: "environmental-law-unit-7-constitution-cbd",
+        title: "Constitution and Convention on Biological Diversity",
+        provision: "Articles 21, 48A and 51A(g); CBD Articles 1, 8(j) and 15",
+        description:
+          "Supply the constitutional and international basis for conservation, sustainable use, community knowledge, regulated access and equitable benefits.",
+      },
+      {
+        id: "environmental-law-unit-7-nagoya",
+        title: "Nagoya Protocol on Access and Benefit Sharing",
+        provision: "Articles 5–7, 12, 15–17",
+        description:
+          "Develops prior informed consent, mutually agreed terms, indigenous and local community involvement and compliance with provider-country law.",
+      },
+      {
+        id: "environmental-law-unit-7-definitions",
+        title: "Biological Diversity Act, 2002",
+        provision: "Section 2",
+        description:
+          "Defines access, benefit claimers, biological resources, derivatives, commercial utilisation, research, value-added products and related concepts.",
+      },
+      {
+        id: "environmental-law-unit-7-nba-access",
+        title: "Prior NBA approval",
+        provision: "Sections 3 and 19",
+        description:
+          "Regulate access by foreign persons, non-resident Indian citizens, foreign entities and Indian bodies controlled by foreigners.",
+      },
+      {
+        id: "environmental-law-unit-7-research-transfer",
+        title: "Research-result transfer",
+        provision: "Sections 4, 5 and 20",
+        description:
+          "Control transfer of research results to section 3(2) persons and provide a limited route for approved international collaborative research.",
+      },
+      {
+        id: "environmental-law-unit-7-ipr",
+        title: "Intellectual-property approval and registration",
+        provision: "Section 6",
+        description:
+          "Requires pre-grant NBA approval for section 3(2) persons and pre-grant registration plus pre-commercialisation approval for section 7 persons.",
+      },
+      {
+        id: "environmental-law-unit-7-state-access",
+        title: "Commercial access by Indian persons",
+        provision: "Sections 7, 23 and 24",
+        description:
+          "Requires prior intimation and enables the State Board or UT Council to approve, reject, restrict and determine benefit sharing for section 7 activity.",
+      },
+      {
+        id: "environmental-law-unit-7-nba",
+        title: "National Biodiversity Authority",
+        provision: "Sections 8–21",
+        description:
+          "Establish the NBA, its amended composition, regulatory and advisory functions, applications and determination of fair benefit sharing.",
+      },
+      {
+        id: "environmental-law-unit-7-state-board",
+        title: "State Boards and UT Councils",
+        provision: "Sections 22–26",
+        description:
+          "Create State and Union-territory institutions responsible for advice, section 7 regulation and State-level benefit sharing.",
+      },
+      {
+        id: "environmental-law-unit-7-funds",
+        title: "Biodiversity funds",
+        provision: "Sections 27, 32 and 42–46",
+        description:
+          "Create National, State and Local funds and direct their use, accounting and audit for benefit claimers, conservation and source-area development.",
+      },
+      {
+        id: "environmental-law-unit-7-conservation",
+        title: "National and State conservation measures",
+        provision: "Sections 36, 36A and 36B",
+        description:
+          "Require conservation strategies, mainstreaming, impact and biosafety measures and monitoring of foreign-origin resources used in India.",
+      },
+      {
+        id: "environmental-law-unit-7-heritage-threatened",
+        title: "Biodiversity heritage sites and threatened species",
+        provision: "Sections 37 and 38",
+        description:
+          "Provide participatory notification and management of biodiversity-important areas and regulation or rehabilitation of threatened species.",
+      },
+      {
+        id: "environmental-law-unit-7-repositories",
+        title: "Designated repositories",
+        provision: "Section 39",
+        description:
+          "Supports traceable deposition of voucher specimens and scientific verification of accessed biological resources.",
+      },
+      {
+        id: "environmental-law-unit-7-exemptions",
+        title: "Notified exemptions",
+        provision: "Section 40",
+        description:
+          "Permits notification-based exemptions for normally traded commodities, derived items, agricultural wastes and specified cultivated medicinal plants.",
+      },
+      {
+        id: "environmental-law-unit-7-bmc",
+        title: "Biodiversity Management Committees",
+        provision: "Section 41",
+        description:
+          "Requires local BMCs for conservation, documentation, consultation, collection charges and cultivated-medicinal-plant provenance.",
+      },
+      {
+        id: "environmental-law-unit-7-appeals-remedies",
+        title: "Appeals, recovery and injunction",
+        provision: "Sections 52A–54",
+        description:
+          "Provides NGT review of benefit-sharing and regulatory orders, benefit recovery and prevention of threatened contravention.",
+      },
+      {
+        id: "environmental-law-unit-7-enforcement",
+        title: "Administrative penalties and investigation",
+        provision: "Sections 55, 55A and 55B",
+        description:
+          "Creates monetary penalties, adjudication with hearing, NGT appeal and statutory powers of entry, inspection, survey, search and seizure.",
+      },
+      {
+        id: "environmental-law-unit-7-plant-varieties",
+        title: "Plant-variety coordination",
+        provision: "Sections 6(3)–(4) and 59A",
+        description:
+          "Coordinates the Biodiversity Act with Parliamentary plant-variety protection without creating an unlimited access exemption.",
+      },
+      {
+        id: "environmental-law-unit-7-rules",
+        title: "Biological Diversity Rules, 2024",
+        provision: "Rules 13–19 and prescribed electronic forms",
+        description:
+          "Prescribe current access, research-transfer, IPR, commercialisation, foreign-origin resource and certificate-of-origin procedures.",
+      },
+      {
+        id: "environmental-law-unit-7-rules-amendment",
+        title: "Biological Diversity (Amendment) Rules, 2025",
+        provision: "Rule 19 and Forms 11, 11A and 12",
+        description:
+          "Provide the current electronic record, application and certificate-of-origin system for cultivated medicinal plants.",
+      },
+      {
+        id: "environmental-law-unit-7-abs-regulations",
+        title: "Biological Diversity ABS Regulations, 2025",
+        provision: "Regulations 3–10",
+        description:
+          "Govern benefit sharing for research, commercial access, section 7 approvals, research-result transfer, IPR, DSI and foreign repository deposits.",
+      },
+      {
+        id: "environmental-law-unit-7-patents",
+        title: "Patents Act, 1970",
+        provision: "Sections 3(j), 10, 25 and 64",
+        description:
+          "Regulates patentable biological inventions, source and geographical-origin disclosure, opposition and revocation independently of NBA compliance.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-7-ganesh-wood",
+        caseName: "State of Himachal Pradesh v. Ganesh Wood Products",
+        citation: "(1995) 6 SCC 363",
+        principle:
+          "Forest-based industrial permission must account for ecological capacity, raw-material sustainability and the public interest in conserving forests.",
+        summary:
+          "The Supreme Court set aside indiscriminate approval of forest-based industries and stressed scientific assessment before committing biological resources.",
+      },
+      {
+        id: "environmental-law-unit-7-godavarman",
+        caseName: "T.N. Godavarman Thirumulpad v. Union of India",
+        citation: "(1997) 2 SCC 267",
+        principle:
+          "Forest and biodiversity protection may require continuing judicial supervision and a functional approach to ecological resources.",
+        summary:
+          "The Court's nationwide forest directions became a foundational conservation framework relevant to habitat and biodiversity governance.",
+      },
+      {
+        id: "environmental-law-unit-7-n-d-jayal",
+        caseName: "N.D. Jayal v. Union of India",
+        citation: "(2004) 9 SCC 362",
+        principle:
+          "Sustainable development requires decision-makers to integrate precaution, ecological risk and intergenerational interests into project appraisal.",
+        summary:
+          "In reviewing the Tehri project, the Court explained sustainable development as a balancing discipline informed by expert risk assessment.",
+      },
+      {
+        id: "environmental-law-unit-7-intellectuals-forum",
+        caseName: "Intellectuals Forum, Tirupathi v. State of Andhra Pradesh",
+        citation: "(2006) 3 SCC 549",
+        principle:
+          "Public-trust and sustainable-development principles restrain conversion of ecological commons such as tanks and their supporting landscapes.",
+        summary:
+          "The Court protected community water bodies and required public authorities to justify land-use choices against ecological functions.",
+      },
+      {
+        id: "environmental-law-unit-7-lafarge",
+        caseName: "Lafarge Umiam Mining Pvt. Ltd. v. Union of India",
+        citation: "(2011) 7 SCC 338",
+        principle:
+          "Environmental decision-making requires an institutionally competent appraisal of forests, biodiversity, local rights and sustainable development.",
+        summary:
+          "The Court examined limestone mining in Meghalaya and emphasised structured scrutiny, good governance and community-related safeguards.",
+      },
+      {
+        id: "environmental-law-unit-7-centre-environmental-law",
+        caseName: "Centre for Environmental Law, WWF-India v. Union of India",
+        citation: "(2013) 8 SCC 234",
+        principle:
+          "Species conservation calls for an ecocentric approach focused on the best interest and long-term survival of the species.",
+        summary:
+          "The Supreme Court prioritised a second free-ranging population of Asiatic lions to reduce extinction risk.",
+      },
+      {
+        id: "environmental-law-unit-7-orissa-mining",
+        caseName: "Orissa Mining Corporation Ltd. v. Ministry of Environment and Forest",
+        citation: "(2013) 6 SCC 476",
+        principle:
+          "Gram Sabhas have a decisive statutory role in determining claimed community and religious forest rights affected by a project.",
+        summary:
+          "The Niyamgiri dispute demonstrates that biodiversity decisions must be connected to lawful community institutions and cultural rights.",
+      },
+      {
+        id: "environmental-law-unit-7-goa-foundation",
+        caseName: "Goa Foundation v. Union of India",
+        citation: "(2014) 6 SCC 590",
+        principle:
+          "Mineral and ecological resources are held subject to public trust and intergenerational equity rather than short-term extraction alone.",
+        summary:
+          "The Court's mining directions linked natural-resource governance with environmental protection and the interests of future generations.",
+      },
+      {
+        id: "environmental-law-unit-7-divya-pharmacy",
+        caseName: "Divya Pharmacy v. Union of India",
+        citation: "2018 SCC OnLine Utt 1035",
+        principle:
+          "Under the former Act and 2014 Regulations, an Indian commercial user could owe fair and equitable benefit sharing to the State Board and local communities.",
+        summary:
+          "The Uttarakhand High Court upheld the ABS framework through a purposive reading informed by the CBD and Nagoya Protocol.",
+      },
+      {
+        id: "environmental-law-unit-7-monsanto",
+        caseName: "Monsanto Technology LLC v. Nuziveedu Seeds Ltd.",
+        citation: "(2019) 3 SCC 381",
+        principle:
+          "Patent and plant-variety questions involving biotechnology require a properly developed factual record and application of their distinct statutory regimes.",
+        summary:
+          "The Supreme Court restored the dispute for trial rather than finally deciding complex patentability and plant-variety issues on summary pleadings.",
+      },
+      {
+        id: "environmental-law-unit-7-dcm-shriram",
+        caseName: "DCM Shriram Ltd. v. National Biodiversity Authority",
+        citation: "NGT Appeal Nos. 22–24 of 2021 (SZ), decided 30 May 2023",
+        principle:
+          "A foreign-controlled seed company's commercial conventional-breeding label did not defeat NBA jurisdiction where the facts showed regulated research and past unapproved access.",
+        summary:
+          "The NGT dismissed challenges to post-facto approval conditions and upfront ABS under the legal regime then in force.",
+      },
+      {
+        id: "environmental-law-unit-7-hygienic-research",
+        caseName: "Hygienic Research Institute Pvt. Ltd. v. State of Himachal Pradesh",
+        citation: "CWP No. 3738 of 2024, interim order dated 24 May 2024 (H.P. HC)",
+        principle:
+          "The express 2023 power of State Boards to determine benefit sharing commenced prospectively on 1 April 2024 and could not prima facie justify an earlier demand.",
+        summary:
+          "The High Court stayed pre-amendment benefit-sharing demands while distinguishing statutory authority, delegated rules and the timing of the amendment.",
+      },
+    ],
+    examFocus:
+      "Prepare the CBD's three objectives, sovereign control of genetic resources, Article 8(j), Article 15 and the Nagoya Protocol; constitutional Articles 21, 48A and 51A(g); the amended section 2 definitions of access, biological resources, derivative, benefit claimers, codified traditional knowledge, research, commercial utilisation and value-added product; classification of section 3(2) persons through foreign control and section 7 persons; NBA approval under section 3; transfer of research results under section 4; collaborative-research exception under section 5; actor-specific IPR timing under section 6; section 7 prior intimation, State approval and exemptions; certificate of origin for cultivated medicinal plants; section 40 normally-traded-commodity notifications; NBA, SBB, UT Council and BMC functions; PBR purpose and confidentiality; consent, mutually agreed terms and identified benefit claimers; monetary and non-monetary modes under section 21; turnover slabs, high-value resources, DSI and IPR commercialisation under the 2025 Regulations; National, State and Local Funds; sections 36–41 on planning, foreign-origin resources, heritage sites, threatened species, repositories and BMCs; Patents Act source disclosure and PPVFR coordination; and sections 52A–55B on appeals, recovery, injunction, penalties and inspection. In every problem create a date-specific event table separating access, transfer, IPR, commercialisation and sale, and never apply the repealed 2004 Rules or superseded 2014 Regulations as current procedure.",
+    revisionNotes: `
+Core object: conservation + sustainable use + fair and equitable benefit sharing. Current sequence: 2023 Amendment effective 1 April 2024; 2024 Central Rules supersede the 2004 Rules; 2025 Rules amendment governs cultivated-medicinal-plant certificates; 2025 ABS Regulations supersede the 2014 Regulations.
+
+Definitions: access means collecting, procuring or possessing an Indian biological resource or associated TK for research, bio-survey or commercial use. Biological resource includes plants, animals, microorganisms, genetic material and derivatives; it excludes human genetic material and qualifying value-added products. Codified TK is limited to knowledge derived from authoritative books in the Drugs and Cosmetics Act First Schedule.
+
+Actor map: section 3(2) = foreign citizen, non-resident Indian citizen, foreign body or Indian body controlled by a foreigner; prior NBA approval for access. Section 7 = other persons commercially accessing; prior intimation plus State Board/UT Council regulation. Section 4 controls research-result transfer. Section 5 protects approved international collaborations. Section 6: section 3(2) person obtains pre-grant NBA approval; section 7 person registers pre-grant and obtains approval before commercialising the IPR.
+
+Exemptions: local communities, growers and cultivators, livelihood practice by vaids, hakims and registered AYUSH practitioners, codified TK and certified cultivated medicinal plants receive limited section 7 protection. Section 40 NTAC status depends on notification and ordinary commodity purpose. Always retest IPR, foreign transfer, wild collection and other statutes.
+
+Institutions: NBA regulates sections 3, 4 and 6. SBB/UT Council regulates section 7 and determines ABS. BMC conserves, documents, supports PBRs, is consulted and maintains medicinal-plant provenance. A PBR is evidence and a planning tool—not consent, a patent or automatic public-domain status.
+
+ABS: consent answers whether access may occur; mutually agreed terms govern how. Benefits can include money, joint IPR, technology transfer, local R&D, scientific and community participation and conservation. Current commercial rates are nil to ₹5 crore turnover, then 0.2%, 0.4% and 0.6% across the prescribed slabs; special rules apply to high-value resources, threatened species, DSI and IPR income.
+
+Conservation: sections 36 and 36B require national and State plans and mainstreaming; section 37 covers biodiversity heritage sites with local consultation; section 38 covers threatened species; section 39 covers repositories; section 41 covers BMCs. Funds must trace benefits to claimers, source areas and conservation outcomes.
+
+Enforcement: section 55 now uses administrative penalties of ₹1 lakh–₹50 lakh, damage-linked enhancement and up to ₹1 crore additional continuing penalty. Section 55A provides adjudication, hearing and a 60-day NGT appeal; section 55B provides investigation powers. Section 52A covers NGT appeals from NBA/SBB determinations and orders. Distinguish penalty, benefit recovery, injunction, appeal and restoration.
+
+Cases: Divya Pharmacy — community-centred ABS under the former regime; DCM Shriram — factual research and post-facto ABS; Hygienic Research Institute — prospectivity and clear authority; Orissa Mining — Gram Sabha and community rights; Centre for Environmental Law — ecocentric species protection; Goa Foundation — intergenerational equity; Monsanto — distinct patent and plant-variety statutes.
+
+Problem formula: actor + material + origin + purpose + date; classify the activity; identify authority; test a precise exemption; separate access, transfer, IPR and commercialisation; verify consent and benefit terms; calculate against current regulations; preserve provenance and financial evidence; select review and remedy.
+    `.trim(),
+    notes: "",
   },
   {
     title: "National Green Tribunal Act, 2010",
