@@ -16,6 +16,11 @@ import {
 import { generalPrinciplesOfContractBooks } from "../data/courses/generalPrinciplesOfContract";
 import { environmentalLawBooks } from "../data/courses/environmentalLaw";
 
+const bundledCourseBooks = [
+  ...generalPrinciplesOfContractBooks,
+  ...environmentalLawBooks,
+];
+
 // =========================================================
 // GET ALL BOOKS FOR ADMIN
 // =========================================================
@@ -27,8 +32,23 @@ export const getBooksByCourse = async (
     return [];
   }
 
-  return getCourseBooks(
+  const storedBooks = await getCourseBooks(
     courseId,
+  );
+
+  const bookMap = new Map(
+    bundledCourseBooks
+      .filter((book) => book.courseId === courseId)
+      .map((book) => [book.id, book]),
+  );
+
+  for (const book of storedBooks || []) {
+    if (book?.id) bookMap.set(book.id, book);
+  }
+
+  return [...bookMap.values()].sort(
+    (first, second) =>
+      Number(first.displayOrder || 0) - Number(second.displayOrder || 0),
   );
 };
 
@@ -50,7 +70,7 @@ export const getPublishedBooksByCourse =
       );
 
     const bookMap = new Map(
-      [...generalPrinciplesOfContractBooks, ...environmentalLawBooks]
+      bundledCourseBooks
         .filter((book) => book.courseId === courseId)
         .map((book) => [book.id, book]),
     );
