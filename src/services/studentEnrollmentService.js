@@ -679,7 +679,7 @@ export const activateCertification = async (
             true,
 
           finalExam:
-            true,
+            false,
         },
 
         // =================================================

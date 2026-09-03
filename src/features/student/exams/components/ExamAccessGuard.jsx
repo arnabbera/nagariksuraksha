@@ -185,6 +185,34 @@ export default function ExamAccessGuard({
   if (
     examType === "final"
   ) {
+    const allMockTestsCompleted =
+      [1, 2, 3].every(
+        (testNumber) =>
+          [
+            "passed",
+            "failed",
+            "completed",
+          ].includes(
+            certification
+              .mockTests
+              ?.[`test${testNumber}`]
+              ?.status,
+          ),
+      );
+
+    if (!allMockTestsCompleted) {
+      return (
+        <>
+          <LockedExam
+            title="Final Examination Locked"
+            message="Complete all three mock tests before attempting the Final Examination."
+          />
+
+          <ExamAccessGuardStyles />
+        </>
+      );
+    }
+
     return (
       <>
         {children}

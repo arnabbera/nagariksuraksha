@@ -198,6 +198,13 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
   const currentQuestion = questions[currentIndex];
   const isAdmin = role === "admin" || profile?.role === "admin";
   const paid = isAdmin || hasPaidCourseAccess(enrollment);
+  const allMockTestsCompleted =
+    isAdmin ||
+    [1, 2, 3].every((test) =>
+      ["passed", "failed", "completed"].includes(
+        enrollment?.certification?.mockTests?.[`test${test}`]?.status,
+      ),
+    );
 
   const calculatedResult = useMemo(() => {
     let correct = 0;
@@ -262,6 +269,23 @@ export default function CourseAssessmentPage({ examType = "mock" }) {
             <FaLock />
             <h2>Paid enrollment required</h2>
             <p>Enroll in this course before attempting its assessments.</p>
+            <Button onClick={() => navigate(`/student/courses/${course.slug}`)}>Return to Course</Button>
+          </div>
+        </Card>
+        <AssessmentStyles />
+      </div>
+    );
+  }
+
+  if (examType === "final" && !allMockTestsCompleted) {
+    return (
+      <div>
+        <PageHeader title="Final Examination Locked" description={course.title} />
+        <Card>
+          <div className="ns-assessment-locked">
+            <FaLock />
+            <h2>Complete all three mock tests first</h2>
+            <p>Your result in each mock test may be passed or failed, but all three attempts must be submitted before the final examination opens.</p>
             <Button onClick={() => navigate(`/student/courses/${course.slug}`)}>Return to Course</Button>
           </div>
         </Card>

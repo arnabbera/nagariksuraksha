@@ -472,6 +472,14 @@ export default function CourseDetails() {
     isAdmin ||
     certificationPaymentCompleted;
 
+  const allMockTestsCompleted =
+    isAdmin ||
+    [1, 2, 3].every((number) =>
+      ["passed", "failed", "completed"].includes(
+        certification?.mockTests?.[`test${number}`]?.status,
+      ),
+    );
+
   const isCivilProcedureCourse =
     course?.slug ===
     "code-of-civil-procedure-and-limitation";
@@ -506,7 +514,9 @@ export default function CourseDetails() {
 
   const mockTest2Available = hasCourseAccess;
   const mockTest3Available = hasCourseAccess;
-  const finalExamAvailable = hasCourseAccess;
+  const finalExamAvailable =
+    hasCourseAccess &&
+    allMockTestsCompleted;
 
   const handleCertificationPayment =
     async () => {
@@ -1228,7 +1238,9 @@ export default function CourseDetails() {
                   >
                     {finalExamAvailable ? <FaCheckCircle /> : <FaLock />}
                     <span>
-                      {finalExamAvailable ? "Start Final Examination" : "Final Examination Locked"}
+                      {finalExamAvailable
+                        ? "Start Final Examination"
+                        : "Complete All 3 Mock Tests First"}
                     </span>
                   </button>
                 </div>
