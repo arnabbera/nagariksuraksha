@@ -1512,23 +1512,480 @@ Limits: PIL is not a private dispute, political platform or substitute for every
     shortDescription:
       "Civil, criminal and statutory controls under environmental legislation and liability statutes.",
     overview:
-      "This unit examines legal sanctions and enforcement strategies for controlling pollution, including regulatory directions, prosecution, compensation, insurance-based relief and specialised environmental adjudication.",
-    detailedContent:
-      "Legal sanctions and strategies under the Environment (Protection) Act, Air Act and Water Act; closure and prohibition directions; consent violations; offences by companies and government departments; prosecution and penalties; compensation and restoration; Public Liability Insurance Act, 1991; the historical National Environment Tribunal Act, 1995; transition to the National Green Tribunal framework; and coordination among regulators, courts and tribunals.",
+      "This unit explains how Indian environmental law prevents, stops, punishes and repairs pollution. It distinguishes regulatory directions, consent enforcement, administrative monetary penalties, criminal prosecution, civil and public-law compensation, no-fault accident relief and ecological restoration. It studies the Environment (Protection) Act, 1986, the Air Act, 1981, the Water Act, 1974, the Public Liability Insurance Act, 1991 and the National Green Tribunal Act, 2010, while treating the National Environment Tribunal Act, 1995 as a historical and repealed framework. Particular attention is given to the Jan Vishwas reforms, the territorially qualified Water Act amendment, corporate and departmental responsibility, citizen enforcement, evidence, proportionality and coordinated compliance strategy.",
+    learningObjectives: [
+      "Classify environmental sanctions as preventive, administrative, civil, criminal, compensatory and restorative.",
+      "Explain the direction, consent, inspection, sampling and emergency powers under the Environment, Air and Water Acts.",
+      "Distinguish an administrative penalty proceeding from prosecution for an offence and from a compensation claim.",
+      "Apply corporate, managerial and government-department responsibility provisions to a factual problem.",
+      "Compare negligence, strict liability, absolute liability, polluter pays and statutory no-fault liability.",
+      "Explain compulsory insurance, Collector-led claims and the Environmental Relief Fund under the Public Liability Insurance Act, 1991.",
+      "Describe the National Environment Tribunal Act, 1995 accurately as a historical statute repealed by the National Green Tribunal Act, 2010.",
+      "Use sections 14–20 of the NGT Act to analyse jurisdiction, relief, accident liability and environmental principles.",
+      "Evaluate command-and-control, economic, informational, participatory and restoration-based enforcement strategies.",
+      "Design a legally grounded, proportionate and monitorable enforcement response to continuing pollution or a hazardous accident.",
+    ],
+    detailedContent: `
+1. Meaning and purposes of environmental enforcement
+
+Environmental enforcement converts statutory standards and permissions into actual environmental performance. A rule prescribing an emission limit has little value unless authorities can obtain information, inspect the source, verify samples, stop danger, impose consequences and require repair. Enforcement therefore includes every stage from compliance assistance and monitoring to closure, adjudication, prosecution, compensation and restoration.
+
+The principal purposes are prevention, cessation, correction, accountability, deterrence, victim relief and ecological repair. Prevention reduces the probability of harm through siting controls, consent conditions, safety systems and financial assurance. Cessation stops an unlawful discharge or dangerous operation. Correction brings the activity back into compliance. Accountability imposes a proportionate legal consequence on the responsible persons. Compensation responds to personal or property loss, while restoration addresses the environment itself.
+
+One incident may activate several routes. A Pollution Control Board may order a discharge to stop, an adjudicating officer may determine a statutory penalty, a criminal court may try a legally defined offence, the Collector may award immediate no-fault relief after a hazardous-substance accident, and the NGT may order compensation and restitution. These routes have different objects, forums, procedures and standards. A strong answer identifies each route separately before examining how they interact.
+
+2. Classification of sanctions and remedies
+
+Preventive controls include prior consent, environmental clearance, standards, risk assessment, accident planning and conditions restricting location, process, fuel or quantity. Administrative measures include information demands, inspections, sampling, improvement directions, suspension or cancellation of consent, closure and stoppage or regulation of electricity, water or another service. Monetary penalties imposed by an adjudicating officer are administrative consequences where the statute now creates that mechanism.
+
+Criminal sanctions operate through prosecution before the competent criminal court. They may include fine, imprisonment or both where the current statutory text continues to define an offence. Civil liability may arise through nuisance, negligence or another private-law cause of action. Public-law compensation may be awarded for an established constitutional wrong. Statutory relief and compensation arise under enactments such as the Public Liability Insurance Act and the NGT Act.
+
+Restorative orders focus on cleanup, remediation, restitution of property, restoration of the environment and prevention of recurrence. A payment labelled environmental compensation should not be treated as a licence to pollute. It should be linked to legal authority, evidence, harm or regulatory methodology and, where applicable, a credible restoration plan.
+
+3. The enforcement ladder and regulatory discretion
+
+A rational regulator ordinarily uses an enforcement ladder matched to risk and conduct. It may begin with compliance communication, inspection, monitoring or a notice; move to a time-bound corrective direction or strengthened consent condition; require financial assurance or remediation; restrict production; and ultimately order closure, disconnect utilities, adjudicate a penalty or initiate prosecution. Imminent danger can justify immediate action without exhausting milder steps, subject to the statute and fair procedure.
+
+Relevant factors include the toxicity and scale of the pollutant, duration and recurrence, ecological sensitivity, exposure of vulnerable communities, legality of the activity, deliberate concealment, economic benefit from non-compliance, past record, cooperation, reversibility and urgency. Similar cases should be treated consistently. A reasoned order should state the legal power, material considered, violation found, response selected, compliance deadline and review or appeal route.
+
+Discretion is not personal choice. Article 14, natural justice, statutory purpose and proportionality constrain it. A minor record defect may justify correction and a penalty where authorised; a continuing toxic discharge threatening drinking water may require immediate restraint and remediation. Regulators should document why a particular measure is necessary and why it is adequate to protect health and the environment.
+
+4. Environment (Protection) Act: preventive and direction powers
+
+The Environment (Protection) Act, 1986 is an umbrella enactment. Section 3 gives the Central Government broad power to take measures for protecting and improving environmental quality and preventing, controlling and abating pollution. Section 5 authorises binding written directions, including closure, prohibition or regulation of an industry, operation or process and stoppage or regulation of electricity, water or another service.
+
+Sections 7 and 8 prohibit emissions or discharges beyond prescribed standards and require hazardous substances to be handled according to prescribed safeguards. Section 9 addresses accidental or apprehended releases and creates duties of information and mitigation. Sections 10 and 11 govern entry, inspection and sampling; sections 12–14 concern environmental laboratories, analysts and evidentiary reports.
+
+Delegated legislation under the Act supplies much of the operational law: standards, waste-management duties, environmental-clearance conditions and reporting requirements. The exact rule, notification and consent condition must therefore be pleaded alongside the parent Act. A section 5 closure direction does not replace the need to identify the breached standard or condition, except where urgent statutory prevention itself justifies the direction.
+
+5. Environment Act penalty architecture after Jan Vishwas
+
+The Jan Vishwas (Amendment of Provisions) Act, 2023 replaced important parts of the Environment Act's former general criminal-penalty model with adjudicated monetary penalties. The amended Act contains differentiated consequences for contravention, companies and government departments, an adjudicating-officer process and an appeal to the National Green Tribunal. Failure to pay an imposed penalty within the statutory period attracts a separate consequence.
+
+The reform must be described precisely. Decriminalisation of specified contraventions does not abolish the underlying environmental duty, the power to close or regulate an activity, civil or NGT liability, restoration obligations or every possible criminal consequence. Nor does a penalty determination automatically prove the quantum of victim loss. The order must follow the operative Act, delegated rules and notified commencement applicable on the date of conduct.
+
+For an examination problem, identify the date of violation, the exact amended section, whether the conduct is continuing, the competent adjudicating officer, the statutory factors for fixing the penalty, the opportunity of hearing and the appellate route. Do not reproduce the pre-amendment imprisonment formula as though it remains the universal present rule.
+
+6. Air Act: consent, standards and directions
+
+The Air (Prevention and Control of Pollution) Act, 1981 uses a consent-and-control model. Section 19 permits declaration of air-pollution-control areas. Section 21 requires previous consent of the State Pollution Control Board for specified industrial plants in such an area, subject to the Act and its exemptions. Section 22 restrains emissions beyond standards laid down by the Board.
+
+Section 22A enables the Board to seek a court order restraining apprehended air pollution. Section 23 addresses information and mitigation where excessive emission occurs or is apprehended because of accident or another unforeseen event. The Board may obtain information, inspect premises, take samples and rely on properly generated analytical material. Section 31 provides an appeal, and section 31A authorises written directions, including closure or regulation and stoppage or regulation of services.
+
+Consent is not a one-time immunity. The occupier must comply with conditions, renew or obtain consent as required, report material changes and meet standards throughout operation. Production beyond the consented capacity, use of an unapproved fuel, bypass of pollution-control equipment or concealment of monitoring data may each require separate legal analysis.
+
+7. Air Act sanctions after the 2023 amendment
+
+The Jan Vishwas amendments, brought into force for the Air Act from 1 April 2024, created an adjudicating-officer and monetary-penalty structure for specified contraventions and a statutory appeal. The amended provisions distinguish violations subjected to administrative penalty from serious defaults for which criminal consequences remain. Consent-related conduct, failure to obey directions and failure to pay an adjudicated penalty must be checked against the current section rather than answered from an outdated bare Act.
+
+The practical lesson is that administrative and preventive powers remain central. A Board need not wait for a final penalty decision before using a valid emergency, restraint or direction power where the statutory conditions are met. Conversely, a closure decision must not be used mechanically when a less restrictive measure will reliably control a minor and immediately curable default.
+
+An answer should avoid saying that the Air Act is now entirely decriminalised. State the precise duty, identify whether the current statute treats the breach as a penalty or an offence, and then add any valid consent, closure, compensation and restoration consequences.
+
+8. Water Act: prohibitions, consent and emergency control
+
+Section 24 of the Water (Prevention and Control of Pollution) Act, 1974 prohibits specified disposal of poisonous, noxious or polluting matter and other conduct that impedes proper flow in a stream. Sections 25 and 26 establish previous-consent control over new outlets, new discharges and existing discharges. Conditions may regulate the nature, composition, temperature, volume and point of discharge.
+
+Section 30 permits the State Board to execute required works in specified cases and recover expenses. Section 31 requires information about accidental or unforeseen discharges. Section 32 authorises emergency measures to remove or dispose of polluting matter, remedy pollution and issue immediate restraining orders. Section 33 enables an application to a court to restrain apprehended pollution, while section 33A authorises binding directions, including closure or regulation and stoppage or regulation of services.
+
+Sampling procedure matters because the analyst's report may depend on compliance with statutory notice, division, sealing and dispatch requirements. A prosecution or penalty case should connect the sample, laboratory result, consent condition and responsible source through a reliable chain of proof.
+
+9. Water Act Amendment 2024 and territorial application
+
+The Water (Prevention and Control of Pollution) Amendment Act, 2024 altered consent administration and replaced a number of criminal consequences with monetary penalties, adjudication and an NGT appeal. It retained stronger treatment for specified serious conduct, including important consent-related defaults. It also introduced central power to prescribe consent guidelines and exemptions within the amended framework.
+
+Territorial qualification is essential. The Water Act is legislation under Article 252 of the Constitution. The 2024 amendment initially applied to Himachal Pradesh, Rajasthan and the Union territories; another State becomes governed by it through the constitutionally prescribed adoption mechanism. The older form may therefore continue to govern in a non-adopting State.
+
+Never state one national penalty answer without identifying the State or Union territory, date of conduct, adoption status and notified commencement. The same factory facts can produce different statutory routes depending on where and when they occurred. This is a central examination distinction from the centrally uniform Jan Vishwas amendments to the Environment and Air Acts.
+
+10. Companies, officers and government departments
+
+Environmental statutes contain attribution rules for companies and government departments. Corporate liability is not resolved merely by naming every director. The relevant provision commonly asks who was directly in charge of and responsible for the conduct of the business, and may separately reach a director, manager, secretary or other officer whose consent, connivance or neglect is proved. Statutory defences such as lack of knowledge or due diligence depend on the wording of the particular enactment.
+
+Evidence may include board delegations, plant organisation charts, consent applications, internal reports, budgets, correspondence, incident logs and authority over pollution-control decisions. Formal designation is relevant but not always conclusive. The company itself, the occupier and responsible natural persons must be analysed separately.
+
+Departmental provisions generally allocate consequences to the department or its head and may recognise lack of knowledge or due diligence, subject to the amended text. Public ownership does not excuse pollution. A municipality, development authority or government facility remains subject to statutory duties and NGT remedies even where internal disciplinary or attribution rules differ from those for a private company.
+
+11. Inspection, sampling and proof
+
+An enforceable case begins with reliable facts. Inspectors should record authority, date, location, operating status, production, control-equipment condition, discharge points, meteorological or flow conditions, photographs, statements and records examined. Continuous-emission or effluent data must be checked for calibration, downtime, tampering and representativeness.
+
+Statutory sampling provisions ordinarily require notice to the occupier or agent, collection in the prescribed manner, sealing and signatures, dispatch to a recognised laboratory and a report by an authorised analyst. A broken chain of custody can weaken the evidentiary value of the result. The occupier's refusal to cooperate should be documented and dealt with under the governing statute rather than concealed by informal procedure.
+
+Environmental proof may also include remote sensing, mass-balance calculations, groundwater flow, medical evidence and expert modelling. Each method has uncertainty. The decision-maker should disclose methodology, permit an effective response and distinguish proof of breach from proof of causation and from quantification of compensation.
+
+12. Natural justice, proportionality and reasoned sanctions
+
+Unless a valid emergency provision permits immediate interim action, the affected person should receive adequate notice of the alleged facts and legal provisions, access to relied-on material and a meaningful opportunity to respond. The final order should deal with material defences and explain the consequence imposed. A post-decisional hearing may be relevant in a genuine emergency but is not a routine substitute for pre-decisional fairness.
+
+Proportionality asks whether the measure pursues a legitimate statutory purpose, is rationally connected to it, is no more restrictive than reasonably necessary and maintains an appropriate balance. Serious or irreversible harm, concealment and repeated breach justify stronger action. Cooperation is relevant but does not erase damage.
+
+Penalty, closure and restoration perform different functions. A facility brought into compliance may still owe a penalty for past breach and restoration for existing damage. Conversely, a formula-based environmental compensation figure should not be imposed without jurisdiction, applicable methodology, supporting data and hearing. An appellate body reviews the legality and evidentiary foundation of the decision, not merely whether some pollution occurred.
+
+13. Citizen complaints and public enforcement
+
+Public authorities are the primary statutory enforcers, but environmental statutes also create citizen-complaint routes. Section 19 of the Environment Act, section 43 of the Air Act and section 49 of the Water Act regulate cognizance of offences and permit a complaint by a person who complies with the prescribed notice requirement, commonly at least sixty days' notice to the specified authority.
+
+The notice should identify the alleged offender, location, conduct, legal duty, dates, evidence and proposed complaint with enough precision to permit official action. Rules may prescribe form and service. A statutory complaint is not the same as a representation to a Board, an NGT application or a constitutional PIL. Each has its own forum, jurisdiction, limitation, standing and relief.
+
+Citizen monitoring can expose local non-compliance and regulatory inaction, but allegations must be responsibly verified. False or exaggerated claims can injure both affected communities and legitimate enforcement. Public disclosure of consents, monitoring results and action-taken reports makes participation more effective.
+
+14. Civil liability: nuisance and negligence
+
+Private nuisance protects interests in the use and enjoyment of land against unreasonable interference; public nuisance concerns interference with a public right and has its own standing and procedural rules. Pollution through smoke, odour, noise, effluent or toxic seepage may support nuisance where the elements are proved. Statutory permission does not ordinarily authorise unnecessary pollution beyond what the law permits.
+
+Negligence requires a duty of care, breach, factual and legal causation and damage. The expected standard rises with the magnitude and foreseeability of hazardous risk. Compliance with a minimum regulatory standard is relevant but not always conclusive of reasonable care; non-compliance is powerful evidence but does not automatically establish every element of every claimant's loss.
+
+Traditional tort litigation can face barriers of scientific causation, latency, dispersed victims, cost and unequal access to evidence. Statutory no-fault relief, NGT jurisdiction, public-law remedies and environmental principles respond to some of those barriers, but they do not make careful identification of the defendant, pathway of harm and appropriate remedy unnecessary.
+
+15. Strict liability and absolute liability
+
+The English rule in Rylands v. Fletcher imposes strict liability where a person brings onto land a dangerous thing, makes a non-natural use, it escapes and causes foreseeable damage, subject to recognised exceptions. Its elements and exceptions can limit recovery in modern industrial disasters.
+
+M.C. Mehta v. Union of India, the Oleum Gas Leak case, developed a distinct Indian rule of absolute liability for enterprises engaged in hazardous or inherently dangerous activity. The enterprise owes an absolute and non-delegable duty to the community; the Rylands exceptions do not apply. The Court also linked compensation to the magnitude of harm and the enterprise's capacity so that liability has a deterrent effect.
+
+Do not use strict and absolute liability as synonyms. In a problem, identify the activity, hazardous character, accident or escape, injury and responsible enterprise, then state which rule applies and why. Separate this substantive liability analysis from the forum and statutory route through which relief is sought.
+
+16. Polluter pays and restorative liability
+
+The polluter-pays principle requires the responsible polluter to internalise the costs of preventing, controlling and remedying environmental damage rather than transferring them to victims or taxpayers. Indian Council for Enviro-Legal Action v. Union of India placed remediation cost on chemical industries responsible for severe contamination. Vellore Citizens' Welfare Forum connected the principle with compensation for affected persons and restoration of ecology.
+
+Polluter pays is broader than a fine. A fine punishes an offence, while environmental compensation may recover damage or regulatory cost and restoration finances repair. The liable party, causal connection, assessment method, affected area, duration, sensitivity, economic benefit and remediation plan should be supported by evidence and reasons.
+
+Deepak Nitrite Ltd. v. State of Gujarat warns against treating the principle as authority for an arbitrary figure disconnected from demonstrated harm. At the same time, scientific uncertainty should not permit a responsible enterprise to externalise a credible serious risk. Precaution, expert assessment and interim safeguards can preserve the environment while liability and quantum are determined.
+
+17. Constitutional and statutory compensation
+
+Constitutional courts may award public-law compensation for an established violation of fundamental rights attributable to State action or failure. This remedy is distinct from private damages and should be justified by the constitutional wrong. It can coexist with directions compelling public authorities to supply safe water, provide medical monitoring or perform statutory duties.
+
+The NGT may award relief and compensation to victims, restitution of damaged property and restitution of the environment under section 15 of the NGT Act. Section 17 applies a no-fault rule for death, injury, property or environmental damage resulting from an accident or the adverse impact of an activity or operation under the scheduled enactments; where several activities combine, the Tribunal may apportion liability on an equitable basis.
+
+Different remedies should not produce unjust double recovery for the same head of loss. The decision-maker should identify personal injury, livelihood loss, property damage, interim relief, insurance payment, public-law compensation and restoration separately and provide adjustment where the statute requires it.
+
+18. Public Liability Insurance Act: object and scope
+
+The Public Liability Insurance Act, 1991 provides immediate relief to persons affected by an accident occurring while handling a hazardous substance. It was designed to avoid making victims first prove fault in lengthy litigation. Section 3 imposes no-fault liability on the owner for specified death, injury and property damage, subject to the Act and its Schedule.
+
+The Act turns on statutory definitions of owner, handling, hazardous substance and accident. It does not cover every injury merely because it occurred near an industrial premises. The claimant must connect the occurrence to handling of a notified hazardous substance and establish a covered injury or damage. Workmen may be dealt with under the statutory exclusion and applicable employment-compensation regime.
+
+Immediate relief is not necessarily complete final compensation. Section 8 preserves other rights to compensation, subject to the statutory adjustment designed to prevent duplicate recovery. The Act should therefore be placed beside, not confused with, tort, absolute liability and NGT compensation.
+
+19. Compulsory insurance and the Environmental Relief Fund
+
+Section 4 requires an owner handling a hazardous substance to take out and keep renewed one or more insurance policies before beginning and throughout the handling activity. The statutory insurance amount, limits and contribution mechanism must be read with the current Rules. Insurance converts part of the accident risk into an immediately available financial source; it does not transfer the owner's regulatory or operational duty to the insurer.
+
+Sections 6 and 7 provide for an application to the Collector and a summary inquiry, notice and award. The Collector has specified civil-court powers for evidence and may arrange payment from the insurer, owner and relief fund in accordance with the Act and scheme. Section 7A establishes the Environmental Relief Fund framework.
+
+The 2024 amendment Rules revised important monetary limits and relief amounts. Because prescribed amounts can change, professional advice and examination answers dealing with figures should verify the version in force on the accident date. The enduring structure is no-fault relief, compulsory insurance, fund contribution, Collector-led adjudication and recovery of unpaid awards.
+
+20. Public Liability Insurance Act enforcement after Jan Vishwas
+
+The Jan Vishwas Act, 2023 amended the Public Liability Insurance Act's enforcement provisions from 1 April 2024. The current structure uses monetary penalties for specified insurance, direction, inspection and obstruction defaults; an adjudicating officer determines penalties; and an aggrieved person may appeal to the NGT. Corporate and government-department provisions were correspondingly revised.
+
+This administrative model strengthens the distinction between accident relief and regulatory penalty. A victim's section 3 claim asks whether covered no-fault relief is payable. A section 14 or 15 penalty proceeding addresses the owner's regulatory default. An NGT compensation case may concern wider personal, property or environmental damage. Failure to insure does not erase the victim's substantive claim or the owner's ultimate responsibility.
+
+Authorities should verify policies before hazardous handling, match coverage to statutory exposure, collect the fund contribution, maintain accident records and coordinate immediate relief with emergency response and longer-term restoration.
+
+21. National Environment Tribunal Act, 1995: historical scheme
+
+The National Environment Tribunal Act, 1995 was enacted to provide strict, no-fault liability for death, injury, property and environmental damage caused by an accident while handling a hazardous substance and to create a specialised tribunal for compensation. It contemplated judicial and technical participation, claims by victims and representatives, limitation rules, interim relief, apportionment and a statutory schedule of compensation.
+
+The Act is historically important because it recognised that hazardous-accident disputes require specialised, multidisciplinary adjudication. Institutionally, however, the contemplated Tribunal did not become an effective functioning forum. It must not be cited as the source of a present claim.
+
+Section 38 of the National Green Tribunal Act, 2010 repealed both the National Environment Tribunal Act, 1995 and the National Environment Appellate Authority Act, 1997, with savings and transfer provisions. The current specialised framework is the NGT Act. In an examination answer, explain the 1995 design, its implementation failure and its replacement rather than discussing it as a parallel tribunal.
+
+22. National Green Tribunal: jurisdiction and relief
+
+Section 14 gives the NGT jurisdiction over civil cases involving a substantial question relating to the environment, including enforcement of a legal right relating to the environment, where the question arises from implementation of an enactment in Schedule I. Limitation and the maximum condonable extension are statutory; a continuing effect is not automatically a fresh cause of action for every purpose.
+
+Section 15 authorises relief and compensation to victims, restitution of damaged property and restitution of the environment. Section 16 supplies appellate jurisdiction over specified orders under scheduled laws. Section 17 establishes no-fault liability for covered accidents or adverse impacts. Section 18 identifies eligible applicants, including affected persons, legal representatives, agents, representative bodies and governments or pollution-control authorities in the situations stated.
+
+Under section 19 the Tribunal is guided by natural justice rather than being bound by the Code of Civil Procedure, while possessing listed civil-court powers. Section 20 requires application of sustainable development, precaution and polluter pays. Section 22 provides an appeal to the Supreme Court. Sections 25 and 26 concern execution and consequences of non-compliance.
+
+The NGT is not a criminal court conducting prosecution under the Environment, Air or Water Act. Its compensation, restoration, appellate and civil environmental jurisdiction should be pleaded separately from cognizance of statutory offences.
+
+23. Enforcement strategies beyond prosecution
+
+Command-and-control regulation prescribes standards, technology or performance conditions and backs them with inspection, directions and consequences. It is indispensable for toxic pollutants and ecological thresholds, but can fail where standards are unrealistic, monitoring is weak or enforcement is inconsistent.
+
+Economic strategies make environmental cost visible through user charges, deposit-refund systems, extended producer responsibility, market instruments, performance guarantees and polluter-pays recovery. They should complement, not purchase exemption from, non-negotiable health and ecological standards.
+
+Informational strategies include environmental statements, pollutant registers, public monitoring dashboards, lab accreditation and disclosure of consent status. Participatory strategies include public consultation, complaints, community monitoring and access to records. Technology enables continuous monitoring, remote sensing and tamper alerts, but data quality, calibration and independent verification remain essential.
+
+Restoration-based enforcement uses remediation plans, ecological benchmarks, financial assurance, third-party verification and long-term monitoring. Risk-based inspection directs scarce capacity toward high-hazard, repeatedly non-compliant and environmentally sensitive sites without granting low-risk facilities immunity from law.
+
+24. Coordination, emergencies and follow-through
+
+Environmental incidents may involve the Pollution Control Board, district administration, police, fire and disaster authorities, labour and factory-safety departments, health services, local bodies, insurers, the Collector, laboratories and environmental authorities. A clear incident command should protect life first, stop or contain the release, warn the public, preserve evidence, provide medical support and begin environmental assessment.
+
+Regulatory coordination should define who issues directions, conducts sampling, calculates damage, processes immediate relief, prosecutes an offence and supervises restoration. Parallel proceedings require information sharing but each authority must remain within its jurisdiction. A criminal acquittal based on the prosecution's standard and evidence does not automatically decide every independent civil or restorative question; nor may agencies impose duplicative recovery without legal basis.
+
+Follow-through is the decisive stage. An order should name the responsible entity, action, quality standard, finance, deadline, reporting format, verifier, public-disclosure requirement and consequence of default. Closure without safe decommissioning can leave hazardous waste behind; compensation collected without a restoration plan may not repair ecology.
+
+25. Integrated problem and examination method
+
+Assume a chemical plant operates without valid consent, bypasses its effluent-treatment system and releases hazardous material into a river after a tank failure. Residents suffer injuries, fishing livelihoods decline and groundwater is contaminated. The first response is emergency containment, public warning, medical support, inspection, lawful sampling and preservation of data. The Board should identify Water Act consent and discharge breaches, Environment Act standards and hazardous-substance duties, then consider directions, utilities, adjudication or prosecution under the versions applicable in that territory and on that date.
+
+For liability, identify the company, occupier and responsible officers; test due diligence and management evidence; apply absolute liability to the hazardous enterprise; assess polluter-pays remediation; consider immediate no-fault relief and insurance under the 1991 Act; and frame NGT relief for victims, property and the environment. Avoid double recovery while ensuring that every distinct loss and restoration need is addressed.
+
+For a descriptive answer, use the sequence: purpose and classification; powers under the three pollution statutes; current penalty and offence architecture; corporate and citizen enforcement; tort, absolute liability and polluter pays; Public Liability Insurance; the 1995 Tribunal's historical role; NGT jurisdiction; and enforcement strategy. For a problem, state the date and territory first, then separate duty, breach, responsible person, forum, procedure, evidence, defence, sanction, compensation and restoration.
+
+Always verify the latest India Code text, commencement notifications, rules and State adoption before giving a current penalty figure or professional compliance opinion. Environmental legislation has undergone substantial amendment, and an outdated bare Act can produce the wrong forum and consequence.
+    `.trim(),
     keyPoints: [
-      "Administrative directions and consent enforcement",
-      "Criminal and civil consequences",
-      "Environmental compensation and restoration",
-      "Public Liability Insurance Act, 1991",
-      "Historical tribunal framework and transition to the NGT",
+      "Environmental enforcement is preventive, administrative, penal, compensatory and restorative; one event may engage several routes.",
+      "Closure and utility directions stop or regulate harm; they are distinct from a monetary penalty, prosecution or compensation award.",
+      "The Environment Act provides umbrella powers, standards, hazardous-substance duties, emergency response, inspection, sampling and binding directions.",
+      "The Jan Vishwas Act, 2023 created adjudicated monetary-penalty systems for specified Environment, Air and Public Liability Insurance Act defaults.",
+      "Decriminalisation of specified defaults does not abolish environmental duties, closure powers, civil liability, restoration or every offence.",
+      "The Air Act regulates industrial plants through control areas, consent, emission standards, restraint proceedings and section 31A directions.",
+      "The Water Act regulates polluting disposal, outlets and discharges through prohibitions, consent, emergency powers, restraint and section 33A directions.",
+      "The Water Amendment Act, 2024 requires a territory-and-date check because its application depends on Article 252 adoption.",
+      "Company liability requires evidence of responsibility, consent, connivance, neglect and any available statutory due-diligence defence.",
+      "Lawful inspection, sampling, laboratory procedure, disclosure and reasons are essential to sustainable enforcement.",
+      "Absolute liability for hazardous enterprises is distinct from Rylands strict liability and excludes its traditional exceptions.",
+      "Polluter pays covers prevention and remediation costs; an environmental-compensation figure must have legal and evidentiary support.",
+      "The Public Liability Insurance Act supplies immediate no-fault accident relief through compulsory insurance, the Collector and the Environmental Relief Fund.",
+      "The National Environment Tribunal Act, 1995 is historical and repealed; present specialised civil environmental adjudication lies under the NGT Act, 2010.",
+      "Effective strategy combines standards, directions, financial instruments, disclosure, participation, risk-based inspection and monitored restoration.",
     ],
     provisions: [
-      "Environment (Protection) Act, 1986",
-      "Air (Prevention and Control of Pollution) Act, 1981",
-      "Water (Prevention and Control of Pollution) Act, 1974",
-      "Public Liability Insurance Act, 1991",
-      "National Environment Tribunal Act, 1995",
+      {
+        id: "environmental-law-unit-5-environment-powers",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 3 and 5",
+        description:
+          "Authorise Central Government protective measures and binding directions, including closure, regulation and stoppage or regulation of services.",
+      },
+      {
+        id: "environmental-law-unit-5-environment-compliance",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 7–14",
+        description:
+          "Cover environmental standards, hazardous-substance safeguards, accident response, inspection, sampling, laboratories and analyst reports.",
+      },
+      {
+        id: "environmental-law-unit-5-environment-penalties",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 15–16, as amended",
+        description:
+          "Create the current penalty, attribution, adjudication, appeal, payment and environmental-fund architecture introduced through Jan Vishwas reforms.",
+      },
+      {
+        id: "environmental-law-unit-5-air-consent",
+        title: "Air (Prevention and Control of Pollution) Act, 1981",
+        provision: "Sections 19, 21–23 and 31",
+        description:
+          "Regulate control areas, consent, emission standards, accidents and appeals within the Air Act framework.",
+      },
+      {
+        id: "environmental-law-unit-5-air-directions",
+        title: "Air (Prevention and Control of Pollution) Act, 1981",
+        provision: "Sections 22A, 31A and current penalty provisions",
+        description:
+          "Provide restraint and binding direction powers and require the current amended penalty or offence route to be identified for each breach.",
+      },
+      {
+        id: "environmental-law-unit-5-water-control",
+        title: "Water (Prevention and Control of Pollution) Act, 1974",
+        provision: "Sections 24–26 and 30–33A",
+        description:
+          "Cover polluting disposal, consent, works, accident reporting, emergency action, court restraint and closure or service directions.",
+      },
+      {
+        id: "environmental-law-unit-5-water-amendment",
+        title: "Water (Prevention and Control of Pollution) Amendment Act, 2024",
+        provision: "Article 252 application, adjudication and appeals",
+        description:
+          "Introduces consent and penalty reforms whose applicability must be checked by territory, date, State adoption and commencement.",
+      },
+      {
+        id: "environmental-law-unit-5-citizen-enforcement",
+        title: "Environment, Air and Water Acts",
+        provision: "EPA section 19, Air section 43 and Water section 49",
+        description:
+          "Regulate cognizance and permit properly noticed citizen complaints, distinct from NGT applications and constitutional PIL.",
+      },
+      {
+        id: "environmental-law-unit-5-pli-liability",
+        title: "Public Liability Insurance Act, 1991",
+        provision: "Sections 3, 4 and 8",
+        description:
+          "Establish no-fault accident relief, compulsory insurance and preservation of other compensation rights subject to adjustment.",
+      },
+      {
+        id: "environmental-law-unit-5-pli-claims",
+        title: "Public Liability Insurance Act, 1991",
+        provision: "Sections 6, 7 and 7A",
+        description:
+          "Provide the Collector-led claim and award procedure and the statutory basis for the Environmental Relief Fund.",
+      },
+      {
+        id: "environmental-law-unit-5-pli-enforcement",
+        title: "Public Liability Insurance Act, 1991",
+        provision: "Sections 9–15B and 17, as amended",
+        description:
+          "Address directions, entry, inspection, information, monetary penalties, adjudication, NGT appeal and government-department responsibility.",
+      },
+      {
+        id: "environmental-law-unit-5-net-history",
+        title: "National Environment Tribunal Act, 1995",
+        provision: "Historical no-fault tribunal scheme",
+        description:
+          "Attempted specialised hazardous-accident compensation but did not become an effective functioning forum and was repealed in 2010.",
+      },
+      {
+        id: "environmental-law-unit-5-ngt-jurisdiction",
+        title: "National Green Tribunal Act, 2010",
+        provision: "Sections 14–18",
+        description:
+          "Provide original jurisdiction, relief, compensation, restitution, appeals, no-fault liability and rules on eligible applicants.",
+      },
+      {
+        id: "environmental-law-unit-5-ngt-procedure",
+        title: "National Green Tribunal Act, 2010",
+        provision: "Sections 19, 20, 22, 25 and 26",
+        description:
+          "Govern natural-justice procedure, environmental principles, Supreme Court appeal, execution and consequences of non-compliance.",
+      },
+      {
+        id: "environmental-law-unit-5-ngt-repeal",
+        title: "National Green Tribunal Act, 2010",
+        provision: "Section 38",
+        description:
+          "Repeals the National Environment Tribunal Act, 1995 and National Environment Appellate Authority Act, 1997 with savings and transfer provisions.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-5-oleum",
+        caseName: "M.C. Mehta v. Union of India (Oleum Gas Leak)",
+        citation: "(1987) 1 SCC 395",
+        principle:
+          "An enterprise engaged in hazardous or inherently dangerous activity bears absolute and non-delegable liability without the Rylands exceptions.",
+        summary:
+          "After an oleum leak in Delhi, the Supreme Court developed a distinct Indian liability rule and linked compensation to harm and enterprise capacity.",
+      },
+      {
+        id: "environmental-law-unit-5-charan-lal",
+        caseName: "Charan Lal Sahu v. Union of India",
+        citation: "(1990) 1 SCC 613",
+        principle:
+          "Mass industrial disaster may justify representative State action to secure victim compensation, subject to fairness and adequate representation.",
+        summary:
+          "The Court upheld the Bhopal claims legislation's central representative mechanism while examining access to justice for a large victim group.",
+      },
+      {
+        id: "environmental-law-unit-5-union-carbide",
+        caseName: "Union Carbide Corporation v. Union of India",
+        citation: "(1991) 4 SCC 584",
+        principle:
+          "Settlement of mass-tort compensation and criminal accountability involve distinct public interests and require legally sustainable treatment.",
+        summary:
+          "The Bhopal settlement litigation addressed compensation, victim relief and the impermissibility of extinguishing criminal proceedings through the settlement order.",
+      },
+      {
+        id: "environmental-law-unit-5-enviro-legal-action",
+        caseName: "Indian Council for Enviro-Legal Action v. Union of India",
+        citation: "(1996) 3 SCC 212",
+        principle:
+          "Polluting industries must bear the financial cost of remedial measures required to restore contaminated soil and groundwater.",
+        summary:
+          "Severe chemical pollution led the Court to apply polluter pays and use statutory direction powers to place cleanup cost on the responsible industries.",
+      },
+      {
+        id: "environmental-law-unit-5-vellore",
+        caseName: "Vellore Citizens' Welfare Forum v. Union of India",
+        citation: "(1996) 5 SCC 647",
+        principle:
+          "Precaution, polluter pays and sustainable development support preventive controls, victim compensation and ecological restoration.",
+        summary:
+          "Tannery pollution prompted closure-related compliance, compensation and remediation directions within constitutional and statutory environmental law.",
+      },
+      {
+        id: "environmental-law-unit-5-nayudu",
+        caseName: "A.P. Pollution Control Board v. Prof. M.V. Nayudu",
+        citation: "(1999) 2 SCC 718",
+        principle:
+          "Scientific uncertainty calls for precaution, expert capacity and properly informed environmental decision-making.",
+        summary:
+          "Industrial siting near drinking-water reservoirs exposed the limits of ordinary proof and the importance of scientifically capable adjudication.",
+      },
+      {
+        id: "environmental-law-unit-5-deepak-nitrite",
+        caseName: "Deepak Nitrite Ltd. v. State of Gujarat",
+        citation: "(2004) 6 SCC 402",
+        principle:
+          "Polluter pays does not authorise an arbitrary compensation figure without a supportable relationship to environmental damage.",
+        summary:
+          "The Court required a legally and factually grounded assessment rather than a mechanical turnover-based levy disconnected from proved loss.",
+      },
+      {
+        id: "environmental-law-unit-5-sterlite",
+        caseName: "Sterlite Industries (India) Ltd. v. Union of India",
+        citation: "(2013) 4 SCC 575",
+        principle:
+          "Environmental compensation may address past pollution even when the legality of continued operation or closure requires separate analysis.",
+        summary:
+          "The Court considered regulatory closure, economic consequences and a substantial compensation direction as distinct remedial questions.",
+      },
+      {
+        id: "environmental-law-unit-5-paryavaran-suraksha",
+        caseName: "Paryavaran Suraksha Samiti v. Union of India",
+        citation: "(2017) 5 SCC 326",
+        principle:
+          "Industries and public authorities must ensure functional effluent treatment, backed by time-bound enforcement and closure for default.",
+        summary:
+          "The Court issued nationwide implementation directions for treatment infrastructure and required Pollution Control Boards to enforce compliance.",
+      },
+      {
+        id: "environmental-law-unit-5-common-cause",
+        caseName: "Common Cause v. Union of India",
+        citation: "(2017) 9 SCC 499",
+        principle:
+          "Extraction without required legal authority can attract recovery measured by the value of unlawfully mined minerals in addition to regulatory action.",
+        summary:
+          "Illegal mining in Odisha led the Court to apply statutory recovery and environmental principles to extensive unauthorised extraction.",
+      },
+      {
+        id: "environmental-law-unit-5-mantri-techzone",
+        caseName: "Mantri Techzone Pvt. Ltd. v. Forward Foundation",
+        citation: "(2019) 18 SCC 494",
+        principle:
+          "The NGT may impose reasoned environmental compensation and restoration measures within its statutory jurisdiction.",
+        summary:
+          "Construction affecting lakes and storm-water systems prompted examination of NGT remedial powers, causation and quantified environmental compensation.",
+      },
+      {
+        id: "environmental-law-unit-5-alembic",
+        caseName: "Alembic Pharmaceuticals Ltd. v. Rohit Prajapati",
+        citation: "(2020) 17 SCC 157",
+        principle:
+          "Prior environmental clearance cannot ordinarily be replaced by routine ex post facto approval, and unlawful operation may justify remediation cost.",
+        summary:
+          "The Court rejected normalisation of operations begun without prior clearance while tailoring consequences and requiring environmental restitution.",
+      },
+    ],
+    examFocus:
+      "Prepare the classification and purposes of environmental sanctions; the enforcement ladder; sections 3, 5 and 7–14 of the Environment Act; consent, standards, restraint, accident and direction powers under the Air and Water Acts; Jan Vishwas adjudication and appeal; the Article 252 territorial qualification of the Water Amendment Act, 2024; companies, officers, government departments, citizen complaints, inspection and sampling; natural justice and proportionality; nuisance, negligence, strict and absolute liability; polluter pays, public-law compensation and NGT restitution; sections 3, 4, 6, 7, 7A and 8 of the Public Liability Insurance Act; the historical design and repeal of the National Environment Tribunal Act, 1995; sections 14–20, 22, 25, 26 and 38 of the NGT Act; and command-and-control, economic, informational, participatory and restorative enforcement strategies. In a problem, begin with date and territory, then separate regulatory action, penalty, offence, accident relief, compensation and restoration.",
+    revisionNotes: `
+Enforcement map: prevent through consent, standards and safeguards; detect through monitoring, inspection and sampling; stop through restraint, closure or utility directions; impose an adjudicated penalty or prosecute where the current statute provides; compensate victims; and restore the environment. These routes may coexist but have different forums and purposes.
+
+Pollution statutes: Environment Act sections 3 and 5 provide umbrella measures and directions; sections 7–14 regulate standards, hazardous substances, accidents and evidence. Air Act sections 21–23 and 31A concern consent, standards, accidents and directions. Water Act sections 24–26 and 30–33A concern prohibited pollution, consent, works, emergencies, restraint and directions.
+
+Amendment alert: Jan Vishwas changed specified Environment, Air and Public Liability Insurance Act defaults to adjudicated monetary penalties with appeals. Do not use obsolete universal imprisonment formulas. The Water Amendment Act, 2024 is territory-sensitive under Article 252: identify the State or Union territory, date, adoption and commencement.
+
+Liability sequence: negligence requires duty, breach, causation and damage. Rylands strict liability carries traditional elements and exceptions. Oleum absolute liability is non-delegable and excludes those exceptions for hazardous enterprise. Polluter pays allocates prevention and remediation cost; compensation quantum still requires authority, evidence and reasons.
+
+Accident relief: the Public Liability Insurance Act gives immediate no-fault relief, requires insurance, uses a Collector-led award process and the Environmental Relief Fund, and preserves other compensation subject to adjustment. Its penalty procedure is distinct from the victim's relief claim.
+
+Tribunals: the National Environment Tribunal Act, 1995 is historical and repealed. NGT Act sections 14–18 provide civil jurisdiction, relief, appeals, no-fault liability and applicants; sections 19–20 govern procedure and principles; section 22 provides Supreme Court appeal; sections 25–26 address execution and non-compliance; section 38 records repeal.
+
+Cases: Oleum — absolute liability; Charan Lal Sahu and Union Carbide — mass-disaster representation and accountability; Indian Council — remediation cost; Vellore — precaution and polluter pays; Nayudu — science; Deepak Nitrite — reasoned quantum; Sterlite — compensation distinct from operational legality; Paryavaran Suraksha — treatment and closure; Common Cause — illegal extraction recovery; Mantri Techzone — NGT compensation; Alembic — prior clearance and restitution.
+
+Problem method: identify date and territory; exact duty and breached condition; competent authority and forum; responsible company, occupier or officer; inspection and proof; emergency action and hearing; penalty or offence; insurance and no-fault relief; compensation heads; restoration plan; appeal, monitoring and consequence of default.
+    `.trim(),
+    notes: "",
   },
   {
     title: "Forests, Wildlife and Animal Protection",
