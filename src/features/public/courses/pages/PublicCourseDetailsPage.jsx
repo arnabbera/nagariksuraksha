@@ -483,8 +483,11 @@ export default function PublicCourseDetailsPage() {
     course.slug ===
     "code-of-civil-procedure-and-limitation";
 
-  const courseShareUrl =
+  const courseCanonicalUrl =
     `${SEO_CONFIG.siteUrl}/courses/${course.slug}`;
+
+  const courseShareUrl =
+    `${courseCanonicalUrl}?share=course-card-v2`;
 
   const courseShareText =
     `Explore ${course.title} on NagarikSuraksha`;
