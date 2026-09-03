@@ -14,6 +14,7 @@ import {
 } from "../repositories/CourseBookRepository";
 
 import { generalPrinciplesOfContractBooks } from "../data/courses/generalPrinciplesOfContract";
+import { environmentalLawBooks } from "../data/courses/environmentalLaw";
 
 // =========================================================
 // GET ALL BOOKS FOR ADMIN
@@ -49,7 +50,7 @@ export const getPublishedBooksByCourse =
       );
 
     const bookMap = new Map(
-      generalPrinciplesOfContractBooks
+      [...generalPrinciplesOfContractBooks, ...environmentalLawBooks]
         .filter((book) => book.courseId === courseId)
         .map((book) => [book.id, book]),
     );
