@@ -323,22 +323,337 @@ Legal status: the declarations and action programmes are generally soft law, not
     shortDescription:
       "India's environmental policy, constitutional duties and the judicial enlargement of Article 21.",
     overview:
-      "This unit examines the constitutional foundations of environmental governance in India and the interpretation of the right to life under Article 21 as including the right to a clean and healthy environment.",
-    detailedContent:
-      "Development of environmental policy in India; constitutional distribution of legislative powers; Articles 14, 19 and 21; Directive Principles, including Article 48A; Fundamental Duty under Article 51A(g); judicial enlargement of Article 21; duties of the State and citizens; and the relationship between constitutional remedies and environmental protection.",
+      "This unit traces the development of environmental policy in India and explains environmental constitutionalism through Articles 14, 19 and 21, the Directive Principles, the Fundamental Duties, federal legislative competence and constitutional remedies. It examines the judicial recognition of clean air, safe water, ecological balance and protection from climate harm as dimensions of life and equality, while distinguishing enforceable rights from policy commitments and interpretive constitutional duties.",
+    learningObjectives: [
+      "Trace the institutional and policy development of environmental governance in India from Stockholm 1972 to contemporary climate policy.",
+      "Explain the legal status and principal themes of the National Environment Policy, 2006 and distinguish policy from binding legislation.",
+      "Analyse Articles 14, 19 and 21 as foundations of environmental rights and reasonable environmental regulation.",
+      "Evaluate Articles 47, 48A and 51A(g) and explain how courts use Directive Principles and Fundamental Duties in constitutional interpretation.",
+      "Map environmental subjects across the Union, State and Concurrent Lists and explain the operation of Articles 246, 252 and 253.",
+      "Describe the remedies available under Articles 32 and 226 and the limits governing environmental public-interest litigation.",
+      "Apply constitutional principles, environmental doctrines and leading Supreme Court decisions to a contemporary development or climate problem.",
+    ],
+    detailedContent: `
+1. Meaning and scope of environmental policy
+
+Environmental policy is the collection of governmental goals, principles, institutions, plans and regulatory choices used to prevent environmental harm, conserve natural resources and reconcile ecological protection with social and economic development. It includes policy documents expressly concerned with forests, pollution, biodiversity and climate change, but it also includes decisions on energy, transport, agriculture, mining, water, housing, public health and industry because those sectors determine how land and resources are used.
+
+Policy is broader than legislation. A statute creates legally binding powers, duties, prohibitions and procedures. A policy ordinarily guides administration and future law-making but cannot override the Constitution, a statute or a binding judicial decision. A government may be required to follow a formally adopted policy consistently and non-arbitrarily, yet the policy does not acquire the status of an Act of Parliament merely because it is important or comprehensive.
+
+Indian environmental governance is therefore a layered system: constitutional rights and duties supply its normative foundation; Parliament and State Legislatures enact laws; governments frame rules, notifications and policies; specialised authorities administer standards and permissions; local bodies perform water, sanitation, waste and land-use functions; and constitutional courts and statutory tribunals review legality and grant remedies.
+
+2. Evolution of environmental governance in India
+
+Early Indian laws addressed forests, fisheries, public nuisance, factories and water-related concerns sector by sector. They did not constitute a single integrated environmental system. The 1972 United Nations Conference on the Human Environment at Stockholm gave strong impetus to national planning, specialised institutions and modern pollution-control legislation.
+
+The National Committee on Environmental Planning and Coordination was established in 1972 as an early coordinating body. A Department of Environment was created in 1980. In 1985, environmental administration was placed in a dedicated Ministry of Environment and Forests, now known as the Ministry of Environment, Forest and Climate Change. This institutional evolution reflected the movement from scattered conservation measures to integrated environmental administration.
+
+The Water (Prevention and Control of Pollution) Act, 1974 created the Central and State Pollution Control Boards. The Air (Prevention and Control of Pollution) Act, 1981 extended the pollution-control model to air. After the Bhopal gas disaster, the Environment (Protection) Act, 1986 gave the Central Government broad coordinating and regulatory powers. These statutes are studied in detail in later units; their significance here is that policy development, constitutional change and legislation evolved together.
+
+3. Major Indian environmental policy milestones
+
+The National Forest Policy, 1988 shifted emphasis from revenue extraction towards ecological stability, conservation of natural heritage, checking soil erosion and desertification, and meeting the subsistence needs of rural and tribal communities. It also encouraged people's participation in forest protection.
+
+The National Conservation Strategy and Policy Statement on Environment and Development, 1992 sought to integrate environmental considerations into development planning. The Policy Statement for Abatement of Pollution, 1992 promoted prevention, cleaner technology, economic instruments, public participation and improved environmental information. Together, these documents anticipated an approach based on integration and prevention rather than end-of-pipe control alone.
+
+The National Environment Policy, 2006 provided an overarching guide for regulatory reform, conservation programmes, review of legislation and integration of environmental concerns into development. The National Action Plan on Climate Change, 2008 organised climate policy around national missions, including solar energy, energy efficiency, sustainable habitat, water, the Himalayan ecosystem, a Green India, sustainable agriculture and strategic knowledge. Policies, missions and action plans coordinate governmental action, but their individual commitments must be connected to legislation, delegated rules, budgets or enforceable constitutional duties before a court can treat them as binding commands.
+
+4. National Environment Policy, 2006
+
+The National Environment Policy, 2006 seeks to conserve critical environmental resources, secure livelihood access for poor communities, achieve intergenerational and intragenerational equity, improve resource-use efficiency, strengthen environmental governance and mobilise resources for conservation. It treats environmental protection as part of development rather than as an isolated department's concern.
+
+Its guiding ideas include the human-centred character of sustainable development, the right to development, environmental protection as an integral part of development, precaution, economic efficiency, polluter pays, public trust, decentralisation, integration, environmental standards and the use of incentives. It also recognises that legal rules should be transparent, enforceable and supported by institutions with capacity and accountability.
+
+The policy is particularly important for examination answers because it brings constitutional values, international principles and administrative reform into a single framework. Its legal limit must also be stated: it is a policy guide, not a substitute for the Constitution or environmental statutes. A project cannot rely upon a general policy objective to avoid a mandatory clearance, and a court should not enforce every policy aspiration as though it were a statutory rule.
+
+5. Climate policy and environmental federalism in practice
+
+Climate change cuts across electricity, transport, buildings, agriculture, forests, water, disaster management and public health. The National Action Plan on Climate Change and State Action Plans provide a planning structure, while enforceable obligations arise from applicable statutes, rules, notifications, constitutional duties and judicial orders. Local knowledge and State-level implementation are essential because climate impacts and developmental conditions differ across regions.
+
+The Seventy-third and Seventy-fourth Constitutional Amendments strengthened democratic decentralisation. The Eleventh Schedule identifies functions potentially entrusted to Panchayats, including agriculture, minor irrigation, water management, social forestry, drinking water and maintenance of community assets. The Twelfth Schedule includes urban planning, land-use regulation, water supply, public health, sanitation, solid-waste management, urban forestry and protection of the environment. These Schedules do not automatically transfer every function by themselves; State legislation determines the actual devolution of powers, responsibilities and finance.
+
+6. Constitutional environmentalism
+
+The original Constitution did not contain an express fundamental right to a clean environment. Environmental protection developed through constitutional amendment, legislation and judicial interpretation. The Constitution (Forty-second Amendment) Act, 1976 inserted Article 48A among the Directive Principles and Article 51A(g) among the Fundamental Duties. It also transferred forests and protection of wild animals and birds into the Concurrent List as Entries 17A and 17B.
+
+Environmental constitutionalism means that ecological protection is not only a matter of administrative choice. It is connected to life, dignity, equality, health, livelihood, public trust, participatory government and duties owed to present and future generations. The Preamble's commitments to justice and dignity assist this value-based reading, but concrete claims must be anchored in an enforceable provision such as Article 14 or Article 21, an applicable statute or a valid legal duty.
+
+Courts commonly read fundamental rights together with Directive Principles and Fundamental Duties. This harmonising approach gives constitutional meaning to environmental quality while respecting the formal difference between directly enforceable rights and non-justiciable principles of governance.
+
+7. Article 21 and the enlargement of the right to life
+
+Article 21 provides that no person shall be deprived of life or personal liberty except according to procedure established by law. Following the broader rights-based approach associated with Maneka Gandhi v. Union of India, the Supreme Court has interpreted life as more than mere animal existence. Life with dignity requires conditions in which health and human faculties can be protected.
+
+Environmental quality became part of this enlarged understanding. In Subhash Kumar v. State of Bihar, the Court stated that the right to life includes the right to enjoy pollution-free water and air for the full enjoyment of life. Later decisions connected Article 21 with hygienic surroundings, sanitation, ecological balance, protection from hazardous industry, control of noise, conservation of water bodies and the State's duty to enforce environmental law.
+
+The environmental dimension of Article 21 has both substantive and procedural aspects. Substantively, the State must not authorise arbitrary exposure to serious pollution and must take reasonable measures to protect basic environmental conditions. Procedurally, decisions affecting life and health should rest on lawful authority, relevant material, fair hearing where required, disclosure, expert appraisal and reasoned decision-making.
+
+Article 21 does not create an absolute rule that every activity producing any ecological impact is unconstitutional. Courts ordinarily examine the seriousness of harm, statutory standards, alternatives, scientific evidence, distribution of burdens, public need, mitigation, monitoring and sustainable development. The constitutional guarantee demands lawful and proportionate reconciliation, not an unreasoned choice between all development and all conservation.
+
+8. Article 14: equality and non-arbitrariness
+
+Article 14 guarantees equality before the law and equal protection of the laws. Environmental administration violates Article 14 when it acts arbitrarily, treats similarly situated persons without rational justification, selectively enforces standards, ignores relevant environmental material or distributes serious environmental burdens through an irrational decision.
+
+Equality also illuminates environmental justice. Pollution and climate hazards often fall most heavily on low-income communities, forest dwellers, coastal populations, children, older persons and persons with disabilities, even though they may have contributed least to the harm. Article 14 does not automatically invalidate every unequal environmental effect, but it requires the State to justify classifications, avoid arbitrary exposure and take seriously the unequal consequences of policy.
+
+In M.K. Ranjitsinh v. Union of India, the Supreme Court linked Articles 14 and 21 to a right to be free from the adverse effects of climate change. The recognition is significant because climate injury threatens life, health, food, water and equality. Application remains context-sensitive: climate mitigation, energy access, species protection and local rights must be reconciled through lawful, scientifically informed and proportionate measures.
+
+9. Article 19 and environmental regulation
+
+Article 19(1)(g) protects the citizen's right to practise a profession or carry on an occupation, trade or business. Article 19(6) permits reasonable restrictions in the interests of the general public. Pollution-control standards, siting restrictions, licensing, closure of unlawful operations and conditions requiring cleaner technology may therefore restrict commercial freedom when supported by law and proportionate to the public interest.
+
+There is no unrestricted fundamental right to conduct a polluting activity. At the same time, regulation must be authorised, non-arbitrary and reasonably connected to environmental protection. A court may examine the nature of the activity, scale of risk, availability of safer alternatives, compliance history, economic and livelihood effects, urgency and procedural safeguards.
+
+Article 19(1)(a) may also support environmental information and public discussion, while Article 19(1)(b) and (c) protect peaceful assembly and association subject to constitutional restrictions. These freedoms help communities participate in environmental governance, but access to a particular statutory hearing or record ultimately depends on the applicable legal framework as well as constitutional fairness.
+
+10. Directive Principles of State Policy
+
+Article 37 declares that the Directive Principles are not enforceable by any court, but they are fundamental in the governance of the country and it is the duty of the State to apply them in making laws. They guide legislation, policy and interpretation and may reinforce the content of enforceable fundamental rights.
+
+Article 47 places improvement of public health among the State's primary duties. It is relevant to air and water pollution, sanitation, toxic exposure and waste. Article 48 directs the State to organise agriculture and animal husbandry on modern and scientific lines and includes protection of specified cattle; its implementation must remain consistent with other constitutional provisions.
+
+Article 48A directs the State to endeavour to protect and improve the environment and to safeguard the forests and wildlife of the country. Articles 39(b) and 39(e) are also relevant: material resources should be distributed to subserve the common good, and the health and strength of workers and children should not be abused. Read with Articles 14 and 21, these principles support preventive regulation, conservation and attention to vulnerable groups.
+
+Article 48A is not, by itself, a directly enforceable fundamental right. Its practical constitutional force comes from its role in governance, statutory interpretation and the judicial elaboration of fundamental rights. Courts use it to resolve ambiguity and assess State action, but should not use it to disregard the limits or procedures of a statute.
+
+11. Fundamental Duty under Article 51A(g)
+
+Article 51A(g) makes it the duty of every citizen to protect and improve the natural environment, including forests, lakes, rivers and wildlife, and to have compassion for living creatures. The provision recognises that environmental stewardship is shared by government, individuals, communities and institutions.
+
+Fundamental Duties are not generally enforceable as independent claims in the same manner as fundamental rights. Article 51A(g) nevertheless performs three important functions. It guides courts when interpreting rights and statutes; supports reasonable laws that require environmentally responsible conduct; and supplies a civic standard for education, participation and compliance.
+
+The citizen's duty does not reduce the State's responsibility. A regulator cannot excuse failure to control industrial pollution by shifting the burden to individual behaviour. Conversely, rights cannot be treated as a licence to destroy public resources. Articles 48A and 51A(g) express complementary responsibilities within a constitutional system in which public authorities retain legal accountability.
+
+12. Distribution of legislative powers
+
+Article 246 distributes legislative competence by reference to the Seventh Schedule. Environment is not contained in a single entry, so competence depends on the true nature and substance of the legislation and the relevant combination of entries.
+
+Important Union List subjects include Entry 52 on industries declared by Parliament to be under Union control; Entry 53 on oilfields and mineral-oil resources; Entry 54 on regulation of mines and mineral development to the extent declared under Union control; Entry 56 on inter-State rivers and river valleys to the extent declared expedient in the public interest; and Entry 57 on fishing and fisheries beyond territorial waters.
+
+Important State List subjects include Entry 6 on public health and sanitation; Entry 14 on agriculture; Entry 17 on water, subject to Union Entry 56; Entry 18 on land; Entry 21 on fisheries; Entry 23 on mines and mineral development, subject to Union control; and Entry 24 on industries, subject to relevant Union entries.
+
+The Concurrent List includes Entry 17A on forests, Entry 17B on protection of wild animals and birds, Entry 20 on economic and social planning and Entry 20A on population control and family planning. Both Parliament and State Legislatures may legislate on concurrent subjects, subject to constitutional rules concerning inconsistency and repugnancy.
+
+Article 252 permits Parliament to legislate on a State subject when two or more State Legislatures pass resolutions requesting such legislation. The Water Act, 1974 was enacted through this mechanism. Article 253 empowers Parliament to make laws for implementing treaties, agreements, conventions and decisions made at international conferences. It is important to India's response to international environmental commitments; the preambles to the Air Act, 1981 and Environment (Protection) Act, 1986 expressly refer to decisions taken at Stockholm.
+
+13. Articles 32 and 226: constitutional remedies
+
+Article 32 guarantees the right to approach the Supreme Court for enforcement of fundamental rights. Article 226 gives High Courts wider power to issue writs for enforcement of fundamental rights and for other legal purposes. High Courts are often the appropriate first forum for fact-sensitive local environmental disputes, while specialised statutory remedies may also be relevant.
+
+Environmental public-interest litigation relaxed traditional standing so that a public-spirited person or organisation could seek protection for affected communities or public resources unable to approach the court effectively. Courts have used writs, directions, compensation, closure or relocation orders, restoration, expert committees, monitoring and continuing mandamus. Public-law compensation may be granted for established violation of fundamental rights, while statutory civil and criminal consequences remain separately available.
+
+PIL is not a licence for private rivalry, publicity or adjudication without evidence. Subhash Kumar itself warned that a petition presented for personal interest under the guise of public interest should be rejected. Courts must respect legislative policy, statutory institutions, separation of powers and technical expertise. Effective review tests legality, fairness, constitutional compliance and the quality of the decision-making process without converting the court into the routine environmental administrator.
+
+14. Constitutional environmental principles
+
+Sustainable development requires integration of ecological protection with legitimate development. It does not mean that development always prevails or that every environmental impact requires prohibition. The decision-maker must examine need, location, alternatives, cumulative effects, distributional justice, mitigation and long-term ecological capacity.
+
+The precautionary principle requires protective action where credible threats of serious or irreversible damage exist despite scientific uncertainty. The polluter-pays principle places the cost of preventing and remedying pollution on the responsible polluter rather than the public. The public-trust doctrine treats certain natural resources as held by the State for public use and ecological protection. Intergenerational equity requires present decision-makers to preserve environmental options and quality for future generations.
+
+The Supreme Court has connected these principles with Articles 21, 47, 48A and 51A(g), environmental statutes and international developments. Their application must remain legally disciplined: identify the source, facts, statutory context, responsible authority and appropriate remedy rather than invoking a principle as a free-standing slogan.
+
+15. Leading constitutional environmental decisions
+
+Rural Litigation and Entitlement Kendra v. State of Uttar Pradesh was an early environmental PIL concerning limestone quarrying in the Mussoorie hills. The Court's intervention demonstrated that ecological balance, public safety and rehabilitation could be considered when destructive extraction threatened a fragile area.
+
+M.C. Mehta v. Union of India, arising from the Oleum Gas Leak, developed the rule of absolute liability for an enterprise engaged in hazardous or inherently dangerous activity. The decision also strengthened constitutional compensation and the use of Article 32 in cases of serious industrial risk.
+
+Subhash Kumar v. State of Bihar expressly connected Article 21 with pollution-free water and air but rejected misuse of PIL for private interest. Virender Gaur v. State of Haryana treated a hygienic environment as integral to healthy life and emphasised municipal and State duties concerning public spaces and sanitation.
+
+Vellore Citizens' Welfare Forum v. Union of India recognised sustainable development, precaution and polluter pays within Indian environmental law. M.C. Mehta v. Kamal Nath applied the public-trust doctrine to interference with a river. A.P. Pollution Control Board v. Prof. M.V. Nayudu examined scientific uncertainty, allocation of the burden of proof and the need for expert environmental decision-making. Intellectuals Forum, Tirupathi v. State of Andhra Pradesh protected urban water bodies and connected public trust with sustainable development.
+
+These decisions do not replace legislation. They illustrate how constitutional rights, statutory duties and environmental principles interact when executive action or inaction threatens life, health or public resources.
+
+16. Climate change under Articles 14 and 21
+
+In M.K. Ranjitsinh v. Union of India, the Supreme Court's 2024 judgment recognised a constitutional right to be free from the adverse effects of climate change under Articles 14 and 21. The case arose from measures to protect the critically endangered Great Indian Bustard and the interaction between species conservation and overhead electricity transmission needed for renewable energy.
+
+The Court explained that climate change can undermine life, health, food, water, housing and equality, with disproportionate effects on vulnerable communities. It also recognised that renewable-energy expansion is an important response to climate harm. The decision therefore required reconciliation of two environmental imperatives rather than treating renewable energy and biodiversity as automatic opposites.
+
+In its final directions issued in 2025, the Court acted on an expert committee's assessment and adopted a differentiated, expert-led approach to priority habitats, power lines and mitigation. For examination purposes, distinguish the constitutional recognition in the 2024 judgment from the site-specific remedial directions finalised in 2025. The broader lesson is that constitutional climate adjudication must combine rights, biodiversity protection, technology, regional conditions, scientific evidence and institutional competence.
+
+17. Illustrative problem and answer method
+
+Assume that a State approves a hazardous industrial park beside a river and densely populated settlement. The record contains no cumulative health assessment; the pollution-control authority ignores evidence of groundwater contamination; residents receive no reasons; and the State argues that jobs and its industrial policy justify the approval.
+
+A complete answer should first identify life, health, water and equality interests under Articles 21 and 14. It should test any business claim under Articles 19(1)(g) and 19(6), invoke Articles 47 and 48A as State duties and Article 51A(g) as an interpretive civic duty, and identify legislative competence and the applicable environmental statutes. It should then apply prevention, precaution, polluter pays, sustainable development and public trust to the evidence.
+
+The procedural analysis should ask whether the competent authority considered relevant material, followed mandatory appraisal and hearing requirements, obtained independent expertise and supplied intelligible reasons. Remedies may include fresh appraisal, interim safeguards, disclosure, monitoring, restoration, compensation or closure if authorised and proportionate. A court should not approve or reject the project solely on its own policy preference; it should ensure that constitutional and statutory duties are actually performed.
+
+For a descriptive examination question, use this order: policy timeline; legal status of policy; constitutional text; federal competence; Article 21 development; related Articles 14 and 19; Directive Principles and Fundamental Duties; remedies; leading cases; and a reasoned conclusion. Always distinguish express constitutional text from judge-made interpretation and non-justiciable principles from enforceable rights.
+    `.trim(),
     keyPoints: [
-      "Environmental policy in India",
-      "Article 21 and environmental quality",
-      "Article 48A",
-      "Article 51A(g)",
-      "Constitutional remedies",
+      "Environmental policy guides government action but does not override the Constitution, statutes or binding precedent.",
+      "India's modern framework developed through post-Stockholm institutions, constitutional amendment, pollution-control statutes and national policies.",
+      "The National Environment Policy, 2006 integrates conservation, livelihood security, equity, efficiency and environmental governance.",
+      "Article 21 has been judicially enlarged to include environmental conditions necessary for life, health and dignity.",
+      "Article 14 controls arbitrary environmental action and supports attention to unequal pollution and climate burdens.",
+      "Article 19(1)(g) does not create an unrestricted right to pollute; reasonable environmental restrictions may be imposed under Article 19(6).",
+      "Article 48A is a non-justiciable Directive Principle and Article 51A(g) is a Fundamental Duty, but both strongly guide interpretation and governance.",
+      "Environmental legislative competence is distributed across all three legislative lists and may also rest on Articles 252 and 253.",
+      "Articles 32 and 226 support environmental writ remedies, subject to bona fide standing, evidence, statutory structure and institutional competence.",
+      "The Supreme Court has recognised protection from adverse climate effects under Articles 14 and 21 while requiring scientifically informed balancing of competing environmental needs.",
     ],
     provisions: [
-      "Constitution of India — Articles 14, 19 and 21",
-      "Constitution of India — Article 48A",
-      "Constitution of India — Article 51A(g)",
-      "Constitution of India — Articles 32 and 226",
+      {
+        id: "environmental-law-unit-2-fundamental-rights",
+        title: "Constitution of India",
+        provision: "Articles 14, 19 and 21",
+        description:
+          "Protect equality and non-arbitrariness, qualified economic and expressive freedoms, and life and personal liberty; together they frame substantive and procedural environmental rights.",
+      },
+      {
+        id: "environmental-law-unit-2-remedies",
+        title: "Constitution of India",
+        provision: "Articles 32 and 226",
+        description:
+          "Empower the Supreme Court and High Courts to issue constitutional writs, with Article 226 extending to fundamental rights and other legal purposes.",
+      },
+      {
+        id: "environmental-law-unit-2-directive-principles",
+        title: "Constitution of India",
+        provision: "Articles 37, 39(b), 39(e), 47, 48 and 48A",
+        description:
+          "Guide governance on the common good, protection of health, scientific resource management, environmental improvement and safeguarding forests and wildlife.",
+      },
+      {
+        id: "environmental-law-unit-2-fundamental-duty",
+        title: "Constitution of India",
+        provision: "Article 51A(g)",
+        description:
+          "Makes protection and improvement of forests, lakes, rivers, wildlife and the natural environment, along with compassion for living creatures, a citizen's Fundamental Duty.",
+      },
+      {
+        id: "environmental-law-unit-2-legislative-lists",
+        title: "Constitution of India",
+        provision: "Article 246 and the Seventh Schedule",
+        description:
+          "Distributes environmental subjects across Union, State and Concurrent powers, including water, public health, industries, mines, forests and wildlife.",
+      },
+      {
+        id: "environmental-law-unit-2-state-consent",
+        title: "Constitution of India",
+        provision: "Article 252",
+        description:
+          "Allows Parliament to legislate on a State subject at the request of two or more States; this mechanism was used for the Water Act, 1974.",
+      },
+      {
+        id: "environmental-law-unit-2-international-obligations",
+        title: "Constitution of India",
+        provision: "Articles 51(c) and 253",
+        description:
+          "Supports respect for international law and gives Parliament legislative power to implement treaties, conventions and decisions made at international conferences.",
+      },
+      {
+        id: "environmental-law-unit-2-local-government",
+        title: "Constitution of India",
+        provision: "Articles 243G and 243W; Eleventh and Twelfth Schedules",
+        description:
+          "Provide the constitutional framework for State devolution of environmental, water, sanitation, planning and resource-management functions to local government.",
+      },
+      {
+        id: "environmental-law-unit-2-national-environment-policy",
+        title: "National Environment Policy, 2006",
+        provision: "Policy objectives and principles",
+        description:
+          "Guides conservation, livelihood security, equity, resource efficiency, environmental governance and integration of ecological concerns into development decisions.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-2-rlek",
+        caseName: "Rural Litigation and Entitlement Kendra v. State of Uttar Pradesh",
+        citation: "1985 Supp SCC 79",
+        principle:
+          "Constitutional environmental review may protect ecological balance and public safety from destructive extraction in a fragile area.",
+        summary:
+          "In an early environmental PIL concerning limestone quarrying in the Mussoorie hills, the Court considered ecological damage, public interest and rehabilitation while directing closure of harmful operations.",
+      },
+      {
+        id: "environmental-law-unit-2-oleum-gas",
+        caseName: "M.C. Mehta v. Union of India (Oleum Gas Leak)",
+        citation: "(1987) 1 SCC 395",
+        principle:
+          "An enterprise engaged in hazardous or inherently dangerous activity bears absolute and non-delegable liability for resulting harm.",
+        summary:
+          "The Oleum gas leak litigation strengthened constitutional remedies for industrial hazards and developed an Indian rule of absolute liability distinct from the exceptions under Rylands v. Fletcher.",
+      },
+      {
+        id: "environmental-law-unit-2-subhash-kumar",
+        caseName: "Subhash Kumar v. State of Bihar",
+        citation: "(1991) 1 SCC 598",
+        principle:
+          "Article 21 includes enjoyment of pollution-free water and air, but environmental PIL must be brought bona fide rather than for private interest.",
+        summary:
+          "The Court articulated the environmental dimension of life while rejecting the particular petition after finding that public-interest procedure had been invoked for a personal dispute.",
+      },
+      {
+        id: "environmental-law-unit-2-virender-gaur",
+        caseName: "Virender Gaur v. State of Haryana",
+        citation: "(1995) 2 SCC 577",
+        principle:
+          "A hygienic and healthy environment is integral to the right to life, and public authorities must protect environmental and sanitation interests.",
+        summary:
+          "The Court prevented use of open land reserved under a municipal scheme in a manner inconsistent with public health and environmental quality.",
+      },
+      {
+        id: "environmental-law-unit-2-vellore",
+        caseName: "Vellore Citizens' Welfare Forum v. Union of India",
+        citation: "(1996) 5 SCC 647",
+        principle:
+          "Sustainable development, precaution and polluter pays form part of Indian environmental law and inform constitutional and statutory duties.",
+        summary:
+          "Addressing tannery pollution, the Court connected Articles 21, 47, 48A and 51A(g) with preventive measures, compensation and remediation.",
+      },
+      {
+        id: "environmental-law-unit-2-kamal-nath",
+        caseName: "M.C. Mehta v. Kamal Nath",
+        citation: "(1997) 1 SCC 388",
+        principle:
+          "The State holds important natural resources in public trust and cannot permit their diversion for private advantage contrary to that trust.",
+        summary:
+          "The Court applied the public-trust doctrine after private interference with a river and required measures directed at restoration and accountability.",
+      },
+      {
+        id: "environmental-law-unit-2-nayudu",
+        caseName: "A.P. Pollution Control Board v. Prof. M.V. Nayudu",
+        citation: "(1999) 2 SCC 718",
+        principle:
+          "Scientific uncertainty calls for precaution, appropriate treatment of the burden of proof and informed expert decision-making.",
+        summary:
+          "The Court examined risks to drinking-water sources and explained the institutional difficulty of deciding technically complex environmental disputes without adequate expertise.",
+      },
+      {
+        id: "environmental-law-unit-2-intellectuals-forum",
+        caseName: "Intellectuals Forum, Tirupathi v. State of Andhra Pradesh",
+        citation: "(2006) 3 SCC 549",
+        principle:
+          "Public trust and sustainable development require authorities to protect water bodies and ecological resources against unjustified conversion.",
+        summary:
+          "The Court addressed the alienation and development of urban tanks and emphasised the ecological, groundwater and community value of lakes.",
+      },
+      {
+        id: "environmental-law-unit-2-ranjitsinh",
+        caseName: "M.K. Ranjitsinh v. Union of India",
+        citation: "2024 INSC 280; final directions 2025 INSC 1472",
+        principle:
+          "Articles 14 and 21 protect against adverse climate effects, while remedies must reconcile climate mitigation, biodiversity and local conditions through scientific expertise.",
+        summary:
+          "In the Great Indian Bustard litigation, the Court recognised the constitutional dimensions of climate harm in 2024 and later adopted expert-informed, differentiated directions for habitat and power-line protection.",
+      },
+    ],
+    examFocus:
+      "Prepare the distinction between policy and law; the institutional timeline from the National Committee on Environmental Planning and Coordination to the Ministry of Environment, Forest and Climate Change; the National Forest Policy 1988, the two 1992 policy statements, the National Environment Policy 2006 and the National Action Plan on Climate Change 2008; Articles 14, 19, 21, 32, 37, 39, 47, 48A, 51A(g), 226, 243G, 243W, 246, 252 and 253; relevant entries in all three legislative lists; the Article 21 right to environmental quality; the status of Directive Principles and Fundamental Duties; environmental PIL and its limits; and the principles stated in RLEK, Oleum Gas Leak, Subhash Kumar, Virender Gaur, Vellore Citizens, Kamal Nath, Nayudu, Intellectuals Forum and M.K. Ranjitsinh. In a problem, identify the enforceable right, statutory source, competent authority, evidentiary issue and proportionate remedy.",
+    revisionNotes: `
+Policy timeline: Stockholm influenced the creation of national institutions and modern legislation. NCEPC was established in 1972, the Department of Environment in 1980 and a dedicated Ministry in 1985. Major policy documents include the National Forest Policy 1988, the National Conservation Strategy and Policy Statement on Environment and Development 1992, the Policy Statement for Abatement of Pollution 1992, the National Environment Policy 2006 and the National Action Plan on Climate Change 2008. Policy guides administration but cannot override binding law.
+
+Constitutional core: Article 21 has been interpreted to include environmental conditions necessary for life, health and dignity. Article 14 controls arbitrariness and unequal environmental burdens. Article 19(1)(g) is subject to reasonable restrictions under Article 19(6). Article 48A directs State environmental protection; Article 51A(g) imposes a citizen's environmental duty; neither is independently enforceable like a fundamental right, but both guide interpretation. Articles 32 and 226 provide writ remedies.
+
+Legislative competence: use Article 246 and the Seventh Schedule. State subjects include public health, agriculture, water and land; Union subjects include controlled industries, mines and inter-State rivers; Concurrent subjects include forests and wildlife. Article 252 supported the Water Act 1974, while Article 253 enables implementation of international obligations.
+
+Case sequence: RLEK — ecological quarrying control; Oleum Gas Leak — absolute liability; Subhash Kumar — pollution-free water and air plus bona fide PIL; Virender Gaur — hygienic environment; Vellore — sustainable development, precaution and polluter pays; Kamal Nath — public trust; Nayudu — science and precaution; Intellectuals Forum — protection of lakes; M.K. Ranjitsinh — climate effects under Articles 14 and 21 with expert-led balancing.
+    `.trim(),
+    notes: "",
   },
   {
     title: "Environmental Protection and Pollution-Control Laws",
