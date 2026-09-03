@@ -224,7 +224,7 @@ const getFirestoreString = (fields, paths) => {
   return "";
 };
 
-const loadCourseSocialMeta = async (env, slug, canonicalUrl) => {
+const loadCourseSocialMeta = async (env, slug) => {
   const cached = courseSocialMetaCache.get(slug);
   if (cached?.expiresAt > Date.now()) return cached.value;
 
@@ -285,10 +285,11 @@ const loadCourseSocialMeta = async (env, slug, canonicalUrl) => {
   if (!title) return null;
 
   const value = {
-    title: `${title} | NagarikSuraksha`,
+    title: /NagarikSuraksha/i.test(title)
+      ? title
+      : `${title} | NagarikSuraksha`,
     description: description || `Explore ${title} on NagarikSuraksha.`,
     image,
-    url: canonicalUrl,
   };
 
   courseSocialMetaCache.set(slug, {
@@ -299,7 +300,7 @@ const loadCourseSocialMeta = async (env, slug, canonicalUrl) => {
   return value;
 };
 
-const rewriteCourseSocialMetadata = (response, metadata) => {
+const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl) => {
   const rewriter = new HTMLRewriter()
     .on("title", {
       element(element) {
@@ -313,7 +314,7 @@ const rewriteCourseSocialMetadata = (response, metadata) => {
     })
     .on('link[rel="canonical"]', {
       element(element) {
-        element.setAttribute("href", metadata.url);
+        element.setAttribute("href", canonicalUrl);
       },
     })
     .on('meta[property="og:type"]', {
@@ -333,7 +334,7 @@ const rewriteCourseSocialMetadata = (response, metadata) => {
     })
     .on('meta[property="og:url"]', {
       element(element) {
-        element.setAttribute("content", metadata.url);
+        element.setAttribute("content", socialUrl);
       },
     })
     .on('meta[name="twitter:card"]', {
@@ -359,7 +360,12 @@ const rewriteCourseSocialMetadata = (response, metadata) => {
         element.append(
           `<meta property="og:image" content="${image}" />` +
           `<meta property="og:image:secure_url" content="${image}" />` +
-          `<meta name="twitter:image" content="${image}" />`,
+          `<meta property="og:image:type" content="image/png" />` +
+          `<meta property="og:image:width" content="1600" />` +
+          `<meta property="og:image:height" content="900" />` +
+          `<meta property="og:image:alt" content="${metadata.title}" />` +
+          `<meta name="twitter:image" content="${image}" />` +
+          `<meta name="twitter:image:alt" content="${metadata.title}" />`,
           { html: true },
         );
       },
@@ -583,9 +589,18 @@ export default {
       try {
         const slug = decodeURIComponent(courseMatch[1]).trim().toLowerCase();
         const canonicalUrl = `${url.origin}/courses/${encodeURIComponent(slug)}`;
-        const metadata = await loadCourseSocialMeta(env, slug, canonicalUrl);
+        const shareVersion = url.searchParams.get("share");
+        const socialUrl = shareVersion
+          ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
+          : canonicalUrl;
+        const metadata = await loadCourseSocialMeta(env, slug);
         if (metadata) {
-          return rewriteCourseSocialMetadata(assetResponse, metadata);
+          return rewriteCourseSocialMetadata(
+            assetResponse,
+            metadata,
+            canonicalUrl,
+            socialUrl,
+          );
         }
       } catch (error) {
         console.error("Unable to prepare course social preview", error.message);
