@@ -1992,21 +1992,549 @@ Problem method: identify date and territory; exact duty and breached condition; 
     shortDescription:
       "The Indian Forest Act, Prevention of Cruelty to Animals Act and Wild Life Protection Act.",
     overview:
-      "This unit introduces the statutory regimes governing forests, wildlife conservation and prevention of cruelty to animals, together with their institutions, prohibitions, permissions and enforcement mechanisms.",
-    detailedContent:
-      "Indian Forest Act, 1927; categories and regulation of forests and forest produce; Prevention of Cruelty to Animals Act, 1960; duties, prohibited conduct and institutional protection; Wild Life (Protection) Act, 1972; protected species, hunting restrictions, protected areas, trade controls, authorities, offences and penalties; and the relationship between conservation, community interests and animal welfare.",
+      "This unit studies three connected but legally distinct regimes: administration of forests and forest produce under the Indian Forest Act, 1927; prevention of unnecessary animal pain or suffering under the Prevention of Cruelty to Animals Act, 1960; and species, habitat and trade conservation under the Wild Life (Protection) Act, 1972. It explains reserved, village and protected forests, settlement of rights, transit control, seizure and confiscation; statutory animal-welfare duties, the Animal Welfare Board of India, experimentation, performing animals, transport, slaughter, pet businesses and street-animal management; and the post-2022 wildlife framework for hunting, protected plants, sanctuaries, national parks, conservation and community reserves, tiger conservation, zoos, CITES, invasive alien species and wildlife crime. It also addresses constitutional duties, forest-dweller rights, human-wildlife conflict, current amendment cautions and leading judicial principles.",
+    learningObjectives: [
+      "Distinguish the purposes and fields of operation of forest law, wildlife conservation law and animal-welfare law.",
+      "Explain how a reserved forest is constituted and how pre-existing rights are claimed, admitted, modified or extinguished.",
+      "Compare reserved, village and protected forests under the Indian Forest Act, 1927.",
+      "Apply the rules governing forest produce, transit, seizure, confiscation, arrest and compounding to a factual problem.",
+      "Explain the statutory duty of care and principal cruelty offences under the Prevention of Cruelty to Animals Act, 1960.",
+      "Describe the roles of the Animal Welfare Board of India and the committee supervising experiments on animals.",
+      "Analyse the regulation of performing animals, transport, slaughter, pet shops, breeding and animal-birth-control programmes.",
+      "Apply the current four-schedule structure, hunting prohibitions and protected-area provisions of the Wild Life (Protection) Act, 1972.",
+      "Explain domestic wildlife trade controls, CITES authorities, invasive-alien-species powers and enforcement procedure.",
+      "Balance conservation, animal welfare, forest-dweller rights, livelihood, culture and public safety through the applicable statute and evidence.",
+    ],
+    detailedContent: `
+1. Constitutional and legislative map
+
+Forests and protection of wild animals and birds are Concurrent List subjects under Entries 17A and 17B of List III. Parliament and State Legislatures may legislate, subject to constitutional rules on inconsistency. Article 48 directs the State to organise agriculture and animal husbandry on modern and scientific lines and addresses preservation and improvement of breeds. Article 48A directs the State to protect and improve the environment and safeguard forests and wildlife. Article 51A(g) makes compassion for living creatures and protection of the natural environment a fundamental duty.
+
+The Indian Forest Act, 1927 primarily concerns legal classification and administration of forests, forest produce, transit and forest offences. The Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980, formerly the Forest (Conservation) Act, controls dereservation and non-forest use of land within its statutory coverage. The Forest Rights Act, 2006 recognises specified individual and community rights of Scheduled Tribes and other traditional forest dwellers.
+
+The Prevention of Cruelty to Animals Act, 1960 is welfare-centred: it asks whether an animal is subjected to unnecessary pain or suffering and regulates human care, use and treatment. The Wild Life (Protection) Act, 1972 is conservation-centred: it protects wild species, plants, habitats and ecological systems, and regulates hunting, possession and trade. The same animal may engage both regimes, but their elements and authorities must not be merged.
+
+2. Indian Forest Act: purpose and key definitions
+
+The Indian Forest Act consolidates law relating to forests, transit of forest produce and duties leviable on timber and other forest produce. Section 2 supplies definitions including forest officer, forest offence, forest produce, timber, tree and cattle. The definition of forest produce includes specified products whether found in, brought from or produced in a forest and other listed items when found in or brought from a forest. Classification is therefore fact-sensitive.
+
+The Act does not provide one universal definition of forest land for every enactment. In T.N. Godavarman Thirumulpad v. Union of India, the Supreme Court directed the expression forest in the conservation statute to be understood according to its dictionary meaning in addition to statutorily recognised forests. Later amendments to the conservation statute make the current statutory coverage a separate enquiry.
+
+Before alleging a forest offence, identify the applicable central text, State amendments, notification, transit rules and ownership of the produce. Several States have replaced or extensively amended the 1927 Act. A bare central provision cannot automatically answer a problem arising under a different State regime.
+
+3. Constitution of a reserved forest
+
+Reserved forests receive the Act's strongest classification-based control. Under section 3 the State Government may constitute government-owned forest land or land over which government has proprietary rights, or rights to forest produce, as a reserved forest. A section 4 notification declares the proposal, specifies the situation and limits and appoints a Forest Settlement Officer to inquire into rights.
+
+Publication under section 6 invites claims concerning rights of way, pasture, forest produce, watercourses and other interests within the prescribed period. The settlement officer investigates government and private rights, records evidence and decides claims. Rights may be admitted, excluded from the proposed forest, acquired or otherwise provided for under the statutory scheme. Appeals lie as provided by sections 17 and 18.
+
+After rights are settled and boundary requirements are completed, a section 20 notification declares the land reserved from the specified date. The process is not an empty formality: inadequate notice or failure to determine a genuine right can undermine legality. Equally, an unproved late assertion does not automatically defeat a final notification; the Act contains limited mechanisms for omitted claims and continuing rights.
+
+4. Effect of the preliminary notification and settlement of rights
+
+Between the section 4 proposal and final reservation, section 5 restricts acquisition of new rights except through succession or a written grant or contract from government or a person in whom the right was vested when notified. New clearing is restricted because alteration during settlement could defeat the proposed reservation.
+
+The Forest Settlement Officer has civil-procedure-like powers to survey, enter land, examine claims and receive evidence. A claimant should establish the source, nature, location, duration and customary exercise of the asserted right. Rights to shifting cultivation receive special statutory consideration; the State may permit, regulate or prohibit the practice in accordance with the Act.
+
+Admitted pasture or forest-produce rights can be continued under conditions, transferred to another area, commuted or acquired. The final record matters both for conservation and livelihood. Modern administration must also examine whether the Forest Rights Act, constitutional protections for Scheduled Tribes or rehabilitation requirements apply. Classification under the 1927 Act does not authorise disregard of later rights legislation.
+
+5. Village forests and protected forests
+
+Section 28 permits the State Government to assign to a village community the rights of government over land constituted as a reserved forest. The community may then manage the village forest under rules concerning protection, improvement, produce and duties. A village forest is therefore not simply any wooded common used by a village; it is a statutory arrangement created through the prescribed assignment.
+
+Under section 29 the State may declare a protected forest over forest land or waste land that is not included in a reserved forest and in which government has proprietary rights or rights to forest produce. Existing private rights must be recorded, and the declaration ordinarily does not abridge them merely by notification. Sections 30 and 32 permit reservation of particular trees, closure of portions, prohibition of quarrying or burning and rules governing cutting, removal, grazing, fire and produce.
+
+Reserved and protected forests differ in creation and legal intensity. In a reserved forest, rights are investigated before final notification and acts prohibited by section 26 attract consequences. In a protected forest, government first identifies its interest and regulates specified conduct through notifications and rules. A problem answer must prove the notification and relevant rule, not infer status from vegetation alone.
+
+6. Protection of non-government forests
+
+Sections 35–38 address forests and lands not owned by government. Where preservation is needed for protection against storms, floods, erosion, landslips, water-supply protection, public health or other statutory purposes, the State may regulate or prohibit clearing, pasture, burning and removal of vegetation after following the prescribed process. The Act also permits management by agreement in specified circumstances.
+
+These provisions demonstrate that forest law is not confined to title. Ecological functions can justify proportionate regulation of private land. The authority must establish jurisdiction, statutory purpose, notice, hearing and the relationship between the restriction and threatened harm. Compensation questions depend on the exact provision and facts.
+
+Other laws may operate concurrently. Tree-preservation laws, land-reform legislation, local planning, wildlife law, environmental clearance and the 1980 conservation statute may impose additional permissions. Approval under one law does not silently satisfy another.
+
+7. Forest produce, transit and timber marks
+
+Sections 39–44 govern duties on timber and other forest produce and State power over transit. Section 41 authorises rules regulating movement of timber and forest produce by land or water, passes, depots, routes, examination, marking and fees. Section 42 prescribes consequences for breach of transit rules, subject to amendments. Sections 45–51 deal with drift and stranded timber, unmarked timber and timber marks.
+
+A transit prosecution must establish that the item is forest produce under the applicable definition, that the rule applies to its source and movement, and that the required pass or mark was absent, false or violated. Ownership alone is not always a defence; transit rules may regulate movement of privately grown timber as defined by the applicable law. Conversely, an officer cannot assume every wood product is contraband without identifying the legal category and source.
+
+Documents, species identification, stump comparison, marking records, transport route, digital permits and custody of samples are important evidence. State rules often determine the practical result and may differ significantly.
+
+8. Prohibited acts in reserved and protected forests
+
+Section 26 lists conduct punishable in relation to reserved forests, including making a fresh clearing, setting fire or leaving fire in a dangerous condition, trespass or grazing where covered, causing damage in felling, quarrying, removing forest produce, clearing for cultivation and contravening applicable rules. The exact clauses and current consequences must be checked because Parliament and States have amended them.
+
+Sections 33 and related rules address protected-forest violations. The prosecution must prove the status and boundaries of the forest, notification or rule, prohibited act, accused person's connection and required mental element. Boundary pillars, maps, GPS coordinates, seizure records and independent witnesses may be crucial.
+
+Fire, illegal felling and mining can also trigger the Environment Act, wildlife law, mining law, disaster law and public-property offences. Each charge requires its own ingredients. Forest dependence or customary use should be examined under recorded rights and the Forest Rights Act rather than treated as an automatic defence or automatic criminality.
+
+9. Seizure, confiscation and arrest
+
+Section 52 permits seizure of forest produce together with tools, boats, vehicles or cattle where there is reason to believe a forest offence has been committed in respect of the produce. The officer marks and reports the seizure as required. Sections 53–59 regulate release, production, confiscation, disposal and related procedure. Section 64 authorises arrest without warrant in the circumstances stated; sections 65–67 concern release on bond, prevention and summary trial.
+
+Seizure is temporary custody; confiscation finally divests property under statutory authority. They should not be described as the same act. Notice, opportunity of hearing, proof connecting the conveyance to the offence, statutory owner defences and the competent forum depend heavily on State amendments. Some States create an authorised confiscating officer and a specialised appeal that operates separately from the criminal trial.
+
+The officer must inventory, seal, photograph and safely preserve produce and equipment, record location and grounds, and promptly follow the statutory reporting route. Perishable or living property requires humane and legally authorised care. An unlawful seizure can be reviewed even though forest crime deserves strict enforcement.
+
+10. Compounding and the Jan Vishwas grazing amendment
+
+Section 68 allows an empowered forest officer to accept compensation for a suspected offence and, where authorised, release seized property. Compounding concludes the matter only within the scope of the statutory order; it is not an informal payment or general power to erase serious conduct. State amendments may exclude specified offences or change limits.
+
+The Jan Vishwas (Amendment of Provisions) Act, 2023 changed section 26(1)(d) of the central Indian Forest Act concerning trespass or pasturing cattle and permitting cattle to trespass. The former imprisonment-and-fine consequence was replaced with a ₹500 penalty for this limited contravention. Parliament explained that minor or unintentional grazing by tribal or village communities should not attract imprisonment.
+
+Do not state that the entire Indian Forest Act has been decriminalised. Illegal felling, fire, quarrying, forest-produce theft and transit offences retain their own consequences, subject to the current central and State text. Later Jan Vishwas changes, commencement notifications and State amendments must be checked on the date and territory of the conduct.
+
+11. Forest conservation approval and the Forest Rights Act
+
+The Indian Forest Act classifies and administers forests; the Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980 controls dereservation, assignment and non-forest use of land within its coverage. Section 2 requires prior Central Government approval for specified State orders. The 2023 amendment renamed the statute, described its coverage and created or clarified exclusions and exempted categories. Its Rules govern proposals, appraisal and conditions.
+
+The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 recognises individual and community forest rights in section 3. Section 4 provides the recognition process, and section 5 empowers right holders and Gram Sabhas to protect wildlife, forests, biodiversity and ecologically sensitive areas and prevent destructive practices.
+
+Orissa Mining Corporation v. Ministry of Environment and Forest treated the Gram Sabha as central to determining claimed religious and community forest rights in the Niyamgiri project. Forest diversion, wildlife approval, environmental clearance and rights recognition are distinct legal steps. A project proponent should map each approval and community process rather than rely on one permission as a universal clearance.
+
+12. Prevention of Cruelty to Animals Act: object and approach
+
+The Prevention of Cruelty to Animals Act, 1960 seeks to prevent infliction of unnecessary pain or suffering on animals. Section 2 defines animal broadly as any living creature other than a human being. Section 3 imposes duties on a person having charge of an animal to take reasonable measures for its well-being and prevent unnecessary pain or suffering.
+
+The statutory word unnecessary is important. The Act does not prohibit every human use of animals, but it requires lawful purpose, necessity, proportionality and humane method. Veterinary treatment, husbandry, food production, research, transport and public-safety action remain regulated; convenience or entertainment does not automatically justify suffering.
+
+The Act works through general offences, specialised chapters and extensive rules. Police, veterinary officers, local bodies, animal-welfare organisations, magistrates and specialised committees have different functions. A complaint should identify the animal, person in charge, specific act or omission, condition, evidence of suffering, exception claimed and applicable rule.
+
+13. Animal Welfare Board of India
+
+Sections 4–10 constitute the Animal Welfare Board of India and define its functions. The Board advises the Central Government on rules and amendments, promotes animal welfare, supports shelters and organisations, encourages humane education and takes other statutory steps to prevent unnecessary pain or suffering. Section 9 is the central functions provision.
+
+The Board is not a general criminal court. Its advice, recognition, inspection, guidelines and participation can support implementation, but police, authorised officers, local bodies and courts must exercise their own statutory powers. State Animal Welfare Boards and Societies for Prevention of Cruelty to Animals assist implementation under applicable rules and arrangements.
+
+Good governance requires veterinary expertise, inspection records, conflict-of-interest control, transparent recognition of organisations and welfare standards that are both scientifically sound and enforceable. A private rescuer or association does not obtain unlimited authority merely by invoking animal welfare.
+
+14. Cruelty offences under section 11
+
+Section 11(1) covers numerous forms of cruelty: beating, kicking, overdriving, overloading or torturing; employing an unfit animal; administering injurious substances; cruel transport; inadequate cages; unreasonable chaining; failure to exercise a confined dog; failure to provide food, drink or shelter; abandonment; allowing a diseased animal at large; sale or possession of an animal suffering through ill-treatment; cruel killing; baiting, animal fighting and specified shooting competitions.
+
+Liability may fall on the direct actor and on an owner who permits cruelty or fails to exercise reasonable care and supervision. Photographs alone may not show duration, cause or responsibility. Veterinary examination, body condition, housing measurements, water access, transport conditions, witness accounts and ownership records strengthen proof.
+
+Section 11(3) contains limited exclusions for prescribed husbandry procedures, authorised destruction and matters dealt with elsewhere, while preserving the prohibition on unnecessary suffering in food preparation. An exception must be proved within its legal limits; it is not a licence for a cruel method.
+
+15. Orders concerning animals and humane destruction
+
+Sections 12 and 13 address phooka or doom dev and court orders concerning an animal after conviction. A court may direct forfeiture, custody, treatment or destruction where the statutory conditions are satisfied. Humane destruction is exceptional and should be supported by veterinary evidence that continued life would involve cruelty or that another lawful necessity exists.
+
+Case-property animals create a special problem because a prolonged trial can itself cause suffering and impose large maintenance cost. The Prevention of Cruelty to Animals (Care and Maintenance of Case Property Animals) Rules, 2017 regulate custody, bond, care and disposal. The criminal court must balance evidentiary preservation, property claims and animal welfare through the statute and binding precedent.
+
+An animal should not be released back into harmful custody merely because seizure was procedurally inconvenient. At the same time, permanent deprivation requires legal authority, notice and opportunity to contest. Interim custody, ownership and final confiscation are separate decisions.
+
+16. Experiments on animals and CCSEA
+
+Chapter IV, sections 14–20, regulates experiments on animals. The statutory objective is to prevent unnecessary pain or suffering while permitting properly controlled experimentation for legitimate purposes. Section 15 provides for the Committee for Control and Supervision of Experiments on Animals, now commonly known as CCSEA.
+
+The Breeding of and Experiments on Animals (Control and Supervision) Rules require covered establishments to register, maintain animal-house standards, constitute an Institutional Animal Ethics Committee and obtain project approval at the appropriate level. Experimental design should use alternatives where reasonably available, the minimum appropriate number of animals, anaesthesia and analgesia, competent personnel and humane endpoints.
+
+The legal analysis should distinguish ethical approval, institutional registration and substantive cruelty. Approval does not excuse deviation from the protocol or avoidable suffering. Inspection records, protocols, veterinary care, anaesthetic logs, endpoints and disposal determine compliance.
+
+17. Performing animals
+
+Sections 21–27 regulate training and exhibition of performing animals. Section 22 restricts exhibition or training without registration and permits the Central Government to notify animals that may not be exhibited or trained. The performing-animal rules govern registration, conditions, inspection and records. Courts may prohibit or condition a performance accompanied by unnecessary suffering.
+
+In N.R. Nair v. Union of India, the Supreme Court upheld restrictions on training and exhibition of bears, monkeys, tigers, panthers and lions, rejecting the claim that commercial performance outweighed welfare. Film, television, advertising, circuses and public events may require registration and compliance with species-specific directions.
+
+Section 28 preserves killing of an animal in a manner required by the religion of a community. It is a narrow statutory provision and does not create a general cultural exception for entertainment or cruelty. State amendments governing particular traditional events must be read separately.
+
+18. Transport, slaughter, breeding and pet businesses
+
+Rules under the 1960 Act convert the general welfare duty into operational standards. The Transport of Animals Rules regulate fitness, loading density, partitions, ventilation, food, water, certificates and journey conditions for specified species. Transport documents do not excuse overcrowding or an unfit animal.
+
+Slaughter-house rules regulate recognised facilities and humane handling; food-safety, municipal and State cattle-preservation laws may also apply. Pet Shop Rules, 2018 and Dog Breeding and Marketing Rules, 2017 regulate registration, housing, veterinary care, sale records and prohibited practices. Livestock-market, draught-animal, egg-laying-hen and animal-husbandry rules address other sectors.
+
+The applicable rule should be matched to species and activity. An enforcement team should secure veterinary assessment, vehicle or premises measurements, permit and registration records, photographs, witness statements and continuity of custody while arranging immediate care.
+
+19. Animal Birth Control Rules and street animals
+
+The Animal Birth Control Rules, 2023 place duties on local authorities to conduct sterilisation and anti-rabies programmes through recognised projects, with monitoring, veterinary infrastructure, humane capture, surgery, recovery and release procedures. They seek both public-health protection and humane population management.
+
+Street-dog disputes involve rabies prevention, bite response, waste management, vaccination, sterilisation, feeding, child and pedestrian safety and animal welfare. Neither indiscriminate killing nor unregulated feeding solves the statutory problem. Local bodies must maintain data, complaint systems, bite and rabies protocols, safe project capacity and coordination with health departments.
+
+The Rules and current judicial directions should be checked together because courts may issue situation-specific or nationwide operational requirements. A resident association, feeder, municipality and welfare organisation each has responsibilities, but none may substitute private force for lawful public-health action.
+
+20. Animal welfare, culture and constitutional interpretation
+
+Animal Welfare Board of India v. A. Nagaraja interpreted sections 3 and 11 in light of Articles 48, 48A and 51A(g), emphasised the five internationally recognised freedoms and treated animal welfare and intrinsic worth as central to the statute. On the then-applicable law and evidence, the Court found Jallikattu and bullock-cart races inconsistent with the Act.
+
+Tamil Nadu, Maharashtra and Karnataka later enacted amendments regulating specified traditional events. In Animal Welfare Board of India v. Union of India, a Constitution Bench in 2023 upheld those State amendments, finding that the legislatures had altered the legal basis and prescribed safeguards. It did not convert culture into an unlimited exemption from cruelty; organisers and States remain bound by the amended conditions and enforcement duties.
+
+Problem questions must therefore identify State, event, applicable amendment and actual compliance. A. Nagaraja remains important for welfare-oriented statutory interpretation, while the 2023 judgment governs the validity and operation of the challenged State amendments.
+
+21. Wild Life (Protection) Act: objects and authorities
+
+The Wild Life (Protection) Act, 1972 protects wild animals, birds and plants and supports ecological and environmental security. The 2022 amendment expanded conservation management and domestic implementation of the Convention on International Trade in Endangered Species of Wild Fauna and Flora, or CITES.
+
+The Central Government appoints the Director of Wild Life Preservation; States appoint Chief Wild Life Wardens and other officers. The National and State Boards for Wild Life advise on policy, protected areas and conservation. The Central Zoo Authority regulates zoo recognition and standards. The National Tiger Conservation Authority supports tiger-reserve governance, and the Wildlife Crime Control Bureau coordinates intelligence and enforcement against organised wildlife crime.
+
+Authority matters. A permit, search, prosecution or management plan must come from the person or body empowered by the current Act and delegation. Advice of a board is not identical to a statutory approval by the competent government or warden.
+
+22. Current schedules and levels of protection
+
+The 2022 amendment reduced the former six schedules to four. Schedule I lists animals receiving the highest level of protection. Schedule II lists other protected animals. Schedule III contains protected plant species. Schedule IV contains specimens listed under the CITES Appendices for the Act's international-trade and possession system.
+
+The old formula referring to Schedules I, II, III, IV, V and VI is obsolete for current conduct. The absence of a separate vermin schedule does not permit indiscriminate killing. Section 62 allows the Central Government to declare a wild animal other than a Schedule I animal to be vermin for a specified area and period.
+
+Correct identification is essential. Common names may cover multiple species with different status. Officers should use morphology, geographic distribution, forensic material, DNA where needed and expert certification, and should preserve the chain of custody. The schedule in force on the offence date controls the statutory consequence.
+
+23. Hunting prohibition and statutory exceptions
+
+Section 9 prohibits hunting of animals specified in Schedules I and II except as permitted by sections 11 and 12. Hunting is broadly defined and includes killing, poisoning, capturing, coursing, snaring or trapping, attempts and specified injury to animals, nests or eggs. Trapping a bird can therefore constitute hunting even without killing it.
+
+Section 11 permits the Chief Wild Life Warden, through a reasoned written order and subject to statutory conditions, to allow hunting where a protected animal is dangerous to human life, disabled or diseased beyond recovery, or where another permitted category damages property. Schedule I cases carry stricter approval conditions. Capture and translocation should be preferred where the Act requires or permits it and it is safe and scientifically justified.
+
+Section 12 authorises permits for specified purposes such as education, scientific research, scientific management or collection of specimens, subject to approvals and safeguards. Self-help killing cannot be justified merely by later labelling an animal dangerous. The decision should rely on verified identity, behaviour, alternatives, expert assessment and a precise order.
+
+24. Protected plants and government property
+
+Sections 17A–17H protect specified plants. Uprooting, damaging, destroying, acquiring or collecting a Schedule III plant from forest land is prohibited except under a permit. Cultivation and dealing may require licensing. The plant regime is separate from ownership of land and from forest-produce transit rules; both may apply.
+
+Section 39 declares specified wild animals, animal articles, trophies, uncured trophies, meat and other items government property in the circumstances stated. Persons obtaining possession must report it. Sections 40–43 regulate declarations, certificates, transfer and dealings, including special conditions for live elephants under the amended law.
+
+Possession is not proved solely by proximity. Investigators should establish knowledge and control through premises, concealment, communications, transaction records, identification and statutory presumptions. Lawful inheritance, pre-existing certificates, captive breeding and transfer documents must be verified rather than assumed.
+
+25. Sanctuaries and national parks
+
+Section 18 begins the sanctuary-declaration process. Rights are notified, investigated and settled under sections 19–26A before final declaration, subject to the statutory scheme. Entry and residence are controlled; destruction, exploitation or removal of wildlife or habitat and diversion of water are restricted by section 29 and require the competent permissions and satisfaction that the action is necessary for improvement and better management of wildlife.
+
+Section 35 governs national parks. Rights must be settled, boundaries specified and activities strictly controlled. Grazing of livestock is generally prohibited except where used as a vehicle by an authorised person. Alteration of boundaries and diversion decisions engage statutory approval and the National Board for Wild Life framework.
+
+Sanctuary and national-park protection is not limited to poaching. Roads, resorts, mining, dams, tourism, noise, fencing, fire, invasive species and water diversion can fragment habitat or disturb migration. Management plans, carrying capacity, cumulative effects and ecological connectivity are central evidence.
+
+26. Conservation reserves, community reserves, tiger reserves and zoos
+
+Sections 36A and 36B permit conservation reserves, commonly on government land adjacent to protected areas or linking them, with a management committee. Sections 36C and 36D permit community reserves on community or private land volunteered for conservation, followed by a community reserve management committee. The two categories differ in land basis and governance.
+
+Chapter IVA establishes the Central Zoo Authority and requires zoo recognition. A zoo is an ex-situ conservation institution governed by statutory standards; it is not equivalent to a circus, private menagerie or unrestricted tourism facility. Acquisition, exchange, breeding and display of animals require lawful documentation and welfare compliance.
+
+Sections 38L–38X establish the National Tiger Conservation Authority and tiger-reserve framework, including core or critical tiger habitat and buffer areas, conservation plans and safeguards concerning rights and relocation. Sections 38Y and 38Z establish the Wildlife Crime Control Bureau. Corridor protection may also arise through protected-area powers, planning, forest law and judicial review even where no single corridor section resolves the dispute.
+
+27. Wildlife trade, CITES and invasive alien species
+
+Domestic trade in trophies, animal articles, captive animals, meat and specified wildlife is controlled through declarations, licences, transport restrictions and prohibitions in Chapters V and VA. Sections 44–49D should be read with the current schedules, rules and licences. Online sale, courier movement and export can create evidence across several jurisdictions.
+
+The 2022 amendment inserted the CITES framework in sections 49E–49R. The Central Government designates a Management Authority to grant and administer permits and one or more Scientific Authorities to advise whether trade is detrimental to survival. Transactions and possession of living Schedule IV animal specimens require reporting, registration and identification controls as prescribed.
+
+Section 62A authorises regulation or prohibition of import, trade, possession or proliferation of invasive alien species and permits seizure and disposal through authorised officers. CITES listing, domestic Schedule I–III protection and invasive status are distinct classifications; a specimen may engage more than one.
+
+28. Search, seizure, penalties and prosecution
+
+Section 50 grants authorised officers powers of entry, search, seizure, detention and arrest on statutory grounds. The officer should document reasonable basis, identify and preserve specimens, weapons, traps, vehicles, digital records and permits, provide custody suited to live animals and promptly follow production and reporting requirements.
+
+Section 51 provides penalties, with enhanced treatment for offences involving Schedule I animals, protected areas and repeat conduct. The 2022 amendment increased fines. Section 51A imposes special bail conditions for specified serious offences. Section 52 covers attempts and abetment; section 54 permits limited compounding; section 55 regulates cognizance by the court; section 56 addresses companies; and section 57 creates evidentiary presumptions in specified possession cases. Chapter VIA provides forfeiture of property derived from illegal hunting and trade.
+
+Wildlife prosecutions often require intelligence-led investigation: species forensics, call records obtained lawfully, financial trails, transport documents, undercover evidence, cross-border cooperation and linkage between poacher, carrier, dealer and exporter. Strict conservation purpose does not remove proof, fair trial or lawful search requirements.
+
+29. Human-wildlife conflict and community rights
+
+Human-wildlife conflict can involve death, injury, crop loss, livestock predation, property damage and fear, while retaliatory killing and habitat fragmentation threaten conservation. The legal response begins with prevention: land-use planning, corridor protection, waste and attractant control, early warning, barriers suited to species, rapid response and accessible ex gratia or compensation schemes.
+
+Removal or killing must follow sections 11 and 62, applicable State directions and scientific assessment. A species-wide label cannot replace an area- and time-specific statutory decision. Capturing an animal without an authorised destination, veterinary plan and habitat assessment may merely transfer risk.
+
+Forest-dweller rights and conservation are not inherently opposed. The Forest Rights Act gives Gram Sabhas and right holders responsibilities to protect wildlife, forest and biodiversity. Protected-area management plans in specified areas require consultation under the amended Wildlife Act. Relocation from critical habitats must follow applicable rights, consent, rehabilitation and scientific conditions rather than informal coercion.
+
+30. Judicial principles and examination method
+
+Godavarman established broad forest-conservation supervision and the dictionary-meaning approach in its context. Ambica Quarry treated ecological protection and the conservation statute as limiting automatic renewal of mining rights. Orissa Mining Corporation centred the Gram Sabha in determining Niyamgiri forest rights. Hospitality Association of Mudumalai upheld State power to protect an elephant corridor on ecological material.
+
+Murad Ali Khan emphasised effective prosecution under the Wildlife Act; Nisar Khan treated trapping as hunting and required strict compliance before wildlife dealing; Sansar Chand recognised organised trafficking as a grave threat to ecological balance; and Centre for Environmental Law adopted an ecocentric, species-oriented approach to an alternative home for Asiatic lions.
+
+For animal welfare, N.R. Nair upheld performing-animal restrictions. A. Nagaraja foregrounded sections 3 and 11, constitutional compassion and the five freedoms. The 2023 Animal Welfare Board decision upheld specified State amendments for traditional events while requiring operation within their safeguards.
+
+For a descriptive answer, separate the three statutes, then explain institutions, protected subject, prohibited act, permission, enforcement and leading cases. For a problem, use nine steps: identify land, species or animal; determine the applicable central and State version; prove notification or schedule; identify the actor and authority; state prohibition and exception; test rights and permissions; secure scientific and veterinary evidence; select seizure, welfare, prosecution or restoration measures; and state review or appeal. Always verify current schedules, State amendments, commencement notifications and rules before advising on an actual case.
+    `.trim(),
     keyPoints: [
-      "Indian Forest Act, 1927",
-      "Forest administration and forest produce",
-      "Prevention of Cruelty to Animals Act, 1960",
-      "Wild Life Protection Act, 1972",
-      "Protected areas, species and enforcement",
+      "Forest administration, wildlife conservation and animal welfare are connected but governed by distinct statutory tests.",
+      "Reserved forests follow a proposal, claims process, settlement of rights, appeals and final section 20 notification.",
+      "Village forests arise through statutory assignment to a community; protected forests regulate government interests without the same reservation process.",
+      "Forest-produce and transit liability depends on the statutory definition, source, State rules, permits and reliable identification.",
+      "Seizure, interim custody, confiscation and criminal conviction are separate legal stages requiring their own authority and procedure.",
+      "Jan Vishwas replaced imprisonment for the limited section 26(1)(d) grazing contravention with a ₹500 penalty; it did not decriminalise every forest offence.",
+      "The 1980 forest-conservation statute, the Indian Forest Act and the Forest Rights Act perform different functions and may apply together.",
+      "Section 3 of the PCA Act imposes a welfare duty; section 11 identifies conduct causing unnecessary pain or suffering.",
+      "The AWBI advises and promotes welfare, while CCSEA and institutional committees regulate experiments on animals.",
+      "Performing animals, transport, slaughter, breeders, pet shops and animal-birth-control programmes are governed by activity-specific rules.",
+      "The current Wildlife Act has four schedules: two animal schedules, one protected-plant schedule and one CITES-specimen schedule.",
+      "Hunting includes capture, trapping and attempts; sections 11 and 12 provide narrow, authorised exceptions.",
+      "Sanctuaries, national parks, conservation reserves, community reserves, tiger reserves and zoos have different declaration and governance regimes.",
+      "The 2022 Wildlife amendment established domestic CITES administration and powers concerning invasive alien species.",
+      "Effective enforcement combines habitat protection, community participation, veterinary and species evidence, intelligence, lawful seizure and proportionate remedies.",
     ],
     provisions: [
-      "Indian Forest Act, 1927",
-      "Prevention of Cruelty to Animals Act, 1960",
-      "Wild Life (Protection) Act, 1972",
+      {
+        id: "environmental-law-unit-6-constitution",
+        title: "Constitution of India",
+        provision: "Articles 48, 48A and 51A(g); List III Entries 17A and 17B",
+        description:
+          "Provide the animal-husbandry, environmental, forest, wildlife and compassion framework and place forests and wildlife in the Concurrent List.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-reservation",
+        title: "Indian Forest Act, 1927",
+        provision: "Sections 2–27",
+        description:
+          "Define central terms and govern the proposal, rights settlement, appeals, final notification and protection of reserved forests.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-categories",
+        title: "Indian Forest Act, 1927",
+        provision: "Sections 28–38",
+        description:
+          "Govern village forests, protected forests and protective regulation or management of non-government forests and lands.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-transit",
+        title: "Indian Forest Act, 1927",
+        provision: "Sections 39–51",
+        description:
+          "Address forest-produce duties, transit rules, passes, depots, drift timber and registration of property marks.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-enforcement",
+        title: "Indian Forest Act, 1927",
+        provision: "Sections 52–69",
+        description:
+          "Regulate seizure, release, confiscation, arrest, prevention, summary trial and compounding of forest offences, subject to State amendments.",
+      },
+      {
+        id: "environmental-law-unit-6-jan-vishwas-grazing",
+        title: "Jan Vishwas (Amendment of Provisions) Act, 2023",
+        provision: "Indian Forest Act section 26(1)(d)",
+        description:
+          "Replaces the former criminal consequence for the specified trespass or cattle-pasturing contravention with a ₹500 penalty.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-conservation",
+        title: "Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980",
+        provision: "Sections 1A and 2, as amended in 2023",
+        description:
+          "Defines current statutory coverage and requires prior Central approval for specified dereservation, assignment and non-forest use decisions.",
+      },
+      {
+        id: "environmental-law-unit-6-forest-rights",
+        title: "Forest Rights Act, 2006",
+        provision: "Sections 3–6",
+        description:
+          "Recognises individual and community rights, imposes conservation responsibilities and establishes the Gram Sabha-led claims process.",
+      },
+      {
+        id: "environmental-law-unit-6-pca-duty-board",
+        title: "Prevention of Cruelty to Animals Act, 1960",
+        provision: "Sections 3–10",
+        description:
+          "Impose the duty of care and establish the composition and welfare functions of the Animal Welfare Board of India.",
+      },
+      {
+        id: "environmental-law-unit-6-pca-cruelty",
+        title: "Prevention of Cruelty to Animals Act, 1960",
+        provision: "Sections 11–13",
+        description:
+          "Define general cruelty, prohibit phooka or doom dev and empower courts to make welfare orders concerning affected animals.",
+      },
+      {
+        id: "environmental-law-unit-6-pca-experiments",
+        title: "Prevention of Cruelty to Animals Act, 1960",
+        provision: "Sections 14–20",
+        description:
+          "Provide the statutory framework for controlling and supervising experiments on animals through specialised regulation.",
+      },
+      {
+        id: "environmental-law-unit-6-pca-performing",
+        title: "Prevention of Cruelty to Animals Act, 1960",
+        provision: "Sections 21–28",
+        description:
+          "Regulate registration, restriction, inspection and judicial control of performing animals and contain a narrow religious-killing provision.",
+      },
+      {
+        id: "environmental-law-unit-6-pca-rules",
+        title: "Rules under the Prevention of Cruelty to Animals Act",
+        provision: "Transport, case-property, pet-shop, breeding, slaughter and Animal Birth Control Rules",
+        description:
+          "Convert the general anti-cruelty duty into species- and activity-specific operational standards, including the 2023 welfare rules.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-hunting-plants",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 9–17H and Schedules I–III",
+        description:
+          "Prohibit hunting subject to narrow permits and protect listed plants, cultivation and licensed dealing.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-areas",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 18–36D",
+        description:
+          "Govern rights settlement, declaration and management of sanctuaries, national parks, conservation reserves and community reserves.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-institutions",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 38A–38Z",
+        description:
+          "Establish the Central Zoo Authority, tiger-conservation framework and Wildlife Crime Control Bureau.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-property-trade",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 39–49D",
+        description:
+          "Regulate government property, declarations, certificates, transfers, dealers, transport and domestic wildlife trade.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-cites",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 49E–49R and Schedule IV",
+        description:
+          "Implement CITES through Management and Scientific Authorities, permits, transaction reporting and registration of living specimens.",
+      },
+      {
+        id: "environmental-law-unit-6-wildlife-enforcement",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 50–58J",
+        description:
+          "Provide search, seizure, arrest, penalties, bail conditions, cognizance, presumptions, company liability and forfeiture powers.",
+      },
+      {
+        id: "environmental-law-unit-6-invasive-vermin",
+        title: "Wild Life (Protection) Act, 1972",
+        provision: "Sections 62 and 62A",
+        description:
+          "Authorise area-and-period-specific vermin declarations and regulation or prohibition of invasive alien species.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-6-ambica-quarry",
+        caseName: "Ambica Quarry Works v. State of Gujarat",
+        citation: "(1987) 1 SCC 213",
+        principle:
+          "Forest-conservation restrictions and ecological purpose prevent an automatic claim to renew quarrying rights in forest land.",
+        summary:
+          "The Supreme Court treated conservation legislation as controlling renewal of mining leases and prioritised the ecological object of forest protection.",
+      },
+      {
+        id: "environmental-law-unit-6-murad-ali",
+        caseName: "State of Bihar v. Murad Ali Khan",
+        citation: "(1988) 4 SCC 655",
+        principle:
+          "Wildlife offences must be interpreted in light of the protective statute, and cognizance procedure does not justify premature quashing of a valid complaint.",
+        summary:
+          "Proceedings alleging illegal killing of an elephant were restored after the Court examined Wildlife Act cognizance and parallel criminal-law consequences.",
+      },
+      {
+        id: "environmental-law-unit-6-godavarman",
+        caseName: "T.N. Godavarman Thirumulpad v. Union of India",
+        citation: "(1997) 2 SCC 267",
+        principle:
+          "Forest-conservation law applied to statutorily recognised forests and forest understood by its dictionary meaning in the Court's continuing framework.",
+        summary:
+          "The decision initiated continuing national supervision of forest conservation and reshaped the relationship between classification and diversion controls.",
+      },
+      {
+        id: "environmental-law-unit-6-nr-nair",
+        caseName: "N.R. Nair v. Union of India",
+        citation: "(2001) 6 SCC 84",
+        principle:
+          "Restrictions on training and exhibition of specified performing animals validly pursue the PCA Act's anti-cruelty purpose despite commercial impact.",
+        summary:
+          "Circus interests unsuccessfully challenged the notification prohibiting exhibition or training of bears, monkeys, tigers, panthers and lions.",
+      },
+      {
+        id: "environmental-law-unit-6-nisar-khan",
+        caseName: "Chief Forest Conservator (Wild Life) v. Nisar Khan",
+        citation: "(2003) 4 SCC 595",
+        principle:
+          "Trapping falls within hunting, so a licence cannot authorise trade in birds procured through conduct prohibited by section 9.",
+        summary:
+          "The Supreme Court refused to compel renewal of a captive-bird dealer's licence where procurement depended on prohibited trapping.",
+      },
+      {
+        id: "environmental-law-unit-6-mirzapur-moti",
+        caseName: "State of Gujarat v. Mirzapur Moti Kureshi Kassab Jamat",
+        citation: "(2005) 8 SCC 534",
+        principle:
+          "Animal-preservation restrictions may be tested through constitutional reasonableness, Directive Principles, scientific material and changing social conditions.",
+        summary:
+          "A Constitution Bench upheld Gujarat's expanded cattle-slaughter prohibition after examining trade rights, agriculture, animal husbandry and public interest.",
+      },
+      {
+        id: "environmental-law-unit-6-sansar-chand",
+        caseName: "Sansar Chand v. State of Rajasthan",
+        citation: "(2010) 10 SCC 604",
+        principle:
+          "Organised poaching and trafficking gravely threaten species and ecological balance and require serious, coordinated enforcement.",
+        summary:
+          "The Court affirmed a wildlife conviction and highlighted the organised network and transnational demand driving trade in tiger and leopard parts.",
+      },
+      {
+        id: "environmental-law-unit-6-centre-environmental-law",
+        caseName: "Centre for Environmental Law, WWF-India v. Union of India",
+        citation: "(2013) 8 SCC 234",
+        principle:
+          "Species conservation should use an ecocentric, best-interest-of-the-species approach rather than political ownership of wildlife.",
+        summary:
+          "The Court prioritised establishing a second free-ranging population of Asiatic lions at Kuno to reduce extinction risk.",
+      },
+      {
+        id: "environmental-law-unit-6-orissa-mining",
+        caseName: "Orissa Mining Corporation Ltd. v. Ministry of Environment and Forest",
+        citation: "(2013) 6 SCC 476",
+        principle:
+          "The Gram Sabha has a central role in determining claimed community and religious forest rights before a project decision affecting them.",
+        summary:
+          "The Niyamgiri mining dispute was returned to Gram Sabhas to decide whether proposed activity would infringe forest and cultural rights.",
+      },
+      {
+        id: "environmental-law-unit-6-a-nagaraja",
+        caseName: "Animal Welfare Board of India v. A. Nagaraja",
+        citation: "(2014) 7 SCC 547",
+        principle:
+          "Sections 3 and 11 must be interpreted through animal welfare, constitutional compassion and the five freedoms from avoidable suffering.",
+        summary:
+          "On the law and evidence then governing Jallikattu and bullock-cart races, the Court found the events inconsistent with the PCA Act.",
+      },
+      {
+        id: "environmental-law-unit-6-hospitality-mudumalai",
+        caseName: "Hospitality Association of Mudumalai v. In Defence of Environment and Animals",
+        citation: "(2020) 10 SCC 589",
+        principle:
+          "A State may protect an ecologically supported elephant corridor and restrict incompatible resorts and construction within its legislative authority.",
+        summary:
+          "The Supreme Court upheld Tamil Nadu's elephant-corridor notification for the Sigur Plateau based on habitat connectivity and movement evidence.",
+      },
+      {
+        id: "environmental-law-unit-6-awbi-union",
+        caseName: "Animal Welfare Board of India v. Union of India",
+        citation: "(2023) 9 SCC 322",
+        principle:
+          "State amendments regulating specified traditional bovine sports were constitutionally valid after altering the legal basis and prescribing safeguards.",
+        summary:
+          "A Constitution Bench upheld the Tamil Nadu, Maharashtra and Karnataka amendments while leaving organisers and authorities bound by their welfare conditions.",
+      },
+    ],
+    examFocus:
+      "Prepare the constitutional framework in Articles 48, 48A and 51A(g) and Concurrent List Entries 17A–17B; Indian Forest Act definitions; sections 3–27 on reserved forests and rights settlement; sections 28–34 on village and protected forests; private-forest protection; forest produce, transit, seizure, confiscation, arrest and compounding; State amendments and the Jan Vishwas change to section 26(1)(d); the distinction between the Indian Forest Act, the 1980 forest-conservation statute and the Forest Rights Act; PCA Act sections 3–13, AWBI functions, experiments, performing animals and activity-specific rules; Animal Birth Control Rules, 2023; the relationship between A. Nagaraja and the 2023 Constitution Bench judgment; Wildlife Act authorities and the current four schedules; hunting and exceptions; protected plants; government property and possession; sanctuaries, national parks, reserves, tiger conservation and zoos; domestic trade, CITES, invasive alien species, search, seizure, penalties, cognizance and forfeiture; and human-wildlife conflict with community rights. In every problem identify the State, date, notification, schedule, rule, permit, competent authority and scientific evidence before selecting a remedy.",
+    revisionNotes: `
+Three-law distinction: the Indian Forest Act classifies and administers forests and produce; the PCA Act prevents unnecessary animal pain or suffering; the Wildlife Act protects wild species, habitats and trade. The 1980 forest-conservation statute controls diversion, while the Forest Rights Act recognises forest-dweller rights and conservation duties.
+
+Forest sequence: section 4 proposal; section 6 claims; inquiry and settlement; sections 17–18 appeal; section 20 final reservation. Village forest means statutory community assignment under section 28. Protected forest under section 29 rests on government interest and specific notifications or rules. Transit rules, State amendments and species identification determine forest-produce liability.
+
+Enforcement: section 52 seizure is not final confiscation. Record grounds, inventory and custody; follow the competent State procedure; prove the notification, boundary, produce and accused's connection. Section 68 compounding is limited. Jan Vishwas changed only the central section 26(1)(d) grazing/trespass clause to a ₹500 penalty; it did not erase serious forest offences.
+
+Animal welfare: section 3 imposes care; section 11 lists cruelty; sections 4–10 establish AWBI; sections 14–20 regulate experiments through CCSEA; sections 21–27 regulate performing animals. Transport, slaughter, case-property, breeders, pet shops, animal husbandry and ABC programmes are governed by specialised rules.
+
+Wildlife: current schedules are I—highest-protection animals; II—other protected animals; III—protected plants; IV—CITES specimens. Section 9 prohibits hunting, including trapping, subject to sections 11–12. Sections 18–36D cover protected areas and reserves; sections 38A–38Z cover zoos, tigers and wildlife crime; sections 39–49D cover property and domestic trade; sections 49E–49R implement CITES; sections 50–58J govern enforcement; sections 62–62A address vermin declarations and invasive alien species.
+
+Cases: Ambica Quarry — conservation over automatic mining renewal; Godavarman — forest meaning and continuing supervision; Orissa Mining — Gram Sabha rights; Mudumalai — elephant corridor; Murad Ali — wildlife prosecution; Nisar Khan — trapping is hunting; Sansar Chand — organised wildlife crime; Centre for Environmental Law — ecocentric species interest; N.R. Nair — performing-animal restriction; A. Nagaraja — welfare and five freedoms; AWBI 2023 — valid State traditional-sport amendments with safeguards.
+
+Problem method: identify subject, territory and date; locate notification or schedule; prove authority and prohibited act; test permit, exception and rights; collect species, veterinary and habitat evidence; distinguish seizure, confiscation and conviction; protect living animals immediately; and frame prosecution, compliance, restoration or community-based measures with a review route.
+    `.trim(),
+    notes: "",
   },
   {
     title: "Biological Diversity Act, 2002",
