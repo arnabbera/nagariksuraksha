@@ -11,10 +11,14 @@ import {
   FaCertificate,
   FaCheck,
   FaClock,
+  FaFacebookF,
+  FaLink,
   FaFileLines,
   FaGraduationCap,
   FaLock,
   FaScaleBalanced,
+  FaWhatsapp,
+  FaXTwitter,
 } from "react-icons/fa6";
 
 import {
@@ -105,6 +109,11 @@ export default function PublicCourseDetailsPage() {
   const [
     showCourseDetails,
     setShowCourseDetails,
+  ] = useState(false);
+
+  const [
+    linkCopied,
+    setLinkCopied,
   ] = useState(false);
 
   // =======================================================
@@ -473,6 +482,33 @@ export default function PublicCourseDetailsPage() {
   const isCivilProcedureCourse =
     course.slug ===
     "code-of-civil-procedure-and-limitation";
+
+  const courseShareUrl =
+    `${SEO_CONFIG.siteUrl}/courses/${course.slug}`;
+
+  const courseShareText =
+    `Explore ${course.title} on NagarikSuraksha`;
+
+  const copyCourseLink =
+    async () => {
+      try {
+        await navigator.clipboard.writeText(
+          courseShareUrl,
+        );
+
+        setLinkCopied(true);
+
+        window.setTimeout(
+          () => setLinkCopied(false),
+          2000,
+        );
+      } catch (copyError) {
+        console.error(
+          "Unable to copy course link:",
+          copyError,
+        );
+      }
+    };
 
   // =======================================================
   // RENDER
@@ -961,6 +997,73 @@ export default function PublicCourseDetailsPage() {
           </div>
         </section>
 
+        {/* SHARE COURSE */}
+
+        <section className="course-share-section">
+          <div className="course-page-container course-share-card">
+            <div>
+              <span className="content-label">
+                Share This Course
+              </span>
+
+              <h2>
+                Forward {course.title}
+              </h2>
+
+              <p>
+                Share this course summary with students, friends and colleagues.
+              </p>
+            </div>
+
+            <div className="course-share-actions">
+              <a
+                className="course-share-button facebook"
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(courseShareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Share ${course.title} on Facebook`}
+              >
+                <FaFacebookF />
+                Facebook
+              </a>
+
+              <a
+                className="course-share-button twitter"
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(courseShareText)}&url=${encodeURIComponent(courseShareUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Share ${course.title} on X`}
+              >
+                <FaXTwitter />
+                X / Twitter
+              </a>
+
+              <a
+                className="course-share-button whatsapp"
+                href={`https://wa.me/?text=${encodeURIComponent(`${courseShareText} ${courseShareUrl}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Share ${course.title} on WhatsApp`}
+              >
+                <FaWhatsapp />
+                WhatsApp
+              </a>
+
+              <button
+                type="button"
+                className="course-share-button copy-link"
+                onClick={copyCourseLink}
+                aria-label={`Copy link for ${course.title}`}
+              >
+                <FaLink />
+                {linkCopied
+                  ? "Link Copied"
+                  : "Copy Link"}
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* TERMS AND DISCLAIMER */}
 
         <section className="course-terms-section">
@@ -1421,6 +1524,76 @@ export default function PublicCourseDetailsPage() {
               font-weight: 800;
             }
 
+            .course-share-section {
+              padding: 55px 0;
+              background: #eff6ff;
+            }
+
+            .course-share-card {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 30px;
+              padding: 28px;
+              border: 1px solid #bfdbfe;
+              border-radius: 18px;
+              background: #ffffff;
+              box-shadow: 0 12px 35px rgba(37, 99, 235, .08);
+            }
+
+            .course-share-card h2 {
+              margin: 0;
+              color: #0f172a;
+              font-size: clamp(22px, 3vw, 30px);
+            }
+
+            .course-share-card p {
+              margin: 8px 0 0;
+              color: #64748b;
+              font-size: 13px;
+              line-height: 1.6;
+            }
+
+            .course-share-actions {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+              gap: 10px;
+            }
+
+            .course-share-button {
+              display: inline-flex;
+              min-height: 42px;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+              padding: 0 15px;
+              border: 0;
+              border-radius: 9px;
+              color: #ffffff;
+              cursor: pointer;
+              font: inherit;
+              font-size: 11px;
+              font-weight: 800;
+              text-decoration: none;
+            }
+
+            .course-share-button.facebook {
+              background: #1877f2;
+            }
+
+            .course-share-button.twitter {
+              background: #0f172a;
+            }
+
+            .course-share-button.whatsapp {
+              background: #16a34a;
+            }
+
+            .course-share-button.copy-link {
+              background: #475569;
+            }
+
             .course-terms-section {
               border-top: 1px solid #e2e8f0;
               background: #ffffff;
@@ -1544,6 +1717,25 @@ export default function PublicCourseDetailsPage() {
 
               .course-seo-section {
                 padding: 45px 0;
+              }
+
+              .course-share-section {
+                padding: 40px 0;
+              }
+
+              .course-share-card {
+                align-items: stretch;
+                flex-direction: column;
+                padding: 22px;
+              }
+
+              .course-share-actions {
+                display: grid;
+                grid-template-columns: 1fr;
+              }
+
+              .course-share-button {
+                width: 100%;
               }
 
               .course-terms-section {
