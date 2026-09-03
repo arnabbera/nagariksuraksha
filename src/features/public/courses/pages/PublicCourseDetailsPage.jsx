@@ -614,7 +614,9 @@ export default function PublicCourseDetailsPage() {
                 course.slug ===
                   "public-international-law" ||
                 course.slug ===
-                  "law-of-torts-mv-and-cp-laws"
+                  "law-of-torts-mv-and-cp-laws" ||
+                course.slug ===
+                  "indian-constitutional-law-i"
                   ? "course-hero-media-full-image"
                   : ""
               }`}
