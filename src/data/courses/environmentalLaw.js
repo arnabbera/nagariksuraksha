@@ -660,22 +660,413 @@ Case sequence: RLEK — ecological quarrying control; Oleum Gas Leak — absolut
     shortDescription:
       "The Environment Protection Act, Air Act, Water Act, Pollution Control Boards and regulation of major environmental hazards.",
     overview:
-      "This unit studies India's principal framework legislation for environmental protection, air pollution and water pollution, together with the administration and functions of the Central and State Pollution Control Boards.",
-    detailedContent:
-      "Environment (Protection) Act, 1986; Air (Prevention and Control of Pollution) Act, 1981; Water (Prevention and Control of Pollution) Act, 1974; powers of the Central Government; environmental standards and directions; consent mechanisms; administration, powers and functions of Pollution Control Boards; water, air and noise pollution; nuclear radiation; and protection of wildlife, land use, irrigation, forests and other non-human components of the environment.",
+      "This unit explains India's three principal pollution-control enactments: the Environment (Protection) Act, 1986, the Water (Prevention and Control of Pollution) Act, 1974 and the Air (Prevention and Control of Pollution) Act, 1981. It examines their definitions, institutions, consent mechanisms, standards, inspections, sampling procedures, emergency powers and current enforcement architecture, together with the functions of the Central and State Pollution Control Boards and the effects of water, air, noise and radiation pollution on human beings and ecological systems.",
+    learningObjectives: [
+      "Explain the relationship between the Environment Act, Water Act and Air Act within India's pollution-control framework.",
+      "Interpret the principal definitions and regulatory powers under the Environment (Protection) Act, 1986.",
+      "Describe the Water Act's prohibition, consent, inspection, sampling, emergency and direction mechanisms.",
+      "Analyse air-pollution control areas, industrial consent and emission standards under the Air Act.",
+      "Compare the constitution, functions and working relationship of the CPCB, SPCBs and Pollution Control Committees.",
+      "Distinguish ambient standards, source standards, consent conditions, environmental clearance and waste authorisation.",
+      "Assess the effects of water, air, noise and ionising-radiation pollution on human health and non-human environmental components.",
+      "Apply the statutory framework, current amendments and leading judicial decisions to an integrated pollution-control problem.",
+    ],
+    detailedContent: `
+1. India's integrated pollution-control framework
+
+The Environment (Protection) Act, 1986, the Water (Prevention and Control of Pollution) Act, 1974 and the Air (Prevention and Control of Pollution) Act, 1981 operate together. The Water and Air Acts create a specialised board-based regulatory system for water pollution and air pollution. The Environment Act is an umbrella enactment that gives the Central Government broad powers over environmental quality, hazardous substances, industrial location and delegated environmental regulation.
+
+An industrial activity may require several distinct approvals. Consent under the Water and Air Acts regulates outlets, discharges, industrial plants and emissions. Prior environmental clearance may be required for a scheduled project under the Environment Act and the EIA Notification. A waste-management authorisation or registration may be required under rules framed under the Environment Act. Forest, wildlife, biodiversity, coastal, groundwater, municipal, factory or radiation approvals may also apply. One permission does not ordinarily replace another.
+
+Pollution control uses a source-pathway-receptor model. The source may be a factory, vehicle, sewage system, mine, construction site or waste facility. Air, water, soil, food chains and noise are pathways. Human communities, workers, rivers, groundwater, crops, wildlife, forests and property are receptors. Effective regulation must control the source, monitor the pathway and protect every legally relevant receptor.
+
+2. Regulatory concepts and standards
+
+Ambient standards describe the permissible or desired quality of the receiving environment, such as outdoor air or a water body. Source standards limit what a particular chimney, outlet, process or activity may emit or discharge. Consent conditions translate general standards into facility-specific obligations concerning technology, quantities, monitoring, treatment and reporting.
+
+Compliance is preventive and continuing. A regulator should assess the location and proposed process before operations begin, set enforceable conditions, verify pollution-control equipment, inspect and sample during operation, require accurate self-monitoring, respond to accidents and take corrective action when limits are exceeded. End-of-pipe treatment alone may be insufficient where cleaner production, substitution of hazardous inputs, water conservation, recycling or a safer location can avoid the risk.
+
+Environmental regulation also distinguishes concentration from load. A discharge may meet a concentration limit after dilution yet release an unacceptable total pollutant load. Cumulative pollution may arise when many individually permitted sources burden the same airshed, river basin or industrial cluster. Regulators must therefore consider carrying capacity, cumulative impact and the actual condition of the receiving environment rather than examining each source in isolation.
+
+3. Environment (Protection) Act, 1986: background and reach
+
+The Environment (Protection) Act, 1986 was enacted after the Stockholm Conference and in the aftermath of the Bhopal gas disaster. It extends throughout India and is commonly described as umbrella legislation because it addresses the environment as an interconnected whole and authorises coordinated Central Government action.
+
+Section 2 defines environment to include water, air and land and the interrelationship among them and human beings, other living creatures, plants, microorganisms and property. An environmental pollutant is a solid, liquid or gaseous substance present in a concentration that may be or tend to be injurious to the environment; environmental pollution is the presence of such a pollutant. Hazardous substance is defined by reason of chemical or physicochemical properties or handling as capable of causing harm to human beings, other living creatures, plants, microorganisms, property or the environment.
+
+The definitions reject an exclusively human-centred approach. Harm to wildlife, vegetation, microorganisms, soil, water systems and property is within the statutory design. They also show why pollution cannot be divided into sealed compartments: a chemical released on land may contaminate groundwater, enter crops and affect both people and animals.
+
+4. Central Government powers under Sections 3 to 6
+
+Section 3 empowers the Central Government to take all measures it considers necessary or expedient to protect and improve environmental quality and to prevent, control and abate pollution. The listed measures include coordinating governmental action; planning nationwide programmes; laying down environmental-quality and emission or discharge standards; restricting areas in which industries or processes may operate; prescribing safeguards for accidents and hazardous substances; examining processes and materials; sponsoring research; inspecting premises; establishing laboratories; and collecting and disseminating information.
+
+Section 3(3) permits the Central Government to constitute an authority and confer upon it specified statutory powers and functions. This mechanism has supported specialised environmental authorities. Section 4 permits appointment of officers, while Section 6 supplies rule-making power concerning environmental pollutants, hazardous substances, location restrictions, accident safeguards and related matters.
+
+Section 5 authorises written directions to any person, officer or authority. The power includes closure, prohibition or regulation of an industry, operation or process and stoppage or regulation of electricity, water or another service. Because a closure or utility direction has serious consequences, the authority must act within the Act and applicable procedural rules, consider relevant material and comply with natural justice unless urgent circumstances lawfully justify immediate action.
+
+5. Duties, accidents, inspection and scientific evidence
+
+Section 7 prohibits a person carrying on an industry, operation or process from discharging or emitting an environmental pollutant beyond prescribed standards. Section 8 requires a person handling hazardous substances to comply with prescribed procedures and safeguards. These provisions impose continuing obligations rather than a one-time licensing formality.
+
+Section 9 applies when a discharge beyond standards occurs or is apprehended because of an accident or unforeseen event. The responsible person must prevent or mitigate the pollution and promptly inform and assist the prescribed authorities. Authorities may take remedial measures and recover expenses. Emergency planning, containment, disclosure and cooperation are therefore integral parts of compliance.
+
+Sections 10 and 11 govern entry, inspection and sampling. An authorised officer may enter premises to perform statutory functions, examine equipment and records, search where there is reason to believe an offence or contravention has occurred, and seize relevant material according to law. The sampling procedure protects scientific reliability and procedural fairness; failure to follow mandatory steps may affect whether an analytical result can be used as evidence.
+
+Sections 12 to 14 deal with environmental laboratories, government analysts and analyst reports. A legally valid pollution case requires more than a bare allegation: the identity of the source, sampling location and time, method, preservation, chain of custody, laboratory competence, applicable standard and interpretation of results should be demonstrable.
+
+6. Rules and notifications under the Environment Act
+
+The Environment (Protection) Rules, 1986 prescribe standards and procedures and support restrictions on the location and operation of industries. The Act also serves as the enabling framework for major delegated regimes. These include the EIA Notification, 2006; Coastal Regulation Zone notifications; Noise Pollution (Regulation and Control) Rules, 2000; Manufacture, Storage and Import of Hazardous Chemical Rules, 1989; Chemical Accidents Rules, 1996; and rules concerning solid, plastic, biomedical, hazardous, electronic and battery waste.
+
+Delegated legislation must be read in its current form because schedules, thresholds, forms, authorities and compliance systems are amended frequently. The parent Act supplies power, but the applicable rule or notification often contains the operational obligation. For example, the EIA Notification determines which projects require prior environmental clearance and the appraisal process; waste rules identify regulated persons and authorisation, registration, collection, recycling or extended-producer-responsibility duties.
+
+Environmental clearance and pollution-control consent answer different questions. Clearance examines whether a covered project should be allowed from a broader environmental-impact perspective and on what conditions. Consent concentrates on pollution-related establishment and operation under the Water and Air Acts. A project requiring both must maintain both, comply with their conditions and obtain amendments where a material expansion or process change legally requires them.
+
+7. Current enforcement position under the Environment Act
+
+The Jan Vishwas (Amendment of Provisions) Act, 2023 altered the Environment Act's enforcement architecture with effect from 1 April 2024. The former general imprisonment-based provisions in Sections 15 to 17 were replaced by a system of monetary penalties for contraventions, including separate treatment of companies and government departments. Adjudicating officers determine penalties after inquiry, and an aggrieved person may appeal to the National Green Tribunal subject to statutory conditions.
+
+The amended framework also provides for additional penalties for continuing contraventions, consequences for failure to pay and crediting specified penalties to the Environmental Protection Fund. Liability, remedies or proceedings arising under the earlier law may be affected by the Jan Vishwas savings provision, so the date of the alleged contravention matters.
+
+Students should not reproduce pre-2024 penalty text as though it remains the complete current law. They should also avoid saying that environmental contraventions have become legally harmless: directions, closure, remediation, environmental compensation, statutory penalties, NGT proceedings and consequences for non-payment may still apply, while liability under another enactment depends on its own terms.
+
+8. Water Act, 1974: object, application and definitions
+
+The Water Act seeks to prevent and control water pollution and maintain or restore the wholesomeness of water. It was enacted through the Article 252 mechanism after resolutions by State Legislatures because water is principally a State List subject. Its territorial application and later amendments must therefore be checked with attention to State adoption.
+
+Section 2 defines pollution broadly as contamination of water or alteration of its physical, chemical or biological properties, or discharge of sewage, trade effluent or another substance likely to create a nuisance or render water harmful or injurious to public health or safety, domestic, commercial, industrial, agricultural or other legitimate uses, or the life and health of animals, plants or aquatic organisms.
+
+Stream includes a river, watercourse whether flowing or temporarily dry, inland water whether natural or artificial, subterranean water and notified sea or tidal water. Sewage effluent concerns sewage systems or sewage-disposal works, while trade effluent covers liquid, gaseous or solid substances discharged from premises used for industry, operation, process, treatment or disposal, other than domestic sewage.
+
+9. Central and State Pollution Control Boards under the Water Act
+
+Sections 3 and 4 establish the Central Pollution Control Board and State Pollution Control Boards as bodies corporate with multidisciplinary representation. The composition includes government, local-authority and non-official interests and a technically qualified member-secretary. Statutory design seeks a combination of scientific, engineering, administrative and stakeholder competence.
+
+Under Section 16, the CPCB's principal function is to promote cleanliness of streams and wells in different areas of the States. It advises the Central Government, coordinates State Boards, resolves specified disputes, provides technical assistance and training, carries out or sponsors investigation and research, organises public information, collects and publishes data, prepares manuals and guides, and lays down or modifies standards in accordance with the Act.
+
+Under Section 17, an SPCB plans and secures execution of the State programme; advises the State Government; collects and disseminates information; conducts research and training; inspects sewage and trade-effluent treatment systems; reviews plans; lays down, modifies or annuls effluent standards; classifies waters; evolves economical treatment methods; and makes orders concerning discharge and disposal. Section 18 subjects Boards to lawful written directions within the statutory hierarchy.
+
+In Union territories, delegated bodies commonly operate as Pollution Control Committees. Their precise authority must be traced to the governing delegation or notification. Calling every committee an SPCB can obscure the legal source of its powers.
+
+10. Water pollution prohibitions and consent
+
+Section 24 prohibits knowingly causing or permitting poisonous, noxious or polluting matter determined according to Board standards to enter a stream, well, sewer or land. It also addresses matter tending to impede the proper flow of water in a manner that aggravates pollution. The provision contains limited statutory exceptions and should be read exactly rather than reduced to a general slogan.
+
+Sections 25 and 26 form the consent mechanism for new and existing discharges. Prior State Board consent is generally required before establishing or taking steps to establish an industry, operation, process, treatment or disposal system likely to discharge sewage or trade effluent, bringing a new or altered outlet into use, or beginning a new discharge. In practice, regulators commonly use the terms Consent to Establish and Consent to Operate, although the legal inquiry must remain tied to the Act, rules and consent order.
+
+The Board may make inquiry, impose conditions concerning the point and nature of discharge, treatment, equipment, monitoring and validity period, or refuse consent by a reasoned decision. Consent is not an acquired right to pollute. Sections 27 to 29 address refusal, variation, review, appeals and revision. A material expansion, process change or altered discharge may require fresh regulatory consideration rather than reliance on an old consent.
+
+11. Water Act monitoring, emergencies and directions
+
+Sections 20 to 23 empower the Board to obtain information, take samples and enter and inspect premises. The statutory sampling process—including notice, division, sealing, signatures and laboratory transmission where applicable—protects the evidentiary value of analysis. Sections 51 and 52 concern recognised laboratories and analysts.
+
+Section 30 allows the State Board, after notice in the prescribed circumstances, to carry out necessary works where the responsible person fails and to recover expenses. Section 31 requires information when polluting matter enters or is likely to enter a stream or well because of an accident or unforeseen event. Section 32 authorises emergency measures to remove or dispose of polluting matter, remedy pollution or restrain relevant acts.
+
+Section 33 permits the Board to approach a court to restrain apprehended pollution. Section 33A separately empowers written directions, including closure, prohibition or regulation of an industry and stoppage or regulation of electricity, water or other services. Regulators should select a measure proportionate to risk, urgency, compliance history and statutory purpose while ensuring that ongoing serious pollution is not allowed merely because an industry has economic value.
+
+12. Water (Prevention and Control of Pollution) Amendment Act, 2024
+
+The 2024 Amendment initially applied to Himachal Pradesh, Rajasthan and the Union territories and extends to another State when adopted through Article 252. It must not be assumed to apply identically in every State without checking adoption. Among other changes, it enables nationally prescribed rules concerning State Board chairpersons, authorises Central Government guidelines concerning consent and permits notified exemptions for certain categories of industrial plants in consultation with the CPCB.
+
+The Amendment replaced imprisonment for several contraventions with monetary penalties determined by adjudicating officers, created an appeal to the NGT and connected penalty receipts with the Environmental Protection Fund. Serious non-compliance concerning establishment or operation without the consent required by Sections 25 and 26 remains subject to the statutory offence framework, and failure to pay an imposed penalty has separate consequences.
+
+For an examination problem, first identify the State or Union territory and date, then determine whether the amended provisions apply. A nationally enacted amendment under Article 252 is not automatically a uniform amendment for every non-adopting State.
+
+13. Air Act, 1981: object, institutions and definitions
+
+The Air Act was enacted to prevent, control and abate air pollution and expressly refers to decisions taken at the 1972 Stockholm Conference. The CPCB constituted under the Water Act acts as the Central Board under the Air Act. In States where an SPCB exists under the Water Act, that Board also performs the State Board's air functions, avoiding duplicate institutions.
+
+Air pollutant under Section 2 means a solid, liquid or gaseous substance, including noise, present in the atmosphere at a concentration that may be or tend to be injurious to human beings, other living creatures or plants, property or the environment. Air pollution is the presence of an air pollutant. Emission concerns matter coming from a chimney, duct, flue or other outlet, while an industrial plant is one used for an industrial or trade purpose that emits an air pollutant.
+
+The inclusion of noise in the definition does not mean every noise dispute is administered only through the Air Act. The Noise Pollution Rules, 2000 under the Environment Act prescribe ambient categories, authority powers and controls for loudspeakers, public-address systems and other sources; municipal, police and vehicle laws may also apply.
+
+14. Air-pollution control areas, consent and emission limits
+
+Section 19 permits the State Government, after consultation with the State Board, to declare an area as an air-pollution control area, alter it and regulate specified fuels or appliances. Section 20 supports coordination with motor-vehicle authorities for compliance with vehicular-emission standards.
+
+Section 21 restricts the establishment or operation of an industrial plant in an air-pollution control area without previous State Board consent. The Board may impose conditions concerning control equipment, chimney specifications and other measures, and the occupier must maintain and operate required equipment. Students should check current notifications and consent-category rules because territorial declarations, exemptions and administrative classifications affect practical application.
+
+Section 22 prohibits an occupier from permitting emission of an air pollutant beyond standards laid down by the State Board. Section 22A permits the Board to seek a restraining order from a court where excessive emission is apprehended. Section 23 requires immediate information and mitigation where an accidental or unforeseen emission above standards occurs or is likely.
+
+Sections 24 to 30 govern entry, inspection, information, sampling, laboratories, analysts and reports. Section 31 provides an appeal from specified Board orders. Section 31A authorises written directions, including closure or regulation and stoppage or regulation of utilities.
+
+15. Air Act functions and current enforcement
+
+Under Section 16, the CPCB improves air quality and prevents, controls or abates air pollution nationally. It advises the Central Government, plans nationwide programmes, coordinates State Boards, gives technical assistance, supports research and training, disseminates information and lays down air-quality standards. Under Section 17, SPCBs plan State programmes, advise State Governments, inspect plants and control equipment, assess air quality, lay down emission standards and advise on industrial location.
+
+National Ambient Air Quality Standards identify pollutants and averaging periods for assessing outdoor air. Source-specific emission standards and consent conditions regulate individual operations. An ambient exceedance does not by itself prove which source caused it, while source compliance does not necessarily establish that the airshed is healthy. Inventory, dispersion, monitoring and cumulative analysis may all be required.
+
+The Jan Vishwas amendments concerning the Air Act took effect on 1 April 2024. Several contraventions now attract monetary penalties determined by an adjudicating officer, with an appeal mechanism and credit to the Environmental Protection Fund. The amended scheme retains criminal consequences for specified serious defaults, including operating contrary to the consent requirement and failure to pay an imposed penalty. Current statutory text must therefore replace old summaries that describe every breach under the former penalty sections.
+
+16. How Pollution Control Boards function in practice
+
+The CPCB supplies national coordination, technical guidance, standards, monitoring frameworks, data and support. SPCBs and Pollution Control Committees perform much of the facility-level work: examining consent applications, imposing conditions, inspecting premises, collecting samples, monitoring compliance, granting waste authorisations under delegated rules, issuing directions and commencing appropriate proceedings.
+
+A sound consent decision should identify the industry and category, raw materials, products, process, water balance, fuel, emission and effluent sources, pollution-control equipment, waste generation, disposal path, environmental setting and cumulative load. Consent conditions should be specific, measurable, time-bound and linked to an applicable standard. Copying generic conditions without considering the facility and receiving environment weakens regulation.
+
+Effective functioning requires adequate laboratories and trained personnel, transparent online systems, reliable continuous and manual monitoring, inspection based on risk, data validation, coordination with local bodies and other departments, prompt responses to complaints and accidents, and reasoned enforcement. Institutional limitations do not cancel statutory duties; where scientific uncertainty remains, regulators should document it, obtain expertise and use precaution proportionately.
+
+17. Human impacts: water, air and noise
+
+Unsafe water may transmit infectious disease and expose people to heavy metals, persistent chemicals, pesticides, industrial solvents and other toxic substances. Effects may be acute or chronic and may include gastrointestinal illness, neurological injury, developmental harm, organ damage and cancer risk depending on the pollutant, dose and duration. Contaminated groundwater can persist after the original discharge stops.
+
+Air pollution may affect respiratory and cardiovascular health and may be associated with reduced lung function, asthma aggravation and premature mortality. Fine particles can penetrate deeply into the respiratory system; ozone, nitrogen dioxide, sulphur dioxide, carbon monoxide, metals and toxic organics present different risk profiles. Workers, children, older persons and persons with pre-existing illness may be especially vulnerable.
+
+Noise pollution can interfere with sleep, communication, concentration and learning and can cause stress and hearing damage at sufficient exposure. The Noise Pollution Rules classify areas, prescribe ambient limits and regulate loudspeakers and other sources, including special protection for silence zones. Religious, commercial, political or social importance does not create an unrestricted licence to violate valid noise controls.
+
+Environmental health analysis should connect source, pathway, exposure and outcome. Correlation is not automatically legal proof of causation, but regulators need not wait for irreversible injury where statutory limits are exceeded or credible serious risk warrants preventive action.
+
+18. Nuclear and ionising-radiation pollution
+
+Ionising radiation differs from ordinary air and water pollutants because it can damage biological tissue without being detected by human senses and may present external-exposure or internal-contamination pathways. Risk depends on radiation type, dose, exposure duration, route, distance, shielding and the vulnerability of the exposed person or ecosystem.
+
+The Atomic Energy Act, 1962 and rules framed under it provide the specialised legal framework for atomic energy and radiation safety. The Atomic Energy Regulatory Board exercises competent-authority functions under that framework. The Civil Liability for Nuclear Damage Act, 2010 addresses civil liability for nuclear damage within its scope.
+
+The Environment Act remains relevant to the broader environment, and Pollution Control Boards may regulate conventional sewage, chemical effluent, air emissions and waste aspects of a nuclear or radiation facility where applicable. They are not, however, substitutes for the specialised nuclear and radiological regulator. A problem question should identify whether the alleged harm is radiological, conventional pollution or both and assign powers to the correct authorities.
+
+19. Non-human components: wildlife, land, irrigation and forests
+
+The pollution statutes expressly protect more than human health. Toxic effluent can reduce dissolved oxygen, kill fish, bioaccumulate through food webs and degrade wetlands. Air pollutants may injure crops and forests, acidify ecosystems, deposit metals and impair wildlife. Noise and artificial disturbance can disrupt feeding, breeding and movement. Soil contamination may reduce fertility, damage microorganisms and transfer pollutants into crops and groundwater.
+
+Land-use decisions determine the distance between hazardous activities and homes, schools, rivers, forests and protected areas. Poor siting can make even technically controlled emissions unacceptable. Irrigation can spread contaminated water and sediment across agricultural land; badly planned irrigation may also contribute to waterlogging, salinity, altered flows and habitat loss. Environmental appraisal must consider upstream, downstream and cumulative consequences.
+
+Forest and wildlife impacts may trigger the Van (Sanrakshan Evam Samvardhan) Adhiniyam, 1980, the Wild Life (Protection) Act, 1972, the Biological Diversity Act, 2002 and other specialised regimes. Compliance with an Air or Water Act consent does not authorise forest diversion, habitat destruction or activity in a protected area. Conversely, a forest or wildlife approval does not excuse pollution beyond lawful standards.
+
+Ecological monitoring should use suitable indicators such as water quality, soil condition, vegetation injury, species abundance, habitat connectivity and bioaccumulation. Monetary compensation alone may be inadequate where damage is irreversible; avoidance and prevention ordinarily come first, followed by mitigation, restoration and compensation for residual harm.
+
+20. Leading judicial applications
+
+In M.C. Mehta v. Union of India concerning Ganga pollution, the Supreme Court ordered closure of tanneries that failed to install primary treatment, holding that an industry unable to meet minimum treatment requirements could not continue merely because closure would cause economic loss. Municipal sewage and industrial effluent both formed part of the river-pollution problem.
+
+Indian Council for Enviro-Legal Action v. Union of India required chemical industries responsible for severe contamination to bear the cost of remedial measures. Vellore Citizens' Welfare Forum v. Union of India applied precaution, polluter pays and sustainable development to tannery pollution. A.P. Pollution Control Board v. Prof. M.V. Nayudu emphasised scientific uncertainty and the need for expertise in protecting drinking-water sources.
+
+In re Noise Pollution addressed loudspeakers, horns and firecrackers and reinforced that no freedom includes a right to force unwanted sound upon others contrary to law. Research Foundation for Science v. Union of India dealt with hazardous-waste imports and environmentally sound handling. Paryavaran Suraksha Samiti v. Union of India required functional effluent-treatment infrastructure and insisted that polluting operations could not lawfully continue without treatment.
+
+Common Cause v. Union of India applied statutory environmental-clearance requirements to illegal mining and required compensation. Alembic Pharmaceuticals Ltd. v. Rohit Prajapati rejected ex post facto environmental clearance as contrary to the preventive structure of environmental law, while tailoring relief to the case. Sterlite Industries (India) Ltd. v. Union of India illustrates that environmental compensation may be imposed independently of the separate question whether a closure order is legally sustainable.
+
+21. Integrated compliance problem and examination method
+
+Assume that a chemical plant begins production beside a river. It has an old Water Act consent for a smaller capacity, no current Air Act consent for an expanded boiler, and no authorisation for hazardous waste. Untreated effluent reaches an irrigation canal, stack emissions exceed standards, contaminated soil affects cattle and crops, and the operator reports neither incident because it claims to hold environmental clearance.
+
+The legal analysis should separate every approval and breach. Under the Water Act, examine Sections 24 to 26, consent conditions, altered discharge, sampling, accident information, emergency measures and Sections 33 and 33A. Under the Air Act, examine the control-area notification, Sections 21 to 23, monitoring and Section 31A. Under the Environment Act, examine Sections 7 to 11, hazardous-substance and waste rules, Section 5 directions and the current adjudication regime. Environmental clearance does not cure missing consents or authorisations.
+
+Evidence should identify each source, sample and standard and connect the canal, soil, crops, livestock and exposed community. Appropriate responses may include immediate containment, safe water, medical and veterinary assessment, temporary suspension, treatment upgrades, lawful sampling, disclosure, restoration, compensation and proceedings under the version of each statute applicable on the date and in the State concerned.
+
+For a descriptive answer, use this order: relationship among the three Acts; definitions; institutions; consent and standards; inspection and sampling; accident and direction powers; current enforcement amendments; human impacts; non-human impacts; and leading cases. For a problem, never write only that Article 21 or polluter pays applies. Identify the exact Act, section, regulator, approval, contravention, evidence and remedy.
+    `.trim(),
     keyPoints: [
-      "Environment Protection Act, 1986",
-      "Air Act, 1981",
-      "Water Act, 1974",
-      "Central and State Pollution Control Boards",
-      "Human and ecological pollution concerns",
+      "The Environment Act is umbrella legislation, while the Water and Air Acts establish specialised board-based pollution controls.",
+      "Environmental clearance, Water and Air Act consent, and waste authorisation are distinct approvals and may all be required.",
+      "Sections 3 and 5 of the Environment Act confer broad coordinating, standard-setting and direction powers on the Central Government.",
+      "Sections 7 to 11 of the Environment Act regulate excessive pollution, hazardous substances, accidents, inspection and sampling.",
+      "Water Act Sections 24 to 26 contain the central prohibition and consent framework for polluting matter, outlets and discharges.",
+      "Air Act Sections 19 and 21 to 23 govern control areas, industrial consent, emission standards and accidental releases.",
+      "The CPCB coordinates nationally, while SPCBs and Pollution Control Committees perform much facility-level consent, monitoring and enforcement work.",
+      "Ambient quality, source emissions, total pollutant load and cumulative impact answer different regulatory questions.",
+      "The Jan Vishwas amendments changed the Environment and Air Acts' enforcement systems from 1 April 2024.",
+      "The Water Amendment Act, 2024 initially applies to specified States and Union territories and requires State adoption elsewhere under Article 252.",
+      "Radiation safety primarily falls under the Atomic Energy Act and specialised regulation, while ordinary emissions and effluents may engage pollution-control law.",
+      "Water, air, noise and land pollution affect humans, animals, plants, microorganisms, property and interconnected ecological systems.",
     ],
     provisions: [
-      "Environment (Protection) Act, 1986",
-      "Air (Prevention and Control of Pollution) Act, 1981",
-      "Water (Prevention and Control of Pollution) Act, 1974",
-      "Noise Pollution (Regulation and Control) Rules, 2000",
+      {
+        id: "environmental-law-unit-3-environment-definitions",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Section 2",
+        description:
+          "Defines environment, environmental pollutant, environmental pollution, handling, hazardous substance and occupier.",
+      },
+      {
+        id: "environmental-law-unit-3-environment-powers",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 3–6",
+        description:
+          "Authorises Central Government measures, statutory authorities, officers, binding directions and delegated environmental rules.",
+      },
+      {
+        id: "environmental-law-unit-3-environment-compliance",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 7–14",
+        description:
+          "Regulates pollutant limits, hazardous substances, accidental releases, entry, inspection, sampling, laboratories and analyst reports.",
+      },
+      {
+        id: "environmental-law-unit-3-environment-enforcement",
+        title: "Environment (Protection) Act, 1986",
+        provision: "Sections 15–16 as amended",
+        description:
+          "Provides the current penalty, adjudication, appeal, non-payment and Environmental Protection Fund framework introduced through the Jan Vishwas amendments.",
+      },
+      {
+        id: "environmental-law-unit-3-water-boards",
+        title: "Water (Prevention and Control of Pollution) Act, 1974",
+        provision: "Sections 3–4 and 16–18",
+        description:
+          "Establishes the CPCB and SPCBs and states their advisory, planning, standard-setting, technical, monitoring and coordination functions.",
+      },
+      {
+        id: "environmental-law-unit-3-water-monitoring",
+        title: "Water (Prevention and Control of Pollution) Act, 1974",
+        provision: "Sections 20–23",
+        description:
+          "Provides powers to obtain information, take legally reliable samples and enter and inspect relevant premises.",
+      },
+      {
+        id: "environmental-law-unit-3-water-consent",
+        title: "Water (Prevention and Control of Pollution) Act, 1974",
+        provision: "Sections 24–29",
+        description:
+          "Contains the pollution prohibition, prior-consent system, conditions, variation, refusal, appeal and revision framework.",
+      },
+      {
+        id: "environmental-law-unit-3-water-emergency",
+        title: "Water (Prevention and Control of Pollution) Act, 1974",
+        provision: "Sections 30–33A",
+        description:
+          "Provides for Board-executed works, accident information, emergency measures, court restraint and binding closure or utility directions.",
+      },
+      {
+        id: "environmental-law-unit-3-air-functions",
+        title: "Air (Prevention and Control of Pollution) Act, 1981",
+        provision: "Sections 16–18",
+        description:
+          "Defines the national and State functions of Pollution Control Boards and the statutory direction hierarchy.",
+      },
+      {
+        id: "environmental-law-unit-3-air-control",
+        title: "Air (Prevention and Control of Pollution) Act, 1981",
+        provision: "Sections 19–31A",
+        description:
+          "Governs control areas, industrial consent, emission standards, accidents, inspection, sampling, appeals and directions.",
+      },
+      {
+        id: "environmental-law-unit-3-noise-rules",
+        title: "Noise Pollution (Regulation and Control) Rules, 2000",
+        provision: "Ambient standards and source controls",
+        description:
+          "Classifies areas, prescribes ambient noise limits and controls loudspeakers, public-address systems and specified noise sources.",
+      },
+      {
+        id: "environmental-law-unit-3-eia",
+        title: "EIA Notification, 2006",
+        provision: "Prior environmental clearance framework",
+        description:
+          "Requires covered new projects and specified expansions or modernisations to undergo the applicable screening, scoping, consultation and appraisal process.",
+      },
+      {
+        id: "environmental-law-unit-3-radiation",
+        title: "Atomic Energy Act, 1962",
+        provision: "Atomic-energy and radiation-safety framework",
+        description:
+          "Supplies specialised authority for atomic energy and ionising-radiation regulation, supplemented by rules and AERB safety control.",
+      },
     ],
+    importantCases: [
+      {
+        id: "environmental-law-unit-3-ganga-pollution",
+        caseName: "M.C. Mehta v. Union of India (Ganga Pollution)",
+        citation: "(1988) 1 SCC 471",
+        principle:
+          "An industry that cannot install the minimum treatment needed to prevent river pollution cannot demand continuation solely because closure has economic consequences.",
+        summary:
+          "The Supreme Court directed closure of polluting tanneries lacking primary treatment and emphasised the enforcement of pollution-control obligations protecting the Ganga.",
+      },
+      {
+        id: "environmental-law-unit-3-enviro-legal-action",
+        caseName: "Indian Council for Enviro-Legal Action v. Union of India",
+        citation: "(1996) 3 SCC 212",
+        principle:
+          "Polluting industries bear responsibility for the cost of remedial measures required to restore an environment damaged by hazardous chemicals.",
+        summary:
+          "Chemical units had severely contaminated soil and groundwater. The Court applied polluter pays and used the Environment Act's remedial and direction framework.",
+      },
+      {
+        id: "environmental-law-unit-3-vellore",
+        caseName: "Vellore Citizens' Welfare Forum v. Union of India",
+        citation: "(1996) 5 SCC 647",
+        principle:
+          "Sustainable development, precaution and polluter pays guide prevention, compensation and ecological restoration under Indian environmental law.",
+        summary:
+          "The Court addressed untreated tannery effluent affecting water and agricultural land and required institutional measures for compensation and remediation.",
+      },
+      {
+        id: "environmental-law-unit-3-nayudu",
+        caseName: "A.P. Pollution Control Board v. Prof. M.V. Nayudu",
+        citation: "(1999) 2 SCC 718",
+        principle:
+          "Environmental regulators and courts must address scientific uncertainty through precaution and appropriately informed expert decision-making.",
+        summary:
+          "A proposed industry near drinking-water reservoirs raised questions about risk, proof, technical competence and the protective purpose of pollution-control law.",
+      },
+      {
+        id: "environmental-law-unit-3-sterlite",
+        caseName: "Sterlite Industries (India) Ltd. v. Union of India",
+        citation: "(2013) 4 SCC 575",
+        principle:
+          "Environmental compensation and the legality of a closure order are distinct questions requiring attention to pollution, conduct and statutory power.",
+        summary:
+          "Although the particular closure order was set aside, the Court imposed substantial compensation for the history and consequences of environmental violations.",
+      },
+      {
+        id: "environmental-law-unit-3-noise",
+        caseName: "In re Noise Pollution",
+        citation: "(2005) 5 SCC 733",
+        principle:
+          "Freedom of speech, religion or commerce does not include an unrestricted right to impose unlawful and harmful noise upon others.",
+        summary:
+          "The Court issued directions concerning loudspeakers, horns, firecrackers and enforcement of ambient noise controls, linking noise regulation with health and Article 21.",
+      },
+      {
+        id: "environmental-law-unit-3-research-foundation",
+        caseName: "Research Foundation for Science v. Union of India",
+        citation: "(2005) 10 SCC 510",
+        principle:
+          "Hazardous-waste movement and disposal require precaution, environmentally sound management and strict compliance with domestic and international controls.",
+        summary:
+          "The litigation addressed hazardous wastes imported into India and generated continuing directions concerning identification, handling, destruction and regulatory responsibility.",
+      },
+      {
+        id: "environmental-law-unit-3-paryavaran-suraksha",
+        caseName: "Paryavaran Suraksha Samiti v. Union of India",
+        citation: "(2017) 5 SCC 326",
+        principle:
+          "Industrial operations generating effluent require functional treatment, and governments and local bodies must establish and operate necessary treatment infrastructure.",
+        summary:
+          "The Court imposed implementation timelines for effluent and sewage treatment and rejected continued discharge of untreated waste into water bodies.",
+      },
+      {
+        id: "environmental-law-unit-3-common-cause",
+        caseName: "Common Cause v. Union of India",
+        citation: "(2017) 9 SCC 499",
+        principle:
+          "Mining without required environmental and forest permissions is unlawful and may attract compensation based on the value of illegally extracted minerals.",
+        summary:
+          "The Court examined extensive illegal mining in Odisha and applied statutory clearance requirements, intergenerational concerns and compensatory consequences.",
+      },
+      {
+        id: "environmental-law-unit-3-alembic",
+        caseName: "Alembic Pharmaceuticals Ltd. v. Rohit Prajapati",
+        citation: "(2020) 17 SCC 157",
+        principle:
+          "Routine ex post facto environmental clearance is inconsistent with prior appraisal and the preventive structure of environmental law.",
+        summary:
+          "The Court held that clearance obtained after operations began could not be treated as equivalent to lawful prior clearance, while fashioning relief on the case's facts.",
+      },
+    ],
+    examFocus:
+      "Prepare the relationship among the Environment, Water and Air Acts; Environment Act Sections 2–14 and the post-2024 adjudication structure; Water Act Sections 2, 16–18, 20–33A and the territorial significance of the 2024 Amendment; Air Act Sections 2, 16–23 and 31A; the distinction among environmental clearance, Water and Air consent and waste authorisation; CPCB, SPCB and Pollution Control Committee functions; ambient and source standards; sampling and scientific evidence; accident and closure powers; water, air, noise and radiation impacts on human beings; ecological effects on wildlife, land, irrigation and forests; and the principles stated in Ganga Pollution, Indian Council for Enviro-Legal Action, Vellore Citizens, Nayudu, Sterlite, In re Noise Pollution, Research Foundation, Paryavaran Suraksha, Common Cause and Alembic Pharmaceuticals. In a problem, identify every approval separately and apply the statutory version in force on the relevant date and territory.",
+    revisionNotes: `
+Three-Act structure: the Water Act 1974 controls water pollution through prohibitions, prior consent, Boards, inspection, sampling, emergency measures and directions. The Air Act 1981 uses the same Boards for air-pollution control areas, industrial consent, emission limits, inspection, sampling and directions. The Environment Act 1986 is umbrella legislation empowering the Central Government to set standards, regulate areas and hazardous substances, create authorities, issue closure or utility directions and frame detailed rules and notifications.
+
+Key sections: Environment Act — Sections 2, 3, 5 and 7–14. Water Act — Sections 16–18, 20–26 and 30–33A. Air Act — Sections 16–23 and 31A. Environmental clearance, consent and waste authorisation are cumulative, not interchangeable. Always verify the current delegated rule, notification, consent condition and sampling procedure.
+
+Current-law warning: Jan Vishwas amendments changed Environment and Air Act enforcement from 1 April 2024 by introducing monetary penalties, adjudicating officers, appeals and the Environmental Protection Fund while retaining consequences for specified serious defaults and non-payment. The Water Amendment Act 2024 initially applies to Himachal Pradesh, Rajasthan and Union territories and requires adoption by other States under Article 252.
+
+Impact map: water pollution harms drinking water, irrigation, aquatic life, soil and groundwater; air pollution harms lungs, cardiovascular health, crops, forests and wildlife; noise affects hearing, sleep, learning and animal behaviour; radiation safety is principally regulated under the Atomic Energy Act and AERB framework. Pollution statutes protect humans, other living creatures, plants, microorganisms, property and ecological relationships.
+
+Case sequence: Ganga Pollution — treatment or closure; Indian Council — remediation cost; Vellore — precaution and polluter pays; Nayudu — scientific uncertainty; Noise Pollution — no right to impose harmful sound; Research Foundation — hazardous waste; Sterlite — compensation distinct from closure; Paryavaran Suraksha — functional treatment infrastructure; Common Cause — unlawful mining compensation; Alembic — prior clearance cannot routinely be granted after the event.
+    `.trim(),
+    notes: "",
   },
   {
     title: "Judicial Protection, Public Interest Litigation and Environmental Principles",
