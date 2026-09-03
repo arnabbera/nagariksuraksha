@@ -820,9 +820,11 @@ Environmental health analysis should connect source, pathway, exposure and outco
 
 Ionising radiation differs from ordinary air and water pollutants because it can damage biological tissue without being detected by human senses and may present external-exposure or internal-contamination pathways. Risk depends on radiation type, dose, exposure duration, route, distance, shielding and the vulnerability of the exposed person or ecosystem.
 
-The Atomic Energy Act, 1962 and rules framed under it provide the specialised legal framework for atomic energy and radiation safety. The Atomic Energy Regulatory Board exercises competent-authority functions under that framework. The Civil Liability for Nuclear Damage Act, 2010 addresses civil liability for nuclear damage within its scope.
+The Sustainable Harnessing and Advancement of Nuclear Energy for Transforming India Act, 2025, commonly called the SHANTI Act, replaced the Atomic Energy Act, 1962 and the Civil Liability for Nuclear Damage Act, 2010. It now supplies the consolidated central framework for development and regulation of nuclear energy, safety authorisation and civil liability for nuclear damage. Earlier legislation remains important for historical events and savings, but it must not be stated as the current governing law without a date-specific qualification.
 
-The Environment Act remains relevant to the broader environment, and Pollution Control Boards may regulate conventional sewage, chemical effluent, air emissions and waste aspects of a nuclear or radiation facility where applicable. They are not, however, substitutes for the specialised nuclear and radiological regulator. A problem question should identify whether the alleged harm is radiological, conventional pollution or both and assign powers to the correct authorities.
+The Atomic Energy Regulatory Board performs the safety-regulatory role under the current framework. Licensing or permission to develop or operate does not replace a required safety authorisation. Nuclear-incident liability, operator responsibility, financial security, claims and statutory recourse must be answered from the SHANTI Act's current text rather than the repealed 2010 Act.
+
+The Environment Act remains relevant to the broader environment, and Pollution Control Boards may regulate conventional sewage, chemical effluent, air emissions and waste aspects of a nuclear or radiation facility where applicable. They are not, however, substitutes for the specialised nuclear and radiological regulator. A problem question should identify the date and ask whether the alleged harm is radiological, conventional pollution or both before assigning powers to the correct authorities.
 
 19. Non-human components: wildlife, land, irrigation and forests
 
@@ -865,7 +867,7 @@ For a descriptive answer, use this order: relationship among the three Acts; def
       "Ambient quality, source emissions, total pollutant load and cumulative impact answer different regulatory questions.",
       "The Jan Vishwas amendments changed the Environment and Air Acts' enforcement systems from 1 April 2024.",
       "The Water Amendment Act, 2024 initially applies to specified States and Union territories and requires State adoption elsewhere under Article 252.",
-      "Radiation safety primarily falls under the Atomic Energy Act and specialised regulation, while ordinary emissions and effluents may engage pollution-control law.",
+      "Radiation safety primarily falls under the SHANTI Act, 2025 and specialised AERB regulation, while ordinary emissions and effluents may engage pollution-control law.",
       "Water, air, noise and land pollution affect humans, animals, plants, microorganisms, property and interconnected ecological systems.",
     ],
     provisions: [
@@ -955,10 +957,10 @@ For a descriptive answer, use this order: relationship among the three Acts; def
       },
       {
         id: "environmental-law-unit-3-radiation",
-        title: "Atomic Energy Act, 1962",
-        provision: "Atomic-energy and radiation-safety framework",
+        title: "SHANTI Act, 2025",
+        provision: "Nuclear-energy, radiation-safety and civil-liability framework",
         description:
-          "Supplies specialised authority for atomic energy and ionising-radiation regulation, supplemented by rules and AERB safety control.",
+          "Replaces the 1962 Atomic Energy Act and 2010 nuclear-liability statute and provides the current framework, supplemented by rules and AERB safety control.",
       },
     ],
     importantCases: [
@@ -1054,7 +1056,7 @@ For a descriptive answer, use this order: relationship among the three Acts; def
       },
     ],
     examFocus:
-      "Prepare the relationship among the Environment, Water and Air Acts; Environment Act Sections 2–14 and the post-2024 adjudication structure; Water Act Sections 2, 16–18, 20–33A and the territorial significance of the 2024 Amendment; Air Act Sections 2, 16–23 and 31A; the distinction among environmental clearance, Water and Air consent and waste authorisation; CPCB, SPCB and Pollution Control Committee functions; ambient and source standards; sampling and scientific evidence; accident and closure powers; water, air, noise and radiation impacts on human beings; ecological effects on wildlife, land, irrigation and forests; and the principles stated in Ganga Pollution, Indian Council for Enviro-Legal Action, Vellore Citizens, Nayudu, Sterlite, In re Noise Pollution, Research Foundation, Paryavaran Suraksha, Common Cause and Alembic Pharmaceuticals. In a problem, identify every approval separately and apply the statutory version in force on the relevant date and territory.",
+      "Prepare the relationship among the Environment, Water and Air Acts; Environment Act Sections 2–14 and the post-2024 adjudication structure; Water Act Sections 2, 16–18, 20–33A and the territorial significance of the 2024 Amendment; Air Act Sections 2, 16–23 and 31A; the distinction among environmental clearance, Water and Air consent and waste authorisation; CPCB, SPCB and Pollution Control Committee functions; ambient and source standards; sampling and scientific evidence; accident and closure powers; water, air, noise and radiation impacts on human beings; the SHANTI Act, 2025 replacement of the former atomic-energy and nuclear-liability statutes; ecological effects on wildlife, land, irrigation and forests; and the principles stated in Ganga Pollution, Indian Council for Enviro-Legal Action, Vellore Citizens, Nayudu, Sterlite, In re Noise Pollution, Research Foundation, Paryavaran Suraksha, Common Cause and Alembic Pharmaceuticals. In a problem, identify every approval separately and apply the statutory version in force on the relevant date and territory.",
     revisionNotes: `
 Three-Act structure: the Water Act 1974 controls water pollution through prohibitions, prior consent, Boards, inspection, sampling, emergency measures and directions. The Air Act 1981 uses the same Boards for air-pollution control areas, industrial consent, emission limits, inspection, sampling and directions. The Environment Act 1986 is umbrella legislation empowering the Central Government to set standards, regulate areas and hazardous substances, create authorities, issue closure or utility directions and frame detailed rules and notifications.
 
@@ -1062,7 +1064,7 @@ Key sections: Environment Act — Sections 2, 3, 5 and 7–14. Water Act — Sec
 
 Current-law warning: Jan Vishwas amendments changed Environment and Air Act enforcement from 1 April 2024 by introducing monetary penalties, adjudicating officers, appeals and the Environmental Protection Fund while retaining consequences for specified serious defaults and non-payment. The Water Amendment Act 2024 initially applies to Himachal Pradesh, Rajasthan and Union territories and requires adoption by other States under Article 252.
 
-Impact map: water pollution harms drinking water, irrigation, aquatic life, soil and groundwater; air pollution harms lungs, cardiovascular health, crops, forests and wildlife; noise affects hearing, sleep, learning and animal behaviour; radiation safety is principally regulated under the Atomic Energy Act and AERB framework. Pollution statutes protect humans, other living creatures, plants, microorganisms, property and ecological relationships.
+Impact map: water pollution harms drinking water, irrigation, aquatic life, soil and groundwater; air pollution harms lungs, cardiovascular health, crops, forests and wildlife; noise affects hearing, sleep, learning and animal behaviour. The SHANTI Act, 2025 replaced the Atomic Energy Act, 1962 and Civil Liability for Nuclear Damage Act, 2010 and now supplies the specialised nuclear-energy, safety-authorisation and liability framework, with AERB safety regulation. Pollution statutes separately protect humans, other living creatures, plants, microorganisms, property and ecological relationships.
 
 Case sequence: Ganga Pollution — treatment or closure; Indian Council — remediation cost; Vellore — precaution and polluter pays; Nayudu — scientific uncertainty; Noise Pollution — no right to impose harmful sound; Research Foundation — hazardous waste; Sterlite — compensation distinct from closure; Paryavaran Suraksha — functional treatment infrastructure; Common Cause — unlawful mining compensation; Alembic — prior clearance cannot routinely be granted after the event.
     `.trim(),
