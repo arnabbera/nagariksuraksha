@@ -1,6 +1,7 @@
 const COURSE_FEE_PAISE = 4900;
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";
+const FIREBASE_AUTH_ORIGIN = `https://${FIREBASE_PROJECT_ID}.firebaseapp.com`;
 const FIREBASE_ISSUER = `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
 const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
@@ -18,6 +19,24 @@ const fail = (message, status = 400) => {
   const error = new Error(message);
   error.status = status;
   throw error;
+};
+
+const proxyFirebaseAuth = async (request, requestUrl) => {
+  const upstreamUrl = new URL(`${requestUrl.pathname}${requestUrl.search}`, FIREBASE_AUTH_ORIGIN);
+  const upstreamResponse = await fetch(new Request(upstreamUrl, request));
+  const headers = new Headers(upstreamResponse.headers);
+  const location = headers.get("location");
+  if (location) {
+    headers.set(
+      "location",
+      location.replace(FIREBASE_AUTH_ORIGIN, requestUrl.origin),
+    );
+  }
+  return new Response(upstreamResponse.body, {
+    status: upstreamResponse.status,
+    statusText: upstreamResponse.statusText,
+    headers,
+  });
 };
 
 const base64UrlToBytes = (value) => {
@@ -568,6 +587,9 @@ const handleApi = async (request, env, url) => {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.pathname.startsWith("/__/auth/")) {
+      return proxyFirebaseAuth(request, url);
+    }
     if (url.pathname.startsWith("/api/")) {
       try {
         return json(await handleApi(request, env, url));
