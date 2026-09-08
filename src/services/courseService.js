@@ -4,12 +4,14 @@ import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinci
 import { criminalLawICourse } from "../data/courses/criminalLawI";
 import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 import { environmentalLawCourse } from "../data/courses/environmentalLaw";
+import { humanRightsLawAndPracticeCourse } from "../data/courses/humanRightsLawAndPractice";
 
 const bundledCourses = [
   generalPrinciplesOfContractCourse,
   criminalLawICourse,
   publicInternationalLawCourse,
   environmentalLawCourse,
+  humanRightsLawAndPracticeCourse,
 ];
 
 const mergeCourses = (courses = []) => {

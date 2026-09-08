@@ -15,10 +15,12 @@ import {
 
 import { generalPrinciplesOfContractBooks } from "../data/courses/generalPrinciplesOfContract";
 import { environmentalLawBooks } from "../data/courses/environmentalLaw";
+import { humanRightsLawAndPracticeBooks } from "../data/courses/humanRightsLawAndPractice";
 
 const bundledCourseBooks = [
   ...generalPrinciplesOfContractBooks,
   ...environmentalLawBooks,
+  ...humanRightsLawAndPracticeBooks,
 ];
 
 // =========================================================
