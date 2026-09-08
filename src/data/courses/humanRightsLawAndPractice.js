@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 55238)
+Total output lines: 2237
+
 import { createChapterModel } from "../../models/ChapterModel";
 import { createCourseBookModel } from "../../models/CourseBookModel";
 import { createCourseModel } from "../../models/CourseModel";
@@ -844,235 +847,7 @@ Exploitation can include sexual exploitation, forced labour, slavery or similar 
 
 Article 23 prohibits trafficking and forced labour. The Bharatiya Nyaya Sanhita, 2023 defines and punishes trafficking in Section 143 and exploitation of a trafficked person in Section 144; Section 146 addresses unlawful compulsory labour. The Immoral Traffic (Prevention) Act, 1956 addresses specified commercial sexual-exploitation activities, while child-protection and bonded-labour statutes may also apply.
 
-The offence must be matched to the evidence. Rescue without rehabilitation can expose a victim to renewed exploitation. Authorities should avoid treating trafficked persons as offenders merely because exploitation placed them in unlawful situations. Compensation, shelter, healthcare, legal assistance, identity documents and livelihood support are part of effective protection.
-
-24. The right to life and movement toward abolition
-
-ICCPR Article 6 recognises the inherent right to life. In States that have not abolished capital punishment, a death sentence may be imposed only for the “most serious crimes,” under law in force when the offence occurred, consistently with the Covenant and Genocide Convention, and pursuant to a final judgment by a competent court. Pardon or commutation must remain available.
-
-Execution is prohibited for offences committed by persons below eighteen and may not be carried out on pregnant women. Article 6 must not be invoked to delay or prevent abolition. International interpretation treats “most serious crimes” as crimes of extreme gravity involving intentional killing, not ordinary political, economic, drug or sexual offences lacking intentional death.
-
-25. Second Optional Protocol and abolitionist standards
-
-The Second Optional Protocol to the ICCPR, adopted in 1989, aims at abolition of the death penalty. Parties undertake not to execute anyone within their jurisdiction and to take necessary measures to abolish it. A narrowly framed wartime reservation may be made at ratification or accession in accordance with the Protocol.
-
-India is not a party to the Second Optional Protocol. UN General Assembly resolutions have repeatedly called for a moratorium with a view to abolition. These resolutions are not themselves treaties, but they demonstrate the direction of international policy and support safeguards pending abolition.
-
-26. Capital punishment under the Constitution of India
-
-India is retentionist: death remains a punishment for specified offences, including certain offences under the Bharatiya Nyaya Sanhita, 2023 and special laws. In Jagmohan Singh v. State of Uttar Pradesh the Supreme Court upheld the penalty within judicial sentencing. Bachan Singh v. State of Punjab upheld the statutory option but restricted death to the “rarest of rare” cases when the alternative of life imprisonment is unquestionably foreclosed.
-
-The doctrine requires individualised sentencing, consideration of aggravating and mitigating circumstances, and attention to both crime and criminal. Life imprisonment is the rule and death the exception. The death penalty cannot be automatic or based only upon the category of offence.
-
-27. Sentencing procedure and mitigation
-
-Machhi Singh v. State of Punjab organised rarest-of-rare considerations but cannot replace Bachan Singh's principled requirement of individualisation. Mithu v. State of Punjab invalidated mandatory death under former IPC Section 303 because it excluded judicial discretion and fair sentencing. Manoj v. State of Madhya Pradesh strengthened the duty to collect meaningful mitigating material before sentence.
-
-Courts should receive information about the accused's background, mental and physical health, trauma, social circumstances, conduct in custody and possibility of reform. The State must place relevant material before the court, and the defence must have a real opportunity to present mitigation. Brutality of the crime alone does not complete the constitutional inquiry.
-
-28. Delay, mercy jurisdiction and dignity on death row
-
-Articles 72 and 161 empower the President and Governor respectively to grant pardon, reprieve, respite, remission or commutation within their constitutional fields. Judicial review remains available for mala fides, irrelevant considerations, arbitrariness, procedural unfairness and other recognised defects; courts do not sit as appellate authorities over the merits of clemency.
-
-In Shatrughan Chauhan v. Union of India, unexplained and inordinate delay and supervening circumstances were recognised as grounds relevant to commutation. Solitary confinement before lawful warrant, failure to communicate rejection, mental illness and procedural violations can engage Article 21. Even a death-sentenced prisoner retains dignity until the last breath.
-
-29. Fair-trial and execution safeguards
-
-The highest standards of fairness apply because error is irreversible. An accused must have competent legal representation, interpretation where needed, disclosure, an impartial court, reasoned conviction and sentence, appellate review and meaningful access to review and clemency. Execution cannot precede exhaustion of lawful remedies and prescribed notice.
-
-Public opinion, the victim's suffering and societal concern are relevant to justice but cannot substitute for proof beyond reasonable doubt or constitutional sentencing. Wrongful conviction, discriminatory application and inconsistent mitigation are central abolitionist concerns.
-
-30. Problem-solving and examination method
-
-First identify the legal wrong and its exact elements. For genocide, state protected group, listed act and specific intent. For apartheid, establish an institutionalised regime, systematic racial domination, inhuman acts and intent to maintain it. For torture, examine severity, intentionality, purpose and official involvement; then distinguish other ill-treatment. For slavery and trafficking, analyse control, act, means and exploitative purpose.
-
-Next identify the applicable instrument, India's treaty status, domestic constitutional or statutory rule, responsible actor, jurisdiction and remedy. In a death-penalty answer, begin with ICCPR Article 6, abolitionist instruments and India's retentionist status, then apply Bachan Singh, individualised mitigation, fair procedure, clemency and Article 21 safeguards. End with a reasoned conclusion rather than a moral assertion alone.
-    `.trim(),
-    provisions: [
-      "Genocide Convention, 1948",
-      "International Convention on the Elimination of All Forms of Racial Discrimination, 1965",
-      "International Convention on the Suppression and Punishment of the Crime of Apartheid, 1973",
-      "Convention against Torture, 1984",
-      "Slavery Convention, 1926 and Supplementary Convention, 1956",
-      "ICCPR — Articles 6, 7 and 8",
-      "Rome Statute of the International Criminal Court — Articles 6 and 7",
-      "Protocol to Prevent, Suppress and Punish Trafficking in Persons, 2000",
-      "Second Optional Protocol to the ICCPR, 1989",
-      "Constitution of India — Articles 14, 17, 20, 21, 22, 23, 24, 72 and 161",
-      "Bharatiya Nyaya Sanhita, 2023 — Sections 143, 144 and 146",
-      "Bonded Labour System (Abolition) Act, 1976",
-      "Protection of Civil Rights Act, 1955 and SC/ST (Prevention of Atrocities) Act, 1989",
-    ],
-    keyPoints: [
-      "Genocide protects national, ethnical, racial and religious groups against intended physical or biological destruction.",
-      "Genocide requires a listed act plus the specific intent to destroy the protected group in whole or substantial part.",
-      "Direct and public incitement to genocide is punishable even if genocide does not ultimately occur.",
-      "Apartheid requires institutionalised, systematic racial domination maintained through inhuman acts.",
-      "ICERD covers discriminatory purpose or effect based on race, colour, descent, or national or ethnic origin.",
-      "Torture under CAT requires severe suffering, intention, a prohibited purpose and an official nexus.",
-      "The prohibition of torture is absolute and non-derogable; emergency and superior orders are no defence.",
-      "CAT non-refoulement prohibits transfer where the individual faces a real, personal and foreseeable torture risk.",
-      "India signed CAT in 1997 but has not ratified it or joined OPCAT.",
-      "Articles 20, 21 and 22 and the D.K. Basu safeguards protect persons in custody.",
-      "Slavery involves exercise of powers attaching to ownership; forced labour does not require ownership-like control.",
-      "Article 23 applies against both State and private actors and includes compulsion through economic necessity.",
-      "Trafficking ordinarily requires act, improper means and exploitative purpose; means need not be proved for a child.",
-      "BNS Sections 143, 144 and 146 are the current core provisions on trafficking, exploitation and compulsory labour.",
-      "ICCPR Article 6 restricts retentionist States and expressly encourages abolition.",
-      "India has not joined the Second Optional Protocol to the ICCPR.",
-      "Under Bachan Singh, life imprisonment is the rule and death is restricted to the rarest of rare cases.",
-      "A mandatory death sentence is unconstitutional because it excludes individualised sentencing.",
-      "Mitigation must include the offender's circumstances and genuine possibility of reform.",
-      "Delay, mental illness and serious procedural violations may justify commutation under Article 21.",
-    ],
-    importantCases: [
-      {
-        id: "human-rights-unit-3-genocide-convention",
-        caseName: "Reservations to the Convention on Genocide",
-        citation: "ICJ Advisory Opinion, 1951",
-        principle:
-          "Compatibility with a treaty's object and purpose is the governing test for reservations to the Genocide Convention.",
-        summary:
-          "The opinion also emphasised the universal and humanitarian character of the Convention's principles.",
-      },
-      {
-        id: "human-rights-unit-3-bosnia-genocide",
-        caseName: "Bosnia and Herzegovina v. Serbia and Montenegro",
-        citation: "ICJ Judgment, 2007",
-        principle:
-          "The Genocide Convention imposes distinct duties to prevent and punish; genocide requires proof of specific intent.",
-        summary:
-          "The Court explained State responsibility, substantiality and the preventive duty arising from awareness of serious risk.",
-      },
-      {
-        id: "human-rights-unit-3-furundzija",
-        caseName: "Prosecutor v. Furundžija",
-        citation: "ICTY Trial Judgment, 1998",
-        principle:
-          "The prohibition of torture has a peremptory character and torture can generate individual criminal responsibility.",
-        summary:
-          "The judgment is important for the definition, absolute nature and international legal consequences of torture.",
-      },
-      {
-        id: "human-rights-unit-3-dk-basu",
-        caseName: "D.K. Basu v. State of West Bengal",
-        citation: "(1997) 1 SCC 416",
-        principle:
-          "Custodial torture violates Articles 21 and 22; arrest safeguards and public-law compensation promote accountability.",
-        summary:
-          "The Court prescribed documentation, communication, medical and access safeguards for arrest and detention.",
-      },
-      {
-        id: "human-rights-unit-3-nilabati-behera",
-        caseName: "Nilabati Behera v. State of Orissa",
-        citation: "(1993) 2 SCC 746",
-        principle:
-          "Constitutional courts may award compensation for established custodial death as a public-law remedy.",
-        summary:
-          "Sovereign immunity does not defeat compensation for violation of the fundamental right to life.",
-      },
-      {
-        id: "human-rights-unit-3-pudr",
-        caseName: "People's Union for Democratic Rights v. Union of India",
-        citation: "(1982) 3 SCC 235",
-        principle:
-          "Payment below the minimum wage under economic compulsion may constitute forced labour prohibited by Article 23.",
-        summary:
-          "Article 23 protects against private as well as State-imposed forced labour and is not confined to physical force.",
-      },
-      {
-        id: "human-rights-unit-3-bandhua",
-        caseName: "Bandhua Mukti Morcha v. Union of India",
-        citation: "(1984) 3 SCC 161",
-        principle:
-          "The State must identify, release and rehabilitate bonded labourers, and courts may use PIL to enforce that duty.",
-        summary:
-          "The decision linked Articles 21 and 23 with statutory implementation and dignified rehabilitation.",
-      },
-      {
-        id: "human-rights-unit-3-bachan-singh",
-        caseName: "Bachan Singh v. State of Punjab",
-        citation: "(1980) 2 SCC 684",
-        principle:
-          "Death is constitutionally restricted to the rarest of rare cases when life imprisonment is unquestionably foreclosed.",
-        summary:
-          "Sentencing must be individualised and give full weight to mitigating circumstances and the possibility of reform.",
-      },
-      {
-        id: "human-rights-unit-3-mithu",
-        caseName: "Mithu v. State of Punjab",
-        citation: "(1983) 2 SCC 277",
-        principle:
-          "A mandatory death sentence violates Articles 14 and 21 because it eliminates judicial discretion and fair hearing on sentence.",
-        summary:
-          "The ruling invalidated former IPC Section 303 and reinforced individualised capital sentencing.",
-      },
-      {
-        id: "human-rights-unit-3-manoj",
-        caseName: "Manoj v. State of Madhya Pradesh",
-        citation: "2022 SCC OnLine SC 677",
-        principle:
-          "Capital sentencing requires a meaningful, proactive collection of mitigating information and assessment of reform.",
-        summary:
-          "The Court directed institutional reports and a fuller sentencing inquiry rather than reliance only upon crime circumstances.",
-      },
-      {
-        id: "human-rights-unit-3-shatrughan-chauhan",
-        caseName: "Shatrughan Chauhan v. Union of India",
-        citation: "(2014) 3 SCC 1",
-        principle:
-          "Inordinate delay and specified supervening circumstances can justify commutation of a death sentence under Article 21.",
-        summary:
-          "Mercy and execution procedures remain subject to constitutional dignity and judicial review.",
-      },
-    ],
-    examFocus:
-      "Prepare the Genocide Convention's protected groups, five acts, specific intent, punishable forms, prevention duty and State/individual responsibility; the legal elements distinguishing apartheid, segregation and racial discrimination; ICERD definition, obligations and India's position; CAT definition, absolute prohibition, non-refoulement, investigation, prosecution and reparation duties, together with India's signed-but-not-ratified status; slavery, servitude, forced labour, bonded labour and trafficking distinctions; Constitution Articles 17, 20–24; BNS Sections 143, 144 and 146; ICCPR Article 6 and the Second Optional Protocol; India's retentionist position; Bachan Singh's rarest-of-rare doctrine; mandatory sentencing under Mithu; mitigation after Manoj; and delay, clemency and dignity under Shatrughan Chauhan.",
-    revisionNotes:
-      "Genocide = protected national, ethnical, racial or religious group + one of five Article II acts + specific intent to destroy in whole or substantial part. Apartheid = institutionalised regime + systematic racial oppression and domination + inhuman acts + intent to maintain. ICERD covers purpose or effect based on race, colour, descent, or national or ethnic origin. Torture = severe suffering + intention + prohibited purpose + official nexus; it is absolute and non-derogable. CAT Articles 2, 3, 4–7, 12–15 cover prevention, non-refoulement, criminalisation/jurisdiction, investigation, redress and exclusion of torture evidence. India signed CAT in 1997 but has not ratified it or OPCAT. Slavery concerns ownership powers; servitude is severe domination; forced labour is involuntary work under penalty; trafficking uses act + means + exploitation, with no means requirement for children. Article 23 reaches private conduct and economic compulsion; BNS Sections 143, 144 and 146 are current. ICCPR Article 6 restricts death sentences and encourages abolition; India has not joined the Second Optional Protocol. India retains death only constitutionally under Bachan Singh: life is rule, death exception, no mandatory death, full mitigation and reform inquiry, fair clemency process and continuing Article 21 dignity.",
-  },
-  {
-    title: "Human Rights in Indian Constitutional Law",
-    shortDescription:
-      "The constitutional status, judicial cognizability and enforcement of internationally recognised human rights in India.",
-    overview:
-      "This unit compares rights recognised by the ICCPR and ICESCR with Fundamental Rights, Directive Principles and other provisions of the Constitution of India. It considers which rights are judicially enforceable or judicially cognizable and examines their enforcement by High Courts and the Supreme Court through constitutional remedies, public-interest litigation and judicial interpretation.",
-    objectives: [
-      "Map principal ICCPR and ICESCR rights to the Constitution of India.",
-      "Distinguish enforceable Fundamental Rights from judicially cognizable Directive Principles.",
-      "Explain the domestic use of international human-rights instruments.",
-      "Apply Articles 32 and 226 and public-law remedies to human-rights violations.",
-      "Explain the integrated interpretation of equality, freedom and dignity under Articles 14, 19 and 21.",
-      "Select the appropriate constitutional writ, forum, standing rule and remedy for a violation.",
-      "Analyse PIL, constitutional compensation and continuing mandamus with their procedural safeguards.",
-      "Evaluate the limits imposed by legislation, separation of powers and institutional capacity.",
-    ],
-    detailedContent: `
-1. Human rights and the Indian constitutional order
-
-The Constitution transforms claims of liberty, equality and dignity into binding public law. Its Preamble promises social, economic and political justice; liberty of thought, expression, belief, faith and worship; equality of status and opportunity; and fraternity assuring individual dignity. Part III contains judicially enforceable Fundamental Rights. Part IV directs governance toward social and economic democracy, while Part IVA states civic duties.
-
-International human-rights law and constitutional law overlap but are not identical. The ICCPR and ICESCR bind India internationally, while domestic enforceability depends upon the Constitution, legislation and judicial doctrine. A treaty norm may correspond to an existing Fundamental Right, guide its interpretation, require implementing legislation, or remain an international obligation without a directly enforceable domestic cause of action.
-
-2. India and the 1966 Covenants
-
-India acceded to the ICCPR and ICESCR on 10 April 1979; both entered into force for India on 10 July 1979. The Covenants require periodic reporting to their respective treaty bodies. India is not party to the First or Second Optional Protocol to the ICCPR or the Optional Protocol to the ICESCR, so those individual-communication procedures are unavailable against India.
-
-India entered declarations concerning self-determination and the application of specified provisions within its constitutional system. Treaty status must be stated accurately: accession creates international obligations, but it does not by itself insert every covenant article into Indian statutory law.
-
-3. ICCPR rights and Part III
-
-The ICCPR's civil and political guarantees substantially correspond with Part III: life and personal liberty with Article 21; equality and non-discrimination with Articles 14–16; freedom of conscience and religion with Articles 25–28; expression, assembly and association with Article 19; protection against forced labour with Article 23; and fair-criminal-process guarantees with Articles 20–22.
-
-The correspondence is functional, not word-for-word. ICCPR Article 17 expressly protects privacy, while the Constitution contains no separately numbered privacy clause; the Supreme Court has recognised privacy within liberty and dignity under Part III. Conversely, Article 32 itself guarantees direct access to the Supreme Court, a distinctive constitutional remedy.
-
-4. ICESCR rights and the Constitution
-
-The ICESCR protects work, just conditions, trade-union freedom, social security, family protection, an adequate standard of living, food, housing, health, education and culture. Indian counterparts are distributed across Fundamental Rights and Directive Principles. Articles 39, 41, 42, 43, 45, 46 and 47 guide social welfare; Article 21A expressly guarantees free and compulsory education for children aged six to fourteen.
-
-Courts have read dignity, livelihood, health, shelter, education and environmental conditions into Article 21 while drawing support from Part IV. That does not convert every policy aspiration into an immediately claimable individual entitlement of unlimited scope. The legal question remains whether a minimum constitutional duty, an enacted entitlement, an arbitrary denial or a policy choice within legislative discretion is involved.
-
-5. Negative and positive constitutional duties
+The offence must be matched to the evidence. Rescue without rehabilitation can expos…5238 tokens truncated…itive constitutional duties
 
 Fundamental Rights do more than restrain State interference. Effective liberty can require positive measures: protection against private violence, legal aid, prison healthcare, fair investigation, emergency medical treatment or implementation of welfare legislation. Article 21 therefore contains both negative and positive dimensions.
 
@@ -1735,30 +1510,322 @@ For a child-rights problem, begin with age and apply all four CRC principles. Cl
       "Compare religious, charitable, medical, social and human-rights models.",
       "Analyse the purpose and key principles of the UNCRPD.",
       "Apply Indian disability law concerning equality, accessibility, education, employment and legal capacity.",
+      "Distinguish impairment, disability, barriers, benchmark disability and high support needs.",
+      "Apply reasonable accommodation and accessibility duties to concrete situations.",
+      "Explain supported decision-making, community living and mental-health rights.",
+      "Select the appropriate authority, complaint process and remedy under Indian law.",
     ],
-    topics: [
-      "Magnitude and diversity of disability",
-      "Religious and charitable approaches",
-      "Medical or individual-deficit model",
-      "Social-relations and barrier-based approaches",
-      "Human-rights model of disability",
-      "UNCRPD principles and general obligations",
-      "Equality, non-discrimination and reasonable accommodation",
-      "Accessibility and universal design",
-      "Legal capacity and supported decision-making",
-      "Inclusive education, health, work and community living",
-      "Rights of persons with disabilities in India",
-    ],
+    detailedContent: `
+1. Disability as a human-rights question
+
+Disability is part of human diversity. Persons with disabilities are rights-holders entitled to equality, liberty, dignity, autonomy and participation, not objects of pity, treatment or protection alone. Exclusion often results from interaction between a person's impairment and physical, communication, institutional and attitudinal barriers.
+
+A rights-based inquiry asks what barrier prevents equal participation, who controls it, what accommodation is needed, and whether refusal can be justified. It also respects the person's own preferences and knowledge rather than allowing professionals or families to speak automatically in their place.
+
+2. Magnitude and diversity
+
+Disability includes long-term physical, mental, intellectual and sensory impairments, but lived experience varies with age, gender, caste, poverty, location, language and access to support. Census, certification and survey figures may differ because they use different definitions and methods; undercounting is common where stigma or inaccessible enumeration exists.
+
+Policy must use disaggregated data and consultation with persons with disabilities through their representative organisations. A single medical percentage cannot describe functional barriers, support requirements or discrimination in every context.
+
+3. Religious and moral approaches
+
+Some traditional explanations connect disability with fate, divine will, spiritual merit or wrongdoing. Religious communities have also created care, solidarity and resistance to exclusion. The legal problem arises where belief replaces autonomy, attributes blame, promotes cure without consent or treats a person as morally deficient.
+
+Human-rights law protects freedom of religion while rejecting discrimination. Belief cannot justify confinement, violence, denial of education, forced treatment or exclusion from family and community life.
+
+4. Charitable approach
+
+The charity model views disabled persons mainly as dependent recipients of benevolence. Assistance may meet urgent needs, but voluntary generosity does not create enforceable entitlements, accountability or participation. It can reinforce unequal power by allowing donors to decide what recipients need.
+
+A rights approach converts welfare from favour into duty. Services should be accessible, chosen with informed participation and designed to advance independence and inclusion. Charitable organisations themselves must respect equality, safety and legal standards.
+
+5. Medical or individual-deficit model
+
+The medical model locates disability principally in an individual's diagnosis or functional limitation and seeks cure, rehabilitation or adjustment. Clinical care and assistive technology can be valuable when chosen and accessible, but diagnosis alone cannot explain social exclusion.
+
+An exclusively medical approach may label ordinary difference as defect, privilege professional decisions and overlook inaccessible buildings, examinations, transport or communication. Human-rights law does not reject medicine; it places healthcare within autonomy, informed consent, non-discrimination and social inclusion.
+
+6. Social-relations model
+
+The social model distinguishes impairment from disability produced by environmental and social barriers. A wheelchair user is excluded by stairs without an accessible route; a Deaf student by absence of sign-language interpretation; a person with dyslexia by a rigid written examination.
+
+Removing barriers changes participation without changing the person. The model redirects attention from individual correction to institutional design. Its limitation is that pain, fatigue and impairment effects may remain relevant; rights analysis should address both barriers and individual support needs.
+
+7. Human-rights model
+
+The human-rights model builds upon the social model but expressly anchors disability policy in dignity, autonomy, equality, participation and accountability. It recognises civil-political and socio-economic rights together, including legal capacity, community living, education, work, health and access to justice.
+
+Support needs do not reduce personhood. Different treatment may be necessary for substantive equality, but protective intervention must be lawful, proportionate, time-bound and respectful of will and preferences.
+
+8. Development of international protection
+
+Earlier international instruments often reflected welfare and rehabilitation approaches. The 1993 Standard Rules promoted equalisation of opportunities but were not a treaty. Disability-rights movements pressed for a binding instrument framed around exclusion and equal citizenship.
+
+The Convention on the Rights of Persons with Disabilities was adopted in 2006 and entered into force in 2008. India signed and ratified it in 2007. India has not joined the Optional Protocol that provides individual communications and an inquiry procedure.
+
+9. Purpose and principles of the UNCRPD
+
+The Convention promotes, protects and ensures full and equal enjoyment of all human rights by persons with disabilities and respect for inherent dignity. It does not create a separate lower category of rights; it explains how universal rights apply amid disabling barriers.
+
+Article 3 principles include dignity and autonomy, non-discrimination, participation and inclusion, respect for difference, equality of opportunity, accessibility, gender equality, and respect for children's evolving capacities and identity.
+
+10. General obligations and participation
+
+States must adopt laws and policies, abolish discriminatory measures, mainstream disability across public action, regulate private actors, develop accessible technology, train personnel and progressively realise economic, social and cultural rights using maximum available resources. Immediate obligations such as non-discrimination are not postponed by progressive realisation.
+
+Article 4(3) requires close consultation and active involvement of persons with disabilities, including children, through representative organisations. “Nothing about us without us” captures participation but should be connected to this legal duty.
+
+11. Equality and discrimination
+
+UNCRPD Article 5 guarantees equality before and under the law and equal legal protection. Disability discrimination includes distinctions, exclusions or restrictions impairing rights and expressly includes denial of reasonable accommodation.
+
+Direct discrimination, indirect discrimination, harassment, denial of accommodation and intersectional discrimination may require different proof and remedies. Special measures needed to accelerate or achieve de facto equality are not discrimination.
+
+12. Reasonable accommodation
+
+Reasonable accommodation means necessary and appropriate modification or adjustment, not imposing a disproportionate or undue burden, required in a particular case to ensure equal enjoyment. It is individualised and arises when a person's circumstances require modification, unlike general accessibility duties owed in advance to groups and the public.
+
+Examples include a scribe, extra time, flexible work method, sign-language interpreter, accessible format or modified selection process. Authorities must engage with the person, assess effectiveness and give reasons. Administrative convenience or stereotypes cannot substitute for an undue-burden analysis.
+
+13. Accessibility and universal design
+
+Article 9 requires equal access to the physical environment, transportation, information, communications and public facilities. Accessibility is a precondition for independent living and participation and should be planned ex ante. Universal design seeks products, environments and services usable by all to the greatest extent possible without excluding assistive devices.
+
+Standards, audits, procurement, retrofitting, web accessibility, accessible documents, captioning, sign language and wayfinding are complementary. A ramp alone does not make an institution accessible if its forms, websites or procedures remain unusable.
+
+14. Equal recognition and legal capacity
+
+Article 12 affirms that persons with disabilities enjoy legal capacity on an equal basis in all aspects of life. Legal capacity concerns holding rights and acting upon them; it must not be denied merely because a person has an impairment or is considered to have poor decision-making skills.
+
+Support may include accessible information, trusted assistance and advance planning. Safeguards must respect rights, will and preferences, avoid conflicts and undue influence, be proportional and tailored, operate for the shortest time and receive regular review. Supported decision-making should replace routine substitute decision-making.
+
+15. Liberty, integrity and freedom from abuse
+
+Disability cannot by itself justify deprivation of liberty. Persons with disabilities retain rights to bodily and mental integrity, freedom from torture and ill-treatment, and protection from exploitation, violence and abuse at home, in institutions and in the community.
+
+Monitoring must be independent and accessible. Remedies require rescue where necessary, healthcare, psychosocial and legal support, investigation, accountability and recovery in an environment fostering dignity and autonomy.
+
+16. Independent living and community inclusion
+
+UNCRPD Article 19 recognises equal choice about residence and with whom to live, access to in-home and community support, and inclusive community services. It rejects forced segregation and the assumption that institutional living is inevitable.
+
+Deinstitutionalisation requires more than closing facilities. Housing, personal assistance, income support, healthcare, transport and protection from violence must be available in the community. Placement without real choice or support can recreate an institution in another form.
+
+17. Education
+
+Article 24 requires an inclusive education system at all levels. Children must not be excluded from general education because of disability and must receive reasonable accommodation, support and effective individualised measures in environments maximising academic and social development.
+
+Inclusion is not mere admission. Accessible buildings and learning materials, trained teachers, assistive technology, appropriate communication, sign language and reasonable examination modifications are essential. Separate settings cannot become a default response to institutional unwillingness to adapt.
+
+18. Work and employment
+
+Article 27 protects the right to work in an open, inclusive and accessible labour market. It covers recruitment, equal remuneration, safe conditions, trade-union rights, vocational guidance, retention, advancement, self-employment and reasonable accommodation.
+
+Workplace equality requires accessible selection, job restructuring where reasonable, non-discriminatory performance evaluation and protection from harassment. An employer should assess essential functions and actual accommodation rather than assuming incapacity from a diagnosis.
+
+19. Health, habilitation and rehabilitation
+
+Persons with disabilities are entitled to the same range and quality of healthcare, disability-specific services where needed, proximity to communities, informed consent and freedom from discrimination in insurance and professional practice. Sexual and reproductive health and mental healthcare are included.
+
+Habilitation develops skills that may not previously have been acquired; rehabilitation restores or supports functioning and participation. Both should be voluntary, multidisciplinary, available early and organised around the person's goals.
+
+20. Political participation and access to justice
+
+Articles 13 and 29 require accessible legal proceedings, procedural and age-appropriate accommodations, training of justice personnel, accessible voting, secret ballot and participation in public affairs. Legal protection is ineffective if police stations, evidence, courts or election processes cannot be used.
+
+Procedural accommodation may differ from substantive reasonable accommodation. Courts should adapt communication and process without treating the disabled person as inherently unreliable or incompetent.
+
+21. Women and children with disabilities
+
+Women and girls with disabilities face multiple discrimination and heightened risk of violence, institutionalisation and denial of reproductive autonomy. Children with disabilities must enjoy all rights, have best interests treated as a primary consideration and be heard according to age and maturity with disability-appropriate support.
+
+Intersectional analysis is not optional. Gender, age, caste, poverty and disability can combine to produce distinctive harm, requiring coordinated protection under disability, women, child and criminal laws.
+
+22. Constitutional foundation in India
+
+Articles 14, 16, 19 and 21 support equality, public employment, participation, liberty, autonomy and dignity. Article 15 does not expressly list disability, but disability discrimination is reviewable under Articles 14 and 21 and applicable legislation. Directive Principles concerning welfare, work, education and public assistance reinforce positive duties.
+
+Constitutional equality rejects both hostile exclusion and paternalistic stereotypes. Reasonable accommodation is a component of substantive equality and dignity, not a special favour.
+
+23. Rights of Persons with Disabilities Act, 2016
+
+The RPwD Act was enacted to give effect to the UNCRPD and replaced the 1995 Act. It recognises 21 specified disabilities and adopts an interaction-with-barriers definition. Section 3 guarantees equality, dignity, integrity, reasonable accommodation and protection from discrimination, subject to the Act's carefully framed standards.
+
+The Act addresses women and children, community life, protection from abuse, reproductive rights, voting and access to justice; education, skill development and employment; social security, health, rehabilitation and recreation; accessibility; certification; institutions; commissioners; Special Courts; offences and penalties.
+
+24. Disability and benchmark disability
+
+A “person with disability” has a long-term physical, mental, intellectual or sensory impairment which, in interaction with barriers, hinders full and effective participation. A “person with benchmark disability” generally has at least forty per cent of a specified disability where measurable, or the prescribed certified level where not measurable.
+
+General equality, non-discrimination and accommodation protections are not confined to benchmark disability. Benchmark status is particularly relevant to certification-linked entitlements such as reservations and specified benefits. Confusing the categories unlawfully narrows basic rights.
+
+25. Education under the RPwD Act
+
+Government-funded or recognised educational institutions must provide inclusive education, admit without discrimination, make facilities accessible, provide reasonable accommodation and necessary support, detect learning disabilities, monitor progress and support transport where required. Appropriate governments must train professionals and provide accessible materials and assistive resources.
+
+Children with benchmark disabilities aged six to eighteen may choose free education in a neighbourhood or special school under Section 31. Government and aided higher-education institutions must reserve at least five per cent of seats for persons with benchmark disabilities, with upper-age relaxation as prescribed.
+
+26. Employment, reservation and equal-opportunity policy
+
+Government establishments must not discriminate in employment and must provide reasonable accommodation and a barrier-free environment. Promotion cannot be denied merely on the ground of disability. Every establishment must notify an equal-opportunity policy and maintain records as required.
+
+Government establishments reserve not less than four per cent of vacancies in the cadre strength in each group of posts for persons with benchmark disabilities, distributed among statutory categories and subject to identified-post and exemption provisions. Private establishments remain bound by equality, accommodation, accessibility and policy duties even where the statutory reservation does not apply.
+
+27. Accessibility duties under Indian law
+
+The Central Government formulates accessibility standards for the physical environment, transport, information and communication, including appropriate technologies. Service providers and establishments must comply with applicable standards; time-bound duties govern existing public buildings, while building permission should not be granted contrary to accessibility rules.
+
+Accessibility is continuing. Authorities should audit barriers, prioritise urgent risk, publish plans, allocate budgets and procure accessibly. Reasonable accommodation remains available even where a general standard has technically been met.
+
+28. Legal capacity, guardianship and high support
+
+Section 13 recognises equal legal capacity, ownership and control of property and access to financial affairs. Section 14 permits limited guardianship only through a jointly made, mutual-trust arrangement for a specific period, decision and situation, with safeguards and review. The person's will and preferences must guide support.
+
+Persons with benchmark disabilities needing high support may apply through the statutory process. Support must enable rights rather than transfer total control. The National Trust Act, 1999 continues to provide arrangements for specified disabilities, but must be interpreted consistently with autonomy and the UNCRPD-oriented 2016 Act.
+
+29. Mental Healthcare Act, 2017
+
+The Mental Healthcare Act adopts a rights-based framework for persons with mental illness. It recognises access to mental healthcare, community living, protection from cruel treatment, equality, confidentiality, information, communication, legal aid and complaint. It provides advance directives and nominated representatives and regulates supported admission and treatment.
+
+Capacity is presumed and assessed decision-specifically through ability to understand relevant information, appreciate reasonably foreseeable consequences and communicate a decision with appropriate support. Mental illness does not automatically remove legal capacity. Admission and treatment require statutory conditions, review and least-restrictive care.
+
+30. Institutions, enforcement and examination method
+
+Chief and State Commissioners monitor implementation, inquire into deprivation of rights, review safeguards and recommend corrective action. Grievance Redressal Officers address employment complaints. District Special Courts try offences under the Act, supported by Special Public Prosecutors. Certification authorities, advisory boards and governments have distinct functions.
+
+In a problem, identify the impairment, barrier and affected right; distinguish disability from benchmark-disability eligibility; apply constitutional equality, UNCRPD principles and the relevant RPwD or mental-health provision. Test accessibility and individualized accommodation separately, examine undue burden with evidence, identify the responsible establishment and forum, and seek a remedy that removes the barrier while respecting the person's will and preferences.
+    `.trim(),
     provisions: [
       "Convention on the Rights of Persons with Disabilities, 2006",
+      "UNCRPD Optional Protocol, 2006",
       "Constitution of India — Articles 14, 15, 16 and 21",
       "Rights of Persons with Disabilities Act, 2016",
+      "Rights of Persons with Disabilities Rules, 2017 and applicable accessibility standards",
       "Mental Healthcare Act, 2017",
       "Rehabilitation Council of India Act, 1992",
       "National Trust Act, 1999",
+      "Right of Children to Free and Compulsory Education Act, 2009",
+      "Juvenile Justice (Care and Protection of Children) Act, 2015",
+    ],
+    keyPoints: [
+      "Disability arises through interaction between impairment and attitudinal or environmental barriers.",
+      "The charity model offers discretion; the rights model creates entitlement, participation and accountability.",
+      "The medical model remains useful for care but cannot explain or justify social exclusion.",
+      "The social model targets barriers; the human-rights model adds dignity, autonomy and enforceable duties.",
+      "India ratified the UNCRPD in 2007 but has not joined its Optional Protocol.",
+      "UNCRPD Article 4(3) requires close consultation and active involvement through representative organisations.",
+      "Denial of reasonable accommodation is discrimination.",
+      "Accessibility is an anticipatory systemic duty; reasonable accommodation is individualised.",
+      "Legal capacity includes both holding rights and acting upon them and cannot be denied merely because of impairment.",
+      "Support and safeguards must respect the person's rights, will and preferences.",
+      "Community living requires genuine choice and support, not relocation from one segregated setting to another.",
+      "Inclusive education requires admission, accessibility, accommodation and effective individual support.",
+      "The RPwD Act recognises 21 specified disabilities and applies an interaction-with-barriers approach.",
+      "General equality and accommodation rights apply beyond the benchmark-disability category.",
+      "Benchmark disability ordinarily requires at least forty per cent certified specified disability.",
+      "Higher-education reservation is at least five per cent and government-employment reservation at least four per cent.",
+      "Every establishment must comply with applicable equality duties and notify an equal-opportunity policy.",
+      "Limited guardianship must be specific, proportionate, reviewable and guided by will and preferences.",
+      "The Mental Healthcare Act presumes capacity and provides advance directives and nominated representatives.",
+      "Effective remedies identify the barrier, responsible duty-bearer, accommodation, forum and compliance measure.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-6-jeeja-ghosh",
+        caseName: "Jeeja Ghosh v. Union of India",
+        citation: "(2016) 7 SCC 761",
+        principle:
+          "Humiliating exclusion based on disability violates equality and dignity; reasonable accommodation enables equal participation.",
+        summary:
+          "An airline improperly deboarded a passenger with cerebral palsy, prompting compensation and a dignity-centred analysis.",
+      },
+      {
+        id: "human-rights-unit-6-vikash-kumar",
+        caseName: "Vikash Kumar v. Union Public Service Commission",
+        citation: "(2021) 5 SCC 370",
+        principle:
+          "Reasonable accommodation is intrinsic to substantive equality and is not restricted to persons meeting a benchmark threshold.",
+        summary:
+          "The Court required an individualised examination accommodation and rejected a narrow medical-percentage approach.",
+      },
+      {
+        id: "human-rights-unit-6-rajive-raturi",
+        caseName: "Rajive Raturi v. Union of India",
+        citation: "(2018) 2 SCC 413",
+        principle:
+          "Accessibility of public infrastructure and transport is essential to equal citizenship and requires enforceable standards.",
+        summary:
+          "The litigation produced continuing directions on built-environment, transport and service accessibility.",
+      },
+      {
+        id: "human-rights-unit-6-national-federation-blind",
+        caseName: "Union of India v. National Federation of the Blind",
+        citation: "(2013) 10 SCC 772",
+        principle:
+          "Disability reservation must be implemented against the legally relevant establishment strength rather than defeated administratively.",
+        summary:
+          "The judgment enforced the predecessor statute's employment reservation and addressed accumulated vacancies.",
+      },
+      {
+        id: "human-rights-unit-6-deaf-employees",
+        caseName: "Deaf Employees Welfare Association v. Union of India",
+        citation: "(2014) 3 SCC 173",
+        principle:
+          "Equal treatment may require extension of transport allowance to employees with hearing impairment.",
+        summary:
+          "The Court rejected an exclusion that ignored comparable disability-related barriers and expenses.",
+      },
+      {
+        id: "human-rights-unit-6-disabled-rights-group",
+        caseName: "Disabled Rights Group v. Union of India",
+        citation: "(2018) 2 SCC 397",
+        principle:
+          "Higher-education institutions must implement reservation, accessibility and reasonable accommodation obligations.",
+        summary:
+          "The Court directed concrete institutional measures for students with benchmark disabilities.",
+      },
+      {
+        id: "human-rights-unit-6-ravinder-dhariwal",
+        caseName: "Ravinder Kumar Dhariwal v. Union of India",
+        citation: "2021 SCC OnLine SC 1293",
+        principle:
+          "Mental-health disability requires a social-barrier analysis, non-discrimination and reasonable accommodation in employment.",
+        summary:
+          "The Court criticised stereotypical assumptions and explained disability discrimination under the 2016 Act.",
+      },
+      {
+        id: "human-rights-unit-6-patan-jamal-vali",
+        caseName: "Patan Jamal Vali v. State of Andhra Pradesh",
+        citation: "(2021) 16 SCC 225",
+        principle:
+          "Courts must recognise intersectional vulnerability without treating disability as incapacity or undermining testimony.",
+        summary:
+          "The judgment examined the combined effects of gender, caste and visual disability in sexual-violence adjudication.",
+      },
+      {
+        id: "human-rights-unit-6-suchita-srivastava",
+        caseName: "Suchita Srivastava v. Chandigarh Administration",
+        citation: "(2009) 9 SCC 1",
+        principle:
+          "Reproductive choice is part of personal liberty, bodily integrity and privacy, including for women with intellectual disability.",
+        summary:
+          "The State could not substitute its preferred reproductive decision without lawful and rights-respecting grounds.",
+      },
+      {
+        id: "human-rights-unit-6-x-maharashtra",
+        caseName: "Accused X v. State of Maharashtra",
+        citation: "(2019) 7 SCC 1",
+        principle:
+          "Severe post-conviction mental illness can be a supervening circumstance relevant to commutation of a death sentence.",
+        summary:
+          "Dignity and mental-health rights continue after conviction and throughout incarceration.",
+      },
     ],
     examFocus:
-      "Compare the principal disability models, explain the UNCRPD paradigm shift, and prepare equality, reasonable accommodation, accessibility, legal capacity, education and employment under the 2016 Act.",
+      "Prepare the religious, charitable, medical, social-relations and human-rights models; interaction between impairment and barriers; UNCRPD purpose, principles, Article 4 obligations and India's treaty status; discrimination, reasonable accommodation and accessibility distinction; universal design; legal capacity, supported decision-making, liberty, community living, education, work, health, political participation, women and children; constitutional equality; RPwD Act definitions and 21 specified disabilities; difference between disability and benchmark disability; education and employment duties, five-per-cent higher-education and four-per-cent government-employment reservations; equal-opportunity policy; accessibility standards; limited guardianship and high support; Mental Healthcare Act rights and capacity; commissioners, grievance officers and Special Courts; and Jeeja Ghosh, Vikash Kumar, Rajive Raturi, National Federation of the Blind and Ravinder Kumar Dhariwal.",
+    revisionNotes:
+      "Models: religious/moral; charity; medical-deficit; social barrier; human-rights dignity and autonomy. UNCRPD adopted 2006; India ratified 2007 but not Optional Protocol. Principles: dignity/autonomy, non-discrimination, participation, difference, opportunity, accessibility, gender equality and children's evolving capacities. Article 4(3) requires active consultation. Denial of reasonable accommodation = discrimination. Accessibility is anticipatory/systemic; accommodation is individualised and subject to disproportionate or undue burden. Article 12 preserves legal capacity and support guided by will/preferences. Article 19 protects community living; Articles 24 and 27 govern inclusive education and work. RPwD Act 2016 recognises 21 specified disabilities. General rights protect persons with disability; benchmark disability ordinarily means certified 40%+ and activates specified reservations/benefits. Higher education: at least 5%; government employment: at least 4%. Section 3 equality, Section 16 inclusive education, Section 20 employment, equal-opportunity policy, accessibility standards, limited guardianship, commissioners and Special Courts. Mental Healthcare Act: capacity presumption, advance directive, nominated representative, community care and least-restrictive treatment. Vikash Kumar treats accommodation as substantive equality beyond benchmark thresholds.",
   },
   {
     title: "Protection of Indigenous Peoples",
