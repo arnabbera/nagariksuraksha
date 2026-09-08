@@ -2063,30 +2063,322 @@ In a problem, identify the impairment, barrier and affected right; distinguish d
       "Trace the international development of indigenous rights.",
       "Analyse self-determination and its relationship with land, culture and participation.",
       "Compare the Fifth and Sixth Schedule systems under the Constitution of India.",
+      "Distinguish indigenous self-identification from India's constitutional identification of Scheduled Tribes.",
+      "Apply consultation and free, prior and informed consent standards to development decisions.",
+      "Explain Gram Sabha powers under PESA and the Forest Rights Act.",
+      "Select constitutional, statutory and institutional remedies for dispossession or rights denial.",
     ],
-    topics: [
-      "Discrimination, dispossession and cultural assimilation",
-      "ILO standards concerning indigenous and tribal peoples",
-      "United Nations Declaration on the Rights of Indigenous Peoples",
-      "Self-determination and internal autonomy",
-      "Culture, language, identity and traditional institutions",
-      "Land, territories and natural resources",
-      "Participation, consultation and free, prior and informed consent",
-      "Scheduled Tribes under the Constitution of India",
-      "Fifth Schedule and Tribes Advisory Councils",
-      "Sixth Schedule and Autonomous District Councils",
-      "Forest rights, self-governance and protection from displacement",
-    ],
+    detailedContent: `
+1. Indigenous peoples and human rights
+
+Indigenous peoples are culturally distinct communities with historical continuity, collective identity and enduring relationships with traditional lands, territories and resources. Self-identification and recognition by the community are central. International law avoids a rigid universal definition because externally imposed classification has historically enabled exclusion.
+
+The expression is not automatically identical to “Scheduled Tribe” in India. Scheduled Tribe status is a constitutional and notification-based legal category under Article 342. International indigenous-rights principles may illuminate tribal protection, but a legal answer must identify the applicable domestic status and territory.
+
+2. Historical patterns of discrimination
+
+Colonisation, imposed boundaries, land seizure, extractive development, forced assimilation, residential schooling, displacement and suppression of languages have weakened indigenous institutions. Discrimination may be direct, indirect, structural or intersectional, particularly for women, children, persons with disabilities and remote communities.
+
+Equality requires more than individual non-discrimination. Collective land, culture, governance and participation may be necessary for members to enjoy dignity and identity. Remedies therefore include recognition, restitution, autonomy, consultation and institutional reform.
+
+3. Assimilation, integration and self-determined development
+
+Assimilation requires a community to abandon identity and institutions in favour of the dominant society. Integration may also be coercive when outsiders define its terms. Indigenous-rights law instead supports participation on equal terms and the freedom to maintain distinct institutions while engaging with the wider State.
+
+Development is not merely a project imposed for aggregate benefit. Communities must be able to determine priorities affecting their lands, livelihoods and cultural survival. Health, education and infrastructure should be accessible without destroying language, community authority or territorial connection.
+
+4. Early international protection
+
+ILO Convention No. 107 of 1957 was the first binding international treaty focused on indigenous and tribal populations. It contains protections concerning land, labour, education and administration, but reflects an older integration-oriented philosophy.
+
+India ratified Convention No. 107 in 1958 and remains bound by it. Its provisions should be read in light of subsequent human-rights developments and the movement away from paternalistic integration.
+
+5. ILO Convention No. 169
+
+ILO Convention No. 169 of 1989 revised Convention No. 107 and replaced integration with respect for identity, institutions, participation and control over development. It requires consultation in good faith through representative institutions whenever legislative or administrative measures may directly affect indigenous peoples.
+
+India has not ratified Convention No. 169. It is therefore not treaty-binding upon India, though its standards are influential comparative material. Students must not mistakenly cite it as India's ratified obligation.
+
+6. Development of UN standards
+
+The UN system developed protection through anti-discrimination standards, treaty bodies, the Working Group on Indigenous Populations, the Permanent Forum, the Special Rapporteur and the Expert Mechanism. Indigenous representatives participated directly in the long drafting process for a dedicated declaration.
+
+The UN General Assembly adopted the United Nations Declaration on the Rights of Indigenous Peoples on 13 September 2007. India voted in favour. UNDRIP is a declaration, not a treaty, but it is an authoritative framework and some of its rules reflect or develop broader international law.
+
+7. Structure and principles of UNDRIP
+
+UNDRIP combines equality and non-discrimination with collective rights to identity, self-determination, institutions, lands, resources, culture and development. It prohibits forced assimilation and destruction of culture and requires effective remedies for dispossession and discriminatory action.
+
+The Declaration must be read as a whole. Individual members retain all human rights; collective rights do not authorise internal discrimination. Particular attention is required for elders, women, youth, children and persons with disabilities.
+
+8. Self-determination
+
+Article 3 states that indigenous peoples have the right to self-determination and may freely determine political status and pursue economic, social and cultural development. Article 4 connects this with autonomy or self-government in internal and local affairs and financing autonomous functions.
+
+In practice, indigenous self-determination usually concerns internal autonomy, meaningful participation, land and cultural authority within the State. It is not an automatic right to unilateral secession. UNDRIP Article 46 protects territorial integrity while requiring restrictions to satisfy legality, necessity, non-discrimination and human-rights standards.
+
+9. Contents of self-determination
+
+Self-determination is expressed through institutions, membership, customary law, culture, language, education, land, natural resources, development priorities and participation in State decisions. It has process and outcome dimensions: communities must participate through their own representatives and retain meaningful control over matters central to collective survival.
+
+Autonomy must be resourced and accountable. Indigenous governments must respect the human rights of all members, including women and children. State recognition should not freeze culture or permit outsiders to choose convenient representatives.
+
+10. Culture, language and spiritual life
+
+UNDRIP protects cultural traditions, ceremonies, archaeological sites, designs, oral histories, traditional knowledge and languages. Communities may establish educational institutions using their languages and culturally appropriate methods while retaining access to State education without discrimination.
+
+Protection includes prevention of unauthorised appropriation and effective redress for cultural, intellectual, religious and spiritual property taken without free, prior and informed consent. Sacred relationships with land may be legally relevant even where conventional ownership records are absent.
+
+11. Land, territories and resources
+
+Indigenous land rights arise from traditional ownership, occupation or use, not solely from State-issued title. UNDRIP calls for legal recognition and protection with due respect for customs and tenure systems, and for fair, independent and transparent adjudication of claims.
+
+Land supports livelihood, culture, spirituality and political community. Acquisition or regulation should therefore assess collective and cumulative effects, not only market value of individual plots. Restitution is preferred where possible; otherwise just, fair and equitable compensation and other redress are required.
+
+12. Natural resources and conservation
+
+Indigenous peoples have rights to maintain, control, protect and develop cultural heritage and to participate in use and conservation of lands and resources. State ownership of minerals under domestic law does not erase consultation, livelihood, forest, environmental and compensation duties.
+
+Conservation cannot justify arbitrary eviction or criminalisation of customary practices. Rights-based conservation uses community knowledge, recognises tenure, shares benefits and protects biodiversity through partnership.
+
+13. Consultation and representative institutions
+
+Consultation must be prior, timely, informed, culturally appropriate and conducted in good faith through institutions selected by the affected people. It must begin while options remain open and provide accessible information about nature, scale, duration, impacts, alternatives, risks and benefits.
+
+A public hearing after decisions are effectively final is not meaningful consultation. The process must address language, distance, gender participation, time for internal deliberation, independent advice and reasons responding to community concerns.
+
+14. Free, prior and informed consent
+
+FPIC is a safeguard and manifestation of self-determination. “Free” excludes coercion and manipulation; “prior” requires engagement before authorisation or commencement; “informed” requires adequate accessible information; and “consent” concerns a collective decision through legitimate processes.
+
+UNDRIP expressly invokes consent for matters including relocation, hazardous-material storage and certain cultural takings, and requires consultation aimed at consent for legislative, administrative and development measures. The precise legal consequence depends on the applicable norm and context; consultation should never be reduced to notification.
+
+15. Relocation, development and remedy
+
+UNDRIP rejects forcible removal without free, prior and informed consent, agreement on fair compensation and, where possible, an option of return. Development decisions should include social, spiritual, cultural, environmental and human-rights impact assessment.
+
+Remedy may include return of land, restoration, alternative land of equal quality and status, monetary compensation, benefit sharing, rehabilitation and guarantees of non-repetition. Consent obtained through misinformation, threat or unrepresentative intermediaries is defective.
+
+16. Scheduled Tribes under the Constitution
+
+Article 366(25) links Scheduled Tribes to communities deemed under Article 342. The President specifies Scheduled Tribes for a State or Union territory after consultation with the Governor; Parliament may include or exclude groups by law. A notification is territory-specific.
+
+Courts do not ordinarily expand a Presidential list through similarity evidence. Constitutional recognition activates political representation, public-employment and educational protections and special administration, but rights also depend on location, legislation and the particular measure involved.
+
+17. Equality and affirmative protection
+
+Articles 15(4), 15(5) and 16(4) enable special provisions and reservation for socially and educationally backward classes and Scheduled Tribes within constitutional doctrine. Articles 330 and 332 reserve seats in the House of the People and State Legislative Assemblies. Article 335 addresses claims in services consistently with administrative efficiency.
+
+Article 46 directs the State to promote educational and economic interests of Scheduled Tribes and protect them from social injustice and exploitation. Article 338A establishes the National Commission for Scheduled Tribes to monitor safeguards, investigate complaints and advise on development planning.
+
+18. Article 244 and special territorial administration
+
+Article 244(1) applies the Fifth Schedule to Scheduled Areas and Scheduled Tribes outside the States governed by the Sixth Schedule. Article 244(2) applies the Sixth Schedule to tribal areas in Assam, Meghalaya, Tripura and Mizoram.
+
+The two Schedules are not interchangeable. The Fifth Schedule centres on Governor, President, Tribes Advisory Council and adapted application of law. The Sixth Schedule creates constitutionally empowered Autonomous District and Regional Councils with legislative, judicial, administrative and fiscal functions.
+
+19. Scheduled Areas under the Fifth Schedule
+
+The President declares, alters and rescinds Scheduled Areas by order. Relevant considerations include tribal population, compactness, administrative viability and economic backwardness, though the constitutional text does not prescribe a single mathematical test.
+
+The Union has executive power to give directions to States concerning administration of Scheduled Areas, and the Governor reports annually or when required to the President. Special administration aims to prevent exploitation while supporting self-governance and development.
+
+20. Tribes Advisory Council
+
+Each State having Scheduled Areas must establish a Tribes Advisory Council, and the President may direct one in a State with Scheduled Tribes but no Scheduled Area. It may have up to twenty members, approximately three-fourths being Scheduled Tribe representatives in the State Legislative Assembly, with prescribed supplementation where necessary.
+
+The Council advises on welfare and advancement matters referred by the Governor. Its effectiveness depends upon timely consultation, representative deliberation, information and reasoned governmental response; formal existence alone is inadequate.
+
+21. Governor's Fifth Schedule powers
+
+The Governor may direct that a parliamentary or State law shall not apply to a Scheduled Area or shall apply subject to exceptions and modifications, prospectively or retrospectively. The Governor may make regulations for peace and good government, including restricting transfer of tribal land, regulating allotment and controlling money-lending.
+
+Regulations require Presidential assent, and the Governor must consult the Tribes Advisory Council where one exists. These powers are constitutional responsibilities and must be exercised consistently with rights, statutory purposes and judicial review.
+
+22. PESA and Gram Sabha self-government
+
+The Panchayats (Extension to Scheduled Areas) Act, 1996 adapts Part IX to Fifth Schedule areas. State laws must respect customary law, social and religious practices and traditional management of community resources. A village may consist of a habitation or community managing affairs according to traditions.
+
+The Gram Sabha safeguards traditions, cultural identity, community resources and customary dispute resolution. It approves development plans, identifies beneficiaries and has consultation or recommendation roles concerning land acquisition, rehabilitation, minor minerals and concessions, alongside powers over minor forest produce, markets, money-lending and local resources as provided through State law.
+
+23. Sixth Schedule councils
+
+The Sixth Schedule provides Autonomous District Councils and, where distinct Scheduled Tribes inhabit an autonomous district, Regional Councils. The Governor organises autonomous areas and may create, alter or reorganise them under the Schedule.
+
+Councils can legislate on allotted subjects such as land, non-reserved forests, shifting cultivation, village administration, inheritance, marriage, social customs and local governance, subject to gubernatorial assent and State-specific provisions. They may constitute village courts, manage services, assess land revenue and levy specified taxes.
+
+24. Fifth and Sixth Schedules compared
+
+The Fifth Schedule operates through State administration modified by gubernatorial regulation and advisory representation. PESA adds village self-government. The Sixth Schedule grants councils direct constitutional legislative, judicial, administrative and fiscal authority within specified northeastern tribal areas.
+
+Neither model creates complete sovereignty. Parliament, State institutions, Governors, councils and village bodies exercise overlapping powers. A problem answer should identify State, notified area, applicable Schedule, subject matter, required assent or consultation and governing statute.
+
+25. Forest Rights Act, 2006
+
+The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 recognises historical injustice and vests individual and community forest rights. Rights include habitation and cultivation, community use, minor forest produce, grazing, habitat rights of particularly vulnerable tribal groups, conversion of forest villages and community forest-resource management.
+
+Forest-dwelling Scheduled Tribes and other traditional forest dwellers have different eligibility definitions and proof requirements. Rights are heritable but not alienable or transferable. Recognition must precede eviction in accordance with Section 4(5).
+
+26. FRA claims and Gram Sabha authority
+
+The Gram Sabha initiates the claims process, receives and verifies claims, prepares maps and passes resolutions. Sub-Divisional and District Level Committees examine appeals and make final statutory decisions. Evidence may be documentary or otherwise permitted by the Rules; lack of conventional title cannot alone defeat customary occupation.
+
+Section 5 empowers right-holders and Gram Sabhas to protect wildlife, forest and biodiversity, preserve habitat, prevent destructive practices and regulate community forest resources. Conservation and rights are designed to operate together.
+
+27. Niyamgiri and religious-cultural rights
+
+In Orissa Mining Corporation v. Ministry of Environment and Forest, the Supreme Court directed Gram Sabhas to determine whether proposed mining would affect the religious and community rights of forest dwellers, including habitat and worship connected with Niyamgiri hills.
+
+The decision did not create an unlimited veto over every project. It enforced the FRA process and required the competent community institution to decide specific rights claims before final governmental action.
+
+28. Land alienation and Samatha
+
+Samatha v. State of Andhra Pradesh interpreted protective law in a Fifth Schedule area to prevent transfer of tribal land to non-tribal private mining interests and emphasised constitutional protection against exploitation. The judgment connected land with tribal survival and development.
+
+Its application must be analysed with the relevant State regulation, land status and later legal developments. The broader principle is that protective transfer restrictions should not be defeated through indirect governmental arrangements.
+
+29. Acquisition, displacement and rehabilitation
+
+The Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013 contains enhanced safeguards for Scheduled Castes and Scheduled Tribes, including special provisions concerning Scheduled Areas, rehabilitation, resettlement and community rights. PESA, FRA, environmental and forest-clearance requirements may operate cumulatively.
+
+Lawful acquisition requires more than compensation. Authorities must identify recognised and pending forest rights, cultural and livelihood impacts, alternatives, community institutions, consent or consultation requirements, rehabilitation entitlements and the distribution of project benefits.
+
+30. Examination and problem-solving method
+
+Begin with identity and legal status: indigenous people under the international framework, Scheduled Tribe under Article 342, forest-dwelling Scheduled Tribe or other traditional forest dweller. Locate the land and decide whether the Fifth Schedule, Sixth Schedule or ordinary administration applies.
+
+Then identify land, forest, cultural, religious, participation or development rights; apply UNDRIP or ILO standards with accurate binding status; test consultation and FPIC; and map PESA, FRA, acquisition and environmental procedures. Identify the Gram Sabha, council, Governor, committee, NCST, High Court or Supreme Court remedy and conclude with recognition, participation, restitution, compensation or rehabilitation as appropriate.
+    `.trim(),
     provisions: [
       "United Nations Declaration on the Rights of Indigenous Peoples, 2007",
       "ILO Indigenous and Tribal Populations Convention, 1957 (No. 107)",
+      "ILO Indigenous and Tribal Peoples Convention, 1989 (No. 169)",
+      "ICCPR and ICESCR — common Article 1 and ICCPR Article 27",
       "Constitution of India — Articles 244, 275, 330, 332, 338A and 342",
       "Constitution of India — Fifth and Sixth Schedules",
       "Panchayats (Extension to Scheduled Areas) Act, 1996",
       "Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006",
+      "Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement Act, 2013",
+      "Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989",
+    ],
+    keyPoints: [
+      "Self-identification and community recognition are central internationally; Scheduled Tribe status is notification-based under Article 342.",
+      "Collective land, culture and governance rights enable individual dignity and equality.",
+      "India ratified ILO Convention No. 107 in 1958 but has not ratified Convention No. 169.",
+      "UNDRIP is an authoritative declaration, not a treaty, and India voted in favour in 2007.",
+      "UNDRIP combines non-discrimination with collective identity, land, culture and governance rights.",
+      "Indigenous self-determination ordinarily supports internal autonomy and participation, not automatic unilateral secession.",
+      "Land rights may arise from traditional ownership, occupation or use rather than formal title alone.",
+      "Consultation must be early, informed, culturally appropriate, representative and conducted in good faith.",
+      "FPIC means free, prior and informed collective decision-making through legitimate institutions.",
+      "Article 342 status is State- or Union-territory-specific and altered only by Parliament.",
+      "Article 338A establishes the National Commission for Scheduled Tribes.",
+      "The Fifth Schedule applies to Scheduled Areas outside the four Sixth Schedule States.",
+      "The Governor may adapt laws and make protective Fifth Schedule regulations subject to constitutional conditions.",
+      "PESA recognises Gram Sabha authority over culture, community resources and local development in Scheduled Areas.",
+      "The Sixth Schedule creates Autonomous District and Regional Councils with direct constitutional powers.",
+      "Fifth Schedule governance and Sixth Schedule autonomy are structurally distinct and not interchangeable.",
+      "The FRA recognises individual, community and community forest-resource rights to remedy historical injustice.",
+      "The Gram Sabha initiates FRA claims and has forest-protection responsibilities under Section 5.",
+      "Niyamgiri required Gram Sabha determination of specific religious and community forest-right claims.",
+      "Displacement analysis must coordinate land acquisition, PESA, FRA, forest, environmental and rehabilitation duties.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-7-samatha",
+        caseName: "Samatha v. State of Andhra Pradesh",
+        citation: "(1997) 8 SCC 191",
+        principle:
+          "Protective land-transfer law in Scheduled Areas must prevent indirect alienation of tribal land to private mining interests.",
+        summary:
+          "The Court connected land protection with economic empowerment, community survival and Fifth Schedule purposes.",
+      },
+      {
+        id: "human-rights-unit-7-orissa-mining",
+        caseName: "Orissa Mining Corporation Ltd. v. Ministry of Environment and Forest",
+        citation: "(2013) 6 SCC 476",
+        principle:
+          "Gram Sabhas must determine claimed religious, cultural and community forest rights before approval affecting them.",
+        summary:
+          "The Niyamgiri decision enforced FRA institutions and community participation in a proposed mining project.",
+      },
+      {
+        id: "human-rights-unit-7-banwasisewa",
+        caseName: "Banwasi Seva Ashram v. State of Uttar Pradesh",
+        citation: "(1986) 4 SCC 753",
+        principle:
+          "Development-related displacement requires fair process, legal assistance and rehabilitation of affected forest communities.",
+        summary:
+          "The Court supervised claims and protective arrangements for communities affected by acquisition.",
+      },
+      {
+        id: "human-rights-unit-7-lafarge",
+        caseName: "Lafarge Umiam Mining Pvt. Ltd. v. Union of India",
+        citation: "(2011) 7 SCC 338",
+        principle:
+          "Forest and development decision-making requires informed institutional appraisal, participation and sustainable-development analysis.",
+        summary:
+          "The judgment examined local institutions, forest clearance and intergenerational considerations in a Sixth Schedule setting.",
+      },
+      {
+        id: "human-rights-unit-7-chebrolu",
+        caseName: "Chebrolu Leela Prasad Rao v. State of Andhra Pradesh",
+        citation: "(2021) 11 SCC 401",
+        principle:
+          "Protective measures in Scheduled Areas remain subject to constitutional equality and cannot impose unsupported total exclusion.",
+        summary:
+          "The Court invalidated one-hundred-per-cent reservation of teaching posts while addressing Fifth Schedule authority.",
+      },
+      {
+        id: "human-rights-unit-7-action-committee",
+        caseName: "Action Committee on Issue of Caste Certificate v. Union of India",
+        citation: "(1994) 5 SCC 244",
+        principle:
+          "Scheduled Tribe recognition is linked to the State or territory specified in the Presidential notification.",
+        summary:
+          "Migration does not automatically carry every place-specific reservation benefit into another State.",
+      },
+      {
+        id: "human-rights-unit-7-state-maharashtra-milind",
+        caseName: "State of Maharashtra v. Milind",
+        citation: "(2001) 1 SCC 4",
+        principle:
+          "Courts and authorities cannot modify the Scheduled Tribe list by treating an unlisted group as synonymous with a listed one.",
+        summary:
+          "Article 342 assigns inclusion and exclusion from the Presidential list to Parliament.",
+      },
+      {
+        id: "human-rights-unit-7-kailas",
+        caseName: "Kailas v. State of Maharashtra",
+        citation: "(2011) 1 SCC 793",
+        principle:
+          "Violence and humiliation against tribal persons demand serious constitutional and criminal-law protection.",
+        summary:
+          "The Court stressed the historical injustice and equal dignity of tribal communities.",
+      },
+      {
+        id: "human-rights-unit-7-nandini-sundar",
+        caseName: "Nandini Sundar v. State of Chhattisgarh",
+        citation: "(2011) 7 SCC 547",
+        principle:
+          "The State cannot answer insecurity in tribal regions through unlawful arming and deployment that violates equality and life.",
+        summary:
+          "The judgment connected constitutional governance, development injustice and protection of tribal communities.",
+      },
+      {
+        id: "human-rights-unit-7-madhu-kishwar",
+        caseName: "Madhu Kishwar v. State of Bihar",
+        citation: "(1996) 5 SCC 125",
+        principle:
+          "Tribal custom and protective land tenure must be examined alongside women's equality, livelihood and succession rights.",
+        summary:
+          "The separate opinions illustrate the difficulty of reconciling community land protection with gender equality.",
+      },
     ],
     examFocus:
-      "Prepare international indigenous-rights development, the components of self-determination, land and participation rights, and a clear comparison of the Fifth and Sixth Schedule constitutional frameworks.",
+      "Prepare identification and discrimination; assimilation versus self-determined development; ILO Convention No. 107 and India's ratification, Convention No. 169 and India's non-ratification; UNDRIP's status, principles and India's support; self-determination, autonomy, culture, language, traditional knowledge, land and resources; consultation and FPIC; relocation and remedy; Articles 244, 275, 330, 332, 338A, 342 and 366(25); Scheduled Tribe notification; Fifth Schedule areas, TAC and Governor's powers; PESA Gram Sabha authority; Sixth Schedule District and Regional Councils; a clear Fifth–Sixth comparison; FRA rights, eligibility, claims and Section 5; Niyamgiri and Samatha; acquisition, displacement and rehabilitation; and correct institutional and writ remedies.",
+    revisionNotes:
+      "International identification stresses self-identification and community recognition; Indian Scheduled Tribe status comes from Article 342 notification and is territory-specific. India ratified ILO 107 in 1958, not ILO 169. UNDRIP adopted 2007 with India's affirmative vote: authoritative declaration, not treaty. Core rights: equality, identity, culture, institutions, land/resources, development, participation and internal self-determination. Consultation must be prior, informed, representative and in good faith; FPIC adds a collective consent standard according to the governing norm. Article 244: Fifth Schedule for Scheduled Areas generally; Sixth Schedule for tribal areas in Assam, Meghalaya, Tripura and Mizoram. Fifth: President declares areas; Governor reports, adapts laws and makes protective regulations with required consultation/assent; TAC advises. PESA extends self-government and Gram Sabha powers. Sixth: constitutionally empowered Autonomous District/Regional Councils with legislative, judicial, administrative and fiscal functions. FRA remedies historical injustice through individual/community rights; Gram Sabha initiates claims and protects forests. Niyamgiri enforced Gram Sabha determination; Samatha protected tribal land. For problems, identify person/status, territory, Schedule, subject, decision-maker, consultation/consent, cumulative statutes and remedy.",
   },
   {
     title: "Protection of Human Rights Act, 1993",
