@@ -487,6 +487,14 @@ export default function CourseDetails() {
     course?.slug ===
     "criminal-law-i-transitioning-from-ipc-to-bns";
 
+  const isCivilProcedureCourse =
+    course?.slug ===
+    "code-of-civil-procedure-and-limitation";
+
+  const hasLiveClasses =
+    isCriminalLawCourse ||
+    isCivilProcedureCourse;
+
   const liveClassAccess =
     isAdmin ||
     enrollment?.liveClasses?.hasAccess === true ||
@@ -495,7 +503,7 @@ export default function CourseDetails() {
   useEffect(() => {
     let active = true;
 
-    if (!liveClassAccess || !isCriminalLawCourse || !course?.id || isAdmin) {
+    if (!liveClassAccess || !hasLiveClasses || !course?.id || isAdmin) {
       return undefined;
     }
 
@@ -509,7 +517,7 @@ export default function CourseDetails() {
       });
 
     return () => { active = false; };
-  }, [course?.id, isAdmin, isCriminalLawCourse, liveClassAccess]);
+  }, [course?.id, hasLiveClasses, isAdmin, liveClassAccess]);
 
   const liveSessionByChapter = useMemo(
     () => Object.fromEntries(
@@ -523,7 +531,7 @@ export default function CourseDetails() {
 
   useEffect(() => {
     let active = true;
-    if (!isCriminalLawCourse) return undefined;
+    if (!hasLiveClasses) return undefined;
 
     fetch("/api/health", { cache: "no-store" })
       .then((response) => response.json())
@@ -535,7 +543,7 @@ export default function CourseDetails() {
       });
 
     return () => { active = false; };
-  }, [isCriminalLawCourse]);
+  }, [hasLiveClasses]);
 
   const hasCourseAccess =
     isAdmin ||
@@ -548,10 +556,6 @@ export default function CourseDetails() {
         certification?.mockTests?.[`test${number}`]?.status,
       ),
     );
-
-  const isCivilProcedureCourse =
-    course?.slug ===
-    "code-of-civil-procedure-and-limitation";
 
   const isTortsCourse =
     course?.slug ===
@@ -656,7 +660,7 @@ export default function CourseDetails() {
     };
 
   const handleLiveClassPayment = async () => {
-    if (!studentId || !course?.id || !isCriminalLawCourse) return;
+    if (!studentId || !course?.id || !hasLiveClasses) return;
 
     try {
       setLiveClassEnrolling(true);
@@ -1433,7 +1437,7 @@ export default function CourseDetails() {
                           }
                         </h3>
 
-                        {isCriminalLawCourse && (
+                        {hasLiveClasses && (
                           <div className="ns-chapter-live-class">
                             <div className={`ns-live-class-badge ${liveClassAccess ? "is-active" : "is-locked"}`}>
                               {liveClassAccess ? <FaVideo /> : <FaLock />}
@@ -1534,7 +1538,7 @@ export default function CourseDetails() {
         </Card>
       </div>
 
-      {isCriminalLawCourse && (
+      {hasLiveClasses && (
         <section className="ns-live-class-section">
           <div className="ns-live-class-card">
             <div className="ns-live-class-heading">

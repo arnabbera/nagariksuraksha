@@ -1,7 +1,10 @@
 const COURSE_FEE_PAISE = 4900;
 const LIVE_CLASS_FEE_PAISE = 49900;
 const PREMIUM_FEE_PAISE = COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE;
-const LIVE_CLASS_COURSE_ID = "criminal-law-i-transitioning-from-ipc-to-bns";
+const LIVE_CLASS_COURSE_IDS = new Set([
+  "criminal-law-i-transitioning-from-ipc-to-bns",
+  "code-of-civil-procedure-and-limitation",
+]);
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";
 const FIREBASE_ISSUER = `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
@@ -213,7 +216,7 @@ const getLiveSessions = async (request, env, url) => {
   if (request.method !== "GET") fail("Method not allowed.", 405);
   const studentId = await requireStudent(request);
   const courseId = String(url.searchParams.get("courseId") || "").trim();
-  if (courseId !== LIVE_CLASS_COURSE_ID) fail("Live classes are not available for this course.", 404);
+  if (!LIVE_CLASS_COURSE_IDS.has(courseId)) fail("Live classes are not available for this course.", 404);
 
   const { enrollment, token } = await getEnrollment(env, studentId, courseId);
   const fields = enrollment.fields || {};
@@ -511,7 +514,7 @@ const createOrder = async (request, env) => {
   if (!["certification", "live-classes", "premium"].includes(purchaseType)) {
     fail("Invalid enrollment plan.");
   }
-  if (purchaseType !== "certification" && courseId !== LIVE_CLASS_COURSE_ID) {
+  if (purchaseType !== "certification" && !LIVE_CLASS_COURSE_IDS.has(courseId)) {
     fail("Live classes are not available for this course yet.", 409);
   }
   const { enrollment, token } = await getEnrollment(env, studentId, courseId);
