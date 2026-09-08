@@ -495,7 +495,8 @@ export default function CourseDetails() {
     isCriminalLawCourse ||
     isCivilProcedureCourse ||
     course?.slug === "law-of-torts-mv-and-cp-laws" ||
-    course?.slug === "indian-constitutional-law-i";
+    course?.slug === "indian-constitutional-law-i" ||
+    course?.slug === "human-rights-law-and-practice";
 
   const liveClassAccess =
     isAdmin ||
