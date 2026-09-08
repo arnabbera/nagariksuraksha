@@ -493,7 +493,8 @@ export default function CourseDetails() {
 
   const hasLiveClasses =
     isCriminalLawCourse ||
-    isCivilProcedureCourse;
+    isCivilProcedureCourse ||
+    course?.slug === "law-of-torts-mv-and-cp-laws";
 
   const liveClassAccess =
     isAdmin ||

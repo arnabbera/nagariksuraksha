@@ -4,6 +4,7 @@ const PREMIUM_FEE_PAISE = COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE;
 const LIVE_CLASS_COURSE_IDS = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns",
   "code-of-civil-procedure-and-limitation",
+  "law-of-torts-mv-and-cp-laws",
 ]);
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";
