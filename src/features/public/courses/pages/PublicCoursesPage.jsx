@@ -255,8 +255,8 @@ export default function PublicCoursesPage() {
               </span>
 
               <h1>
-                LL.B Courses, Law Notes &
-                Study Materials
+                Certificate Courses in Legal
+                Studies
               </h1>
 
               <p>
