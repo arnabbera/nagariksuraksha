@@ -14,6 +14,39 @@ const bundledCourses = [
   humanRightsLawAndPracticeCourse,
 ];
 
+// These published LL.B. courses follow the eight-unit university syllabus.
+// Firestore's legacy course documents can still contain `0` because chapters
+// were added after the course record was created. Keep the public catalogue,
+// course details and enrollment cards aligned with the published curriculum.
+const publishedChapterTotals = {
+  "general-principles-of-contract": 8,
+  "code-of-civil-procedure-and-limitation": 8,
+  "family-law-i": 8,
+  "indian-constitutional-law-i": 8,
+  "law-of-torts-mv-and-cp-laws": 8,
+  "criminal-law-i": 8,
+  "public-international-law": 8,
+  "environmental-law": 8,
+  "human-rights-law-and-practice": 8,
+};
+
+const withPublishedChapterTotal = (course) => {
+  if (!course) return course;
+
+  const courseKey = course.slug || course.id;
+  const publishedTotal = publishedChapterTotals[courseKey];
+
+  if (!publishedTotal) return course;
+
+  return {
+    ...course,
+    totals: {
+      ...(course.totals || {}),
+      chapters: publishedTotal,
+    },
+  };
+};
+
 const mergeCourses = (courses = []) => {
   const courseMap = new Map(
     bundledCourses.map((course) => [course.id, course]),
@@ -23,7 +56,7 @@ const mergeCourses = (courses = []) => {
     if (course?.id) courseMap.set(course.id, course);
   }
 
-  return [...courseMap.values()].sort(
+  return [...courseMap.values()].map(withPublishedChapterTotal).sort(
     (first, second) =>
       Number(first.order || 0) - Number(second.order || 0) ||
       String(first.title || "").localeCompare(String(second.title || "")),
@@ -68,7 +101,9 @@ export const getCourseById = async (courseId) => {
 
   const storedCourse = await courseRepository.getById(courseId);
 
-  return storedCourse || bundledCourses.find((course) => course.id === courseId) || null;
+  return withPublishedChapterTotal(
+    storedCourse || bundledCourses.find((course) => course.id === courseId) || null,
+  );
 };
 
 export const getCourseBySlug = async (slug) => {
@@ -79,7 +114,9 @@ export const getCourseBySlug = async (slug) => {
   const normalizedSlug = normalizeSlug(slug);
   const storedCourse = await courseRepository.getBySlug(normalizedSlug);
 
-  return storedCourse || bundledCourses.find((course) => course.slug === normalizedSlug) || null;
+  return withPublishedChapterTotal(
+    storedCourse || bundledCourses.find((course) => course.slug === normalizedSlug) || null,
+  );
 };
 
 export const getAllCourses = async () =>
