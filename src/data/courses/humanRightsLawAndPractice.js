@@ -360,7 +360,210 @@ For an essay, use a clear sequence: definition and characteristics; historical d
       "Identify and compare the rights protected by the UDHR, ICCPR and ICESCR.",
       "Analyse the relationship between civil-political and economic-social-cultural rights.",
       "Evaluate generations of rights and the law governing treaty reservations.",
+      "Distinguish immediate obligations, progressive realisation, limitations and derogations.",
+      "Explain the Covenants' reporting, monitoring and individual-communication systems.",
+      "State India's accession position and interpret its declarations and reservation accurately.",
+      "Apply international standards within the Indian constitutional and statutory framework.",
     ],
+    detailedContent: `
+1. Meaning of the International Bill of Human Rights
+
+The expression “International Bill of Human Rights” ordinarily refers to the Universal Declaration of Human Rights, 1948, the International Covenant on Civil and Political Rights, 1966, the International Covenant on Economic, Social and Cultural Rights, 1966, and the Optional Protocols associated with the Covenants. The Declaration supplies a common normative framework; the Covenants translate its broad vision into treaty obligations for States parties; and the Optional Protocols create additional procedures or commitments for States that separately accept them.
+
+The International Bill does not form a single document adopted on one date. It is a body of interconnected instruments developed over several decades. Their shared premise is that freedom, justice and peace depend upon recognition of the inherent dignity and equal and inalienable rights of every human being.
+
+2. United Nations Charter foundation
+
+The United Nations Charter, signed in 1945, made promotion of human rights and fundamental freedoms one of the purposes of the United Nations. Articles 1(3), 55 and 56 established an international commitment to cooperation in promoting universal respect for human rights without prohibited distinction. The Charter did not enumerate a complete catalogue of rights, so the new organisation began work on a more detailed declaration.
+
+The Economic and Social Council created the Commission on Human Rights in 1946. The Commission, chaired during the central drafting period by Eleanor Roosevelt, worked with representatives from different legal, political, religious and cultural traditions. The drafting history reflects contributions from many States and individuals and should not be reduced to the work of one country or one philosophical tradition.
+
+3. From one proposed bill to a declaration and treaties
+
+The original project contemplated an international bill containing principles, binding obligations and implementation machinery. Political disagreement arose over legal form, enforceability, the place of socio-economic rights, federal arrangements, colonialism and the appropriate supervisory system. The first major achievement was therefore a declaration rather than an immediately binding global treaty.
+
+The General Assembly adopted the UDHR on 10 December 1948 by Resolution 217 A (III). Work continued on binding covenants. Cold War disagreement, decolonisation and different views about implementation contributed to the decision to prepare two treaties. Both Covenants were adopted by General Assembly Resolution 2200 A (XXI) on 16 December 1966. They entered into force in 1976 after receiving the required number of ratifications or accessions.
+
+4. Nature and legal significance of the UDHR
+
+The UDHR is a General Assembly declaration, not a treaty. It did not by itself create the same conventional obligations as a ratified covenant. Its legal importance is nevertheless profound. It became the foundation for later treaties, constitutions, legislation, regional systems and judicial interpretation. Some of its norms overlap with obligations found in the UN Charter, later treaty law and customary international law; the legal status of each particular norm must be assessed separately rather than treating the entire Declaration mechanically as either binding or non-binding.
+
+The Declaration describes itself as a common standard of achievement for all peoples and all nations. It connects civil and political freedom with economic, social and cultural security within one document. This integrated structure is essential when explaining indivisibility.
+
+5. Structure of the UDHR
+
+The Preamble identifies inherent dignity and equal and inalienable rights as the foundation of freedom, justice and peace. Articles 1 and 2 state equality, dignity, freedom and non-discrimination. Articles 3 to 11 protect life, liberty, security, freedom from slavery and torture, recognition before the law, equality before law, effective remedy, freedom from arbitrary arrest and fair-trial guarantees.
+
+Articles 12 to 17 protect privacy, movement, asylum, nationality, marriage and family, and property. Articles 18 to 21 cover thought, conscience, religion, opinion, expression, peaceful assembly, association, public participation and equal access to public service. Articles 22 to 27 concern social security, work, equal pay, trade unions, rest and leisure, an adequate standard of living, special care for motherhood and childhood, education and participation in cultural and scientific life.
+
+Articles 28 to 30 address the social and international order necessary for realisation, duties to the community, lawful limitations, and the prohibition against interpreting the Declaration to destroy protected rights. Article 29 does not permit unlimited restriction: limitations must be determined by law and pursue the specified purposes in a democratic society.
+
+6. The ICCPR: purpose and structure
+
+The ICCPR gives treaty form to civil and political rights. Part I contains the right of peoples to self-determination. Part II addresses general obligations, non-discrimination, equal rights of men and women, emergency derogation and safeguards against destruction or unjustified restriction of rights. Part III sets out the substantive rights. Parts IV to VI establish the Human Rights Committee and deal with implementation and final clauses.
+
+Under Article 2, each State party undertakes to respect and ensure Covenant rights to persons within its territory and subject to its jurisdiction, without prohibited distinction, and to provide an effective remedy. The obligation applies to all branches and levels of government. Necessary legislative, judicial, administrative and educational measures may be required.
+
+7. Life, integrity and liberty under the ICCPR
+
+Article 6 protects the inherent right to life and regulates capital punishment in States that have not abolished it. Article 7 prohibits torture and cruel, inhuman or degrading treatment or punishment and protects against non-consensual medical or scientific experimentation. Article 8 prohibits slavery, servitude and specified forced or compulsory labour.
+
+Article 9 protects liberty and security and prohibits arbitrary arrest or detention. It requires information about reasons and charges, prompt production before judicial authority, trial within a reasonable time or release, court review of detention and an enforceable right to compensation for unlawful arrest or detention. Article 10 requires humane treatment and respect for the dignity of persons deprived of liberty. Article 11 prohibits imprisonment merely for inability to fulfil a contractual obligation.
+
+8. Justice, legal personality and movement
+
+Article 14 guarantees equality before courts and tribunals and fair-hearing and criminal-process protections, including presumption of innocence and minimum defence rights. Article 15 prohibits retrospective criminal liability and heavier retrospective punishment while allowing trial for conduct criminal under general principles recognised by the community of nations. Article 16 protects recognition as a person before the law.
+
+Article 12 protects liberty of movement, choice of residence, the right to leave any country and freedom from arbitrary deprivation of the right to enter one's own country. Restrictions must be provided by law, necessary for the listed purposes and consistent with other Covenant rights. Article 13 provides procedural protection for lawfully present aliens facing expulsion, subject to the national-security exception stated in the article.
+
+9. Privacy, conscience, expression and participation
+
+Article 17 protects against arbitrary or unlawful interference with privacy, family, home and correspondence and against unlawful attacks on honour and reputation. Article 18 protects thought, conscience and religion. The freedom to have or adopt a religion or belief and the forum internum receive especially strong protection; manifestation may be limited only under the specific treaty test.
+
+Article 19 protects opinion and expression. Restrictions on expression must be provided by law and necessary for respect of the rights or reputations of others or for national security, public order, public health or morals. Article 20 requires prohibition by law of propaganda for war and specified advocacy of national, racial or religious hatred constituting incitement. Articles 21 and 22 protect peaceful assembly and association. Article 25 protects participation in public affairs, voting, election and equal access to public service.
+
+10. Equality, family, children and minorities
+
+Article 23 protects the family and free and full consent to marriage. Article 24 gives every child rights to protective measures, registration, a name and nationality. Article 26 contains an autonomous guarantee of equality before law and equal protection without discrimination; it is not confined to other Covenant rights. Article 27 protects the ability of persons belonging to ethnic, religious or linguistic minorities to enjoy culture, profess and practise religion, and use language in community with others.
+
+Equality under the Covenant includes more than identical treatment. Differentiation requires objective and reasonable justification, and affirmative measures may be necessary to correct conditions that prevent equal enjoyment.
+
+11. Limitations and derogations under the ICCPR
+
+Some rights contain specific limitation clauses. A restriction must satisfy the wording of the particular article: legality, legitimate purpose, necessity, proportionality and consistency with the Covenant. Broad invocation of security, public order or morality does not replace evidence and reasons. The essence of the right must remain protected.
+
+Article 4 deals separately with public emergencies threatening the life of the nation and officially proclaimed. Derogating measures must be strictly required by the exigencies of the situation, consistent with other international obligations, and non-discriminatory on the prohibited grounds stated there. The State must notify through the UN Secretary-General. Articles 6, 7, 8(1) and 8(2), 11, 15, 16 and 18 are expressly non-derogable. Limitation during ordinary conditions and emergency derogation are distinct legal tests.
+
+12. Human Rights Committee and State reporting
+
+Articles 28 to 45 establish the Human Rights Committee, a body of independent experts. States parties submit reports on measures adopted and progress in enjoying Covenant rights. The Committee examines reports, conducts a constructive dialogue, issues concluding observations and develops General Comments explaining its interpretation of Covenant obligations.
+
+Under Article 41, the Committee may consider interstate communications only where the States concerned have recognised that competence. The Committee is not a criminal court and its treaty-body functions must not be confused with the UN Human Rights Council, which is an intergovernmental political body created later.
+
+13. First Optional Protocol to the ICCPR
+
+The First Optional Protocol permits the Human Rights Committee to receive communications from individuals claiming to be victims of Covenant violations by a State party to the Protocol. Treaty competence depends upon separate participation in the Protocol. Admissibility requirements include victim status, jurisdiction, exhaustion of available domestic remedies, non-anonymity and other procedural conditions.
+
+The Committee adopts Views rather than judgments of a domestic appellate court. States parties to the Protocol undertake to recognise the Committee's competence and are expected to give effect in good faith to its findings and follow-up process. India is a party to the ICCPR but has not accepted the First Optional Protocol; therefore an individual cannot bring a communication against India under that Protocol.
+
+14. Second Optional Protocol to the ICCPR
+
+The Second Optional Protocol aims at abolition of the death penalty. A participating State undertakes not to execute persons within its jurisdiction and to take necessary measures to abolish the death penalty, subject only to the narrowly framed wartime reservation permitted by the Protocol when made at ratification or accession.
+
+Participation in the ICCPR does not automatically make a State party to this Protocol. India has not acceded to the Second Optional Protocol. The treaty status must be distinguished from India's domestic constitutional doctrine and statutory retention of capital punishment.
+
+15. ICESCR: purpose and structure
+
+The ICESCR protects economic, social and cultural rights. Part I shares with the ICCPR the right of peoples to self-determination. Part II contains general obligations, non-discrimination, equality between men and women, limitations and safeguards. Part III enumerates substantive rights. Part IV establishes an international reporting framework, and Part V contains final clauses.
+
+The Covenant rejects the idea that freedom means only absence of interference. Human freedom also requires conditions enabling people to live free from want and to participate in social and cultural life. The duty-bearing framework therefore includes law, policy, budgeting, regulation, public services, social protection and remedies.
+
+16. Work, social security and family protection
+
+Article 6 recognises the right to work, including the opportunity to gain a living by work freely chosen or accepted, and requires steps such as guidance, training and policies for productive employment. Article 7 protects just and favourable conditions, fair wages, equal remuneration, safe and healthy conditions, equal opportunity for promotion, rest and reasonable working hours.
+
+Article 8 protects trade-union rights and the right to strike subject to lawful conditions. Article 9 recognises social security, including social insurance. Article 10 requires the widest possible protection and assistance for the family, free consent to marriage, special protection for mothers, and protection of children and young persons from exploitation and harmful work.
+
+17. Adequate living, health, education and culture
+
+Article 11 protects an adequate standard of living, including adequate food, clothing and housing, and continuous improvement of living conditions; it separately recognises the fundamental right to freedom from hunger. Article 12 recognises the right to the highest attainable standard of physical and mental health and identifies measures concerning child health, environmental and industrial hygiene, disease control and medical services.
+
+Articles 13 and 14 protect education and its aims, progressive introduction of free secondary and higher education, parental liberty and a plan for compulsory primary education where not yet achieved. Article 15 protects participation in cultural life, enjoyment of scientific progress, protection of authors' moral and material interests, scientific freedom and international cooperation.
+
+18. Article 2(1): progressive realisation
+
+Each State party undertakes to take steps, individually and through international assistance and cooperation, to the maximum of its available resources, with a view to achieving progressively the full realisation of Covenant rights by all appropriate means, particularly legislation. Progressive realisation recognises that full implementation may require time and resources; it is not permission for indefinite inaction.
+
+The duty to take deliberate, concrete and targeted steps begins immediately. Non-discrimination and the equal right of men and women are immediate obligations. A State must justify retrogressive measures with close attention to the totality of rights and maximum available resources. Resource scarcity affects the choice and pace of measures but does not erase duties to prioritise vulnerable groups, prevent discrimination, use available resources fairly and maintain accountability.
+
+19. Minimum essential levels and maximum available resources
+
+The Committee on Economic, Social and Cultural Rights has explained that each right has minimum essential levels whose non-fulfilment requires especially strong justification. Assessment is contextual and must consider whether the State used maximum available resources, including through reasonable revenue, allocation and international-cooperation choices.
+
+Courts need not design every budget to protect socio-economic rights. They can examine exclusion, irrationality, discrimination, statutory duties, minimum protection, procedural fairness and whether the State has adopted and implemented a reasonable rights-oriented programme. Remedies may combine individual relief with structural directions while respecting institutional competence.
+
+20. Committee on Economic, Social and Cultural Rights
+
+The ICESCR originally assigned reporting supervision through the Economic and Social Council. The Committee on Economic, Social and Cultural Rights was later created by ECOSOC to perform the expert monitoring function. It reviews periodic State reports, holds dialogue, issues concluding observations and adopts General Comments.
+
+The Committee's interpretations address subjects such as housing, food, health, water, education, work, social security and non-discrimination. General Comments are not amendments to the treaty, but they are important expert interpretations used to understand the content of obligations.
+
+21. Optional Protocol to the ICESCR
+
+The Optional Protocol to the ICESCR, adopted in 2008 and in force since 2013, permits individual or group communications against participating States, subject to admissibility rules including exhaustion of domestic remedies. It also provides for interstate communications and an inquiry procedure where the relevant optional competence is accepted.
+
+The Protocol reinforces that economic, social and cultural rights are capable of legal examination and remedy. India has not become a party to this Optional Protocol. Indian claimants must therefore rely on available domestic processes and other applicable international mechanisms rather than a communication against India under this Protocol.
+
+22. Relationship between ICCPR and ICESCR rights
+
+The two Covenants differ in the wording of their general obligations and in some enforcement mechanisms, but they are not rival or hierarchically ordered texts. Both share the right to self-determination, equality between men and women, non-discrimination and protection against destruction of rights. The UDHR and Vienna Declaration support an integrated understanding.
+
+Civil and political rights often require positive expenditure: fair courts, elections, legal aid, humane prisons and investigation of violence all require institutions and resources. Economic and social rights contain immediate restraints and justiciable duties: forced eviction, discriminatory denial of health care or arbitrary withdrawal of social security cannot be dismissed merely as matters of progressive policy.
+
+Rights are practically interdependent. Education enables political participation; health affects autonomy and work; privacy protects family and identity; freedom of association supports trade unions; food and shelter sustain life; expression and information enable accountability for social programmes. The division into two Covenants reflects historical and political compromise rather than a natural separation of human needs.
+
+23. First, second and third generations of rights
+
+The “generations” classification is commonly associated with Karel Vasak. First-generation rights generally refer to civil and political liberties; second-generation rights to economic, social and cultural guarantees; and third-generation or solidarity rights to claims such as development, peace, a healthy environment and concerns held collectively or requiring international cooperation.
+
+The classification is a teaching device, not a rule of treaty priority. The metaphor may wrongly suggest that later categories replaced earlier ones or that one category is inherently less legal. Rights developed through overlapping struggles, and many rights resist neat placement. Self-determination appears in both Covenants; environmental harm affects life, health, culture and equality; and development must be human-rights based. Use generations to organise an answer, then emphasise universality, indivisibility and interdependence.
+
+24. Meaning of a treaty reservation
+
+A reservation is a unilateral statement, however phrased or named, made by a State when signing, ratifying, accepting, approving or acceding to a treaty, by which it purports to exclude or modify the legal effect of certain treaty provisions in their application to that State. An interpretative declaration merely states an understanding without purporting to change legal effect. The label used by the State is not decisive; substance controls.
+
+Under the Vienna Convention on the Law of Treaties framework, a reservation is impermissible if prohibited by the treaty, outside the treaty's permitted reservations, or incompatible with its object and purpose. Articles 20 to 23 address acceptance, objection, legal effects, withdrawal and procedure. India is not a party to the Vienna Convention, but important reservation rules reflected in it are treated as rules of customary international law.
+
+25. Reservations in human-rights treaties
+
+Human-rights treaties differ from ordinary reciprocal bargains because their purpose is to protect persons subject to State jurisdiction. A broad reservation can fragment minimum protection or make the extent of obligation uncertain. The International Court of Justice's Reservations to the Genocide Convention advisory opinion placed the object-and-purpose test at the centre of compatibility.
+
+The Human Rights Committee's General Comment No. 24 analyses reservations to the ICCPR, including reservations affecting non-derogable norms, effective remedies and the Committee's supervisory role. Questions concerning who determines compatibility and whether an invalid reservation is severable remain debated. In an answer, identify the exact statement, decide whether it modifies legal effect, apply treaty-specific rules and the object-and-purpose test, note objections, and explain the legal consequence carefully.
+
+26. India's accession to the Covenants
+
+India acceded to the ICCPR and ICESCR on 10 April 1979; both entered into force for India on 10 July 1979. Accession has the same international effect as ratification after signature: India became bound as a State party, subject to valid declarations or reservations. India did not become party merely because it voted for the UDHR or because similar rights appear in the Constitution.
+
+India is not party to the First or Second Optional Protocol to the ICCPR or the Optional Protocol to the ICESCR. Covenant participation and Optional Protocol participation must always be checked separately.
+
+27. India's declaration on self-determination
+
+With reference to common Article 1 of both Covenants, India declared that the right of self-determination applies only to peoples under foreign domination and not to sovereign independent States or to a section of a people or nation, invoking national integrity. France, the Netherlands and Pakistan recorded objections to India's position in the treaty-depositary record.
+
+The issue illustrates why the name “declaration” is not conclusive. If a statement narrows the legal effect of a treaty obligation, other States or supervisory bodies may treat it as a reservation and assess compatibility with the treaty's object and purpose.
+
+28. India's ICCPR positions on liberty and foreigners
+
+For ICCPR Article 9, India stated that the article would be applied consistently with Article 22(3) to (7) of the Constitution concerning preventive detention. India further stated that under the Indian legal system there was no enforceable right to compensation against the State for unlawful arrest or detention. Subsequent Indian constitutional jurisprudence developed public-law compensation under Articles 32 and 226 in cases such as Rudul Sah and Nilabati Behera, materially affecting the domestic-law premise stated in 1979 even though withdrawal or modification of a depositary statement is a separate international act.
+
+For ICCPR Article 13, India expressly reserved the right to apply its law relating to foreigners. The reservation concerns expulsion protections for aliens lawfully in the territory and should not be confused with a general power to disregard constitutional or other international duties.
+
+29. India's positions concerning freedoms and equality
+
+India declared that ICESCR Articles 4 and 8 and ICCPR Articles 12, 19(3), 21 and 22 would be applied in conformity with Article 19 of the Constitution of India. These provisions concern permissible limitations, trade-union rights, movement, expression, assembly and association. The statement connects Covenant application with the Constitution, but international treaty responsibility cannot ordinarily be avoided merely by relying on inconsistent internal law.
+
+For ICESCR Article 7(c), concerning equal opportunity for promotion in employment, India declared that it would apply the provision in conformity with Article 16(4) of the Constitution, which authorises reservation in appointments or posts for inadequately represented backward classes. This reflects India's understanding that substantive equality and constitutionally authorised affirmative action are compatible with equal opportunity.
+
+30. International treaties in Indian law
+
+Article 51(c) directs the State to foster respect for international law and treaty obligations. Parliament has power under Article 253 to make laws implementing treaties. Treaty-making does not by itself amend the Constitution, and a treaty provision requiring a change in domestic rights or liabilities may need legislation before it can be directly enforced as municipal law.
+
+In Jolly George Varghese v. Bank of Cochin, the Supreme Court explained that an international covenant does not automatically become enforceable domestic law without legislative transformation, while also using its values in interpretation. In Vishaka v. State of Rajasthan, the Court held that international conventions consistent with Fundamental Rights and not in conflict with domestic law may inform constitutional interpretation, and it used CEDAW to address a legislative vacuum.
+
+The correct proposition is therefore neither that treaties are irrelevant nor that every treaty clause is automatically self-executing. Courts interpret domestic law, where possible, consistently with international obligations; constitutional supremacy and enacted law remain central; and Article 253 provides the legislative route for implementation.
+
+31. Indian constitutional convergence
+
+Many ICCPR guarantees correspond with Part III: equality, life and liberty, criminal safeguards, freedoms, religion, minority rights and constitutional remedies. ICESCR rights resonate strongly with Directive Principles concerning livelihood, equal pay, health, education, humane work, legal aid and social welfare. Judicial interpretation of Article 21 has connected enforceable rights with livelihood, health, education, shelter, environment, privacy and dignity.
+
+This convergence demonstrates interdependence, but correspondence is not identity. Treaty wording, limitation clauses, beneficiaries and remedies may differ from constitutional provisions. An examination answer should map the relevant rights provision by provision and identify the Indian source of enforceability.
+
+32. Problem-solving and examination method
+
+For a Covenant problem, follow this sequence: identify the instrument and India's participation; locate the substantive right; identify the general obligation; determine whether the issue concerns limitation, derogation or progressive realisation; check non-discrimination and remedy; identify any reservation or declaration; examine monitoring or Optional Protocol competence; and then analyse domestic enforceability under the Constitution and legislation.
+
+For an essay, explain formulation, legal nature and structure before listing rights. Compare the Covenants through their obligations and institutions, not through the inaccurate claim that ICCPR rights cost nothing while ICESCR rights are merely aspirations. Treat generations as a heuristic. For reservations, define by legal effect, apply the object-and-purpose test, state India's five-part depositary position accurately and distinguish international validity from domestic constitutional development.
+    `.trim(),
     topics: [
       "Formulation of the International Bill of Human Rights",
       "Universal Declaration of Human Rights, 1948",
@@ -378,9 +581,115 @@ For an essay, use a clear sequence: definition and characteristics; historical d
       "International Covenant on Civil and Political Rights, 1966",
       "International Covenant on Economic, Social and Cultural Rights, 1966",
       "Vienna Convention on the Law of Treaties, 1969 — Articles 19–23",
+      "Charter of the United Nations, 1945 — Articles 1(3), 55 and 56",
+      "First Optional Protocol to the ICCPR, 1966",
+      "Second Optional Protocol to the ICCPR, 1989",
+      "Optional Protocol to the ICESCR, 2008",
+      "Vienna Declaration and Programme of Action, 1993 — Paragraph 5",
+      "Constitution of India — Articles 51(c), 73 and 253",
+    ],
+    keyPoints: [
+      "The International Bill comprises the UDHR, ICCPR, ICESCR and associated Optional Protocols.",
+      "The UN Charter internationalised promotion of human rights but did not enumerate a complete catalogue.",
+      "The UDHR is a declaration and common standard; the Covenants are binding treaties for their States parties.",
+      "The UDHR integrates civil, political, economic, social and cultural rights in one instrument.",
+      "ICCPR Article 2 requires States to respect and ensure rights and provide an effective remedy.",
+      "ICCPR limitations must satisfy the particular right's legality, legitimate-purpose, necessity and proportionality requirements.",
+      "Article 4 emergency derogation is distinct from ordinary limitation and contains strict conditions and non-derogable rights.",
+      "The Human Rights Committee monitors the ICCPR; it is distinct from the intergovernmental Human Rights Council.",
+      "Individual communications under the ICCPR require separate participation in the First Optional Protocol.",
+      "ICESCR Article 2(1) requires immediate concrete steps using maximum available resources toward progressive realisation.",
+      "Non-discrimination and equal rights of men and women are immediate ICESCR obligations.",
+      "Progressive realisation does not authorise indefinite inaction or unexplained retrogression.",
+      "The CESCR monitors implementation and develops General Comments on economic, social and cultural rights.",
+      "Civil-political and socio-economic-cultural rights are universal, indivisible, interdependent and interrelated.",
+      "The generations model is a teaching classification, not a chronology of replacement or hierarchy.",
+      "A reservation is defined by its intended legal effect, not the label attached to it.",
+      "A reservation incompatible with a treaty's object and purpose is impermissible under the governing treaty-law framework.",
+      "India acceded to both Covenants on 10 April 1979; they entered into force for India on 10 July 1979.",
+      "India has not accepted the three principal individual-complaint or abolition Optional Protocols discussed in this unit.",
+      "India's depositary statements address self-determination, preventive detention and compensation, foreigners, Article 19 freedoms, unions and promotion equality.",
+      "Later Indian public-law compensation decisions changed the domestic legal position underlying part of India's 1979 Article 9 statement.",
+      "Treaty norms are not automatically enforceable municipal law in India, but compatible international standards can guide constitutional interpretation.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-2-reparations-genocide-reservations",
+        caseName: "Reservations to the Convention on the Prevention and Punishment of the Crime of Genocide",
+        citation: "ICJ Advisory Opinion, 1951",
+        principle:
+          "Compatibility with a treaty's object and purpose is central to assessing reservations in a multilateral protective convention.",
+        summary:
+          "The advisory opinion shaped the modern treaty-law approach to reservations beyond strict unanimity.",
+      },
+      {
+        id: "human-rights-unit-2-jolly-george",
+        caseName: "Jolly George Varghese v. Bank of Cochin",
+        citation: "(1980) 2 SCC 360",
+        principle:
+          "A Covenant obligation does not automatically become enforceable municipal law without legislative transformation, though it can guide interpretation.",
+        summary:
+          "The Court considered ICCPR Article 11 while applying Indian civil procedure and emphasised harmonious interpretation where possible.",
+      },
+      {
+        id: "human-rights-unit-2-rudul-sah",
+        caseName: "Rudul Sah v. State of Bihar",
+        citation: "(1983) 4 SCC 141",
+        principle:
+          "The Supreme Court may award public-law monetary relief for grave unlawful deprivation of liberty.",
+        summary:
+          "Compensation for continued detention after acquittal helped develop an enforceable domestic remedy relevant to ICCPR Article 9(5).",
+      },
+      {
+        id: "human-rights-unit-2-nilabati-behera",
+        caseName: "Nilabati Behera v. State of Orissa",
+        citation: "(1993) 2 SCC 746",
+        principle:
+          "Public-law compensation for violation of fundamental rights is distinct from private-law damages and sovereign-immunity defences.",
+        summary:
+          "The Court strengthened the constitutional compensation remedy for custodial death and Article 21 violation.",
+      },
+      {
+        id: "human-rights-unit-2-vishaka",
+        caseName: "Vishaka v. State of Rajasthan",
+        citation: "(1997) 6 SCC 241",
+        principle:
+          "International conventions consistent with Fundamental Rights and not conflicting with domestic law may inform constitutional interpretation.",
+        summary:
+          "The Court used CEDAW and constitutional guarantees to frame workplace safeguards in a legislative vacuum.",
+      },
+      {
+        id: "human-rights-unit-2-apparel-export",
+        caseName: "Apparel Export Promotion Council v. A.K. Chopra",
+        citation: "(1999) 1 SCC 759",
+        principle:
+          "Constitutional equality and dignity should be read consistently with international obligations protecting women from workplace harassment.",
+        summary:
+          "The Court reaffirmed the relevance of CEDAW and Vishaka principles in domestic adjudication.",
+      },
+      {
+        id: "human-rights-unit-2-gramophone-company",
+        caseName: "Gramophone Company of India Ltd. v. Birendra Bahadur Pandey",
+        citation: "(1984) 2 SCC 534",
+        principle:
+          "Domestic law should be interpreted consistently with international law where possible, but clear binding legislation controls in case of unavoidable conflict.",
+        summary:
+          "The decision explains the interpretive relationship between international law and Indian municipal law.",
+      },
+      {
+        id: "human-rights-unit-2-pucl-phone-tapping",
+        caseName: "People's Union for Civil Liberties v. Union of India",
+        citation: "(1997) 1 SCC 301",
+        principle:
+          "Telephone interception affects privacy and must comply with lawful procedure and safeguards against arbitrary power.",
+        summary:
+          "The Court's safeguards demonstrate convergence between constitutional privacy and international civil-liberty standards.",
+      },
     ],
     examFocus:
-      "Compare the UDHR, ICCPR and ICESCR; explain indivisibility and progressive realisation; classify the generations of rights; and discuss the validity and effect of reservations with reference to Indian practice.",
+      "Prepare the UN Charter background and drafting sequence; nature and 30-article structure of the UDHR; ICCPR general obligations, substantive rights, limitations, Article 4 derogation, non-derogable rights and Human Rights Committee; the two ICCPR Optional Protocols; ICESCR rights, Article 2(1), immediate duties, maximum available resources, progressive realisation, minimum essential levels and CESCR; the ICESCR Optional Protocol; indivisibility and practical interdependence; the first, second and third generations as a non-hierarchical teaching device; reservation definition and Articles 19–23 of the Vienna Convention framework; object-and-purpose analysis; India's accession on 10 April 1979; India's five numbered depositary statements; objections to its self-determination declaration; its non-participation in the Optional Protocols; Articles 51(c) and 253 of the Constitution; and Jolly George, Rudul Sah, Nilabati Behera, Gramophone Company, Vishaka, Apparel Export Promotion Council and PUCL.",
+    revisionNotes:
+      "International Bill = UDHR + ICCPR + ICESCR + associated Optional Protocols. UDHR: declaration and common standard, 30 integrated articles. ICCPR: respect and ensure, effective remedy, civil-political rights, specific limitation tests, Article 4 emergency derogation and expressly non-derogable rights; monitored by the Human Rights Committee. ICESCR: take immediate deliberate steps, maximum available resources, progressive realisation, non-discrimination, equality and minimum essential protection; monitored by CESCR. Rights across both Covenants are indivisible and interdependent. Generations are a study aid, not a hierarchy. Reservation = statement intended to exclude or modify legal effect; test treaty permission and object-purpose compatibility. India acceded to both Covenants on 10 April 1979, effective 10 July 1979, with statements on common Article 1; ICCPR Articles 9 and 13; ICESCR Articles 4, 7(c), 8; and ICCPR Articles 12, 19(3), 21 and 22. India has not joined the First or Second ICCPR Optional Protocol or the ICESCR Optional Protocol. Domestic method: Articles 51(c) and 253; Jolly George rejects automatic enforceability; Vishaka permits compatible international norms to guide constitutional interpretation; Rudul Sah and Nilabati Behera developed constitutional compensation relevant to Article 9(5).",
   },
   {
     title: "Protection Against Inhuman Wrongs",
