@@ -1042,29 +1042,348 @@ Next identify the applicable instrument, India's treaty status, domestic constit
       "Distinguish enforceable Fundamental Rights from judicially cognizable Directive Principles.",
       "Explain the domestic use of international human-rights instruments.",
       "Apply Articles 32 and 226 and public-law remedies to human-rights violations.",
+      "Explain the integrated interpretation of equality, freedom and dignity under Articles 14, 19 and 21.",
+      "Select the appropriate constitutional writ, forum, standing rule and remedy for a violation.",
+      "Analyse PIL, constitutional compensation and continuing mandamus with their procedural safeguards.",
+      "Evaluate the limits imposed by legislation, separation of powers and institutional capacity.",
     ],
-    topics: [
-      "ICCPR rights and Part III of the Constitution",
-      "ICESCR rights and the Directive Principles",
-      "Preamble, Fundamental Rights and Fundamental Duties",
-      "Judicial enforceability and judicial cognizability",
-      "Enlargement of Article 21",
-      "Equality and non-discrimination under Articles 14–18",
-      "Freedoms and permissible restrictions under Article 19",
-      "Constitutional remedies under Articles 32 and 226",
-      "Public-interest litigation and epistolary jurisdiction",
-      "Compensation and continuing mandamus",
-      "Use of international law by Indian courts",
-    ],
+    detailedContent: `
+1. Human rights and the Indian constitutional order
+
+The Constitution transforms claims of liberty, equality and dignity into binding public law. Its Preamble promises social, economic and political justice; liberty of thought, expression, belief, faith and worship; equality of status and opportunity; and fraternity assuring individual dignity. Part III contains judicially enforceable Fundamental Rights. Part IV directs governance toward social and economic democracy, while Part IVA states civic duties.
+
+International human-rights law and constitutional law overlap but are not identical. The ICCPR and ICESCR bind India internationally, while domestic enforceability depends upon the Constitution, legislation and judicial doctrine. A treaty norm may correspond to an existing Fundamental Right, guide its interpretation, require implementing legislation, or remain an international obligation without a directly enforceable domestic cause of action.
+
+2. India and the 1966 Covenants
+
+India acceded to the ICCPR and ICESCR on 10 April 1979; both entered into force for India on 10 July 1979. The Covenants require periodic reporting to their respective treaty bodies. India is not party to the First or Second Optional Protocol to the ICCPR or the Optional Protocol to the ICESCR, so those individual-communication procedures are unavailable against India.
+
+India entered declarations concerning self-determination and the application of specified provisions within its constitutional system. Treaty status must be stated accurately: accession creates international obligations, but it does not by itself insert every covenant article into Indian statutory law.
+
+3. ICCPR rights and Part III
+
+The ICCPR's civil and political guarantees substantially correspond with Part III: life and personal liberty with Article 21; equality and non-discrimination with Articles 14–16; freedom of conscience and religion with Articles 25–28; expression, assembly and association with Article 19; protection against forced labour with Article 23; and fair-criminal-process guarantees with Articles 20–22.
+
+The correspondence is functional, not word-for-word. ICCPR Article 17 expressly protects privacy, while the Constitution contains no separately numbered privacy clause; the Supreme Court has recognised privacy within liberty and dignity under Part III. Conversely, Article 32 itself guarantees direct access to the Supreme Court, a distinctive constitutional remedy.
+
+4. ICESCR rights and the Constitution
+
+The ICESCR protects work, just conditions, trade-union freedom, social security, family protection, an adequate standard of living, food, housing, health, education and culture. Indian counterparts are distributed across Fundamental Rights and Directive Principles. Articles 39, 41, 42, 43, 45, 46 and 47 guide social welfare; Article 21A expressly guarantees free and compulsory education for children aged six to fourteen.
+
+Courts have read dignity, livelihood, health, shelter, education and environmental conditions into Article 21 while drawing support from Part IV. That does not convert every policy aspiration into an immediately claimable individual entitlement of unlimited scope. The legal question remains whether a minimum constitutional duty, an enacted entitlement, an arbitrary denial or a policy choice within legislative discretion is involved.
+
+5. Negative and positive constitutional duties
+
+Fundamental Rights do more than restrain State interference. Effective liberty can require positive measures: protection against private violence, legal aid, prison healthcare, fair investigation, emergency medical treatment or implementation of welfare legislation. Article 21 therefore contains both negative and positive dimensions.
+
+The distinction should not be overstated. Speech needs institutions and policing; health requires freedom as well as resources. A court considering a positive claim examines constitutional text, statutory duties, vulnerability, minimum dignity, available resources, administrative action and the proper remedial role of the judiciary.
+
+6. Enforceable and cognizable rights
+
+A Fundamental Right is enforceable through Article 32 or Article 226, subject to its scope and lawful limitations. Article 37 makes Directive Principles non-enforceable by any court, but declares them fundamental in governance and requires the State to apply them in making laws. Non-enforceability means that a Directive Principle alone ordinarily does not create a writ remedy.
+
+Judicial cognizability is broader. Courts may use Directive Principles to interpret ambiguous laws, determine reasonableness, give content to dignity and assess positive obligations. Once Parliament or a legislature translates a principle into statute, the resulting entitlement is enforceable according to that law. Courts must preserve this distinction rather than treating Article 37 as either complete irrelevance or automatic enforceability.
+
+7. Harmony between Parts III and IV
+
+Early constitutional doctrine sometimes presented Fundamental Rights and Directive Principles as competing fields. The mature approach seeks harmony: political freedom and socio-economic justice are both necessary to constitutional democracy. Minerva Mills v. Union of India held that balance between Parts III and IV is part of the Constitution's basic structure.
+
+Directive Principles cannot authorise destruction of Fundamental Rights, and rights should not be interpreted in isolation from the social transformation promised by Part IV. Proportionality, substantive equality and dignity permit principled reconciliation without erasing the textual difference between enforceable rights and governance directives.
+
+8. Article 14: equality and non-arbitrariness
+
+Article 14 guarantees equality before law and equal protection of laws to every person. Classification must rest upon an intelligible differentia and bear a rational nexus to the legislative object. Modern doctrine also treats manifestly arbitrary State action as incompatible with equality.
+
+Substantive equality asks whether apparently neutral arrangements reproduce disadvantage. Articles 15 and 16 prohibit specified discrimination and authorise constitutionally structured special measures. Article 17 abolishes untouchability and Article 18 addresses titles. Equality interacts with liberty and dignity; discrimination can impair the enjoyment of every other human right.
+
+9. Article 19 freedoms and restrictions
+
+Citizens enjoy the freedoms in Article 19(1), including speech and expression, peaceful assembly, association, movement, residence and profession, occupation, trade or business. Each freedom is subject only to restrictions authorised by the corresponding clauses of Article 19. Restrictions require law, a constitutionally listed ground and reasonableness.
+
+Courts increasingly apply proportionality: the measure must pursue a legitimate aim, be rationally connected to it, impair the right no more than necessary and maintain a proper balance. Vague, overbroad or disproportionate restrictions create chilling effects and undermine democratic participation.
+
+10. From A.K. Gopalan to Maneka Gandhi
+
+A.K. Gopalan initially treated Fundamental Rights as largely separate compartments and read “procedure established by law” narrowly. R.C. Cooper weakened that compartmental approach by focusing on the effect of State action upon rights.
+
+Maneka Gandhi v. Union of India transformed Article 21. A procedure depriving life or liberty must be fair, just and reasonable, not arbitrary, fanciful or oppressive. Articles 14, 19 and 21 operate together. This integrated approach opened Article 21 to substantive dignity and procedural fairness while maintaining that deprivation must be authorised by valid law.
+
+11. Life, liberty and human dignity
+
+Article 21 protects more than animal existence. Francis Coralie Mullin connected life with dignity and the basic conditions that make life meaningful. Dignity now informs bodily integrity, decisional autonomy, identity, reputation, livelihood, shelter, healthcare, education, privacy, legal aid, humane custody and environmental protection.
+
+Article 21 applies to every person, not only citizens. Its breadth does not eliminate legal analysis. A claimant must identify the protected interest, the State action or omission, the applicable standard of review and a workable remedy consistent with constitutional structure.
+
+12. Livelihood, shelter and social security
+
+Olga Tellis v. Bombay Municipal Corporation recognised livelihood as part of life because deprivation of livelihood can deprive a person of life, while still allowing lawful eviction through fair procedure. The case illustrates that recognition of an interest does not confer an absolute right to occupy any particular public place.
+
+Shelter and social security decisions draw upon Articles 21, 39, 41 and 46. Courts may prevent arbitrary deprivation and enforce enacted schemes, but design and budgeting ordinarily remain with elected authorities. Equality, non-discrimination and minimum dignity guide review.
+
+13. Health and emergency medical care
+
+The right to health derives from Article 21 read with Articles 39(e), 41, 42 and 47. Paschim Banga Khet Mazdoor Samity v. State of West Bengal held that failure of government hospitals to provide timely emergency treatment can violate Article 21 and requires systemic corrective measures.
+
+Resource limitations are relevant but do not excuse total abdication or arbitrary exclusion. Courts can enforce statutory duties, minimum emergency care, non-discrimination and reasoned administration while leaving complex policy choices to competent authorities unless constitutionally defective.
+
+14. Education as a constitutional right
+
+Mohini Jain and Unni Krishnan connected education with dignity and Part IV. The Eighty-sixth Amendment inserted Article 21A, making free and compulsory education for children aged six to fourteen an express Fundamental Right, implemented principally through the Right of Children to Free and Compulsory Education Act, 2009.
+
+Other educational claims may engage Articles 14, 15, 19, 21, 29 and 30 and relevant statutes. Students should distinguish the express age-bound guarantee, non-discrimination, minority educational rights and broader Directive Principles.
+
+15. Privacy, autonomy and identity
+
+Justice K.S. Puttaswamy (Retd.) v. Union of India unanimously recognised privacy as a Fundamental Right grounded in liberty, dignity and other guarantees of Part III. Privacy includes bodily, informational and decisional dimensions and protects intimate choice, identity and control over personal information.
+
+Privacy is not absolute. An invasion requires legality, a legitimate State aim, proportionality and procedural safeguards. The judgment shows how constitutional interpretation can reflect the UDHR and ICCPR without treating an unincorporated treaty as independently enforceable.
+
+16. Fair criminal process and custody
+
+Articles 20, 21 and 22 protect against retrospective penal liability, double jeopardy, compelled self-incrimination, unlawful deprivation, arbitrary arrest and prolonged unproduced detention. Fair trial includes legal representation, impartial adjudication, disclosure, hearing, reasoned decision and reasonable expedition.
+
+Hussainara Khatoon recognised speedy trial and legal assistance as essential to fair procedure. D.K. Basu prescribed arrest safeguards and reinforced accountability for custodial violence. Prisoners retain dignity and Fundamental Rights except to the extent lawfully and necessarily restricted.
+
+17. Environmental rights under Article 21
+
+The Supreme Court has connected a wholesome environment, clean air and water with Article 21, supported by Articles 48A and 51A(g). Public trust, precaution and polluter-pays principles have informed remedies. Environmental claims demonstrate interdependence between civil-political and socio-economic rights.
+
+Courts must also consider livelihood, housing, development, federal authority and statutory institutions. Rights-based review requires evidence, fair participation and proportionate remedies rather than a single-interest approach.
+
+18. Constitutional remedies and Article 32
+
+Article 32 guarantees the right to move the Supreme Court for enforcement of Fundamental Rights. The Court may issue directions, orders or writs in the nature of habeas corpus, mandamus, prohibition, certiorari and quo warranto. Judicial review and the core remedial role of constitutional courts form part of the basic structure.
+
+Article 32 is not a substitute for every statutory appeal or private dispute. The petitioner must ordinarily show a Fundamental Right violation attributable to State action or a recognised positive duty. The Court may decline fact-intensive or premature claims and direct use of an effective alternate forum where appropriate, without extinguishing its constitutional jurisdiction.
+
+19. Article 226 and the High Courts
+
+Article 226 empowers every High Court to issue writs for enforcement of Fundamental Rights “and for any other purpose.” Its substantive reach is therefore wider than Article 32 and includes legal rights arising from statutes and public duties. Territorial nexus, standing, delay, alternate remedy and disputed facts influence discretion.
+
+High Courts are often the practical first constitutional forum because they are closer to facts and State authorities. Alternate remedy is a rule of discretion, not an absolute bar, especially where jurisdiction is absent, natural justice is violated, vires are challenged or Fundamental Rights require urgent protection.
+
+20. The five constitutional writs
+
+Habeas corpus tests unlawful detention and requires production or justification of custody. Mandamus commands performance of a public duty. Certiorari quashes an order of a lower court, tribunal or authority for jurisdictional or serious legal error. Prohibition prevents such a body from continuing beyond jurisdiction. Quo warranto tests a person's legal authority to occupy a public office.
+
+The remedy depends on the wrong. A prayer should identify the respondent, duty, impugned decision, source of jurisdiction and necessary consequential relief. Constitutional courts are not confined by English technicalities and may mould directions to achieve effective justice.
+
+21. Public-interest litigation and expanded standing
+
+Traditional standing generally requires personal legal injury. PIL relaxed that rule where persons affected by poverty, detention, disability, social exclusion or diffuse public harm cannot effectively approach the court. A public-spirited person may seek enforcement on their behalf. Letters and credible reports have sometimes been treated as petitions through epistolary jurisdiction.
+
+S.P. Gupta and Bandhua Mukti Morcha helped develop representative standing and fact-finding procedures. PIL enabled action on bonded labour, prison conditions, environment, sexual harassment and administrative inaction. Its legitimacy depends on genuine public injury and disciplined procedure.
+
+22. Limits and safeguards in PIL
+
+PIL is not publicity-interest, private-interest or political-interest litigation. Courts examine the petitioner's credentials, accuracy, motive, affected community, prior effort and justiciable issue. Suppression, speculative allegations and disguised private disputes can justify dismissal and costs.
+
+Judicial process should not displace affected persons or deny them participation. Fact-finding commissions and expert reports require disclosure and fair opportunity to respond. Balwant Singh Chaufal v. State of Uttarakhand emphasised rules and screening to preserve PIL's constitutional purpose.
+
+23. Constitutional compensation
+
+Constitutional courts may award monetary compensation for established violation of Fundamental Rights, particularly unlawful detention, custodial death and grave abuse by public authorities. Rudul Sah, Bhim Singh, Nilabati Behera and D.K. Basu developed this public-law remedy.
+
+Public-law compensation vindicates the right and imposes accountability; it is distinct from private-law damages and criminal prosecution. It does not prevent an appropriate civil claim, although duplication may be adjusted. Courts require a sufficiently clear violation and may direct further proceedings when facts remain seriously disputed.
+
+24. Continuing mandamus and structural remedies
+
+Where a violation is systemic and cannot be cured by a single order, a court may retain jurisdiction, require periodic reports, appoint a committee or commissioner, set compliance stages and issue supplementary directions. This technique is known as continuing mandamus.
+
+Structural remedies can make rights effective where administration has persistently failed. They also create risks of indefinite supervision, unclear responsibility and judicial management without expertise. Orders should identify legal duties, measurable outcomes, affected-party participation, review intervals and an exit condition.
+
+25. Articles 136, 141 and 142
+
+Article 136 permits discretionary special leave from judgments and orders of courts and tribunals. Article 141 makes law declared by the Supreme Court binding on all courts in India. Article 142 permits orders necessary for complete justice in a cause or matter before the Court.
+
+These provisions strengthen national rights protection but do not authorise disregard of substantive statutory law or constitutional limitations. Article 142 is curative and case-connected; it is not an independent source for permanently replacing legislation.
+
+26. International law in Indian courts
+
+Article 51(c) directs the State to foster respect for international law and treaty obligations. Article 253 empowers Parliament to legislate for implementing treaties even on subjects otherwise within State competence. Executive treaty-making power operates within the constitutional allocation of authority, but alteration of domestic rights or law may require legislation.
+
+Jolly George Varghese v. Bank of Cochin explains that a covenant is not automatically enforceable contrary to municipal law. Courts nevertheless presume, where possible, that Parliament does not intend to violate international law and interpret ambiguity consistently with India's obligations.
+
+27. The Vishaka principle
+
+Vishaka v. State of Rajasthan used CEDAW and international standards to fill a legislative vacuum concerning workplace sexual harassment. International conventions consistent with Fundamental Rights and not contrary to enacted law may inform constitutional meaning. The resulting guidelines operated until legislation occupied the field.
+
+The method has limits. A court cannot use a treaty to override clear legislation or create a rule inconsistent with the Constitution. It should identify the domestic right, the legal gap, compatibility of the international norm and the temporary or interpretive nature of the remedy.
+
+28. Transformation, incorporation and customary law
+
+India broadly follows a dualist approach for treaties: international commitment and domestic enforceability are distinct, and legislation is needed where implementation changes municipal law. Some treaty provisions may already be reflected in constitutional or statutory rights and can therefore be enforced through those domestic sources.
+
+Customary international law may be recognised where it is not inconsistent with legislation or binding constitutional doctrine. Students should avoid saying simply that “all international law is enforceable” or “international law has no domestic relevance.” Source, compatibility and implementing authority decide the result.
+
+29. Separation of powers and remedial restraint
+
+Courts interpret rights, invalidate unconstitutional action, compel public duties and provide effective remedies. Legislatures create general policy and authorise expenditure; executives administer schemes and apply expertise. Constitutional review must remain effective without converting adjudication into unrestricted governance.
+
+Institutional limits matter especially in polycentric socio-economic disputes. Courts can demand legality, non-arbitrariness, minimum protection, reasons, participation and faithful implementation. They should ordinarily avoid prescribing an entire policy when several constitutionally permissible designs exist.
+
+30. Examination and problem-solving method
+
+Begin by identifying the claimant, respondent and protected interest. Map it to the Covenant, then to the Constitution, statute or Directive Principle. State whether it is directly enforceable, interpretively relevant or dependent upon legislation. Identify State action, positive duty, horizontal application and the standard of review.
+
+Choose Article 32 or 226 and the correct writ. Address standing, alternate remedy, delay and disputed facts. Apply Articles 14, 19 and 21 together where appropriate, then select declaratory, prohibitory, mandatory, compensatory or structural relief. Conclude with limits: lawful restriction, resources, separation of powers and the need for an effective—not merely symbolic—remedy.
+    `.trim(),
     provisions: [
       "Constitution of India — Preamble",
       "Constitution of India — Articles 12–35",
       "Constitution of India — Articles 36–51 and 51A",
       "Constitution of India — Articles 32, 136, 141, 142 and 226",
+      "Constitution of India — Articles 51(c), 73, 246 and 253",
+      "ICCPR, 1966 — Articles 2, 6–27",
+      "ICESCR, 1966 — Articles 2 and 6–15",
+      "Right of Children to Free and Compulsory Education Act, 2009",
       "Protection of Human Rights Act, 1993",
     ],
+    keyPoints: [
+      "The Preamble, Fundamental Rights and Directive Principles form an integrated constitutional vision.",
+      "India acceded to the ICCPR and ICESCR in 1979, but treaties are not automatically enforceable as statutes.",
+      "ICCPR rights substantially correspond with Parts III, while many ICESCR rights appear across Parts III and IV.",
+      "Article 37 makes Directive Principles non-enforceable but fundamental in governance and relevant to interpretation.",
+      "Harmony between Parts III and IV is part of the Constitution's basic structure.",
+      "Article 14 protects formal and substantive equality and restrains arbitrary State action.",
+      "Article 19 restrictions require law, an enumerated ground, reasonableness and proportionality.",
+      "Maneka Gandhi requires procedure under Article 21 to be fair, just and reasonable.",
+      "Article 21 protects dignity and has positive as well as negative dimensions.",
+      "Livelihood, health, education, privacy, legal aid and environmental quality have received Article 21 protection.",
+      "Article 21A expressly guarantees education for children aged six to fourteen.",
+      "Puttaswamy requires legality, legitimate aim, proportionality and safeguards for privacy restrictions.",
+      "Article 32 enforces Fundamental Rights; Article 226 additionally reaches other public-law rights.",
+      "The five writs serve different functions and relief must be matched to the wrong.",
+      "PIL relaxes standing for genuine public injury but requires credibility, accuracy and procedural fairness.",
+      "Constitutional compensation is a public-law remedy additional to civil and criminal processes.",
+      "Continuing mandamus addresses systemic violations but needs measurable duties and an exit condition.",
+      "Article 253 empowers Parliament to implement treaties across the federal legislative distribution.",
+      "Vishaka permits compatible international norms to fill a legal vacuum and interpret Fundamental Rights.",
+      "Courts cannot use treaties or Article 142 to override clear statutes or constitutional limits.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-4-kesavananda",
+        caseName: "Kesavananda Bharati v. State of Kerala",
+        citation: "(1973) 4 SCC 225",
+        principle:
+          "Parliament's amending power cannot destroy the Constitution's basic structure, including the core of judicial review.",
+        summary:
+          "The decision supplies the structural foundation for preserving constitutional rights and limited government.",
+      },
+      {
+        id: "human-rights-unit-4-minerva-mills",
+        caseName: "Minerva Mills Ltd. v. Union of India",
+        citation: "(1980) 3 SCC 625",
+        principle:
+          "Harmony and balance between Fundamental Rights and Directive Principles are part of the basic structure.",
+        summary:
+          "Neither individual freedom nor social transformation may be constitutionally destroyed in the name of the other.",
+      },
+      {
+        id: "human-rights-unit-4-maneka-gandhi",
+        caseName: "Maneka Gandhi v. Union of India",
+        citation: "(1978) 1 SCC 248",
+        principle:
+          "Procedure depriving life or liberty must be fair, just and reasonable, and Articles 14, 19 and 21 interact.",
+        summary:
+          "The judgment displaced the compartmental approach and enabled dignity-centred substantive due process.",
+      },
+      {
+        id: "human-rights-unit-4-francis-coralie",
+        caseName: "Francis Coralie Mullin v. Administrator, Union Territory of Delhi",
+        citation: "(1981) 1 SCC 608",
+        principle:
+          "Life under Article 21 includes living with human dignity and the basic necessities that make dignity meaningful.",
+        summary:
+          "The case linked humane detention and minimum living conditions with constitutional liberty.",
+      },
+      {
+        id: "human-rights-unit-4-olga-tellis",
+        caseName: "Olga Tellis v. Bombay Municipal Corporation",
+        citation: "(1985) 3 SCC 545",
+        principle:
+          "Livelihood is integral to life, though occupation of public land remains subject to lawful and fair procedure.",
+        summary:
+          "The decision illustrates recognition, limitation and procedural protection within socio-economic rights adjudication.",
+      },
+      {
+        id: "human-rights-unit-4-paschim-banga",
+        caseName: "Paschim Banga Khet Mazdoor Samity v. State of West Bengal",
+        citation: "(1996) 4 SCC 37",
+        principle:
+          "Government failure to provide timely emergency medical treatment can violate Article 21.",
+        summary:
+          "The Court granted individual relief and directed systemic improvement of public emergency healthcare.",
+      },
+      {
+        id: "human-rights-unit-4-puttaswamy",
+        caseName: "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+        citation: "(2017) 10 SCC 1",
+        principle:
+          "Privacy is a Fundamental Right grounded in liberty, dignity and the guarantees of Part III.",
+        summary:
+          "Privacy restrictions require legality, legitimate purpose, proportionality and procedural protection.",
+      },
+      {
+        id: "human-rights-unit-4-rudul-sah",
+        caseName: "Rudul Sah v. State of Bihar",
+        citation: "(1983) 4 SCC 141",
+        principle:
+          "The Supreme Court may award compensation under Article 32 for grossly unlawful detention.",
+        summary:
+          "The decision established that release alone may be inadequate redress for an accomplished rights violation.",
+      },
+      {
+        id: "human-rights-unit-4-nilabati-behera",
+        caseName: "Nilabati Behera v. State of Orissa",
+        citation: "(1993) 2 SCC 746",
+        principle:
+          "Public-law compensation is available for established custodial death and is distinct from private damages.",
+        summary:
+          "Sovereign immunity does not defeat constitutional redress for violation of Article 21.",
+      },
+      {
+        id: "human-rights-unit-4-sp-gupta",
+        caseName: "S.P. Gupta v. Union of India",
+        citation: "1981 Supp SCC 87",
+        principle:
+          "Standing may be relaxed where persons suffering legal injury cannot effectively approach the court.",
+        summary:
+          "The judgment helped establish representative public-interest standing in Indian constitutional law.",
+      },
+      {
+        id: "human-rights-unit-4-vishaka",
+        caseName: "Vishaka v. State of Rajasthan",
+        citation: "(1997) 6 SCC 241",
+        principle:
+          "International norms consistent with Fundamental Rights may guide interpretation and fill a legislative vacuum.",
+        summary:
+          "CEDAW informed binding workplace-harassment guidelines until Parliament enacted legislation.",
+      },
+      {
+        id: "human-rights-unit-4-jolly-george",
+        caseName: "Jolly George Varghese v. Bank of Cochin",
+        citation: "(1980) 2 SCC 360",
+        principle:
+          "An international covenant does not automatically override municipal law without domestic incorporation.",
+        summary:
+          "Courts should nevertheless interpret domestic law consistently with international obligations where possible.",
+      },
+      {
+        id: "human-rights-unit-4-balwant-singh",
+        caseName: "State of Uttaranchal v. Balwant Singh Chaufal",
+        citation: "(2010) 3 SCC 402",
+        principle:
+          "Courts must screen PILs for bona fides, public injury and reliable pleadings and may deter abuse with costs.",
+        summary:
+          "The ruling protects public-interest jurisdiction from disguised private or publicity-driven litigation.",
+      },
+    ],
     examFocus:
-      "Prepare the relationship between the Covenants and the Constitution, enforceable and cognizable rights, Article 21 expansion, writ jurisdiction, PIL, compensation and the judicial use of international norms.",
+      "Prepare India's Covenant status; mapping of ICCPR and ICESCR rights; Preamble, Parts III, IV and IVA; Article 37 and the distinction between enforceability and cognizability; Minerva Mills harmony; Articles 14, 19 and 21 after Maneka Gandhi; dignity, livelihood, health, education, privacy, fair trial and environmental protection; Article 32 versus Article 226; five writs; standing, PIL and epistolary jurisdiction; constitutional compensation; continuing mandamus; Articles 136, 141 and 142; Articles 51(c) and 253; treaty transformation and customary law; Jolly George and Vishaka; and separation-of-powers limits. In a problem answer, identify the domestic source of the right, State action or duty, forum, writ, standard of review and effective remedy.",
+    revisionNotes:
+      "Constitutional scheme: Preamble values + enforceable Part III + non-enforceable but fundamental Part IV + duties in Part IVA. ICCPR broadly corresponds with civil-political Fundamental Rights; ICESCR interests are distributed across Parts III and IV. Article 37 distinguishes enforceability from interpretive cognizability. Minerva Mills requires harmony. Maneka Gandhi integrates Articles 14, 19 and 21 and demands fair, just and reasonable procedure. Article 21 includes dignity, livelihood, emergency health, education, privacy, legal aid and a wholesome environment, but remedies remain context-sensitive. Article 32 enforces Fundamental Rights in the Supreme Court; Article 226 reaches Fundamental Rights and other public-law duties in High Courts. Writs: habeas corpus, mandamus, certiorari, prohibition and quo warranto. PIL relaxes standing for genuine inaccessible injury; screen abuse. Rudul Sah and Nilabati Behera support public-law compensation. Continuing mandamus supervises systemic compliance. Treaties bind India internationally but usually require domestic incorporation; Article 253 authorises implementation. Vishaka allows compatible international norms to interpret rights or fill a vacuum, while Jolly George rejects automatic treaty override. Courts must provide effective relief without permanently assuming legislative or executive functions.",
   },
   {
     title: "Protection of Women and Children",
