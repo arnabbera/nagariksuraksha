@@ -14,6 +14,10 @@ import {
 } from "../../../../services/courseService";
 
 import {
+  getPublishedChaptersByCourse,
+} from "../../../../services/chapterService";
+
+import {
   getStudentEnrollments,
   hasPaidCourseAccess,
 } from "../../../../services/studentEnrollmentService";
@@ -62,12 +66,52 @@ export default function MyCourses({ view = "available" }) {
           : getStudentEnrollments(studentId),
       ]);
 
-      setCourses(
+      const activeCourses =
         Array.isArray(courseData)
           ? courseData.filter(
               (course) => course?.deleted !== true,
             )
-          : [],
+          : [];
+
+      const coursesWithChapterCounts =
+        await Promise.all(
+          activeCourses.map(async (course) => {
+            if (!course?.id) {
+              return course;
+            }
+
+            try {
+              const publishedChapters =
+                await getPublishedChaptersByCourse(
+                  course.id,
+                );
+
+              return {
+                ...course,
+                totals: {
+                  ...(course.totals || {}),
+                  chapters: Array.isArray(
+                    publishedChapters,
+                  )
+                    ? publishedChapters.length
+                    : Number(
+                        course.totals?.chapters || 0,
+                      ),
+                },
+              };
+            } catch (chapterError) {
+              console.warn(
+                `Unable to load chapter count for ${course.id}:`,
+                chapterError,
+              );
+
+              return course;
+            }
+          }),
+        );
+
+      setCourses(
+        coursesWithChapterCounts,
       );
 
       setEnrollments(
