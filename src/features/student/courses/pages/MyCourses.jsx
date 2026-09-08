@@ -14,7 +14,7 @@ import {
 } from "../../../../services/courseService";
 
 import {
-  getPublishedChaptersByCourse,
+  getPublishedChaptersForCourse,
 } from "../../../../services/chapterService";
 
 import {
@@ -82,8 +82,8 @@ export default function MyCourses({ view = "available" }) {
 
             try {
               const publishedChapters =
-                await getPublishedChaptersByCourse(
-                  course.id,
+                await getPublishedChaptersForCourse(
+                  course,
                 );
 
               return {
