@@ -30,6 +30,10 @@ import {
   familyLawIMockTests,
 } from "../../../../data/exams/familyLawI/assessments";
 import {
+  HUMAN_RIGHTS_LAW_AND_PRACTICE_COURSE_SLUG,
+  humanRightsLawAndPracticeMockTests,
+} from "../../../../data/exams/humanRightsLawAndPractice/assessments";
+import {
   PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG,
   publicInternationalLawFinalExam,
   publicInternationalLawMockTests,
@@ -75,6 +79,9 @@ const assessmentRegistry = {
   [FAMILY_LAW_I_COURSE_SLUG]: {
     final: familyLawIFinalExam,
     mocks: familyLawIMockTests,
+  },
+  [HUMAN_RIGHTS_LAW_AND_PRACTICE_COURSE_SLUG]: {
+    mocks: humanRightsLawAndPracticeMockTests,
   },
   [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
     final: publicInternationalLawFinalExam,
