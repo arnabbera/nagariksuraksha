@@ -249,7 +249,16 @@ const getLiveSessions = async (request, env, url) => {
       const session = Object.fromEntries(
         Object.entries(row.document.fields || {}).map(([key, value]) => [key, firestoreValueToJs(value)]),
       );
-      return { id: row.document.name.split("/").at(-1), ...session };
+      return {
+        id: row.document.name.split("/").at(-1),
+        courseId: session.courseId,
+        chapterId: session.chapterId,
+        chapterNumber: session.chapterNumber,
+        title: session.title,
+        scheduledAt: session.scheduledAt,
+        durationMinutes: session.durationMinutes,
+        meetingLink: session.meetingLink,
+      };
     })
     .sort((first, second) => Number(first.chapterNumber || 0) - Number(second.chapterNumber || 0));
 

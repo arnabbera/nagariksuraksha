@@ -1359,46 +1359,6 @@ export default function CourseDetails() {
         </section>
       )}
 
-      {isCriminalLawCourse && (
-        <section className="ns-live-class-section">
-          <div className="ns-live-class-card">
-            <div className="ns-live-class-heading">
-              <div className="ns-live-class-icon"><FaVideo /></div>
-              <div>
-                <h2>Live Online Classes</h2>
-                <p>Eight interactive Google Meet classes—one class for each chapter.</p>
-              </div>
-              <strong>{certificationPaymentCompleted ? "₹499 Upgrade" : "₹548 Premium"}</strong>
-            </div>
-
-            <div className="ns-live-class-benefits">
-              <span><FaCheckCircle /> 8 chapter-wise interactive classes</span>
-              <span><FaCheckCircle /> Upcoming schedules and protected meeting access</span>
-              <span><FaCheckCircle /> Session recordings when published</span>
-              <span><FaCheckCircle /> Includes the complete certification track</span>
-            </div>
-
-            {liveClassAccess ? (
-              <div className="ns-live-class-active">
-                <FaCheckCircle /> Live-class access is active. Schedules will appear with each chapter.
-              </div>
-            ) : (
-              <Button
-                loading={liveClassEnrolling}
-                disabled={!liveCheckoutAvailable}
-                onClick={handleLiveClassPayment}
-              >
-                {!liveCheckoutAvailable
-                  ? "Live Plan Activation in Progress"
-                  : certificationPaymentCompleted
-                    ? "Upgrade to 8 Live Classes — ₹499"
-                    : "Choose Premium Live Plan — ₹548"}
-              </Button>
-            )}
-          </div>
-        </section>
-      )}
-
       {/* =====================================================
           COURSE CHAPTERS
           FULL WIDTH BELOW HERO
@@ -1499,11 +1459,6 @@ export default function CourseDetails() {
                               </a>
                             )}
 
-                            {liveClassAccess && liveSession?.recordingUrl && (
-                              <a className="ns-live-session-link" href={liveSession.recordingUrl} target="_blank" rel="noreferrer">
-                                Watch Recording
-                              </a>
-                            )}
                           </div>
                         )}
 
@@ -1578,6 +1533,45 @@ export default function CourseDetails() {
           )}
         </Card>
       </div>
+
+      {isCriminalLawCourse && (
+        <section className="ns-live-class-section">
+          <div className="ns-live-class-card">
+            <div className="ns-live-class-heading">
+              <div className="ns-live-class-icon"><FaVideo /></div>
+              <div>
+                <h2>Live Online Classes</h2>
+                <p>Eight interactive Google Meet classes—one class for each chapter.</p>
+              </div>
+              <strong>{certificationPaymentCompleted ? "₹499 Upgrade" : "₹548 Premium"}</strong>
+            </div>
+
+            <div className="ns-live-class-benefits">
+              <span><FaCheckCircle /> 8 chapter-wise interactive classes</span>
+              <span><FaCheckCircle /> Upcoming schedules and protected meeting access</span>
+              <span><FaCheckCircle /> Includes the complete certification track</span>
+            </div>
+
+            {liveClassAccess ? (
+              <div className="ns-live-class-active">
+                <FaCheckCircle /> Live-class access is active. Schedules will appear with each chapter.
+              </div>
+            ) : (
+              <Button
+                loading={liveClassEnrolling}
+                disabled={!liveCheckoutAvailable}
+                onClick={handleLiveClassPayment}
+              >
+                {!liveCheckoutAvailable
+                  ? "Live Plan Activation in Progress"
+                  : certificationPaymentCompleted
+                    ? "Upgrade to 8 Live Classes — ₹499"
+                    : "Choose Premium Live Plan — ₹548"}
+              </Button>
+            )}
+          </div>
+        </section>
+      )}
 
       <style>
         {`

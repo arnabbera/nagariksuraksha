@@ -9,7 +9,6 @@ export const createLiveSessionModel = ({
   scheduledAt = null,
   durationMinutes = 60,
   meetingLink = "",
-  recordingUrl = "",
   published = true,
   createdBy = "system",
   updatedBy = "system",
@@ -22,7 +21,6 @@ export const createLiveSessionModel = ({
   scheduledAt,
   durationMinutes: Number(durationMinutes || 60),
   meetingLink,
-  recordingUrl,
   published: Boolean(published),
 });
 
