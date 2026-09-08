@@ -702,19 +702,192 @@ For an essay, explain formulation, legal nature and structure before listing rig
       "Explain the absolute prohibition of torture and related treatment.",
       "Analyse international duties concerning racial discrimination, slavery and the slave trade.",
       "Evaluate international standards and Indian law concerning the death penalty.",
+      "Distinguish international crimes, treaty violations and constitutional wrongs.",
+      "Apply prevention, investigation, prosecution, reparation and non-refoulement duties.",
+      "Explain India's present treaty status and domestic legal framework.",
+      "Use leading international and Indian decisions in problem and essay answers.",
     ],
-    topics: [
-      "Genocide: protected groups, prohibited acts and specific intent",
-      "Apartheid and institutionalised racial domination",
-      "Torture and cruel, inhuman or degrading treatment",
-      "Non-refoulement and prevention duties",
-      "Elimination of racial discrimination",
-      "Slavery, servitude, forced labour and the slave trade",
-      "Trafficking and contemporary forms of exploitation",
-      "Abolition of the death penalty",
-      "International fair-trial and sentencing safeguards",
-      "Indian constitutional position on capital punishment",
-    ],
+    detailedContent: `
+1. Human rights law and inhuman wrongs
+
+This unit concerns practices that attack the equal humanity, physical integrity and legal personality of individuals and groups. Genocide, apartheid, torture, racial discrimination and slavery are not merely examples of harsh treatment. Each has a distinct legal definition, mental element, jurisdictional setting and remedial structure. A strong legal answer identifies the particular wrong instead of treating all grave abuse as interchangeable.
+
+The framework operates at several levels. International human-rights law imposes duties upon States. International criminal law may impose individual criminal responsibility. International humanitarian law applies during armed conflict. Indian constitutional and criminal law provide domestic prohibitions, procedures and remedies. The same facts may engage more than one level, but the source and consequence of each rule must be stated separately.
+
+2. The duty to prevent, punish and repair
+
+Protection against inhuman wrongs is not satisfied by a formal prohibition. The State must establish effective laws and institutions, prevent foreseeable violations, investigate credible allegations promptly and independently, prosecute where evidence warrants, punish responsible persons, protect victims and witnesses, and provide effective remedy and reparation. Reparation can include restitution, compensation, rehabilitation, satisfaction and guarantees of non-repetition.
+
+Some prohibitions, including genocide, slavery and torture, have an exceptional status in international law. The prohibition of torture is absolute and non-derogable. No emergency, war, public danger, superior order or alleged necessity can justify it. The gravity of these norms also affects extradition, asylum, immunity, jurisdiction and the responsibility of superiors and public authorities.
+
+3. Origins and purpose of the Genocide Convention
+
+The Convention on the Prevention and Punishment of the Crime of Genocide was adopted in 1948 after the Holocaust and other mass atrocities. It confirms genocide as a crime under international law in peace as well as war and requires States to prevent and punish it. India ratified the Convention in 1959.
+
+The Convention protects national, ethnical, racial and religious groups. Political, cultural, economic and other groups are not listed as such. This closed list is often criticised, but it remains part of the treaty definition. Genocide protects the continued physical or biological existence of the protected group, not merely individual victims considered separately.
+
+4. The material acts of genocide
+
+Article II lists five acts when committed against members of a protected group: killing; causing serious bodily or mental harm; deliberately inflicting conditions of life calculated to bring about physical destruction in whole or in part; imposing measures intended to prevent births; and forcibly transferring children to another group.
+
+The listed act must be proved. Forced displacement alone is not automatically genocide, although it may supply evidence of intent or constitute another international crime. Destruction of cultural property alone is also outside the narrow treaty definition, but it can be relevant evidence and may be punishable under other rules.
+
+5. Specific intent and substantiality
+
+Genocide requires the intent to destroy, in whole or in part, the protected group as such. This dolus specialis distinguishes genocide from murder, persecution and many crimes against humanity. Knowledge that deaths will occur is not by itself enough; the prohibited destruction of the group must be intended.
+
+Where destruction “in part” is alleged, the targeted part must ordinarily be substantial, assessed quantitatively and qualitatively. Intent may be inferred from a consistent pattern of conduct only where that inference is justified by the evidence. The high threshold protects legal precision without diminishing the gravity of other mass atrocities.
+
+6. Punishable conduct and responsibility for genocide
+
+Article III makes genocide, conspiracy, direct and public incitement, attempt and complicity punishable. Direct and public incitement is an inchoate offence: it may be punishable even if genocide does not follow. Constitutionally responsible rulers, public officials and private individuals can incur responsibility.
+
+The Convention requires effective penalties and trial by a competent domestic tribunal or an international penal tribunal accepted by the relevant State. State responsibility and individual criminal responsibility are separate. A State may breach duties to prevent or punish even though a criminal court has not convicted a particular individual.
+
+7. Prevention of genocide
+
+The duty to prevent arises when a State learns, or should normally have learned, of a serious risk that genocide will occur and has means reasonably available to influence the actors. Capacity, proximity and legal authority matter. Prevention is a duty of conduct, not a guarantee that the crime will never occur.
+
+Risk assessment should examine dehumanising propaganda, discriminatory measures, organised violence, targeting of protected groups, patterns of atrocities and the capability and declared purpose of perpetrators. Early action, evidence preservation and protection of threatened communities are central to meaningful prevention.
+
+8. Apartheid as a human-rights wrong and international crime
+
+Apartheid originated as the official system of racial domination in South Africa, but the legal concept is not confined geographically or historically to that regime. ICERD requires States to condemn and eradicate racial segregation and apartheid. The 1973 Apartheid Convention treats specified inhuman acts committed to establish or maintain domination by one racial group over another, with systematic oppression, as an international crime.
+
+The Rome Statute classifies apartheid as a crime against humanity when inhumane acts of a character similar to other listed crimes are committed in the context of an institutionalised regime of systematic oppression and domination by one racial group over another, with the intention of maintaining that regime. The elements of institutionalisation, systematic domination, racial-group relationship and intent must therefore be proved.
+
+9. Apartheid, segregation and racial discrimination distinguished
+
+Racial discrimination is the broader category. Segregation separates persons or communities on racial grounds. Apartheid adds an institutionalised system of systematic oppression and domination maintained through inhuman acts. Every apartheid regime necessarily involves racial discrimination, but not every discriminatory act establishes apartheid.
+
+Legal classification must be evidence-based. Students should identify the policy or practice, the groups affected, the purpose and structure of domination, the prohibited acts, State participation and available enforcement mechanisms rather than relying only on political labels.
+
+10. ICERD and the meaning of racial discrimination
+
+The International Convention on the Elimination of All Forms of Racial Discrimination, 1965 defines racial discrimination as a distinction, exclusion, restriction or preference based on race, colour, descent, or national or ethnic origin that has the purpose or effect of impairing equal enjoyment of human rights. India ratified ICERD in 1968.
+
+The definition reaches discriminatory effects as well as express discriminatory purpose. The Convention requires States to eliminate racial discrimination by public authorities and to prohibit and bring to an end discrimination by persons, groups or organisations. Temporary special measures aimed at securing equal enjoyment are not treated as racial discrimination if they do not maintain separate rights after their objective is achieved.
+
+11. State obligations under ICERD
+
+States must review laws and policies, prohibit discrimination, provide effective protection and remedies, address racist propaganda and organisations within the limits and safeguards of the Convention, and promote understanding through education and culture. Article 5 applies equality to civil, political, economic, social and cultural rights.
+
+Implementation is monitored by the Committee on the Elimination of Racial Discrimination through periodic reports, inter-State procedures and, for States accepting Article 14, individual communications. India has not accepted the Article 14 individual-communications procedure. International supervision supplements rather than replaces domestic remedies.
+
+12. Caste, descent and the Indian constitutional framework
+
+India has maintained in the ICERD process that caste is distinct from race. International monitoring bodies have treated discrimination based on “descent” as capable of including status inherited across generations. Whatever the international classification debate, caste discrimination is directly prohibited and addressed under Indian constitutional and statutory law.
+
+Articles 14, 15 and 16 guarantee equality and prohibit specified discrimination; Article 17 abolishes untouchability; Articles 23 and 24 prohibit trafficking, forced labour and hazardous child labour. Protective discrimination and affirmative measures seek substantive equality. The Protection of Civil Rights Act, 1955 and Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 provide specialised enforcement.
+
+13. Torture under international law
+
+Article 1 of the Convention against Torture defines torture through four central elements: severe physical or mental pain or suffering; an intentional act; a listed or comparable purpose such as obtaining information or confession, punishment, intimidation, coercion or discrimination; and infliction by, at the instigation of, or with consent or acquiescence of a public official or person acting officially. Pain or suffering arising only from lawful sanctions is excluded, but that phrase cannot legitimise sanctions prohibited by international law.
+
+The public-official nexus distinguishes treaty torture from some private violence, although a State may acquiesce by knowingly failing to protect. Other cruel, inhuman or degrading treatment or punishment may lack the required severity, purpose or official involvement, but remains prohibited.
+
+14. The absolute and non-derogable prohibition
+
+CAT Article 2 requires effective legislative, administrative, judicial and other measures to prevent torture. No exceptional circumstance whatsoever may be invoked as justification. An order from a superior or public authority is no defence. ICCPR Articles 4 and 7 likewise make freedom from torture and cruel, inhuman or degrading treatment non-derogable.
+
+The rule excludes balancing torture against public safety or intelligence objectives. Evidence obtained through torture is generally inadmissible except against an alleged torturer to prove the statement was made. Authorities must train officials, review interrogation practices and maintain safeguards throughout arrest, detention and imprisonment.
+
+15. Non-refoulement and jurisdiction under CAT
+
+CAT Article 3 prohibits expelling, returning or extraditing a person to another State where there are substantial grounds for believing the person would face torture. Authorities assess all relevant circumstances, including a consistent pattern of gross violations, but the inquiry ultimately concerns the personal and foreseeable risk to the individual.
+
+CAT also requires States to criminalise torture, establish specified forms of territorial and personal jurisdiction, take an alleged offender into custody where appropriate, make a preliminary inquiry, and prosecute or extradite in accordance with the Convention. This is commonly expressed as aut dedere aut judicare—extradite or submit the case for prosecution.
+
+16. Investigation, complaint and reparation for torture
+
+Competent authorities must investigate promptly and impartially wherever there is reasonable ground to believe torture occurred. A complainant must be able to complain and have the case examined without retaliation. CAT Article 14 requires enforceable redress and fair and adequate compensation, including means for rehabilitation.
+
+An effective investigation must be independent in law and practice, capable of identifying responsibility, evidence-based and reasonably prompt. Medical documentation, custody records, access to lawyers and family, judicial supervision and preservation of digital evidence help prevent concealment and impunity.
+
+17. India's status under the Convention against Torture
+
+India signed CAT on 14 October 1997 but, as of this chapter's update, has not ratified it and has not joined the Optional Protocol establishing preventive visits. Signature creates an obligation not to defeat the treaty's object and purpose, but it is not equivalent to consent to be bound by ratification. India is nevertheless bound by ICCPR Article 7 and by domestic constitutional guarantees.
+
+There is no single comprehensive Indian anti-torture statute modelled upon CAT. Torture and custodial abuse may be prosecuted through offences under the Bharatiya Nyaya Sanhita, 2023 and addressed through the Bharatiya Nagarik Suraksha Sanhita, 2023, evidence rules, departmental action, constitutional writs, compensation and human-rights institutions. Fragmented liability must not be confused with full CAT implementation.
+
+18. Custodial dignity under the Constitution of India
+
+Articles 20, 21 and 22 protect accused and detained persons. Article 20(3) guards against compelled self-incrimination. Article 21 requires fair, just and reasonable procedure and protects bodily integrity and dignity. Article 22 provides arrest and detention safeguards. Prisoners retain fundamental rights except to the extent lawfully and necessarily curtailed by incarceration.
+
+D.K. Basu v. State of West Bengal prescribed arrest and custody safeguards and affirmed compensation as a public-law response to established violations. Nilabati Behera v. State of Orissa recognised constitutional compensation for custodial death. These remedies do not exclude criminal prosecution, civil damages or disciplinary action.
+
+19. Slavery and the slave trade
+
+The Slavery Convention, 1926 defines slavery as the status or condition of a person over whom any or all powers attaching to ownership are exercised. The slave trade includes acts of capture, acquisition, disposal, sale, exchange and transport directed to reducing a person to slavery. Legal ownership is unnecessary if powers equivalent to ownership are exercised in fact.
+
+The Supplementary Convention, 1956 addresses institutions and practices similar to slavery, including debt bondage, serfdom, certain servile marriage practices and exploitation through delivery of a child for labour. The prohibition of slavery is a peremptory norm; States must prevent, criminalise, investigate and remedy both official and private exploitation.
+
+20. Servitude, forced labour and compulsory labour
+
+Servitude is a severe condition of domination involving constrained freedom and an obligation to live or work under another's control. Forced or compulsory labour generally means work exacted under menace of a penalty and not offered voluntarily. It may exist without ownership-like control and is therefore broader than slavery.
+
+ICCPR Article 8 separately prohibits slavery, the slave trade, servitude and forced labour, subject to defined exceptions such as lawful prison work, military or alternative service, emergency service and normal civic obligations. The ILO Forced Labour Conventions further develop prevention, suppression and labour-protection duties.
+
+21. Forced labour and bonded labour in India
+
+Article 23 of the Constitution prohibits trafficking in human beings, begar and other similar forms of forced labour and is enforceable against public and private actors. In People's Union for Democratic Rights v. Union of India, the Supreme Court held that labour compelled by economic necessity for less than the statutory minimum wage can fall within Article 23. Compulsion is not limited to physical force.
+
+The Bonded Labour System (Abolition) Act, 1976 abolishes bonded labour obligations, extinguishes bonded debt, prohibits enforcement and provides for release and rehabilitation mechanisms. Bandhua Mukti Morcha v. Union of India used public-interest jurisdiction to address bonded labour and insisted upon identification, release and rehabilitation rather than formal denial by authorities.
+
+22. Trafficking in persons
+
+Trafficking is not synonymous with movement, prostitution, smuggling or slavery. The Palermo Protocol model comprises an act such as recruitment, transport, transfer, harbouring or receipt; improper means such as force, coercion, abduction, fraud, deception, abuse of power or vulnerability, or payments controlling another; and a purpose of exploitation. For children, proof of improper means is unnecessary.
+
+Exploitation can include sexual exploitation, forced labour, slavery or similar practices, servitude and removal of organs. A victim's consent does not excuse trafficking where prohibited means were used. A rights-based response combines prevention, victim identification, non-punishment for compelled conduct, protection, recovery, compensation, investigation and prosecution.
+
+23. Indian law on trafficking and exploitation
+
+Article 23 prohibits trafficking and forced labour. The Bharatiya Nyaya Sanhita, 2023 defines and punishes trafficking in Section 143 and exploitation of a trafficked person in Section 144; Section 146 addresses unlawful compulsory labour. The Immoral Traffic (Prevention) Act, 1956 addresses specified commercial sexual-exploitation activities, while child-protection and bonded-labour statutes may also apply.
+
+The offence must be matched to the evidence. Rescue without rehabilitation can expose a victim to renewed exploitation. Authorities should avoid treating trafficked persons as offenders merely because exploitation placed them in unlawful situations. Compensation, shelter, healthcare, legal assistance, identity documents and livelihood support are part of effective protection.
+
+24. The right to life and movement toward abolition
+
+ICCPR Article 6 recognises the inherent right to life. In States that have not abolished capital punishment, a death sentence may be imposed only for the “most serious crimes,” under law in force when the offence occurred, consistently with the Covenant and Genocide Convention, and pursuant to a final judgment by a competent court. Pardon or commutation must remain available.
+
+Execution is prohibited for offences committed by persons below eighteen and may not be carried out on pregnant women. Article 6 must not be invoked to delay or prevent abolition. International interpretation treats “most serious crimes” as crimes of extreme gravity involving intentional killing, not ordinary political, economic, drug or sexual offences lacking intentional death.
+
+25. Second Optional Protocol and abolitionist standards
+
+The Second Optional Protocol to the ICCPR, adopted in 1989, aims at abolition of the death penalty. Parties undertake not to execute anyone within their jurisdiction and to take necessary measures to abolish it. A narrowly framed wartime reservation may be made at ratification or accession in accordance with the Protocol.
+
+India is not a party to the Second Optional Protocol. UN General Assembly resolutions have repeatedly called for a moratorium with a view to abolition. These resolutions are not themselves treaties, but they demonstrate the direction of international policy and support safeguards pending abolition.
+
+26. Capital punishment under the Constitution of India
+
+India is retentionist: death remains a punishment for specified offences, including certain offences under the Bharatiya Nyaya Sanhita, 2023 and special laws. In Jagmohan Singh v. State of Uttar Pradesh the Supreme Court upheld the penalty within judicial sentencing. Bachan Singh v. State of Punjab upheld the statutory option but restricted death to the “rarest of rare” cases when the alternative of life imprisonment is unquestionably foreclosed.
+
+The doctrine requires individualised sentencing, consideration of aggravating and mitigating circumstances, and attention to both crime and criminal. Life imprisonment is the rule and death the exception. The death penalty cannot be automatic or based only upon the category of offence.
+
+27. Sentencing procedure and mitigation
+
+Machhi Singh v. State of Punjab organised rarest-of-rare considerations but cannot replace Bachan Singh's principled requirement of individualisation. Mithu v. State of Punjab invalidated mandatory death under former IPC Section 303 because it excluded judicial discretion and fair sentencing. Manoj v. State of Madhya Pradesh strengthened the duty to collect meaningful mitigating material before sentence.
+
+Courts should receive information about the accused's background, mental and physical health, trauma, social circumstances, conduct in custody and possibility of reform. The State must place relevant material before the court, and the defence must have a real opportunity to present mitigation. Brutality of the crime alone does not complete the constitutional inquiry.
+
+28. Delay, mercy jurisdiction and dignity on death row
+
+Articles 72 and 161 empower the President and Governor respectively to grant pardon, reprieve, respite, remission or commutation within their constitutional fields. Judicial review remains available for mala fides, irrelevant considerations, arbitrariness, procedural unfairness and other recognised defects; courts do not sit as appellate authorities over the merits of clemency.
+
+In Shatrughan Chauhan v. Union of India, unexplained and inordinate delay and supervening circumstances were recognised as grounds relevant to commutation. Solitary confinement before lawful warrant, failure to communicate rejection, mental illness and procedural violations can engage Article 21. Even a death-sentenced prisoner retains dignity until the last breath.
+
+29. Fair-trial and execution safeguards
+
+The highest standards of fairness apply because error is irreversible. An accused must have competent legal representation, interpretation where needed, disclosure, an impartial court, reasoned conviction and sentence, appellate review and meaningful access to review and clemency. Execution cannot precede exhaustion of lawful remedies and prescribed notice.
+
+Public opinion, the victim's suffering and societal concern are relevant to justice but cannot substitute for proof beyond reasonable doubt or constitutional sentencing. Wrongful conviction, discriminatory application and inconsistent mitigation are central abolitionist concerns.
+
+30. Problem-solving and examination method
+
+First identify the legal wrong and its exact elements. For genocide, state protected group, listed act and specific intent. For apartheid, establish an institutionalised regime, systematic racial domination, inhuman acts and intent to maintain it. For torture, examine severity, intentionality, purpose and official involvement; then distinguish other ill-treatment. For slavery and trafficking, analyse control, act, means and exploitative purpose.
+
+Next identify the applicable instrument, India's treaty status, domestic constitutional or statutory rule, responsible actor, jurisdiction and remedy. In a death-penalty answer, begin with ICCPR Article 6, abolitionist instruments and India's retentionist status, then apply Bachan Singh, individualised mitigation, fair procedure, clemency and Article 21 safeguards. End with a reasoned conclusion rather than a moral assertion alone.
+    `.trim(),
     provisions: [
       "Genocide Convention, 1948",
       "International Convention on the Elimination of All Forms of Racial Discrimination, 1965",
@@ -722,9 +895,141 @@ For an essay, explain formulation, legal nature and structure before listing rig
       "Convention against Torture, 1984",
       "Slavery Convention, 1926 and Supplementary Convention, 1956",
       "ICCPR — Articles 6, 7 and 8",
+      "Rome Statute of the International Criminal Court — Articles 6 and 7",
+      "Protocol to Prevent, Suppress and Punish Trafficking in Persons, 2000",
+      "Second Optional Protocol to the ICCPR, 1989",
+      "Constitution of India — Articles 14, 17, 20, 21, 22, 23, 24, 72 and 161",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 143, 144 and 146",
+      "Bonded Labour System (Abolition) Act, 1976",
+      "Protection of Civil Rights Act, 1955 and SC/ST (Prevention of Atrocities) Act, 1989",
+    ],
+    keyPoints: [
+      "Genocide protects national, ethnical, racial and religious groups against intended physical or biological destruction.",
+      "Genocide requires a listed act plus the specific intent to destroy the protected group in whole or substantial part.",
+      "Direct and public incitement to genocide is punishable even if genocide does not ultimately occur.",
+      "Apartheid requires institutionalised, systematic racial domination maintained through inhuman acts.",
+      "ICERD covers discriminatory purpose or effect based on race, colour, descent, or national or ethnic origin.",
+      "Torture under CAT requires severe suffering, intention, a prohibited purpose and an official nexus.",
+      "The prohibition of torture is absolute and non-derogable; emergency and superior orders are no defence.",
+      "CAT non-refoulement prohibits transfer where the individual faces a real, personal and foreseeable torture risk.",
+      "India signed CAT in 1997 but has not ratified it or joined OPCAT.",
+      "Articles 20, 21 and 22 and the D.K. Basu safeguards protect persons in custody.",
+      "Slavery involves exercise of powers attaching to ownership; forced labour does not require ownership-like control.",
+      "Article 23 applies against both State and private actors and includes compulsion through economic necessity.",
+      "Trafficking ordinarily requires act, improper means and exploitative purpose; means need not be proved for a child.",
+      "BNS Sections 143, 144 and 146 are the current core provisions on trafficking, exploitation and compulsory labour.",
+      "ICCPR Article 6 restricts retentionist States and expressly encourages abolition.",
+      "India has not joined the Second Optional Protocol to the ICCPR.",
+      "Under Bachan Singh, life imprisonment is the rule and death is restricted to the rarest of rare cases.",
+      "A mandatory death sentence is unconstitutional because it excludes individualised sentencing.",
+      "Mitigation must include the offender's circumstances and genuine possibility of reform.",
+      "Delay, mental illness and serious procedural violations may justify commutation under Article 21.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-3-genocide-convention",
+        caseName: "Reservations to the Convention on Genocide",
+        citation: "ICJ Advisory Opinion, 1951",
+        principle:
+          "Compatibility with a treaty's object and purpose is the governing test for reservations to the Genocide Convention.",
+        summary:
+          "The opinion also emphasised the universal and humanitarian character of the Convention's principles.",
+      },
+      {
+        id: "human-rights-unit-3-bosnia-genocide",
+        caseName: "Bosnia and Herzegovina v. Serbia and Montenegro",
+        citation: "ICJ Judgment, 2007",
+        principle:
+          "The Genocide Convention imposes distinct duties to prevent and punish; genocide requires proof of specific intent.",
+        summary:
+          "The Court explained State responsibility, substantiality and the preventive duty arising from awareness of serious risk.",
+      },
+      {
+        id: "human-rights-unit-3-furundzija",
+        caseName: "Prosecutor v. Furundžija",
+        citation: "ICTY Trial Judgment, 1998",
+        principle:
+          "The prohibition of torture has a peremptory character and torture can generate individual criminal responsibility.",
+        summary:
+          "The judgment is important for the definition, absolute nature and international legal consequences of torture.",
+      },
+      {
+        id: "human-rights-unit-3-dk-basu",
+        caseName: "D.K. Basu v. State of West Bengal",
+        citation: "(1997) 1 SCC 416",
+        principle:
+          "Custodial torture violates Articles 21 and 22; arrest safeguards and public-law compensation promote accountability.",
+        summary:
+          "The Court prescribed documentation, communication, medical and access safeguards for arrest and detention.",
+      },
+      {
+        id: "human-rights-unit-3-nilabati-behera",
+        caseName: "Nilabati Behera v. State of Orissa",
+        citation: "(1993) 2 SCC 746",
+        principle:
+          "Constitutional courts may award compensation for established custodial death as a public-law remedy.",
+        summary:
+          "Sovereign immunity does not defeat compensation for violation of the fundamental right to life.",
+      },
+      {
+        id: "human-rights-unit-3-pudr",
+        caseName: "People's Union for Democratic Rights v. Union of India",
+        citation: "(1982) 3 SCC 235",
+        principle:
+          "Payment below the minimum wage under economic compulsion may constitute forced labour prohibited by Article 23.",
+        summary:
+          "Article 23 protects against private as well as State-imposed forced labour and is not confined to physical force.",
+      },
+      {
+        id: "human-rights-unit-3-bandhua",
+        caseName: "Bandhua Mukti Morcha v. Union of India",
+        citation: "(1984) 3 SCC 161",
+        principle:
+          "The State must identify, release and rehabilitate bonded labourers, and courts may use PIL to enforce that duty.",
+        summary:
+          "The decision linked Articles 21 and 23 with statutory implementation and dignified rehabilitation.",
+      },
+      {
+        id: "human-rights-unit-3-bachan-singh",
+        caseName: "Bachan Singh v. State of Punjab",
+        citation: "(1980) 2 SCC 684",
+        principle:
+          "Death is constitutionally restricted to the rarest of rare cases when life imprisonment is unquestionably foreclosed.",
+        summary:
+          "Sentencing must be individualised and give full weight to mitigating circumstances and the possibility of reform.",
+      },
+      {
+        id: "human-rights-unit-3-mithu",
+        caseName: "Mithu v. State of Punjab",
+        citation: "(1983) 2 SCC 277",
+        principle:
+          "A mandatory death sentence violates Articles 14 and 21 because it eliminates judicial discretion and fair hearing on sentence.",
+        summary:
+          "The ruling invalidated former IPC Section 303 and reinforced individualised capital sentencing.",
+      },
+      {
+        id: "human-rights-unit-3-manoj",
+        caseName: "Manoj v. State of Madhya Pradesh",
+        citation: "2022 SCC OnLine SC 677",
+        principle:
+          "Capital sentencing requires a meaningful, proactive collection of mitigating information and assessment of reform.",
+        summary:
+          "The Court directed institutional reports and a fuller sentencing inquiry rather than reliance only upon crime circumstances.",
+      },
+      {
+        id: "human-rights-unit-3-shatrughan-chauhan",
+        caseName: "Shatrughan Chauhan v. Union of India",
+        citation: "(2014) 3 SCC 1",
+        principle:
+          "Inordinate delay and specified supervening circumstances can justify commutation of a death sentence under Article 21.",
+        summary:
+          "Mercy and execution procedures remain subject to constitutional dignity and judicial review.",
+      },
     ],
     examFocus:
-      "Distinguish genocide, apartheid, torture, racial discrimination, slavery and trafficking by their legal ingredients. Discuss the abolitionist framework and India's rarest-of-rare constitutional doctrine on capital punishment.",
+      "Prepare the Genocide Convention's protected groups, five acts, specific intent, punishable forms, prevention duty and State/individual responsibility; the legal elements distinguishing apartheid, segregation and racial discrimination; ICERD definition, obligations and India's position; CAT definition, absolute prohibition, non-refoulement, investigation, prosecution and reparation duties, together with India's signed-but-not-ratified status; slavery, servitude, forced labour, bonded labour and trafficking distinctions; Constitution Articles 17, 20–24; BNS Sections 143, 144 and 146; ICCPR Article 6 and the Second Optional Protocol; India's retentionist position; Bachan Singh's rarest-of-rare doctrine; mandatory sentencing under Mithu; mitigation after Manoj; and delay, clemency and dignity under Shatrughan Chauhan.",
+    revisionNotes:
+      "Genocide = protected national, ethnical, racial or religious group + one of five Article II acts + specific intent to destroy in whole or substantial part. Apartheid = institutionalised regime + systematic racial oppression and domination + inhuman acts + intent to maintain. ICERD covers purpose or effect based on race, colour, descent, or national or ethnic origin. Torture = severe suffering + intention + prohibited purpose + official nexus; it is absolute and non-derogable. CAT Articles 2, 3, 4–7, 12–15 cover prevention, non-refoulement, criminalisation/jurisdiction, investigation, redress and exclusion of torture evidence. India signed CAT in 1997 but has not ratified it or OPCAT. Slavery concerns ownership powers; servitude is severe domination; forced labour is involuntary work under penalty; trafficking uses act + means + exploitation, with no means requirement for children. Article 23 reaches private conduct and economic compulsion; BNS Sections 143, 144 and 146 are current. ICCPR Article 6 restricts death sentences and encourages abolition; India has not joined the Second Optional Protocol. India retains death only constitutionally under Bachan Singh: life is rule, death exception, no mandatory death, full mitigation and reform inquiry, fair clemency process and continuing Article 21 dignity.",
   },
   {
     title: "Human Rights in Indian Constitutional Law",
