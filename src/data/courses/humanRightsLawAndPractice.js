@@ -1396,20 +1396,192 @@ Choose Article 32 or 226 and the correct writ. Address standing, alternate remed
       "Analyse CEDAW and India's constitutional and statutory obligations.",
       "Explain prevention and redress under workplace sexual-harassment law.",
       "Apply the CRC and Indian child-protection laws to rights-based problems.",
+      "Distinguish gender-neutral guarantees, gender-specific measures and transformative equality.",
+      "Apply the POSH Act's institutional, procedural and remedial requirements.",
+      "Use the CRC's four general principles in every child-rights problem.",
+      "Coordinate constitutional, criminal, welfare and rehabilitative remedies for women and children.",
     ],
-    topics: [
-      "Gender-neutral rights in women's lived experience",
-      "Formal equality, substantive equality and intersectionality",
-      "CEDAW and elimination of discrimination against women",
-      "Constitutional protection under Articles 14, 15, 16 and 21",
-      "Gender-specific protective measures",
-      "Sexual harassment at the workplace",
-      "Convention on the Rights of the Child",
-      "Best interests, participation, survival and development",
-      "Protection from child labour, trafficking and sexual offences",
-      "Juvenile justice, care and rehabilitation",
-      "Education, health, identity and family environment",
-    ],
+    detailedContent: `
+1. Human rights of women and children
+
+Universal human rights belong equally to women, men and children, but formally neutral rules may operate unequally because power, unpaid care, violence, poverty, caste, disability, age and dependency shape access to institutions. Protection therefore requires both equal application of general rights and targeted measures addressing distinctive barriers.
+
+Women and children are rights-holders, not passive beneficiaries. The State must respect their autonomy, protect them from public and private violence, and fulfil conditions necessary for equality and development. Family, school, workplace, digital platforms, care institutions and criminal-justice systems can all be sites of rights protection or abuse.
+
+2. Formal, substantive and transformative equality
+
+Formal equality treats similarly situated persons alike. Substantive equality examines actual disadvantage and permits different treatment needed to achieve equal enjoyment. Transformative equality goes further by challenging structures, stereotypes and institutional practices that reproduce subordination.
+
+Equality analysis asks who is excluded, what rule or practice causes the disadvantage, whether the disadvantage is direct or indirect, and what accommodation or positive measure is required. Temporary special measures are not exceptions to equality; properly designed, they are instruments for achieving it.
+
+3. Intersectionality
+
+Discrimination may arise through the interaction of sex or gender with caste, tribe, religion, disability, age, poverty, migration status, sexuality or geography. A Dalit woman facing workplace harassment, a girl with a disability denied school access, or a trafficked adolescent may experience a form of harm not captured by analysing one ground in isolation.
+
+Intersectional analysis identifies the actual combined disadvantage, avoids stereotypes and selects coordinated remedies. Article 14's substantive equality and Article 21's dignity support this approach, while specialised statutes may provide additional forums and protections.
+
+4. CEDAW: purpose and scope
+
+The Convention on the Elimination of All Forms of Discrimination against Women, 1979 is the principal international treaty on women's equality. It defines discrimination as sex-based distinction, exclusion or restriction having the effect or purpose of impairing women's equal recognition, enjoyment or exercise of human rights, irrespective of marital status.
+
+CEDAW covers civil, political, economic, social and cultural life. It requires constitutional and legislative equality, protection against discrimination by public authorities and private actors, modification of discriminatory laws and practices, effective remedies and institutional change. India signed CEDAW in 1980 and ratified it in 1993.
+
+5. CEDAW's substantive obligations
+
+Article 2 requires States to condemn discrimination and pursue elimination without delay. Article 3 requires women's full development and advancement. Article 4 permits temporary special measures and measures protecting maternity. Article 5 targets prejudices, stereotypes and gendered social roles.
+
+Articles 6–16 address trafficking, political participation, nationality, education, employment, health, economic and social benefits, rural women, equality before law, and marriage and family relations. CEDAW therefore addresses both State regulation and discriminatory social conditions.
+
+6. Violence against women as discrimination
+
+Although the original Convention does not contain a standalone article titled gender-based violence, the CEDAW Committee has interpreted discrimination to include violence directed against a woman because she is a woman or affecting women disproportionately. Duties include prevention, due diligence, investigation, protection, prosecution where appropriate, and reparation.
+
+The public-private divide is not a defence to State inaction. Domestic violence, sexual violence, workplace harassment, trafficking and harmful practices can engage international responsibility where authorities fail to exercise due diligence. Responses must preserve survivor dignity, choice, confidentiality and access to justice.
+
+7. India's CEDAW declarations and reservation
+
+India declared that it would apply Articles 5(a) and 16(1) consistently with its policy of non-interference in a community's personal affairs without its initiative and consent. Regarding Article 16(2), India supported compulsory marriage registration in principle but stated that nationwide implementation was then impractical given diverse customs, religions and literacy levels.
+
+India also reserved the right not to be bound by Article 29(1), which provides arbitration and possible ICJ settlement of disputes between States concerning interpretation or application. India is not party to the Optional Protocol to CEDAW. These positions should be stated precisely and critically assessed against equality and effective-remedy objectives.
+
+8. Constitutional protection for women
+
+Articles 14, 15(1), 16 and 21 guarantee equality, non-discrimination, equal public employment opportunity, liberty and dignity. Article 15(3) permits special provisions for women and children. Directive Principles including Articles 39(a), 39(d), 39(e), 42 and 46 address livelihood, equal pay, protection from abuse, maternity relief and vulnerable groups.
+
+Article 15(3) is enabling, not a licence for paternalistic exclusion. A measure must genuinely advance equality and cannot rest only on stereotypes about women's weakness, dependency or proper social role. Constitutional protection increasingly focuses upon autonomy, agency and substantive equality.
+
+9. Gender-neutral and gender-specific laws
+
+Gender-neutral guarantees can protect everyone and avoid unnecessary stereotypes. Gender-specific laws may be justified where they respond to documented patterns of disadvantage or fulfil Article 15(3). Their validity and design should be examined through purpose, evidence, proportionality, inclusion and actual effect.
+
+A comprehensive framework also recognises that transgender and gender-diverse persons face violence and exclusion. A statute protecting “women” has its defined coverage, while constitutional equality and other laws may protect persons outside that definition. Courts should not erase statutory text, but authorities must avoid leaving victims without a lawful remedy.
+
+10. Vishaka and the constitutional origin of workplace protection
+
+In Vishaka v. State of Rajasthan, the Supreme Court held that workplace sexual harassment violates equality, non-discrimination, freedom to work and dignity under Articles 14, 15, 19(1)(g) and 21. In the absence of legislation, CEDAW informed binding guidelines under Articles 32 and 141.
+
+The judgment required prevention, a complaints mechanism, awareness, disciplinary action and protection from retaliation. It demonstrates how compatible international norms may fill a domestic legal vacuum. Parliament later enacted the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.
+
+11. Meaning of sexual harassment under the POSH Act
+
+The 2013 Act protects a woman of any age, whether employed or not, alleging sexual harassment at a workplace. Sexual harassment includes unwelcome physical contact and advances, demand or request for sexual favours, sexually coloured remarks, showing pornography, and other unwelcome physical, verbal or non-verbal conduct of a sexual nature.
+
+Circumstances such as implied employment preference or threat, interference with work, hostile or offensive environment, and humiliating treatment affecting health or safety may amount to harassment when connected with sexual conduct. The core inquiry is whether the conduct was unwelcome; intention alone does not decide the question.
+
+12. Workplace, employee and employer coverage
+
+“Workplace” is deliberately broad: government and private organisations, hospitals, sports institutes, dwelling places or houses, and places visited during or arising out of employment, including employer-provided transportation. Contemporary application should focus on the work nexus rather than only the physical office.
+
+Employee coverage includes regular, temporary, ad hoc, daily-wage, contract, probationary, trainee, apprentice and voluntary work arrangements, with or without remuneration. Domestic workers receive access through the Local Committee mechanism. The employer's statutory identity depends upon management and control of the workplace.
+
+13. Internal Committee
+
+Every workplace with ten or more employees must constitute an Internal Committee by written order. It is chaired by a senior woman employee where available, includes at least two employees committed to women's causes or possessing relevant experience, and one external member from an NGO, association or person familiar with sexual-harassment issues. At least half the members must be women.
+
+Correct composition is essential to jurisdiction, independence and confidence. The employer must provide facilities, assist attendance, make information available, implement recommendations and organise awareness and training. Merely issuing a committee order without capacity or independence does not fulfil prevention duties.
+
+14. Local Committee
+
+The District Officer constitutes a Local Committee to receive complaints where an establishment has fewer than ten workers or where the complaint is against the employer. Its composition includes a woman chairperson from among eminent women in social work, a member from the relevant local level, NGO or knowledgeable members, and the designated social-welfare officer.
+
+The Local Committee prevents small workplaces, informal workers and complainants against employers from being left without a forum. Authorities must publicise contact details and ensure access, confidentiality and assistance.
+
+15. Complaint, limitation and assistance
+
+A written complaint should ordinarily be made within three months of the incident, or the last incident in a series. The committee may extend the period by up to three further months for recorded reasons where circumstances prevented timely filing. If the woman cannot submit a written complaint, reasonable assistance must be provided.
+
+Rules permit specified persons to complain where physical or mental incapacity, death or other circumstances prevent the aggrieved woman from acting. Limitation should be applied with sensitivity to trauma and power imbalance while respecting the statutory framework and procedural fairness.
+
+16. Conciliation, inquiry and interim relief
+
+Before inquiry and only at the aggrieved woman's request, the committee may attempt conciliation; monetary settlement cannot be its basis. If settlement is reached, it is recorded and forwarded for action. Otherwise, the committee conducts an inquiry consistent with applicable service rules or prescribed procedure and natural justice.
+
+During inquiry, it may recommend transfer of either party, leave for the aggrieved woman up to the statutory period in addition to regular leave, or other prescribed relief. Both parties must receive a fair opportunity. The inquiry should ordinarily conclude within ninety days.
+
+17. Findings, remedies and false-complaint safeguard
+
+The committee submits findings to the employer or District Officer within the prescribed period. If harassment is proved, it may recommend disciplinary action and compensation deducted from salary or otherwise recovered, assessed through trauma, career loss, medical expense, respondent income and feasibility of payment.
+
+The Act permits action for a knowingly false or malicious complaint or fabricated evidence, but expressly states that inability to substantiate or provide adequate proof does not by itself attract action. This safeguard is vital: adverse findings cannot automatically be converted into retaliation against a complainant.
+
+18. Confidentiality, appeal and employer liability
+
+The complaint, identities, proceedings, recommendations and action are protected from publication, subject to limited dissemination of justice secured without identifying information. Breach may attract penalty. An appeal lies under applicable service rules or prescribed law, ordinarily within ninety days.
+
+Employers must prevent harassment, display consequences and committee details, conduct orientation, assist inquiry and prosecution, and treat sexual harassment as misconduct. Non-compliance can attract fine, enhanced consequences for repeat violations, and possible cancellation or non-renewal of licence or registration.
+
+19. Convention on the Rights of the Child
+
+The CRC, 1989 treats every person below eighteen as a child unless majority is attained earlier under applicable law. India ratified it in 1992. The Convention recognises children as holders of civil, political, economic, social and cultural rights while acknowledging evolving capacities and parental responsibilities.
+
+Its four general principles guide every provision: non-discrimination under Article 2; best interests as a primary consideration under Article 3; life, survival and development under Article 6; and the child's right to express views and have them given due weight under Article 12.
+
+20. Best interests and participation
+
+Best interests is a substantive right, an interpretive principle and a rule of procedure. Decision-makers must identify relevant interests, assess impact, consider the child's circumstances and explain how the principle affected the outcome. It does not permit adults to override other CRC rights through an unsupported claim of benevolence.
+
+Participation makes the inquiry rights-based. A child capable of forming views must be heard directly or through an appropriate representative, in a safe and age-sensitive manner. Weight depends upon age and maturity, not a rigid age threshold. Participation is not the same as placing the entire burden of decision upon the child.
+
+21. Identity, family and alternative care
+
+The CRC protects birth registration, name, nationality and identity. A child should not be separated from parents against their will except through lawful, reviewable determination that separation is necessary for the child's best interests. Family reunification, contact and parental responsibilities must be addressed consistently with safety.
+
+Where family care is unavailable or unsafe, the State must provide suitable alternative care. Institutionalisation should be a measure of last resort and periodically reviewed. Kinship, foster care, adoption and other options require lawful safeguards, stability, identity protection and freedom from financial exploitation.
+
+22. Health, education and development
+
+Children have rights to the highest attainable health, nutrition, clean water, social security, an adequate standard of living, education, rest, play and cultural participation. Education must develop personality, talents, respect for rights, identity, peace and responsible life in a free society.
+
+Article 21A of the Constitution guarantees free and compulsory education for children aged six to fourteen. The RTE Act, 2009 structures duties of government, local authorities and schools. Articles 39(e) and (f), 45 and 47 guide protection, early childhood care, nutrition and health.
+
+23. Protection from violence and exploitation
+
+CRC Article 19 requires protection against physical or mental violence, injury, abuse, neglect, maltreatment and sexual exploitation while in care. Articles 32–36 address economic exploitation, harmful labour, drugs, sexual exploitation, abduction, sale, trafficking and other exploitation.
+
+Effective protection combines prevention, safe reporting, child-sensitive investigation, medical and psychosocial care, family assessment, education continuity, compensation and recovery. Criminal prosecution alone does not restore a child's development or prevent revictimisation.
+
+24. POCSO Act: scope and offences
+
+The Protection of Children from Sexual Offences Act, 2012 is gender-neutral as to the child and defines a child as anyone below eighteen. It creates offences of penetrative sexual assault, aggravated penetrative sexual assault, sexual assault, aggravated sexual assault, sexual harassment and use of a child for pornographic purposes.
+
+POCSO does not recognise a general close-in-age or adolescent-consent exception. Mandatory reporting applies where a person apprehends or knows of an offence. Professionals must follow the statute while protecting confidentiality and ensuring the child is not blamed or repeatedly exposed to trauma.
+
+25. Child-friendly POCSO procedure
+
+Police should record the child's statement at the residence or place of choice, ordinarily by a woman officer not in uniform, and avoid detaining the child at a police station at night. The child should be protected from contact with the accused and may receive assistance of a support person, interpreter, special educator or expert.
+
+Special Courts conduct in-camera proceedings, permit screens or other arrangements, avoid aggressive questioning and repeated testimony, and should complete evidence and trial within statutory timelines as far as possible. Presumptions under Sections 29 and 30 operate at trial subject to constitutional fairness and the prosecution's foundational burden.
+
+26. Juvenile Justice Act and two child categories
+
+The Juvenile Justice (Care and Protection of Children) Act, 2015 distinguishes a “child in conflict with law” from a “child in need of care and protection.” Juvenile Justice Boards handle the first category; Child Welfare Committees address the second. The statute is guided by dignity, participation, best interests, family responsibility, safety, non-stigmatising language, institutionalisation as last resort, restoration and fresh start.
+
+For alleged heinous offences by children aged sixteen to eighteen, the Board makes a preliminary assessment of mental and physical capacity, ability to understand consequences and circumstances—not a trial. Transfer to the Children's Court is not automatic, and rehabilitative duties continue.
+
+27. Adoption and care institutions
+
+Adoption under the JJ Act provides permanent family placement through a regulated process centred on the child's best interests. The Central Adoption Resource Authority performs statutory functions. Prospective parents do not possess a right to demand a particular child; legality, eligibility, consent where applicable and child welfare govern matching and orders.
+
+Child-care institutions must be registered and monitored. Individual care plans, education, health, family restoration where safe, aftercare and periodic review are necessary. Institutional convenience cannot replace the child's right to development and family-based care where appropriate.
+
+28. Child labour, trafficking and forced marriage
+
+Article 24 prohibits employment of children below fourteen in factories, mines and other hazardous employment. Article 23 prohibits trafficking and forced labour. The Child and Adolescent Labour (Prohibition and Regulation) Act, 1986, as amended, broadly prohibits employment of children below fourteen subject to limited statutory exceptions and prohibits adolescents in hazardous occupations and processes.
+
+Trafficking is punishable under the BNS and requires victim-centred rescue and rehabilitation. The Prohibition of Child Marriage Act, 2006 provides prevention, injunctions, punishments and remedies; child marriages are generally voidable at the option of the contracting child, with specified circumstances rendering them void. Protection must address education, shelter, maintenance, custody and safety.
+
+29. Child rights institutions and remedies
+
+The Commissions for Protection of Child Rights Act, 2005 establishes the National and State Commissions and provides for Children's Courts. Other authorities include Child Welfare Committees, Juvenile Justice Boards, Special Juvenile Police Units, POCSO Special Courts, District Child Protection Units and legal-services institutions.
+
+A problem may require immediate production before a CWC, police protection, medical care, a POCSO report, habeas corpus, compensation, education orders and rehabilitation. Jurisdiction should be coordinated so the child is not repeatedly interviewed or moved between agencies.
+
+30. Examination and problem-solving method
+
+For a women's-rights problem, identify direct, indirect or intersectional discrimination; connect CEDAW with Articles 14, 15, 16, 19 and 21; examine Article 15(3), due diligence and the specialised statute. Under POSH, identify aggrieved woman, workplace, committee jurisdiction, limitation, interim relief, inquiry fairness, confidentiality and remedy.
+
+For a child-rights problem, begin with age and apply all four CRC principles. Classify the child under POCSO, JJ, labour, marriage, trafficking or education law; identify the competent institution; protect participation and privacy; and combine accountability with recovery and rehabilitation. Conclude with an effective, child-sensitive remedy rather than punishment alone.
+    `.trim(),
     provisions: [
       "Convention on the Elimination of All Forms of Discrimination against Women, 1979",
       "Convention on the Rights of the Child, 1989",
@@ -1418,9 +1590,139 @@ Choose Article 32 or 226 and the correct writ. Address standing, alternate remed
       "Protection of Children from Sexual Offences Act, 2012",
       "Juvenile Justice (Care and Protection of Children) Act, 2015",
       "Right of Children to Free and Compulsory Education Act, 2009",
+      "Protection of Women from Domestic Violence Act, 2005",
+      "Commissions for Protection of Child Rights Act, 2005",
+      "Child and Adolescent Labour (Prohibition and Regulation) Act, 1986",
+      "Prohibition of Child Marriage Act, 2006",
+      "Bharatiya Nyaya Sanhita, 2023 — offences against women and children",
+    ],
+    keyPoints: [
+      "Gender-neutral rights require gender-sensitive application to overcome structural disadvantage.",
+      "Substantive equality permits targeted measures; transformative equality challenges stereotypes and institutions.",
+      "Intersectionality examines combined disadvantage rather than treating identity grounds separately.",
+      "CEDAW covers discrimination having either discriminatory purpose or effect.",
+      "Gender-based violence is discrimination and engages State due-diligence duties.",
+      "India ratified CEDAW in 1993 with declarations on Articles 5(a), 16(1) and 16(2), and a reservation to Article 29(1).",
+      "Articles 14, 15, 16 and 21 protect women's equality, agency and dignity; Article 15(3) enables special provisions.",
+      "Vishaka treated workplace sexual harassment as a violation of Fundamental Rights and used CEDAW to fill a legal vacuum.",
+      "The POSH Act covers a broad range of women, work relationships and work-connected places.",
+      "Workplaces with ten or more employees require a properly constituted Internal Committee.",
+      "The Local Committee receives complaints from smaller workplaces and complaints against the employer.",
+      "POSH complaints ordinarily have a three-month limitation, extendable by three months for recorded reasons.",
+      "Conciliation is available only at the woman's request and cannot be based upon monetary settlement.",
+      "Failure to prove a complaint is not itself evidence that it was malicious or knowingly false.",
+      "The CRC's four principles are non-discrimination, best interests, survival and development, and participation.",
+      "Best interests is a substantive right, interpretive principle and procedural rule—not unchecked adult discretion.",
+      "POCSO is gender-neutral as to children below eighteen and creates child-friendly reporting and trial procedures.",
+      "The JJ Act separates children in conflict with law from children needing care and protection.",
+      "Institutional care is a last resort; recovery, family-based care and rehabilitation are central duties.",
+      "Child-rights remedies must coordinate protection, participation, accountability and long-term development.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-5-vishaka",
+        caseName: "Vishaka v. State of Rajasthan",
+        citation: "(1997) 6 SCC 241",
+        principle:
+          "Workplace sexual harassment violates Articles 14, 15, 19(1)(g) and 21; compatible CEDAW norms may fill a legislative vacuum.",
+        summary:
+          "The binding Vishaka Guidelines established prevention and complaints duties before enactment of the POSH Act.",
+      },
+      {
+        id: "human-rights-unit-5-apparel-export",
+        caseName: "Apparel Export Promotion Council v. A.K. Chopra",
+        citation: "(1999) 1 SCC 759",
+        principle:
+          "Sexual harassment violates gender equality and dignity; absence of completed physical contact does not negate misconduct.",
+        summary:
+          "The Court reinforced Vishaka and the need for workplace discipline consistent with women's human rights.",
+      },
+      {
+        id: "human-rights-unit-5-medha-kotwal",
+        caseName: "Medha Kotwal Lele v. Union of India",
+        citation: "(2013) 1 SCC 297",
+        principle:
+          "Governments and institutions were required to implement Vishaka effectively and treat committee findings as legally consequential.",
+        summary:
+          "The case exposed implementation gaps and strengthened institutional accountability before the 2013 statute.",
+      },
+      {
+        id: "human-rights-unit-5-nisha-priya-bhatia",
+        caseName: "Nisha Priya Bhatia v. Union of India",
+        citation: "(2020) 13 SCC 56",
+        principle:
+          "The constitutional duty to provide a safe workplace includes institutional accountability and meaningful redress.",
+        summary:
+          "The Court addressed harassment complaints through dignity, procedural fairness and employer responsibility.",
+      },
+      {
+        id: "human-rights-unit-5-aparna-bhat",
+        caseName: "Aparna Bhat v. State of Madhya Pradesh",
+        citation: "(2021) 3 SCC 247",
+        principle:
+          "Courts must avoid gender stereotypes and conditions that trivialise sexual violence or compromise survivor dignity.",
+        summary:
+          "The judgment supplied guidance for stereotype-free judicial reasoning and sensitisation.",
+      },
+      {
+        id: "human-rights-unit-5-independent-thought",
+        caseName: "Independent Thought v. Union of India",
+        citation: "(2017) 10 SCC 800",
+        principle:
+          "A child marriage cannot erase a girl's bodily integrity and statutory protection against sexual violence.",
+        summary:
+          "The Court read down the marital-rape exception as applied to wives below eighteen and harmonised child-protection laws.",
+      },
+      {
+        id: "human-rights-unit-5-sampurna-behura",
+        caseName: "Sampurna Behura v. Union of India",
+        citation: "(2018) 4 SCC 433",
+        principle:
+          "States must establish and effectively operate the institutions mandated by juvenile-justice legislation.",
+        summary:
+          "The decision used continuing oversight to enforce child-welfare boards, committees and protective infrastructure.",
+      },
+      {
+        id: "human-rights-unit-5-sheela-barse",
+        caseName: "Sheela Barse v. Union of India",
+        citation: "(1986) 3 SCC 632",
+        principle:
+          "Children in custody require prompt, humane and separate procedures, legal assistance and protection from harmful detention.",
+        summary:
+          "The case advanced child-sensitive justice and institutional safeguards through public-interest jurisdiction.",
+      },
+      {
+        id: "human-rights-unit-5-mc-mehta-child-labour",
+        caseName: "M.C. Mehta v. State of Tamil Nadu",
+        citation: "(1996) 6 SCC 756",
+        principle:
+          "Child-labour prohibition requires enforcement, education, compensation and rehabilitation rather than removal alone.",
+        summary:
+          "The Court directed surveys, a welfare fund and measures addressing family livelihood and schooling.",
+      },
+      {
+        id: "human-rights-unit-5-gaurav-jain",
+        caseName: "Gaurav Jain v. Union of India",
+        citation: "(1997) 8 SCC 114",
+        principle:
+          "Children of women in prostitution are entitled to equality, education, dignity and rehabilitation without stigma.",
+        summary:
+          "The ruling emphasised integration and development rather than inherited social exclusion.",
+      },
+      {
+        id: "human-rights-unit-5-laxmi-kant-pandey",
+        caseName: "Laxmi Kant Pandey v. Union of India",
+        citation: "(1984) 2 SCC 244",
+        principle:
+          "Inter-country adoption requires rigorous safeguards against trafficking and must be governed by the child's welfare.",
+        summary:
+          "The Court developed protective procedures before the later statutory adoption framework matured.",
+      },
     ],
     examFocus:
-      "Discuss substantive equality, CEDAW, constitutional protection, workplace sexual-harassment institutions and remedies, the four CRC principles, and India's principal child-protection statutes.",
+      "Prepare formal, substantive and transformative equality; intersectionality; CEDAW definition, obligations, gender-based violence and India's exact declarations/reservation; Articles 14–16, 19, 21 and 15(3); Vishaka and the transition to the POSH Act; definitions of aggrieved woman, employee, workplace and sexual harassment; Internal and Local Committees; limitation, conciliation, interim relief, inquiry, remedies, confidentiality, appeal and employer liability; CRC scope and four general principles; identity, family, health, education, violence and exploitation; POCSO offences, mandatory reporting and child-friendly process; JJ Act categories, preliminary assessment, rehabilitation and adoption; child labour, trafficking and child marriage; and the correct institution and remedy for a factual problem.",
+    revisionNotes:
+      "Equality: formal sameness, substantive removal of disadvantage, transformative change to structures and stereotypes; apply intersectionality. CEDAW = purpose/effect discrimination across all rights + public/private due diligence. India ratified in 1993 with declarations on Articles 5(a), 16(1), 16(2), reservation to Article 29(1), and no Optional Protocol. Constitution: Articles 14, 15, 16, 19, 21; Article 15(3) enables special provisions. Vishaka used CEDAW and Fundamental Rights; POSH now governs. POSH: broad workplace/employee/aggrieved-woman coverage; Internal Committee at 10+ employees; Local Committee for smaller establishments or complaint against employer; complaint 3 months + possible 3-month extension; conciliation only on woman's request and not for money; inquiry 90 days; confidentiality; interim relief; compensation/discipline; mere non-proof is not malicious complaint. CRC child = below 18; principles: non-discrimination, best interests, survival/development, participation. POCSO is child-gender-neutral, has mandatory reporting and Special Courts. JJ Act separates child in conflict with law from child in need of care and protection; institutionalisation last resort. Coordinate RTE, labour, marriage, trafficking, adoption and commission remedies around safety, voice, recovery and development.",
   },
   {
     title: "Protection of Persons with Disabilities",
