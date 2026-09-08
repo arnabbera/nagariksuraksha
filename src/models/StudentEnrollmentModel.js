@@ -229,6 +229,14 @@ export const createStudentEnrollmentModel = ({
 
   pdfDownloadAccess = false,
 
+  liveClassAccess = false,
+  liveClassStatus = "not-enrolled",
+  liveClassFee = 0,
+  liveClassPaymentStatus = "not-required",
+  liveClassPaymentId = "",
+  liveClassPaymentReference = "",
+  liveClassPaidAt = null,
+
   mockTest1 = null,
   mockTest2 = null,
   mockTest3 = null,
@@ -329,6 +337,18 @@ export const createStudentEnrollmentModel = ({
   },
 
   accessType,
+
+  liveClasses: {
+    hasAccess: Boolean(liveClassAccess),
+    status: liveClassStatus,
+    fee: Number(liveClassFee || 0),
+    payment: {
+      status: liveClassPaymentStatus,
+      paymentId: liveClassPaymentId,
+      reference: liveClassPaymentReference,
+      paidAt: liveClassPaidAt,
+    },
+  },
 
   // =======================================================
   // CERTIFICATION ENROLLMENT

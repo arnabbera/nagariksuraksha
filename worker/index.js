@@ -1,4 +1,7 @@
 const COURSE_FEE_PAISE = 4900;
+const LIVE_CLASS_FEE_PAISE = 49900;
+const PREMIUM_FEE_PAISE = COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE;
+const LIVE_CLASS_COURSE_ID = "criminal-law-i-transitioning-from-ipc-to-bns";
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";
 const FIREBASE_ISSUER = `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
@@ -187,6 +190,70 @@ const getEnrollment = async (env, studentId, courseId) => {
     fields.courseId?.stringValue !== courseId || fields.deleted?.booleanValue === true
   ) fail("This enrollment does not belong to your account.", 403);
   return { enrollment, token };
+};
+
+const firestoreValueToJs = (value) => {
+  if (!value) return null;
+  if ("stringValue" in value) return value.stringValue;
+  if ("integerValue" in value) return Number(value.integerValue);
+  if ("doubleValue" in value) return Number(value.doubleValue);
+  if ("booleanValue" in value) return value.booleanValue;
+  if ("timestampValue" in value) return value.timestampValue;
+  if ("nullValue" in value) return null;
+  if (value.arrayValue) return (value.arrayValue.values || []).map(firestoreValueToJs);
+  if (value.mapValue) {
+    return Object.fromEntries(
+      Object.entries(value.mapValue.fields || {}).map(([key, child]) => [key, firestoreValueToJs(child)]),
+    );
+  }
+  return null;
+};
+
+const getLiveSessions = async (request, env, url) => {
+  if (request.method !== "GET") fail("Method not allowed.", 405);
+  const studentId = await requireStudent(request);
+  const courseId = String(url.searchParams.get("courseId") || "").trim();
+  if (courseId !== LIVE_CLASS_COURSE_ID) fail("Live classes are not available for this course.", 404);
+
+  const { enrollment, token } = await getEnrollment(env, studentId, courseId);
+  const fields = enrollment.fields || {};
+  const hasAccess =
+    getFirestoreValue(fields, "liveClasses.hasAccess")?.booleanValue === true &&
+    getFirestoreValue(fields, "liveClasses.payment.status")?.stringValue === "paid";
+  if (!hasAccess) fail("Upgrade to the Premium Live Plan to view live-class details.", 403);
+
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:runQuery`,
+    {
+      method: "POST",
+      headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{ collectionId: "liveSessions" }],
+          where: {
+            fieldFilter: {
+              field: { fieldPath: "courseId" },
+              op: "EQUAL",
+              value: { stringValue: courseId },
+            },
+          },
+        },
+      }),
+    },
+  );
+  if (!response.ok) fail("Unable to load live-class schedules.", 503);
+  const rows = await response.json();
+  const sessions = rows
+    .filter((row) => row.document?.fields?.published?.booleanValue !== false)
+    .map((row) => {
+      const session = Object.fromEntries(
+        Object.entries(row.document.fields || {}).map(([key, value]) => [key, firestoreValueToJs(value)]),
+      );
+      return { id: row.document.name.split("/").at(-1), ...session };
+    })
+    .sort((first, second) => Number(first.chapterNumber || 0) - Number(second.chapterNumber || 0));
+
+  return { sessions };
 };
 
 const ensureMapFields = (value) => {
@@ -428,43 +495,76 @@ const readBody = async (request) => {
 
 const createOrder = async (request, env) => {
   const studentId = await requireStudent(request);
-  const { courseId: rawCourseId } = await readBody(request);
+  const { courseId: rawCourseId, purchaseType: rawPurchaseType } = await readBody(request);
   const courseId = String(rawCourseId || "").trim();
+  const purchaseType = String(rawPurchaseType || "certification").trim();
   if (!courseId || courseId.length > 160) fail("Course ID is required.");
+  if (!["certification", "live-classes", "premium"].includes(purchaseType)) {
+    fail("Invalid enrollment plan.");
+  }
+  if (purchaseType !== "certification" && courseId !== LIVE_CLASS_COURSE_ID) {
+    fail("Live classes are not available for this course yet.", 409);
+  }
   const { enrollment, token } = await getEnrollment(env, studentId, courseId);
   const fields = structuredClone(enrollment.fields || {});
-  if (getFirestoreValue(fields, "certification.payment.status")?.stringValue === "paid") {
+  const certificationPaid =
+    getFirestoreValue(fields, "certification.payment.status")?.stringValue === "paid";
+  const liveClassesPaid =
+    getFirestoreValue(fields, "liveClasses.payment.status")?.stringValue === "paid";
+  if (purchaseType === "certification" && certificationPaid) {
     fail("This course is already paid and enrolled.", 409);
   }
+  if (purchaseType === "live-classes" && !certificationPaid) {
+    fail("Choose the Premium Live Plan to enroll in the course and live classes together.", 409);
+  }
+  if (purchaseType !== "certification" && liveClassesPaid) {
+    fail("Live-class access is already active for this course.", 409);
+  }
+  const orderAmount =
+    purchaseType === "live-classes"
+      ? LIVE_CLASS_FEE_PAISE
+      : purchaseType === "premium"
+        ? PREMIUM_FEE_PAISE
+        : COURSE_FEE_PAISE;
   const order = await razorpayRequest(env, "/orders", {
     method: "POST",
     body: JSON.stringify({
-      amount: COURSE_FEE_PAISE,
+      amount: orderAmount,
       currency: CURRENCY,
       receipt: `ns_${Date.now()}_${studentId.slice(0, 8)}`,
-      notes: { studentId, courseId, enrollmentId: `${studentId}_${courseId}` },
+      notes: {
+        studentId,
+        courseId,
+        purchaseType,
+        enrollmentId: `${studentId}_${courseId}`,
+      },
     }),
   });
   const now = new Date().toISOString();
-  setFirestoreValue(fields, "certification.status", { stringValue: "pending-payment" });
-  setFirestoreValue(fields, "certification.fee", { integerValue: "49" });
-  setFirestoreValue(fields, "certification.payment.status", { stringValue: "pending" });
-  setFirestoreValue(fields, "certification.payment.provider", { stringValue: "razorpay" });
-  setFirestoreValue(fields, "certification.payment.orderId", { stringValue: order.id });
-  setFirestoreValue(fields, "certification.payment.amount", { integerValue: String(COURSE_FEE_PAISE) });
-  setFirestoreValue(fields, "certification.payment.currency", { stringValue: CURRENCY });
-  setFirestoreValue(fields, "certification.payment.createdAt", { timestampValue: now });
+  const pendingPath = purchaseType === "certification" ? "certification" : "liveClasses";
+  setFirestoreValue(fields, `${pendingPath}.status`, { stringValue: "pending-payment" });
+  setFirestoreValue(fields, `${pendingPath}.fee`, {
+    integerValue: String(purchaseType === "certification" ? 49 : 499),
+  });
+  setFirestoreValue(fields, `${pendingPath}.payment.status`, { stringValue: "pending" });
+  setFirestoreValue(fields, `${pendingPath}.payment.provider`, { stringValue: "razorpay" });
+  setFirestoreValue(fields, `${pendingPath}.payment.orderId`, { stringValue: order.id });
+  setFirestoreValue(fields, `${pendingPath}.payment.amount`, { integerValue: String(orderAmount) });
+  setFirestoreValue(fields, `${pendingPath}.payment.currency`, { stringValue: CURRENCY });
+  setFirestoreValue(fields, `${pendingPath}.payment.purchaseType`, { stringValue: purchaseType });
+  setFirestoreValue(fields, `${pendingPath}.payment.createdAt`, { timestampValue: now });
   await updateEnrollment({ enrollment, token, topLevelFields: {
-    certification: fields.certification,
+    [pendingPath]: fields[pendingPath],
     updatedAt: { timestampValue: now },
     updatedBy: { stringValue: studentId },
   } });
   return {
     keyId: getRazorpayCredentials(env).keyId,
     orderId: order.id,
-    amount: COURSE_FEE_PAISE,
+    amount: orderAmount,
     currency: CURRENCY,
     courseId,
+    purchaseType,
   };
 };
 
@@ -497,15 +597,17 @@ const verifyPayment = async (request, env) => {
   const orderId = String(body.razorpayOrderId || "").trim();
   const paymentId = String(body.razorpayPaymentId || "").trim();
   const signature = String(body.razorpaySignature || "").trim();
+  const purchaseType = String(body.purchaseType || "certification").trim();
   if (!courseId || !orderId || !paymentId || !signature) {
     fail("Incomplete Razorpay payment details.");
   }
   const { enrollment, token } = await getEnrollment(env, studentId, courseId);
   const fields = structuredClone(enrollment.fields || {});
-  if (getFirestoreValue(fields, "certification.payment.status")?.stringValue === "paid") {
+  const paymentRoot = purchaseType === "certification" ? "certification" : "liveClasses";
+  if (getFirestoreValue(fields, `${paymentRoot}.payment.status`)?.stringValue === "paid") {
     return { enrollmentId: `${studentId}_${courseId}`, status: "paid" };
   }
-  if (getFirestoreValue(fields, "certification.payment.orderId")?.stringValue !== orderId) {
+  if (getFirestoreValue(fields, `${paymentRoot}.payment.orderId`)?.stringValue !== orderId) {
     fail("Payment order does not match this enrollment.", 403);
   }
   const { keySecret } = getRazorpayCredentials(env);
@@ -517,29 +619,50 @@ const verifyPayment = async (request, env) => {
     razorpayRequest(env, `/orders/${encodeURIComponent(orderId)}`),
     razorpayRequest(env, `/payments/${encodeURIComponent(paymentId)}`),
   ]);
+  const expectedAmount =
+    purchaseType === "live-classes"
+      ? LIVE_CLASS_FEE_PAISE
+      : purchaseType === "premium"
+        ? PREMIUM_FEE_PAISE
+        : COURSE_FEE_PAISE;
   const validPayment = order.status === "paid" && payment.status === "captured" &&
-    payment.order_id === orderId && Number(order.amount) === COURSE_FEE_PAISE &&
-    Number(payment.amount) === COURSE_FEE_PAISE && order.currency === CURRENCY &&
+    payment.order_id === orderId &&
+    Number(payment.amount) === expectedAmount && Number(order.amount) === expectedAmount &&
+    order.currency === CURRENCY &&
     payment.currency === CURRENCY && order.notes?.studentId === studentId &&
-    order.notes?.courseId === courseId;
+    order.notes?.courseId === courseId && order.notes?.purchaseType === purchaseType;
   if (!validPayment) {
     fail("Payment is not captured yet. Please wait briefly and try again.", 409);
   }
   const now = new Date().toISOString();
-  setFirestoreValue(fields, "certification.status", { stringValue: "active" });
-  setFirestoreValue(fields, "certification.activatedAt", { timestampValue: now });
-  setFirestoreValue(fields, "certification.payment.status", { stringValue: "paid" });
-  setFirestoreValue(fields, "certification.payment.provider", { stringValue: "razorpay" });
-  setFirestoreValue(fields, "certification.payment.paymentId", { stringValue: paymentId });
-  setFirestoreValue(fields, "certification.payment.reference", { stringValue: orderId });
-  setFirestoreValue(fields, "certification.payment.paidAt", { timestampValue: now });
-  setFirestoreValue(fields, "certification.access.pdfDownload", { booleanValue: true });
-  setFirestoreValue(fields, "certification.access.mockTests", { booleanValue: true });
-  setFirestoreValue(fields, "certification.access.finalExam", { booleanValue: false });
-  setFirestoreValue(fields, "certification.mockTests.test1.status", { stringValue: "available" });
+  if (purchaseType === "certification" || purchaseType === "premium") {
+    setFirestoreValue(fields, "certification.status", { stringValue: "active" });
+    setFirestoreValue(fields, "certification.activatedAt", { timestampValue: now });
+    setFirestoreValue(fields, "certification.payment.status", { stringValue: "paid" });
+    setFirestoreValue(fields, "certification.payment.provider", { stringValue: "razorpay" });
+    setFirestoreValue(fields, "certification.payment.paymentId", { stringValue: paymentId });
+    setFirestoreValue(fields, "certification.payment.reference", { stringValue: orderId });
+    setFirestoreValue(fields, "certification.payment.paidAt", { timestampValue: now });
+    setFirestoreValue(fields, "certification.access.pdfDownload", { booleanValue: true });
+    setFirestoreValue(fields, "certification.access.mockTests", { booleanValue: true });
+    setFirestoreValue(fields, "certification.access.finalExam", { booleanValue: false });
+    setFirestoreValue(fields, "certification.mockTests.test1.status", { stringValue: "available" });
+  }
+  if (purchaseType === "live-classes" || purchaseType === "premium") {
+    setFirestoreValue(fields, "liveClasses.hasAccess", { booleanValue: true });
+    setFirestoreValue(fields, "liveClasses.status", { stringValue: "active" });
+    setFirestoreValue(fields, "liveClasses.activatedAt", { timestampValue: now });
+    setFirestoreValue(fields, "liveClasses.fee", { integerValue: "499" });
+    setFirestoreValue(fields, "liveClasses.payment.status", { stringValue: "paid" });
+    setFirestoreValue(fields, "liveClasses.payment.provider", { stringValue: "razorpay" });
+    setFirestoreValue(fields, "liveClasses.payment.paymentId", { stringValue: paymentId });
+    setFirestoreValue(fields, "liveClasses.payment.reference", { stringValue: orderId });
+    setFirestoreValue(fields, "liveClasses.payment.paidAt", { timestampValue: now });
+  }
   await updateEnrollment({ enrollment, token, topLevelFields: {
     accessType: { stringValue: "certification" },
     certification: fields.certification,
+    ...(fields.liveClasses ? { liveClasses: fields.liveClasses } : {}),
     updatedAt: { timestampValue: now },
     updatedBy: { stringValue: "razorpay-verification" },
   } });
@@ -562,6 +685,7 @@ const handleApi = async (request, env, url) => {
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
   if (url.pathname === "/api/razorpay/verify-payment") return verifyPayment(request, env);
+  if (url.pathname === "/api/live-classes") return getLiveSessions(request, env, url);
   fail("API endpoint not found.", 404);
 };
 

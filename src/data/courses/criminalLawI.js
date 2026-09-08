@@ -17,6 +17,12 @@ export const criminalLawICourse = createCourseModel({
   accessType: "paid-enrollment",
   certificationAvailable: true,
   certificationFee: 49,
+  liveClasses: {
+    enabled: true,
+    price: 499,
+    sessionCount: 8,
+    provider: "Google Meet",
+  },
   featured: false,
   order: 6,
   totalChapters: 8,

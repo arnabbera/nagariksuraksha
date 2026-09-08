@@ -40,6 +40,7 @@ export const COLLECTIONS = Object.freeze({
   COURSES: "courses",
   COURSE_CHAPTERS: "courseChapters",
   CHAPTER_RESOURCES: "chapterResources",
+  LIVE_SESSIONS: "liveSessions",
 
   // =========================================================
   // COURSE STRUCTURE

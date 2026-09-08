@@ -14,6 +14,7 @@ import {
   FaGraduationCap,
   FaLock,
   FaPlayCircle,
+  FaVideo,
 } from "react-icons/fa";
 
 import {
@@ -43,6 +44,11 @@ import {
 import {
   payForCourseWithRazorpay,
 } from "../../../../services/razorpayPaymentService";
+
+import {
+  canJoinLiveSession,
+  getLiveSessions,
+} from "../../../../services/liveClassService";
 
 import {
   getStudentCourseProgress,
@@ -109,6 +115,13 @@ export default function CourseDetails() {
     certificationEnrolling,
     setCertificationEnrolling,
   ] = useState(false);
+
+  const [
+    liveClassEnrolling,
+    setLiveClassEnrolling,
+  ] = useState(false);
+
+  const [liveSessions, setLiveSessions] = useState([]);
 
   const [
     error,
@@ -469,6 +482,44 @@ export default function CourseDetails() {
     certification?.payment?.status ===
     "paid";
 
+  const isCriminalLawCourse =
+    course?.slug ===
+    "criminal-law-i-transitioning-from-ipc-to-bns";
+
+  const liveClassAccess =
+    isAdmin ||
+    enrollment?.liveClasses?.hasAccess === true ||
+    enrollment?.liveClasses?.payment?.status === "paid";
+
+  useEffect(() => {
+    let active = true;
+
+    if (!liveClassAccess || !isCriminalLawCourse || !course?.id || isAdmin) {
+      return undefined;
+    }
+
+    getLiveSessions(course.id)
+      .then((sessions) => {
+        if (active) setLiveSessions(sessions);
+      })
+      .catch((sessionError) => {
+        console.warn("Unable to load live-class schedule:", sessionError);
+        if (active) setLiveSessions([]);
+      });
+
+    return () => { active = false; };
+  }, [course?.id, isAdmin, isCriminalLawCourse, liveClassAccess]);
+
+  const liveSessionByChapter = useMemo(
+    () => Object.fromEntries(
+      liveSessions.map((session) => [
+        session.chapterId || String(session.chapterNumber),
+        session,
+      ]),
+    ),
+    [liveSessions],
+  );
+
   const hasCourseAccess =
     isAdmin ||
     certificationPaymentCompleted;
@@ -496,10 +547,6 @@ export default function CourseDetails() {
   const isFamilyLawCourse =
     course?.slug ===
     "family-law-i";
-
-  const isCriminalLawCourse =
-    course?.slug ===
-    "criminal-law-i-transitioning-from-ipc-to-bns";
 
   const isPublicInternationalLawCourse =
     course?.slug ===
@@ -590,6 +637,47 @@ export default function CourseDetails() {
         );
       }
     };
+
+  const handleLiveClassPayment = async () => {
+    if (!studentId || !course?.id || !isCriminalLawCourse) return;
+
+    try {
+      setLiveClassEnrolling(true);
+      setError("");
+
+      if (!enrollment) {
+        const createdEnrollment = await enrollForCertification(
+          studentId,
+          course.id,
+          studentId,
+        );
+        setEnrollment(createdEnrollment);
+      }
+
+      await payForCourseWithRazorpay({
+        courseId: course.id,
+        courseTitle: course.title,
+        purchaseType: certificationPaymentCompleted
+          ? "live-classes"
+          : "premium",
+        studentName:
+          profile?.displayName || firebaseUser?.displayName || "",
+        studentEmail:
+          firebaseUser?.email || profile?.email || "",
+      });
+
+      setEnrollment(
+        await getStudentEnrollment(studentId, course.id),
+      );
+    } catch (liveClassError) {
+      console.error("Unable to activate live classes:", liveClassError);
+      setError(
+        liveClassError?.message || "Unable to start live-class enrollment.",
+      );
+    } finally {
+      setLiveClassEnrolling(false);
+    }
+  };
 
   // =========================================================
   // CHAPTER UNLOCKING
@@ -1254,6 +1342,40 @@ export default function CourseDetails() {
         </section>
       )}
 
+      {isCriminalLawCourse && (
+        <section className="ns-live-class-section">
+          <div className="ns-live-class-card">
+            <div className="ns-live-class-heading">
+              <div className="ns-live-class-icon"><FaVideo /></div>
+              <div>
+                <h2>Live Online Classes</h2>
+                <p>Eight interactive Google Meet classes—one class for each chapter.</p>
+              </div>
+              <strong>{certificationPaymentCompleted ? "₹499 Upgrade" : "₹548 Premium"}</strong>
+            </div>
+
+            <div className="ns-live-class-benefits">
+              <span><FaCheckCircle /> 8 chapter-wise interactive classes</span>
+              <span><FaCheckCircle /> Upcoming schedules and protected meeting access</span>
+              <span><FaCheckCircle /> Session recordings when published</span>
+              <span><FaCheckCircle /> Includes the complete certification track</span>
+            </div>
+
+            {liveClassAccess ? (
+              <div className="ns-live-class-active">
+                <FaCheckCircle /> Live-class access is active. Schedules will appear with each chapter.
+              </div>
+            ) : (
+              <Button loading={liveClassEnrolling} onClick={handleLiveClassPayment}>
+                {certificationPaymentCompleted
+                  ? "Upgrade to 8 Live Classes — ₹499"
+                  : "Choose Premium Live Plan — ₹548"}
+              </Button>
+            )}
+          </div>
+        </section>
+      )}
+
       {/* =====================================================
           COURSE CHAPTERS
           FULL WIDTH BELOW HERO
@@ -1298,6 +1420,12 @@ export default function CourseDetails() {
                         0,
                     );
 
+                  const liveSession =
+                    liveSessionByChapter[chapter.id] ||
+                    liveSessionByChapter[String(chapter.chapterNumber || index + 1)];
+
+                  const joinAvailable = canJoinLiveSession(liveSession);
+
                   return (
                     <article
                       key={
@@ -1321,6 +1449,40 @@ export default function CourseDetails() {
                             chapter.title
                           }
                         </h3>
+
+                        {isCriminalLawCourse && (
+                          <div className="ns-chapter-live-class">
+                            <div className={`ns-live-class-badge ${liveClassAccess ? "is-active" : "is-locked"}`}>
+                              {liveClassAccess ? <FaVideo /> : <FaLock />}
+                              Live Class {index + 1}: {liveClassAccess
+                                ? liveSession?.scheduledAt
+                                  ? new Date(liveSession.scheduledAt).toLocaleString("en-IN", {
+                                      dateStyle: "medium",
+                                      timeStyle: "short",
+                                    })
+                                  : "Schedule to be announced"
+                                : "Premium access"}
+                            </div>
+
+                            {liveClassAccess && liveSession?.meetingLink && (
+                              <a
+                                className={`ns-live-session-link ${joinAvailable ? "" : "is-disabled"}`}
+                                href={joinAvailable ? liveSession.meetingLink : undefined}
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-disabled={!joinAvailable}
+                              >
+                                Join Meeting {joinAvailable ? "" : "(opens 10 minutes before)"}
+                              </a>
+                            )}
+
+                            {liveClassAccess && liveSession?.recordingUrl && (
+                              <a className="ns-live-session-link" href={liveSession.recordingUrl} target="_blank" rel="noreferrer">
+                                Watch Recording
+                              </a>
+                            )}
+                          </div>
+                        )}
 
                         <p>
                           {chapter.shortDescription ||
@@ -1416,6 +1578,74 @@ export default function CourseDetails() {
             align-items: start;
 
             margin-bottom: 24px;
+          }
+
+          .ns-live-class-section { margin: 0 0 24px; }
+          .ns-live-class-card {
+            padding: 24px;
+            border: 1px solid #d8b365;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #071b31, #0d3150);
+            color: #fff;
+          }
+          .ns-live-class-heading {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 16px;
+          }
+          .ns-live-class-heading h2 { margin: 0 0 4px; }
+          .ns-live-class-heading p { margin: 0; color: #d7e2ec; }
+          .ns-live-class-heading strong { color: #f1bd60; font-size: 1.15rem; }
+          .ns-live-class-icon {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #d79a36;
+            color: #071b31;
+            font-size: 1.25rem;
+          }
+          .ns-live-class-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 18px;
+            margin: 20px 0;
+          }
+          .ns-live-class-benefits span,
+          .ns-live-class-active,
+          .ns-live-class-badge { display: flex; align-items: center; gap: 8px; }
+          .ns-live-class-benefits svg,
+          .ns-live-class-active svg { color: #f1bd60; }
+          .ns-live-class-active {
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(34, 197, 94, 0.15);
+          }
+          .ns-live-class-badge {
+            width: fit-content;
+            margin-top: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+          }
+          .ns-live-class-badge.is-active { background: #dcfce7; color: #166534; }
+          .ns-live-class-badge.is-locked { background: #fff7e6; color: #8a5800; }
+          .ns-chapter-live-class { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+          .ns-live-session-link {
+            margin-top: 10px;
+            color: #174ea6;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: underline;
+          }
+          .ns-live-session-link.is-disabled { color: #8290a0; cursor: not-allowed; text-decoration: none; }
+          @media (max-width: 700px) {
+            .ns-live-class-heading { grid-template-columns: auto 1fr; }
+            .ns-live-class-heading strong { grid-column: 1 / -1; }
+            .ns-live-class-benefits { grid-template-columns: 1fr; }
           }
 
           .ns-course-hero > * {

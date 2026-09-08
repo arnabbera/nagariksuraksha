@@ -59,13 +59,17 @@ export const payForCourseWithRazorpay = async ({
   courseTitle,
   studentName,
   studentEmail,
+  purchaseType = "certification",
 }) => {
   await loadRazorpayCheckout();
 
   let order;
 
   try {
-    order = await callPaymentApi("/api/razorpay/create-order", { courseId });
+    order = await callPaymentApi("/api/razorpay/create-order", {
+      courseId,
+      purchaseType,
+    });
   } catch (error) {
     throw new Error(error?.message || "Unable to start payment.", {
       cause: error,
@@ -88,7 +92,12 @@ export const payForCourseWithRazorpay = async ({
       currency: order.currency,
       order_id: order.orderId,
       name: "Nagarik Suraksha",
-      description: `${courseTitle || "Course"} certification enrollment`,
+      description:
+        purchaseType === "live-classes"
+          ? `${courseTitle || "Course"} — 8 live classes`
+          : purchaseType === "premium"
+            ? `${courseTitle || "Course"} — course and 8 live classes`
+            : `${courseTitle || "Course"} certification enrollment`,
       prefill: {
         name: studentName || "",
         email: studentEmail || "",
@@ -101,6 +110,7 @@ export const payForCourseWithRazorpay = async ({
         try {
           const response = await callPaymentApi("/api/razorpay/verify-payment", {
             courseId,
+            purchaseType,
             razorpayOrderId: payment.razorpay_order_id,
             razorpayPaymentId: payment.razorpay_payment_id,
             razorpaySignature: payment.razorpay_signature,
