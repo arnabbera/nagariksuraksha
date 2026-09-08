@@ -122,6 +122,7 @@ export default function CourseDetails() {
   ] = useState(false);
 
   const [liveSessions, setLiveSessions] = useState([]);
+  const [liveCheckoutAvailable, setLiveCheckoutAvailable] = useState(false);
 
   const [
     error,
@@ -519,6 +520,22 @@ export default function CourseDetails() {
     ),
     [liveSessions],
   );
+
+  useEffect(() => {
+    let active = true;
+    if (!isCriminalLawCourse) return undefined;
+
+    fetch("/api/health", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((health) => {
+        if (active) setLiveCheckoutAvailable(health?.features?.liveClasses === true);
+      })
+      .catch(() => {
+        if (active) setLiveCheckoutAvailable(false);
+      });
+
+    return () => { active = false; };
+  }, [isCriminalLawCourse]);
 
   const hasCourseAccess =
     isAdmin ||
@@ -1366,10 +1383,16 @@ export default function CourseDetails() {
                 <FaCheckCircle /> Live-class access is active. Schedules will appear with each chapter.
               </div>
             ) : (
-              <Button loading={liveClassEnrolling} onClick={handleLiveClassPayment}>
-                {certificationPaymentCompleted
-                  ? "Upgrade to 8 Live Classes — ₹499"
-                  : "Choose Premium Live Plan — ₹548"}
+              <Button
+                loading={liveClassEnrolling}
+                disabled={!liveCheckoutAvailable}
+                onClick={handleLiveClassPayment}
+              >
+                {!liveCheckoutAvailable
+                  ? "Live Plan Activation in Progress"
+                  : certificationPaymentCompleted
+                    ? "Upgrade to 8 Live Classes — ₹499"
+                    : "Choose Premium Live Plan — ₹548"}
               </Button>
             )}
           </div>

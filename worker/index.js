@@ -681,6 +681,7 @@ const handleApi = async (request, env, url) => {
         razorpay: Boolean(keyId && keySecret),
         firebaseAdmin: Boolean(getFirebaseServiceAccountJson(env)),
       },
+      features: { liveClasses: true },
     };
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
