@@ -7,8 +7,6 @@ import {
 const practiceAreas = ["Civil Law", "Criminal Law", "Property Law", "Consumer Law", "Cyber Law", "Family Law", "Banking & SARFAESI", "Legal Documentation"];
 
 const Footer = () => {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="ns-footer">
       <div className="ns-footer-container ns-footer-grid">
@@ -53,7 +51,12 @@ const Footer = () => {
       </div>
 
       <div className="ns-footer-bottom"><div className="ns-footer-container">
-        <p>© {year} NagarikSuraksha. All Rights Reserved.</p>
+        <p>
+          © 2025 NagarikSuraksha. All Rights Reserved. Built by{" "}
+          <a href="https://www.emplementer.com/" target="_blank" rel="noopener noreferrer">
+            Emplementer
+          </a>
+        </p>
         <nav><Link to="/privacy-policy">Privacy Policy</Link><Link to="/terms">Terms & Conditions</Link><Link to="/disclaimer">Disclaimer</Link></nav>
       </div></div>
 
