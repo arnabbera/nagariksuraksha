@@ -33,7 +33,7 @@ import {
 } from "../../../../services/courseService";
 
 import {
-  getPublishedChaptersByCourse,
+  getPublishedChaptersForCourse,
 } from "../../../../services/chapterService";
 
 // =========================================================
@@ -155,24 +155,19 @@ export default function PublicCoursesPage() {
                   course?.totals?.chapters || 0,
                 );
 
-                if (storedTotal > 0) {
-                  return {
-                    ...course,
-                    publishedChapterCount: storedTotal,
-                  };
-                }
-
                 try {
                   const chapters =
-                    await getPublishedChaptersByCourse(
-                      course.id,
+                    await getPublishedChaptersForCourse(
+                      course,
                     );
 
                   return {
                     ...course,
-                    publishedChapterCount: Array.isArray(chapters)
-                      ? chapters.length
-                      : 0,
+                    publishedChapterCount:
+                      Array.isArray(chapters) &&
+                      chapters.length > 0
+                        ? chapters.length
+                        : storedTotal,
                   };
                 } catch (chapterError) {
                   console.warn(
