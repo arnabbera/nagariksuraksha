@@ -189,6 +189,55 @@ export const getPublishedChaptersByCourse =
     );
   };
 
+// Course records created through different generations of the application may
+// use either the Firestore document ID or the public course slug in chapter
+// records. Resolve both forms so catalogue counts and chapter lists remain
+// accurate while those records coexist.
+export const getPublishedChaptersForCourse = async (
+  course,
+) => {
+  const courseIdentifiers = [
+    course?.id,
+    course?.slug,
+  ].filter(
+    (value, index, values) =>
+      value && values.indexOf(value) === index,
+  );
+
+  if (courseIdentifiers.length === 0) {
+    return [];
+  }
+
+  const results = await Promise.allSettled(
+    courseIdentifiers.map((courseId) =>
+      getPublishedChaptersByCourse(courseId),
+    ),
+  );
+
+  const chapterMap = new Map();
+
+  for (const result of results) {
+    if (result.status !== "fulfilled") {
+      continue;
+    }
+
+    for (const chapter of result.value || []) {
+      const chapterKey =
+        chapter?.slug || chapter?.id;
+
+      if (chapterKey) {
+        chapterMap.set(chapterKey, chapter);
+      }
+    }
+  }
+
+  return [...chapterMap.values()].sort(
+    (first, second) =>
+      Number(first.displayOrder || first.chapterNumber || 0) -
+      Number(second.displayOrder || second.chapterNumber || 0),
+  );
+};
+
 // =========================================================
 // GET CHAPTER
 // =========================================================
@@ -639,6 +688,7 @@ export default {
   getAllChapters,
   getChaptersByCourse,
   getPublishedChaptersByCourse,
+  getPublishedChaptersForCourse,
   getChapterById,
   createChapter,
   updateChapter,
