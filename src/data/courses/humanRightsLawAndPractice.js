@@ -2391,31 +2391,322 @@ Then identify land, forest, cultural, religious, participation or development ri
       "Describe the composition and appointment framework of the NHRC and State Commissions.",
       "Analyse their inquiry powers, functions, limitations and recommendations.",
       "Evaluate the statutory role and practical functioning of Human Rights Courts.",
+      "Distinguish complaint inquiry, court intervention, institutional inspection and advisory functions.",
+      "Apply Sections 17–20 to reports, investigation, hearings, recommendations and follow-up.",
+      "Explain the special procedure for armed-forces complaints and the one-year jurisdictional bar.",
+      "Select the appropriate Commission, constitutional court or criminal forum for an effective remedy.",
     ],
-    topics: [
-      "Purpose, scope and definition of human rights",
-      "National Human Rights Commission: composition and appointments",
-      "State Human Rights Commissions",
-      "Functions of the Commissions",
-      "Complaint, inquiry and investigation procedure",
-      "Civil-court powers and use of investigative agencies",
-      "Intervention in court proceedings and visits to institutions",
-      "Recommendations, reports and follow-up",
-      "Armed-forces complaints",
-      "Jurisdictional and limitation constraints",
-      "Human Rights Courts and Special Public Prosecutors",
-      "Role, achievements and institutional challenges",
-    ],
+    detailedContent: `
+1. Origin and purpose of the 1993 Act
+
+The Protection of Human Rights Act, 1993 was enacted to provide better protection of human rights and establish the National Human Rights Commission, State Human Rights Commissions and Human Rights Courts. The NHRC was constituted in October 1993. The Act supplements constitutional courts, criminal justice, civil remedies and specialised commissions; it does not replace them.
+
+The institution reflects the international model of a national human-rights institution. Independence, pluralism, a broad mandate, adequate resources, investigative capacity and cooperation with civil society are associated with the UN Paris Principles. Statutory text and institutional practice must both be examined.
+
+2. Definition of human rights
+
+Section 2(1)(d) defines human rights as rights relating to life, liberty, equality and dignity of the individual guaranteed by the Constitution or embodied in the International Covenants and enforceable by courts in India. “International Covenants” principally refers to the ICCPR and ICESCR and such other instrument as the Central Government may notify.
+
+The enforceability phrase is important. The Commission does not automatically convert every international aspiration into domestic law. It applies constitutional and enforceable legal rights while using international standards in interpretation, review, education and recommendations.
+
+3. Violation and negligence by a public servant
+
+Section 12(a) authorises inquiry into violation or abetment of human rights, or negligence in prevention of such violation, by a public servant. A victim, a person on the victim's behalf, or the Commission suo motu may initiate the matter, subject to statutory limits.
+
+The provision reaches direct abuse, assistance and culpable failure to prevent. Where private actors commit the immediate wrong, the Commission examines whether public authorities failed in a legal protective duty. A complaint should identify the right, incident, authority and relief sought.
+
+4. NHRC composition after the 2019 amendment
+
+Under Section 3, the NHRC consists of a Chairperson who has been Chief Justice of India or a Judge of the Supreme Court; one member who is or has been a Supreme Court judge; one who is or has been Chief Justice of a High Court; and three expert members having knowledge of or practical experience in human rights, at least one of whom must be a woman.
+
+Specified national commission heads are deemed members for performance of the functions listed in Section 12 clauses (b)–(j). Ex officio participation broadens coordination but is distinct from the full-time adjudicatory membership described above.
+
+5. Appointment of NHRC members
+
+The President appoints the Chairperson and members by warrant after recommendation of a committee consisting of the Prime Minister, Speaker of the Lok Sabha, Union Home Minister, Leaders of Opposition in the Lok Sabha and Rajya Sabha, and Deputy Chairman of the Rajya Sabha. A vacancy does not invalidate the committee's recommendation.
+
+Consultation with the Chief Justice of India is required for appointment of a sitting Supreme Court judge or sitting Chief Justice of a High Court. Transparency, diversity and meaningful scrutiny are central to institutional independence even where the statute prescribes the formal procedure.
+
+6. Tenure, age and removal
+
+After the 2019 amendment, the Chairperson and members hold office for three years from entering office or until age seventy, whichever is earlier, and are eligible for reappointment subject to the Act. On ceasing office, they are restricted from further employment under the Central or a State Government.
+
+The President may remove for proved misbehaviour or incapacity after a Supreme Court inquiry, and may remove directly on specified grounds such as insolvency, paid employment outside duties, infirmity, unsound mind declared by a competent court, or conviction involving moral turpitude. Security of tenure protects independence while preserving accountability.
+
+7. Administration and investigative capacity
+
+The Central Government provides a Secretary-General and police and investigative staff under an officer not below Director General of Police rank, along with necessary officers and employees. The Commission may also engage administrative, technical and scientific personnel according to statutory procedure.
+
+Government-provided staff can generate perceived-independence concerns. Functional independence requires Commission control over inquiries, professional methods, diverse expertise, protection of records and sufficient budget and staffing.
+
+8. State Human Rights Commissions
+
+Section 21 enables a State Government to constitute an SHRC. Its Chairperson is a former Chief Justice or Judge of a High Court. It includes one member who is or has been a High Court judge or a District Judge with at least seven years' experience as District Judge, and one expert member with human-rights knowledge or practical experience.
+
+The Governor appoints upon recommendation of a committee led by the Chief Minister with the Speaker, Home Minister and Leader of Opposition in the Legislative Assembly, with Legislative Council participants where applicable. Judicial consultation requirements apply to serving judges.
+
+9. SHRC subject-matter jurisdiction
+
+An SHRC may inquire into matters relating to entries in the State List and Concurrent List in the Seventh Schedule. It cannot inquire into a matter already being examined by the NHRC or another duly constituted commission. The Act contains coordination and transfer mechanisms.
+
+Territorial proximity can improve access and factual investigation. Jurisdiction must be checked before merits: subject, incident date, parallel proceedings, identity of authority and whether another commission is seized.
+
+10. Core functions under Section 12
+
+Besides complaint inquiry, the Commission may intervene with court approval in proceedings alleging human-rights violation; visit prisons and other institutions under State control where persons are detained or lodged for treatment, reformation or protection; and study living conditions and recommend improvements.
+
+It reviews constitutional and legal safeguards, factors inhibiting enjoyment including terrorism, treaties and international instruments; undertakes and promotes research; spreads human-rights literacy; encourages NGO efforts; and performs other necessary functions. Protection, promotion and prevention therefore extend beyond case disposal.
+
+11. Suo motu action and complaints
+
+The Commission may act on petitions, on behalf of victims, or suo motu based on credible reports. Complaints can be filed without a lawyer and through available online, postal or in-person systems. Accessibility and protection of vulnerable complainants are essential.
+
+The Commission ordinarily does not entertain vague, anonymous, pseudonymous, frivolous or purely service-related matters, matters sub judice, or incidents outside the statutory time limit. Administrative screening cannot be arbitrary and should distinguish a defective complaint from credible information warranting suo motu action.
+
+12. Preliminary scrutiny and reports
+
+Under Section 17, the Commission may call for information or a report from the Central or State Government or another authority within a specified time. If the report is not received, it may proceed itself. If satisfied that adequate action has been initiated or is unnecessary, it may close the complaint and inform the complainant.
+
+A government report is evidence, not an automatic answer. Effective scrutiny compares the explanation with medical records, inquiry material, witness accounts, video, custody registers and the applicable legal duty.
+
+13. Inquiry powers under Section 13
+
+While inquiring, the Commission has civil-court powers concerning summoning and examining witnesses on oath, discovery and production of documents, evidence on affidavits, requisitioning public records, issuing commissions and prescribed matters. It may require persons to furnish information subject to lawful privileges.
+
+Proceedings have statutory judicial-proceeding status for specified purposes. These powers enable fact-finding but do not make the Commission a criminal trial court or ordinary civil court deciding damages through a decree.
+
+14. Statements and procedural protection
+
+A statement made by a person while giving evidence before the Commission generally cannot be used to subject that person to civil or criminal proceedings except prosecution for false evidence, where the statement answers a required question or is relevant to the inquiry.
+
+Where the inquiry may prejudicially affect a person's reputation or concerns that person's conduct, Section 16 requires a reasonable opportunity of being heard and producing evidence, except regarding credit of a witness. Natural justice strengthens rather than obstructs credible human-rights findings.
+
+15. Investigation under Section 14
+
+The Commission may use an officer or investigation agency of the Central or State Government with that Government's concurrence. Persons directed by the Commission may summon, require documents and requisition public records within delegated authority and must report within the specified period.
+
+The Commission satisfies itself about correctness and may conduct further inquiry, including examining investigators. Independence concerns are acute where an agency connected to the alleged violator investigates. Oversight, reasons, forensic preservation and victim participation help address conflict.
+
+16. Court intervention and institutional visits
+
+Under Section 12(b), intervention in a pending court proceeding alleging a human-rights violation requires approval of that court. Intervention assists the court; it does not displace judicial control or convert the Commission into a party as of right.
+
+Institutional visits under Section 12(c) cover jails and other State-controlled institutions where persons are detained or lodged for treatment, reformation or protection, after informing the State Government. Meaningful inspection includes confidential interviews, records, healthcare, sanitation, overcrowding, legal access, deaths, violence and follow-up.
+
+17. Steps after inquiry under Section 18
+
+Where violation or negligence is disclosed, the Commission may recommend compensation or damages to the victim or family, initiation of prosecution or other suitable action, and further measures. It may approach the Supreme Court or relevant High Court for directions, orders or writs and recommend immediate interim relief.
+
+It sends its report and recommendations to the concerned Government or authority, which must provide comments, including action taken or proposed, within one month or allowed further time. The Commission publishes the inquiry report, recommendations and response, subject to statutory considerations, and supplies a copy to the petitioner.
+
+18. Nature of recommendations
+
+Ordinary Section 18 outcomes are recommendations rather than self-executing judicial decrees. The Act relies on reasoned findings, disclosure, governmental response, institutional authority and monitoring. A recipient should consider recommendations fairly and give reasons for non-acceptance; mechanical rejection undermines statutory purpose and may be judicially reviewed.
+
+The Commission can seek constitutional-court enforcement where necessary. Students should distinguish its usual statutory role from occasions when the Supreme Court entrusts a matter to it under the Court's own jurisdiction, as occurred in the Punjab mass-cremation proceedings.
+
+19. Armed-forces complaints under Section 19
+
+For alleged violations by members of the armed forces, the Commission does not use the ordinary inquiry route. It may act suo motu or on petition by seeking a report from the Central Government. After receiving it, the Commission may take no further action or make recommendations.
+
+The Central Government must inform the Commission of action taken within three months or further permitted time. The Commission publishes its report, recommendations and response and gives a copy to the petitioner. This restricted procedure is a major limitation and should not be confused with immunity from constitutional or criminal scrutiny.
+
+20. One-year bar under Section 36(2)
+
+The Commission or an SHRC shall not inquire into a matter after expiry of one year from the date on which the act constituting the alleged violation was committed. In N.C. Dhoundial v. Union of India, the Supreme Court treated this as a jurisdictional bar rather than an ordinary waivable limitation period.
+
+Characterisation of a continuing violation requires care. Continuing consequences of a completed act do not automatically restart time. A claimant should promptly use Commission procedures while preserving available writ, criminal, civil or statutory remedies, whose limitation rules differ.
+
+21. Parallel commissions and proceedings
+
+Section 36(1) prevents inquiry where the matter is pending before a State Commission or another commission duly constituted under law. The objective is to avoid duplication and inconsistent fact-finding. Sub judice screening practice additionally respects pending judicial proceedings.
+
+The bar must be applied to the same matter, not merely a related public issue. Complainants should disclose proceedings and choose forums strategically. A Commission complaint does not ordinarily stop statutory limitation elsewhere.
+
+22. Reports to government and legislatures
+
+The NHRC submits annual and special reports to the Central Government and concerned State Governments. The recipient must place them before the relevant legislature with a memorandum of action taken or proposed and reasons for non-acceptance of recommendations.
+
+SHRC reports similarly go to the State Government and State Legislature. Timely tabling enables democratic accountability. Delay weakens transparency and deprives legislatures and the public of a structured response to recurring violations.
+
+23. Finance, autonomy and accountability
+
+Governments provide grants after legislative appropriation, and the Commissions maintain accounts subject to audit. Financial dependence, vacancies, short tenure, deputed staff and delay can affect effective independence. At the same time, public expenditure and statutory authority require audit, reasoned procedure and transparent reporting.
+
+The Paris Principles provide a useful evaluative framework: broad mandate, constitutional or legislative basis, autonomy, pluralism, adequate resources and effective investigative powers. Formal design should be compared with performance.
+
+24. Human Rights Courts under Section 30
+
+For speedy trial of offences arising out of human-rights violations, a State Government may, with concurrence of the Chief Justice of the High Court, specify for each district a Court of Session as a Human Rights Court. If a Court of Session is already designated as a special court for those offences under another law, the Section 30 designation proviso applies.
+
+Section 30 does not itself create a new substantive offence, investigation agency or separate procedural code. The prosecution must identify an offence under existing penal or special law, lawful cognizance and the applicable criminal procedure.
+
+25. Special Public Prosecutors
+
+Under Section 31, the State Government specifies a Public Prosecutor or appoints an advocate with at least seven years' practice as Special Public Prosecutor for each Human Rights Court. Effective prosecution requires independence, training, victim communication and familiarity with custodial, discriminatory and institutional evidence.
+
+Designation alone does not make a court functional. Police practice, offence classification, notifications, prosecutorial appointment, infrastructure, awareness and case allocation determine whether the statutory promise of speedy trial has practical effect.
+
+26. Commission, court and constitutional remedy compared
+
+A Commission offers accessible inquiry, institutional investigation, recommendations, interim relief proposals, visits, monitoring and policy advice. A Human Rights Court is a designated Sessions Court trying existing offences. High Courts and the Supreme Court issue binding constitutional orders and writs; ordinary courts award statutory and private-law remedies.
+
+The forums can be complementary. Urgent habeas corpus, stay or protection may require a court even while a Commission examines systemic failure. Criminal prosecution determines individual guilt; Commission inquiry may address administrative negligence and compensation recommendations.
+
+27. Protection of vulnerable groups
+
+The broad mandate permits attention to custodial violence, bonded and child labour, trafficking, discrimination, disability, displacement, communal violence, health, shelter and conditions in care institutions. Special rapporteurs, monitors, core groups, camp sittings, open hearings, advisories and research may support preventive work.
+
+Victim-centred practice requires accessible filing, language support, confidentiality where needed, protection from reprisals, participation, interim safety and clear communication about the non-binding nature of ordinary recommendations.
+
+28. Important institutional limitations
+
+Major constraints include the one-year bar, restricted armed-forces process, inability to directly punish offenders, reliance on government staff and reports, vacancies, resources, delay, duplication and uneven compliance. The statutory definition also links international rights to domestic court enforceability.
+
+These limits do not make the institution irrelevant. Public findings, compensation recommendations, court approaches, prison oversight, advisories and systemic follow-up can produce accountability. Reform analysis should connect each weakness with a legally and administratively workable solution.
+
+29. Relationship with constitutional courts
+
+The Supreme Court and High Courts retain Articles 32 and 226 jurisdiction. Commission findings do not oust judicial review. Courts may examine jurisdiction, natural justice, reasons, legality and government response, and may direct independent investigation or compensation under constitutional standards.
+
+In Paramjit Kaur v. State of Punjab, the Supreme Court entrusted the NHRC with issues arising from alleged mass cremations; the Commission then functioned under the Court's mandate. This exceptional jurisdiction should not be used to overstate the Commission's ordinary powers under the Act.
+
+30. Examination and complaint-solving method
+
+Begin with Section 2: identify life, liberty, equality or dignity and the enforceable domestic source. Identify violation, abetment or public-servant negligence. Select NHRC or SHRC by subject and pending proceedings; check the incident date and Section 36; identify whether armed forces trigger Section 19.
+
+Then set out Sections 12–18: complaint or suo motu action, report, civil-court powers, investigation, hearing, findings, interim relief, recommendation, governmental response and publication. If an offence exists, explain Sections 30–31 without assuming a new offence. Conclude with the most effective combination of Commission, writ, prosecution, compensation and institutional reform.
+    `.trim(),
     provisions: [
-      "Protection of Human Rights Act, 1993 — Sections 2–16",
+      "Protection of Human Rights Act, 1993 — Sections 2 and 3–11",
+      "Protection of Human Rights Act, 1993 — Sections 12–16",
       "Protection of Human Rights Act, 1993 — Sections 17–20",
       "Protection of Human Rights Act, 1993 — Sections 21–29",
       "Protection of Human Rights Act, 1993 — Sections 30 and 31",
-      "Protection of Human Rights Act, 1993 — Sections 36 and 37",
+      "Protection of Human Rights Act, 1993 — Sections 32–40",
       "Protection of Human Rights (Amendment) Act, 2019",
+      "Constitution of India — Articles 14, 21, 32 and 226",
+      "ICCPR, 1966 and ICESCR, 1966",
+      "UN Principles relating to the Status of National Institutions (Paris Principles), 1993",
+    ],
+    keyPoints: [
+      "The 1993 Act creates the NHRC, SHRCs and district Human Rights Courts for better protection of human rights.",
+      "Section 2 links life, liberty, equality and dignity with constitutional or covenant rights enforceable by Indian courts.",
+      "Section 12(a) covers violation, abetment and public-servant negligence in prevention.",
+      "Complaints may be made by victims or representatives, and the Commission may act suo motu.",
+      "After 2019, a former CJI or Supreme Court judge may chair the NHRC.",
+      "The NHRC has three expert members, at least one of whom must be a woman.",
+      "Full-time NHRC members ordinarily serve three years subject to the age-seventy ceiling.",
+      "An SHRC's subject jurisdiction concerns State List and Concurrent List matters.",
+      "Section 12 functions extend beyond complaints to court intervention, institutional visits, review, research and education.",
+      "Section 13 grants civil-court powers for inquiry but does not turn the Commission into a criminal trial court.",
+      "A potentially prejudicial inquiry requires the Section 16 opportunity of hearing.",
+      "The Commission may use government investigation agencies with concurrence and retain oversight of their reports.",
+      "Section 18 permits recommendations for compensation, prosecution, other action and interim relief, plus court approach.",
+      "Ordinary Commission recommendations are not self-executing judicial decrees, but authorities must respond and face publication.",
+      "Armed-forces allegations follow the specially restricted Central Government report procedure in Section 19.",
+      "Section 36(2)'s one-year bar is jurisdictional; continuing effects do not automatically create a continuing violation.",
+      "Commission proceedings do not replace timely writ, criminal, civil or specialised statutory remedies.",
+      "Human Rights Courts are designated Sessions Courts and Section 30 creates no standalone offence.",
+      "A Special Public Prosecutor under Section 31 must be a specified prosecutor or advocate with seven years' practice.",
+      "Institutional effectiveness depends on independence, pluralism, resources, reasoned findings and compliance monitoring.",
+    ],
+    importantCases: [
+      {
+        id: "human-rights-unit-8-nhrc-arunachal",
+        caseName: "National Human Rights Commission v. State of Arunachal Pradesh",
+        citation: "(1996) 1 SCC 742",
+        principle:
+          "The State must protect the life and liberty of Chakma residents and cannot permit threatened forcible expulsion.",
+        summary:
+          "The NHRC approached the Supreme Court, demonstrating the Commission's protective and constitutional-court role.",
+      },
+      {
+        id: "human-rights-unit-8-paramjit-kaur",
+        caseName: "Paramjit Kaur v. State of Punjab",
+        citation: "(1999) 2 SCC 131",
+        principle:
+          "When the Supreme Court entrusts a matter to the NHRC, the Commission may function under that constitutional mandate rather than ordinary statutory limits alone.",
+        summary:
+          "The proceedings concerned alleged illegal cremations and compensation for Punjab disappearances.",
+      },
+      {
+        id: "human-rights-unit-8-nc-dhoundial",
+        caseName: "N.C. Dhoundial v. Union of India",
+        citation: "(2004) 2 SCC 579",
+        principle:
+          "Section 36(2) imposes a jurisdictional one-year bar on Commission inquiry.",
+        summary:
+          "A statutory human-rights body cannot exceed the jurisdiction and limitation fixed by Parliament.",
+      },
+      {
+        id: "human-rights-unit-8-dk-basu",
+        caseName: "D.K. Basu v. State of West Bengal",
+        citation: "(1997) 1 SCC 416",
+        principle:
+          "Custodial violence violates Articles 21 and 22; arrest safeguards and public-law compensation promote accountability.",
+        summary:
+          "The decision supplies essential substantive standards for Commission inquiries into custody abuses.",
+      },
+      {
+        id: "human-rights-unit-8-nilabati-behera",
+        caseName: "Nilabati Behera v. State of Orissa",
+        citation: "(1993) 2 SCC 746",
+        principle:
+          "Public-law compensation is available for established custodial death and is not defeated by sovereign immunity.",
+        summary:
+          "The constitutional remedy informs Commission recommendations for compensation and accountability.",
+      },
+      {
+        id: "human-rights-unit-8-pucl-maharashtra",
+        caseName: "People's Union for Civil Liberties v. State of Maharashtra",
+        citation: "(2014) 10 SCC 635",
+        principle:
+          "Police encounter deaths require prompt, independent investigation, reporting, magisterial inquiry and victim-family safeguards.",
+        summary:
+          "The Court's guidelines include a structured role for information to human-rights institutions.",
+      },
+      {
+        id: "human-rights-unit-8-eevfam",
+        caseName: "Extra Judicial Execution Victim Families Association v. Union of India",
+        citation: "(2017) 8 SCC 417",
+        principle:
+          "Excessive or retaliatory force resulting in death requires independent investigation even in disturbed areas.",
+        summary:
+          "National security does not place alleged extrajudicial killings beyond constitutional and criminal scrutiny.",
+      },
+      {
+        id: "human-rights-unit-8-rudul-sah",
+        caseName: "Rudul Sah v. State of Bihar",
+        citation: "(1983) 4 SCC 141",
+        principle:
+          "Release alone is inadequate for gross illegal detention; constitutional courts may award monetary compensation.",
+        summary:
+          "The case explains the binding judicial remedy that complements Commission compensation recommendations.",
+      },
+      {
+        id: "human-rights-unit-8-shakila-abdul-gafar",
+        caseName: "Shakila Abdul Gafar Khan v. Vasant Raghunath Dhoble",
+        citation: "(2003) 7 SCC 749",
+        principle:
+          "Custodial torture is an attack on human dignity and demands firm judicial and institutional response.",
+        summary:
+          "The Court stressed that police responsibility cannot shield cruel or unlawful interrogation practices.",
+      },
+      {
+        id: "human-rights-unit-8-in-re-inhuman-prisons",
+        caseName: "In Re: Inhuman Conditions in 1382 Prisons",
+        citation: "(2017) 10 SCC 658",
+        principle:
+          "Prisoners retain Article 21 rights, and unnatural deaths require accountability, compensation and systemic reform.",
+        summary:
+          "The Court emphasised visits, data, oversight and cooperation with human-rights and legal-services institutions.",
+      },
     ],
     examFocus:
-      "Prepare the structure, appointment, jurisdiction, functions, inquiry powers, recommendations and limitations of the NHRC and State Commissions, and explain Human Rights Courts under Sections 30 and 31.",
+      "Prepare the Act's purpose and Section 2 definition; Section 12(a) violation, abetment and negligence; post-2019 NHRC composition, selection, term, age, removal, ex officio participation and staff; SHRC composition, appointment and subject jurisdiction; all Section 12 functions; complaint and suo motu routes; Sections 13–17 powers, investigation, natural justice and reports; Section 18 compensation, prosecution, interim relief, court approach, governmental response and publication; legal character of recommendations; Section 19 armed-forces procedure; Section 36 one-year and parallel-inquiry bars; annual and special reports; Human Rights Courts and Special Public Prosecutors under Sections 30–31; Paris Principles and institutional limitations; and NHRC v. Arunachal Pradesh, Paramjit Kaur, N.C. Dhoundial, D.K. Basu and EEVFAM.",
+    revisionNotes:
+      "PHRA 1993 = NHRC + SHRCs + Human Rights Courts. Section 2 human rights: life, liberty, equality, dignity guaranteed by Constitution or embodied in Covenants and enforceable by Indian courts. Section 12(a): violation/abetment or public-servant negligence; victim, representative or suo motu. NHRC after 2019: Chair former CJI or SC judge; one SC judicial member; one former HC Chief Justice; three experts, at least one woman; designated ex officio members for promotional functions; three-year term or age 70. SHRC: former HC CJ/judge Chair + judicial member + expert; State/Concurrent subjects. Section 12 also court intervention with permission, detention-institution visits, safeguards/treaty review, research, literacy and NGO encouragement. Section 13 civil-court powers; Section 14 investigation agency; Section 16 hearing; Section 17 report; Section 18 recommendations for compensation/prosecution/action/interim relief, court approach, response and publication. Recommendations are ordinarily not decrees. Section 19 restricts armed-forces cases to Central report and recommendations. Section 36(2) one-year jurisdictional bar; avoid duplicate commissions. Sections 30–31: designated Sessions Court + Special Public Prosecutor; no new offence. Combine Commission processes with writ, criminal and civil remedies when needed.",
   },
 ];
 
