@@ -445,12 +445,14 @@ const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl
         const imageType = /\.jpe?g(?:[?#]|$)/i.test(metadata.image)
           ? "image/jpeg"
           : "image/png";
+        const imageWidth = metadata.imageWidth || 1200;
+        const imageHeight = metadata.imageHeight || 675;
         element.append(
           `<meta property="og:image" content="${image}" />` +
           `<meta property="og:image:secure_url" content="${image}" />` +
           `<meta property="og:image:type" content="${imageType}" />` +
-          `<meta property="og:image:width" content="1200" />` +
-          `<meta property="og:image:height" content="675" />` +
+          `<meta property="og:image:width" content="${imageWidth}" />` +
+          `<meta property="og:image:height" content="${imageHeight}" />` +
           `<meta property="og:image:alt" content="${metadata.title}" />` +
           `<meta name="twitter:image" content="${image}" />` +
           `<meta name="twitter:image:alt" content="${metadata.title}" />`,
@@ -742,7 +744,9 @@ export default {
         {
           title: "Live Online Law Classes | NagarikSuraksha",
           description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
-          image: `${url.origin}/live-online-classes-og.jpg`,
+          image: `${url.origin}/live-online-classes-share-portrait.jpg`,
+          imageWidth: 720,
+          imageHeight: 1280,
         },
         canonicalUrl,
         socialUrl,

@@ -21,7 +21,7 @@ import SEO from "../../../../shared/seo/SEO";
 import { getPublishedCourses } from "../../../../services/courseService";
 
 const LIVE_CLASSES_URL =
-  "https://www.nagariksuraksha.com/live-online-classes?share=20260909";
+  "https://www.nagariksuraksha.com/live-online-classes?share=portrait-20260909";
 
 const SHARE_MESSAGE =
   "Explore chapter-wise Live Online Law Classes from NagarikSuraksha.";
@@ -74,7 +74,7 @@ export default function LiveOnlineClassesPage() {
         title="Live Online Law Classes | NagarikSuraksha"
         description="Request chapter-wise live online law classes with approximately eight interactive 45-minute sessions for your enrolled NagarikSuraksha course."
         canonical="/live-online-classes"
-        image="/live-online-classes-og.jpg"
+        image="/live-online-classes-share-portrait.jpg"
         keywords={[
           "live online law classes",
           "online legal studies classes",
