@@ -22,11 +22,13 @@ const updates = [
   },
   {
     id: 3,
-    category: "Cyber Law",
-    title: "How to Report Online Financial Fraud",
-    date: "01 Aug 2026",
+    category: "Cybercrime & Remedies",
+    title: "Next Steps for Unrecovered Online Fraud Funds",
+    date: "09 Sep 2026",
     description:
-      "Know the legal process for reporting cyber fraud, digital payment scams and online cheating.",
+      "Understand the options available when money remains unrecovered after reporting an online financial fraud to the cybercrime authorities.",
+    link: "/legal-updates/next-steps-unrecovered-online-fraud-funds",
+    image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
   },
 ];
 

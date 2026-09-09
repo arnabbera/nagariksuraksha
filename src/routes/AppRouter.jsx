@@ -54,6 +54,7 @@ import DisclaimerPage from "../features/public/legal/pages/DisclaimerPage";
 import PrivacyPolicyPage from "../features/public/legal/pages/PrivacyPolicyPage";
 import TermsPage from "../features/public/legal/pages/TermsPage";
 import ConsumerRightsJudgmentsPage from "../features/public/legal/pages/ConsumerRightsJudgmentsPage";
+import UnrecoveredOnlineFraudFundsPage from "../features/public/legal/pages/UnrecoveredOnlineFraudFundsPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -171,6 +172,11 @@ export default function AppRouter() {
       <Route
         path="/legal-updates/important-judgement-on-consumer-rights"
         element={<ConsumerRightsJudgmentsPage />}
+      />
+
+      <Route
+        path="/legal-updates/next-steps-unrecovered-online-fraud-funds"
+        element={<UnrecoveredOnlineFraudFundsPage />}
       />
 
       {/* =====================================================
