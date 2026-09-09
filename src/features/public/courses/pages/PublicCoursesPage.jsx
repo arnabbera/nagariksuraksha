@@ -41,7 +41,7 @@ import {
 } from "../../../../services/chapterService";
 
 const CERTIFICATE_COURSES_URL =
-  "https://www.nagariksuraksha.com/llb-courses?share=platform-20260909";
+  "https://www.nagariksuraksha.com/llb-courses?share=whatsapp-card-20260909";
 
 const SHARE_MESSAGE =
   "Explore Certificate Courses in Legal Studies from NagarikSuraksha.";
@@ -328,7 +328,7 @@ export default function PublicCoursesPage() {
                 <div>
                   <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(CERTIFICATE_COURSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
                   <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(CERTIFICATE_COURSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
-                  <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE} ${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
+                  <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE}\n${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
                   <button type="button" onClick={handleCopyLink} aria-label="Copy page link"><FaLink /> {copied ? "Link Copied" : "Copy Link"}</button>
                 </div>
               </div>
