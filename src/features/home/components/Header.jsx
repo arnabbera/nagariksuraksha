@@ -167,7 +167,7 @@ const Header = () => {
                     style={dropdownLink}
                     onClick={closeMenu}
                   >
-                    LL.B Learning
+                    Certificate Courses
                   </Link>
 
                   <Link
@@ -321,7 +321,7 @@ const Header = () => {
                     to="/llb-courses"
                     onClick={closeMenu}
                   >
-                    LL.B Learning
+                    Certificate Courses
                   </Link>
 
                   <Link
