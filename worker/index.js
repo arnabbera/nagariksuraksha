@@ -728,6 +728,9 @@ export default {
       }
     }
     const assetResponse = await env.ASSETS.fetch(request);
+    const isWhatsAppPreview = /WhatsApp/i.test(
+      request.headers.get("user-agent") || "",
+    );
 
     if (
       /^\/live-online-classes\/?$/.test(url.pathname) &&
@@ -744,9 +747,11 @@ export default {
         {
           title: "Live Online Law Classes | NagarikSuraksha",
           description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
-          image: `${url.origin}/live-online-classes-share-portrait.jpg`,
-          imageWidth: 720,
-          imageHeight: 1280,
+          image: isWhatsAppPreview
+            ? `${url.origin}/live-online-classes-share-portrait.jpg`
+            : `${url.origin}/live-online-classes-og.jpg`,
+          imageWidth: isWhatsAppPreview ? 720 : 1200,
+          imageHeight: isWhatsAppPreview ? 1280 : 675,
         },
         canonicalUrl,
         socialUrl,
@@ -768,9 +773,11 @@ export default {
         {
           title: "Certificate Courses in Legal Studies | NagarikSuraksha",
           description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha.",
-          image: `${url.origin}/certificate-courses-share-portrait.jpg`,
-          imageWidth: 720,
-          imageHeight: 1280,
+          image: isWhatsAppPreview
+            ? `${url.origin}/certificate-courses-share-portrait.jpg`
+            : `${url.origin}/certificate-courses-hero.jpg`,
+          imageWidth: isWhatsAppPreview ? 720 : 1200,
+          imageHeight: isWhatsAppPreview ? 1280 : 675,
         },
         canonicalUrl,
         socialUrl,
