@@ -14,11 +14,13 @@ const updates = [
   },
   {
     id: 2,
-    category: "Property Law",
-    title: "Property Registration Process Simplified",
-    date: "03 Aug 2026",
+    category: "Property Fraud & Remedies",
+    title: "Bought a Mortgaged Property by Fraud? Here’s How to Protect Your Home and Money",
+    date: "09 Sep 2026",
     description:
-      "Step-by-step guide for property verification, registration, mutation and title search.",
+      "Understand the urgent legal steps available when a seller conceals an earlier bank mortgage or lien over the property you purchased.",
+    link: "/legal-updates/bought-mortgaged-property-by-fraud",
+    image: "/images/legal-updates/mortgaged-property-fraud.jpg",
   },
   {
     id: 3,

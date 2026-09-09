@@ -55,6 +55,7 @@ import PrivacyPolicyPage from "../features/public/legal/pages/PrivacyPolicyPage"
 import TermsPage from "../features/public/legal/pages/TermsPage";
 import ConsumerRightsJudgmentsPage from "../features/public/legal/pages/ConsumerRightsJudgmentsPage";
 import UnrecoveredOnlineFraudFundsPage from "../features/public/legal/pages/UnrecoveredOnlineFraudFundsPage";
+import MortgagedPropertyFraudPage from "../features/public/legal/pages/MortgagedPropertyFraudPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -177,6 +178,11 @@ export default function AppRouter() {
       <Route
         path="/legal-updates/next-steps-unrecovered-online-fraud-funds"
         element={<UnrecoveredOnlineFraudFundsPage />}
+      />
+
+      <Route
+        path="/legal-updates/bought-mortgaged-property-by-fraud"
+        element={<MortgagedPropertyFraudPage />}
       />
 
       {/* =====================================================
