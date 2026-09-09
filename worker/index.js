@@ -17,6 +17,24 @@ const FIREBASE_ISSUER = `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
 const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
+const LEGAL_UPDATE_SOCIAL_META = {
+  "/legal-updates/important-judgement-on-consumer-rights": {
+    title: "Important Judgments on Consumer Rights | NagarikSuraksha",
+    description: "Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, homebuyers, commercial purpose and telecom disputes.",
+    image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
+  },
+  "/legal-updates/bought-mortgaged-property-by-fraud": {
+    title: "Bought a Mortgaged Property by Fraud? | NagarikSuraksha",
+    description: "Practical legal steps in Kolkata when a seller conceals an earlier mortgage: lender notice, police complaint, SARFAESI and DRT remedies, and civil recovery.",
+    image: "/images/legal-updates/mortgaged-property-fraud.jpg",
+  },
+  "/legal-updates/next-steps-unrecovered-online-fraud-funds": {
+    title: "Next Steps for Unrecovered Online Fraud Funds | NagarikSuraksha",
+    description: "Options available when money remains unrecovered after an online financial-fraud complaint, including MRM, police escalation, banking and consumer remedies.",
+    image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
+  },
+};
+
 let firebaseKeysCache = null;
 let googleAccessTokenCache = null;
 const courseSocialMetaCache = new Map();
@@ -770,6 +788,31 @@ export default {
           image: `${url.origin}/certificate-courses-whatsapp-wide-v3.jpg`,
           imageWidth: 1200,
           imageHeight: 630,
+        },
+        canonicalUrl,
+        socialUrl,
+      );
+    }
+
+    const legalUpdatePath = url.pathname.replace(/\/$/, "");
+    const legalUpdateMeta = LEGAL_UPDATE_SOCIAL_META[legalUpdatePath];
+    if (
+      legalUpdateMeta &&
+      assetResponse.headers.get("content-type")?.includes("text/html")
+    ) {
+      const canonicalUrl = `${url.origin}${legalUpdatePath}`;
+      const shareVersion = url.searchParams.get("share");
+      const socialUrl = shareVersion
+        ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
+        : canonicalUrl;
+
+      return rewriteCourseSocialMetadata(
+        assetResponse,
+        {
+          ...legalUpdateMeta,
+          image: `${url.origin}${legalUpdateMeta.image}`,
+          imageWidth: 1200,
+          imageHeight: 675,
         },
         canonicalUrl,
         socialUrl,

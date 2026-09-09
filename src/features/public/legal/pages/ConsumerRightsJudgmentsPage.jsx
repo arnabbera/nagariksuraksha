@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import Header from "../../../home/components/Header";
 import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
+import LegalUpdateShare from "../components/LegalUpdateShare";
 
 const judgments = [
   {
@@ -110,6 +111,11 @@ export default function ConsumerRightsJudgmentsPage() {
         </section>
 
         <article className="ns-consumer-wrap ns-consumer-article">
+          <LegalUpdateShare
+            canonicalPath="/legal-updates/important-judgement-on-consumer-rights"
+            shareVersion="consumer-rights-card-v1"
+            message="Understand landmark Supreme Court judgments and consumer rights in India."
+          />
           <section className="ns-consumer-intro">
             <div>
               <span className="ns-consumer-label">For Every Nagrik</span>

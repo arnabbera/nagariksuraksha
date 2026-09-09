@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import Header from "../../../home/components/Header";
 import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
+import LegalUpdateShare from "../components/LegalUpdateShare";
 
 const actions = [
   {
@@ -87,6 +88,11 @@ export default function MortgagedPropertyFraudPage() {
         </section>
 
         <article className="ns-property-wrap ns-property-article">
+          <LegalUpdateShare
+            canonicalPath="/legal-updates/bought-mortgaged-property-by-fraud"
+            shareVersion="mortgaged-property-fraud-card-v1"
+            message="Bought a property with a concealed mortgage? Know how to protect your home and money."
+          />
           <section className="ns-property-warning">
             <FaExclamationTriangle />
             <div>

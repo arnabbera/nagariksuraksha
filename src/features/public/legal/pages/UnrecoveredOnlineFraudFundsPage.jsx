@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Header from "../../../home/components/Header";
 import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
+import LegalUpdateShare from "../components/LegalUpdateShare";
 
 const steps = [
   {
@@ -87,6 +88,11 @@ export default function UnrecoveredOnlineFraudFundsPage() {
         </section>
 
         <article className="ns-fraud-wrap ns-fraud-article">
+          <LegalUpdateShare
+            canonicalPath="/legal-updates/next-steps-unrecovered-online-fraud-funds"
+            shareVersion="unrecovered-fraud-funds-card-v1"
+            message="Know the next legal steps when online fraud funds remain unrecovered."
+          />
           <section className="ns-fraud-alert">
             <FaPhoneAlt />
             <div>
