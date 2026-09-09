@@ -768,7 +768,7 @@ export default {
         {
           title: "Certificate Courses in Legal Studies | NagarikSuraksha",
           description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha.",
-          image: `${url.origin}/certificate-courses-hero.jpg`,
+          image: `${url.origin}/certificate-courses-whatsapp-landscape.jpg`,
           imageWidth: 1200,
           imageHeight: 675,
         },
