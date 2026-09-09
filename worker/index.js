@@ -731,7 +731,7 @@ export default {
     const assetResponse = await env.ASSETS.fetch(request);
 
     if (
-      /^\/(?:live-online-classes|share\/live-online-classes-card-v2)\/?$/.test(url.pathname) &&
+      /^\/(?:live-online-classes|share\/live-online-classes-card-v3)\/?$/.test(url.pathname) &&
       assetResponse.headers.get("content-type")?.includes("text/html")
     ) {
       const canonicalUrl = `${url.origin}/live-online-classes`;
@@ -744,9 +744,9 @@ export default {
         {
           title: "Live Online Law Classes | NagarikSuraksha",
           description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
-          image: `${url.origin}/live-online-classes-whatsapp-landscape-v2.jpg`,
+          image: `${url.origin}/live-online-classes-whatsapp-wide-v3.jpg`,
           imageWidth: 1200,
-          imageHeight: 675,
+          imageHeight: 630,
         },
         canonicalUrl,
         socialUrl,
@@ -754,7 +754,7 @@ export default {
     }
 
     if (
-      /^\/(?:llb-courses|share\/certificate-courses-card-v2)\/?$/.test(url.pathname) &&
+      /^\/(?:llb-courses|share\/certificate-courses-card-v3)\/?$/.test(url.pathname) &&
       assetResponse.headers.get("content-type")?.includes("text/html")
     ) {
       const canonicalUrl = `${url.origin}/llb-courses`;
@@ -767,9 +767,9 @@ export default {
         {
           title: "Certificate Courses in Legal Studies | NagarikSuraksha",
           description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha.",
-          image: `${url.origin}/certificate-courses-whatsapp-landscape-v2.jpg`,
+          image: `${url.origin}/certificate-courses-whatsapp-wide-v3.jpg`,
           imageWidth: 1200,
-          imageHeight: 675,
+          imageHeight: 630,
         },
         canonicalUrl,
         socialUrl,

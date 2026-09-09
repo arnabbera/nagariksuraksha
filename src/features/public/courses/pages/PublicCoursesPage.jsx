@@ -41,7 +41,7 @@ import {
 } from "../../../../services/chapterService";
 
 const CERTIFICATE_COURSES_URL =
-  "https://www.nagariksuraksha.com/share/certificate-courses-card-v2";
+  "https://www.nagariksuraksha.com/share/certificate-courses-card-v3";
 
 const SHARE_MESSAGE =
   "Explore Certificate Courses in Legal Studies from NagarikSuraksha.";
@@ -260,7 +260,7 @@ export default function PublicCoursesPage() {
         title="Certificate Courses in Legal Studies | NagarikSuraksha"
         description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha."
         canonical="/llb-courses"
-        image="/certificate-courses-whatsapp-landscape-v2.jpg"
+        image="/certificate-courses-whatsapp-wide-v3.jpg"
         keywords={[
           "LLB courses",
           "LLB course online",
