@@ -179,14 +179,6 @@ const Header = () => {
                   </Link>
 
                   <Link
-                    to="/login"
-                    style={dropdownLink}
-                    onClick={closeMenu}
-                  >
-                    Certification
-                  </Link>
-
-                  <Link
                     to="/law-notes"
                     style={dropdownLink}
                     onClick={closeMenu}
@@ -337,13 +329,6 @@ const Header = () => {
                     onClick={closeMenu}
                   >
                     Live Online Classes
-                  </Link>
-
-                  <Link
-                    to="/login"
-                    onClick={closeMenu}
-                  >
-                    Certification
                   </Link>
 
                   <Link
