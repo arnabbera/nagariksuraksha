@@ -442,12 +442,15 @@ const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl
     rewriter.on("head", {
       element(element) {
         const image = metadata.image.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+        const imageType = /\.jpe?g(?:[?#]|$)/i.test(metadata.image)
+          ? "image/jpeg"
+          : "image/png";
         element.append(
           `<meta property="og:image" content="${image}" />` +
           `<meta property="og:image:secure_url" content="${image}" />` +
-          `<meta property="og:image:type" content="image/png" />` +
-          `<meta property="og:image:width" content="1600" />` +
-          `<meta property="og:image:height" content="900" />` +
+          `<meta property="og:image:type" content="${imageType}" />` +
+          `<meta property="og:image:width" content="1200" />` +
+          `<meta property="og:image:height" content="675" />` +
           `<meta property="og:image:alt" content="${metadata.title}" />` +
           `<meta name="twitter:image" content="${image}" />` +
           `<meta name="twitter:image:alt" content="${metadata.title}" />`,
@@ -723,6 +726,28 @@ export default {
       }
     }
     const assetResponse = await env.ASSETS.fetch(request);
+
+    if (
+      /^\/live-online-classes\/?$/.test(url.pathname) &&
+      assetResponse.headers.get("content-type")?.includes("text/html")
+    ) {
+      const canonicalUrl = `${url.origin}/live-online-classes`;
+      const shareVersion = url.searchParams.get("share");
+      const socialUrl = shareVersion
+        ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
+        : canonicalUrl;
+
+      return rewriteCourseSocialMetadata(
+        assetResponse,
+        {
+          title: "Live Online Law Classes | NagarikSuraksha",
+          description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
+          image: `${url.origin}/live-online-classes-og.jpg`,
+        },
+        canonicalUrl,
+        socialUrl,
+      );
+    }
 
     const courseMatch = url.pathname.match(/^\/courses\/([^/]+)\/?$/);
     if (

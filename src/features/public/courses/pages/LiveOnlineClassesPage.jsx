@@ -21,7 +21,7 @@ import SEO from "../../../../shared/seo/SEO";
 import { getPublishedCourses } from "../../../../services/courseService";
 
 const LIVE_CLASSES_URL =
-  "https://www.nagariksuraksha.com/live-online-classes";
+  "https://www.nagariksuraksha.com/live-online-classes?share=20260909";
 
 const SHARE_MESSAGE =
   "Explore chapter-wise Live Online Law Classes from NagarikSuraksha.";
@@ -74,6 +74,7 @@ export default function LiveOnlineClassesPage() {
         title="Live Online Law Classes | NagarikSuraksha"
         description="Request chapter-wise live online law classes with approximately eight interactive 45-minute sessions for your enrolled NagarikSuraksha course."
         canonical="/live-online-classes"
+        image="/live-online-classes-og.jpg"
         keywords={[
           "live online law classes",
           "online legal studies classes",
@@ -222,8 +223,16 @@ export default function LiveOnlineClassesPage() {
         .ns-live-hero-points { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 26px; }
         .ns-live-hero-points span { display: flex; align-items: center; gap: 7px; font-weight: 700; }
         .ns-live-hero-points svg { color: #dfa545; }
-        .ns-live-share { margin-top: 30px; }
-        .ns-live-share > strong { display: block; margin-bottom: 10px; color: #dce7f0; font-size: .86rem; }
+        .ns-live-share {
+          display: inline-block;
+          margin-top: 30px;
+          padding: 16px 18px;
+          border: 1px solid #e2b15f;
+          border-radius: 14px;
+          background: #fff;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+        }
+        .ns-live-share > strong { display: block; margin-bottom: 11px; color: #10243e; font-size: .9rem; }
         .ns-live-share > div { display: flex; flex-wrap: wrap; gap: 10px; }
         .ns-live-share a, .ns-live-share button {
           display: inline-flex;
@@ -231,17 +240,17 @@ export default function LiveOnlineClassesPage() {
           gap: 7px;
           min-height: 40px;
           padding: 9px 14px;
-          border: 1px solid rgba(255, 255, 255, .25);
+          border: 1px solid transparent;
           border-radius: 9px;
           color: #fff;
-          background: rgba(255, 255, 255, .1);
+          background: #d99a39;
           font: inherit;
           font-size: .84rem;
           font-weight: 800;
           text-decoration: none;
           cursor: pointer;
         }
-        .ns-live-share a:hover, .ns-live-share button:hover { transform: translateY(-1px); background: rgba(255, 255, 255, .18); }
+        .ns-live-share a:hover, .ns-live-share button:hover { transform: translateY(-1px); filter: brightness(1.08); }
         .ns-live-share .is-facebook { background: #1877f2; }
         .ns-live-share .is-twitter { background: #17202a; }
         .ns-live-share .is-whatsapp { background: #198b47; }
@@ -277,6 +286,9 @@ export default function LiveOnlineClassesPage() {
           .ns-live-hero .ns-live-container { margin: 0 auto; }
           .ns-live-feature-grid, .ns-live-course-grid { grid-template-columns: 1fr; }
           .ns-live-section-heading { align-items: flex-start; flex-direction: column; gap: 5px; }
+          .ns-live-share { display: block; }
+          .ns-live-share > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+          .ns-live-share a, .ns-live-share button { justify-content: center; }
         }
       `}</style>
     </>
