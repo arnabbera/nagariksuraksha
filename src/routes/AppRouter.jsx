@@ -190,6 +190,16 @@ export default function AppRouter() {
         element={<LiveOnlineClassesPage />}
       />
 
+      <Route
+        path="/share/live-online-classes-card-v2"
+        element={<LiveOnlineClassesPage />}
+      />
+
+      <Route
+        path="/share/certificate-courses-card-v2"
+        element={<PublicCoursesPage />}
+      />
+
       {/* =====================================================
           PUBLIC LEGAL SERVICES
       ====================================================== */}
