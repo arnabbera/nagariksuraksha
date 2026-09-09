@@ -6,15 +6,25 @@ import {
   FaCheckCircle,
   FaClock,
   FaComments,
+  FaFacebookF,
   FaLaptop,
+  FaLink,
   FaLock,
+  FaTwitter,
   FaVideo,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import Header from "../../../home/components/Header";
 import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
 import { getPublishedCourses } from "../../../../services/courseService";
+
+const LIVE_CLASSES_URL =
+  "https://www.nagariksuraksha.com/live-online-classes";
+
+const SHARE_MESSAGE =
+  "Explore chapter-wise Live Online Law Classes from NagarikSuraksha.";
 
 const getCourseImage = (course) =>
   course?.thumbnailUrl ||
@@ -28,6 +38,17 @@ const getCourseImage = (course) =>
 export default function LiveOnlineClassesPage() {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(LIVE_CLASSES_URL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error("Unable to copy live-class link:", error);
+    }
+  };
 
   useEffect(() => {
     let active = true;
@@ -79,6 +100,42 @@ export default function LiveOnlineClassesPage() {
               <span><FaCheckCircle /> 45 minutes per class</span>
               <span><FaCheckCircle /> One class for each chapter</span>
               <span><FaCheckCircle /> Ask questions live</span>
+            </div>
+
+            <div className="ns-live-share" aria-label="Share Live Online Classes">
+              <strong>Share this page</strong>
+              <div>
+                <a
+                  className="is-facebook"
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(LIVE_CLASSES_URL)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Share on Facebook"
+                >
+                  <FaFacebookF /> Facebook
+                </a>
+                <a
+                  className="is-twitter"
+                  href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(LIVE_CLASSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Share on Twitter"
+                >
+                  <FaTwitter /> Twitter
+                </a>
+                <a
+                  className="is-whatsapp"
+                  href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE} ${LIVE_CLASSES_URL}`)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Share on WhatsApp"
+                >
+                  <FaWhatsapp /> WhatsApp
+                </a>
+                <button type="button" onClick={handleCopyLink} aria-label="Copy page link">
+                  <FaLink /> {copied ? "Link Copied" : "Copy Link"}
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -165,6 +222,29 @@ export default function LiveOnlineClassesPage() {
         .ns-live-hero-points { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 26px; }
         .ns-live-hero-points span { display: flex; align-items: center; gap: 7px; font-weight: 700; }
         .ns-live-hero-points svg { color: #dfa545; }
+        .ns-live-share { margin-top: 30px; }
+        .ns-live-share > strong { display: block; margin-bottom: 10px; color: #dce7f0; font-size: .86rem; }
+        .ns-live-share > div { display: flex; flex-wrap: wrap; gap: 10px; }
+        .ns-live-share a, .ns-live-share button {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          min-height: 40px;
+          padding: 9px 14px;
+          border: 1px solid rgba(255, 255, 255, .25);
+          border-radius: 9px;
+          color: #fff;
+          background: rgba(255, 255, 255, .1);
+          font: inherit;
+          font-size: .84rem;
+          font-weight: 800;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .ns-live-share a:hover, .ns-live-share button:hover { transform: translateY(-1px); background: rgba(255, 255, 255, .18); }
+        .ns-live-share .is-facebook { background: #1877f2; }
+        .ns-live-share .is-twitter { background: #17202a; }
+        .ns-live-share .is-whatsapp { background: #198b47; }
         .ns-live-how, .ns-live-courses { padding: 68px 0; }
         .ns-live-how h2, .ns-live-courses h2 { margin: 9px 0 14px; color: #07182f; font-size: clamp(1.8rem, 3vw, 2.6rem); }
         .ns-live-lead { max-width: 880px; color: #52647a; line-height: 1.75; }
