@@ -60,6 +60,17 @@ import LoadingSpinner from "../../../../shared/components/LoadingSpinner";
 import PageHeader from "../../../../shared/components/PageHeader";
 import { getChapterLearningPath } from "../../../../utils/chapterUrl";
 
+const LIVE_CLASS_COURSE_SLUGS = new Set([
+  "criminal-law-i-transitioning-from-ipc-to-bns",
+  "code-of-civil-procedure-and-limitation",
+  "law-of-torts-mv-and-cp-laws",
+  "indian-constitutional-law-i",
+  "human-rights-law-and-practice",
+  "family-law-i",
+  "public-international-law",
+  "environmental-law",
+]);
+
 export default function CourseDetails() {
   const { courseId: courseSlug } =
     useParams();
@@ -492,11 +503,7 @@ export default function CourseDetails() {
     "code-of-civil-procedure-and-limitation";
 
   const hasLiveClasses =
-    isCriminalLawCourse ||
-    isCivilProcedureCourse ||
-    course?.slug === "law-of-torts-mv-and-cp-laws" ||
-    course?.slug === "indian-constitutional-law-i" ||
-    course?.slug === "human-rights-law-and-practice";
+    LIVE_CLASS_COURSE_SLUGS.has(course?.slug);
 
   const liveClassAccess =
     isAdmin ||

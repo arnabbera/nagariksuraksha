@@ -206,6 +206,13 @@ const Header = () => {
             </div>
 
             <NavLink
+              to="/live-online-classes"
+              style={navStyle}
+            >
+              Live Online Classes
+            </NavLink>
+
+            <NavLink
               to="/#legal-consultation"
               style={navStyle}
             >
@@ -356,6 +363,13 @@ const Header = () => {
                 </div>
               )}
             </div>
+
+            <Link
+              to="/live-online-classes"
+              onClick={closeMenu}
+            >
+              Live Online Classes
+            </Link>
 
             <Link
               to="/#legal-consultation"

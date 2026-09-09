@@ -7,6 +7,9 @@ const LIVE_CLASS_COURSE_IDS = new Set([
   "law-of-torts-mv-and-cp-laws",
   "indian-constitutional-law-i",
   "human-rights-law-and-practice",
+  "family-law-i",
+  "public-international-law",
+  "environmental-law",
 ]);
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";

@@ -46,6 +46,7 @@ import AboutPage from "../features/public/about/pages/AboutPage";
 import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPage";
 
 import PublicCourseDetailsPage from "../features/public/courses/pages/PublicCourseDetailsPage";
+import LiveOnlineClassesPage from "../features/public/courses/pages/LiveOnlineClassesPage";
 
 import LegalServiceDetailsPage from "../features/public/services/pages/LegalServiceDetailsPage";
 
@@ -182,6 +183,11 @@ export default function AppRouter() {
         element={
           <PublicCourseDetailsPage />
         }
+      />
+
+      <Route
+        path="/live-online-classes"
+        element={<LiveOnlineClassesPage />}
       />
 
       {/* =====================================================
