@@ -171,6 +171,14 @@ const Header = () => {
                   </Link>
 
                   <Link
+                    to="/live-online-classes"
+                    style={dropdownLink}
+                    onClick={closeMenu}
+                  >
+                    Live Online Classes
+                  </Link>
+
+                  <Link
                     to="/login"
                     style={dropdownLink}
                     onClick={closeMenu}
@@ -204,13 +212,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
-            <NavLink
-              to="/live-online-classes"
-              style={navStyle}
-            >
-              Live Online Classes
-            </NavLink>
 
             <NavLink
               to="/#legal-consultation"
@@ -332,6 +333,13 @@ const Header = () => {
                   </Link>
 
                   <Link
+                    to="/live-online-classes"
+                    onClick={closeMenu}
+                  >
+                    Live Online Classes
+                  </Link>
+
+                  <Link
                     to="/login"
                     onClick={closeMenu}
                   >
@@ -363,13 +371,6 @@ const Header = () => {
                 </div>
               )}
             </div>
-
-            <Link
-              to="/live-online-classes"
-              onClick={closeMenu}
-            >
-              Live Online Classes
-            </Link>
 
             <Link
               to="/#legal-consultation"
