@@ -89,55 +89,37 @@ export default function LiveOnlineClassesPage() {
       <main className="ns-live-page">
         <section className="ns-live-hero">
           <div className="ns-live-container">
-            <span className="ns-live-eyebrow"><FaVideo /> NagarikSuraksha Legal Learning</span>
-            <h1>Live Online Classes</h1>
-            <p>
-              Get chapter-wise interactive guidance for any enrolled legal-studies course.
-              Live classes are arranged on request to help you understand difficult topics and
-              discuss your questions directly during class.
-            </p>
-            <div className="ns-live-hero-points">
-              <span><FaCheckCircle /> Approximately 8 classes</span>
-              <span><FaCheckCircle /> 45 minutes per class</span>
-              <span><FaCheckCircle /> One class for each chapter</span>
-              <span><FaCheckCircle /> Ask questions live</span>
-            </div>
+            <div className="ns-live-hero-copy">
+              <span className="ns-live-eyebrow"><FaVideo /> NagarikSuraksha Legal Learning</span>
+              <h1>Live Online Classes</h1>
+              <p>
+                Get chapter-wise interactive guidance for any enrolled legal-studies course.
+                Live classes are arranged on request to help you understand difficult topics and
+                discuss your questions directly during class.
+              </p>
+              <div className="ns-live-hero-points">
+                <span><FaCheckCircle /> Approximately 8 classes</span>
+                <span><FaCheckCircle /> 45 minutes per class</span>
+                <span><FaCheckCircle /> One class for each chapter</span>
+                <span><FaCheckCircle /> Ask questions live</span>
+              </div>
 
-            <div className="ns-live-share" aria-label="Share Live Online Classes">
-              <strong>Share this page</strong>
-              <div>
-                <a
-                  className="is-facebook"
-                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(LIVE_CLASSES_URL)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Share on Facebook"
-                >
-                  <FaFacebookF /> Facebook
-                </a>
-                <a
-                  className="is-twitter"
-                  href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(LIVE_CLASSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Share on Twitter"
-                >
-                  <FaTwitter /> Twitter
-                </a>
-                <a
-                  className="is-whatsapp"
-                  href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE} ${LIVE_CLASSES_URL}`)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Share on WhatsApp"
-                >
-                  <FaWhatsapp /> WhatsApp
-                </a>
-                <button type="button" onClick={handleCopyLink} aria-label="Copy page link">
-                  <FaLink /> {copied ? "Link Copied" : "Copy Link"}
-                </button>
+              <div className="ns-live-share" aria-label="Share Live Online Classes">
+                <strong>Share this page</strong>
+                <div>
+                  <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(LIVE_CLASSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
+                  <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(LIVE_CLASSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
+                  <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE} ${LIVE_CLASSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
+                  <button type="button" onClick={handleCopyLink} aria-label="Copy page link"><FaLink /> {copied ? "Link Copied" : "Copy Link"}</button>
+                </div>
               </div>
             </div>
+
+            <img
+              className="ns-live-hero-image"
+              src="/live-online-classes-og.jpg"
+              alt="Live Online Classes at NagarikSuraksha"
+            />
           </div>
         </section>
 
@@ -215,7 +197,9 @@ export default function LiveOnlineClassesPage() {
         .ns-live-page { color: #13233b; background: #fff; }
         .ns-live-container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
         .ns-live-hero { padding: 78px 0; color: #fff; background: radial-gradient(circle at 78% 20%, #174f78 0, transparent 32%), linear-gradient(135deg, #06182d, #0a2945); }
-        .ns-live-hero .ns-live-container { max-width: 900px; margin-left: max(20px, calc((100% - 1180px) / 2)); }
+        .ns-live-hero .ns-live-container { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr); align-items: center; gap: 46px; }
+        .ns-live-hero-copy { min-width: 0; }
+        .ns-live-hero-image { display: block; width: 100%; border: 2px solid rgba(223, 165, 69, .78); border-radius: 18px; box-shadow: 0 24px 55px rgba(0, 0, 0, .38); }
         .ns-live-eyebrow, .ns-live-label { color: #dfa545; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; font-size: .78rem; }
         .ns-live-eyebrow { display: flex; gap: 9px; align-items: center; }
         .ns-live-hero h1 { margin: 15px 0 14px; font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.03; }
@@ -279,7 +263,11 @@ export default function LiveOnlineClassesPage() {
         .ns-live-course-meta span, .ns-live-course-body > a { display: flex; align-items: center; gap: 7px; }
         .ns-live-course-body > a { color: #1558c8; font-weight: 800; text-decoration: none; }
         .ns-live-status { padding: 35px; text-align: center; color: #617087; }
-        @media (max-width: 980px) { .ns-live-feature-grid, .ns-live-course-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 980px) {
+          .ns-live-hero .ns-live-container { grid-template-columns: 1fr; }
+          .ns-live-hero-image { width: min(760px, 100%); }
+          .ns-live-feature-grid, .ns-live-course-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 650px) {
           .ns-live-container { width: min(100% - 28px, 1180px); }
           .ns-live-hero { padding: 52px 0; }
