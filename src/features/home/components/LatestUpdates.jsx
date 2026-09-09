@@ -8,7 +8,9 @@ const updates = [
     title: "Important Judgement on Consumer Rights",
     date: "05 Aug 2026",
     description:
-      "Read the latest Supreme Court judgement strengthening consumer protection and compensation rights.",
+      "Landmark Supreme Court judgments have expanded consumer protection across medical treatment, housing, commercial purchases and telecommunications.",
+    link: "/legal-updates/important-judgement-on-consumer-rights",
+    image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
   },
   {
     id: 2,
@@ -112,8 +114,9 @@ const LatestUpdates = () => {
               <div
                 style={{
                   height: "180px",
-                  background:
-                    "linear-gradient(135deg,#1d4ed8,#2563eb,#0f172a)",
+                  background: item.image
+                    ? `url(${item.image}) center/cover no-repeat`
+                    : "linear-gradient(135deg,#1d4ed8,#2563eb,#0f172a)",
                 }}
               />
 
@@ -170,7 +173,7 @@ const LatestUpdates = () => {
                 </p>
 
                 <Link
-                  to="/posts"
+                  to={item.link || "/posts"}
                   style={{
                     color: "#2563eb",
                     textDecoration: "none",

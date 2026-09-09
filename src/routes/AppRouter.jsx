@@ -53,6 +53,7 @@ import LegalServiceDetailsPage from "../features/public/services/pages/LegalServ
 import DisclaimerPage from "../features/public/legal/pages/DisclaimerPage";
 import PrivacyPolicyPage from "../features/public/legal/pages/PrivacyPolicyPage";
 import TermsPage from "../features/public/legal/pages/TermsPage";
+import ConsumerRightsJudgmentsPage from "../features/public/legal/pages/ConsumerRightsJudgmentsPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -165,6 +166,11 @@ export default function AppRouter() {
       <Route
         path="/terms"
         element={<TermsPage />}
+      />
+
+      <Route
+        path="/legal-updates/important-judgement-on-consumer-rights"
+        element={<ConsumerRightsJudgmentsPage />}
       />
 
       {/* =====================================================
