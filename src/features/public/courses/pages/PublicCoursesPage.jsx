@@ -16,6 +16,10 @@ import {
 
 import {
   FaCheckCircle,
+  FaFacebookF,
+  FaLink,
+  FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import {
@@ -35,6 +39,12 @@ import {
 import {
   getPublishedChaptersForCourse,
 } from "../../../../services/chapterService";
+
+const CERTIFICATE_COURSES_URL =
+  "https://www.nagariksuraksha.com/llb-courses?share=portrait-20260909";
+
+const SHARE_MESSAGE =
+  "Explore Certificate Courses in Legal Studies from NagarikSuraksha.";
 
 // =========================================================
 // HELPERS
@@ -127,6 +137,29 @@ export default function PublicCoursesPage() {
     error,
     setError,
   ] = useState("");
+
+  const [
+    copied,
+    setCopied,
+  ] = useState(false);
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(
+        CERTIFICATE_COURSES_URL,
+      );
+      setCopied(true);
+      window.setTimeout(
+        () => setCopied(false),
+        2000,
+      );
+    } catch (copyError) {
+      console.error(
+        "Unable to copy courses link:",
+        copyError,
+      );
+    }
+  };
 
   // =======================================================
   // LOAD PUBLISHED COURSES
@@ -224,9 +257,10 @@ export default function PublicCoursesPage() {
   return (
     <>
       <SEO
-        title="LL.B Courses, Law Study Materials & Legal Learning"
-        description="Explore LL.B courses, chapter-wise law study materials, law notes, legal topics and certification preparation at NagarikSuraksha."
+        title="Certificate Courses in Legal Studies | NagarikSuraksha"
+        description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha."
         canonical="/llb-courses"
+        image="/certificate-courses-share-portrait.jpg"
         keywords={[
           "LLB courses",
           "LLB course online",
@@ -288,7 +322,19 @@ export default function PublicCoursesPage() {
                   Certification options
                 </span>
               </div>
+
+              <div className="courses-share" aria-label="Share Certificate Courses">
+                <strong>Share this page</strong>
+                <div>
+                  <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(CERTIFICATE_COURSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
+                  <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(CERTIFICATE_COURSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
+                  <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE} ${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
+                  <button type="button" onClick={handleCopyLink} aria-label="Copy page link"><FaLink /> {copied ? "Link Copied" : "Copy Link"}</button>
+                </div>
+              </div>
             </div>
+
+            <img className="courses-hero-image" src="/certificate-courses-hero.jpg" alt="Certificate Courses in Legal Studies at NagarikSuraksha" />
           </div>
         </section>
 
@@ -628,8 +674,23 @@ export default function PublicCoursesPage() {
               color: white;
             }
 
+            .courses-hero .courses-container {
+              display: grid;
+              grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+              align-items: center;
+              gap: 44px;
+            }
+
             .courses-hero-content {
-              max-width: 790px;
+              min-width: 0;
+            }
+
+            .courses-hero-image {
+              display: block;
+              width: 100%;
+              border: 2px solid rgba(223,165,69,.8);
+              border-radius: 18px;
+              box-shadow: 0 24px 55px rgba(0,0,0,.35);
             }
 
             .courses-eyebrow {
@@ -679,6 +740,24 @@ export default function PublicCoursesPage() {
             .hero-benefits svg {
               color: #4ade80;
             }
+
+            .courses-share {
+              display: inline-block;
+              margin-top: 28px;
+              padding: 15px 17px;
+              border: 1px solid #e2b15f;
+              border-radius: 14px;
+              background: #fff;
+              box-shadow: 0 12px 30px rgba(0,0,0,.2);
+            }
+
+            .courses-share > strong { display: block; margin-bottom: 10px; color: #10243e; font-size: .9rem; }
+            .courses-share > div { display: flex; flex-wrap: wrap; gap: 9px; }
+            .courses-share a, .courses-share button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 39px; padding: 8px 12px; border: 1px solid transparent; border-radius: 9px; color: #fff; background: #d99a39; font: inherit; font-size: .8rem; font-weight: 800; text-decoration: none; cursor: pointer; }
+            .courses-share a:hover, .courses-share button:hover { transform: translateY(-1px); filter: brightness(1.08); }
+            .courses-share .is-facebook { background: #1877f2; }
+            .courses-share .is-twitter { background: #17202a; }
+            .courses-share .is-whatsapp { background: #198b47; }
 
             .courses-intro {
               padding: 55px 0 25px;
@@ -975,6 +1054,14 @@ export default function PublicCoursesPage() {
             }
 
             @media (max-width: 980px) {
+              .courses-hero .courses-container {
+                grid-template-columns: 1fr;
+              }
+
+              .courses-hero-image {
+                width: min(760px, 100%);
+              }
+
               .course-grid {
                 grid-template-columns:
                   repeat(2, minmax(0, 1fr));
@@ -1009,6 +1096,15 @@ export default function PublicCoursesPage() {
               .hero-benefits {
                 display: grid;
                 grid-template-columns: 1fr;
+              }
+
+              .courses-share {
+                display: block;
+              }
+
+              .courses-share > div {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
               }
 
               .courses-intro {

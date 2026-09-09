@@ -753,6 +753,30 @@ export default {
       );
     }
 
+    if (
+      /^\/llb-courses\/?$/.test(url.pathname) &&
+      assetResponse.headers.get("content-type")?.includes("text/html")
+    ) {
+      const canonicalUrl = `${url.origin}/llb-courses`;
+      const shareVersion = url.searchParams.get("share");
+      const socialUrl = shareVersion
+        ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
+        : canonicalUrl;
+
+      return rewriteCourseSocialMetadata(
+        assetResponse,
+        {
+          title: "Certificate Courses in Legal Studies | NagarikSuraksha",
+          description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha.",
+          image: `${url.origin}/certificate-courses-share-portrait.jpg`,
+          imageWidth: 720,
+          imageHeight: 1280,
+        },
+        canonicalUrl,
+        socialUrl,
+      );
+    }
+
     const courseMatch = url.pathname.match(/^\/courses\/([^/]+)\/?$/);
     if (
       courseMatch &&
