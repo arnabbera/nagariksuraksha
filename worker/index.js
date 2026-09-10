@@ -19,6 +19,11 @@ const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/se
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
+  "/legal-updates/section-200-crpc-section-223-bnss-private-complaint": {
+    title: "Section 200 CrPC and Section 223 BNSS Explained | NagarikSuraksha",
+    description: "Understand private complaints before a Magistrate, the CrPC-to-BNSS procedure, accused-hearing safeguard and difference from a police-investigation request.",
+    image: "/images/legal-updates/section-200-crpc-section-223-bnss.jpg",
+  },
   "/legal-updates/tech-startup-regulatory-compliance-2026": {
     title: "Tech Startup Regulatory Compliance in 2026 | NagarikSuraksha",
     description: "An India-focused startup guide to data protection, responsible AI, cybersecurity, consumer law and compliance-by-design before scaling.",

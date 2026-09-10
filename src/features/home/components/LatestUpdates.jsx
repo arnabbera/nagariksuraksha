@@ -3,6 +3,16 @@ import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const updates = [
   {
+    id: 5,
+    category: "Criminal Procedure",
+    title: "Section 200 CrPC and Section 223 BNSS: Private Complaint Before a Magistrate",
+    date: "10 Sep 2026",
+    description:
+      "Understand examination of the complainant, the complaint-case sequence, the difference from a police-investigation request, and the BNSS accused-hearing safeguard.",
+    link: "/legal-updates/section-200-crpc-section-223-bnss-private-complaint",
+    image: "/images/legal-updates/section-200-crpc-section-223-bnss.jpg",
+  },
+  {
     id: 4,
     category: "Technology, AI & Compliance",
     title: "Tech Startups in 2026: Regulatory Compliance Is the Real Challenge",
