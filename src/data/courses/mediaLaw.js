@@ -1083,6 +1083,9 @@ Stings: ask whether serious public wrongdoing was reasonably suspected, covert m
       "Apply human-rights principles to reporting and editorial decisions.",
       "Assess accountability mechanisms for news and entertainment media.",
       "Explain the policy framework governing foreign investment in print media.",
+      "Apply accuracy, privacy, fairness and conflict-of-interest standards to a newsroom problem.",
+      "Distinguish the jurisdictions of print, television and digital-news accountability bodies.",
+      "Evaluate ownership concentration, paid news and editorial independence.",
     ],
     topics: [
       "Accuracy, fairness, independence and conflicts of interest",
@@ -1098,6 +1101,202 @@ Stings: ask whether serious public wrongdoing was reasonably suspected, covert m
       "Cable Television Networks Programme Code",
       "Consolidated FDI Policy and applicable government approvals",
     ],
+    detailedContent: `
+1. Meaning and purpose of media ethics
+
+Media ethics consists of professional principles governing how information is gathered, verified, selected, presented, corrected and archived. Law fixes minimum enforceable duties, while ethics asks what responsible journalism should do even where no court order or penalty follows.
+
+The central values are truth-seeking, accuracy, fairness, independence, humanity, accountability and transparency. These values can conflict. Speed may conflict with verification; public interest with privacy; source confidentiality with accountability; and graphic truth with dignity. Ethical judgment requires reasons, not slogans.
+
+2. Law, ethics and professional standards
+
+An unlawful publication is usually unethical, but an unethical publication is not necessarily illegal. A misleading headline, undisclosed gift or refusal to correct may breach professional standards without independently constituting a crime or tort. Conversely, legal permission does not establish ethical justification.
+
+Regulation should identify its source. Constitutional and statutory law is enforceable by public institutions. A regulator's code may have legal force within a licensing or statutory scheme. An industry code binds through membership or contract. An internal editorial code is enforced by the organisation. Confusing these levels produces incorrect remedies.
+
+3. Accuracy, verification and correction
+
+Journalists should distinguish verified fact, allegation, opinion, analysis, satire and advertisement. Serious allegations require proportionate verification: examination of primary documents, corroboration, source evaluation, contextual checking and a meaningful opportunity for the affected person to respond.
+
+Accuracy concerns the overall impression, not only isolated sentences. Headlines, photographs, captions, editing and omission can render a report misleading. Urgency may affect what verification is reasonable, but it does not justify inventing certainty.
+
+A prompt, prominent and specific correction reduces continuing harm and demonstrates accountability. Quietly editing a digital article without explaining a material correction may preserve the misleading impression and weaken public trust.
+
+4. Fairness, balance and right of reply
+
+Fairness requires honest presentation of material facts and affected perspectives. It does not always require equal time for demonstrably unequal claims. Balance is not mathematical symmetry; it is editorial treatment proportionate to evidence and relevance.
+
+When alleging misconduct, the newsroom should ordinarily seek a response with sufficient particulars and time. If urgency requires publication before reply, the report should state that a response was sought and update the story fairly when received. A right of reply is not a right to dictate the article or suppress documented criticism.
+
+5. Independence and conflicts of interest
+
+Editorial judgment should not be secretly controlled by owners, advertisers, governments, political parties, sources or personal benefit. Gifts, paid travel, outside employment, family interests, investments and political activity may create actual or apparent conflicts requiring refusal, disclosure or reassignment.
+
+Separation of advertising and editorial content is essential. Sponsored material, native advertising, affiliate content and influencer promotion should be clearly identified. Commercial arrangements should not determine favourable news coverage or the suppression of legitimate criticism.
+
+6. Paid news and disguised advertising
+
+Paid news presents promotional or political material as independent journalism in exchange for money or another benefit. It deceives the audience about the source and motivation of the communication, distorts electoral equality and compromises editorial independence.
+
+Paid news may engage the Press Council's norms, election expenditure law, consumer protection, advertising standards, company disclosure and taxation rules depending on the facts. Proof should identify the consideration, editorial presentation, coordination and person responsible; mere favourable coverage is not by itself proof of payment.
+
+7. Sources, confidentiality and anonymous attribution
+
+Confidential sources can expose corruption and abuse where named disclosure is unsafe. Before granting anonymity, the journalist should assess the source's access, motive, reliability, corroboration and risk. Editors should ordinarily know the source even where the public does not.
+
+Anonymity should not become a channel for unverified personal attack. The report should give readers as much information about the source's basis of knowledge as safety permits. Source confidentiality is a serious ethical commitment, but Indian law does not create a universal privilege against every lawful court or investigative demand.
+
+Section 15(2) of the Press Council Act specifically prevents the Council from compelling disclosure of a news source in its inquiry. That protection must not be generalised beyond the statutory context.
+
+8. Privacy, dignity and minimisation of harm
+
+Privacy is a fundamental right under Articles 14, 19 and 21. Ethical reporting asks whether private information is necessary to a genuine public-interest story and whether the same purpose can be achieved with less intrusion. Public curiosity, celebrity and virality are not substitutes for public interest.
+
+Particular care is required for children, sexual-offence survivors, patients, grieving families, persons with disabilities and communities exposed to retaliation. Identity, address, images and metadata can cause harm even when the name is omitted. Consent should be informed and cannot always cure exploitation or statutory prohibition.
+
+R. Rajagopal v. State of Tamil Nadu and Justice K.S. Puttaswamy v. Union of India provide the constitutional foundation for balancing publication with private life, dignity, autonomy and informational privacy.
+
+9. Reporting children, sexual violence and vulnerable persons
+
+The Juvenile Justice Act, POCSO Act and criminal-procedure laws restrict disclosure that identifies children and victims in specified cases. Identification may occur through family details, school, neighbourhood, image, voice or contextual clues, not only by printing a name.
+
+Nipun Saxena v. Union of India reinforced protection of the identity and dignity of sexual-offence survivors. Ethical practice also avoids victim blaming, gratuitous detail, repeated traumatic imagery and interviews obtained through pressure.
+
+10. Communal, caste and conflict-sensitive reporting
+
+Reports concerning religion, caste, ethnicity, migration or conflict can intensify real-world harm. Verification of identity and causation is essential. Headlines should not attribute an individual's conduct to an entire community without genuine relevance.
+
+Journalists should avoid rumours, dehumanising description, unverified casualty figures and images stripped of time or place. Where identity is relevant to exposing discrimination or organised violence, it should be reported accurately and contextually rather than suppressed automatically.
+
+In Amish Devgan v. Union of India, the Supreme Court discussed hate speech, dignity, fraternity and the contextual assessment of expression. The case illustrates why reach, speaker, audience, repetition and likely harm matter.
+
+11. Images, grief, trauma and sensationalism
+
+Graphic images may document war, disaster, crime and institutional failure, but publication requires a necessity and proportionality assessment. Editors should consider warning, cropping, obscuring identity, limiting repetition and explaining context.
+
+Images taken from social media are not automatically verified or free to use. Consent, copyright, authenticity, date and location must be checked. Synthetic or materially altered media should be labelled, and corrections should explain the alteration or error.
+
+12. Self-regulation, co-regulation and statutory regulation
+
+Self-regulation means standards created and administered primarily by the profession or industry. It can be fast, specialised and protective of editorial independence, but may suffer from voluntary membership, weak sanctions and conflicts of interest.
+
+Statutory regulation is created by legislation and backed by public power. It can provide universality and enforceable remedies but risks political control or disproportionate censorship. Co-regulation combines industry-level complaint handling with statutory recognition or public oversight.
+
+The soundness of any model depends on independence, transparent appointments, clear standards, fair procedure, published reasons, proportionate remedies and judicial review—not merely its label.
+
+13. Press Council of India and print self-regulation
+
+The Press Council Act, 1978 gives the Council the twin objects of preserving press freedom and maintaining and improving newspaper and news-agency standards. Under section 13 it develops standards and a code of conduct, encourages responsibility and reviews developments affecting dissemination of news.
+
+The Norms of Journalistic Conduct address accuracy, pre-publication verification, right of reply, privacy, communal reporting, obscenity, paid news, advertisements and other recurring issues. They are built from Council adjudications and professional principles.
+
+Under section 14 the Council may, after inquiry, warn, admonish or censure, or disapprove conduct. It does not award ordinary damages or impose criminal punishment. Its jurisdiction is centred on newspapers, news agencies, editors and working journalists within the Act; it is not a universal regulator for every television channel or social platform.
+
+14. Television news and the Cable Rules grievance structure
+
+Television programmes carried through cable networks must comply with the Programme Code and advertisements with the Advertising Code under the Cable Television Networks Rules, 1994. The 2021 amendments introduced a three-level grievance structure: self-regulation by broadcasters, self-regulation through recognised broadcaster bodies, and Central Government oversight.
+
+Industry organisations such as the News Broadcasting and Digital Standards Authority operate through membership-based rules and complaint mechanisms. Their jurisdiction depends on membership and the relevant code. A complainant should therefore identify the channel, programme, rule, self-regulatory membership and statutory route rather than assuming that one body controls all television news.
+
+15. Digital news and the IT Rules
+
+Part III of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 establishes a Code of Ethics and grievance structure for publishers of news and current affairs content and online curated content within its scope. It includes publisher-level grievance handling, self-regulatory bodies and governmental oversight.
+
+The IT Rules have been subject to constitutional litigation and interim judicial orders. Their application must therefore be checked against the current text and operative court directions. An intermediary hosting user content is legally distinct from a publisher exercising editorial control, although one entity may perform more than one function.
+
+16. Media and human rights
+
+Media enables human rights by exposing violations, informing affected persons, preserving evidence and creating public accountability. Article 19 of the Universal Declaration of Human Rights and the ICCPR protects expression and access to information, subject to lawful limitations. Indian constitutional protection arises primarily through Articles 14, 19 and 21.
+
+Media can also violate rights through discriminatory representation, disclosure of protected identity, prejudicial trials, harassment, surveillance and amplification of hatred. A human-rights approach asks who speaks, who is represented, who bears risk, whether consent is meaningful, and whether remedy is accessible.
+
+Human-rights reporting should centre the agency and dignity of affected persons, distinguish documentation from spectacle, protect sources and survivors, and avoid treating vulnerable individuals merely as content.
+
+17. Ownership concentration and editorial pluralism
+
+Concentration occurs where a small number of entities control outlets across print, television, radio or digital distribution. Cross-media ownership can produce economies of scale but may reduce viewpoint diversity, create conflicts with other businesses and increase the power to shape public debate.
+
+Article 19 protects editorial freedom, while competition, company, securities and sectoral policies address economic structure. Bennett Coleman recognised that regulation claimed to promote smaller newspapers cannot burden expression through unconstitutional newsprint controls. Ownership policy must use clear authority and proportionate means.
+
+Transparency about beneficial ownership, political links, advertisers and sponsored content allows audiences to assess influence. Pluralism includes diversity of owners, sources, languages, regions and communities.
+
+18. Foreign investment in news and print media
+
+Foreign investment is governed by FEMA, rules made under it, the current Consolidated FDI Policy, DPIIT press notes and Ministry of Information and Broadcasting guidelines. Sectoral caps operate together with entry routes, security conditions, ownership and control requirements and general restrictions.
+
+Publication of newspapers and periodicals dealing with news and current affairs is subject to a 26 per cent foreign-investment cap under the Government route. Uploading or streaming news and current affairs through digital media is also subject to the sector-specific 26 per cent Government-route policy.
+
+Different treatment applies to scientific, technical and speciality magazines, periodicals and journals and to facsimile editions of foreign newspapers, for which the applicable framework permits higher investment subject to Government approval and detailed conditions. Students must not state that every kind of print publication has the same cap.
+
+19. Conditions, editorial control and policy concerns in foreign investment
+
+Government approvals may impose conditions concerning Indian incorporation, resident citizenship of key managerial or editorial personnel, security clearance, ownership and control, transfer of shares, employment of foreign personnel and reporting of changes. The precise current approval and PRGI registration requirements must be checked for the proposed activity.
+
+Supporters of foreign investment emphasise capital, technology, training and global distribution. Critics raise editorial influence, cultural autonomy, national security and concentration. The constitutional and policy question is how to preserve pluralism and Indian editorial accountability without using investment regulation as disguised viewpoint control.
+
+20. Applied problem and examination method
+
+Assume a news company accepts payment for favourable election stories, publishes a child's identifying details, refuses a correction, broadcasts communal rumours, claims Press Council membership covers its television channel and proposes 40 per cent foreign investment in a news newspaper without Government approval.
+
+Analyse each issue separately: paid news and disclosure; statutory and ethical identity protection; accuracy, reply and correction; contextual hate-speech and Programme Code concerns; the Press Council's print jurisdiction versus television grievance mechanisms; and the 26 per cent Government-route cap for print news and current affairs. Identify remedies before the publisher, self-regulatory body, Press Council, statutory authority or court as applicable.
+
+For an examination answer, define ethics and distinguish it from law; explain core duties; compare self-, co- and statutory regulation; map print, television and digital bodies; apply human-rights principles; discuss paid news, ownership and pluralism; then state FDI caps, routes and conditions carefully. Never describe a voluntary code as a criminal statute or assume one regulator has jurisdiction over every medium.
+    `.trim(),
+    keyPoints: [
+      "Law supplies enforceable minimum rules, while ethics governs responsible choices even where no legal sanction follows.",
+      "Accuracy requires verification of the overall impression created by text, headline, image, editing and omission.",
+      "Fairness requires proportional representation of relevant evidence, not mechanical equality between true and unsupported claims.",
+      "Editorial independence requires disclosure or management of owner, advertiser, political, source and personal conflicts.",
+      "Paid news disguises consideration-driven promotion as independent journalism and may engage several legal regimes.",
+      "Public interest is different from public curiosity; privacy intrusion must be necessary and proportionate.",
+      "Children and sexual-offence survivors may be identified indirectly through contextual details even when names are omitted.",
+      "Self-regulation, co-regulation and statutory regulation must be assessed by independence, procedure, remedies and review.",
+      "The Press Council governs its statutory print sphere and cannot award civil damages or impose criminal punishment.",
+      "Television and digital news have distinct grievance structures; one industry's self-regulatory body does not govern every publisher.",
+      "A human-rights approach treats media as both an accountability institution and a potential source of rights violations.",
+      "Print news and current-affairs publications are subject to a 26 per cent foreign-investment cap under the Government route.",
+      "Scientific or technical publications and facsimile editions are distinct FDI categories and should not be assigned the print-news cap automatically.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-5-constitution", title: "Speech, equality, dignity and privacy", provision: "Articles 14, 19 and 21, Constitution of India", description: "Provides the constitutional values governing editorial freedom, non-arbitrariness, privacy, dignity, reputation and human-rights reporting." },
+      { id: "media-law-unit-5-pci-object", title: "Objects and functions of the Press Council", provision: "Sections 13–14, Press Council Act, 1978", description: "Requires preservation of press freedom and standards and authorises inquiry, warning, admonition, censure and disapproval within the Act." },
+      { id: "media-law-unit-5-pci-source", title: "Press Council inquiry and sources", provision: "Section 15, Press Council Act, 1978", description: "Confers inquiry powers while protecting journalists and newspapers against compelled source disclosure by the Council." },
+      { id: "media-law-unit-5-pci-norms", title: "Norms of Journalistic Conduct", provision: "Press Council of India professional norms", description: "Guides print journalism on accuracy, reply, privacy, communal reporting, paid news, advertisements and professional responsibility." },
+      { id: "media-law-unit-5-cable-code", title: "Programme and Advertising Codes", provision: "Rules 6–7, Cable Television Networks Rules, 1994", description: "Sets content standards for programmes and advertisements carried through regulated cable television networks." },
+      { id: "media-law-unit-5-tv-grievance", title: "Television complaint structure", provision: "Rules 15–18, Cable Television Networks Rules, 1994", description: "Provides broadcaster self-regulation, recognised self-regulating bodies and Central Government oversight." },
+      { id: "media-law-unit-5-digital-code", title: "Digital Media Code of Ethics", provision: "Part III, Information Technology Rules, 2021", description: "Creates ethics and grievance provisions for covered digital-news and online-curated-content publishers, subject to current judicial orders." },
+      { id: "media-law-unit-5-child", title: "Protection of child identity", provision: "Juvenile Justice Act, 2015 and POCSO Act, 2012", description: "Restricts publication of information capable of identifying children in protected proceedings and offences." },
+      { id: "media-law-unit-5-human-rights", title: "International expression and dignity", provision: "UDHR Articles 1, 12 and 19; ICCPR Articles 17, 19 and 20", description: "Frames expression, privacy, dignity and lawful restrictions within international human-rights law." },
+      { id: "media-law-unit-5-fdi", title: "Foreign investment in print news", provision: "Consolidated FDI Policy and MIB print-media guidelines", description: "Applies a 26 per cent cap under the Government route to newspapers and periodicals dealing with news and current affairs." },
+      { id: "media-law-unit-5-digital-fdi", title: "Foreign investment in digital news", provision: "DPIIT Press Note 4 of 2019 and MIB clarification framework", description: "Applies the 26 per cent Government-route policy to uploading or streaming news and current affairs through digital media." },
+      { id: "media-law-unit-5-facsimile", title: "Facsimile editions and specialised publications", provision: "MIB guidelines and Press and Registration of Periodicals framework", description: "Provides distinct approval and registration treatment for facsimile editions and scientific, technical or speciality publications." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-5-harijai", caseName: "In Re: Harijai Singh", citation: "(1996) 6 SCC 466", principle: "Press freedom is indispensable to democracy but must be exercised with factual accuracy, responsibility and respect for institutional integrity.", summary: "The Supreme Court discussed the role, freedom and responsibilities of newspapers while addressing inaccurate reporting concerning judicial proceedings." },
+      { id: "media-law-unit-5-ajay-goswami", caseName: "Ajay Goswami v. Union of India", citation: "(2007) 1 SCC 143", principle: "Content standards must protect children without imposing broad prior censorship on newspapers for adult readers.", summary: "The Court rejected sweeping restrictions and emphasised existing law, classification, responsible journalism and proportionate protection." },
+      { id: "media-law-unit-5-rajagopal", caseName: "R. Rajagopal v. State of Tamil Nadu", citation: "(1994) 6 SCC 632", principle: "Freedom of publication must be balanced with privacy, particularly for personal matters unrelated to public duties.", summary: "The Auto Shankar judgment remains foundational for ethical and legal treatment of private life, public records and official conduct." },
+      { id: "media-law-unit-5-puttaswamy", caseName: "Justice K.S. Puttaswamy (Retd.) v. Union of India", citation: "(2017) 10 SCC 1", principle: "Privacy is a fundamental right rooted in dignity, autonomy and informational control.", summary: "The nine-judge Bench requires legality, legitimate aim and proportionality when privacy is restricted." },
+      { id: "media-law-unit-5-nipun-saxena", caseName: "Nipun Saxena v. Union of India", citation: "(2019) 2 SCC 703", principle: "The identity and dignity of sexual-offence survivors require strict protection, including against indirect disclosure.", summary: "The Court issued safeguards concerning naming, records and publication capable of identifying survivors." },
+      { id: "media-law-unit-5-pravasi", caseName: "Pravasi Bhalai Sangathan v. Union of India", citation: "(2014) 11 SCC 477", principle: "Harmful and hate-related expression must be addressed through the constitutional and statutory framework rather than vague judicial creation of new offences.", summary: "The Court examined hate speech, existing laws and institutional responsibility while declining an overbroad new judicial code." },
+      { id: "media-law-unit-5-amish-devgan", caseName: "Amish Devgan v. Union of India", citation: "(2021) 1 SCC 1", principle: "Hate speech is assessed contextually by content, speaker, audience, reach, repetition, dignity and likely harm.", summary: "The Court distinguished offensive speech from legally punishable hate speech and analysed fraternity and equality." },
+      { id: "media-law-unit-5-bennett", caseName: "Bennett Coleman & Co. v. Union of India", citation: "(1972) 2 SCC 788", principle: "Policies said to promote diversity cannot burden press growth and circulation through unconstitutional means.", summary: "The newsprint decision demonstrates the need to pursue pluralism without indirect restriction of Article 19(1)(a)." },
+      { id: "media-law-unit-5-cab", caseName: "Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal", citation: "(1995) 2 SCC 161", principle: "Airwaves are public property and broadcasting regulation must promote public good and diverse communication.", summary: "The Court rejected exclusive governmental monopoly and linked audience access with media pluralism." },
+      { id: "media-law-unit-5-common-cause-ads", caseName: "Common Cause v. Union of India", citation: "(2015) 7 SCC 1", principle: "Government advertising must serve public purposes and cannot become partisan publicity financed by public funds.", summary: "The Supreme Court framed principles for fairness, political neutrality, accountability and avoidance of personality cults in government advertisements." },
+      { id: "media-law-unit-5-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "Media freedom must be balanced with fair trial through narrowly tailored remedies only where a real and substantial prejudice risk exists.", summary: "The Court recognised exceptional temporary postponement rather than general prior control of judicial reporting." },
+    ],
+    examFocus:
+      "Prepare the distinction between law, ethics and professional codes; accuracy, verification, corrections, fairness, reply, independence and conflicts; paid news and disguised advertising; anonymous sources and section 15(2) source protection; privacy, dignity, children, sexual-offence survivors and communal reporting; self-regulation, co-regulation and statutory regulation; Press Council Act sections 13–15 and the Norms of Journalistic Conduct; Cable Rules 6–7 and 15–18; Part III of the IT Rules, 2021 subject to operative court orders; media and UDHR/ICCPR human rights; ownership concentration and pluralism; the 26 per cent Government-route cap for print news and digital news; distinct treatment of specialised publications and facsimile editions; and the principles in Harijai Singh, Ajay Goswami, Rajagopal, Puttaswamy, Nipun Saxena, Pravasi Bhalai, Amish Devgan, Bennett Coleman, Cricket Association of Bengal, Common Cause and Sahara India.",
+    revisionNotes: `
+Ethical method: verify serious claims, distinguish fact from opinion, seek a meaningful response, correct material errors prominently, disclose conflicts and label sponsored material. Public interest is not public curiosity.
+
+Human rights: media protects rights through information and accountability but may violate privacy, dignity, equality and fair trial. Minimise harm, especially to children, survivors and vulnerable communities; check indirect identification as well as names.
+
+Regulatory map: print ethics—Press Council Act and Norms; cable television—Programme/Advertising Codes and three-level grievance structure; digital news—Part III of the IT Rules subject to current court orders; internal and membership codes operate only within their jurisdiction.
+
+FDI: newspapers and periodicals dealing with news and current affairs are capped at 26 per cent under the Government route. Digital uploading or streaming of news and current affairs is also subject to 26 per cent Government-route policy. Scientific/technical publications and facsimile editions form distinct categories with separate conditions.
+
+Exam warning: do not call every ethical breach illegal, every self-regulatory ruling a court order, or every media outlet subject to the same body. Identify the medium, rule-maker, jurisdiction, procedure and available remedy.
+    `.trim(),
   },
   {
     title: "Legislative Framework for Broadcasting and Cinema",
