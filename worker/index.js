@@ -19,6 +19,11 @@ const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/se
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
+  "/posts/masterda-surya-sen-chittagong-armoury-raid": {
+    title: "Masterda Surya Sen and the Chittagong Armoury Raid | NagarikSuraksha",
+    description: "Remembering the schoolteacher and revolutionary organiser who led the historic Chittagong Armoury Raid of 18 April 1930.",
+    image: "/images/freedom-fighters/masterda-surya-sen.jpg",
+  },
   "/legal-updates/section-200-crpc-section-223-bnss-private-complaint": {
     title: "Section 200 CrPC and Section 223 BNSS Explained | NagarikSuraksha",
     description: "Understand private complaints before a Magistrate, the CrPC-to-BNSS procedure, accused-hearing safeguard and difference from a police-investigation request.",

@@ -4,6 +4,10 @@ import {
 
 import postRepository from "../repositories/PostRepository";
 
+import {
+  MASTERDA_SURYA_SEN_POST,
+} from "../features/public/posts/data/masterdaSuryaSenPost";
+
 // =========================================================
 // HELPERS
 // =========================================================
@@ -42,10 +46,59 @@ export const getAllPosts =
 export const getPublishedPosts =
   async (
     options = {},
-  ) =>
-    postRepository.getPublished(
-      options,
+  ) => {
+    let repositoryPosts = [];
+
+    try {
+      repositoryPosts =
+        await postRepository.getPublished(
+          options,
+        );
+    } catch (
+      repositoryError
+    ) {
+      console.error(
+        "Unable to load Firebase posts; showing bundled posts:",
+        repositoryError,
+      );
+    }
+
+    const bundledPosts = [
+      MASTERDA_SURYA_SEN_POST,
+    ];
+
+    const mergedPosts = [
+      ...bundledPosts,
+      ...(Array.isArray(repositoryPosts)
+        ? repositoryPosts
+        : []),
+    ].filter(
+      (post, index, posts) =>
+        posts.findIndex(
+          (candidate) =>
+            candidate.slug === post.slug,
+        ) === index,
     );
+
+    return mergedPosts
+      .filter((post) =>
+        options.featured === null ||
+        options.featured === undefined
+          ? true
+          : Boolean(post.featured) === Boolean(options.featured),
+      )
+      .filter((post) =>
+        options.category
+          ? post.category === options.category
+          : true,
+      )
+      .sort(
+        (first, second) =>
+          Number(first.displayOrder || 0) -
+          Number(second.displayOrder || 0),
+      )
+      .slice(0, options.pageSize || 50);
+  };
 
 // =========================================================
 // PUBLIC - POST BY SLUG
@@ -59,10 +112,20 @@ export const getPostBySlug =
       return null;
     }
 
-    return postRepository.getBySlug(
+    const normalizedSlug =
       normalizeSlug(
         slug,
-      ),
+      );
+
+    if (
+      normalizedSlug ===
+      MASTERDA_SURYA_SEN_POST.slug
+    ) {
+      return MASTERDA_SURYA_SEN_POST;
+    }
+
+    return postRepository.getBySlug(
+      normalizedSlug,
     );
   };
 
