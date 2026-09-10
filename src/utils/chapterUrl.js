@@ -7,6 +7,7 @@ const courseChapterPrefixes = {
   "public-international-law": "public-international-law",
   "environmental-law": "environmental-law",
   "human-rights-law-and-practice": "human-rights-law",
+  "media-law": "media-law",
 };
 
 const slugify = (value = "") =>
@@ -53,4 +54,3 @@ export const resolveChapterPathSegment = (
       chapter?.slug === pathSegment ||
       getChapterPathSegment(courseSlug, chapter) === pathSegment,
   ) || null;
-

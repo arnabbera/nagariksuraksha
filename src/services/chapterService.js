@@ -6,6 +6,7 @@ import { criminalLawIChapters } from "../data/courses/criminalLawI";
 import { publicInternationalLawChapters } from "../data/courses/publicInternationalLaw";
 import { environmentalLawChapters } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeChapters } from "../data/courses/humanRightsLawAndPractice";
+import { mediaLawChapters } from "../data/courses/mediaLaw";
 
 const bundledChapters = [
   ...generalPrinciplesOfContractChapters,
@@ -14,6 +15,7 @@ const bundledChapters = [
   ...publicInternationalLawChapters,
   ...environmentalLawChapters,
   ...humanRightsLawAndPracticeChapters,
+  ...mediaLawChapters,
 ];
 
 const createSlug = (value = "") =>

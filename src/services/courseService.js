@@ -5,6 +5,7 @@ import { criminalLawICourse } from "../data/courses/criminalLawI";
 import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 import { environmentalLawCourse } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeCourse } from "../data/courses/humanRightsLawAndPractice";
+import { mediaLawCourse } from "../data/courses/mediaLaw";
 
 const bundledCourses = [
   generalPrinciplesOfContractCourse,
@@ -12,6 +13,7 @@ const bundledCourses = [
   publicInternationalLawCourse,
   environmentalLawCourse,
   humanRightsLawAndPracticeCourse,
+  mediaLawCourse,
 ];
 
 // These published LL.B. courses follow the eight-unit university syllabus.
@@ -28,6 +30,7 @@ const publishedChapterTotals = {
   "public-international-law": 8,
   "environmental-law": 8,
   "human-rights-law-and-practice": 8,
+  "media-law": 8,
 };
 
 const withPublishedChapterTotal = (course) => {

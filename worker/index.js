@@ -10,6 +10,7 @@ const LIVE_CLASS_COURSE_IDS = new Set([
   "family-law-i",
   "public-international-law",
   "environmental-law",
+  "media-law",
 ]);
 const CURRENCY = "INR";
 const FIREBASE_PROJECT_ID = "nagariksuraksha-60adb";
