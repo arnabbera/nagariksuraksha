@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 66183)
+Total output lines: 2115
+
 import { createChapterModel } from "../../models/ChapterModel";
 import { createCourseBookModel } from "../../models/CourseBookModel";
 import { createCourseModel } from "../../models/CourseModel";
@@ -990,183 +993,7 @@ Stings must be distinguished from ordinary observation and from entrapment. Reco
 
 18. Sting operations, privacy and legality
 
-Covert recording may affect privacy, trespass, confidentiality, data protection, criminal law and broadcasting or journalistic codes. The location and expectation of privacy matter. Recording intimate conduct in a private home requires much stronger justification than documenting an official demand made in an office.
-
-Raja Ram Pal v. Hon'ble Speaker, Lok Sabha arose from the cash-for-query sting and confirmed that recorded investigative material may trigger institutional proceedings, while those proceedings remain constitutionally reviewable. In Aniruddha Bahal v. State, the Delhi High Court recognised the public-interest character of a journalist's operation exposing willingness to launder money and rejected mechanical prosecution of the reporter.
-
-These decisions do not grant a universal sting-operation licence. Legality turns on the method, intent, statutory offence, authenticity, editing and public-interest connection.
-
-19. Sting evidence and the Bharatiya Sakshya Adhiniyam
-
-Audio, video, messages and device records are documents and electronic or digital records under the Bharatiya Sakshya Adhiniyam, 2023. Sections 61 to 63 govern the legal effect and proof of electronic records, including the statutory certificate route where applicable.
-
-Admissibility does not establish truth by itself. The proponent should prove source, device, custody, integrity, identity of speakers, continuity and absence of manipulation. Original files, metadata, hash values, contemporaneous notes and a documented chain of custody strengthen reliability. Selective excerpts should be compared with the complete recording.
-
-In R.K. Anand v. Registrar, Delhi High Court, the Supreme Court examined a television sting concerning interference with a criminal trial and relied on the material after detailed scrutiny. The case shows both the public value of a genuine sting and the need for fairness, authentication and judicial evaluation.
-
-20. Applied problem and examination method
-
-Assume a digital news channel copies three minutes from a competitor's exclusive sports broadcast, adds a brief headline, secretly records an official accepting money, heavily edits the recording, publishes a protected witness's identity and declares an accused guilty. It claims fair dealing and public interest for everything.
-
-Separate the issues. Identify copyright in the underlying footage and the section 37 broadcast reproduction right; test the amount, purpose, necessity and market effect under section 52; analyse consent and performers' rights if relevant; test the sting method under privacy, public interest and applicable offences; authenticate the full recording under BSA sections 61–63; and address identity protection, contempt and fair trial. Public interest may support the corruption disclosure but cannot automatically legalise excessive footage appropriation, deceptive editing or prejudicial publication.
-
-For an examination answer, use this order: identify each work and neighbouring right; determine author and owner; identify the restricted act; examine assignment or licence; apply fair dealing or another exception; state term and remedies; then separately analyse security, privacy, fair trial, sting legality and electronic proof. Never merge copyright ownership, broadcast reproduction right and performers' rights into one undifferentiated right.
-    `.trim(),
-    keyPoints: [
-      "Copyright protects original expression, not facts, ideas or news events in the abstract.",
-      "A media product may contain separate literary, artistic, musical, film, sound-recording, broadcast and performers' rights.",
-      "Sections 18–19 govern assignment, while section 30 permits written licences by the owner or authorised agent.",
-      "Fair dealing for criticism, review and current-events reporting is purpose- and context-specific, not a blanket news exemption.",
-      "Section 37 gives broadcasters a separate twenty-five-year broadcast reproduction right.",
-      "Sections 38, 38A and 38B protect performers' economic and moral interests, generally for fifty years.",
-      "Underlying copyright permission does not automatically authorise copying another broadcaster's signal, and vice versa.",
-      "Sections 65A and 65B protect technological measures and rights-management information subject to statutory conditions.",
-      "The Cinematograph Act's anti-piracy provisions supplement rather than replace the Copyright Act.",
-      "National-security restriction requires precise legal authority and cannot rest solely on official embarrassment or labelling.",
-      "Trial by media must be distinguished from fair and accurate open-court reporting.",
-      "A legitimate sting requires serious public interest, necessity, proportional methods, accurate editing and protection against collateral harm.",
-      "Electronic sting material must be authenticated under the Bharatiya Sakshya Adhiniyam; admissibility alone does not prove truth.",
-    ],
-    statutoryProvisions: [
-      { id: "media-law-unit-4-copyright-works", title: "Protected works", provision: "Sections 13–14, Copyright Act, 1957", description: "Identifies protected categories and the exclusive-right bundle applicable to each category of work." },
-      { id: "media-law-unit-4-ownership", title: "First ownership", provision: "Section 17, Copyright Act, 1957", description: "States the general first-owner rule and statutory exceptions relevant to employment, commissions and newspaper publication." },
-      { id: "media-law-unit-4-assignment", title: "Assignment and licensing", provision: "Sections 18–19 and 30, Copyright Act, 1957", description: "Governs written assignment and licensing of specified rights, works, duration, territory and consideration." },
-      { id: "media-law-unit-4-broadcast", title: "Broadcast reproduction right", provision: "Section 37, Copyright Act, 1957", description: "Creates a distinct neighbouring right in broadcasts, generally lasting twenty-five years from the relevant following calendar year." },
-      { id: "media-law-unit-4-performer", title: "Performers' economic and moral rights", provision: "Sections 38, 38A and 38B, Copyright Act, 1957", description: "Protects fixation and exploitation of performances, royalties where applicable, attribution and integrity." },
-      { id: "media-law-unit-4-neighbouring-exceptions", title: "Exceptions to neighbouring rights", provision: "Sections 39 and 39A, Copyright Act, 1957", description: "Specifies permitted acts and applies identified copyright provisions to broadcast and performers' rights." },
-      { id: "media-law-unit-4-fair-dealing", title: "Acts not constituting infringement", provision: "Section 52, Copyright Act, 1957", description: "Includes specified fair-dealing, current-events, judicial and other exceptions subject to their exact conditions." },
-      { id: "media-law-unit-4-remedies", title: "Infringement and remedies", provision: "Sections 51, 55 and 63, Copyright Act, 1957", description: "Defines infringement and provides civil and criminal consequences under distinct requirements." },
-      { id: "media-law-unit-4-technology", title: "Digital protection measures", provision: "Sections 65A–65B, Copyright Act, 1957", description: "Addresses circumvention of technological measures and alteration or removal of rights-management information." },
-      { id: "media-law-unit-4-film-piracy", title: "Unauthorised film recording and exhibition", provision: "Sections 6AA, 6AB and 7, Cinematograph Act, 1952", description: "Creates cinema-specific anti-piracy prohibitions and consequences alongside copyright law." },
-      { id: "media-law-unit-4-security", title: "National-security restrictions", provision: "Article 19(2); Official Secrets Act, 1923; BNS section 152", description: "Requires each restriction to be analysed under its precise constitutional ground and statutory ingredients." },
-      { id: "media-law-unit-4-fair-trial", title: "Contempt and fair trial", provision: "Articles 19(1)(a) and 21; Contempt of Courts Act, 1971", description: "Balances open reporting with presumption of innocence and protection of the administration of justice." },
-      { id: "media-law-unit-4-electronic-evidence", title: "Proof of electronic records", provision: "Sections 61–63, Bharatiya Sakshya Adhiniyam, 2023", description: "Governs the legal effect, admissibility and certificate-based proof of electronic or digital records." },
-    ],
-    importantCases: [
-      { id: "media-law-unit-4-rg-anand", caseName: "R.G. Anand v. Deluxe Films", citation: "(1978) 4 SCC 118", principle: "Copyright protects expression rather than ideas; infringement requires substantial copying of protected expression.", summary: "The Court formulated the idea-expression distinction and the overall-impression approach to substantial similarity." },
-      { id: "media-law-unit-4-iprs", caseName: "Indian Performing Right Society Ltd. v. Eastern India Motion Pictures Association", citation: "(1977) 2 SCC 820", principle: "Film exploitation may involve distinct rights in incorporated underlying works, subject to statutory ownership and contracts.", summary: "The decision is foundational but must be read with the Copyright (Amendment) Act, 2012 and current royalty protections." },
-      { id: "media-law-unit-4-ebc", caseName: "Eastern Book Company v. D.B. Modak", citation: "(2008) 1 SCC 1", principle: "Originality requires skill and judgment with a minimum degree of creativity, not merely mechanical labour.", summary: "The Court applied the originality standard to edited judicial decisions and distinguished public-domain judgments from original editorial inputs." },
-      { id: "media-law-unit-4-entertainment-network", caseName: "Entertainment Network (India) Ltd. v. Super Cassette Industries Ltd.", citation: "(2008) 13 SCC 30", principle: "Compulsory licensing affects proprietary rights and must follow the statutory conditions and a balanced, reasoned process.", summary: "The Court examined radio broadcasting licences and the relationship between public access, remuneration and copyright ownership." },
-      { id: "media-law-unit-4-myspace", caseName: "Super Cassettes Industries Ltd. v. MySpace Inc.", citation: "2016 SCC OnLine Del 6382", principle: "Online copyright liability must be reconciled with intermediary safe harbour and sufficiently specific knowledge requirements.", summary: "The Delhi High Court examined user uploads, notice, filtering and the limits of imposing general monitoring obligations." },
-      { id: "media-law-unit-4-wynk", caseName: "Tips Industries Ltd. v. Wynk Music Ltd.", citation: "2019 SCC OnLine Bom 13087", principle: "Section 31D statutory broadcasting licence does not automatically extend to every interactive on-demand internet service.", summary: "The Bombay High Court distinguished traditional broadcasting from user-controlled streaming downloads and on-demand access." },
-      { id: "media-law-unit-4-yashwant-sinha", caseName: "Yashwant Sinha v. Central Bureau of Investigation", citation: "(2020) 2 SCC 338", principle: "A secrecy allegation does not by itself exclude published documents from judicial consideration.", summary: "The Supreme Court rejected preliminary objections to considering documents published in connection with the Rafale review proceedings." },
-      { id: "media-law-unit-4-pucl", caseName: "People's Union for Civil Liberties v. Union of India", citation: "(1997) 1 SCC 301", principle: "Telephone interception invades privacy and requires lawful authority, necessity and procedural safeguards.", summary: "The Court laid down safeguards against arbitrary tapping, principles later reinforced by constitutional privacy doctrine." },
-      { id: "media-law-unit-4-manu-sharma", caseName: "Manu Sharma v. State (NCT of Delhi)", citation: "(2010) 6 SCC 1", principle: "Media reporting must not become a parallel adjudication that prejudices criminal proceedings.", summary: "The Court discussed the dangers of trial by media while deciding the Jessica Lal murder appeal on the evidentiary record." },
-      { id: "media-law-unit-4-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "Temporary postponement may exceptionally protect fair trial where a real and substantial prejudice risk cannot be avoided otherwise.", summary: "The Court framed a necessity- and proportionality-based remedy balancing Articles 19(1)(a) and 21." },
-      { id: "media-law-unit-4-rk-anand", caseName: "R.K. Anand v. Registrar, Delhi High Court", citation: "(2009) 8 SCC 106", principle: "A properly scrutinised sting may expose interference with justice, but authenticity, fairness and professional conduct remain essential.", summary: "The Court examined a television sting concerning efforts to influence a witness in the BMW trial and assessed the full recorded material." },
-      { id: "media-law-unit-4-raja-ram-pal", caseName: "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha", citation: "(2007) 3 SCC 184", principle: "Sting material may prompt legislative action, while privilege decisions remain subject to limited constitutional review.", summary: "The cash-for-query recordings formed part of the background to parliamentary expulsions reviewed by the Constitution Bench." },
-      { id: "media-law-unit-4-aniruddha-bahal", caseName: "Aniruddha Bahal v. State", citation: "2010 SCC OnLine Del 2337", principle: "Public-interest investigative conduct should not be mechanically criminalised where the journalist exposes rather than shares the unlawful purpose.", summary: "The Delhi High Court quashed proceedings against journalists whose covert operation exposed willingness to facilitate money laundering." },
-    ],
-    examFocus:
-      "Prepare Copyright Act sections 13, 14, 17, 18, 19, 30, 31D, 37, 38, 38A, 38B, 39, 39A, 51, 52, 55, 57, 63, 65A and 65B; categories of works, idea-expression, originality, ownership, assignment and licences; fair dealing for criticism, review and current-events reporting; the distinction among underlying copyright, broadcast reproduction right and performers' rights; civil, criminal and technological remedies; Cinematograph Act sections 6AA, 6AB and 7; national-security limits and surveillance; trial by media and postponement orders; sting-operation necessity, privacy, entrapment and editing; BSA sections 61–63 and chain of custody; and the principles in R.G. Anand, IPRS, Eastern Book Company, Entertainment Network, MySpace, Tips v. Wynk, Yashwant Sinha, PUCL, Manu Sharma, Sahara India, R.K. Anand, Raja Ram Pal and Aniruddha Bahal.",
-    revisionNotes: `
-Copyright method: identify the work, author, first owner, term and exact restricted act; check written assignment or licence; then apply section 52 or another exception. Facts and ideas are free, but original expression is protected. Registration is generally evidentiary, not constitutive.
-
-Separate layers: underlying works retain copyright; section 37 protects the broadcast signal for twenty-five years; sections 38–38B protect performers for fifty years and preserve moral interests. Permission at one layer does not automatically clear the others.
-
-Exceptions and remedies: current-events reporting must be fair in purpose, amount and market effect. Sections 51 and 55 govern infringement and civil relief; criminal liability needs its statutory mental element; sections 65A–65B address technological measures and rights information; film anti-piracy provisions operate additionally.
-
-Public law: national-security claims require precise authority, proof and proportionality. Fair-trial rights prohibit parallel conviction by publicity, not accurate court reporting. Postponement is exceptional and temporary.
-
-Stings: ask whether serious public wrongdoing was reasonably suspected, covert means were necessary, inducement was proportionate, editing was fair and collateral privacy was minimised. Preserve the original recording, metadata and chain of custody and prove electronic material under BSA sections 61–63.
-    `.trim(),
-  },
-  {
-    title: "Self-Regulation, Ethics and Contemporary Issues",
-    shortDescription:
-      "Media ethics, self-regulation and legal regulation, human rights and foreign investment in print media.",
-    overview:
-      "This unit examines how ethical standards, industry bodies and statutory regulation interact. It studies accuracy, fairness, independence, conflicts of interest, correction and accountability; media's relationship with human rights; and the policy and legal questions surrounding foreign investment in Indian print media.",
-    objectives: [
-      "Explain the foundations of responsible media ethics.",
-      "Compare self-regulation, co-regulation and statutory regulation.",
-      "Apply human-rights principles to reporting and editorial decisions.",
-      "Assess accountability mechanisms for news and entertainment media.",
-      "Explain the policy framework governing foreign investment in print media.",
-      "Apply accuracy, privacy, fairness and conflict-of-interest standards to a newsroom problem.",
-      "Distinguish the jurisdictions of print, television and digital-news accountability bodies.",
-      "Evaluate ownership concentration, paid news and editorial independence.",
-    ],
-    topics: [
-      "Accuracy, fairness, independence and conflicts of interest",
-      "Privacy, dignity, vulnerable persons and reporting trauma",
-      "Self-regulatory and statutory accountability models",
-      "Media, democracy and human rights",
-      "Foreign direct investment in news and non-news print media",
-      "Corrections, complaints and public accountability",
-    ],
-    provisions: [
-      "Press Council Act, 1978 and Norms of Journalistic Conduct",
-      "News Broadcasters and Digital Association self-regulatory framework",
-      "Cable Television Networks Programme Code",
-      "Consolidated FDI Policy and applicable government approvals",
-    ],
-    detailedContent: `
-1. Meaning and purpose of media ethics
-
-Media ethics consists of professional principles governing how information is gathered, verified, selected, presented, corrected and archived. Law fixes minimum enforceable duties, while ethics asks what responsible journalism should do even where no court order or penalty follows.
-
-The central values are truth-seeking, accuracy, fairness, independence, humanity, accountability and transparency. These values can conflict. Speed may conflict with verification; public interest with privacy; source confidentiality with accountability; and graphic truth with dignity. Ethical judgment requires reasons, not slogans.
-
-2. Law, ethics and professional standards
-
-An unlawful publication is usually unethical, but an unethical publication is not necessarily illegal. A misleading headline, undisclosed gift or refusal to correct may breach professional standards without independently constituting a crime or tort. Conversely, legal permission does not establish ethical justification.
-
-Regulation should identify its source. Constitutional and statutory law is enforceable by public institutions. A regulator's code may have legal force within a licensing or statutory scheme. An industry code binds through membership or contract. An internal editorial code is enforced by the organisation. Confusing these levels produces incorrect remedies.
-
-3. Accuracy, verification and correction
-
-Journalists should distinguish verified fact, allegation, opinion, analysis, satire and advertisement. Serious allegations require proportionate verification: examination of primary documents, corroboration, source evaluation, contextual checking and a meaningful opportunity for the affected person to respond.
-
-Accuracy concerns the overall impression, not only isolated sentences. Headlines, photographs, captions, editing and omission can render a report misleading. Urgency may affect what verification is reasonable, but it does not justify inventing certainty.
-
-A prompt, prominent and specific correction reduces continuing harm and demonstrates accountability. Quietly editing a digital article without explaining a material correction may preserve the misleading impression and weaken public trust.
-
-4. Fairness, balance and right of reply
-
-Fairness requires honest presentation of material facts and affected perspectives. It does not always require equal time for demonstrably unequal claims. Balance is not mathematical symmetry; it is editorial treatment proportionate to evidence and relevance.
-
-When alleging misconduct, the newsroom should ordinarily seek a response with sufficient particulars and time. If urgency requires publication before reply, the report should state that a response was sought and update the story fairly when received. A right of reply is not a right to dictate the article or suppress documented criticism.
-
-5. Independence and conflicts of interest
-
-Editorial judgment should not be secretly controlled by owners, advertisers, governments, political parties, sources or personal benefit. Gifts, paid travel, outside employment, family interests, investments and political activity may create actual or apparent conflicts requiring refusal, disclosure or reassignment.
-
-Separation of advertising and editorial content is essential. Sponsored material, native advertising, affiliate content and influencer promotion should be clearly identified. Commercial arrangements should not determine favourable news coverage or the suppression of legitimate criticism.
-
-6. Paid news and disguised advertising
-
-Paid news presents promotional or political material as independent journalism in exchange for money or another benefit. It deceives the audience about the source and motivation of the communication, distorts electoral equality and compromises editorial independence.
-
-Paid news may engage the Press Council's norms, election expenditure law, consumer protection, advertising standards, company disclosure and taxation rules depending on the facts. Proof should identify the consideration, editorial presentation, coordination and person responsible; mere favourable coverage is not by itself proof of payment.
-
-7. Sources, confidentiality and anonymous attribution
-
-Confidential sources can expose corruption and abuse where named disclosure is unsafe. Before granting anonymity, the journalist should assess the source's access, motive, reliability, corroboration and risk. Editors should ordinarily know the source even where the public does not.
-
-Anonymity should not become a channel for unverified personal attack. The report should give readers as much information about the source's basis of knowledge as safety permits. Source confidentiality is a serious ethical commitment, but Indian law does not create a universal privilege against every lawful court or investigative demand.
-
-Section 15(2) of the Press Council Act specifically prevents the Council from compelling disclosure of a news source in its inquiry. That protection must not be generalised beyond the statutory context.
-
-8. Privacy, dignity and minimisation of harm
-
-Privacy is a fundamental right under Articles 14, 19 and 21. Ethical reporting asks whether private information is necessary to a genuine public-interest story and whether the same purpose can be achieved with less intrusion. Public curiosity, celebrity and virality are not substitutes for public interest.
-
-Particular care is required for children, sexual-offence survivors, patients, grieving families, persons with disabilities and communities exposed to retaliation. Identity, address, images and metadata can cause harm even when the name is omitted. Consent should be informed and cannot always cure exploitation or statutory prohibition.
-
-R. Rajagopal v. State of Tamil Nadu and Justice K.S. Puttaswamy v. Union of India provide the constitutional foundation for balancing publication with private life, dignity, autonomy and informational privacy.
-
-9. Reporting children, sexual violence and vulnerable persons
-
-The Juvenile Justice Act, POCSO Act and criminal-procedure laws restrict disclosure that identifies children and victims in specified cases. Identification may occur through family details, school, neighbourhood, image, voice or contextual clues, not only by printing a name.
-
-Nipun Saxena v. Union of India reinforced protection of the identity and dignity of sexual-offence survivors. Ethical practice also avoids victim blaming, gratuitous detail, repeated traumatic imagery and interviews obtained through pressure.
-
-10. Communal, caste and conflict-sensitive reporting
-
-Reports concerning religion, caste, ethnicity, migration or conflict can intensify real-world harm. Verification of identity and causation is essential. Headlines should not attribute an individual's conduct to an entire community without genuine relevance.
-
-Journalists should avoid rumours, dehumanising description, unverified casualty figures and images stripped of time or place. Where identity is relevant to exposing discrimination or organised violence, it should be reported accurately and contextually rather than suppressed automatically.
+Covert recording may affect privacy, trespass, confidentiality, data protection, criminal law and broadcasting or journalistic codes. The location and expectation of privacy matter. Recording intimate…6183 tokens truncated…oid rumours, dehumanising description, unverified casualty figures and images stripped of time or place. Where identity is relevant to exposing discrimination or organised violence, it should be reported accurately and contextually rather than suppressed automatically.
 
 In Amish Devgan v. Union of India, the Supreme Court discussed hate speech, dignity, fraternity and the contextual assessment of expression. The case illustrates why reach, speaker, audience, repetition and likely harm matter.
 
@@ -1781,11 +1608,14 @@ Exam warning: never revive section 66A, assume every intermediary is a publisher
     overview:
       "This unit examines commercial communication and the legal responsibilities of advertisers, agencies, publishers, broadcasters, endorsers and platforms. It covers advertising ethics, misleading claims, surrogate and prohibited advertising, indecent representation, drugs and magic remedies, and consumer-protection enforcement.",
     objectives: [
-      "Define advertising and explain its commercial and social functions.",
-      "Apply ethical standards to claims, endorsements and vulnerable audiences.",
-      "Explain prohibitions concerning indecent representation and objectionable advertisements.",
-      "Analyse restrictions on drugs and magic-remedy claims.",
-      "Apply consumer-protection law to misleading advertisements and endorsers.",
+      "Define advertising and distinguish commercial speech from editorial and non-commercial communication.",
+      "Apply constitutional protection and reasonable restrictions to commercial advertising.",
+      "Identify misleading, bait, surrogate, comparative and disguised advertisements.",
+      "Apply substantiation, disclosure and due-diligence requirements to advertisers and endorsers.",
+      "Explain the protection of children and other vulnerable audiences.",
+      "Analyse indecent representation and restrictions on drug and magic-remedy advertisements.",
+      "Apply consumer-protection, broadcasting and sector-specific rules to digital advertising.",
+      "Distinguish CCPA enforcement from ASCI self-regulation and private consumer remedies.",
     ],
     topics: [
       "Concept, forms and functions of advertising",
@@ -1802,6 +1632,231 @@ Exam warning: never revive section 66A, assume every intermediary is a publisher
       "Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954",
       "Cable Television Networks Advertising Code",
     ],
+    detailedContent: `
+Unit 8: Media, Advertising and Law
+
+1. Meaning, elements and functions of advertising
+
+Advertising is a paid or otherwise sponsored communication intended to promote goods, services, ideas, persons, institutions or conduct. It may inform consumers, differentiate products, build brands, stimulate demand or influence social behaviour. Modern advertisements appear in print, television, cinema, outdoor media, search results, social networks, games, apps, podcasts and influencer content.
+
+The legal character of a communication depends on substance rather than label. Advertorials, affiliate links, product placement, paid reviews and gifted influencer posts can be advertisements where a material connection affects the communication.
+
+The principal actors are the manufacturer or service provider, advertiser, advertising agency, publisher or broadcaster, platform, endorser and consumer. Responsibility depends on each actor's statutory role, knowledge, control, representation and due diligence.
+
+2. Advertising as commercial speech
+
+Article 19(1)(a) protects the dissemination and receipt of commercial information. In Tata Press Ltd. v. MTNL, the Supreme Court recognised truthful commercial advertising as part of freedom of speech because it supplies information needed for economic choice.
+
+Protection is not absolute. Misleading, fraudulent, unlawful or harmful advertisements may be regulated through valid law. Article 19(2), consumer welfare, public health and restrictions on trade under Article 19(6) must be applied through the correct constitutional route.
+
+Hamdard Dawakhana distinguished advertising closely connected with prohibited commercial activity and misleading drug claims from protected public discussion. Modern analysis should read it together with Tata Press rather than state that all advertisements either lack protection or enjoy the same protection as political speech.
+
+3. Ethics and the advertising ecosystem
+
+Ethical advertising is truthful, honest, decent, fair in competition and mindful of social harm. A claim should reflect the overall impression created by words, images, sound, demonstrations, qualifications and omissions—not merely be literally defensible in one sentence.
+
+The Advertising Standards Council of India administers a voluntary self-regulatory Code. It addresses truthful representations, non-offensiveness, harmful products, safety and fair competition. ASCI can examine complaints and seek modification or withdrawal within its system, but it is not a court and does not exercise all CCPA powers.
+
+Ethical compliance complements statute. An advertisement may breach the ASCI Code without creating a criminal offence, while compliance with an industry code does not cure violation of consumer, drug, broadcasting or criminal law.
+
+4. Consumer rights and misleading advertisements
+
+The Consumer Protection Act, 2019 recognises rights to safety, information, choice, hearing, redressal and consumer awareness. A misleading advertisement includes one that falsely describes a product or service, gives a false guarantee, is likely to mislead about nature, substance, quantity or quality, conveys a representation amounting to an unfair trade practice, or deliberately conceals important information.
+
+Misleading effect is assessed from the perspective of the intended audience and the advertisement as a whole. Fine-print disclaimers cannot ordinarily correct a dominant false impression, and material qualifications must be clear, prominent and proximate to the claim.
+
+Proof of individual purchase is not necessary for the CCPA to investigate an advertisement prejudicial to consumers as a class. An affected consumer may separately pursue the appropriate consumer-commission remedy for loss or injury.
+
+5. Central Consumer Protection Authority
+
+Sections 10 and following of the 2019 Act establish the CCPA to protect, promote and enforce consumer rights as a class and address unfair trade practices and false or misleading advertisements.
+
+Under section 21, the CCPA may direct discontinuance or modification of a false or misleading advertisement and impose penalties on manufacturers or endorsers. The statutory ceiling is ₹10 lakh for a first contravention and ₹50 lakh for a subsequent contravention. It may prohibit an endorser from endorsements for up to one year, extending to three years for a subsequent contravention.
+
+Publishers may also face statutory consequences subject to the Act's conditions and defences. Orders require jurisdiction, notice, reasons and fair procedure and are subject to the appellate framework.
+
+6. The 2022 misleading-advertisement Guidelines
+
+The CCPA's Guidelines for Prevention of Misleading Advertisements and Endorsements for Misleading Advertisements, 2022 apply across forms, formats and media. They specify conditions for valid advertisements and regulate bait advertisements, free claims, children's advertisements, surrogate advertisements and endorsements.
+
+A valid advertisement must contain truthful and honest representations, not mislead by implication or omission, and avoid exaggeration likely to mislead. Claims that can be objectively verified require adequate substantiation before publication.
+
+Qualifications should not contradict the headline claim. Technical data must be relevant and fairly presented. A demonstration should reflect ordinary use unless the exceptional conditions are prominently disclosed.
+
+7. Bait advertising and free claims
+
+A bait advertisement promotes goods or services at an attractive price to draw consumers. It must reflect a genuine intention and reasonable prospect of supplying the advertised product in reasonable quantities and for a reasonable period, having regard to the market and nature of the advertisement.
+
+Material limitations on availability, geography, stock, eligibility and duration should be stated clearly. Deliberately attracting consumers with unavailable goods and diverting them to a more expensive product may be misleading and an unfair trade practice.
+
+The word free cannot disguise mandatory charges or recovery of the supposed gift's cost through inflated pricing. Ordinary unavoidable delivery charges may be distinguished, but the overall representation must remain honest.
+
+8. Surrogate advertising and prohibited products
+
+Surrogate advertising indirectly promotes goods or services whose advertising is prohibited or restricted by using a similar brand, logo, colour, layout or presentation for another product. The inquiry examines whether the extension is genuine or a device to keep the restricted brand visible.
+
+The 2022 Guidelines prohibit surrogate or indirect advertising while allowing genuine brand extensions that satisfy the applicable conditions. Evidence may include production, distribution, sales, market presence, investment and whether the advertisement primarily depicts the lawful extension.
+
+Alcohol, tobacco and other restricted categories also engage sector-specific laws and the Cable Advertising Code. A disclaimer alone does not transform a sham extension into a lawful advertisement.
+
+9. Endorsements and due diligence
+
+An endorsement communicates the endorser's opinion, finding, experience or association. Celebrities, experts and influencers can materially affect consumer trust and must not make representations beyond their actual experience or adequate information.
+
+The 2022 Guidelines require genuine, reasonably current opinion and due diligence to verify claims. Section 21 provides an endorser defence where due diligence was exercised. The level of verification should reflect the endorser's expertise, seriousness of the claim and risk to consumers.
+
+Experts must possess relevant qualifications. Endorsers should review substantiation, use the product where personal experience is claimed, disclose material connections and avoid guarantees of results that cannot ordinarily be achieved.
+
+10. Influencer and digital-advertising disclosures
+
+Payment, gifts, free travel, discounts, affiliate commission, employment or another material connection can turn social content into advertising. The promotional nature must be disclosed clearly and prominently in language the audience understands.
+
+The Department of Consumer Affairs' Endorsement Know-hows for Celebrities, Influencers and Virtual Influencers and the ASCI influencer guidelines support labels such as advertisement, ad, sponsored, collaboration or partnership where appropriate. A disclosure hidden among hashtags, after a more button or only on a profile page may be ineffective.
+
+Virtual influencers and AI-generated presenters do not remove advertiser responsibility. Platforms and agencies should preserve instructions, approvals, substantiation and disclosure records.
+
+11. Health and wellness advertising
+
+Health claims carry enhanced risk because consumers may delay treatment or spend money based on promised outcomes. Qualifications and certifications of health and wellness influencers must be disclosed when they present themselves as experts, and claims should remain within competence and reliable evidence.
+
+The 2023 additional influencer guidance distinguishes general wellness experiences from specific health advice. Personal testimony is not clinical proof. Advertisements should not guarantee cures, exploit fear, encourage unsafe self-medication or disparage necessary medical care.
+
+The Consumer Protection Act operates alongside the Drugs and Cosmetics framework, food-safety law, the Drugs and Magic Remedies Act and professional standards.
+
+12. Advertisements directed at children
+
+Children may lack the experience to recognise exaggeration, embedded persuasion and influencer marketing. The 2022 Guidelines prohibit advertisements that exploit credulity, encourage dangerous imitation, create inferiority for not possessing a product, undermine parental authority or make inappropriate health and achievement claims.
+
+Children should not be urged to purchase where they cannot lawfully contract, pressure adults or enter unsafe situations. Disclosures must be understandable to the intended age group.
+
+Advertising of products restricted for children and use of children's data may engage additional food, education, gaming, privacy and platform rules. The child audience and placement context are as important as the wording.
+
+13. Coaching and educational advertisements
+
+The CCPA's Guidelines for Prevention of Misleading Advertisements in the Coaching Sector, 2024 address concealment and exaggeration concerning course details, faculty, recognition, success rates, ranks, job security and guaranteed selection.
+
+An institute using a successful candidate's name or image must accurately disclose the course taken, duration and whether it was paid or free. It must not imply that a test series or interview programme constituted full classroom coaching.
+
+Claims such as 100 per cent selection, guaranteed job or number one require robust, transparent evidence. Important terms, refund conditions, accreditation status and realistic outcomes must not be hidden.
+
+14. Environmental claims and greenwashing
+
+Terms such as green, eco-friendly, sustainable, carbon-neutral and biodegradable can influence purchasing but may be vague or selectively framed. The CCPA's 2024 Greenwashing Guidelines require truthful, clear, specific and adequately substantiated environmental claims.
+
+Advertisers should identify whether a claim concerns the whole product, one component, packaging, manufacturing or a limited life-cycle stage. Certifications and comparative environmental advantages must be verifiable and relevant.
+
+Future targets should disclose the plan, basis and measurable steps. An attractive natural image cannot cure a materially misleading environmental representation.
+
+15. Comparative advertising, puffery and disparagement
+
+Comparative advertising identifies or implies a competitor and compares price, performance or another feature. Honest comparison can improve consumer information, but the basis must be like-for-like, current, material and substantiated.
+
+Puffery consists of obvious subjective boasting that reasonable consumers would not treat as a measurable fact. A specific assertion—such as twice as effective or lowest price—is ordinarily capable of proof and cannot be defended merely as sales talk.
+
+An advertiser may highlight genuine advantages but should not make false statements or unfairly denigrate a competitor's goods. Trade-mark use, passing off, copyright, malicious falsehood and unfair competition may overlap with consumer law.
+
+16. Indecent representation of women
+
+The Indecent Representation of Women (Prohibition) Act, 1986 prohibits indecent representation of women through advertisements and specified publications, writings, paintings, figures and other forms covered by its text, subject to statutory exceptions.
+
+Indecent representation is defined around depiction of a woman's figure, form or body in a manner having the effect of being indecent, derogatory or denigrating or likely to deprave, corrupt or injure public morality. Application must remain sensitive to constitutional expression, equality and dignity rather than moral dislike alone.
+
+Proposals to expand or replace the statute should not be treated as enacted law unless Parliament has passed and commenced them. Other laws may address obscenity, sexual harassment, voyeurism, children and platform content.
+
+17. Drugs and Magic Remedies Act
+
+The Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954 controls advertisements of drugs for specified purposes, prohibits misleading drug advertisements and restricts advertisements of magic remedies for treatment of scheduled diseases and conditions.
+
+Sections 3 and 4 respectively address prohibited categories and false or misleading drug claims; section 5 concerns magic remedies. The Schedule and applicable rules must be checked. The term advertisement is broad and includes notices, labels, wrappers and oral or other announcements within the Act.
+
+The Act must be read with drug and AYUSH regulation and consumer law. Traditional origin, celebrity endorsement or publication of a testimonial does not excuse an unlawful cure claim.
+
+18. Broadcasting and sector-specific advertising codes
+
+Section 6 of the Cable Television Networks (Regulation) Act, 1995 prohibits transmission of advertisements that do not conform to the prescribed Advertising Code. Rule 7 restricts misleading, offensive and harmful advertising and specified product categories and requires compliance with applicable laws.
+
+Television advertising may also engage channel permission conditions, advisories and sector regulators. Food, insurance, securities, financial products, real estate, gaming, tobacco and alcohol each have additional rules or restrictions administered by their competent authorities.
+
+The same campaign may therefore require layered compliance. Approval under one industry code is not a licence to violate another statute.
+
+19. Remedies and enforcement map
+
+A consumer can preserve the advertisement, invoice, terms, screenshots and evidence of reliance or loss; complain to the seller or platform; approach the appropriate consumer commission; or report class-wide misleading advertising to the CCPA.
+
+ASCI provides a self-regulatory complaint route. Cable advertisements may be raised through the broadcasting grievance and governmental structure. Drug, food, securities, insurance or other regulated claims should also be reported to the competent sector authority.
+
+Possible remedies include correction or withdrawal, refund, replacement, compensation, discontinuance of unfair practice, corrective advertisement, statutory penalty, endorser prohibition, injunction and, where statutory ingredients exist, criminal prosecution. Forum and relief must match the law invoked.
+
+20. Applied problem and examination method
+
+Assume an influencer receives payment to advertise a herbal product as a guaranteed cure for diabetes but gives no disclosure. The video uses a doctor title without qualification, claims clinically proven without evidence, targets children, compares the product with insulin, and links to a limited-stock free trial that imposes hidden subscription charges. A television version uses the same brand identity as a prohibited liquor product.
+
+Apply the Consumer Protection Act, section 21, the 2022 Guidelines, influencer and health guidance, the Drugs and Magic Remedies Act, children's-advertising safeguards, comparative-advertising principles, bait and free-claim rules, surrogate-advertising rules and the Cable Advertising Code. Assess advertiser, endorser, publisher, platform and sectoral responsibility separately.
+
+For an examination answer, define advertisement and commercial speech; identify the claim and intended audience; distinguish fact from puffery; test truth, substantiation, disclosure and material omission; identify special categories and sectoral prohibitions; map CCPA, consumer commission, ASCI and regulatory remedies; then apply leading cases. Do not describe ASCI as a criminal court or assume that fine print cures a deceptive overall impression.
+    `.trim(),
+    keyPoints: [
+      "Truthful commercial information is protected speech, but misleading and unlawful advertising may be regulated.",
+      "An advertisement is assessed by its overall impression, including images, omissions and qualifications.",
+      "The Consumer Protection Act protects consumers individually and as a class against misleading advertisements.",
+      "The CCPA may order discontinuance or modification and impose statutory penalties under section 21.",
+      "The 2022 Guidelines govern valid, bait, free-claim, surrogate, children's and endorsement advertising across media.",
+      "Objective claims require adequate substantiation before publication; contradictory fine print is insufficient.",
+      "An endorser's opinion must be genuine, reasonably current and supported by appropriate due diligence.",
+      "Influencers must clearly disclose payment, gifts, affiliate benefits and other material connections.",
+      "Health claims, child-directed advertisements and educational outcome claims receive heightened scrutiny.",
+      "The 2024 coaching guidelines require accurate disclosure of a successful candidate's actual course and duration.",
+      "Environmental claims must identify their scope and possess reliable substantiation under the 2024 Greenwashing Guidelines.",
+      "Genuine comparative advertising is permitted, but false measurable claims and unfair disparagement are not.",
+      "The 1986 indecent-representation statute remains operative; proposed amendments are not current law unless enacted.",
+      "Drug and magic-remedy claims are governed by a special statute alongside consumer and sectoral law.",
+      "ASCI self-regulation, CCPA enforcement, consumer adjudication and sectoral regulation are distinct remedies.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-8-constitution", title: "Commercial speech", provision: "Articles 19(1)(a), 19(2) and 19(6), Constitution of India", description: "Protects truthful commercial information while permitting valid and proportionate regulation of misleading or harmful trade communication." },
+      { id: "media-law-unit-8-consumer-rights", title: "Consumer rights and definitions", provision: "Sections 2(9), 2(28) and 2(47), Consumer Protection Act, 2019", description: "Defines consumer rights, misleading advertisements and unfair trade practices forming the foundation of advertising control." },
+      { id: "media-law-unit-8-ccpa", title: "CCPA powers", provision: "Sections 10, 18–21, Consumer Protection Act, 2019", description: "Authorises investigation, discontinuance or modification, penalties and endorser prohibitions for misleading advertisements." },
+      { id: "media-law-unit-8-consumer-remedy", title: "Consumer remedies", provision: "Sections 34–39, 47–49 and 58–59, Consumer Protection Act, 2019", description: "Provides jurisdiction and remedial powers of consumer commissions, including discontinuance, compensation and corrective advertisement." },
+      { id: "media-law-unit-8-2022-guidelines", title: "General advertising standards", provision: "CCPA Misleading Advertisements and Endorsements Guidelines, 2022", description: "Regulates valid advertisements, bait offers, free claims, children, surrogate advertising and endorser due diligence." },
+      { id: "media-law-unit-8-influencers", title: "Influencer disclosure", provision: "Endorsement Know-hows, 2023 and applicable ASCI Influencer Guidelines", description: "Requires clear disclosure of material connections and responsible presentation by celebrities, influencers and virtual influencers." },
+      { id: "media-law-unit-8-coaching", title: "Coaching-sector claims", provision: "CCPA Guidelines for Prevention of Misleading Advertisements in Coaching Sector, 2024", description: "Requires truthful disclosure of courses, successful candidates, results, facilities and recognition and prohibits guaranteed outcomes." },
+      { id: "media-law-unit-8-greenwashing", title: "Environmental claims", provision: "CCPA Guidelines for Prevention and Regulation of Greenwashing, 2024", description: "Requires clear scope, accessible qualification and adequate substantiation for environmental and sustainability claims." },
+      { id: "media-law-unit-8-indecent", title: "Indecent representation", provision: "Sections 2(c), 3–4 and 6, Indecent Representation of Women (Prohibition) Act, 1986", description: "Defines and prohibits specified indecent representation in advertisements and publications and provides statutory consequences." },
+      { id: "media-law-unit-8-drugs", title: "Drug and magic-remedy advertisements", provision: "Sections 3–5, Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954", description: "Restricts specified drug advertisements, misleading claims and advertisements of magic remedies for covered conditions." },
+      { id: "media-law-unit-8-drug-rules", title: "Drug-advertisement procedure", provision: "Drugs and Magic Remedies (Objectionable Advertisements) Rules, 1955", description: "Supplements the Act with the prescribed regulatory and enforcement framework." },
+      { id: "media-law-unit-8-cable", title: "Television Advertising Code", provision: "Section 6, Cable Television Networks Act, 1995 and Rule 7 of the 1994 Rules", description: "Requires cable advertisements to comply with prescribed content, product, decency and consumer-protection standards." },
+      { id: "media-law-unit-8-asci", title: "Advertising self-regulation", provision: "ASCI Code for Self-Regulation in Advertising", description: "Provides voluntary industry standards on truthful claims, harmful content, safety and fair competition; it does not replace statute." },
+      { id: "media-law-unit-8-food", title: "Food advertising", provision: "Food Safety and Standards Act, 2006 and Advertising and Claims Regulations, 2018", description: "Regulates false or misleading food representations, nutrition and health claims and responsibility of food businesses." },
+      { id: "media-law-unit-8-trademarks", title: "Comparative advertising and marks", provision: "Sections 29(8) and 30(1), Trade Marks Act, 1999", description: "Balances truthful comparative use with protection against unfair advantage, detriment and denigration of registered marks." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-8-tata-press", caseName: "Tata Press Ltd. v. Mahanagar Telephone Nigam Ltd.", citation: "(1995) 5 SCC 139", principle: "Truthful commercial advertising forms part of Article 19(1)(a) and supports consumers' right to receive information.", summary: "The Supreme Court recognised commercial speech while preserving regulation of deceptive, unfair and illegal advertisements." },
+      { id: "media-law-unit-8-hamdard", caseName: "Hamdard Dawakhana v. Union of India", citation: "AIR 1960 SC 554", principle: "Advertising connected with prohibited commercial activity and objectionable drug claims may be controlled in the public interest.", summary: "The Court considered constitutional challenges to the Drugs and Magic Remedies Act and distinguished such claims from protected idea-based expression." },
+      { id: "media-law-unit-8-common-cause", caseName: "Common Cause v. Union of India", citation: "(2015) 7 SCC 1", principle: "Government advertising must serve public purposes and cannot become partisan publicity or personality promotion funded by the public.", summary: "The Supreme Court framed neutrality, fairness, accountability and cost-related principles for governmental advertisements." },
+      { id: "media-law-unit-8-colgate", caseName: "Colgate Palmolive (India) Ltd. v. Hindustan Lever Ltd.", citation: "(1999) 7 SCC 1", principle: "Interim relief in comparative advertising requires careful assessment of deception, competitive injury, public interest and the balance of convenience.", summary: "The Supreme Court examined competing product claims and the standards governing interlocutory restraint." },
+      { id: "media-law-unit-8-dabur", caseName: "Dabur India Ltd. v. Colortek Meghalaya Pvt. Ltd.", citation: "2010 SCC OnLine Del 391", principle: "An advertiser may praise its goods and make honest comparison but cannot falsely denigrate a competitor's product.", summary: "The Delhi High Court explained the distinction among puffery, comparative claims and actionable disparagement." },
+      { id: "media-law-unit-8-havells", caseName: "Havells India Ltd. v. Amritanshu Khaitan", citation: "2015 SCC OnLine Del 8115", principle: "Comparative advertisements must compare like parameters and avoid a misleading overall representation.", summary: "The Delhi High Court assessed product comparison, substantiation and the line between permitted promotion and disparagement." },
+      { id: "media-law-unit-8-pepsi", caseName: "Pepsi Co. Inc. v. Hindustan Coca Cola Ltd.", citation: "2003 SCC OnLine Del 802", principle: "Humour and puffery are permissible, but the manner, storyline and message determine whether an advertisement disparages a rival product.", summary: "The Delhi High Court developed a contextual test for comparative advertising and denigration." },
+      { id: "media-law-unit-8-horlicks", caseName: "Horlicks Ltd. v. Heinz India Pvt. Ltd.", citation: "2018 SCC OnLine Del 12975", principle: "Scientific and nutritional comparisons require a fair foundation and cannot create a misleading impression through selective data.", summary: "The Delhi High Court scrutinised comparative health claims, supporting studies and presentation to consumers." },
+      { id: "media-law-unit-8-patanjali", caseName: "Indian Medical Association v. Union of India", citation: "Supreme Court proceedings in W.P.(C) No. 645 of 2022", principle: "Public-health advertisements and endorsements demand accountable substantiation, regulatory enforcement and compliance with court undertakings.", summary: "The Supreme Court proceedings concerning misleading medicinal claims emphasised consumer safety, advertiser responsibility and effective enforcement across media." },
+      { id: "media-law-unit-8-asci-metro", caseName: "Advertising Standards Council of India v. Metro Tyres Ltd.", citation: "2017 SCC OnLine Del 11789", principle: "Self-regulatory review and judicial trademark or disparagement remedies occupy different legal fields.", summary: "The Delhi High Court considered the relationship between ASCI proceedings and private litigation over comparative advertising." },
+      { id: "media-law-unit-8-sakal", caseName: "Sakal Papers (P) Ltd. v. Union of India", citation: "AIR 1962 SC 305", principle: "The State cannot indirectly abridge press freedom through regulation of pages, price and circulation.", summary: "The decision helps distinguish regulation of commercial advertisements from measures that burden the newspaper's protected circulation and editorial space." },
+    ],
+    examFocus:
+      "Prepare the definition, functions and forms of advertising; advertorials, influencers and material connections; commercial speech under Tata Press and Hamdard Dawakhana; consumer rights and misleading advertisement under sections 2(9), 2(28) and 2(47); CCPA powers and section 21 penalties; the 2022 Guidelines on valid advertisements, bait advertising, free claims, children, surrogate advertising and endorsements; disclosure and due diligence for celebrities, influencers and virtual influencers; 2023 health guidance; 2024 coaching and greenwashing guidelines; comparative advertising, puffery and disparagement; Indecent Representation of Women Act sections 2–4 and 6; Drugs and Magic Remedies Act sections 3–5; Cable Rule 7; ASCI's non-statutory role; sector-specific food and other codes; consumer and regulatory remedies; and the principles in Common Cause, Colgate Palmolive, Dabur, Havells, Pepsi, Horlicks, IMA v. Union of India, ASCI v. Metro Tyres and Sakal Papers.",
+    revisionNotes: `
+Commercial speech: truthful advertising is protected under Article 19(1)(a), but misleading, fraudulent, unlawful and harmful claims may be regulated. Read Tata Press with Hamdard Dawakhana.
+
+Consumer framework: define misleading advertisement and unfair trade practice; apply CCPA sections 18–21 and consumer-commission remedies. First/subsequent section 21 penalty ceilings are ₹10 lakh/₹50 lakh, with endorsement prohibition up to one/three years.
+
+2022 Guidelines: test overall impression, substantiation, material omission, qualifications, bait offers, free claims, children, surrogate advertising and endorser due diligence. Fine print cannot contradict the dominant message.
+
+Current special guidance: disclose influencer material connections; apply heightened care to health claims; disclose actual course and duration for coaching successes; define and substantiate environmental claims under the 2024 Greenwashing Guidelines.
+
+Special statutes: apply the 1986 indecent-representation law, Drugs and Magic Remedies Act and Rules, Cable Advertising Code, food and other sectoral regimes. Do not treat proposed legislation as current law.
+
+Remedies: distinguish CCPA class enforcement, consumer-commission adjudication, ASCI self-regulation, broadcasting complaints, sector regulators, civil injunction and criminal prosecution.
+    `.trim(),
   },
 ];
 
