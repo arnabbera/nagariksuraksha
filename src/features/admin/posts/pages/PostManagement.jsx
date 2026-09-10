@@ -22,6 +22,8 @@ import PostForm from "../components/PostForm";
 import { MATANGINI_HAZRA_POST_TEMPLATE } from "../data/matanginiHazraPost";
 import { NEGLIGENT_HOME_LOAN_SANCTIONS_POST_TEMPLATE } from "../data/negligentHomeLoanSanctionsPost";
 
+import { MASTERDA_SURYA_SEN_POST } from "../../../public/posts/data/masterdaSuryaSenPost";
+
 import {
   useAuth,
 } from "../../../../hooks/useAuth";
@@ -294,6 +296,17 @@ export default function PostManagement() {
 
       setEditingPost({
         ...MATANGINI_HAZRA_POST_TEMPLATE,
+      });
+
+      scrollToForm();
+    };
+
+  const handleSuryaSenPost =
+    () => {
+      clearMessages();
+
+      setEditingPost({
+        ...MASTERDA_SURYA_SEN_POST,
       });
 
       scrollToForm();
@@ -618,6 +631,17 @@ export default function PostManagement() {
               }
             >
               Matangini Hazra Post
+            </Button>
+
+            <Button
+              leftIcon={
+                <FaFlag />
+              }
+              onClick={
+                handleSuryaSenPost
+              }
+            >
+              Surya Sen Post
             </Button>
 
             <Button
