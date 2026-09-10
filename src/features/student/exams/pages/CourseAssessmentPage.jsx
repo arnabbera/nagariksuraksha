@@ -35,6 +35,11 @@ import {
   humanRightsLawAndPracticeMockTests,
 } from "../../../../data/exams/humanRightsLawAndPractice/assessments";
 import {
+  MEDIA_LAW_COURSE_SLUG,
+  mediaLawFinalExam,
+  mediaLawMockTests,
+} from "../../../../data/exams/mediaLaw/assessments";
+import {
   PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG,
   publicInternationalLawFinalExam,
   publicInternationalLawMockTests,
@@ -84,6 +89,10 @@ const assessmentRegistry = {
   [HUMAN_RIGHTS_LAW_AND_PRACTICE_COURSE_SLUG]: {
     final: humanRightsLawAndPracticeFinalExam,
     mocks: humanRightsLawAndPracticeMockTests,
+  },
+  [MEDIA_LAW_COURSE_SLUG]: {
+    final: mediaLawFinalExam,
+    mocks: mediaLawMockTests,
   },
   [PUBLIC_INTERNATIONAL_LAW_COURSE_SLUG]: {
     final: publicInternationalLawFinalExam,
