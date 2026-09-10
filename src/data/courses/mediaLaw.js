@@ -1310,6 +1310,9 @@ Exam warning: do not call every ethical breach illegal, every self-regulatory ru
       "Describe the structure and functions of Prasar Bharati.",
       "Analyse film certification and exhibition regulation.",
       "Apply cable-network registration, Programme Code and Advertising Code requirements.",
+      "Distinguish public-service broadcasting, spectrum authorisation and content regulation.",
+      "Explain the current age-based film-certification and anti-piracy framework.",
+      "Apply broadcaster grievance, prohibition and enforcement provisions to a practical problem.",
     ],
     topics: [
       "Evolution and liberalisation of the broadcast sector",
@@ -1326,6 +1329,195 @@ Exam warning: do not call every ethical breach illegal, every self-regulatory ru
       "Cable Television Networks (Regulation) Act, 1995",
       "Cable Television Networks Rules, 1994",
     ],
+    detailedContent: `
+1. Broadcasting and its legal characteristics
+
+Broadcasting communicates sound or audiovisual content from one source to a potentially large public through terrestrial spectrum, satellite, cable or related transmission systems. Unlike print, traditional broadcasting uses scarce and coordinated technical resources and can enter homes simultaneously. Indian law therefore combines freedom of expression with licensing, spectrum management, public-service duties and content rules.
+
+Three legal questions must be kept separate: who may establish or operate the transmission service; how spectrum or infrastructure is authorised; and what content may be carried. Permission at one level does not automatically satisfy the others.
+
+2. Evolution of radio broadcasting in India
+
+Experimental radio clubs operated in India during the 1920s. The Indian Broadcasting Company began services in Bombay and Calcutta in 1927 but failed financially. The Government then operated the Indian State Broadcasting Service, renamed All India Radio in 1936. The name Akashvani became widely used after Independence.
+
+Radio initially developed as a State-controlled medium. Public broadcasting expanded national, regional and local services for news, education, agriculture, culture and entertainment. Later policy permitted private FM broadcasting and community radio under licensing and programme conditions, while news broadcasting remained subject to distinct restrictions and sourcing rules.
+
+3. Evolution of television and liberalisation
+
+Experimental television service began in Delhi in 1959 under All India Radio. Doordarshan became a separate department in 1976. National expansion, satellite distribution and colour television accelerated during the 1980s.
+
+Foreign satellite channels and local cable networks expanded rapidly during the early 1990s, initially without a complete sector-specific framework. The Cable Television Networks (Regulation) Act, 1995 responded to that growth. Private satellite channels, direct-to-home services and digitised distribution later created a mixed ecosystem regulated by the Ministry of Information and Broadcasting, Department of Telecommunications, TRAI and other authorities within their respective fields.
+
+4. Constitutional freedom and electronic media
+
+Article 19(1)(a) protects communication and receipt of information through electronic media. In Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal, the Supreme Court held that airwaves are public property and must be used for public good. Their scarcity and public character justify regulation, but not an exclusive governmental monopoly inconsistent with diverse expression.
+
+The audience's right to receive information is important. In Odyssey Communications v. Lokvidayan Sanghatana, the Court declined to stop a television serial merely because viewers objected to its content where no legal prohibition was established. In Life Insurance Corporation of India v. Manubhai D. Shah, fairness in access to a State-controlled medium was tied to Article 19(1)(a).
+
+5. Airwaves, spectrum and government control
+
+Spectrum is a finite public resource requiring technical coordination to avoid interference and ensure efficient use. Authorisation may govern frequencies, power, coverage, technology and service category. Content regulation, however, must have separate legal authority and comply with Article 19(2).
+
+The Indian Telegraph Act, 1885 historically underpinned governmental control over telecommunication. The Telecommunications Act, 2023 now supplies the principal current telecommunications framework as its provisions have been brought into force, including authorisation and spectrum allocation mechanisms. Students should not describe the repealed or superseded telegraph framework as the sole current law.
+
+Broadcasting policy remains distributed across statutes, rules, licence or permission conditions and executive guidelines. A complete answer identifies the service—public broadcast, private satellite television, FM, community radio, cable, DTH or OTT—before selecting the legal regime.
+
+6. Public-service broadcasting
+
+Public-service broadcasting aims to serve citizens rather than only government communication or commercial demand. It should provide accurate information, education, culture, minority and regional representation, children's programming, emergency communication and content for underserved audiences.
+
+Independence is essential. State funding or statutory creation does not justify partisan editorial direction. Accountability should secure fairness, accuracy, accessibility and efficient public spending while protecting professional editorial judgment.
+
+7. Establishment and structure of Prasar Bharati
+
+The Prasar Bharati (Broadcasting Corporation of India) Act, 1990 establishes the Broadcasting Corporation of India known as Prasar Bharati. The statutory scheme transferred Akashvani and Doordarshan functions, property and personnel arrangements into an autonomous corporation when the Act became operational in 1997.
+
+Section 3 establishes the Corporation and its Board structure. The Board includes the Chairperson, Executive Member, Member (Finance), Member (Personnel), part-time members, the Director-General of Akashvani, the Director-General of Doordarshan and employee representatives according to the Act. Appointment, tenure and removal follow statutory provisions.
+
+8. Functions and objectives under section 12
+
+Section 12 makes it Prasar Bharati's primary duty to organise and conduct public broadcasting services to inform, educate and entertain and ensure balanced development of radio and television broadcasting.
+
+Its objectives include upholding constitutional values and national integrity; safeguarding the citizen's right to be informed freely, truthfully and objectively; presenting a fair and balanced flow of information including contrasting views; supporting education, literacy, agriculture, rural development, environment, health, science and technology; and serving diverse languages, regions and vulnerable groups.
+
+It must also promote national integration, sports, youth and women's interests, social justice, working-class welfare, rural and border communities, minorities, tribal communities, children, older persons and persons with disabilities, while developing technology and coverage.
+
+9. Accountability under the Prasar Bharati Act
+
+The Act provides institutional accountability through the Board, a Broadcasting Council for complaints and advice, a Parliamentary Committee and reporting or financial provisions. External services and specified governmental communications operate under statutory arrangements.
+
+Autonomy does not mean absence of accountability; accountability does not mean day-to-day governmental editorial control. When analysing a dispute, identify whether the challenged act concerns statutory functions, employment, funding, programme judgment, complaint handling or governmental direction.
+
+10. Cinematograph Act and the certification system
+
+Part II of the Cinematograph Act, 1952 regulates certification of films for public exhibition through the Central Board of Film Certification. Certification is different from copyright ownership and from licensing a cinema premises under Part III or State law.
+
+An applicant submits the film through the prescribed process. After examination, the Board may certify it in the appropriate category, require modifications according to law or refuse certification, giving reasons and following procedural safeguards. Judicial review remains available against illegality, arbitrariness, procedural unfairness or disproportionate restriction.
+
+11. Current certificate categories
+
+After the 2023 amendment, the principal categories are U for unrestricted public exhibition; UA with age indicators 7+, 13+ or 16+ for unrestricted exhibition subject to parental or guardian guidance for children below the indicated age; A for exhibition restricted to adults; and S for exhibition restricted to members of a specified profession or class.
+
+The UA age indicators guide parents and guardians rather than creating an offence merely because a younger child views the film with them. The certificate must be displayed and exhibition must comply with the certified version and category. Certification granted under the present framework has perpetual validity, subject to lawful action under the Act.
+
+12. Certification principles under section 5B
+
+Section 5B(1) links refusal or restriction to sovereignty and integrity, security of the State, friendly relations with foreign States, public order, decency or morality, defamation, contempt of court and likely incitement to an offence. These grounds reflect Article 19(2) and must be applied through statutory guidelines and constitutional standards.
+
+Section 5B(2) permits the Central Government to issue certification principles. Examiners should assess the film as a whole, its theme, context, artistic or social purpose and likely audience. Isolated words or images should not automatically determine the legal character of the entire work.
+
+13. Cinematograph (Certification) Rules, 2024
+
+The 2024 Rules replaced the 1983 certification rules and modernised applications, scrutiny, examination committees, communication, fees, certificates and records. They support online processing and the age-based UA categories introduced by the amended Act.
+
+The framework also advances representation and accessibility in certification administration and film exhibition through applicable rules and governmental accessibility guidelines. The precise version submitted matters: post-certification additions, deletions or alterations must follow the current statutory and procedural requirements rather than assuming that the certificate covers every edited version.
+
+14. Judicial review of film certification
+
+K.A. Abbas v. Union of India accepted prior film certification in principle because of cinema's distinctive impact but required clear standards, fair procedure and prompt review. Certification is therefore constitutionally exceptional, not a general model for prior censorship of all media.
+
+S. Rangarajan v. P. Jagjivan Ram held that expression cannot be suppressed because hostile audiences threaten disorder; anticipated harm must have a proximate and direct nexus, and the State must protect lawful speech. Bobby Art International v. Om Pal Singh Hoon evaluated Bandit Queen as a whole and treated disturbing scenes in their narrative and social context.
+
+In Union of India v. K.M. Shankarappa, the Supreme Court held that the executive could not exercise a revisional power over a quasi-judicial appellate certification decision in the manner challenged. The decision reinforces institutional fairness and the separation between statutory adjudication and executive preference.
+
+15. Film piracy provisions introduced in 2023
+
+Sections 6AA and 6AB prohibit specified unauthorised recording of a film in a licensed exhibition facility and unauthorised exhibition for profit. Section 7 supplies consequences. The provisions target camcording and commercial piracy and operate alongside the Copyright Act.
+
+The Act preserves the relevance of copyright exceptions. A film-piracy allegation should identify the act of recording, transmission or exhibition, lack of authorisation, profit-related or other statutory ingredients and the relationship with copyright infringement. Possession of a cinema ticket is not permission to record or redistribute the film.
+
+16. Cinemas, television and OTT are distinct regimes
+
+CBFC certification principally concerns films for public exhibition under the Cinematograph Act. Television channels must separately comply with the Cable Rules and permission conditions. A certified film may therefore require editing or scheduling to satisfy the Programme Code.
+
+Online curated or OTT content is governed through the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 within their scope, including age classification and access controls. It should not be stated that every OTT programme requires a CBFC theatrical certificate.
+
+17. Cable Television Networks Act: registration and operation
+
+The Cable Television Networks (Regulation) Act, 1995 regulates cable television networks. Section 3 prohibits operation of a cable network without registration. Section 4 and the Rules govern registration and renewal or continuing compliance through the designated authority.
+
+Cable operators must use prescribed equipment and comply with digitisation, addressable-system, record and technical requirements where applicable. TRAI regulates tariffs, interconnection and quality aspects within its statutory sphere, while MIB administers content and permission dimensions. Distribution regulation is distinct from ownership of programme copyright.
+
+18. Programme Code, Advertising Code and mandatory carriage
+
+Section 5 prohibits transmission of programmes that do not conform to the prescribed Programme Code; section 6 similarly applies the Advertising Code. Rules 6 and 7 contain detailed restrictions concerning public order, decency, defamation, communal content, children, misleading advertising and other matters.
+
+Section 8 requires carriage or retransmission of specified Doordarshan channels as notified. The Sports Broadcasting Signals (Mandatory Sharing with Prasar Bharati) Act, 2007 separately addresses sharing of broadcasting signals for sporting events of national importance under its conditions.
+
+Code enforcement must remain connected to the statutory text and Article 19(2). A licence or registration condition cannot become an unlimited power to prohibit criticism or unpopular viewpoints.
+
+19. Complaints, prohibition, seizure and enforcement
+
+Rules 15 to 18 establish a three-level complaint system for television content: broadcaster self-regulation, recognised self-regulating bodies and Central Government oversight. The complainant should identify the programme, date, impugned segment and Code provision and first use the prescribed level and timeline.
+
+The Act authorises inspection and seizure of equipment in specified circumstances and gives authorised officers powers subject to procedure. Section 19 permits an authorised officer to prohibit transmission of a programme in the public interest on the statutory grounds. Section 20 gives the Central Government powers to prohibit operation or transmission in specified circumstances.
+
+Natural justice, recorded reasons, statutory jurisdiction and proportionality remain important. A temporary targeted restriction, warning, apology or modification may sometimes address harm more proportionately than complete channel prohibition.
+
+20. Applied problem and examination method
+
+Assume a company starts a local cable network without registration, carries an uncertified theatrical recording, omits mandatory public channels and broadcasts a communal advertisement. Separately, a State officer orders all critical news removed without identifying a Code provision, while a filmmaker challenges an A certificate imposed because protestors threaten violence.
+
+Apply sections 3–8 of the Cable Act, Rules 6–7, the anti-piracy and certification provisions, and the applicable complaint or enforcement process. Test the removal order for authority, reasons, natural justice and Article 19(2) proportionality. Apply S. Rangarajan to the hostile-audience threat and assess the film as a whole under section 5B and the 2024 Rules.
+
+For an examination answer, use the sequence: trace broadcast history; explain airwaves and Article 19(1)(a); distinguish spectrum, service and content regulation; state Prasar Bharati's structure and section 12 duties; explain film categories, section 5B, the 2024 Rules and piracy provisions; then apply Cable Act registration, Codes, carriage, grievance and enforcement provisions with leading cases.
+    `.trim(),
+    keyPoints: [
+      "Broadcast regulation has separate infrastructure, spectrum, service-authorisation and content dimensions.",
+      "Indian radio developed from private experiments to State broadcasting, Akashvani, public-service autonomy and licensed private or community services.",
+      "Airwaves are public property, but their regulation must advance public good and plural communication rather than exclusive State control.",
+      "Prasar Bharati is a statutory public-service corporation for Akashvani and Doordarshan, operational since 1997.",
+      "Section 12 requires truthful, objective and balanced information and service to India's diverse regions and vulnerable groups.",
+      "The current film categories are U, UA 7+, UA 13+, UA 16+, A and S.",
+      "Section 5B certification grounds must be read consistently with Article 19(2) and the film must be assessed as a whole.",
+      "The Cinematograph (Certification) Rules, 2024 replaced the 1983 Rules and modernised the certification process.",
+      "Sections 6AA and 6AB address unauthorised film recording and exhibition and operate alongside copyright law.",
+      "Theatrical certification, television Programme Code compliance and OTT classification are distinct regimes.",
+      "Cable operation requires registration and compliance with the Programme Code and Advertising Code.",
+      "Rules 15–18 provide broadcaster, self-regulatory-body and Central Government levels for television complaints.",
+      "Content prohibition and seizure require statutory jurisdiction, procedure, reasons and proportionate exercise of power.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-6-article-19", title: "Electronic-media freedom", provision: "Articles 19(1)(a) and 19(2), Constitution of India", description: "Protects broadcasting expression and audience access subject to constitutionally specified reasonable restrictions." },
+      { id: "media-law-unit-6-telecom", title: "Telecommunications authorisation and spectrum", provision: "Telecommunications Act, 2023", description: "Provides the current central framework for telecommunication authorisation and spectrum assignment as commenced, replacing the historical sole reliance on the Telegraph Act." },
+      { id: "media-law-unit-6-prasar-establishment", title: "Prasar Bharati Corporation", provision: "Sections 3–4, Prasar Bharati Act, 1990", description: "Establishes the Corporation and its Board for public broadcasting through Akashvani and Doordarshan." },
+      { id: "media-law-unit-6-prasar-functions", title: "Public-service functions", provision: "Section 12, Prasar Bharati Act, 1990", description: "Requires informing, educating and entertaining the public through balanced radio and television services and detailed social objectives." },
+      { id: "media-law-unit-6-prasar-accountability", title: "Broadcasting Council and parliamentary accountability", provision: "Sections 14–15 and 13, Prasar Bharati Act, 1990", description: "Provides complaint advice and parliamentary oversight within the statutory public-broadcasting structure." },
+      { id: "media-law-unit-6-cinema-board", title: "Film certification authority", provision: "Sections 3–5A, Cinematograph Act, 1952", description: "Establishes the Board and governs examination and grant of U, age-rated UA, A and S certificates." },
+      { id: "media-law-unit-6-cinema-principles", title: "Certification principles", provision: "Section 5B, Cinematograph Act, 1952", description: "Connects certification restrictions to specified constitutional grounds and governmental guidelines." },
+      { id: "media-law-unit-6-cinema-rules", title: "Certification procedure", provision: "Cinematograph (Certification) Rules, 2024", description: "Governs applications, committees, scrutiny, communication, categories, records and procedural aspects of certification." },
+      { id: "media-law-unit-6-piracy", title: "Film anti-piracy", provision: "Sections 6AA, 6AB and 7, Cinematograph Act, 1952", description: "Prohibits specified unauthorised recording and profit-oriented exhibition and provides statutory consequences." },
+      { id: "media-law-unit-6-cable-registration", title: "Cable-network registration", provision: "Sections 3–4, Cable Television Networks (Regulation) Act, 1995", description: "Prohibits unregistered cable-network operation and creates the registration framework." },
+      { id: "media-law-unit-6-cable-codes", title: "Programme and Advertising Codes", provision: "Sections 5–6 of the Act; Rules 6–7 of the 1994 Rules", description: "Requires cable content and advertising to conform to prescribed standards." },
+      { id: "media-law-unit-6-must-carry", title: "Mandatory public-channel carriage", provision: "Section 8, Cable Television Networks (Regulation) Act, 1995", description: "Requires retransmission of notified Doordarshan channels through cable networks." },
+      { id: "media-law-unit-6-cable-enforcement", title: "Prohibition and enforcement", provision: "Sections 11, 19 and 20, Cable Television Networks (Regulation) Act, 1995", description: "Provides specified seizure and programme or network prohibition powers subject to statutory conditions." },
+      { id: "media-law-unit-6-grievances", title: "Television grievance structure", provision: "Rules 15–18, Cable Television Networks Rules, 1994", description: "Creates three levels involving broadcasters, recognised self-regulatory bodies and Central Government oversight." },
+      { id: "media-law-unit-6-sports", title: "Sporting events of national importance", provision: "Sports Broadcasting Signals (Mandatory Sharing with Prasar Bharati) Act, 2007", description: "Requires signal sharing for notified sporting events of national importance under the Act's conditions." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-6-cab", caseName: "Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal", citation: "(1995) 2 SCC 161", principle: "Airwaves are public property, and freedom to communicate and receive information extends to electronic media.", summary: "The Supreme Court rejected exclusive governmental monopoly and required regulation directed toward public good and pluralism." },
+      { id: "media-law-unit-6-odyssey", caseName: "Odyssey Communications Pvt. Ltd. v. Lokvidayan Sanghatana", citation: "(1988) 3 SCC 410", principle: "Viewers' Article 19(1)(a) interests cannot be displaced merely by objection to a television programme without a legal basis.", summary: "The Court declined to prohibit telecast of a serial where the challenge did not establish an applicable legal violation." },
+      { id: "media-law-unit-6-lic", caseName: "Life Insurance Corporation of India v. Manubhai D. Shah", citation: "(1992) 3 SCC 637", principle: "A State-controlled medium must act fairly and cannot arbitrarily deny a reasonable reply on a matter of public debate.", summary: "The Court protected access to publish a rejoinder in a publicly controlled journal and discussed fairness in public media." },
+      { id: "media-law-unit-6-ka-abbas", caseName: "K.A. Abbas v. Union of India", citation: "(1970) 2 SCC 780", principle: "Prior film certification is constitutionally permissible because of cinema's distinctive impact, but requires definite standards, fair procedure and prompt review.", summary: "The Court upheld classification in principle while insisting on procedural and substantive safeguards." },
+      { id: "media-law-unit-6-rangarajan", caseName: "S. Rangarajan v. P. Jagjivan Ram", citation: "(1989) 2 SCC 574", principle: "Expression cannot be suppressed because hostile audiences threaten disorder; feared harm must be proximate and direct.", summary: "The Court restored certification and held that the State must protect lawful exhibition rather than surrender to threats." },
+      { id: "media-law-unit-6-bobby-art", caseName: "Bobby Art International v. Om Pal Singh Hoon", citation: "(1996) 4 SCC 1", principle: "A film must be evaluated as a whole and disturbing scenes assessed within their narrative and social purpose.", summary: "The Supreme Court upheld exhibition of Bandit Queen and rejected isolation of scenes from the film's depiction of exploitation and violence." },
+      { id: "media-law-unit-6-shankarappa", caseName: "Union of India v. K.M. Shankarappa", citation: "(2001) 1 SCC 582", principle: "Executive revision cannot override a quasi-judicial film-certification appellate decision contrary to constitutional institutional safeguards.", summary: "The Court invalidated the challenged Central Government revisional control after appellate certification." },
+      { id: "media-law-unit-6-anand-patwardhan", caseName: "Anand Patwardhan v. Union of India", citation: "(1997) 1 SCC 734", principle: "Public broadcasters must apply fair, constitutional standards when deciding whether to telecast socially significant documentary material.", summary: "The litigation concerning documentary telecast reinforced scrutiny of arbitrary exclusion by State-controlled broadcasting." },
+      { id: "media-law-unit-6-bhasin", caseName: "Anuradha Bhasin v. Union of India", citation: "(2020) 3 SCC 637", principle: "Media freedoms exercised through communication networks require published, proportionate and reviewable restrictions.", summary: "The Court rejected indefinite network suspension and linked communications control with Articles 19(1)(a) and 19(1)(g)." },
+    ],
+    examFocus:
+      "Prepare the historical development of radio and television; public-service versus commercial broadcasting; Article 19(1)(a), audience rights and airwaves as public property; the current Telecommunications Act framework; Prasar Bharati Act sections 3, 4, 12, 13, 14 and 15; its public-service objectives and accountability; Cinematograph Act sections 3–5B, current U, UA 7+, UA 13+, UA 16+, A and S categories, perpetual certificates, 2024 Rules and accessibility; sections 6AA, 6AB and 7 anti-piracy; distinction among cinema, television and OTT; Cable Act sections 3–8, 11, 19 and 20; Rules 6, 7 and 15–18; mandatory sports-signal sharing; and the principles in Cricket Association of Bengal, Odyssey Communications, LIC v. Manubhai Shah, K.A. Abbas, S. Rangarajan, Bobby Art, K.M. Shankarappa, Anand Patwardhan and Anuradha Bhasin.",
+    revisionNotes: `
+Broadcast map: separate spectrum and technical authorisation, permission to provide the service, and regulation of content. Airwaves are public property but State monopoly is inconsistent with plural communication and audience rights.
+
+Prasar Bharati: statutory Corporation for Akashvani and Doordarshan; section 12 requires public broadcasting that informs, educates and entertains and provides truthful, objective, balanced and socially inclusive service. Autonomy and accountability must operate together.
+
+Cinema: CBFC categories are U, UA 7+, UA 13+, UA 16+, A and S. Apply section 5B, the 2024 Rules and whole-work/context analysis. Hostile audiences do not justify suppression. Sections 6AA–6AB add anti-piracy rules alongside copyright.
+
+Cable: sections 3–4 require registration; sections 5–6 and Rules 6–7 impose Programme and Advertising Codes; section 8 is must-carry; sections 11, 19 and 20 contain enforcement powers; Rules 15–18 create the three-level complaint structure.
+
+Exam warning: do not treat CBFC certification as OTT classification, spectrum permission as content approval, or public ownership as authority for partisan broadcasting. Always identify the medium, regulator, statutory power, procedure and Article 19 limitation.
+    `.trim(),
   },
   {
     title: "Internet and New Media",
