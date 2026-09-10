@@ -56,6 +56,7 @@ import TermsPage from "../features/public/legal/pages/TermsPage";
 import ConsumerRightsJudgmentsPage from "../features/public/legal/pages/ConsumerRightsJudgmentsPage";
 import UnrecoveredOnlineFraudFundsPage from "../features/public/legal/pages/UnrecoveredOnlineFraudFundsPage";
 import MortgagedPropertyFraudPage from "../features/public/legal/pages/MortgagedPropertyFraudPage";
+import TechStartupCompliancePage from "../features/public/legal/pages/TechStartupCompliancePage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -183,6 +184,11 @@ export default function AppRouter() {
       <Route
         path="/legal-updates/bought-mortgaged-property-by-fraud"
         element={<MortgagedPropertyFraudPage />}
+      />
+
+      <Route
+        path="/legal-updates/tech-startup-regulatory-compliance-2026"
+        element={<TechStartupCompliancePage />}
       />
 
       {/* =====================================================

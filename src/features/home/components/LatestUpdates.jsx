@@ -3,6 +3,16 @@ import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const updates = [
   {
+    id: 4,
+    category: "Technology, AI & Compliance",
+    title: "Tech Startups in 2026: Regulatory Compliance Is the Real Challenge",
+    date: "10 Sep 2026",
+    description:
+      "A practical legal-risk guide covering data protection, responsible AI, cybersecurity, consumer claims and compliance-by-design before a technology business scales.",
+    link: "/legal-updates/tech-startup-regulatory-compliance-2026",
+    image: "/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg",
+  },
+  {
     id: 1,
     category: "Supreme Court",
     title: "Important Judgement on Consumer Rights",

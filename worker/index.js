@@ -19,6 +19,11 @@ const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/se
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
+  "/legal-updates/tech-startup-regulatory-compliance-2026": {
+    title: "Tech Startup Regulatory Compliance in 2026 | NagarikSuraksha",
+    description: "An India-focused startup guide to data protection, responsible AI, cybersecurity, consumer law and compliance-by-design before scaling.",
+    image: "/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg",
+  },
   "/legal-updates/important-judgement-on-consumer-rights": {
     title: "Important Judgments on Consumer Rights | NagarikSuraksha",
     description: "Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, homebuyers, commercial purpose and telecom disputes.",
