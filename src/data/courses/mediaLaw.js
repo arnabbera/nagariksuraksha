@@ -394,6 +394,8 @@ Case formula: circulation is part of expression (Romesh Thappar); prior scrutiny
       "Balance free expression with privacy, dignity and reputation.",
       "Explain the relationship between media freedom and the right to information.",
       "Evaluate constitutional remedies and media-related public-interest litigation.",
+      "Distinguish institutional press freedom from personal or evidentiary privileges claimed by journalists.",
+      "Apply proportionality, prior-restraint and chilling-effect principles to a media-law problem.",
     ],
     topics: [
       "Articles 19(1)(a) and 19(2)",
@@ -408,6 +410,203 @@ Case formula: circulation is part of expression (Romesh Thappar); prior scrutiny
       "Right to Information Act, 2005",
       "Digital Personal Data Protection Act, 2023",
     ],
+    detailedContent: `
+1. Constitutional position of media in India
+
+The Constitution of India does not separately use the expression freedom of the press or freedom of media. The Supreme Court has consistently treated the freedom to publish, circulate and communicate through the press and other media as part of the freedom of speech and expression guaranteed to citizens by Article 19(1)(a).
+
+Media organisations also conduct business and may invoke Article 19(1)(g), while equality under Article 14 and life, dignity and privacy under Article 21 frequently shape media disputes. Constitutional protection is therefore not confined to journalists. It protects the communicative process involving speakers, publishers and audiences.
+
+Freedom of the press is not a special immunity from ordinary law. A journalist remains subject to valid laws concerning defamation, contempt, privacy, intellectual property, public order and other matters. The constitutional question is whether a restriction has lawful authority, falls within the relevant limitation clause and is reasonable and proportionate.
+
+2. Scope of Article 19(1)(a)
+
+Article 19(1)(a) protects the freedom to hold and communicate opinions and information through speech, writing, printing, pictures, broadcast and digital means. It includes publication, circulation, access to audiences, editorial choice, receipt of information and, in appropriate settings, the right not to speak.
+
+The right has both individual and democratic value. It protects autonomy and self-expression and permits citizens to discuss public affairs, criticise authority and participate in self-government. The media acts as a channel through which citizens receive information necessary to exercise political choices.
+
+The protection is available against State action. Private media concentration, platform rules and editorial employment may raise serious public-policy concerns, but a constitutional claim ordinarily requires the necessary legal connection to State action unless a statute creates enforceable duties between private parties.
+
+3. Freedom of publication and circulation
+
+The right to print words without the practical ability to reach readers would be ineffective. Romesh Thappar v. State of Madras recognised circulation as part of protected expression. Sakal Papers and Bennett Coleman later held that economic or administrative regulation may violate Article 19(1)(a) when its direct effect reduces pages, circulation, growth or editorial choice.
+
+Courts examine the real operation of a measure, not only its stated label. A policy described as a commercial control can still burden speech. At the same time, generally applicable taxation, labour, competition and safety laws do not become invalid merely because a media enterprise must comply with them.
+
+4. Prior restraint and pre-censorship
+
+Prior restraint prevents or conditions communication before publication. Because it stops speech before the public can evaluate it, prior restraint is regarded as especially serious. Brij Bhushan v. State of Delhi invalidated an order requiring advance scrutiny of newspaper material.
+
+Prior restraint is not identical in every medium. Cinematograph law has historically permitted prior certification of films because of the medium's perceived impact, while postponement of reporting may exceptionally protect the administration of justice. Any restraint requires clear legal authority, narrow grounds, procedural safeguards and proportionality; executive preference or fear of criticism is insufficient.
+
+5. The eight grounds under Article 19(2)
+
+Article 19(2) permits the State to impose reasonable restrictions by law in the interests of the sovereignty and integrity of India, security of the State, friendly relations with foreign States, public order, decency or morality, or in relation to contempt of court, defamation or incitement to an offence.
+
+The list is exhaustive for restrictions upon Article 19(1)(a). Administrative convenience, preventing embarrassment or asserting a broad public interest cannot independently justify a speech restriction. The State must identify the applicable ground and show a constitutionally adequate relationship between the restriction and that ground.
+
+Security of the State concerns grave threats rather than ordinary breaches of peace. Public order is narrower than general law and order and requires a sufficiently proximate connection. Decency and morality must be applied consistently with contemporary constitutional values. Defamation protects reputation, contempt protects the administration of justice, and incitement requires more than abstract advocacy or unpopular opinion.
+
+6. Reasonableness, proximity and proportionality
+
+A restriction must be imposed by law and must be reasonable. Vagueness is dangerous because citizens cannot know what is prohibited and officials receive excessive discretion. Overbreadth burdens protected speech together with harmful speech. A chilling effect arises when uncertain or severe liability causes lawful expression to be suppressed.
+
+Modern constitutional review asks whether the measure pursues a legitimate objective, is rationally connected to it, uses a necessary or less restrictive means, and maintains a proper balance between the right and the public interest. The connection between expression and feared harm cannot be remote, speculative or far-fetched.
+
+Shreya Singhal v. Union of India distinguished discussion, advocacy and incitement. It struck down section 66A of the Information Technology Act for vague and overbroad restrictions but upheld the structured blocking mechanism under section 69A with its safeguards.
+
+7. No governmental monopoly over electronic media
+
+In Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal, the Supreme Court held that the freedom of speech includes the right to communicate and receive information through electronic media. Airwaves are public property and must be used for public good under an independent and plural regulatory arrangement.
+
+The judgment does not mean that spectrum is unregulated. Scarcity, technical coordination and public obligations permit licensing. The constitutional objection is to arbitrary or exclusive governmental control that prevents diversity and denies citizens access to different views.
+
+8. Internet access and media freedom
+
+The internet is a medium through which expression and trade may be exercised. In Anuradha Bhasin v. Union of India, the Supreme Court held that speech and business conducted through the internet receive constitutional protection and that indefinite suspension of internet services is impermissible. Restriction orders must satisfy legality, necessity and proportionality and remain open to review.
+
+The Court did not declare a free-standing fundamental right to internet access in all circumstances. The correct formulation is that constitutionally protected freedoms exercised through the internet cannot be restricted arbitrarily. Media organisations may challenge network shutdowns when the measures impair newsgathering, publication and access to information.
+
+9. Privacy, dignity and autonomy
+
+Justice K.S. Puttaswamy (Retd.) v. Union of India unanimously recognised privacy as a fundamental right protected across Articles 14, 19 and 21. Privacy includes bodily and spatial privacy, decisional autonomy and informational control. Media freedom and privacy are therefore competing constitutional values, not a contest between a constitutional right and a merely private preference.
+
+An interference with privacy requires legality, a legitimate aim and proportionality. For the media, relevant considerations include the person's public role, the subject's connection to public affairs, the method of obtaining information, consent, accuracy, vulnerability, passage of time and the degree of intrusion.
+
+Public curiosity is not the same as public interest. Public interest concerns matters that legitimately affect collective welfare, accountability or informed civic choice. Sensational details about grief, health, sexuality, family life or children may remain private even when they attract attention.
+
+10. Privacy and publication: the Rajagopal principles
+
+R. Rajagopal v. State of Tamil Nadu, commonly known as the Auto Shankar case, explained the relationship between press freedom and privacy. A person may protect the privacy of family, marriage, procreation, motherhood, childbearing and education, subject to recognised limits. Unauthorised publication concerning private life may attract liability.
+
+Matters forming part of public records may generally be reported, but judicial and statutory restrictions protecting victims and vulnerable persons continue to apply. Public officials have a narrower privacy claim regarding acts relevant to official duties, yet they do not lose all personal privacy. The decision also rejected prior governmental restraint based merely on an anticipated defamation claim.
+
+11. Reputation, dignity and defamation
+
+Reputation forms part of dignity under Article 21. Media freedom must therefore be balanced with the right of a person not to be harmed by false and defamatory statements. Subramanian Swamy v. Union of India upheld criminal defamation and treated reputation as a constitutionally protected interest, while requiring application consistent with statutory ingredients and defences.
+
+Criticism of government, institutions and public officials is central to democracy. Liability does not follow merely because reporting is harsh, inconvenient or embarrassing. The legal analysis must examine the statement, reference to the claimant, publication, falsity or defence, fault where relevant, and the public-interest and fair-comment principles recognised by law.
+
+12. Fair trial and trial by media
+
+Open justice permits court reporting, but prejudicial publicity may threaten the presumption of innocence, witness integrity and impartial adjudication. Articles 19(1)(a) and 21 must be harmonised. Reporting an allegation as established guilt, publishing inadmissible confessions or conducting a parallel televised trial can undermine justice.
+
+In Sahara India Real Estate Corp. Ltd. v. SEBI, the Supreme Court recognised that a court may exceptionally order temporary postponement of publication where there is a real and substantial risk of prejudice and no reasonable alternative will prevent it. Such an order must be necessary, proportionate, limited in scope and duration, and directed to protecting the administration of justice rather than insulating parties from criticism.
+
+13. Right to know and freedom to receive information
+
+Freedom of speech would be incomplete if citizens could not obtain information required for meaningful participation. State of Uttar Pradesh v. Raj Narain connected open government with the people's right to know public acts. S.P. Gupta v. Union of India reinforced disclosure and governmental accountability, subject to legitimate confidentiality.
+
+The constitutional right to know is broader in principle than any single statutory procedure, but access to particular records is ordinarily worked through legislation. Courts balance transparency with privacy, security, privilege, investigation, commercial confidence and the effective functioning of institutions.
+
+14. Right to Information Act, 2005
+
+The Right to Information Act creates a practical regime through which Indian citizens may obtain information held by or under the control of public authorities. Section 4 requires record management and proactive disclosure. Sections 6 and 7 establish the request and response process. Ordinarily, information is supplied within thirty days; information concerning life or liberty must be supplied within forty-eight hours.
+
+Section 8 contains exemptions, including specified national interests, contempt, legislative privilege, commercial confidence, fiduciary information, confidential foreign-government material, safety and sources, investigation and personal information. Exemptions must be applied to the actual statutory text, including public-interest and severability rules, rather than as blanket labels.
+
+Section 22 gives the RTI Act overriding effect over inconsistent law, including the Official Secrets Act, to the extent stated. Section 24 excludes listed intelligence and security organisations subject to the statutory exceptions concerning corruption and human-rights violations. Journalists possess no exclusive RTI entitlement: the statutory right belongs to every citizen.
+
+15. Transparency and privacy under the RTI framework
+
+RTI and privacy are not absolute opposites. Transparency is strongest for public functions, public expenditure and institutional accountability. Privacy is strongest for personal information unrelated to public activity where disclosure would cause an unwarranted invasion and no larger public interest justifies it.
+
+Central Public Information Officer, Supreme Court of India v. Subhash Chandra Agarwal held that the office of the Chief Justice of India is a public authority under the Act while emphasising case-specific balancing among transparency, judicial independence, confidentiality and privacy.
+
+Media reporting based on disclosed records remains subject to other law. An RTI disclosure does not necessarily authorise sensational, misleading or privacy-invasive republication divorced from the purpose and context of the information.
+
+16. Journalistic privilege and protection of sources
+
+Journalists often promise confidentiality to sources because exposure may invite retaliation and deter future disclosures. Source protection supports newsgathering and the public's access to important information. Indian law, however, does not confer a universal constitutional or evidentiary privilege allowing every journalist to refuse every lawful demand.
+
+Section 15(2) of the Press Council Act, 1978 provides that the Press Council cannot compel a newspaper, news agency, editor or journalist to disclose the source of news or information during its inquiry. That protection is specific to Press Council proceedings. A court or investigating authority is governed by the applicable constitutional, evidentiary and procedural law.
+
+A decision compelling disclosure should consider the relevance and necessity of the information, seriousness of the proceeding, availability of alternatives, risk to the source and chilling effect on journalism. Ethical confidentiality cannot be used to conceal participation in an offence or fabricate information.
+
+17. Media access, accreditation and personal privileges
+
+Accreditation facilitates access to official premises and events; it is not the source of Article 19(1)(a). Government may prescribe transparent and reasonable eligibility and security conditions, but accreditation decisions cannot be arbitrary, discriminatory or a device to punish critical reporting.
+
+Journalists do not possess a general privilege to trespass, obstruct investigation, violate valid confidentiality, disobey court orders or demand access to every place. Legislative proceedings may be reported subject to constitutional privileges and applicable law. Court reporting is protected by open justice but remains subject to in-camera orders, victim-protection statutes, contempt and postponement directions.
+
+18. Print media, press law and institutional regulation
+
+Print media operates within a network of laws rather than one press code. The Press and Registration of Periodicals Act, 2023 governs title and registration matters. The Press Council Act, 1978 establishes a statutory body to preserve press freedom and maintain and improve standards. Defamation, contempt, copyright, labour, election and criminal laws regulate particular conduct.
+
+Registration does not authorise advance editorial control. The Press Council may inquire into complaints and issue findings within its statutory powers, but it is not a criminal court and does not replace constitutional remedies. Self-regulatory ethical norms may guide responsible reporting even where breach does not independently create a criminal offence.
+
+19. Constitutional remedies and public-interest litigation
+
+Article 32 permits the Supreme Court to enforce fundamental rights, while Article 226 gives High Courts wider power to issue writs for fundamental rights and other legal rights. A media organisation may challenge censorship, arbitrary denial of access, unlawful seizure, shutdown or disproportionate regulation. A person affected by media conduct may invoke available constitutional, civil, criminal, statutory or regulatory remedies depending on the respondent and injury.
+
+Public-interest litigation relaxes traditional standing where affected persons cannot effectively approach the court or a serious public wrong requires adjudication. It may address media concentration, access to information, protection of children, communal reporting, accessibility or unlawful State restrictions. PIL is not a substitute for appeal, a vehicle for publicity or a means of settling private rivalry.
+
+Courts must identify an enforceable constitutional or legal duty, hear affected parties and choose workable remedies. Judicial directions should not create an indefinite censorship code or assume continuous editorial control where legislation and expert regulation are required.
+
+20. Applied problem and examination method
+
+Assume a State blocks mobile internet throughout an entire region after isolated disorder, refuses to publish the order, denies accreditation to a journalist who criticised the administration and threatens prior approval of all reports. Separately, the journalist proposes to publish private medical details of an official having no connection with public duties.
+
+The answer should separate each issue. Test the shutdown for legal authority, publication, territorial and temporal scope, necessity, proportionality and review under Anuradha Bhasin. Test accreditation under Articles 14 and 19(1)(a). Treat prior approval as prior restraint and demand a precise Article 19(2) basis. Finally, balance the proposed medical disclosure against privacy and dignity under Puttaswamy and Rajagopal; criticism of official conduct does not automatically justify exposure of unrelated intimate facts.
+
+For a descriptive answer, begin with the constitutional source of media freedom, explain its components, list and interpret Article 19(2), discuss reasonableness and proportionality, then address privacy, reputation, RTI, source protection and remedies with leading cases. For a problem, use: identify the speaker and State action; identify the protected activity; locate the precise restriction ground; test legality, proximity and proportionality; balance competing Part III rights; and state the appropriate writ or statutory remedy.
+    `.trim(),
+    keyPoints: [
+      "Freedom of the press and media is protected within Article 19(1)(a); it is not separately worded or absolute.",
+      "Article 19(1)(a) protects publication, circulation, editorial choice and the receipt and communication of information.",
+      "Article 19(2) contains an exhaustive list of constitutionally permissible grounds for restricting speech.",
+      "Vague, overbroad or disproportionate restrictions create a chilling effect on lawful expression.",
+      "Prior restraint is especially serious and requires clear authority, narrow necessity and procedural safeguards.",
+      "Airwaves are public property, but regulation must support plural communication rather than an exclusive governmental monopoly.",
+      "Constitutional freedoms exercised through the internet cannot be restricted indefinitely or without proportionality and review.",
+      "Privacy is a fundamental right under Articles 14, 19 and 21; public curiosity is not equivalent to public interest.",
+      "Reputation forms part of dignity, while criticism and reporting remain protected subject to valid defamation law.",
+      "The RTI Act gives every citizen—not only journalists—a statutory method to seek information from public authorities.",
+      "Source protection under section 15(2) of the Press Council Act is specific to Press Council inquiries and is not a universal evidentiary privilege.",
+      "Articles 32 and 226 provide constitutional remedies, while PIL requires a genuine public wrong and an enforceable legal duty.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-2-article-14", title: "Equality and non-arbitrariness", provision: "Article 14, Constitution of India", description: "Prohibits arbitrary or discriminatory State treatment, including selective access, accreditation and regulatory decisions affecting media." },
+      { id: "media-law-unit-2-article-19-1-a", title: "Freedom of speech and expression", provision: "Article 19(1)(a), Constitution of India", description: "Constitutional source of press and media freedom, including publication, circulation, communication and receipt of information." },
+      { id: "media-law-unit-2-article-19-2", title: "Permissible speech restrictions", provision: "Article 19(2), Constitution of India", description: "Allows reasonable restrictions by law only on the specified grounds of sovereignty and integrity, State security, friendly foreign relations, public order, decency or morality, contempt, defamation and incitement." },
+      { id: "media-law-unit-2-article-19-1-g", title: "Occupation, trade and business", provision: "Articles 19(1)(g) and 19(6)", description: "Protects lawful media enterprise subject to reasonable regulation, without allowing business controls to become indirect censorship." },
+      { id: "media-law-unit-2-article-21", title: "Life, dignity and privacy", provision: "Article 21, Constitution of India", description: "Protects dignity, reputation, autonomy, privacy and fair-trial interests that may require balancing with media freedom." },
+      { id: "media-law-unit-2-writs", title: "Constitutional remedies", provision: "Articles 32 and 226, Constitution of India", description: "Empower the Supreme Court and High Courts to grant writ remedies against unlawful censorship, shutdowns, arbitrary regulation and other public-law violations." },
+      { id: "media-law-unit-2-rti-section-4", title: "Proactive disclosure", provision: "Section 4, Right to Information Act, 2005", description: "Requires public authorities to maintain records and publish prescribed institutional and decision-making information proactively." },
+      { id: "media-law-unit-2-rti-process", title: "RTI application and response", provision: "Sections 6–7, Right to Information Act, 2005", description: "Creates the citizen's request procedure and response timelines, including the forty-eight-hour rule for life-or-liberty information." },
+      { id: "media-law-unit-2-rti-exemptions", title: "Exemptions and severability", provision: "Sections 8–10, Right to Information Act, 2005", description: "Balances disclosure with protected interests and requires release of reasonably severable non-exempt material." },
+      { id: "media-law-unit-2-rti-override", title: "Overriding effect", provision: "Section 22, Right to Information Act, 2005", description: "Gives the RTI Act overriding operation over inconsistent law to the extent specified by Parliament." },
+      { id: "media-law-unit-2-source", title: "Sources before the Press Council", provision: "Section 15(2), Press Council Act, 1978", description: "Prevents the Press Council from compelling a newspaper, news agency, editor or journalist to disclose a news source during its inquiry." },
+      { id: "media-law-unit-2-registration", title: "Print-media registration", provision: "Press and Registration of Periodicals Act, 2023", description: "Provides the current administrative framework for periodical titles and registration without creating general editorial censorship authority." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-2-romesh", caseName: "Romesh Thappar v. State of Madras", citation: "AIR 1950 SC 124", principle: "Circulation is an essential part of freedom of speech and press.", summary: "The Supreme Court invalidated a State order prohibiting the entry and circulation of a journal and established the constitutional importance of dissemination." },
+      { id: "media-law-unit-2-brij", caseName: "Brij Bhushan v. State of Delhi", citation: "AIR 1950 SC 129", principle: "Pre-censorship of newspaper content is a serious restriction upon Article 19(1)(a).", summary: "The Court struck down an order requiring specified newspaper material to undergo prior official scrutiny." },
+      { id: "media-law-unit-2-sakal", caseName: "Sakal Papers (P) Ltd. v. Union of India", citation: "AIR 1962 SC 305", principle: "Business regulation cannot be used to curtail pages and circulation protected by Article 19(1)(a).", summary: "The price-page regulation was invalidated because its direct effect burdened circulation and expression." },
+      { id: "media-law-unit-2-bennett", caseName: "Bennett Coleman & Co. v. Union of India", citation: "(1972) 2 SCC 788", principle: "The direct and inevitable effect of a newsprint policy on pages, growth and circulation determines its constitutional validity.", summary: "Restrictions in the newsprint policy were set aside for impairing the practical freedom to publish and expand." },
+      { id: "media-law-unit-2-raj-narain", caseName: "State of Uttar Pradesh v. Raj Narain", citation: "(1975) 4 SCC 428", principle: "Citizens have a right to know public acts, subject to legitimate claims of confidentiality.", summary: "The decision connected open government and access to information with democratic accountability." },
+      { id: "media-law-unit-2-rajagopal", caseName: "R. Rajagopal v. State of Tamil Nadu", citation: "(1994) 6 SCC 632", principle: "Press freedom must coexist with privacy, while the State cannot ordinarily impose prior restraint based on anticipated defamation.", summary: "The Auto Shankar decision formulated important rules governing private life, public records and official conduct." },
+      { id: "media-law-unit-2-cab", caseName: "Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal", citation: "(1995) 2 SCC 161", principle: "The right to communicate and receive information extends to electronic media, and airwaves are public property.", summary: "The Court rejected exclusive State monopoly and required broadcasting regulation to serve public good and pluralism." },
+      { id: "media-law-unit-2-shreya", caseName: "Shreya Singhal v. Union of India", citation: "(2015) 5 SCC 1", principle: "Vague and overbroad online-speech restrictions violate Article 19(1)(a); discussion and advocacy differ from incitement.", summary: "Section 66A of the IT Act was struck down, while the structured section 69A blocking framework was upheld." },
+      { id: "media-law-unit-2-puttaswamy", caseName: "Justice K.S. Puttaswamy (Retd.) v. Union of India", citation: "(2017) 10 SCC 1", principle: "Privacy is a fundamental right requiring legality, legitimate purpose and proportionality for interference.", summary: "A unanimous nine-judge Bench located privacy in dignity, liberty and the guarantees of Part III." },
+      { id: "media-law-unit-2-subramanian", caseName: "Subramanian Swamy v. Union of India", citation: "(2016) 7 SCC 221", principle: "Reputation is an element of Article 21 dignity, and criminal defamation was upheld subject to its legal ingredients and defences.", summary: "The Court balanced free expression against the constitutional value of individual reputation." },
+      { id: "media-law-unit-2-anuradha", caseName: "Anuradha Bhasin v. Union of India", citation: "(2020) 3 SCC 637", principle: "Speech and business through the internet receive constitutional protection; indefinite suspension and unreviewable restrictions are impermissible.", summary: "The Court required publication, proportionality and periodic review of telecommunications suspension orders." },
+      { id: "media-law-unit-2-subhash-agarwal", caseName: "Central Public Information Officer, Supreme Court of India v. Subhash Chandra Agarwal", citation: "(2020) 5 SCC 481", principle: "The Chief Justice of India's office is a public authority under RTI, with disclosure governed by careful balancing of transparency and competing interests.", summary: "The Constitution Bench addressed judicial records, privacy, confidentiality, independence and public-interest disclosure." },
+      { id: "media-law-unit-2-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "A narrowly tailored temporary postponement order may protect fair trial where publication creates a real and substantial risk of prejudice.", summary: "The Court framed postponement as an exceptional proportionality-based remedy balancing Articles 19(1)(a) and 21." },
+    ],
+    examFocus:
+      "Prepare the constitutional foundation of media freedom under Articles 14, 19 and 21; publication, circulation, editorial choice, audience rights and prior restraint; all eight Article 19(2) grounds; vagueness, overbreadth, proximity, chilling effect and proportionality; broadcasting and airwaves; internet shutdown doctrine; privacy, public interest and public curiosity; reputation, defamation and fair trial; the constitutional right to know; RTI sections 4, 6, 7, 8, 10, 22 and 24; journalistic source protection under section 15(2) of the Press Council Act; accreditation and court/legislative reporting; Articles 32 and 226; PIL maintainability; and the leading principles from Romesh Thappar, Brij Bhushan, Sakal Papers, Bennett Coleman, Raj Narain, Rajagopal, Cricket Association of Bengal, Shreya Singhal, Puttaswamy, Subramanian Swamy, Anuradha Bhasin, Subhash Chandra Agarwal and Sahara India.",
+    revisionNotes: `
+Constitutional rule: press and media freedom is part of Article 19(1)(a), supported in appropriate cases by Articles 14, 19(1)(g) and 21. It covers communication, publication, circulation, editorial choice and receipt of information, but creates no general immunity from valid law.
+
+Restriction test: identify one of the eight grounds in Article 19(2); demand authority of law; test proximity, reasonableness and proportionality; and check vagueness, overbreadth, procedural safeguards and chilling effect. Prior restraint requires especially strict scrutiny.
+
+Competing rights: privacy, dignity, reputation and fair trial are constitutional interests. Public interest is not public curiosity. Apply Puttaswamy and Rajagopal to privacy, Subramanian Swamy to reputation and Sahara India to exceptional postponement of reporting.
+
+Right to know: Raj Narain and S.P. Gupta link information with accountable government. The RTI Act gives every citizen a statutory process, subject to exemptions, severability, public-interest balancing and appeals. Journalists have no exclusive RTI status.
+
+Sources and remedies: section 15(2) of the Press Council Act protects sources only against compulsion by the Council. Use Articles 32 and 226 against unlawful State action. PIL requires bona fide public injury and an enforceable duty; it must not become private litigation or judicially administered censorship.
+    `.trim(),
   },
   {
     title: "Legal Dimensions of Media I",
