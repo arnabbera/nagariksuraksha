@@ -620,6 +620,9 @@ Sources and remedies: section 15(2) of the Press Council Act protects sources on
       "Explain legislative privilege, contempt and fair reporting.",
       "Assess official-secrets restrictions and public-interest reporting.",
       "Describe the statutory protection of working journalists and the Press Council's role.",
+      "Explain the transition from IPC sedition to section 152 of the Bharatiya Nyaya Sanhita.",
+      "Analyse negligence and editorial responsibility in media publication.",
+      "Apply constitutional safeguards to a multi-issue media-liability problem.",
     ],
     topics: [
       "Criminal defamation, obscenity and sovereignty-related offences",
@@ -636,6 +639,205 @@ Sources and remedies: section 15(2) of the Press Council Act protects sources on
       "Working Journalists and Other Newspaper Employees Act, 1955 and subsequent labour-law developments",
       "Press Council Act, 1978",
     ],
+    detailedContent: `
+1. Legal responsibility of media
+
+Media freedom carries legal responsibility. Publication may affect reputation, dignity, privacy, fair trial, public order, national security and the administration of justice. Liability depends upon the exact statement or conduct, the medium, the mental element, the person affected, the applicable statute and the availability of a defence.
+
+The same report may produce different proceedings. A false allegation may lead to a civil action for damages and a criminal complaint for defamation. Publication about a pending trial may raise contempt. Acquisition of a restricted document may attract official-secrets questions. Courts must analyse each cause of action separately rather than treating media freedom or public interest as a complete answer.
+
+2. Civil and criminal defamation
+
+Civil defamation is principally a tort protecting reputation. It ordinarily requires a defamatory statement concerning the claimant that is published to at least one person other than the claimant. Libel traditionally refers to permanent form and slander to transient form, though Indian remedies focus on the substance, publication and injury.
+
+Criminal defamation is now governed by section 356 of the Bharatiya Nyaya Sanhita, 2023. It covers making or publishing an imputation concerning a person with the prescribed intention, knowledge or reason to believe that the imputation will harm reputation, subject to statutory explanations and exceptions. The provision also addresses imputations concerning companies, associations, deceased persons in specified circumstances and ironic or alternative expression.
+
+Criminal guilt is not established merely because a person feels offended. The complainant must prove the statutory ingredients, and courts must examine the imputation as a whole, its context, reference, publication, mental element and exceptions.
+
+3. Defamatory meaning and identification
+
+A statement is defamatory when it tends to lower a person in the estimation of right-thinking members of society, exposes the person to hatred, ridicule or contempt, or adversely affects professional or social reputation. Meaning may be literal, inferential or arise through innuendo understood by persons possessing special facts.
+
+The claimant need not always be named if reasonable readers would identify the person. A statement about a very large or indeterminate class ordinarily gives no individual member a cause of action, while a sufficiently small and identifiable group may permit proof of personal reference.
+
+Headlines, captions, images and edited video must be read with the complete publication. A technically accurate sentence may become misleading and defamatory through juxtaposition, omission or a sensational headline.
+
+4. Publication, republication and digital dissemination
+
+Publication means communication to a third person. A newspaper publisher, editor, author or broadcaster may bear responsibility according to participation and the governing law. Repeating another person's allegation can amount to a fresh publication; attribution alone is not an automatic defence.
+
+Digital distribution complicates publication through forwarding, searchable archives, hyperlinks and platform hosting. Liability must still be tied to the defendant's legally relevant act and knowledge. Intermediary safe-harbour questions are distinct from the primary liability of the person who created or adopted the defamatory content.
+
+5. Defences to civil defamation
+
+Truth or justification is a complete civil defence when the substantial sting of the allegation is proved. Minor inaccuracies do not necessarily defeat the defence if the essential charge is true. Fair or honest comment protects opinion on a matter of public interest when it is recognisable as comment, based on facts that are true or privileged, and honestly held.
+
+Absolute privilege protects limited occasions such as statements within legislative or judicial proceedings according to law. Qualified privilege protects communication made pursuant to a legal, social or moral duty to a person having a corresponding interest, but may be defeated by malice. Consent, innocent dissemination and statutory reporting protections may apply in their proper fields.
+
+Public interest is not a substitute for proof. Responsible journalism, verification, opportunity to respond, source reliability and urgency may be relevant to fault and remedy, but the applicable Indian cause of action and precedent must be identified.
+
+6. Criminal-defamation exceptions and procedure
+
+The exceptions to BNS section 356 include, among other matters, imputations of truth required for public good, good-faith opinion regarding the public conduct of public servants, good-faith opinion on conduct touching a public question, substantially true reports of court proceedings, merits of decided cases and participants, merits of public performances, censure by lawful authority, good-faith accusations to authorised persons, protection of interests and good-faith caution.
+
+Truth alone is not enough under the public-good exception to criminal defamation; public good must also be established as required by the provision. Good faith demands due care and attention. A journalist who publishes a serious allegation without reasonable verification cannot rely merely upon belief or anonymous sourcing.
+
+Criminal defamation is generally initiated through a complaint by the aggrieved person under the procedural law, subject to special rules for specified public functionaries. Students should separate substantive ingredients under the BNS from cognizance and trial procedure under the BNSS.
+
+7. Constitutional validity of criminal defamation
+
+In Subramanian Swamy v. Union of India, the Supreme Court upheld criminal defamation as a reasonable restriction under Article 19(2) and treated reputation as an element of dignity under Article 21. The judgment does not remove the prosecution's burden or erase the statutory exceptions.
+
+Political criticism, satire and investigative reporting remain protected, but media defendants must show how the words, context and defence operate. Courts should guard against criminal process being used solely to silence legitimate scrutiny, while also protecting individuals from unjustified reputational injury.
+
+8. Obscenity under the Bharatiya Nyaya Sanhita
+
+The BNS contains offences concerning the sale, distribution, public exhibition and circulation of obscene material, including electronic form, and enhanced protection against supplying such material to children. It also addresses obscene acts and songs in public places. The precise section and elements must be proved; moral disapproval alone is insufficient.
+
+Obscenity is distinct from indecency and from sexual content that has literary, artistic, political, scientific or social value. Context, work as a whole, intended audience and contemporary community standards are important. Separate legislation protects children from sexual material and exploitation, and such material cannot claim ordinary expressive protection.
+
+9. Evolution of the obscenity test
+
+Ranjit D. Udeshi v. State of Maharashtra applied the older Hicklin approach, which focused on the tendency of isolated matter to corrupt susceptible readers. Later constitutional jurisprudence moved away from judging fragments in isolation.
+
+In Aveek Sarkar v. State of West Bengal, the Supreme Court adopted a contemporary community-standards approach and insisted that the publication be considered as a whole and in context. Nudity by itself is not invariably obscene. The inquiry is whether the material appeals to prurient interest and lacks the relevant redeeming context under the applicable law.
+
+10. Sovereignty-related speech and the sedition transition
+
+Section 124A of the Indian Penal Code historically criminalised sedition. Kedar Nath Singh v. State of Bihar upheld it only through a narrow construction connecting liability with incitement to violence or tendency to create public disorder. In S.G. Vombatkere v. Union of India, the Supreme Court in 2022 placed the continued use of section 124A in abeyance while reconsideration occurred.
+
+The IPC was repealed when the Bharatiya Nyaya Sanhita came into force on 1 July 2024. BNS section 152 now addresses acts endangering the sovereignty, unity and integrity of India through words, signs, visible or electronic communication, use of financial means or otherwise, with the mental element and conduct specified by the section.
+
+Section 152 is not simply to be labelled sedition and mechanically equated with IPC section 124A. Its text, explanations, constitutional limits and facts must be analysed. Lawful criticism of government measures aimed at alteration by lawful means is distinct from prohibited conduct. Mere disagreement or strong criticism cannot automatically become an offence against sovereignty.
+
+11. Negligence and duty of care in media activity
+
+Media negligence may arise where a legally recognised duty of care is breached and foreseeable injury results. Examples can include careless identification of a protected victim, publication of dangerous instructions, negligent misstatement or failure to take reasonable care in verifying a grave factual allegation.
+
+Not every inaccurate report creates an independent negligence action. Courts examine whether a duty exists, its scope, proximity, foreseeability, public-policy concerns, causation and legally recoverable damage. Where reputation is the substance of the injury, defamation principles should not be bypassed merely by relabelling the claim negligence.
+
+Reasonable editorial care includes checking documents, corroborating serious allegations, preserving records, seeking a response, distinguishing fact from opinion, correcting material error and applying heightened protection to children, sexual-offence survivors and vulnerable persons.
+
+12. Legislative privileges and media reporting
+
+Articles 105 and 194 protect the powers, privileges and immunities of Parliament, State Legislatures, their members and committees. Speech and votes within the House receive constitutional protection. Each House may regulate its proceedings and punish breach of privilege or contempt, subject to the constitutional framework and judicial review recognised by precedent.
+
+The media has no unlimited right to publish expunged, secret or prohibited proceedings. At the same time, reporting legislative business is central to democracy. Article 361A protects substantially true reports of proceedings of Parliament and State Legislatures, except secret sittings, subject to its conditions and without protecting malicious publication.
+
+In M.S.M. Sharma v. Sri Krishna Sinha, the Searchlight case, the Court examined legislative privilege against publication of expunged proceedings. Raja Ram Pal v. Hon'ble Speaker, Lok Sabha later confirmed that privilege is not wholly beyond judicial review, although courts respect legislative autonomy.
+
+13. Contempt of court: constitutional and statutory basis
+
+The Supreme Court and High Courts are courts of record with contempt powers under Articles 129 and 215. The Contempt of Courts Act, 1971 defines and regulates civil and criminal contempt. Article 19(2) expressly recognises contempt of court as a ground for reasonable restriction.
+
+Civil contempt concerns wilful disobedience of a judgment, decree, direction, order, writ or other process, or wilful breach of an undertaking. Criminal contempt includes publication or acts that scandalise or lower court authority, prejudice or interfere with judicial proceedings, or obstruct administration of justice in another manner.
+
+Contempt protects justice, not the personal dignity of judges. Fair criticism of judicial acts and reasoned scrutiny of judgments are permissible. The jurisdiction must be exercised with restraint and with attention to whether there is substantial interference with the due course of justice.
+
+14. Media defences and safeguards under contempt law
+
+The Act protects innocent publication where statutory conditions are met, fair and accurate reporting of judicial proceedings, and fair criticism of judicial acts after a case is decided. Truth may be permitted as a defence when the court is satisfied that it is in public interest and the request is bona fide.
+
+Section 13 restricts punishment unless the contempt substantially interferes, or tends substantially to interfere, with the due course of justice. Reporting must respect in-camera proceedings, statutory identity protections, sealing orders and lawful postponement directions.
+
+In P.N. Duda v. P. Shiv Shanker, the Court protected fair criticism made in proper context. Sahara India Real Estate Corp. v. SEBI recognised narrowly tailored postponement orders where necessary to prevent a real and substantial risk to fair trial.
+
+15. Trial by media and sub judice reporting
+
+Media may report allegations, investigation and open-court proceedings, but it should not pronounce guilt, coach witnesses, publish inadmissible confessions as established fact or conduct a parallel trial. The accused's presumption of innocence and fair-trial rights under Article 21 must be balanced with Article 19(1)(a).
+
+The mere pendency of a case does not impose a complete publication ban. The legal question is whether particular reporting creates a real risk of prejudice or interference. Courts should prefer less restrictive alternatives and use postponement only when necessary, proportionate and time-limited.
+
+16. Official Secrets Act, 1923
+
+The Official Secrets Act remains relevant to espionage, prohibited places, secret official codes and wrongful communication or receipt of specified official information. Section 3 deals with spying-related conduct for purposes prejudicial to State safety or interests. Section 5 governs wrongful communication, use, retention and handling of protected official information in the circumstances stated.
+
+A document does not become punishable merely because an official stamps it secret; statutory elements and the accused's conduct and mental state must be proved. Journalists have no blanket immunity, but national-security assertions cannot replace proof.
+
+The Right to Information Act, 2005 is crucial. Sections 8 and 24 protect specified interests, while section 8(2) permits public-interest disclosure in its terms and section 22 gives the RTI Act overriding effect over inconsistent law, including the Official Secrets Act. In Yashwant Sinha v. Central Bureau of Investigation, the Supreme Court declined to exclude documents from consideration merely because their acquisition was alleged to violate secrecy law.
+
+17. Working journalists and the labour-code transition
+
+The Working Journalists and Other Newspaper Employees (Conditions of Service) and Miscellaneous Provisions Act, 1955 historically provided sector-specific protections concerning service conditions, hours, leave, retrenchment and wage-fixing institutions. Express Newspapers v. Union of India upheld welfare regulation while warning that legislation cannot be used to destroy press freedom.
+
+India's four labour codes came into force on 21 November 2025. The Occupational Safety, Health and Working Conditions Code, 2020 consolidates the 1955 working-journalists legislation and includes working journalists within its sectoral framework. Wage, industrial-relations and social-security questions must now be read with the Code on Wages, 2019, Industrial Relations Code, 2020 and Code on Social Security, 2020, together with applicable rules and transition provisions.
+
+Journalistic independence does not erase the employment relationship. Appointment terms, wages, safety, working hours, retrenchment, social security and dispute resolution arise under labour law, while editorial freedom and source confidentiality present related but distinct questions.
+
+18. Press Council of India: structure and purpose
+
+The Press Council Act, 1978 establishes the Press Council to preserve the freedom of the press and maintain and improve the standards of newspapers and news agencies. Its composition brings together a Chairperson and representatives of newspapers, news agencies, journalism and specified public institutions according to the Act.
+
+Under section 13, the Council may help newspapers maintain independence, build standards and a code of conduct, promote public taste and responsibility, review developments affecting news dissemination and perform related statutory functions. Its Norms of Journalistic Conduct guide accuracy, fairness, privacy, communal reporting, paid news and other ethical questions.
+
+19. Press Council inquiries, powers and limits
+
+Under section 14, the Council may warn, admonish or censure a newspaper, news agency, editor or journalist, or disapprove conduct, after inquiry and an opportunity of hearing. It may also address interference with press freedom within its jurisdiction.
+
+Section 15 gives specified civil-court powers for inquiry. However, the Council cannot compel disclosure of a journalist's source under section 15(2). Its decisions are authoritative within the statutory scheme, but it does not award ordinary civil damages or impose criminal punishment. Television and purely digital publishers do not automatically fall within its print-focused jurisdiction merely because they perform journalism.
+
+20. Applied problem and examination method
+
+Assume a newspaper publishes an unverified allegation that a businessperson financed terrorism, reproduces a leaked restricted document, declares an arrested suspect guilty, reveals an expunged legislative statement and refuses to answer a Press Council complaint. The editor claims that Article 19(1)(a) protects every part of the publication.
+
+Analyse each issue separately: BNS section 356 and defamation exceptions; BNS section 152 only if its precise sovereignty-related ingredients are met; Official Secrets Act sections 3 or 5 and the RTI relationship; contempt and fair-trial risk; Articles 105, 194 and 361A for legislative reporting; and sections 13–15 of the Press Council Act. Article 19(1)(a) remains central, but each restriction must be traced to law and Article 19(2), with proof, defences and proportionality considered independently.
+
+For an examination answer, use the sequence: identify the medium and statement; identify the protected interest and claimant; state the exact constitutional or statutory rule; establish every ingredient; examine truth, good faith, privilege, public interest and other defences; distinguish civil, criminal, contempt, privilege and regulatory remedies; and conclude with a proportionate outcome.
+    `.trim(),
+    keyPoints: [
+      "A single publication may raise distinct civil, criminal, contempt, privilege, secrecy and regulatory issues; each requires separate analysis.",
+      "Civil defamation protects reputation through tort remedies, while criminal defamation is governed by BNS section 356 and its explanations and exceptions.",
+      "Truth is a civil defence, but the criminal exception also requires public good; good faith demands due care and attention.",
+      "Republication can create fresh responsibility, and attribution alone is not an automatic defence.",
+      "Obscenity is assessed contextually under contemporary community standards; nudity alone is not invariably obscene.",
+      "IPC section 124A is historical after 1 July 2024; current cases must apply the distinct text and ingredients of BNS section 152.",
+      "Media negligence requires duty, breach, causation and recoverable damage and cannot automatically bypass defamation safeguards.",
+      "Articles 105 and 194 protect legislative privilege, while Article 361A conditionally protects substantially true reports of proceedings.",
+      "Contempt protects the administration of justice; fair reporting, fair criticism and qualified truth protections remain important.",
+      "Official Secrets Act liability requires proof of statutory elements; RTI sections 8(2) and 22 affect secrecy claims.",
+      "Working-journalist protection must now be read through the labour codes effective from 21 November 2025 and applicable transition rules.",
+      "The Press Council may inquire, warn, admonish or censure but does not function as a criminal court or ordinary damages tribunal.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-3-constitution-speech", title: "Speech and permissible restrictions", provision: "Articles 19(1)(a) and 19(2)", description: "Protects media expression while permitting reasonable restrictions concerning defamation, contempt, security, public order, decency and other listed grounds." },
+      { id: "media-law-unit-3-bns-defamation", title: "Criminal defamation", provision: "Section 356, Bharatiya Nyaya Sanhita, 2023", description: "Defines criminal defamation and supplies explanations, exceptions and punishment within the current substantive criminal law." },
+      { id: "media-law-unit-3-bns-obscenity", title: "Obscene material and public acts", provision: "Bharatiya Nyaya Sanhita, 2023", description: "Regulates obscene publications and electronic material, supply to children, and obscene acts or songs in public places." },
+      { id: "media-law-unit-3-bns-sovereignty", title: "Acts endangering sovereignty, unity and integrity", provision: "Section 152, Bharatiya Nyaya Sanhita, 2023", description: "Creates the present sovereignty-related offence; it must be applied through its own text rather than mechanically reproducing repealed IPC section 124A." },
+      { id: "media-law-unit-3-legislative-privilege", title: "Legislative privileges", provision: "Articles 105 and 194, Constitution of India", description: "Protects speech, votes and institutional privileges of Parliament and State Legislatures within the constitutional framework." },
+      { id: "media-law-unit-3-legislative-reporting", title: "Reporting legislative proceedings", provision: "Article 361A, Constitution of India", description: "Conditionally protects publication of substantially true reports of legislative proceedings, excluding secret sittings and malicious publication." },
+      { id: "media-law-unit-3-contempt-powers", title: "Constitutional contempt powers", provision: "Articles 129 and 215, Constitution of India", description: "Recognises the Supreme Court and High Courts as courts of record with power to punish contempt." },
+      { id: "media-law-unit-3-contempt-definitions", title: "Civil and criminal contempt", provision: "Sections 2, 3, 4, 5 and 13, Contempt of Courts Act, 1971", description: "Defines contempt and protects innocent publication, fair reports, fair criticism and the substantial-interference threshold." },
+      { id: "media-law-unit-3-osa", title: "Official information and prohibited places", provision: "Sections 3 and 5, Official Secrets Act, 1923", description: "Addresses spying-related conduct and wrongful communication, receipt, use or retention of specified official information." },
+      { id: "media-law-unit-3-rti", title: "Public-interest disclosure and override", provision: "Sections 8(2) and 22, Right to Information Act, 2005", description: "Provides public-interest balancing and overriding effect relevant to claims under the Official Secrets Act." },
+      { id: "media-law-unit-3-journalists", title: "Working-journalist protections", provision: "Occupational Safety, Health and Working Conditions Code, 2020 and connected labour codes", description: "Current labour-code framework governing working conditions, wages, industrial relations and social security after commencement on 21 November 2025." },
+      { id: "media-law-unit-3-pci-object", title: "Press Council object and functions", provision: "Sections 13–14, Press Council Act, 1978", description: "Directs the Council to preserve press freedom, improve standards and inquire into specified misconduct or interference." },
+      { id: "media-law-unit-3-pci-powers", title: "Press Council inquiry powers", provision: "Section 15, Press Council Act, 1978", description: "Confers inquiry powers while preventing the Council from compelling disclosure of a newspaper or journalist's source." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-3-subramanian", caseName: "Subramanian Swamy v. Union of India", citation: "(2016) 7 SCC 221", principle: "Criminal defamation is a constitutionally permissible protection of reputation under Article 21, subject to statutory ingredients and exceptions.", summary: "The Supreme Court upheld the predecessor criminal-defamation provisions and balanced speech with dignity and reputation." },
+      { id: "media-law-unit-3-rajagopal", caseName: "R. Rajagopal v. State of Tamil Nadu", citation: "(1994) 6 SCC 632", principle: "Press freedom coexists with privacy and defamation law, and anticipated defamation does not ordinarily justify prior restraint.", summary: "The Auto Shankar case addressed publication about private life, public records and conduct of public officials." },
+      { id: "media-law-unit-3-ranjit-udeshi", caseName: "Ranjit D. Udeshi v. State of Maharashtra", citation: "AIR 1965 SC 881", principle: "The Court historically applied the Hicklin obscenity approach while recognising obscenity as a permitted restriction.", summary: "The prosecution concerning Lady Chatterley's Lover became the starting point for India's judicial obscenity doctrine." },
+      { id: "media-law-unit-3-aveek", caseName: "Aveek Sarkar v. State of West Bengal", citation: "(2014) 4 SCC 257", principle: "Obscenity must be judged through contemporary community standards by considering the work as a whole and in context.", summary: "The Court held that nudity alone is not invariably obscene and rejected isolated, context-free assessment." },
+      { id: "media-law-unit-3-kedar-nath", caseName: "Kedar Nath Singh v. State of Bihar", citation: "AIR 1962 SC 955", principle: "The repealed IPC sedition offence was historically confined to incitement to violence or tendency to create public disorder.", summary: "The case remains important constitutional history but must not be presented as the text of current BNS section 152." },
+      { id: "media-law-unit-3-vombatkere", caseName: "S.G. Vombatkere v. Union of India", citation: "Order dated 11 May 2022", principle: "The Supreme Court placed the use of IPC section 124A in abeyance pending governmental reconsideration.", summary: "The interim order marked the final major judicial stage before repeal of the IPC and commencement of the BNS." },
+      { id: "media-law-unit-3-searchlight", caseName: "M.S.M. Sharma v. Sri Krishna Sinha", citation: "AIR 1959 SC 395", principle: "Publication of expunged legislative proceedings may engage the constitutional privileges of the House.", summary: "The Searchlight litigation examined the relationship between press reporting and legislative privilege." },
+      { id: "media-law-unit-3-raja-ram-pal", caseName: "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha", citation: "(2007) 3 SCC 184", principle: "Legislative privilege is constitutionally significant but not wholly immune from judicial review.", summary: "The Constitution Bench reviewed parliamentary expulsion and explained institutional autonomy and constitutional limits." },
+      { id: "media-law-unit-3-pn-duda", caseName: "P.N. Duda v. P. Shiv Shanker", citation: "(1988) 3 SCC 167", principle: "Fair and contextual criticism of the judiciary does not automatically amount to criminal contempt.", summary: "The Court stressed tolerance of criticism while protecting the administration of justice from substantial interference." },
+      { id: "media-law-unit-3-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "A temporary and narrowly tailored postponement order may protect fair trial against a real and substantial risk of prejudicial publicity.", summary: "The Court balanced free reporting with the administration of justice through necessity and proportionality." },
+      { id: "media-law-unit-3-yashwant-sinha", caseName: "Yashwant Sinha v. Central Bureau of Investigation", citation: "(2020) 2 SCC 338", principle: "Allegations concerning unauthorised acquisition or official secrecy do not by themselves make relevant documents inadmissible from judicial consideration.", summary: "In the Rafale review proceedings, the Court rejected the preliminary objection seeking exclusion of published documents." },
+      { id: "media-law-unit-3-express-newspapers", caseName: "Express Newspapers (Private) Ltd. v. Union of India", citation: "AIR 1958 SC 578", principle: "Legitimate labour welfare laws may govern newspaper establishments, but regulation cannot be designed to suppress press freedom.", summary: "The Court upheld substantial working-journalist protections while preserving constitutional scrutiny of hostile burdens." },
+    ],
+    examFocus:
+      "Prepare civil-defamation elements and defences; BNS section 356 explanations, exceptions and good faith; publication and republication; obscenity under the BNS and the transition from Hicklin to contemporary community standards; historical IPC section 124A, Kedar Nath and S.G. Vombatkere, contrasted with current BNS section 152; negligence and editorial duty; Articles 105, 194 and 361A; Articles 129 and 215 and Contempt Act sections 2–5 and 13; trial by media; Official Secrets Act sections 3 and 5 with RTI sections 8(2) and 22; the labour-code transition for working journalists effective 21 November 2025; Press Council Act sections 13–15; and the principles in Subramanian Swamy, Rajagopal, Ranjit Udeshi, Aveek Sarkar, Kedar Nath, S.G. Vombatkere, M.S.M. Sharma, Raja Ram Pal, P.N. Duda, Sahara India, Yashwant Sinha and Express Newspapers.",
+    revisionNotes: `
+Defamation: identify the imputation, claimant, defamatory meaning, publication and fault. Civil defences include substantial truth, honest comment and privilege. For BNS section 356, apply every ingredient and exception; truth must also be for public good where the exception so requires, and good faith requires due care.
+
+Obscenity and sovereignty: judge alleged obscenity as a whole and in context under contemporary standards. Treat IPC section 124A as historical after 1 July 2024; analyse current BNS section 152 through its own words, mental element and constitutionally required proximity to prohibited harm.
+
+Institutions: Articles 105 and 194 govern legislative privilege; Article 361A conditionally protects substantially true reports. Articles 129 and 215 and the Contempt Act protect justice while preserving fair reports and criticism. Trial by media requires balancing Article 19(1)(a) with fair trial under Article 21.
+
+Secrets, labour and standards: apply Official Secrets Act sections 3 and 5 with RTI sections 8(2) and 22. Apply the labour codes and transition rules to working journalists from 21 November 2025. The Press Council protects press freedom and standards and can warn, admonish or censure, but it cannot award civil damages or impose criminal punishment.
+    `.trim(),
   },
   {
     title: "Legal Dimensions of Media II",
