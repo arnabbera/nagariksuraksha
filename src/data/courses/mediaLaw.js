@@ -55,6 +55,8 @@ const units = [
       "Compare the principal normative theories of the press and media.",
       "Explain the evolution of media legislation in India.",
       "Examine the present legal framework governing newspapers and periodicals.",
+      "Distinguish registration regulation from control over editorial content.",
+      "Apply the Press and Registration of Periodicals Act, 2023 to a practical registration problem.",
     ],
     topics: [
       "Meaning, scope and functions of media",
@@ -69,6 +71,316 @@ const units = [
       "Press and Registration of Periodicals Rules, 2024",
       "Historical development from the Press and Registration of Books Act, 1867",
     ],
+    detailedContent: `
+1. Meaning and concept of media
+
+The word media is the plural of medium. In communication studies, a medium is a channel through which information, ideas, opinions, images, sound or entertainment passes from a communicator to an audience. Media therefore includes both the technological channel and the organised institution that selects, produces and distributes content.
+
+Mass media communicates with a large, dispersed and usually heterogeneous audience. Traditional mass media includes newspapers, magazines, books, radio, television and cinema. Digital media includes websites, online news portals, podcasts, streaming services, social networks and user-generated platforms. The boundaries now overlap: a newspaper may publish in print, operate a website, stream video and distribute content through social media.
+
+Media law is not one self-contained statute. It is a field formed by constitutional law, criminal law, tort, contempt, copyright, labour law, consumer law, broadcasting and telecommunications regulation, data protection, information-technology law and sector-specific rules. The applicable rule depends upon the medium, content, speaker, audience and harm involved.
+
+2. Essential characteristics and functions of media
+
+Media performs several democratic and social functions. It supplies information; explains events; provides a forum for discussion; scrutinises public institutions; communicates culture and education; entertains; carries advertising; preserves public memory; and enables citizens to participate in political and social life. Investigative journalism may expose wrongdoing, while local and community media may make voices visible that national institutions overlook.
+
+The familiar description of the press as the fourth estate emphasises its watchdog role alongside the legislature, executive and judiciary. It is a constitutional metaphor, not a grant of governmental power or immunity from ordinary law. Editorial independence must coexist with accuracy, fairness, privacy, reputation, national security, public order and fair-trial rights.
+
+Communication may be one-to-many, as in a printed newspaper or terrestrial broadcast; one-to-one, as in private messaging; or many-to-many, as on a social platform. Digital communication is interactive, searchable, replicable, persistent and capable of crossing borders instantly. These features alter the scale of both expression and injury.
+
+3. Distinguishing forms of media
+
+Print media uses printed copies, normally at a stated periodicity, and includes newspapers and magazines. Broadcast media transmits audio or audiovisual programming through spectrum, cable, satellite or similar distribution systems. Cinema combines expression, performance and commercial exhibition and has historically been governed by a prior-certification system.
+
+Digital media may reproduce traditional journalism or create entirely new forms such as social networking, video-sharing, live-streaming and algorithmically recommended content. Ownership and editorial control also differ. A publisher or broadcaster generally selects content before distribution; an online intermediary may primarily host content supplied by users, although its design and moderation choices may carry separate legal significance.
+
+The classification matters. A statute regulating a printed periodical cannot automatically be applied to every blog, book or digital post. Courts first identify the legal character of the medium and activity and then examine the governing constitutional and statutory framework.
+
+4. A brief global history of mass communication
+
+Oral traditions, inscriptions, manuscripts and handwritten newsletters preceded mass media. The development of movable-type printing in Europe in the fifteenth century made the repeated production of texts faster and cheaper. Printing expanded literacy, religious and political debate, commercial information and the possibility of communicating with a mass public.
+
+The nineteenth century brought steam-powered presses, cheaper paper, rail transport and the telegraph. These technologies enabled high-circulation newspapers and rapid news transmission. Photography and motion pictures added visual communication. During the twentieth century, radio and television created simultaneous national audiences and brought spectrum licensing and public-service broadcasting into media law.
+
+Satellite communication, cable television and economic liberalisation multiplied channels. The internet then reduced entry barriers and separated publication from physical distribution. Smartphones and social platforms turned many audience members into creators and distributors. This evolution explains why legal systems moved from rules centred on printers and physical copies toward frameworks dealing with broadcasting, platforms, data and networked speech.
+
+5. Development of the press in India
+
+Indian traditions of public communication long predate modern newspapers. The colonial print era is conventionally traced through James Augustus Hicky's Bengal Gazette, first published in Calcutta in 1780. Early newspapers served European communities but Indian-language publications and reform journals later became important forums for social and political debate.
+
+Colonial press policy alternated between licensing, security deposits, registration and prosecution. Lord Wellesley's 1799 regulations imposed pre-censorship controls. The 1823 licensing regulations restricted publication without a licence. The Press Act of 1835 associated with Charles Metcalfe relaxed licensing while requiring identification of the printer and publisher, earning Metcalfe a reputation as a liberator of the Indian press.
+
+After 1857, the Press and Registration of Books Act, 1867 established a lasting registration and identification framework. The Vernacular Press Act, 1878 targeted Indian-language publications and was repealed in 1882. The Newspapers (Incitement to Offences) Act, 1908, Indian Press Act, 1910 and Press (Emergency Powers) Act, 1931 strengthened coercive control through forfeiture, security and suppression. The Official Secrets Act, 1923 created restrictions that continue to affect reporting on government information.
+
+Indian-owned newspapers became central to social reform and the freedom movement. Publications associated with Raja Rammohan Roy, Bal Gangadhar Tilak, Mahatma Gandhi and other leaders treated journalism as public education and political mobilisation. Colonial prosecutions also demonstrated how sedition, security and press laws could be used against dissent.
+
+6. Post-Independence development of Indian media
+
+The Constitution did not create a separately worded freedom of the press. The Supreme Court nevertheless recognised press freedom within Article 19(1)(a), subject to the grounds in Article 19(2). Early decisions against circulation bans and pre-censorship established that dissemination and circulation form part of free expression.
+
+The First Press Commission, appointed in 1952, examined press standards, ownership and working conditions. Its recommendations contributed to legislation concerning working journalists and the creation of a Press Council. The first Press Council was constituted under the Press Council Act, 1965. After its abolition during the Emergency, Parliament enacted the Press Council Act, 1978 and the Council was re-established.
+
+Radio and television initially developed under direct governmental control. Later institutional reform, satellite television, cable networks and liberalisation created a mixed public and private broadcast sector. Cinema continued under the Cinematograph Act, 1952. From the 1990s onward, cable, satellite, private news broadcasting and the internet produced medium-specific legislation, licensing, programme codes and self-regulatory arrangements.
+
+The Information Technology Act, 2000 addressed electronic records, cyber offences, intermediary liability and governmental powers affecting online content. Media convergence now means that the same report may simultaneously engage print registration, broadcasting rules, copyright, privacy, criminal law and platform governance.
+
+7. Why media theories matter in law
+
+Media theories describe the relationship among the State, the press, owners, journalists and the public. They help explain why a legal system permits, restricts or requires particular forms of communication. They are normative models, not statutes, and actual systems often combine features of several models.
+
+An examination answer should not merely list the theories. It should identify who controls media, what conception of truth or public interest is used, what duties the press carries and what form of accountability is considered legitimate.
+
+8. Authoritarian theory
+
+Authoritarian theory treats media as subordinate to the ruling authority. Publication may depend upon licences, prior approval or official privilege. Criticism viewed as threatening the State may be censored, punished or suppressed. The stated justification is frequently order, security or political unity, but the structure gives the government decisive control over public communication.
+
+Colonial licensing, prior censorship, security deposits and forfeiture laws illustrate authoritarian techniques. The decisive feature is not merely the existence of regulation; every constitutional democracy regulates harmful conduct. It is the absence of independent limits, proportionality, public justification and effective review of official control.
+
+9. Libertarian theory
+
+Libertarian theory rests upon individual freedom, reason and a marketplace of ideas. Government should not determine truth in advance. Competing views should be permitted so that citizens can judge them. Private ownership and freedom from prior restraint are therefore central features.
+
+Its strength is distrust of censorship and recognition of individual autonomy. Its limitations include unequal access, concentration of ownership, commercial pressure, misinformation and the possibility that nominal freedom benefits those with the greatest economic or technological power. Modern constitutional law protects robust expression but does not treat speech as wholly free from responsibility.
+
+10. Social-responsibility theory
+
+Social-responsibility theory accepts media freedom but couples it with duties to provide truthful, diverse and socially significant information. Because media institutions exercise influence and scarce resources may be involved, professional ethics, correction mechanisms, public-service obligations and carefully designed regulation may be justified.
+
+This theory supports accountability without assuming that government should direct editorial judgment. The central problem is institutional design: responsibility must not become a vague excuse for censorship, while self-regulation must not become protection from meaningful scrutiny. Independence, transparency and proportionality are essential.
+
+11. Soviet-communist and development-media theories
+
+The Soviet-communist model historically treated media as an instrument of the working class under party leadership. Private ownership and adversarial competition were rejected, and communication was directed toward collective political and economic goals. It differs from general authoritarianism in its ideological account of ownership and class power, although both can concentrate control.
+
+Development-media theory argues that media in developing societies may promote literacy, health, national integration and economic development. It recognises resource constraints and nation-building objectives. Its danger is that public-development goals can be invoked to suppress criticism. A democratic version requires plural participation, independent scrutiny and protection of disagreement.
+
+12. Democratic-participant theory and the public sphere
+
+Democratic-participant theory criticises both central State control and concentrated commercial media. It emphasises local, community and alternative media; access by ordinary citizens; horizontal communication; cultural diversity; and participation in creating content. Community radio and citizen journalism illustrate aspects of this approach.
+
+The public-sphere idea describes a social space in which citizens exchange reasons about common affairs. Media can enlarge that space, but ownership concentration, exclusion, surveillance, manipulation and algorithmic amplification can distort it. Media law therefore concerns not only restraint by the State but also the conditions necessary for plural and informed public discussion.
+
+13. Media legislation in the Indian constitutional setting
+
+Media legislation must be read with Articles 14, 19(1)(a), 19(1)(g) and 21. A newspaper is both a vehicle of expression and an organised enterprise, but regulation of business cannot be used indirectly to abridge protected circulation or editorial freedom. Article 19(2) permits reasonable restrictions on speech only on its specified grounds, while Article 19(6) permits reasonable restrictions on trade or profession.
+
+Registration law serves administrative purposes such as identifying publishers, maintaining public records and verifying circulation. It does not give the registering authority general power to approve editorial opinion. Content restrictions must have a separate legal foundation and satisfy constitutional requirements.
+
+The regulatory map is fragmented. Print registration, journalistic standards, broadcasting, films, cable networks, copyright, contempt, official secrets, criminal offences, advertising, personal data and online intermediaries are governed through different enactments and institutions. The first step in any problem is therefore to classify the medium and the impugned activity.
+
+14. From the 1867 Act to the Press and Registration of Periodicals Act, 2023
+
+The Press and Registration of Books Act, 1867 was enacted in the colonial period. It required declarations relating to printing presses and newspapers, identification of printers and publishers, delivery of copies and registration functions later administered through the Registrar of Newspapers for India. Though amended over time, its declaration-based and paper-oriented structure remained tied to nineteenth-century administration.
+
+The Press and Registration of Periodicals Act, 2023 replaced the 1867 Act and came into force on 1 March 2024 together with the Press and Registration of Periodicals Rules, 2024. The Registrar of Newspapers for India is now the Press Registrar General of India. The new system uses the Press Sewa Portal for title allotment, applications, communication and compliance and substantially removes physical interaction from the registration process.
+
+The 2023 Act is principally a registration statute. It does not replace constitutional protections, the Press Council framework or laws governing unlawful content. It also substantially decriminalises procedural defaults while retaining administrative penalties and narrowly defined criminal consequences.
+
+15. Scope and important definitions under the 2023 Act
+
+A periodical means a publication, including a newspaper, published and printed at regular intervals and containing public news or comments on public news. A book or journal, including a scientific, technical or academic book or journal, is excluded. The statutory classification therefore turns on regular printed publication and public-news content, not merely use of the words magazine or journal.
+
+An owner is the person who owns a periodical. A publisher is responsible for publishing it. A printer is the owner or keeper of a printing press. The Specified Authority is ordinarily a District Magistrate, Collector or other State or Union-territory officer notified for the purpose. The Press Registrar General performs the central registration and record-keeping functions.
+
+A citizen of India or a person or entity registered under Indian law may bring out a periodical, subject to the statutory disqualification connected with conviction for terrorist activity, unlawful activity or an offence against the security of the State. Every publisher must obtain a certificate of registration with the owner's authorisation.
+
+16. Printing-press intimation and registration procedure
+
+Under section 3, a printer must send online intimation to the Press Registrar General and the relevant Specified Authority within thirty days of starting a printing press for a periodical. Changes must also be intimated; a move into another authority's jurisdiction requires the prescribed fresh communication.
+
+For a new periodical, the owner creates an account on the Press Sewa Portal, proposes admissible titles with the language and place of publication, and appoints a publisher. The publisher completes the registration application, identifies an onboarded printing press and pays the prescribed processing fee. The Portal forwards the application simultaneously to the Press Registrar General and the Specified Authority for comments.
+
+Title scrutiny protects the distinct identity of registered periodicals. The proposed title must comply with the PRGI title guidelines and must not be the same as or impermissibly similar to an existing title. The online process permits correction during the prescribed window and provides an opportunity to respond before refusal. If satisfied, the Press Registrar General grants the certificate of registration.
+
+The process can be remembered as: owner proposes title and appoints publisher; publisher applies and selects printer; printer confirms the press; Specified Authority comments; PRGI verifies and grants or refuses registration.
+
+17. Continuing obligations of a registered periodical
+
+Registration is followed by continuing compliance. The publisher must ensure that the periodical contains the prescribed imprint information identifying relevant publication particulars. A registered publication must furnish its annual statement within the statutory and rule-based timeline. Changes to registration particulars and transfer of ownership must follow the online revision or transfer procedure.
+
+The publisher must upload the electronic version of a newspaper on the Press Sewa Portal within the prescribed period and deliver required copies in the manner specified by the Rules. The Press Registrar General may verify circulation through desk audit or physical inspection in the circumstances laid down by the framework.
+
+Suspension may follow registration obtained by false representation or concealment, failure to publish continuously, false annual particulars or prolonged failure to furnish annual statements. Cancellation may follow failure to cure a ground of suspension, impermissible title duplication or relevant conviction. An affected person must use the statutory appellate remedy and may seek constitutional review where legally available.
+
+18. Registration, regulation and freedom of the press
+
+Registration and censorship are legally distinct. Requiring accurate identification and periodic information may serve legitimate administrative purposes. A rule that controls page numbers, circulation, newsprint or economic viability because of a publication's content may directly or indirectly burden freedom of expression.
+
+Courts examine substance rather than labels. A measure described as commercial, fiscal or administrative may still violate Article 19(1)(a) if its direct and inevitable effect restricts circulation, editorial choice or the ability to publish. Conversely, press freedom does not exempt media enterprises from laws of general application that do not abridge expression and satisfy constitutional standards.
+
+19. Leading constitutional decisions shaping print-media development
+
+Romesh Thappar v. State of Madras invalidated a ban on the entry and circulation of a journal and recognised circulation as an essential part of publication. Brij Bhushan v. State of Delhi invalidated an order requiring prior scrutiny of newspaper content and established the constitutional hostility to pre-censorship.
+
+Express Newspapers (Private) Ltd. v. Union of India accepted legitimate regulation of employment conditions while stressing that laws cannot single out the press to undermine its freedom. Sakal Papers (P) Ltd. v. Union of India struck down price-page regulation because it curtailed circulation and could not be justified merely as a business regulation.
+
+Bennett Coleman & Co. v. Union of India invalidated aspects of the newsprint policy whose direct effect restricted page growth and circulation. Indian Express Newspapers v. Union of India held that the press is not immune from taxation, but fiscal measures affecting it require careful constitutional scrutiny because of their impact on dissemination and public discussion.
+
+20. Practical problem and examination method
+
+Assume that a company proposes a weekly printed publication containing public news and commentary. It begins publication before obtaining registration, uses a title similar to an existing newspaper and fails to identify its printer. The publisher argues that Article 19(1)(a) makes registration unnecessary.
+
+The answer should first classify the publication as a periodical under the 2023 Act. Identify the owner, publisher, printer, Specified Authority and Press Registrar General. Explain the online title-allotment and registration process, the printing-press intimation, title-admissibility rule and continuing duties. Reject the claim of total immunity: reasonable administrative registration is distinct from prior censorship, although every decision remains subject to the statute, natural justice and constitutional review.
+
+For a theory question, define media; distinguish print, broadcast and digital forms; explain media functions; trace technological and Indian legal history; compare authoritarian, libertarian, social-responsibility, Soviet-communist, development and democratic-participant theories; and conclude by connecting pluralism, accountability and press freedom. For a statutory problem, use the sequence: classify the publication, identify the actors, state the current Act and Rules, apply the online procedure, examine the alleged default, and state the remedy.
+    `.trim(),
+    keyPoints: [
+      "Media includes both communication technologies and the institutions that select, produce and distribute content.",
+      "Print, broadcasting, cinema and digital media overlap, but each may attract a different legal framework.",
+      "The press acts as an information provider, public forum and democratic watchdog, but the fourth-estate description does not create immunity from law.",
+      "Authoritarian, libertarian, social-responsibility, Soviet-communist, development-media and democratic-participant theories differ on control, ownership, duty and accountability.",
+      "Indian print history moved from colonial licensing and security laws toward constitutional protection under Article 19(1)(a).",
+      "Freedom of the press is part of freedom of speech and expression even though the Constitution does not separately name it.",
+      "The Press and Registration of Periodicals Act, 2023 replaced the Press and Registration of Books Act, 1867 from 1 March 2024.",
+      "The current framework uses the Press Sewa Portal and the Press Registrar General of India for title allotment, registration and compliance.",
+      "A periodical must be regularly published and printed and contain public news or comments on public news; specified books and journals are excluded.",
+      "Registration is an administrative framework and must not be confused with general authority to approve or censor editorial content.",
+      "The publisher must obtain registration, while the printer must give the prescribed intimation concerning the printing press.",
+      "Circulation is part of press freedom; indirect economic or administrative restrictions may violate Article 19(1)(a) when their direct effect burdens publication or dissemination.",
+    ],
+    statutoryProvisions: [
+      {
+        id: "media-law-unit-1-constitution",
+        title: "Constitution of India",
+        provision: "Articles 19(1)(a), 19(1)(g) and 19(2)",
+        description:
+          "Protects speech, expression and lawful occupation while permitting only constitutionally specified reasonable restrictions; press freedom is judicially located within Article 19(1)(a).",
+      },
+      {
+        id: "media-law-unit-1-prpa-scope",
+        title: "Press and Registration of Periodicals Act, 2023",
+        provision: "Sections 1–2",
+        description:
+          "Establishes the Act's application and definitions, including periodical, newspaper, owner, publisher, printer and Specified Authority.",
+      },
+      {
+        id: "media-law-unit-1-printing-press",
+        title: "Printing-press intimation",
+        provision: "Section 3, Press and Registration of Periodicals Act, 2023",
+        description:
+          "Requires the printer to intimate the Press Registrar General and Specified Authority within the prescribed time after starting a printing press for periodicals.",
+      },
+      {
+        id: "media-law-unit-1-prgi",
+        title: "Press Registrar General of India",
+        provision: "Press and Registration of Periodicals Act, 2023",
+        description:
+          "Creates the central statutory authority responsible for title allotment, registration, records, annual statements and circulation verification.",
+      },
+      {
+        id: "media-law-unit-1-registration",
+        title: "Registration of periodicals",
+        provision: "Press and Registration of Periodicals Act, 2023 and 2024 Rules",
+        description:
+          "Provides the online application, title scrutiny, Specified Authority comments, opportunity to cure deficiencies and grant or refusal of a registration certificate.",
+      },
+      {
+        id: "media-law-unit-1-compliance",
+        title: "Post-registration compliance",
+        provision: "Press and Registration of Periodicals Act, 2023 and 2024 Rules",
+        description:
+          "Governs annual statements, delivery and electronic upload of copies, revision of particulars, ownership transfer and circulation verification.",
+      },
+      {
+        id: "media-law-unit-1-enforcement",
+        title: "Suspension, cancellation and penalties",
+        provision: "Press and Registration of Periodicals Act, 2023",
+        description:
+          "Provides specified grounds, procedures and consequences for false information, irregular publication, annual-statement defaults, title violations and other statutory contraventions.",
+      },
+      {
+        id: "media-law-unit-1-prp-rules",
+        title: "Press and Registration of Periodicals Rules, 2024",
+        provision: "Procedural rules and Press Sewa forms",
+        description:
+          "Operationalises online applications, fees, corrections, documents, delivery, statements, circulation verification and other procedures under the 2023 Act.",
+      },
+      {
+        id: "media-law-unit-1-prb-history",
+        title: "Press and Registration of Books Act, 1867",
+        provision: "Repealed historical legislation",
+        description:
+          "The colonial-era declaration and registration statute is studied only for historical development; current periodical registration is governed by the 2023 Act.",
+      },
+    ],
+    importantCases: [
+      {
+        id: "media-law-unit-1-romesh-thappar",
+        caseName: "Romesh Thappar v. State of Madras",
+        citation: "AIR 1950 SC 124",
+        principle:
+          "Freedom of circulation is an essential part of freedom of speech and expression, and a State cannot prohibit a journal beyond constitutionally permitted restrictions.",
+        summary:
+          "The Supreme Court set aside an order banning the entry and circulation of the journal Cross Roads in Madras, establishing circulation as a protected dimension of press freedom.",
+      },
+      {
+        id: "media-law-unit-1-brij-bhushan",
+        caseName: "Brij Bhushan v. State of Delhi",
+        citation: "AIR 1950 SC 129",
+        principle:
+          "Prior scrutiny of newspaper content is a serious restriction upon press freedom and must satisfy the Constitution.",
+        summary:
+          "An order requiring the editor and printer of the Organiser to submit specified material for prior examination was invalidated under Article 19(1)(a).",
+      },
+      {
+        id: "media-law-unit-1-express-newspapers-1958",
+        caseName: "Express Newspapers (Private) Ltd. v. Union of India",
+        citation: "AIR 1958 SC 578",
+        principle:
+          "The press is subject to valid laws regulating employment, but legislation cannot be used to single it out and curtail freedom of circulation or publication.",
+        summary:
+          "While examining working-journalist legislation, the Court distinguished permissible labour welfare regulation from measures designed to weaken press freedom.",
+      },
+      {
+        id: "media-law-unit-1-sakal-papers",
+        caseName: "Sakal Papers (P) Ltd. v. Union of India",
+        citation: "AIR 1962 SC 305",
+        principle:
+          "The State cannot restrict newspaper pages and circulation through price-page regulation merely by characterising the measure as commercial regulation.",
+        summary:
+          "The Court invalidated the Daily Newspapers (Price and Page) Order because its direct effect was to restrict circulation and protected expression.",
+      },
+      {
+        id: "media-law-unit-1-bennett-coleman",
+        caseName: "Bennett Coleman & Co. v. Union of India",
+        citation: "(1972) 2 SCC 788",
+        principle:
+          "Newsprint controls are unconstitutional where their direct and inevitable effect restricts page growth, circulation and editorial freedom.",
+        summary:
+          "The Supreme Court invalidated restrictive features of the newsprint policy and rejected the argument that press freedom could be separated from the practical ability to publish.",
+      },
+      {
+        id: "media-law-unit-1-indian-express",
+        caseName: "Indian Express Newspapers (Bombay) Pvt. Ltd. v. Union of India",
+        citation: "(1985) 1 SCC 641",
+        principle:
+          "The press has no blanket immunity from taxation, but fiscal burdens affecting dissemination require sensitive constitutional scrutiny.",
+        summary:
+          "The Court reviewed customs duties on newsprint and stressed the constitutional importance of a free press in informing citizens and sustaining public discussion.",
+      },
+      {
+        id: "media-law-unit-1-cricket-association",
+        caseName: "Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal",
+        citation: "(1995) 2 SCC 161",
+        principle:
+          "The right to communicate and receive information extends to electronic media, while airwaves are public property requiring regulation in the public interest.",
+        summary:
+          "The decision connected technological change with constitutional communication rights and rejected an exclusive governmental monopoly over broadcasting.",
+      },
+    ],
+    examFocus:
+      "Prepare the meaning, characteristics and functions of media; distinctions among print, broadcast, cinema and digital media; global technological development; the history of the Indian press from Hicky's Bengal Gazette and colonial controls to constitutional democracy; authoritarian, libertarian, social-responsibility, Soviet-communist, development-media and democratic-participant theories; Article 19(1)(a) and the fourth-estate idea; the transition from the Press and Registration of Books Act, 1867 to the Press and Registration of Periodicals Act, 2023; the definition of periodical; the roles of owner, publisher, printer, Specified Authority and Press Registrar General; the Press Sewa registration sequence; continuing obligations, suspension and cancellation; and the principles in Romesh Thappar, Brij Bhushan, Express Newspapers, Sakal Papers, Bennett Coleman, Indian Express Newspapers and Cricket Association of Bengal.",
+    revisionNotes: `
+Meaning: media is both the channel of communication and the institution that produces and distributes content. Its core functions are information, education, discussion, scrutiny, culture, entertainment and advertising. The fourth-estate description expresses a democratic watchdog role but creates no legal immunity.
+
+History: printing enabled mass circulation; telegraph and industrial presses accelerated news; radio and television created simultaneous audiences; cable, satellite, internet and smartphones produced convergence. In India, remember Hicky's Bengal Gazette (1780), colonial licensing and security controls, the 1867 registration statute, the nationalist press, Article 19(1)(a), Press Commissions, working-journalist protection, the Press Council and digital transformation.
+
+Theories: authoritarian means control by authority; libertarian means minimum prior control and a marketplace of ideas; social responsibility combines freedom with professional and public duties; Soviet-communist theory links media to collective party objectives; development theory stresses nation-building; democratic-participant theory stresses local access, diversity and citizen participation.
+
+Current print-registration law: the Press and Registration of Periodicals Act, 2023 and Rules, 2024 have operated from 1 March 2024 and replaced the 1867 Act. A qualifying printed periodical containing public news or comments requires registration through the Press Sewa Portal. Identify the owner, publisher, printer, Specified Authority and PRGI; then explain title allotment, online application, certificate, annual statement, copies, changes, circulation verification and enforcement.
+
+Case formula: circulation is part of expression (Romesh Thappar); prior scrutiny is constitutionally suspect (Brij Bhushan); genuine general regulation may apply (Express Newspapers); indirect price-page and newsprint restrictions may violate Article 19(1)(a) (Sakal Papers and Bennett Coleman); tax is permissible but requires sensitive scrutiny (Indian Express Newspapers); communication rights extend to broadcasting and airwaves are public property (Cricket Association of Bengal).
+    `.trim(),
   },
   {
     title: "Media in the Constitutional Framework",
@@ -305,18 +617,20 @@ export const mediaLawChapters = units.map((unit, index) =>
     shortDescription: unit.shortDescription,
     chapterOverview: unit.overview,
     learningObjectives: unit.objectives,
-    detailedContent: buildDetailedContent(unit, index),
-    keyPoints: unit.topics,
-    statutoryProvisions: unit.provisions.map((provision, provisionIndex) => ({
-      id: `media-law-unit-${index + 1}-provision-${provisionIndex + 1}`,
-      title: provision,
-      provision,
-      description: `Core legal reading for Media Law Unit ${index + 1}.`,
-    })),
-    importantCases: [],
-    examFocus: unit.topics.join("; "),
-    revisionNotes: unit.topics.join("; "),
-    notes: buildDetailedContent(unit, index),
+    detailedContent: unit.detailedContent || buildDetailedContent(unit, index),
+    keyPoints: unit.keyPoints || unit.topics,
+    statutoryProvisions:
+      unit.statutoryProvisions ||
+      unit.provisions.map((provision, provisionIndex) => ({
+        id: `media-law-unit-${index + 1}-provision-${provisionIndex + 1}`,
+        title: provision,
+        provision,
+        description: `Core legal reading for Media Law Unit ${index + 1}.`,
+      })),
+    importantCases: unit.importantCases || [],
+    examFocus: unit.examFocus || unit.topics.join("; "),
+    revisionNotes: unit.revisionNotes || unit.topics.join("; "),
+    notes: unit.detailedContent || buildDetailedContent(unit, index),
     chapterNumber: index + 1,
     displayOrder: index + 1,
     quizRequired: true,
