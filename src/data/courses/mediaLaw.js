@@ -1526,11 +1526,14 @@ Exam warning: do not treat CBFC certification as OTT classification, spectrum pe
     overview:
       "This unit examines the internet as a distinct, interactive and transnational medium. It studies intermediary liability, blocking, content governance, cyber offences, platform responsibility, social-network regulation and the transition from the Indian Telegraph Act framework to current telecommunications legislation.",
     objectives: [
-      "Explain how internet media differs from print and broadcasting.",
-      "Apply the Information Technology Act to online content and intermediaries.",
-      "Analyse safe-harbour conditions, takedown and blocking powers.",
-      "Explain social-media duties and user protections.",
-      "Identify the current telecommunications framework and its historical development.",
+      "Explain the evolution, architecture and distinctive features of internet media.",
+      "Apply constitutional free-speech, privacy and proportionality principles to online communication.",
+      "Distinguish publishers, intermediaries, social-media intermediaries and significant social-media intermediaries.",
+      "Analyse safe harbour, due diligence, grievance handling, takedown and blocking under the IT Act and Rules.",
+      "Identify the principal computer-related offences and distinguish civil contraventions from criminal liability.",
+      "Explain platform duties concerning synthetic media, deepfakes, children and intimate imagery.",
+      "Relate informational privacy and the phased DPDP framework to digital-media practice.",
+      "Explain telecommunications authorisation, interception, suspension and the transition from the Telegraph Act.",
     ],
     topics: [
       "Evolution and characteristics of internet media",
@@ -1546,6 +1549,230 @@ Exam warning: do not treat CBFC certification as OTT classification, spectrum pe
       "Telecommunications Act, 2023",
       "Historical role of the Indian Telegraph Act, 1885",
     ],
+    detailedContent: `
+Unit 7: Internet and New Media
+
+1. Meaning and evolution of new media
+
+New media refers to communication produced, stored and distributed through digital networks. It includes websites, search engines, social networks, messaging services, streaming platforms, podcasts, online news, blogs, user-generated content and emerging AI-mediated communication.
+
+Its development moved from largely one-way websites to interactive Web 2.0 platforms and then to mobile, cloud, algorithmic and creator-led ecosystems. A user may simultaneously be reader, publisher, distributor and advertiser. This collapse of traditional roles makes legal classification more important than the label attached to a service.
+
+Internet law is not a single code. Constitutional law, the Information Technology Act, criminal law, evidence, intellectual property, consumer protection, data protection and telecommunications regulation may apply together.
+
+2. Characteristics of internet communication
+
+Internet speech is instantaneous, searchable, persistent, replicable and capable of global reach at very low cost. Hyperlinks, hashtags, recommender systems and forwarding functions can rapidly change the audience and context of a message.
+
+Digital communication is also layered. The speaker, device, access provider, hosting service, platform, search engine, advertiser and payment intermediary may be different entities. Liability should therefore follow the actor's knowledge, control, statutory status and conduct rather than treating the entire network as one publisher.
+
+Virality magnifies both democratic participation and harm. Regulation must address fraud, abuse and unlawful content without imposing vague or disproportionate restraints that encourage platforms to remove lawful criticism.
+
+3. Constitutional protection of online speech
+
+Article 19(1)(a) protects expression through the internet; Article 19(2) permits only reasonable restrictions connected with its listed grounds. There is no separate, weaker constitutional category called online speech.
+
+Shreya Singhal v. Union of India struck down section 66A because its vague expressions swept far beyond the grounds in Article 19(2) and chilled protected speech. Mere discussion or advocacy is protected; incitement may be restricted when the applicable legal ingredients are satisfied.
+
+Article 14 restrains arbitrary platform-related State action, while Article 21 protects dignity, reputation, autonomy and privacy. Restrictions require legal authority, a legitimate objective, rational connection, necessity and proportionality, with procedural safeguards and review.
+
+4. Access to the internet and network restrictions
+
+Anuradha Bhasin v. Union of India recognised that speech and trade conducted through the internet receive constitutional protection. The Court did not declare an unlimited freestanding fundamental right to internet access, but required shutdown orders to be published, temporary, necessary, proportionate and periodically reviewed.
+
+Indefinite suspension is impermissible. Authorities must consider less restrictive alternatives, territorial scope, duration and the effect on journalism, education, health, livelihood and public services.
+
+For an examination problem, distinguish blocking particular content, disabling an account, intercepting communication and suspending a telecommunications service. Each has a different statutory source, decision-maker and procedure.
+
+5. Territorial jurisdiction and applicable law
+
+Online publication may involve conduct, servers, readers and harm in several jurisdictions. Section 75 of the IT Act gives specified extraterritorial reach where the act involves a computer, computer system or network located in India. This does not eliminate ordinary requirements of jurisdiction, evidence and enforceability.
+
+A claimant should identify where the content was uploaded, accessed and targeted; where the parties reside or conduct business; where harm occurred; and which court or authority has statutory competence. Global accessibility alone should not automatically justify a worldwide injunction.
+
+Cross-border orders also raise comity, conflict-of-laws and proportionality concerns. Relief may be limited geographically or by identifiable URLs, accounts or content where that adequately addresses the proved harm.
+
+6. Structure and purpose of the Information Technology Act, 2000
+
+The IT Act gives legal recognition to electronic records and electronic signatures, supports electronic governance, creates civil contraventions and cyber offences, authorises investigation and governmental directions, and establishes conditional protection for intermediaries.
+
+Its provisions must be read with the Bharatiya Nyaya Sanhita, 2023, the Bharatiya Sakshya Adhiniyam, 2023, special statutes and subordinate rules. The same incident may involve identity theft under the IT Act, cheating under the BNS, electronic evidence requirements and a consumer claim.
+
+Section 66A is unconstitutional and cannot be used. Students must not confuse it with valid provisions such as sections 66, 66C, 66D or 66E.
+
+7. Civil contraventions and computer-related offences
+
+Section 43 addresses unauthorised access, copying, introduction of contaminants, disruption, denial of access and specified damage to computer resources and provides compensation through the statutory framework. Section 66 criminalises section 43 acts when committed dishonestly or fraudulently.
+
+The mental element is therefore crucial. A technical failure or contractual dispute is not automatically a cybercrime. Investigators must prove the act, attribution, lack of authority, required intention and integrity of electronic evidence.
+
+Sections 65 and 66B–66F separately address tampering with source documents, receiving stolen computer resources, identity theft, cheating by personation, privacy violations, cyber terrorism and related conduct.
+
+8. Identity theft, impersonation and privacy offences
+
+Section 66C penalises fraudulent or dishonest use of another person's electronic signature, password or unique identification feature. Section 66D applies to cheating by personation using a communication device or computer resource. Phishing, fake profiles and account takeover commonly require careful application of both provisions and the BNS.
+
+Section 66E addresses intentional or knowing capture, publication or transmission of images of a person's private area without consent in circumstances violating privacy. Sections 67, 67A and 67B deal respectively with obscene electronic material, sexually explicit material and child sexual material, subject to their exact ingredients and exceptions.
+
+Victim protection requires rapid preservation of evidence, platform reporting, police or cybercrime reporting and avoidance of further circulation. A person reporting unlawful content should preserve URLs, timestamps and transaction details without republishing the material unnecessarily.
+
+9. Intermediaries and their legal classification
+
+Section 2(1)(w) defines an intermediary broadly in relation to electronic records and includes telecom and network providers, internet service providers, web hosts, search engines, online-payment and auction sites, online marketplaces and cyber cafés. The functional role matters.
+
+A publisher selects and controls its own content. An intermediary ordinarily receives, stores or transmits third-party information or provides a related service. A platform may be an intermediary for user posts but a publisher for content it commissions or edits.
+
+Social-media intermediaries enable online interaction between users. Significant social-media intermediaries meet the notified user threshold and carry additional Rule 4 duties. Safe harbour is issue-specific, not a blanket immunity for every activity of the company.
+
+10. Section 79 safe harbour
+
+Section 79 conditionally protects an intermediary from liability for third-party information, data or communication links where its role is limited and it observes statutory due diligence. Protection may be lost where the intermediary initiates transmission, selects the receiver, modifies the information, conspires or aids the unlawful act, or fails to comply with a valid removal direction.
+
+In Shreya Singhal, the Supreme Court read section 79(3)(b) and the then rules to require actual knowledge through a court order or appropriate governmental notification concerning unlawful content relatable to Article 19(2), rather than private allegations alone automatically compelling removal.
+
+Safe harbour is a defence governed by facts and statutory compliance. Failure to qualify does not itself prove the underlying offence; the claimant or prosecution must still establish the relevant cause of action and the intermediary's legally attributable conduct.
+
+11. General due diligence and grievance redressal
+
+Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 requires publication of rules, privacy policy and user agreement; communication of prohibited-content categories; reasonable security practices; lawful assistance; retention of specified information; and an accessible grievance mechanism.
+
+The intermediary must appoint and publish contact details of a grievance officer, acknowledge and dispose of complaints within the currently prescribed periods, and use the accelerated process for specified intimate imagery, impersonation and similar serious complaints.
+
+The 2026 amendments shortened important response periods and introduced additional synthetic-content duties. Exact timelines should always be stated from the current consolidated Rules, because different complaint and governmental-order categories have different clocks.
+
+12. Significant social-media intermediary duties
+
+Rule 4 imposes added responsibilities on significant social-media intermediaries, including India-resident compliance, nodal-contact and grievance officers, periodic compliance reports and specified technology and transparency measures.
+
+The first-originator requirement applies within the statutory conditions to significant intermediaries providing messaging services. It raises privacy, encryption and proportionality questions and must not be described as a general permission to read every private message.
+
+Platforms must also provide notice and an opportunity to dispute certain account or content actions, subject to urgent statutory exceptions. Compliance design should combine user safety, reasons, appeal or grievance routes and protection against automated over-removal.
+
+13. Synthetic media, deepfakes and the 2026 amendments
+
+Synthetic or altered audio-visual content can support creativity and accessibility but can also impersonate persons, manipulate elections, facilitate fraud or produce non-consensual intimate imagery. Existing criminal, privacy, intellectual-property and election laws may apply depending on the facts.
+
+The Information Technology Rules were amended in 2026 to impose specific duties concerning synthetically generated information, including user declarations, labelling or provenance-related measures and tighter compliance periods for covered intermediaries. These provisions must be applied according to the notified definitions, platform category and effective date.
+
+A label is not a defence to fraud, defamation, obscenity, privacy invasion or infringement. Conversely, synthetic origin alone does not make satire, art or criticism unlawful. Context, deception, consent, harm and the elements of the applicable law remain decisive.
+
+14. Blocking, interception and monitoring
+
+Section 69 permits interception, monitoring or decryption on specified grounds and subject to prescribed safeguards. Section 69A authorises blocking of public access to information through a reasoned statutory process, while section 69B concerns monitoring and collection of traffic data for cybersecurity-related purposes.
+
+Shreya Singhal upheld section 69A and the Blocking Rules in view of their confined grounds, hearing structure and review safeguards. Blocking must not be confused with an ordinary private grievance notice under Rule 3 or a court injunction.
+
+Confidentiality of blocking proceedings does not dispense with jurisdiction, recorded reasons, committee scrutiny and review. Constitutional challenges may examine legality, necessity, proportionality and access to an effective remedy.
+
+15. Investigation, evidence and attribution
+
+Digital investigations depend on lawful seizure or production, preservation of logs, subscriber information, device examination, chain of custody and proof connecting a person to an account or device. An IP address or account name may be relevant but does not invariably prove authorship.
+
+Electronic records are governed by the Bharatiya Sakshya Adhiniyam, 2023. Parties should preserve original devices and files where possible, document collection, retain metadata and satisfy the statutory conditions governing admissibility and proof of electronic records.
+
+Intermediaries may be required to preserve or supply information under lawful authority. Such demands must identify their statutory basis and scope and remain subject to privacy, privilege and proportionality safeguards.
+
+16. Informational privacy and data protection
+
+Justice K.S. Puttaswamy recognises privacy as a fundamental right grounded in dignity and autonomy. State interference requires legality, legitimate aim and proportionality. Private digital services also engage contract, consumer, confidentiality, IT-security and data-protection duties.
+
+The Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025 use a staged commencement. Institutional and procedural provisions commenced in November 2025, while substantial obligations and rights have later scheduled commencement dates. As of September 2026, students must check the notification schedule rather than claim that every provision has operated since enactment.
+
+The framework addresses lawful processing, notice and consent, legitimate uses, security safeguards, breach response, children's data, user rights and the Data Protection Board. It complements rather than replaces Article 21 and sector-specific media law.
+
+17. Social networks, algorithms and platform governance
+
+Social networks organise visibility through ranking, recommendation, advertising and moderation systems. Their private rules influence public discourse, but constitutional claims against a private service require analysis of State action, statutory duties, contract and the particular remedy sought.
+
+Algorithmic amplification can increase engagement while spreading misinformation, hate, scams or harmful stereotypes. Responsible governance includes risk assessment, transparent advertising, meaningful notices, accessible grievance systems, researcher accountability and safeguards for children and vulnerable users.
+
+Law should distinguish illegal content from content that merely violates platform policy. Removal under private terms, statutory takedown, criminal prosecution and governmental blocking are legally different decisions.
+
+18. Telecommunications law: historical transition
+
+The Indian Telegraph Act, 1885 historically governed telegraphs, licensing and interception. The Telecommunications Act, 2023 now provides the principal framework for authorisation of telecommunication services and networks, spectrum assignment, standards, security and user protection as its provisions have been brought into force.
+
+The 2023 Act repeals the Telegraph Act and Indian Wireless Telegraphy Act subject to commencement, savings and transitional arrangements. Existing licences, rules and actions may continue under saving provisions until replaced or adapted.
+
+Internet content regulation and telecommunications-network regulation overlap but are not identical. A network authorisation does not make the Department of Telecommunications the general editor of online content, and an intermediary duty does not itself allocate spectrum.
+
+19. Emergency powers, interception and service suspension
+
+The Telecommunications Act permits interception, detention, disclosure or suspension on specified public-emergency, public-safety and statutory grounds, subject to authorised procedure and safeguards. Applicable rules and validly continued transitional rules determine operational requirements.
+
+PUCL v. Union of India developed safeguards against arbitrary telephone interception under the historical framework. Anuradha Bhasin requires publication, proportionality, limited duration and review of internet-suspension orders.
+
+An answer should test competent authority, statutory ground, material supporting necessity, territorial and temporal limits, reasons, review and less restrictive alternatives. National security is important but is not a formula that removes judicial scrutiny.
+
+20. Applied problem and examination method
+
+Assume a platform receives a private email alleging that a political post is false and defamatory. Without a court or governmental order it deletes the account permanently. A deepfake then impersonates the same politician to solicit money; police seek subscriber data, and the State suspends mobile internet throughout a district without publishing an order.
+
+Separate the issues. For the original post, examine platform terms, notice and grievance duties and section 79 after Shreya Singhal. For the deepfake, apply the 2026 synthetic-media duties, sections 66C and 66D, privacy and other substantive offences. For data disclosure, demand lawful authority and proportional scope. For shutdown, apply the Telecommunications framework and Anuradha Bhasin safeguards.
+
+In an examination answer, identify the actor and legal status; classify the act as private moderation, statutory takedown, blocking, investigation or suspension; state the precise IT Act or Rules provision; apply Article 19 and Article 21; address jurisdiction and electronic evidence; and conclude with a proportionate remedy. Never cite section 66A as valid law or treat every complaint as automatic loss of safe harbour.
+    `.trim(),
+    keyPoints: [
+      "Internet communication is interactive, persistent, replicable, algorithmically distributed and often transnational.",
+      "Online speech receives Article 19(1)(a) protection; restrictions must fit Article 19(2) and satisfy proportionality.",
+      "Section 66A was struck down in Shreya Singhal and cannot be invoked.",
+      "Section 43 creates specified civil contraventions; section 66 adds criminal liability when those acts are dishonest or fraudulent.",
+      "An intermediary may be a publisher for its own commissioned content and an intermediary for third-party content.",
+      "Section 79 safe harbour is conditional and issue-specific; loss of protection does not itself prove the underlying offence.",
+      "After Shreya Singhal, private allegations alone do not constitute statutory actual knowledge requiring removal under section 79(3)(b).",
+      "Rules 3 and 4 impose general and additional significant-intermediary due diligence and grievance duties.",
+      "The 2026 Rules added synthetic-media obligations and shorter compliance periods for covered categories.",
+      "Section 69A blocking is distinct from private moderation, a Rule 3 grievance and a judicial injunction.",
+      "Electronic attribution requires reliable evidence; an IP address or account name alone may not prove authorship.",
+      "The DPDP Act and 2025 Rules have staged commencement, so operative provisions must be checked by date.",
+      "The Telecommunications Act, 2023 replaced the colonial framework subject to commencement, savings and transition.",
+      "Internet suspension must be temporary, published, necessary, proportionate and periodically reviewed.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-7-constitution", title: "Online speech and restrictions", provision: "Articles 19(1)(a) and 19(2), Constitution of India", description: "Protects expression through digital media subject only to reasonable restrictions on the enumerated constitutional grounds." },
+      { id: "media-law-unit-7-privacy", title: "Privacy and dignity", provision: "Articles 14 and 21, Constitution of India", description: "Protects informational autonomy and requires lawful, non-arbitrary and proportionate State interference." },
+      { id: "media-law-unit-7-section-43", title: "Computer-related civil contraventions", provision: "Section 43, Information Technology Act, 2000", description: "Addresses unauthorised access, copying, disruption, contaminants, denial of access and specified computer-resource damage." },
+      { id: "media-law-unit-7-section-66", title: "Computer-related offences", provision: "Sections 65–66F, Information Technology Act, 2000", description: "Covers source-code tampering, dishonest or fraudulent computer acts, identity theft, personation, privacy and cyber terrorism; section 66A is invalid." },
+      { id: "media-law-unit-7-content-offences", title: "Unlawful electronic sexual content", provision: "Sections 67, 67A and 67B, Information Technology Act, 2000", description: "Addresses obscene, sexually explicit and child sexual material in electronic form according to distinct statutory ingredients." },
+      { id: "media-law-unit-7-government-powers", title: "Interception, blocking and monitoring", provision: "Sections 69, 69A and 69B, Information Technology Act, 2000", description: "Creates separate governmental powers subject to enumerated grounds, prescribed procedure and constitutional safeguards." },
+      { id: "media-law-unit-7-safe-harbour", title: "Intermediary safe harbour", provision: "Section 79, Information Technology Act, 2000", description: "Conditionally protects intermediaries for third-party information when their role and due diligence satisfy the Act and Rules." },
+      { id: "media-law-unit-7-jurisdiction", title: "Extraterritorial application", provision: "Section 75, Information Technology Act, 2000", description: "Extends the Act to specified conduct outside India involving a computer resource located in India." },
+      { id: "media-law-unit-7-rule-3", title: "Intermediary due diligence", provision: "Rule 3, Information Technology Rules, 2021, as amended", description: "Requires published user rules, prohibited-content notice, grievance handling, preservation and compliance with lawful directions." },
+      { id: "media-law-unit-7-rule-4", title: "Significant-intermediary duties", provision: "Rule 4, Information Technology Rules, 2021, as amended", description: "Adds resident officers, reports, traceability-related and other compliance duties for significant social-media intermediaries." },
+      { id: "media-law-unit-7-synthetic", title: "Synthetic-media governance", provision: "Information Technology Amendment Rules, 2026", description: "Adds notified duties concerning synthetically generated information, labelling or declarations and revised compliance periods." },
+      { id: "media-law-unit-7-evidence", title: "Electronic records and proof", provision: "Bharatiya Sakshya Adhiniyam, 2023", description: "Governs admissibility and proof of electronic records, requiring integrity, provenance and applicable statutory certification." },
+      { id: "media-law-unit-7-dpdp", title: "Digital personal data", provision: "Digital Personal Data Protection Act, 2023 and Rules, 2025", description: "Creates India's digital-personal-data framework through staged commencement; operative duties must be verified by date." },
+      { id: "media-law-unit-7-telecom", title: "Current telecommunications framework", provision: "Telecommunications Act, 2023", description: "Governs authorisation, networks, spectrum, security, interception and user protection as commenced, with savings for transition." },
+      { id: "media-law-unit-7-suspension", title: "Telecommunications suspension safeguards", provision: "Telecommunications Act, applicable Rules and valid transitional provisions", description: "Requires competent authority and statutory grounds for service suspension, read with publication, necessity and review safeguards." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-7-shreya", caseName: "Shreya Singhal v. Union of India", citation: "(2015) 5 SCC 1", principle: "Section 66A was unconstitutional; section 69A survived; intermediary actual knowledge was read down to a court order or proper governmental notification.", summary: "The Supreme Court distinguished protected discussion and advocacy from punishable incitement and prevented vague private notices from becoming automatic censorship commands." },
+      { id: "media-law-unit-7-anuradha", caseName: "Anuradha Bhasin v. Union of India", citation: "(2020) 3 SCC 637", principle: "Internet-based speech and trade are constitutionally protected, and suspension orders must be published, temporary, proportionate and reviewed.", summary: "The Court rejected indefinite shutdowns and required structured scrutiny of necessity and less restrictive alternatives." },
+      { id: "media-law-unit-7-puttaswamy", caseName: "Justice K.S. Puttaswamy (Retd.) v. Union of India", citation: "(2017) 10 SCC 1", principle: "Privacy is a fundamental right grounded in dignity, autonomy and informational control.", summary: "The nine-judge Bench supplies the constitutional foundation for data protection and proportional limits on digital surveillance." },
+      { id: "media-law-unit-7-pucl", caseName: "People's Union for Civil Liberties v. Union of India", citation: "(1997) 1 SCC 301", principle: "Telephone interception seriously invades privacy and requires recorded reasons, limited duration and independent review safeguards.", summary: "The decision remains foundational when evaluating interception powers under contemporary telecommunications law." },
+      { id: "media-law-unit-7-faheema", caseName: "Faheema Shirin R.K. v. State of Kerala", citation: "2019 SCC OnLine Ker 2976", principle: "Reasonable internet access may form part of education and privacy in the circumstances of student life.", summary: "The Kerala High Court invalidated a disproportionate hostel restriction and linked digital access with learning and autonomy." },
+      { id: "media-law-unit-7-avnish", caseName: "Avnish Bajaj v. State (NCT of Delhi)", citation: "2008 SCC OnLine Del 36", principle: "Intermediary and officer liability must follow the statutory text, role, knowledge and legally attributable conduct.", summary: "The Baazee litigation illustrates early platform-liability problems and must be read with the later section 79 amendment and Shreya Singhal." },
+      { id: "media-law-unit-7-google", caseName: "Google India Pvt. Ltd. v. Visaka Industries", citation: "(2020) 4 SCC 162", principle: "A claim to intermediary protection cannot be decided abstractly where pleaded facts and the applicable pre-amendment statutory period require trial-stage examination.", summary: "The Court allowed criminal proceedings to continue and cautioned that safe harbour depends on the governing law and factual role." },
+      { id: "media-law-unit-7-louboutin", caseName: "Christian Louboutin SAS v. Nakul Bajaj", citation: "2018 SCC OnLine Del 12215", principle: "Active participation in sale, promotion or assurance may affect whether an e-commerce service is acting only as a passive intermediary.", summary: "The Delhi High Court analysed platform functions rather than accepting the intermediary label as conclusive." },
+      { id: "media-law-unit-7-swami-ramdev", caseName: "Swami Ramdev v. Facebook, Inc.", citation: "2019 SCC OnLine Del 10701", principle: "Online injunctions raise territorial reach, platform control and cross-border enforcement questions that require tailored relief.", summary: "The Delhi High Court considered removal and disabling of access to identified defamatory content across platform locations." },
+      { id: "media-law-unit-7-ajit-mohan", caseName: "Ajit Mohan v. Legislative Assembly, NCT of Delhi", citation: "(2021) 3 SCC 529", principle: "Social platforms have significant influence on public discourse, while institutional demands for information remain bounded by constitutional competence and privilege.", summary: "The Supreme Court examined a legislative committee's summons to Facebook representatives in the context of platform accountability and federal powers." },
+      { id: "media-law-unit-7-arjun-panditrao", caseName: "Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal", citation: "(2020) 7 SCC 1", principle: "Electronic evidence must satisfy statutory proof requirements, including certification where applicable and obtainable.", summary: "Though decided under the former Evidence Act, the judgment remains instructive on authenticity, source and certification of electronic records under the successor framework." },
+    ],
+    examFocus:
+      "Prepare the evolution and characteristics of internet media; Articles 14, 19 and 21 online; Shreya Singhal and the invalidity of section 66A; network shutdown safeguards in Anuradha Bhasin; IT Act sections 43, 65, 66, 66C–66F, 67–67B, 69–69B, 75 and 79; publisher-intermediary distinction; conditional safe harbour and actual knowledge; Rules 3 and 4 duties; the 2026 synthetic-media amendments and current timelines; blocking versus takedown and private moderation; territorial jurisdiction; electronic evidence under the BSA; privacy under Puttaswamy; staged commencement of the DPDP Act and 2025 Rules; the Telecommunications Act, 2023 and historical Telegraph Act transition; and the principles in PUCL, Faheema Shirin, Avnish Bajaj, Google India, Christian Louboutin, Swami Ramdev, Ajit Mohan and Arjun Panditrao.",
+    revisionNotes: `
+Constitution: internet speech is protected by Article 19(1)(a). Restrictions must fit Article 19(2), use valid law and satisfy proportionality. Section 66A is void.
+
+IT Act map: section 43—civil contraventions; section 66—dishonest or fraudulent computer acts; sections 66C/66D—identity theft and personation; section 66E—privacy; sections 67–67B—content offences; sections 69–69B—interception, blocking and monitoring; section 75—extraterritorial reach; section 79—conditional safe harbour.
+
+Intermediaries: identify the platform's function for the disputed content. Apply Rules 3 and 4, current grievance periods and the 2026 synthetic-media duties. Private moderation, court injunction, government takedown and section 69A blocking are distinct.
+
+Privacy and evidence: apply Puttaswamy legality and proportionality; preserve reliable electronic evidence under the BSA. The DPDP framework commenced in stages from November 2025, so check which provision is operative on the problem date.
+
+Telecommunications: use the 2023 Act as commenced, with savings and transition from the Telegraph Act. Interception and suspension require competent authority, statutory grounds, reasons, necessity, limited duration and review.
+
+Exam warning: never revive section 66A, assume every intermediary is a publisher, treat a private complaint as automatic actual knowledge, or state that every DPDP obligation commenced on enactment.
+    `.trim(),
   },
   {
     title: "Media, Advertising and Law",
