@@ -851,6 +851,9 @@ Secrets, labour and standards: apply Official Secrets Act sections 3 and 5 with 
       "Balance national security with press freedom and public interest.",
       "Evaluate trial by media against fair-trial rights.",
       "Analyse the legality and ethics of sting operations.",
+      "Apply fair dealing and current-events reporting exceptions to media use.",
+      "Explain remedies for infringement and technological circumvention.",
+      "Assess the authenticity and admissibility of recorded sting material.",
     ],
     topics: [
       "Copyright in literary, artistic, musical, film and sound-recording works",
@@ -866,6 +869,207 @@ Secrets, labour and standards: apply Official Secrets Act sections 3 and 5 with 
       "Contempt of Courts Act, 1971",
       "Indian Evidence Act, 1872 and Bharatiya Sakshya Adhiniyam, 2023 transition",
     ],
+    detailedContent: `
+1. Copyright and media activity
+
+Copyright protects legally recognised expression rather than ideas, facts, news events or information in the abstract. Media organisations constantly create and use literary works, photographs, graphics, music, sound recordings, films, broadcasts, databases and digital content. A report may therefore involve several overlapping rights owned by different persons.
+
+The Copyright Act, 1957 is the principal Indian statute. Copyright generally arises automatically when an eligible original work is created; registration is useful evidence but is not ordinarily a condition for subsistence. A media lawyer must identify the protected work, author, first owner, term, allegedly restricted act, licence or exception, and available remedy.
+
+2. Categories of protected works
+
+Section 13 recognises copyright in original literary, dramatic, musical and artistic works, cinematograph films and sound recordings, subject to the Act. A newspaper article is a literary work; a photograph is an artistic work; recorded music may involve musical and literary works as well as a separate sound recording; an audiovisual programme may be a film incorporating several underlying works.
+
+Originality does not require novelty like patent law. Eastern Book Company v. D.B. Modak requires skill and judgment with a minimum degree of creativity rather than purely mechanical labour. Copyright does not prevent independent creation of a similar idea.
+
+3. Meaning of copyright and restricted acts
+
+Section 14 defines copyright as a bundle of exclusive rights varying by category of work. Depending upon the work, it may include reproduction, issuing copies, public performance or communication, adaptation, translation, making a film or sound recording and commercial rental.
+
+Digital copying can occur through uploading, downloading, streaming copies, server storage and platform distribution. The exact statutory act must be identified. Ownership of a physical copy does not transfer copyright, and ownership of copyright in a film does not erase separate rights in underlying music, lyrics, screenplay or performance.
+
+4. Authorship and first ownership
+
+Authorship varies by work: the author of a literary work is ordinarily its writer, the photographer is author of a photograph, the producer is author of a cinematograph film or sound recording, and the person who causes a computer-generated work to be created is treated according to the statutory definition.
+
+Section 17 states the general rule of first ownership and its exceptions. Employment, commissioning, newspaper publication and contractual arrangements may alter ownership. In the newspaper setting, the proprietor's first ownership can be limited to the purpose and scope specified by the statute, leaving other rights with the author unless agreed otherwise.
+
+Contracts should specify territory, duration, media, language, exclusivity, archival use, syndication and digital exploitation. Credit or payment alone does not necessarily establish a complete assignment.
+
+5. Assignment and licensing
+
+Sections 18 and 19 govern assignment. A valid assignment must be in writing signed by the assignor and identify the work, rights, duration and territorial extent, with royalty and consideration terms as applicable. Statutory defaults may operate when duration or territory is omitted.
+
+Section 30 permits licensing by the copyright owner or authorised agent in writing. Exclusive and non-exclusive licences have different consequences. Media organisations commonly require synchronisation, mechanical, public-performance, communication-to-public and digital-platform permissions depending on use.
+
+Sections 31 and following provide compulsory or statutory mechanisms in defined circumstances. Section 31D concerns statutory licensing by broadcasting organisations under its text and rules; it should not be assumed to create an unrestricted licence for every internet or on-demand service.
+
+6. Fair dealing and reporting current events
+
+Section 52 declares specified acts not to be infringement. Fair dealing with certain works for private or personal use including research, criticism or review, and reporting current events and current affairs may be protected under the statutory language. Reporting may include reporting a lecture delivered in public.
+
+Fair dealing is fact-sensitive. Courts consider purpose, amount and substantiality, market effect, nature of the work, necessity and fairness. The exception does not authorise copying an entire commercially valuable work merely because it accompanies news. Attribution is ethically important and may satisfy moral-right or statutory conditions, but attribution alone does not cure excessive copying.
+
+Current-events reporting protects the communicative purpose, not appropriation of entertainment. A short clip genuinely necessary to report and analyse an event differs from rebroadcasting the event as a substitute for the licensed service.
+
+7. Idea-expression distinction and substantial similarity
+
+Copyright does not protect a general theme, historical fact, news fact, method or stock situation. It protects the author's particular expression. R.G. Anand v. Deluxe Films held that infringement depends upon substantial copying of protected expression, assessed through the overall impression on a reasonable viewer or reader.
+
+Media defendants should separate facts from selection, arrangement, language, footage, graphics and other expression. Rewriting copied material superficially may still infringe; independently researching the same event and producing original expression ordinarily will not.
+
+8. Moral rights and attribution
+
+Section 57 protects the author's special rights to claim authorship and restrain or claim damages for specified distortion, mutilation, modification or other acts prejudicial to honour or reputation, subject to the Act. These rights may survive assignment of economic copyright.
+
+Editors necessarily revise material, but contracts and editorial practices should address attribution and integrity. Misleading alteration of a photograph, quotation or documentary work may create copyright, moral-right, defamation and ethical issues simultaneously.
+
+9. Broadcast reproduction right
+
+Section 37 creates a broadcast reproduction right separate from copyright in the works carried in the broadcast. It generally subsists for twenty-five years from the beginning of the calendar year following the year of broadcast. Without licence and subject to exceptions, rebroadcasting, causing the broadcast to be heard or seen by paying audiences, making sound or visual recordings, reproducing such recordings or commercial dealing may infringe.
+
+A broadcaster's right does not automatically make it owner of every underlying work. Conversely, permission from an underlying copyright owner does not necessarily authorise capture and rebroadcast of another broadcaster's signal. Rights clearance must examine both layers.
+
+10. Performers' rights
+
+Section 38 recognises performers' rights, generally lasting fifty years from the beginning of the calendar year following the performance. Section 38A gives performers exclusive rights in relation to fixation, reproduction, distribution, communication and commercial rental as provided, subject to consent and statutory conditions.
+
+Section 38B protects performers' moral rights to be identified and to restrain or claim damages for distortion, mutilation or modification prejudicial to reputation, subject to the statutory explanation concerning normal editing and technical use. Section 39 supplies acts that do not infringe broadcast or performers' rights, and section 39A applies specified copyright provisions.
+
+Consent to record a performance is not always consent to every later commercial exploitation. Contracts must address platform, term, territory, promotion, editing, royalties and reuse.
+
+11. Infringement and intermediary responsibility
+
+Section 51 defines infringement through unauthorised exercise of exclusive rights and specified dealings with infringing copies. Primary liability must be distinguished from authorising infringement and from intermediary liability under the Information Technology Act.
+
+Super Cassettes Industries v. MySpace examined the interaction between copyright enforcement and intermediary safe harbour. A platform is not automatically liable for every user upload merely because infringement exists, but statutory knowledge, specific notice, participation and compliance duties matter.
+
+Automated filters can reduce infringement but may also suppress licensed use, criticism, parody and fair dealing. A lawful system needs sufficiently specific notices, counter-process, record preservation and human review for disputed uses.
+
+12. Civil, criminal and technological remedies
+
+Civil remedies include injunction, damages or account of profits, delivery up and other relief under sections 55 and following. Interim injunctions require the usual judicial considerations, including prima facie case, balance of convenience and irreparable injury. Courts may frame dynamic relief against mirror sites where legally justified.
+
+The Act also creates criminal offences for knowing infringement and related conduct. Sections 65A and 65B address circumvention of effective technological measures and removal or alteration of rights-management information in specified circumstances. Criminal law should not be used to convert a genuine ownership or licensing dispute into coercion without the required mental element.
+
+13. Film piracy and the Cinematograph Act
+
+The Cinematograph (Amendment) Act, 2023 inserted sections 6AA and 6AB to prohibit unauthorised recording and exhibition-related transmission of films in licensed places and unauthorised exhibition for profit, subject to the statutory wording and copyright exceptions. Section 7 provides consequences.
+
+These provisions supplement rather than replace copyright law. A cinema recording may engage the film producer's copyright, technological measures, criminal copyright provisions and the Cinematograph Act. News reporting does not justify camcording or distributing a substantial film.
+
+14. National security and media freedom
+
+Article 19(2) permits reasonable restrictions in the interests of the sovereignty and integrity of India and security of the State. Public order, incitement and other grounds may also arise. The Official Secrets Act, 1923, BNS section 152, the Unlawful Activities (Prevention) Act, telecommunications interception law and lawful blocking provisions operate in distinct fields.
+
+Security of the State is not synonymous with embarrassment to government. Authorities must identify legal power and statutory elements, and restrictions require proximity and proportionality. Journalists possess no general right to steal protected documents, trespass into defence installations or disclose operational information that creates legally cognisable harm.
+
+At the same time, public-interest reporting on procurement, preparedness, corruption or rights violations cannot be prohibited merely by attaching a security label. In Yashwant Sinha v. CBI, the Supreme Court refused to exclude published documents from judicial consideration merely because official secrecy was asserted.
+
+15. Surveillance, interception and confidential newsgathering
+
+Newsgathering may involve confidential communications and source relationships. Telephone interception and surveillance interfere with privacy and may chill journalism. People's Union for Civil Liberties v. Union of India required procedural safeguards for telephone tapping under the then Telegraph Act framework.
+
+After Justice K.S. Puttaswamy, surveillance must satisfy legality, legitimate State aim, necessity, proportionality and procedural safeguards. A journalist has no universal exemption from lawful investigation, but indiscriminate or retaliatory surveillance directed at sources and reporting raises Articles 14, 19 and 21 concerns.
+
+16. Trial by media
+
+Trial by media occurs when publicity assumes guilt, evaluates evidence outside court, pressures participants or presents a parallel verdict. It can harm the presumption of innocence, witness reliability, victim dignity and fair adjudication under Article 21.
+
+Open justice and public reporting remain essential. The mere pendency of proceedings is not a complete publication ban. Reporting should distinguish allegation, charge, evidence, judicial finding and final conviction; avoid publishing protected identities, inadmissible confessions or material covered by lawful orders; and correct significant error.
+
+Manu Sharma v. State (NCT of Delhi) warned that media coverage must not prejudice a criminal trial. Sahara India Real Estate Corp. v. SEBI permits an exceptional, temporary postponement order only where necessary and proportionate to prevent a real and substantial risk to justice.
+
+17. Meaning and purposes of a sting operation
+
+A sting operation is a planned covert investigation in which a reporter or collaborator records conduct or communications, often by concealing identity or using a hidden device. It may document corruption, exploitation, unlawful trade or abuse that would otherwise remain concealed.
+
+Covert methods are intrusive and should be exceptional. A responsible decision considers seriousness of the suspected wrongdoing, strength of preliminary information, availability of less intrusive means, editorial authorisation, minimisation of collateral harm, safety, accuracy and the public interest in disclosure.
+
+Stings must be distinguished from ordinary observation and from entrapment. Recording a willing participant's existing corrupt demand differs from manufacturing an offence by pressure, inducement or selective editing. Public interest is not equivalent to audience curiosity or commercial sensationalism.
+
+18. Sting operations, privacy and legality
+
+Covert recording may affect privacy, trespass, confidentiality, data protection, criminal law and broadcasting or journalistic codes. The location and expectation of privacy matter. Recording intimate conduct in a private home requires much stronger justification than documenting an official demand made in an office.
+
+Raja Ram Pal v. Hon'ble Speaker, Lok Sabha arose from the cash-for-query sting and confirmed that recorded investigative material may trigger institutional proceedings, while those proceedings remain constitutionally reviewable. In Aniruddha Bahal v. State, the Delhi High Court recognised the public-interest character of a journalist's operation exposing willingness to launder money and rejected mechanical prosecution of the reporter.
+
+These decisions do not grant a universal sting-operation licence. Legality turns on the method, intent, statutory offence, authenticity, editing and public-interest connection.
+
+19. Sting evidence and the Bharatiya Sakshya Adhiniyam
+
+Audio, video, messages and device records are documents and electronic or digital records under the Bharatiya Sakshya Adhiniyam, 2023. Sections 61 to 63 govern the legal effect and proof of electronic records, including the statutory certificate route where applicable.
+
+Admissibility does not establish truth by itself. The proponent should prove source, device, custody, integrity, identity of speakers, continuity and absence of manipulation. Original files, metadata, hash values, contemporaneous notes and a documented chain of custody strengthen reliability. Selective excerpts should be compared with the complete recording.
+
+In R.K. Anand v. Registrar, Delhi High Court, the Supreme Court examined a television sting concerning interference with a criminal trial and relied on the material after detailed scrutiny. The case shows both the public value of a genuine sting and the need for fairness, authentication and judicial evaluation.
+
+20. Applied problem and examination method
+
+Assume a digital news channel copies three minutes from a competitor's exclusive sports broadcast, adds a brief headline, secretly records an official accepting money, heavily edits the recording, publishes a protected witness's identity and declares an accused guilty. It claims fair dealing and public interest for everything.
+
+Separate the issues. Identify copyright in the underlying footage and the section 37 broadcast reproduction right; test the amount, purpose, necessity and market effect under section 52; analyse consent and performers' rights if relevant; test the sting method under privacy, public interest and applicable offences; authenticate the full recording under BSA sections 61–63; and address identity protection, contempt and fair trial. Public interest may support the corruption disclosure but cannot automatically legalise excessive footage appropriation, deceptive editing or prejudicial publication.
+
+For an examination answer, use this order: identify each work and neighbouring right; determine author and owner; identify the restricted act; examine assignment or licence; apply fair dealing or another exception; state term and remedies; then separately analyse security, privacy, fair trial, sting legality and electronic proof. Never merge copyright ownership, broadcast reproduction right and performers' rights into one undifferentiated right.
+    `.trim(),
+    keyPoints: [
+      "Copyright protects original expression, not facts, ideas or news events in the abstract.",
+      "A media product may contain separate literary, artistic, musical, film, sound-recording, broadcast and performers' rights.",
+      "Sections 18–19 govern assignment, while section 30 permits written licences by the owner or authorised agent.",
+      "Fair dealing for criticism, review and current-events reporting is purpose- and context-specific, not a blanket news exemption.",
+      "Section 37 gives broadcasters a separate twenty-five-year broadcast reproduction right.",
+      "Sections 38, 38A and 38B protect performers' economic and moral interests, generally for fifty years.",
+      "Underlying copyright permission does not automatically authorise copying another broadcaster's signal, and vice versa.",
+      "Sections 65A and 65B protect technological measures and rights-management information subject to statutory conditions.",
+      "The Cinematograph Act's anti-piracy provisions supplement rather than replace the Copyright Act.",
+      "National-security restriction requires precise legal authority and cannot rest solely on official embarrassment or labelling.",
+      "Trial by media must be distinguished from fair and accurate open-court reporting.",
+      "A legitimate sting requires serious public interest, necessity, proportional methods, accurate editing and protection against collateral harm.",
+      "Electronic sting material must be authenticated under the Bharatiya Sakshya Adhiniyam; admissibility alone does not prove truth.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-4-copyright-works", title: "Protected works", provision: "Sections 13–14, Copyright Act, 1957", description: "Identifies protected categories and the exclusive-right bundle applicable to each category of work." },
+      { id: "media-law-unit-4-ownership", title: "First ownership", provision: "Section 17, Copyright Act, 1957", description: "States the general first-owner rule and statutory exceptions relevant to employment, commissions and newspaper publication." },
+      { id: "media-law-unit-4-assignment", title: "Assignment and licensing", provision: "Sections 18–19 and 30, Copyright Act, 1957", description: "Governs written assignment and licensing of specified rights, works, duration, territory and consideration." },
+      { id: "media-law-unit-4-broadcast", title: "Broadcast reproduction right", provision: "Section 37, Copyright Act, 1957", description: "Creates a distinct neighbouring right in broadcasts, generally lasting twenty-five years from the relevant following calendar year." },
+      { id: "media-law-unit-4-performer", title: "Performers' economic and moral rights", provision: "Sections 38, 38A and 38B, Copyright Act, 1957", description: "Protects fixation and exploitation of performances, royalties where applicable, attribution and integrity." },
+      { id: "media-law-unit-4-neighbouring-exceptions", title: "Exceptions to neighbouring rights", provision: "Sections 39 and 39A, Copyright Act, 1957", description: "Specifies permitted acts and applies identified copyright provisions to broadcast and performers' rights." },
+      { id: "media-law-unit-4-fair-dealing", title: "Acts not constituting infringement", provision: "Section 52, Copyright Act, 1957", description: "Includes specified fair-dealing, current-events, judicial and other exceptions subject to their exact conditions." },
+      { id: "media-law-unit-4-remedies", title: "Infringement and remedies", provision: "Sections 51, 55 and 63, Copyright Act, 1957", description: "Defines infringement and provides civil and criminal consequences under distinct requirements." },
+      { id: "media-law-unit-4-technology", title: "Digital protection measures", provision: "Sections 65A–65B, Copyright Act, 1957", description: "Addresses circumvention of technological measures and alteration or removal of rights-management information." },
+      { id: "media-law-unit-4-film-piracy", title: "Unauthorised film recording and exhibition", provision: "Sections 6AA, 6AB and 7, Cinematograph Act, 1952", description: "Creates cinema-specific anti-piracy prohibitions and consequences alongside copyright law." },
+      { id: "media-law-unit-4-security", title: "National-security restrictions", provision: "Article 19(2); Official Secrets Act, 1923; BNS section 152", description: "Requires each restriction to be analysed under its precise constitutional ground and statutory ingredients." },
+      { id: "media-law-unit-4-fair-trial", title: "Contempt and fair trial", provision: "Articles 19(1)(a) and 21; Contempt of Courts Act, 1971", description: "Balances open reporting with presumption of innocence and protection of the administration of justice." },
+      { id: "media-law-unit-4-electronic-evidence", title: "Proof of electronic records", provision: "Sections 61–63, Bharatiya Sakshya Adhiniyam, 2023", description: "Governs the legal effect, admissibility and certificate-based proof of electronic or digital records." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-4-rg-anand", caseName: "R.G. Anand v. Deluxe Films", citation: "(1978) 4 SCC 118", principle: "Copyright protects expression rather than ideas; infringement requires substantial copying of protected expression.", summary: "The Court formulated the idea-expression distinction and the overall-impression approach to substantial similarity." },
+      { id: "media-law-unit-4-iprs", caseName: "Indian Performing Right Society Ltd. v. Eastern India Motion Pictures Association", citation: "(1977) 2 SCC 820", principle: "Film exploitation may involve distinct rights in incorporated underlying works, subject to statutory ownership and contracts.", summary: "The decision is foundational but must be read with the Copyright (Amendment) Act, 2012 and current royalty protections." },
+      { id: "media-law-unit-4-ebc", caseName: "Eastern Book Company v. D.B. Modak", citation: "(2008) 1 SCC 1", principle: "Originality requires skill and judgment with a minimum degree of creativity, not merely mechanical labour.", summary: "The Court applied the originality standard to edited judicial decisions and distinguished public-domain judgments from original editorial inputs." },
+      { id: "media-law-unit-4-entertainment-network", caseName: "Entertainment Network (India) Ltd. v. Super Cassette Industries Ltd.", citation: "(2008) 13 SCC 30", principle: "Compulsory licensing affects proprietary rights and must follow the statutory conditions and a balanced, reasoned process.", summary: "The Court examined radio broadcasting licences and the relationship between public access, remuneration and copyright ownership." },
+      { id: "media-law-unit-4-myspace", caseName: "Super Cassettes Industries Ltd. v. MySpace Inc.", citation: "2016 SCC OnLine Del 6382", principle: "Online copyright liability must be reconciled with intermediary safe harbour and sufficiently specific knowledge requirements.", summary: "The Delhi High Court examined user uploads, notice, filtering and the limits of imposing general monitoring obligations." },
+      { id: "media-law-unit-4-wynk", caseName: "Tips Industries Ltd. v. Wynk Music Ltd.", citation: "2019 SCC OnLine Bom 13087", principle: "Section 31D statutory broadcasting licence does not automatically extend to every interactive on-demand internet service.", summary: "The Bombay High Court distinguished traditional broadcasting from user-controlled streaming downloads and on-demand access." },
+      { id: "media-law-unit-4-yashwant-sinha", caseName: "Yashwant Sinha v. Central Bureau of Investigation", citation: "(2020) 2 SCC 338", principle: "A secrecy allegation does not by itself exclude published documents from judicial consideration.", summary: "The Supreme Court rejected preliminary objections to considering documents published in connection with the Rafale review proceedings." },
+      { id: "media-law-unit-4-pucl", caseName: "People's Union for Civil Liberties v. Union of India", citation: "(1997) 1 SCC 301", principle: "Telephone interception invades privacy and requires lawful authority, necessity and procedural safeguards.", summary: "The Court laid down safeguards against arbitrary tapping, principles later reinforced by constitutional privacy doctrine." },
+      { id: "media-law-unit-4-manu-sharma", caseName: "Manu Sharma v. State (NCT of Delhi)", citation: "(2010) 6 SCC 1", principle: "Media reporting must not become a parallel adjudication that prejudices criminal proceedings.", summary: "The Court discussed the dangers of trial by media while deciding the Jessica Lal murder appeal on the evidentiary record." },
+      { id: "media-law-unit-4-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "Temporary postponement may exceptionally protect fair trial where a real and substantial prejudice risk cannot be avoided otherwise.", summary: "The Court framed a necessity- and proportionality-based remedy balancing Articles 19(1)(a) and 21." },
+      { id: "media-law-unit-4-rk-anand", caseName: "R.K. Anand v. Registrar, Delhi High Court", citation: "(2009) 8 SCC 106", principle: "A properly scrutinised sting may expose interference with justice, but authenticity, fairness and professional conduct remain essential.", summary: "The Court examined a television sting concerning efforts to influence a witness in the BMW trial and assessed the full recorded material." },
+      { id: "media-law-unit-4-raja-ram-pal", caseName: "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha", citation: "(2007) 3 SCC 184", principle: "Sting material may prompt legislative action, while privilege decisions remain subject to limited constitutional review.", summary: "The cash-for-query recordings formed part of the background to parliamentary expulsions reviewed by the Constitution Bench." },
+      { id: "media-law-unit-4-aniruddha-bahal", caseName: "Aniruddha Bahal v. State", citation: "2010 SCC OnLine Del 2337", principle: "Public-interest investigative conduct should not be mechanically criminalised where the journalist exposes rather than shares the unlawful purpose.", summary: "The Delhi High Court quashed proceedings against journalists whose covert operation exposed willingness to facilitate money laundering." },
+    ],
+    examFocus:
+      "Prepare Copyright Act sections 13, 14, 17, 18, 19, 30, 31D, 37, 38, 38A, 38B, 39, 39A, 51, 52, 55, 57, 63, 65A and 65B; categories of works, idea-expression, originality, ownership, assignment and licences; fair dealing for criticism, review and current-events reporting; the distinction among underlying copyright, broadcast reproduction right and performers' rights; civil, criminal and technological remedies; Cinematograph Act sections 6AA, 6AB and 7; national-security limits and surveillance; trial by media and postponement orders; sting-operation necessity, privacy, entrapment and editing; BSA sections 61–63 and chain of custody; and the principles in R.G. Anand, IPRS, Eastern Book Company, Entertainment Network, MySpace, Tips v. Wynk, Yashwant Sinha, PUCL, Manu Sharma, Sahara India, R.K. Anand, Raja Ram Pal and Aniruddha Bahal.",
+    revisionNotes: `
+Copyright method: identify the work, author, first owner, term and exact restricted act; check written assignment or licence; then apply section 52 or another exception. Facts and ideas are free, but original expression is protected. Registration is generally evidentiary, not constitutive.
+
+Separate layers: underlying works retain copyright; section 37 protects the broadcast signal for twenty-five years; sections 38–38B protect performers for fifty years and preserve moral interests. Permission at one layer does not automatically clear the others.
+
+Exceptions and remedies: current-events reporting must be fair in purpose, amount and market effect. Sections 51 and 55 govern infringement and civil relief; criminal liability needs its statutory mental element; sections 65A–65B address technological measures and rights information; film anti-piracy provisions operate additionally.
+
+Public law: national-security claims require precise authority, proof and proportionality. Fair-trial rights prohibit parallel conviction by publicity, not accurate court reporting. Postponement is exceptional and temporary.
+
+Stings: ask whether serious public wrongdoing was reasonably suspected, covert means were necessary, inducement was proportionate, editing was fair and collateral privacy was minimised. Preserve the original recording, metadata and chain of custody and prove electronic material under BSA sections 61–63.
+    `.trim(),
   },
   {
     title: "Self-Regulation, Ethics and Contemporary Issues",
