@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 66183)
-Total output lines: 2115
-
 import { createChapterModel } from "../../models/ChapterModel";
 import { createCourseBookModel } from "../../models/CourseBookModel";
 import { createCourseModel } from "../../models/CourseModel";
@@ -993,7 +990,183 @@ Stings must be distinguished from ordinary observation and from entrapment. Reco
 
 18. Sting operations, privacy and legality
 
-Covert recording may affect privacy, trespass, confidentiality, data protection, criminal law and broadcasting or journalistic codes. The location and expectation of privacy matter. Recording intimate…6183 tokens truncated…oid rumours, dehumanising description, unverified casualty figures and images stripped of time or place. Where identity is relevant to exposing discrimination or organised violence, it should be reported accurately and contextually rather than suppressed automatically.
+Covert recording may affect privacy, trespass, confidentiality, data protection, criminal law and broadcasting or journalistic codes. The location and expectation of privacy matter. Recording intimate conduct in a private home requires much stronger justification than documenting an official demand made in an office.
+
+Raja Ram Pal v. Hon'ble Speaker, Lok Sabha arose from the cash-for-query sting and confirmed that recorded investigative material may trigger institutional proceedings, while those proceedings remain constitutionally reviewable. In Aniruddha Bahal v. State, the Delhi High Court recognised the public-interest character of a journalist's operation exposing willingness to launder money and rejected mechanical prosecution of the reporter.
+
+These decisions do not grant a universal sting-operation licence. Legality turns on the method, intent, statutory offence, authenticity, editing and public-interest connection.
+
+19. Sting evidence and the Bharatiya Sakshya Adhiniyam
+
+Audio, video, messages and device records are documents and electronic or digital records under the Bharatiya Sakshya Adhiniyam, 2023. Sections 61 to 63 govern the legal effect and proof of electronic records, including the statutory certificate route where applicable.
+
+Admissibility does not establish truth by itself. The proponent should prove source, device, custody, integrity, identity of speakers, continuity and absence of manipulation. Original files, metadata, hash values, contemporaneous notes and a documented chain of custody strengthen reliability. Selective excerpts should be compared with the complete recording.
+
+In R.K. Anand v. Registrar, Delhi High Court, the Supreme Court examined a television sting concerning interference with a criminal trial and relied on the material after detailed scrutiny. The case shows both the public value of a genuine sting and the need for fairness, authentication and judicial evaluation.
+
+20. Applied problem and examination method
+
+Assume a digital news channel copies three minutes from a competitor's exclusive sports broadcast, adds a brief headline, secretly records an official accepting money, heavily edits the recording, publishes a protected witness's identity and declares an accused guilty. It claims fair dealing and public interest for everything.
+
+Separate the issues. Identify copyright in the underlying footage and the section 37 broadcast reproduction right; test the amount, purpose, necessity and market effect under section 52; analyse consent and performers' rights if relevant; test the sting method under privacy, public interest and applicable offences; authenticate the full recording under BSA sections 61–63; and address identity protection, contempt and fair trial. Public interest may support the corruption disclosure but cannot automatically legalise excessive footage appropriation, deceptive editing or prejudicial publication.
+
+For an examination answer, use this order: identify each work and neighbouring right; determine author and owner; identify the restricted act; examine assignment or licence; apply fair dealing or another exception; state term and remedies; then separately analyse security, privacy, fair trial, sting legality and electronic proof. Never merge copyright ownership, broadcast reproduction right and performers' rights into one undifferentiated right.
+    `.trim(),
+    keyPoints: [
+      "Copyright protects original expression, not facts, ideas or news events in the abstract.",
+      "A media product may contain separate literary, artistic, musical, film, sound-recording, broadcast and performers' rights.",
+      "Sections 18–19 govern assignment, while section 30 permits written licences by the owner or authorised agent.",
+      "Fair dealing for criticism, review and current-events reporting is purpose- and context-specific, not a blanket news exemption.",
+      "Section 37 gives broadcasters a separate twenty-five-year broadcast reproduction right.",
+      "Sections 38, 38A and 38B protect performers' economic and moral interests, generally for fifty years.",
+      "Underlying copyright permission does not automatically authorise copying another broadcaster's signal, and vice versa.",
+      "Sections 65A and 65B protect technological measures and rights-management information subject to statutory conditions.",
+      "The Cinematograph Act's anti-piracy provisions supplement rather than replace the Copyright Act.",
+      "National-security restriction requires precise legal authority and cannot rest solely on official embarrassment or labelling.",
+      "Trial by media must be distinguished from fair and accurate open-court reporting.",
+      "A legitimate sting requires serious public interest, necessity, proportional methods, accurate editing and protection against collateral harm.",
+      "Electronic sting material must be authenticated under the Bharatiya Sakshya Adhiniyam; admissibility alone does not prove truth.",
+    ],
+    statutoryProvisions: [
+      { id: "media-law-unit-4-copyright-works", title: "Protected works", provision: "Sections 13–14, Copyright Act, 1957", description: "Identifies protected categories and the exclusive-right bundle applicable to each category of work." },
+      { id: "media-law-unit-4-ownership", title: "First ownership", provision: "Section 17, Copyright Act, 1957", description: "States the general first-owner rule and statutory exceptions relevant to employment, commissions and newspaper publication." },
+      { id: "media-law-unit-4-assignment", title: "Assignment and licensing", provision: "Sections 18–19 and 30, Copyright Act, 1957", description: "Governs written assignment and licensing of specified rights, works, duration, territory and consideration." },
+      { id: "media-law-unit-4-broadcast", title: "Broadcast reproduction right", provision: "Section 37, Copyright Act, 1957", description: "Creates a distinct neighbouring right in broadcasts, generally lasting twenty-five years from the relevant following calendar year." },
+      { id: "media-law-unit-4-performer", title: "Performers' economic and moral rights", provision: "Sections 38, 38A and 38B, Copyright Act, 1957", description: "Protects fixation and exploitation of performances, royalties where applicable, attribution and integrity." },
+      { id: "media-law-unit-4-neighbouring-exceptions", title: "Exceptions to neighbouring rights", provision: "Sections 39 and 39A, Copyright Act, 1957", description: "Specifies permitted acts and applies identified copyright provisions to broadcast and performers' rights." },
+      { id: "media-law-unit-4-fair-dealing", title: "Acts not constituting infringement", provision: "Section 52, Copyright Act, 1957", description: "Includes specified fair-dealing, current-events, judicial and other exceptions subject to their exact conditions." },
+      { id: "media-law-unit-4-remedies", title: "Infringement and remedies", provision: "Sections 51, 55 and 63, Copyright Act, 1957", description: "Defines infringement and provides civil and criminal consequences under distinct requirements." },
+      { id: "media-law-unit-4-technology", title: "Digital protection measures", provision: "Sections 65A–65B, Copyright Act, 1957", description: "Addresses circumvention of technological measures and alteration or removal of rights-management information." },
+      { id: "media-law-unit-4-film-piracy", title: "Unauthorised film recording and exhibition", provision: "Sections 6AA, 6AB and 7, Cinematograph Act, 1952", description: "Creates cinema-specific anti-piracy prohibitions and consequences alongside copyright law." },
+      { id: "media-law-unit-4-security", title: "National-security restrictions", provision: "Article 19(2); Official Secrets Act, 1923; BNS section 152", description: "Requires each restriction to be analysed under its precise constitutional ground and statutory ingredients." },
+      { id: "media-law-unit-4-fair-trial", title: "Contempt and fair trial", provision: "Articles 19(1)(a) and 21; Contempt of Courts Act, 1971", description: "Balances open reporting with presumption of innocence and protection of the administration of justice." },
+      { id: "media-law-unit-4-electronic-evidence", title: "Proof of electronic records", provision: "Sections 61–63, Bharatiya Sakshya Adhiniyam, 2023", description: "Governs the legal effect, admissibility and certificate-based proof of electronic or digital records." },
+    ],
+    importantCases: [
+      { id: "media-law-unit-4-rg-anand", caseName: "R.G. Anand v. Deluxe Films", citation: "(1978) 4 SCC 118", principle: "Copyright protects expression rather than ideas; infringement requires substantial copying of protected expression.", summary: "The Court formulated the idea-expression distinction and the overall-impression approach to substantial similarity." },
+      { id: "media-law-unit-4-iprs", caseName: "Indian Performing Right Society Ltd. v. Eastern India Motion Pictures Association", citation: "(1977) 2 SCC 820", principle: "Film exploitation may involve distinct rights in incorporated underlying works, subject to statutory ownership and contracts.", summary: "The decision is foundational but must be read with the Copyright (Amendment) Act, 2012 and current royalty protections." },
+      { id: "media-law-unit-4-ebc", caseName: "Eastern Book Company v. D.B. Modak", citation: "(2008) 1 SCC 1", principle: "Originality requires skill and judgment with a minimum degree of creativity, not merely mechanical labour.", summary: "The Court applied the originality standard to edited judicial decisions and distinguished public-domain judgments from original editorial inputs." },
+      { id: "media-law-unit-4-entertainment-network", caseName: "Entertainment Network (India) Ltd. v. Super Cassette Industries Ltd.", citation: "(2008) 13 SCC 30", principle: "Compulsory licensing affects proprietary rights and must follow the statutory conditions and a balanced, reasoned process.", summary: "The Court examined radio broadcasting licences and the relationship between public access, remuneration and copyright ownership." },
+      { id: "media-law-unit-4-myspace", caseName: "Super Cassettes Industries Ltd. v. MySpace Inc.", citation: "2016 SCC OnLine Del 6382", principle: "Online copyright liability must be reconciled with intermediary safe harbour and sufficiently specific knowledge requirements.", summary: "The Delhi High Court examined user uploads, notice, filtering and the limits of imposing general monitoring obligations." },
+      { id: "media-law-unit-4-wynk", caseName: "Tips Industries Ltd. v. Wynk Music Ltd.", citation: "2019 SCC OnLine Bom 13087", principle: "Section 31D statutory broadcasting licence does not automatically extend to every interactive on-demand internet service.", summary: "The Bombay High Court distinguished traditional broadcasting from user-controlled streaming downloads and on-demand access." },
+      { id: "media-law-unit-4-yashwant-sinha", caseName: "Yashwant Sinha v. Central Bureau of Investigation", citation: "(2020) 2 SCC 338", principle: "A secrecy allegation does not by itself exclude published documents from judicial consideration.", summary: "The Supreme Court rejected preliminary objections to considering documents published in connection with the Rafale review proceedings." },
+      { id: "media-law-unit-4-pucl", caseName: "People's Union for Civil Liberties v. Union of India", citation: "(1997) 1 SCC 301", principle: "Telephone interception invades privacy and requires lawful authority, necessity and procedural safeguards.", summary: "The Court laid down safeguards against arbitrary tapping, principles later reinforced by constitutional privacy doctrine." },
+      { id: "media-law-unit-4-manu-sharma", caseName: "Manu Sharma v. State (NCT of Delhi)", citation: "(2010) 6 SCC 1", principle: "Media reporting must not become a parallel adjudication that prejudices criminal proceedings.", summary: "The Court discussed the dangers of trial by media while deciding the Jessica Lal murder appeal on the evidentiary record." },
+      { id: "media-law-unit-4-sahara", caseName: "Sahara India Real Estate Corp. Ltd. v. SEBI", citation: "(2012) 10 SCC 603", principle: "Temporary postponement may exceptionally protect fair trial where a real and substantial prejudice risk cannot be avoided otherwise.", summary: "The Court framed a necessity- and proportionality-based remedy balancing Articles 19(1)(a) and 21." },
+      { id: "media-law-unit-4-rk-anand", caseName: "R.K. Anand v. Registrar, Delhi High Court", citation: "(2009) 8 SCC 106", principle: "A properly scrutinised sting may expose interference with justice, but authenticity, fairness and professional conduct remain essential.", summary: "The Court examined a television sting concerning efforts to influence a witness in the BMW trial and assessed the full recorded material." },
+      { id: "media-law-unit-4-raja-ram-pal", caseName: "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha", citation: "(2007) 3 SCC 184", principle: "Sting material may prompt legislative action, while privilege decisions remain subject to limited constitutional review.", summary: "The cash-for-query recordings formed part of the background to parliamentary expulsions reviewed by the Constitution Bench." },
+      { id: "media-law-unit-4-aniruddha-bahal", caseName: "Aniruddha Bahal v. State", citation: "2010 SCC OnLine Del 2337", principle: "Public-interest investigative conduct should not be mechanically criminalised where the journalist exposes rather than shares the unlawful purpose.", summary: "The Delhi High Court quashed proceedings against journalists whose covert operation exposed willingness to facilitate money laundering." },
+    ],
+    examFocus:
+      "Prepare Copyright Act sections 13, 14, 17, 18, 19, 30, 31D, 37, 38, 38A, 38B, 39, 39A, 51, 52, 55, 57, 63, 65A and 65B; categories of works, idea-expression, originality, ownership, assignment and licences; fair dealing for criticism, review and current-events reporting; the distinction among underlying copyright, broadcast reproduction right and performers' rights; civil, criminal and technological remedies; Cinematograph Act sections 6AA, 6AB and 7; national-security limits and surveillance; trial by media and postponement orders; sting-operation necessity, privacy, entrapment and editing; BSA sections 61–63 and chain of custody; and the principles in R.G. Anand, IPRS, Eastern Book Company, Entertainment Network, MySpace, Tips v. Wynk, Yashwant Sinha, PUCL, Manu Sharma, Sahara India, R.K. Anand, Raja Ram Pal and Aniruddha Bahal.",
+    revisionNotes: `
+Copyright method: identify the work, author, first owner, term and exact restricted act; check written assignment or licence; then apply section 52 or another exception. Facts and ideas are free, but original expression is protected. Registration is generally evidentiary, not constitutive.
+
+Separate layers: underlying works retain copyright; section 37 protects the broadcast signal for twenty-five years; sections 38–38B protect performers for fifty years and preserve moral interests. Permission at one layer does not automatically clear the others.
+
+Exceptions and remedies: current-events reporting must be fair in purpose, amount and market effect. Sections 51 and 55 govern infringement and civil relief; criminal liability needs its statutory mental element; sections 65A–65B address technological measures and rights information; film anti-piracy provisions operate additionally.
+
+Public law: national-security claims require precise authority, proof and proportionality. Fair-trial rights prohibit parallel conviction by publicity, not accurate court reporting. Postponement is exceptional and temporary.
+
+Stings: ask whether serious public wrongdoing was reasonably suspected, covert means were necessary, inducement was proportionate, editing was fair and collateral privacy was minimised. Preserve the original recording, metadata and chain of custody and prove electronic material under BSA sections 61–63.
+    `.trim(),
+  },
+  {
+    title: "Self-Regulation, Ethics and Contemporary Issues",
+    shortDescription:
+      "Media ethics, self-regulation and legal regulation, human rights and foreign investment in print media.",
+    overview:
+      "This unit examines how ethical standards, industry bodies and statutory regulation interact. It studies accuracy, fairness, independence, conflicts of interest, correction and accountability; media's relationship with human rights; and the policy and legal questions surrounding foreign investment in Indian print media.",
+    objectives: [
+      "Explain the foundations of responsible media ethics.",
+      "Compare self-regulation, co-regulation and statutory regulation.",
+      "Apply human-rights principles to reporting and editorial decisions.",
+      "Assess accountability mechanisms for news and entertainment media.",
+      "Explain the policy framework governing foreign investment in print media.",
+      "Apply accuracy, privacy, fairness and conflict-of-interest standards to a newsroom problem.",
+      "Distinguish the jurisdictions of print, television and digital-news accountability bodies.",
+      "Evaluate ownership concentration, paid news and editorial independence.",
+    ],
+    topics: [
+      "Accuracy, fairness, independence and conflicts of interest",
+      "Privacy, dignity, vulnerable persons and reporting trauma",
+      "Self-regulatory and statutory accountability models",
+      "Media, democracy and human rights",
+      "Foreign direct investment in news and non-news print media",
+      "Corrections, complaints and public accountability",
+    ],
+    provisions: [
+      "Press Council Act, 1978 and Norms of Journalistic Conduct",
+      "News Broadcasters and Digital Association self-regulatory framework",
+      "Cable Television Networks Programme Code",
+      "Consolidated FDI Policy and applicable government approvals",
+    ],
+    detailedContent: `
+1. Meaning and purpose of media ethics
+
+Media ethics consists of professional principles governing how information is gathered, verified, selected, presented, corrected and archived. Law fixes minimum enforceable duties, while ethics asks what responsible journalism should do even where no court order or penalty follows.
+
+The central values are truth-seeking, accuracy, fairness, independence, humanity, accountability and transparency. These values can conflict. Speed may conflict with verification; public interest with privacy; source confidentiality with accountability; and graphic truth with dignity. Ethical judgment requires reasons, not slogans.
+
+2. Law, ethics and professional standards
+
+An unlawful publication is usually unethical, but an unethical publication is not necessarily illegal. A misleading headline, undisclosed gift or refusal to correct may breach professional standards without independently constituting a crime or tort. Conversely, legal permission does not establish ethical justification.
+
+Regulation should identify its source. Constitutional and statutory law is enforceable by public institutions. A regulator's code may have legal force within a licensing or statutory scheme. An industry code binds through membership or contract. An internal editorial code is enforced by the organisation. Confusing these levels produces incorrect remedies.
+
+3. Accuracy, verification and correction
+
+Journalists should distinguish verified fact, allegation, opinion, analysis, satire and advertisement. Serious allegations require proportionate verification: examination of primary documents, corroboration, source evaluation, contextual checking and a meaningful opportunity for the affected person to respond.
+
+Accuracy concerns the overall impression, not only isolated sentences. Headlines, photographs, captions, editing and omission can render a report misleading. Urgency may affect what verification is reasonable, but it does not justify inventing certainty.
+
+A prompt, prominent and specific correction reduces continuing harm and demonstrates accountability. Quietly editing a digital article without explaining a material correction may preserve the misleading impression and weaken public trust.
+
+4. Fairness, balance and right of reply
+
+Fairness requires honest presentation of material facts and affected perspectives. It does not always require equal time for demonstrably unequal claims. Balance is not mathematical symmetry; it is editorial treatment proportionate to evidence and relevance.
+
+When alleging misconduct, the newsroom should ordinarily seek a response with sufficient particulars and time. If urgency requires publication before reply, the report should state that a response was sought and update the story fairly when received. A right of reply is not a right to dictate the article or suppress documented criticism.
+
+5. Independence and conflicts of interest
+
+Editorial judgment should not be secretly controlled by owners, advertisers, governments, political parties, sources or personal benefit. Gifts, paid travel, outside employment, family interests, investments and political activity may create actual or apparent conflicts requiring refusal, disclosure or reassignment.
+
+Separation of advertising and editorial content is essential. Sponsored material, native advertising, affiliate content and influencer promotion should be clearly identified. Commercial arrangements should not determine favourable news coverage or the suppression of legitimate criticism.
+
+6. Paid news and disguised advertising
+
+Paid news presents promotional or political material as independent journalism in exchange for money or another benefit. It deceives the audience about the source and motivation of the communication, distorts electoral equality and compromises editorial independence.
+
+Paid news may engage the Press Council's norms, election expenditure law, consumer protection, advertising standards, company disclosure and taxation rules depending on the facts. Proof should identify the consideration, editorial presentation, coordination and person responsible; mere favourable coverage is not by itself proof of payment.
+
+7. Sources, confidentiality and anonymous attribution
+
+Confidential sources can expose corruption and abuse where named disclosure is unsafe. Before granting anonymity, the journalist should assess the source's access, motive, reliability, corroboration and risk. Editors should ordinarily know the source even where the public does not.
+
+Anonymity should not become a channel for unverified personal attack. The report should give readers as much information about the source's basis of knowledge as safety permits. Source confidentiality is a serious ethical commitment, but Indian law does not create a universal privilege against every lawful court or investigative demand.
+
+Section 15(2) of the Press Council Act specifically prevents the Council from compelling disclosure of a news source in its inquiry. That protection must not be generalised beyond the statutory context.
+
+8. Privacy, dignity and minimisation of harm
+
+Privacy is a fundamental right under Articles 14, 19 and 21. Ethical reporting asks whether private information is necessary to a genuine public-interest story and whether the same purpose can be achieved with less intrusion. Public curiosity, celebrity and virality are not substitutes for public interest.
+
+Particular care is required for children, sexual-offence survivors, patients, grieving families, persons with disabilities and communities exposed to retaliation. Identity, address, images and metadata can cause harm even when the name is omitted. Consent should be informed and cannot always cure exploitation or statutory prohibition.
+
+R. Rajagopal v. State of Tamil Nadu and Justice K.S. Puttaswamy v. Union of India provide the constitutional foundation for balancing publication with private life, dignity, autonomy and informational privacy.
+
+9. Reporting children, sexual violence and vulnerable persons
+
+The Juvenile Justice Act, POCSO Act and criminal-procedure laws restrict disclosure that identifies children and victims in specified cases. Identification may occur through family details, school, neighbourhood, image, voice or contextual clues, not only by printing a name.
+
+Nipun Saxena v. Union of India reinforced protection of the identity and dignity of sexual-offence survivors. Ethical practice also avoids victim blaming, gratuitous detail, repeated traumatic imagery and interviews obtained through pressure.
+
+10. Communal, caste and conflict-sensitive reporting
+
+Reports concerning religion, caste, ethnicity, migration or conflict can intensify real-world harm. Verification of identity and causation is essential. Headlines should not attribute an individual's conduct to an entire community without genuine relevance.
+
+Journalists should avoid rumours, dehumanising description, unverified casualty figures and images stripped of time or place. Where identity is relevant to exposing discrimination or organised violence, it should be reported accurately and contextually rather than suppressed automatically.
 
 In Amish Devgan v. Union of India, the Supreme Court discussed hate speech, dignity, fraternity and the contextual assessment of expression. The case illustrates why reach, speaker, audience, repetition and likely harm matter.
 
