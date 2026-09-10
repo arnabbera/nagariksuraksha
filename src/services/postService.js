@@ -31,13 +31,50 @@ const normalizeSlug = (
       "-",
     );
 
+const bundledPosts = [
+  MASTERDA_SURYA_SEN_POST,
+];
+
+const getBundledPostById = (
+  id,
+) =>
+  bundledPosts.find(
+    (post) => post.id === id,
+  ) || null;
+
+const mergePostsBySlug = (
+  primaryPosts = [],
+  fallbackPosts = [],
+) =>
+  [
+    ...primaryPosts,
+    ...fallbackPosts,
+  ].filter(
+    (post, index, posts) =>
+      posts.findIndex(
+        (candidate) =>
+          candidate.slug === post.slug,
+      ) === index,
+  );
+
 // =========================================================
 // ADMIN - ALL POSTS
 // =========================================================
 
 export const getAllPosts =
-  async () =>
-    postRepository.getAllPosts();
+  async () => {
+    const repositoryPosts =
+      await postRepository.getAllPosts();
+
+    return mergePostsBySlug(
+      repositoryPosts,
+      bundledPosts,
+    ).sort(
+      (first, second) =>
+        Number(first.displayOrder || 0) -
+        Number(second.displayOrder || 0),
+    );
+  };
 
 // =========================================================
 // PUBLIC - PUBLISHED POSTS
@@ -63,21 +100,11 @@ export const getPublishedPosts =
       );
     }
 
-    const bundledPosts = [
-      MASTERDA_SURYA_SEN_POST,
-    ];
-
-    const mergedPosts = [
-      ...bundledPosts,
-      ...(Array.isArray(repositoryPosts)
+    const mergedPosts = mergePostsBySlug(
+      Array.isArray(repositoryPosts)
         ? repositoryPosts
-        : []),
-    ].filter(
-      (post, index, posts) =>
-        posts.findIndex(
-          (candidate) =>
-            candidate.slug === post.slug,
-        ) === index,
+        : [],
+      bundledPosts,
     );
 
     return mergedPosts
@@ -117,16 +144,19 @@ export const getPostBySlug =
         slug,
       );
 
-    if (
-      normalizedSlug ===
-      MASTERDA_SURYA_SEN_POST.slug
-    ) {
-      return MASTERDA_SURYA_SEN_POST;
+    const repositoryPost =
+      await postRepository.getBySlug(
+        normalizedSlug,
+      );
+
+    if (repositoryPost) {
+      return repositoryPost;
     }
 
-    return postRepository.getBySlug(
-      normalizedSlug,
-    );
+    return bundledPosts.find(
+      (post) =>
+        post.slug === normalizedSlug,
+    ) || null;
   };
 
 // =========================================================
@@ -241,10 +271,14 @@ export const updatePost =
       );
     }
 
-    const existing =
+    const repositoryExisting =
       await postRepository.getById(
         postId,
       );
+
+    const existing =
+      repositoryExisting ||
+      getBundledPostById(postId);
 
     if (
       !existing
@@ -420,23 +454,58 @@ export const updatePost =
       },
     };
 
-    return postRepository.update(
+    const updateData = {
+      ...postFields,
+
+      slug,
+
+      media,
+
+      updatedBy,
+
+      version:
+        Number(
+          existing.version ||
+            1,
+        ) + 1,
+    };
+
+    if (repositoryExisting) {
+      return postRepository.update(
+        postId,
+        updateData,
+      );
+    }
+
+    return postRepository.create(
       postId,
-      {
-        ...postFields,
-
-        slug,
-
-        media,
-
-        updatedBy,
-
-        version:
-          Number(
-            existing.version ||
-              1,
-          ) + 1,
-      },
+      createPostModel({
+        ...updateData,
+        id: postId,
+        desktopImageUrl:
+          media.desktop.url,
+        desktopImagePublicId:
+          media.desktop.publicId,
+        desktopImageStoragePath:
+          media.desktop.storagePath,
+        desktopImageFileName:
+          media.desktop.fileName,
+        desktopImageSize:
+          media.desktop.size,
+        mobileImageUrl:
+          media.mobile.url,
+        mobileImagePublicId:
+          media.mobile.publicId,
+        mobileImageStoragePath:
+          media.mobile.storagePath,
+        mobileImageFileName:
+          media.mobile.fileName,
+        mobileImageSize:
+          media.mobile.size,
+        createdBy:
+          existing.createdBy ||
+          updatedBy,
+      }),
     );
   };
 
@@ -449,62 +518,3 @@ export const publishPost =
     postId,
   ) =>
     postRepository.publish(
-      postId,
-    );
-
-// =========================================================
-// ARCHIVE POST
-// =========================================================
-
-export const archivePost =
-  async (
-    postId,
-  ) =>
-    postRepository.archive(
-      postId,
-    );
-
-// =========================================================
-// FEATURE POST
-// =========================================================
-
-export const setPostFeatured =
-  async (
-    postId,
-    featured,
-  ) =>
-    postRepository.setFeatured(
-      postId,
-      featured,
-    );
-
-// =========================================================
-// DELETE POST
-// =========================================================
-
-export const deletePost =
-  async (
-    postId,
-    deletedBy = "system",
-  ) =>
-    postRepository.softDelete(
-      postId,
-      deletedBy,
-    );
-
-// =========================================================
-// DEFAULT EXPORT
-// =========================================================
-
-export default {
-  getAllPosts,
-  getPublishedPosts,
-  getPostBySlug,
-  getPostById,
-  createPost,
-  updatePost,
-  publishPost,
-  archivePost,
-  setPostFeatured,
-  deletePost,
-};
