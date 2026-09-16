@@ -518,3 +518,62 @@ export const publishPost =
     postId,
   ) =>
     postRepository.publish(
+      postId,
+    );
+
+// =========================================================
+// ARCHIVE POST
+// =========================================================
+
+export const archivePost =
+  async (
+    postId,
+  ) =>
+    postRepository.archive(
+      postId,
+    );
+
+// =========================================================
+// FEATURE POST
+// =========================================================
+
+export const setPostFeatured =
+  async (
+    postId,
+    featured,
+  ) =>
+    postRepository.setFeatured(
+      postId,
+      featured,
+    );
+
+// =========================================================
+// DELETE POST
+// =========================================================
+
+export const deletePost =
+  async (
+    postId,
+    deletedBy = "system",
+  ) =>
+    postRepository.softDelete(
+      postId,
+      deletedBy,
+    );
+
+// =========================================================
+// DEFAULT EXPORT
+// =========================================================
+
+export default {
+  getAllPosts,
+  getPublishedPosts,
+  getPostBySlug,
+  getPostById,
+  createPost,
+  updatePost,
+  publishPost,
+  archivePost,
+  setPostFeatured,
+  deletePost,
+};
