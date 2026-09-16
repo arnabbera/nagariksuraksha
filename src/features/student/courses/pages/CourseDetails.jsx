@@ -375,6 +375,15 @@ export default function CourseDetails() {
     course?.thumbnailUrl ||
     "";
 
+  const landscapeImageUrl =
+    desktopImageUrl
+      ? `${desktopImageUrl}${
+          desktopImageUrl.includes("?")
+            ? "&"
+            : "?"
+        }ns-course-landscape=20260916`
+      : "";
+
   const getBookCover = (book) =>
     book?.coverImageUrl ||
     book?.imageUrl ||
@@ -809,22 +818,20 @@ export default function CourseDetails() {
         {/* LEFT COLUMN: IMAGE + RECOMMENDED BOOKS */}
 
         <div className="ns-course-left-column">
-          {desktopImageUrl &&
+          {landscapeImageUrl &&
             !imageError && (
               <div className="ns-course-cover">
-                <picture>
-                  <img
-                    src={
-                      desktopImageUrl
-                    }
-                    alt={`${course.title} course banner`}
-                    onError={() =>
-                      setImageError(
-                        true,
-                      )
-                    }
-                  />
-                </picture>
+                <img
+                  src={
+                    landscapeImageUrl
+                  }
+                  alt={`${course.title} course banner`}
+                  onError={() =>
+                    setImageError(
+                      true,
+                    )
+                  }
+                />
               </div>
             )}
 
