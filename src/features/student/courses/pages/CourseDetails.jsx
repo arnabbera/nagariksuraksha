@@ -375,12 +375,6 @@ export default function CourseDetails() {
     course?.thumbnailUrl ||
     "";
 
-  const mobileImageUrl =
-    course?.media
-      ?.mobileImageUrl ||
-    course?.mobileImageUrl ||
-    "";
-
   const getBookCover = (book) =>
     book?.coverImageUrl ||
     book?.imageUrl ||
@@ -808,7 +802,7 @@ export default function CourseDetails() {
           RIGHT = COURSE OVERVIEW
 
           MOBILE:
-          9:16 IMAGE ABOVE OVERVIEW
+          16:9 IMAGE ABOVE OVERVIEW
       ====================================================== */}
 
       <div className="ns-course-hero">
@@ -819,15 +813,6 @@ export default function CourseDetails() {
             !imageError && (
               <div className="ns-course-cover">
                 <picture>
-                  {mobileImageUrl && (
-                    <source
-                      media="(max-width: 640px)"
-                      srcSet={
-                        mobileImageUrl
-                      }
-                    />
-                  )}
-
                   <img
                     src={
                       desktopImageUrl
@@ -2537,7 +2522,7 @@ export default function CourseDetails() {
 
           /* ==================================================
              MOBILE
-             MOBILE IMAGE = 9:16
+             MOBILE IMAGE = 16:9
           ================================================== */
 
           @media (
@@ -2552,12 +2537,8 @@ export default function CourseDetails() {
 
               max-width: 420px;
 
-              /*
-               * The <picture> element switches
-               * to mobileImageUrl here.
-               */
               aspect-ratio:
-                9 / 16;
+                16 / 9;
 
               margin:
                 0 auto;
