@@ -423,6 +423,15 @@ export default function PublicCourseDetailsPage() {
       course,
     );
 
+  const landscapeImage =
+    desktopImage
+      ? `${desktopImage}${
+          desktopImage.includes("?")
+            ? "&"
+            : "?"
+        }ns-course-landscape=20260916`
+      : "";
+
   const totalChapters =
     Number(
       course?.totals
@@ -646,15 +655,13 @@ export default function PublicCourseDetailsPage() {
                   : ""
               }`}
             >
-              {desktopImage ? (
-                <picture>
-                  <img
-                    src={
-                      desktopImage
-                    }
-                    alt={`${course.title} LL.B law course`}
-                  />
-                </picture>
+              {landscapeImage ? (
+                <img
+                  src={
+                    landscapeImage
+                  }
+                  alt={`${course.title} LL.B law course`}
+                />
               ) : (
                 <div className="course-image-fallback">
                   <FaGraduationCap />
