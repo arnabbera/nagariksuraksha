@@ -51,15 +51,6 @@ const getDesktopImage = (
   course?.media?.imageUrl ||
   "";
 
-const getMobileImage = (
-  course,
-) =>
-  course?.mobileImageUrl ||
-  course?.thumbnailUrl ||
-  course?.media?.mobileImageUrl ||
-  course?.media?.thumbnailUrl ||
-  getDesktopImage(course);
-
 const getRobots = (
   course,
 ) => {
@@ -432,11 +423,6 @@ export default function PublicCourseDetailsPage() {
       course,
     );
 
-  const mobileImage =
-    getMobileImage(
-      course,
-    );
-
   const totalChapters =
     Number(
       course?.totals
@@ -662,15 +648,6 @@ export default function PublicCourseDetailsPage() {
             >
               {desktopImage ? (
                 <picture>
-                  {mobileImage && (
-                    <source
-                      media="(max-width: 640px)"
-                      srcSet={
-                        mobileImage
-                      }
-                    />
-                  )}
-
                   <img
                     src={
                       desktopImage
