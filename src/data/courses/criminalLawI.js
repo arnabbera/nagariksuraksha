@@ -46,6 +46,48 @@ export const criminalLawICourse = createCourseModel({
   },
 });
 
+const chapterOneOverview =
+  "This chapter introduces the operation and territorial reach of Indian substantive criminal law. It explains IPC Sections 1–5 and their corresponding provisions in BNS Section 1, including offences committed within India, offences committed outside India but triable under Indian law, extra-territorial jurisdiction over Indian citizens, Indian-registered ships and aircraft, cyber offences targeting computer resources in India, and the continuing operation of special and local laws. It also explains how the commencement and repeal-and-savings provisions determine whether the IPC or the BNS applies to a particular offence.";
+
+const chapterOneLearningObjectives = [
+  "Explain the purpose and scope of the introductory provisions of the IPC and the BNS.",
+  "Identify the corresponding BNS provision for each of IPC Sections 1–5.",
+  "Apply the principle of territorial jurisdiction to offences committed within India.",
+  "Explain when an offence committed outside India may be tried under Indian criminal law.",
+  "Describe the extra-territorial application of Indian law to citizens, Indian-registered ships and aircraft, and computer resources located in India.",
+  "Distinguish general criminal law from special and local penal laws.",
+  "Determine whether the IPC or the BNS applies by reference to the date of the alleged offence and the repeal-and-savings rule.",
+];
+
+const chapterOneKeyPoints = [
+  "IPC Sections 1–5 formed the introductory chapter governing the Code's name, territorial operation and extra-territorial reach.",
+  "The corresponding principles are substantially consolidated in Section 1 BNS.",
+  "Section 2 IPC corresponds to Section 1(3) BNS and applies to acts or omissions committed within India.",
+  "Section 3 IPC corresponds to Section 1(4) BNS and governs offences committed outside India that may lawfully be tried in India.",
+  "Section 4 IPC corresponds to Section 1(5) BNS and extends Indian criminal law to specified extra-territorial offences.",
+  "An offence committed outside India may fall within Indian jurisdiction when it targets a computer resource located in India.",
+  "Section 5 IPC corresponds to Section 1(6) BNS and preserves laws concerning mutiny or desertion as well as special and local laws.",
+  "The date of the alleged conduct must be identified before deciding whether the IPC or the BNS applies.",
+];
+
+const chapterOneProvisions = [
+  "Indian Penal Code, 1860 — Section 1: Title and extent of operation",
+  "Indian Penal Code, 1860 — Section 2: Offences committed within India",
+  "Indian Penal Code, 1860 — Section 3: Offences committed beyond India but triable within India",
+  "Indian Penal Code, 1860 — Section 4: Extra-territorial application",
+  "Indian Penal Code, 1860 — Section 5: Special and local laws not affected",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 1(1)–(6): Short title, commencement and application",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 358: Repeal and savings",
+  "Information Technology Act, 2000 — Section 2(1)(k): Definition of computer resource",
+  "Constitution of India — Article 20(1): Protection against retrospective criminal liability",
+];
+
+const chapterOneExamFocus =
+  "For an examination problem, first identify the date and place of the alleged conduct. Then state whether the IPC or the BNS applies, distinguish territorial jurisdiction from extra-territorial jurisdiction, and identify the statutory connection with India. Comparative answers should map IPC Sections 1–5 to BNS Section 1(1)–(6), explain the computer-resource rule, preserve the role of special and local laws, and mention Section 358 BNS and Article 20(1) where transition or retrospectivity is relevant.";
+
+const chapterOneRevisionNotes =
+  "IPC Sections 1–5 are substantially consolidated in BNS Section 1. Section 2 IPC maps to Section 1(3) BNS; Section 3 maps to Section 1(4); Section 4 maps to Section 1(5); and Section 5 maps to Section 1(6). Indian law applies to offences committed within India and to specified offences committed outside India, including offences by Indian citizens, offences on Indian-registered ships or aircraft, and offences targeting computer resources located in India. Special and local laws remain protected. Always identify the date of the offence and apply Section 358 BNS together with Article 20(1) when deciding whether the IPC or BNS governs the case.";
+
 
 const units = [
   {
@@ -1654,21 +1696,29 @@ export const criminalLawIChapters = units.map(
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, "")
         .replace(/\s+/g, "-")}`,
-      shortDescription: index === 0 ? "" : unit.shortDescription,
-      chapterOverview: index === 0 ? "" : unit.overview,
+      shortDescription:
+        index === 0
+          ? "Study IPC Sections 1–5 alongside BNS Section 1, covering territorial jurisdiction, extra-territorial offences, cyber jurisdiction, special laws and the IPC-to-BNS transition."
+          : unit.shortDescription,
+      chapterOverview: index === 0 ? chapterOneOverview : unit.overview,
       learningObjectives:
         index === 0
-          ? []
+          ? chapterOneLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
       detailedContent: index === 0 ? "" : unit.detailedContent,
-      keyPoints: index === 0 ? [] : unit.keyPoints,
+      keyPoints: index === 0 ? chapterOneKeyPoints : unit.keyPoints,
       statutoryProvisions:
         index === 0
-          ? []
+          ? chapterOneProvisions.map((provision, provisionIndex) => ({
+              id: `unit-1-provision-${provisionIndex + 1}`,
+              title: provision,
+              provision,
+              description: "Important statutory reference for Chapter 1.",
+            }))
           : unit.provisions.map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
@@ -1677,10 +1727,11 @@ export const criminalLawIChapters = units.map(
             })),
       examFocus:
         index === 0
-          ? ""
+          ? chapterOneExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
-      revisionNotes: index === 0 ? "" : unit.keyPoints.join("; "),
+      revisionNotes:
+        index === 0 ? chapterOneRevisionNotes : unit.keyPoints.join("; "),
       notes: index === 0 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
