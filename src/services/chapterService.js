@@ -54,8 +54,11 @@ const mergeStoredAndBundledChapter = (
     return storedChapter;
   }
 
+  const isSourceControlled =
+    sourceControlledChapterIds.has(bundledChapter.id);
+
   if (
-    !sourceControlledChapterIds.has(bundledChapter.id) &&
+    !isSourceControlled &&
     getDetailedContentLength(bundledChapter) <=
     getDetailedContentLength(storedChapter)
   ) {
@@ -72,9 +75,12 @@ const mergeStoredAndBundledChapter = (
       ...(storedChapter.content || {}),
       ...(bundledChapter.content || {}),
     },
-    notes:
-      bundledChapter.notes ||
-      storedChapter.notes,
+    notes: isSourceControlled
+      ? bundledChapter.notes
+      : bundledChapter.notes || storedChapter.notes,
+    pdf: isSourceControlled
+      ? bundledChapter.pdf
+      : storedChapter.pdf || bundledChapter.pdf,
   };
 };
 

@@ -1797,8 +1797,7 @@ export const criminalLawIChapters = units.map(
           "Apply the relevant IPC principles to legal problems.",
           "Identify the corresponding transition from the IPC to the BNS.",
         ],
-      detailedContent:
-        index === 0 ? chapterOneDetailedContent : unit.detailedContent,
+      detailedContent: index === 0 ? "" : unit.detailedContent,
       keyPoints: unit.keyPoints,
       statutoryProvisions: unit.provisions.map((provision, provisionIndex) => ({
         id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
@@ -1811,6 +1810,16 @@ export const criminalLawIChapters = units.map(
         "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes: unit.keyPoints.join("; "),
       notes: index === 0 ? chapterOneDetailedContent : unit.detailedContent,
+      pdfUrl:
+        index === 0
+          ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
+          : "",
+      pdfFileName:
+        index === 0
+          ? "Criminal Law I - Chapter I - Introduction.pdf"
+          : "",
+      pdfFileSize: index === 0 ? 23572 : 0,
+      pdfContentType: index === 0 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
