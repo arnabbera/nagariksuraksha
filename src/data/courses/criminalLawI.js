@@ -1815,7 +1815,7 @@ export const criminalLawIChapters = units.map(
           : index === 1
             ? "Criminal Law I - Chapter II - General Explanations.pdf"
           : "",
-      pdfFileSize: index === 0 ? 23572 : index === 1 ? 34810 : 0,
+      pdfFileSize: index === 0 ? 23572 : index === 1 ? 76489 : 0,
       pdfContentType: index <= 1 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
