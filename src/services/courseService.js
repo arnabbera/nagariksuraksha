@@ -74,6 +74,10 @@ const normalizeSlug = (value = "") =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
+const courseSlugAliases = {
+  "criminal-law-i": "criminal-law-i-transitioning-from-ipc-to-bns",
+};
+
 export const getPublishedCourses = async (options = {}) => {
   const storedCourses = await courseRepository.getPublishedCourses(options);
   const pageSize = Math.max(1, Number(options.pageSize || 20));
@@ -115,10 +119,11 @@ export const getCourseBySlug = async (slug) => {
   }
 
   const normalizedSlug = normalizeSlug(slug);
-  const storedCourse = await courseRepository.getBySlug(normalizedSlug);
+  const resolvedSlug = courseSlugAliases[normalizedSlug] || normalizedSlug;
+  const storedCourse = await courseRepository.getBySlug(resolvedSlug);
 
   return withPublishedChapterTotal(
-    storedCourse || bundledCourses.find((course) => course.slug === normalizedSlug) || null,
+    storedCourse || bundledCourses.find((course) => course.slug === resolvedSlug) || null,
   );
 };
 
