@@ -28,7 +28,23 @@ const removeChapterLabel = (title = "") =>
     )
     .trim();
 
+const isCriminalLawIChapterOne = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  (String(chapter?.title || chapter?.name || "") ===
+    "Concept of Crime, Criminal Liability and General Exceptions" ||
+    String(chapter?.id || "").endsWith("-unit-1"));
+
+const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
+  "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
+
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIChapterOne(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter1-Itroduction";
+  }
+
   const prefix =
     courseChapterPrefixes[courseSlug] || slugify(courseSlug) || "chapter";
   const readableTitle = slugify(
@@ -40,8 +56,13 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
     : String(chapter?.slug || chapter?.id || "");
 };
 
-export const getChapterLearningPath = (courseSlug, chapter) =>
-  `/student/learn/${courseSlug}/${getChapterPathSegment(courseSlug, chapter)}`;
+export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIChapterOne(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter1-Itroduction";
+  }
+
+  return `/student/learn/${courseSlug}/${getChapterPathSegment(courseSlug, chapter)}`;
+};
 
 export const resolveChapterPathSegment = (
   chapters,
@@ -52,5 +73,7 @@ export const resolveChapterPathSegment = (
     (chapter) =>
       chapter?.id === pathSegment ||
       chapter?.slug === pathSegment ||
+      (isCriminalLawIChapterOne(courseSlug, chapter) &&
+        pathSegment === CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT) ||
       getChapterPathSegment(courseSlug, chapter) === pathSegment,
   ) || null;
