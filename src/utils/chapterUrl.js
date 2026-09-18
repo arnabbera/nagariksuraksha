@@ -37,12 +37,28 @@ const isCriminalLawIChapterOne = (courseSlug, chapter) =>
     "Concept of Crime, Criminal Liability and General Exceptions" ||
     String(chapter?.id || "").endsWith("-unit-1"));
 
+const isCriminalLawIChapterTwo = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-2");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
+
+const CRIMINAL_LAW_I_CHAPTER_TWO_LEGACY_SEGMENTS = new Set([
+  "criminal-law-i-transitioning-from-ipc-to-bns-abetment",
+  "criminal-law-1-general-explanations-ipc-sections-6-52a-and-bns-sections-2-3",
+]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
   if (isCriminalLawIChapterOne(courseSlug, chapter)) {
     return "ipc-to-bns-chapter1-Itroduction";
+  }
+
+  if (isCriminalLawIChapterTwo(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter2-General-Explanations";
   }
 
   const prefix =
@@ -61,6 +77,10 @@ export const getChapterLearningPath = (courseSlug, chapter) => {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter1-Itroduction";
   }
 
+  if (isCriminalLawIChapterTwo(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter2-General-Explanations";
+  }
+
   return `/student/learn/${courseSlug}/${getChapterPathSegment(courseSlug, chapter)}`;
 };
 
@@ -75,5 +95,7 @@ export const resolveChapterPathSegment = (
       chapter?.slug === pathSegment ||
       (isCriminalLawIChapterOne(courseSlug, chapter) &&
         pathSegment === CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT) ||
+      (isCriminalLawIChapterTwo(courseSlug, chapter) &&
+        CRIMINAL_LAW_I_CHAPTER_TWO_LEGACY_SEGMENTS.has(pathSegment)) ||
       getChapterPathSegment(courseSlug, chapter) === pathSegment,
   ) || null;

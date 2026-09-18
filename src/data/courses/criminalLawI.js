@@ -88,6 +88,54 @@ const chapterOneExamFocus =
 const chapterOneRevisionNotes =
   "IPC Sections 1–5 are substantially consolidated in BNS Section 1. Section 2 IPC maps to Section 1(3) BNS; Section 3 maps to Section 1(4); Section 4 maps to Section 1(5); and Section 5 maps to Section 1(6). Indian law applies to offences committed within India and to specified offences committed outside India, including offences by Indian citizens, offences on Indian-registered ships or aircraft, and offences targeting computer resources located in India. Special and local laws remain protected. Always identify the date of the offence and apply Section 358 BNS together with Article 20(1) when deciding whether the IPC or BNS governs the case.";
 
+const chapterTwoOverview =
+  "This chapter explains how the general definitions and interpretive rules of substantive criminal law control the meaning of every offence. It studies IPC Sections 6–52A alongside their reorganised counterparts in BNS Sections 2 and 3. The chapter covers statutory interpretation, persons and public authorities, property and dishonest intention, documents and electronic records, acts and omissions, joint criminal liability, injury, good faith, voluntarily caused effects and harbouring. It also identifies repealed or obsolete IPC expressions and explains why the transition is a consolidation rather than a section-for-section renumbering.";
+
+const chapterTwoLearningObjectives = [
+  "Explain why every offence and penal provision must be read with the statutory definitions, explanations and General Exceptions.",
+  "Map the principal concepts in IPC Sections 6–52A to BNS Sections 2 and 3 without assuming a false one-to-one correspondence.",
+  "Apply the definitions of person, public servant, movable property, wrongful gain, wrongful loss, dishonestly and fraudulently.",
+  "Distinguish reason to believe from suspicion and good faith from mere honesty.",
+  "Explain the expanded BNS treatment of documents, including electronic and digital records.",
+  "Analyse acts, illegal omissions, common intention, intentional cooperation and differing liability among participants.",
+  "Use definitions such as offence, illegal, injury, voluntarily and harbour in problem questions.",
+  "Identify obsolete IPC definitions and material additions introduced by the BNS.",
+];
+
+const chapterTwoKeyPoints = [
+  "IPC Sections 6–52A supplied definitions and interpretive rules used throughout the IPC.",
+  "BNS Section 2 consolidates the principal definitions, while BNS Section 3 consolidates the general explanations and rules of joint liability.",
+  "IPC Section 6 corresponds in substance to BNS Section 3(1), and IPC Section 7 to BNS Section 3(2).",
+  "There is no reliable section-for-section conversion for every provision; the BNS groups concepts by subject.",
+  "Dishonesty requires an intention to cause wrongful gain or wrongful loss; fraudulently requires an intent to defraud.",
+  "Reason to believe requires sufficient cause, while good faith requires due care and attention.",
+  "Under the BNS, document expressly includes electronic and digital records.",
+  "Words referring to acts include illegal omissions unless the context indicates otherwise.",
+  "Common intention creates joint liability only when a criminal act is done by several persons in furtherance of the shared intention.",
+  "Participants in the same criminal act may be guilty of different offences because their intentions, knowledge or circumstances differ.",
+  "Obsolete IPC expressions such as Queen, British India and Government of India do not reappear as operative BNS definitions.",
+  "The BNS adds definitions such as child, transgender, mental illness and electronic communication that were not collected in IPC Chapter II in the same form.",
+];
+
+const chapterTwoProvisions = [
+  "Indian Penal Code, 1860 — Sections 6–7: General interpretive rules",
+  "Indian Penal Code, 1860 — Sections 8–21: Persons, Government, judges, courts and public servants",
+  "Indian Penal Code, 1860 — Sections 22–31: Property, dishonest or fraudulent conduct, documents and valuable security",
+  "Indian Penal Code, 1860 — Sections 32–38: Acts, omissions and joint criminal liability",
+  "Indian Penal Code, 1860 — Sections 39–44: Voluntarily, offence, law, illegality and injury",
+  "Indian Penal Code, 1860 — Sections 45–52A: Life, death, animal, vessel, time, oath, good faith and harbour",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 2: Definitions",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 3: General explanations",
+  "Information Technology Act, 2000 — Section 2(1): Relevant technology definitions",
+  "Mental Healthcare Act, 2017 — Section 2(1)(s): Mental illness",
+];
+
+const chapterTwoExamFocus =
+  "In a problem question, identify the offence first and then isolate every defined expression used in it. State the applicable IPC or BNS provision, apply the precise mental element, and distinguish suspicion from reason to believe, honesty from good faith, and motive from dishonest or fraudulent intention. For group conduct, separately prove participation, common intention or the required knowledge and explain why liability may differ between participants. In comparative answers, organise IPC Sections 6–52A by subject and map them to BNS Sections 2–3; do not claim that every old section has an individually numbered BNS equivalent.";
+
+const chapterTwoRevisionNotes =
+  "IPC Sections 6–52A are reorganised mainly in BNS Sections 2 and 3. Section 2 BNS contains consolidated definitions; Section 3 contains general explanations, including reading provisions subject to General Exceptions, consistent use of defined expressions, possession through a spouse, clerk or servant, acts including illegal omissions, common intention, joint knowledge or intention, combined acts and omissions, intentional cooperation, and differing offences among participants. Dishonestly depends on wrongful gain or wrongful loss; fraudulently depends on intent to defraud; reason to believe requires sufficient cause; and good faith requires due care and attention. The BNS expressly recognises electronic and digital records and omits obsolete colonial definitions.";
+
 
 const units = [
   {
@@ -1691,6 +1739,8 @@ export const criminalLawIChapters = units.map(
       title:
         index === 0
           ? "Introduction: Operation and Application of IPC and BNS"
+          : index === 1
+            ? "General Explanations: IPC Sections 6–52A and BNS Sections 2–3"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1699,25 +1749,39 @@ export const criminalLawIChapters = units.map(
       shortDescription:
         index === 0
           ? "Study IPC Sections 1–5 alongside BNS Section 1, covering territorial jurisdiction, extra-territorial offences, cyber jurisdiction, special laws and the IPC-to-BNS transition."
+          : index === 1
+            ? "Understand the definitions, interpretive rules and joint-liability principles in IPC Sections 6–52A and their consolidation in BNS Sections 2–3."
           : unit.shortDescription,
-      chapterOverview: index === 0 ? chapterOneOverview : unit.overview,
+      chapterOverview:
+        index === 0
+          ? chapterOneOverview
+          : index === 1
+            ? chapterTwoOverview
+            : unit.overview,
       learningObjectives:
         index === 0
           ? chapterOneLearningObjectives
+          : index === 1
+            ? chapterTwoLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index === 0 ? "" : unit.detailedContent,
-      keyPoints: index === 0 ? chapterOneKeyPoints : unit.keyPoints,
-      statutoryProvisions:
+      detailedContent: index <= 1 ? "" : unit.detailedContent,
+      keyPoints:
         index === 0
-          ? chapterOneProvisions.map((provision, provisionIndex) => ({
-              id: `unit-1-provision-${provisionIndex + 1}`,
+          ? chapterOneKeyPoints
+          : index === 1
+            ? chapterTwoKeyPoints
+            : unit.keyPoints,
+      statutoryProvisions:
+        index <= 1
+          ? (index === 0 ? chapterOneProvisions : chapterTwoProvisions).map((provision, provisionIndex) => ({
+              id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
               provision,
-              description: "Important statutory reference for Chapter 1.",
+              description: `Important statutory reference for Chapter ${index + 1}.`,
             }))
           : unit.provisions.map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
@@ -1728,21 +1792,31 @@ export const criminalLawIChapters = units.map(
       examFocus:
         index === 0
           ? chapterOneExamFocus
+          : index === 1
+            ? chapterTwoExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
-        index === 0 ? chapterOneRevisionNotes : unit.keyPoints.join("; "),
-      notes: index === 0 ? "" : unit.detailedContent,
+        index === 0
+          ? chapterOneRevisionNotes
+          : index === 1
+            ? chapterTwoRevisionNotes
+            : unit.keyPoints.join("; "),
+      notes: index <= 1 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
+          : index === 1
+            ? "/documents/criminal-law-i/chapter-2-general-explanations-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
           ? "Criminal Law I - Chapter I - Introduction.pdf"
+          : index === 1
+            ? "Criminal Law I - Chapter II - General Explanations.pdf"
           : "",
-      pdfFileSize: index === 0 ? 23572 : 0,
-      pdfContentType: index === 0 ? "application/pdf" : "",
+      pdfFileSize: index === 0 ? 23572 : index === 1 ? 34810 : 0,
+      pdfContentType: index <= 1 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,

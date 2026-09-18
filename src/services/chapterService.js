@@ -36,6 +36,7 @@ const getDetailedContentLength = (chapter) =>
 
 const sourceControlledChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-1",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-2",
 ]);
 
 // Bundled course chapters are updated through reviewed source changes, while
