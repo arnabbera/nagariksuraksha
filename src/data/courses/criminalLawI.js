@@ -136,6 +136,56 @@ const chapterTwoExamFocus =
 const chapterTwoRevisionNotes =
   "IPC Sections 6–52A are reorganised mainly in BNS Sections 2 and 3. Section 2 BNS contains consolidated definitions; Section 3 contains general explanations, including reading provisions subject to General Exceptions, consistent use of defined expressions, possession through a spouse, clerk or servant, acts including illegal omissions, common intention, joint knowledge or intention, combined acts and omissions, intentional cooperation, and differing offences among participants. Dishonestly depends on wrongful gain or wrongful loss; fraudulently depends on intent to defraud; reason to believe requires sufficient cause; and good faith requires due care and attention. The BNS expressly recognises electronic and digital records and omits obsolete colonial definitions.";
 
+const chapterThreeOverview =
+  "This chapter explains the punishments available under the Indian Penal Code and their reorganisation under the Bharatiya Nyaya Sanhita. It studies IPC Sections 53–75 alongside BNS Sections 4–13, including death, imprisonment for life, rigorous and simple imprisonment, forfeiture, fine, community service, commutation, fractions of punishment, default imprisonment for non-payment of fine, limits against duplicative punishment, solitary confinement and enhanced punishment after previous conviction. Repealed and transitional IPC provisions are identified separately so that historical rules are not presented as current law.";
+
+const chapterThreeLearningObjectives = [
+  "Identify every punishment recognised by IPC Section 53 and BNS Section 4.",
+  "Explain community service as the additional punishment expressly recognised under the BNS.",
+  "Distinguish a judicial sentence from executive commutation of that sentence.",
+  "Explain how imprisonment for life is treated when calculating fractions of a term.",
+  "Distinguish rigorous imprisonment from simple imprisonment.",
+  "Apply the consolidated BNS rules governing fines and imprisonment in default of payment.",
+  "Explain the safeguards against excessive or duplicative punishment for composite offences.",
+  "Describe the statutory limits governing solitary confinement.",
+  "Apply the enhanced-punishment rule following a qualifying previous conviction.",
+  "Identify repealed IPC provisions that have no operative BNS counterpart.",
+];
+
+const chapterThreeKeyPoints = [
+  "IPC Section 53 corresponds to BNS Section 4, which expressly adds community service.",
+  "IPC Sections 54–55 are substantially consolidated in BNS Section 5 on commutation of sentence.",
+  "IPC Section 55A has no separately numbered BNS equivalent; governmental authority must be read with the BNS and BNSS framework.",
+  "IPC Section 57 corresponds to BNS Section 6: life imprisonment is reckoned as twenty years only for calculating fractions of punishment.",
+  "IPC Section 60 corresponds to BNS Section 7 and permits imprisonment to be wholly rigorous, wholly simple or partly each where the offence allows either description.",
+  "IPC Sections 63–70 are consolidated in BNS Section 8, with updated monetary limits for default imprisonment where the offence is punishable with fine or community service only.",
+  "IPC Sections 71–75 correspond respectively to BNS Sections 9–13.",
+  "Solitary confinement remains strictly limited by both the sentencing ceiling and the manner of execution.",
+  "Repealed IPC Sections 56, 58, 59, 61 and 62 have no operative BNS equivalent.",
+  "Punishment must always be imposed within the text of the offence, the general punishment provisions and constitutional safeguards.",
+];
+
+const chapterThreeProvisions = [
+  "Indian Penal Code, 1860 — Sections 53–60: Kinds of punishment, commutation and imprisonment",
+  "Indian Penal Code, 1860 — Sections 61–70: Forfeiture, fines and default imprisonment",
+  "Indian Penal Code, 1860 — Sections 71–75: Composite offences, solitary confinement and enhanced punishment",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 4: Punishments",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 5: Commutation of sentence",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 6–7: Fractions and description of imprisonment",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 8: Fine and default imprisonment",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 9–10: Limits where several offences are involved",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 11–12: Solitary confinement",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 13: Enhanced punishment after previous conviction",
+  "Bharatiya Nagarik Suraksha Sanhita, 2023 — Section 474: Commutation of sentence",
+  "Constitution of India — Articles 20 and 21",
+];
+
+const chapterThreeExamFocus =
+  "Begin by identifying the punishment authorised by the particular offence. Then apply the relevant general rule in IPC Sections 53–75 or BNS Sections 4–13. Distinguish sentence, commutation and remission; state that the twenty-year equivalence for life imprisonment is limited to calculating fractions; and calculate default imprisonment separately from substantive imprisonment. For composite offences, test the statutory bar on excessive multiple punishment. Comparative answers should highlight community service, consolidation of the fine provisions in BNS Section 8, and the absence of operative counterparts for repealed IPC provisions.";
+
+const chapterThreeRevisionNotes =
+  "IPC Section 53 maps to BNS Section 4, with community service added. IPC Sections 54–55 are consolidated in BNS Section 5; IPC Section 57 maps to BNS Section 6; Section 60 maps to BNS Section 7; Sections 63–70 are consolidated in BNS Section 8; and Sections 71–75 map to BNS Sections 9–13. Life imprisonment counts as twenty years only for calculating fractions. Default imprisonment is additional but ends when the fine is paid or proportionately satisfied. Solitary confinement is limited in total duration and execution. Repealed IPC Sections 56, 58, 59, 61 and 62 have no operative BNS equivalent.";
+
 
 const units = [
   {
@@ -1741,6 +1791,8 @@ export const criminalLawIChapters = units.map(
           ? "Introduction: Operation and Application of IPC and BNS"
           : index === 1
             ? "General Explanations: IPC Sections 6–52A and BNS Sections 2–3"
+            : index === 2
+              ? "Punishments: IPC Sections 53–75 and BNS Sections 4–13"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1751,33 +1803,46 @@ export const criminalLawIChapters = units.map(
           ? "Study IPC Sections 1–5 alongside BNS Section 1, covering territorial jurisdiction, extra-territorial offences, cyber jurisdiction, special laws and the IPC-to-BNS transition."
           : index === 1
             ? "Understand the definitions, interpretive rules and joint-liability principles in IPC Sections 6–52A and their consolidation in BNS Sections 2–3."
+            : index === 2
+              ? "Study punishments, commutation, fines, solitary confinement and enhanced sentences under IPC Sections 53–75 and BNS Sections 4–13."
           : unit.shortDescription,
       chapterOverview:
         index === 0
           ? chapterOneOverview
           : index === 1
             ? chapterTwoOverview
+            : index === 2
+              ? chapterThreeOverview
             : unit.overview,
       learningObjectives:
         index === 0
           ? chapterOneLearningObjectives
           : index === 1
             ? chapterTwoLearningObjectives
+            : index === 2
+              ? chapterThreeLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index <= 1 ? "" : unit.detailedContent,
+      detailedContent: index <= 2 ? "" : unit.detailedContent,
       keyPoints:
         index === 0
           ? chapterOneKeyPoints
           : index === 1
             ? chapterTwoKeyPoints
+            : index === 2
+              ? chapterThreeKeyPoints
             : unit.keyPoints,
       statutoryProvisions:
-        index <= 1
-          ? (index === 0 ? chapterOneProvisions : chapterTwoProvisions).map((provision, provisionIndex) => ({
+        index <= 2
+          ? (index === 0
+              ? chapterOneProvisions
+              : index === 1
+                ? chapterTwoProvisions
+                : chapterThreeProvisions
+            ).map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
               provision,
@@ -1794,6 +1859,8 @@ export const criminalLawIChapters = units.map(
           ? chapterOneExamFocus
           : index === 1
             ? chapterTwoExamFocus
+            : index === 2
+              ? chapterThreeExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
@@ -1801,22 +1868,29 @@ export const criminalLawIChapters = units.map(
           ? chapterOneRevisionNotes
           : index === 1
             ? chapterTwoRevisionNotes
+            : index === 2
+              ? chapterThreeRevisionNotes
             : unit.keyPoints.join("; "),
-      notes: index <= 1 ? "" : unit.detailedContent,
+      notes: index <= 2 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
           : index === 1
             ? "/documents/criminal-law-i/chapter-2-general-explanations-ipc-bns.pdf"
+            : index === 2
+              ? "/documents/criminal-law-i/chapter-3-punishments-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
           ? "Criminal Law I - Chapter I - Introduction.pdf"
           : index === 1
             ? "Criminal Law I - Chapter II - General Explanations.pdf"
+            : index === 2
+              ? "Criminal Law I - Chapter III - Punishments.pdf"
           : "",
-      pdfFileSize: index === 0 ? 23572 : index === 1 ? 76489 : 0,
-      pdfContentType: index <= 1 ? "application/pdf" : "",
+      pdfFileSize:
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : 0,
+      pdfContentType: index <= 2 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
