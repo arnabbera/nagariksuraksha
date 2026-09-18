@@ -68,9 +68,12 @@ const mergeStoredAndBundledChapter = (
   return {
     ...bundledChapter,
     ...storedChapter,
-    shortDescription:
-      bundledChapter.shortDescription ||
-      storedChapter.shortDescription,
+    title: isSourceControlled
+      ? bundledChapter.title
+      : storedChapter.title || bundledChapter.title,
+    shortDescription: isSourceControlled
+      ? bundledChapter.shortDescription
+      : bundledChapter.shortDescription || storedChapter.shortDescription,
     content: {
       ...(storedChapter.content || {}),
       ...(bundledChapter.content || {}),

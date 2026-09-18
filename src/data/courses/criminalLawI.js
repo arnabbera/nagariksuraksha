@@ -46,144 +46,6 @@ export const criminalLawICourse = createCourseModel({
   },
 });
 
-const chapterOneDetailedContent = `Historical Background
-
-The Indian Penal Code, 1860 (IPC) was enacted to provide a general penal law for India. It defined offences, prescribed punishments and established the basic principles of criminal liability.
-
-The IPC was repealed and replaced by the Bharatiya Nyaya Sanhita, 2023 (BNS), which came into force on 1 July 2024. However, offences committed before that date may continue to be governed by the IPC because of the repeal-and-savings provisions contained in Section 358 BNS.
-
-The introductory provisions formerly contained in Sections 1–5 IPC are now substantially consolidated in Section 1 BNS.
-
-IPC–BNS Section Mapping
-
-Section 1 IPC corresponds to Section 1(1) BNS — Short title.
-Section 2 IPC corresponds to Section 1(3) BNS — Offences committed within India.
-Section 3 IPC corresponds to Section 1(4) BNS — Offences committed outside India but triable under Indian law.
-Section 4 IPC corresponds to Section 1(5) BNS — Extra-territorial application.
-Section 5 IPC corresponds to Section 1(6) BNS — Protection of special and local laws.
-
-Section 1 IPC: Title and Extent of Operation
-
-Section 1 provided that the legislation would be called the Indian Penal Code and would extend throughout India.
-
-Corresponding BNS Provision: Section 1(1)
-
-Section 1(1) provides that the new legislation shall be called the Bharatiya Nyaya Sanhita, 2023.
-
-The commencement of the BNS is governed by Section 1(2). The Central Government brought the BNS into force on 1 July 2024, except for the specified portion of Section 106(2).
-
-Important Point
-
-The territorial and extra-territorial operation of the new criminal law is now distributed across Sections 1(3), 1(4) and 1(5) BNS.
-
-Section 2 IPC: Offences Committed Within India
-
-Section 2 IPC established the principle of territorial criminal jurisdiction. It provided that every person would be liable to punishment under the IPC for every act or illegal omission committed within India in violation of the Code.
-
-The expression “every person” was broad enough to include Indian citizens, foreign nationals, companies and other legal persons where applicable, and any other person who committed an offence within Indian territory. Therefore, nationality was ordinarily irrelevant when the offence was committed within India.
-
-Corresponding BNS Provision: Section 1(3)
-
-Section 1(3) BNS substantially continues the same rule. Every person is liable to punishment under the BNS for any act or omission committed within India that is contrary to its provisions.
-
-Illustration
-
-If a foreign national commits theft while staying in India, that person may be prosecuted under Indian criminal law because the offence was committed within Indian territory.
-
-Principle
-
-A person who commits an offence within India is ordinarily subject to Indian criminal law, irrespective of nationality.
-
-Section 3 IPC: Offences Committed Beyond India but Triable in India
-
-Section 3 IPC applied where a person committed an offence outside India but could legally be tried for that offence in India under an Indian law.
-
-Such a person could be dealt with under the IPC in the same manner as if the offence had been committed within India.
-
-Section 3 did not independently create extra-territorial jurisdiction. It explained how the IPC would apply when another Indian law authorised the trial of an offence committed outside India.
-
-Corresponding BNS Provision: Section 1(4)
-
-Section 1(4) BNS continues this principle. A person who is liable under any law operating in India to be tried for an offence committed outside India may be dealt with under the BNS as though the act had been committed within India.
-
-Illustration
-
-Where an Indian law permits an Indian court to try a person for an offence committed abroad, the substantive provisions of the BNS may be applied as if the offence had occurred in India.
-
-Section 4 IPC: Extra-Territorial Application
-
-Section 4 IPC extended Indian criminal law to certain offences committed outside India.
-
-It applied to an Indian citizen committing an offence outside India; any person committing an offence on a ship or aircraft registered in India, wherever it was situated; and any person outside India committing an offence that targeted a computer resource located in India.
-
-The expression “computer resource” carried the meaning assigned to it under Section 2(1)(k) of the Information Technology Act, 2000.
-
-Corresponding BNS Provision: Section 1(5)
-
-Section 1(5) BNS continues these three categories of extra-territorial jurisdiction. The BNS applies to an offence committed by an Indian citizen anywhere outside India; any person on a ship or aircraft registered in India, wherever it may be; or any person outside India who commits an offence targeting a computer resource located in India.
-
-Illustration
-
-A, an Indian citizen, commits murder in Uganda. Subject to the applicable procedural requirements, A may be tried under Indian law in India as if the offence had been committed within India.
-
-Cybercrime Illustration
-
-A person sitting outside India unlawfully attacks a computer server located in India. Even if that person is not an Indian citizen, Indian criminal law may apply because the targeted computer resource is situated in India.
-
-Important Point
-
-Extra-territorial application of the BNS does not remove the need to comply with the applicable rules relating to investigation, extradition, jurisdiction, evidence and criminal procedure.
-
-Section 5 IPC: Special and Local Laws Not Affected
-
-Section 5 IPC clarified that the IPC did not override laws relating to mutiny and desertion by officers, soldiers, sailors or airmen serving the Government of India, or any special or local law.
-
-A special law applies to a particular subject, while a local law applies to a particular geographical area.
-
-Corresponding BNS Provision: Section 1(6)
-
-Section 1(6) BNS preserves the same principle. The BNS does not affect any law dealing with mutiny or desertion by members of the armed services, or any special or local law.
-
-Examples of Special Laws
-
-Depending on the facts, special criminal legislation may include the Information Technology Act, 2000; the Prevention of Corruption Act, 1988; the Narcotic Drugs and Psychotropic Substances Act, 1985; the Protection of Children from Sexual Offences Act, 2012; and the Scheduled Castes and the Scheduled Tribes (Prevention of Atrocities) Act, 1989.
-
-Where both the BNS and a special law appear relevant, their provisions must be read together. The special law may prescribe distinct offences, procedures or punishments.
-
-Consolidation Under the BNS
-
-One major drafting change is that the matters previously distributed across Sections 1–5 IPC have been substantially brought together under Section 1 BNS.
-
-Name of the legislation: Section 1 IPC corresponds to Section 1(1) BNS.
-Commencement: the BNS commencement provision is contained in Section 1(2).
-Offences committed within India: Section 2 IPC corresponds to Section 1(3) BNS.
-Offences committed abroad but triable in India: Section 3 IPC corresponds to Section 1(4) BNS.
-Extra-territorial offences: Section 4 IPC corresponds to Section 1(5) BNS.
-Special and local laws protected: Section 5 IPC corresponds to Section 1(6) BNS.
-
-Key Points for Examination
-
-Sections 1–5 IPC formed Chapter I of the Indian Penal Code. Their principles are now substantially consolidated in Section 1 BNS.
-
-Section 2 IPC corresponds to Section 1(3) BNS and deals with offences committed within India.
-
-Section 3 IPC corresponds to Section 1(4) BNS and deals with offences committed outside India that may lawfully be tried in India.
-
-Section 4 IPC corresponds to Section 1(5) BNS and provides for extra-territorial application.
-
-Section 5 IPC corresponds to Section 1(6) BNS and protects special and local laws.
-
-A cyber offence committed outside India may fall within Indian jurisdiction when it targets a computer resource located in India.
-
-For every criminal-law problem, the date of the alleged offence must first be identified to determine whether the IPC or the BNS applies.
-
-The BNS ordinarily governs offences committed on or after 1 July 2024, while earlier offences may remain governed by the IPC under Section 358 BNS.
-
-Conclusion
-
-The introductory provisions define the territorial and extra-territorial reach of Indian substantive criminal law. While the IPC placed these rules in separate Sections 1–5, the BNS substantially consolidates them within Section 1.
-
-The basic principles remain clear: offences committed within India are governed by Indian criminal law; specified offences committed outside India may also be tried in India; and special or local penal laws continue to operate alongside the general criminal law.`;
 
 const units = [
   {
@@ -1784,32 +1646,42 @@ export const criminalLawIChapters = units.map(
     createChapterModel({
       id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-${index + 1}`,
       courseId: CRIMINAL_LAW_I_COURSE_ID,
-      title: unit.title,
+      title:
+        index === 0
+          ? "Introduction: Operation and Application of IPC and BNS"
+          : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, "")
         .replace(/\s+/g, "-")}`,
-      shortDescription: unit.shortDescription,
-      chapterOverview: unit.overview,
+      shortDescription: index === 0 ? "" : unit.shortDescription,
+      chapterOverview: index === 0 ? "" : unit.overview,
       learningObjectives:
-        unit.learningObjectives || [
-          `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
-          "Apply the relevant IPC principles to legal problems.",
-          "Identify the corresponding transition from the IPC to the BNS.",
-        ],
+        index === 0
+          ? []
+          : unit.learningObjectives || [
+              `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
+              "Apply the relevant IPC principles to legal problems.",
+              "Identify the corresponding transition from the IPC to the BNS.",
+            ],
       detailedContent: index === 0 ? "" : unit.detailedContent,
-      keyPoints: unit.keyPoints,
-      statutoryProvisions: unit.provisions.map((provision, provisionIndex) => ({
-        id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
-        title: provision,
-        provision,
-        description: `Core statutory reading for Unit ${index + 1}.`,
-      })),
+      keyPoints: index === 0 ? [] : unit.keyPoints,
+      statutoryProvisions:
+        index === 0
+          ? []
+          : unit.provisions.map((provision, provisionIndex) => ({
+              id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
+              title: provision,
+              provision,
+              description: `Core statutory reading for Unit ${index + 1}.`,
+            })),
       examFocus:
-        unit.examFocus ||
-        "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
-      revisionNotes: unit.keyPoints.join("; "),
-      notes: index === 0 ? chapterOneDetailedContent : unit.detailedContent,
+        index === 0
+          ? ""
+          : unit.examFocus ||
+            "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
+      revisionNotes: index === 0 ? "" : unit.keyPoints.join("; "),
+      notes: index === 0 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
