@@ -186,6 +186,49 @@ const chapterThreeExamFocus =
 const chapterThreeRevisionNotes =
   "IPC Section 53 maps to BNS Section 4, with community service added. IPC Sections 54–55 are consolidated in BNS Section 5; IPC Section 57 maps to BNS Section 6; Section 60 maps to BNS Section 7; Sections 63–70 are consolidated in BNS Section 8; and Sections 71–75 map to BNS Sections 9–13. Life imprisonment counts as twenty years only for calculating fractions. Default imprisonment is additional but ends when the fine is paid or proportionately satisfied. Solitary confinement is limited in total duration and execution. Repealed IPC Sections 56, 58, 59, 61 and 62 have no operative BNS equivalent.";
 
+const chapterFourOverview =
+  "This chapter explains the General Exceptions under IPC Sections 76–106 and their direct counterparts in BNS Sections 14–44. It covers mistake of fact, judicial acts, accident, necessity, infancy, unsoundness of mind, intoxication, consent, good-faith acts for another person's benefit, compulsion, slight harm, and the right of private defence of body and property. Each exception is conditional and must be applied ingredient by ingredient.";
+
+const chapterFourLearningObjectives = [
+  "Distinguish mistake of fact from mistake of law.",
+  "Apply accident and necessity only when every statutory condition is proved.",
+  "Explain infancy, unsoundness of mind and involuntary intoxication.",
+  "Assess legally valid consent and good-faith acts for another person's benefit.",
+  "Explain the scope and limits of compulsion and slight harm.",
+  "Determine when private defence begins, continues and extends to causing death.",
+  "Compare IPC Sections 76–106 with BNS Sections 14–44.",
+];
+
+const chapterFourKeyPoints = [
+  "IPC Sections 76–106 correspond sequentially to BNS Sections 14–44.",
+  "Mistake must be of fact, not law, and the belief must satisfy the statutory good-faith standard.",
+  "Accident requires a lawful act, lawful manner, lawful means, absence of criminal intention or knowledge, and proper care and caution.",
+  "Necessity requires good faith, no criminal intention to cause harm, and prevention of a sufficiently imminent greater harm.",
+  "A child under seven has absolute immunity; a child above seven and under twelve is protected only when sufficiently immature on the occasion.",
+  "Legal insanity concerns cognitive incapacity at the time of the act, not merely a medical diagnosis.",
+  "Consent obtained through fear or misconception, or from a person lacking legal capacity, is ineffective.",
+  "Private defence is preventive and proportionate; it is not a right of retaliation.",
+];
+
+const chapterFourProvisions = [
+  "Indian Penal Code, 1860 — Sections 76–81: Legal duty, mistake, accident and necessity",
+  "Indian Penal Code, 1860 — Sections 82–86: Infancy, unsoundness of mind and intoxication",
+  "Indian Penal Code, 1860 — Sections 87–95: Consent, benefit, compulsion and slight harm",
+  "Indian Penal Code, 1860 — Sections 96–106: Right of private defence",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 14–19: Legal duty, mistake, accident and necessity",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 20–24: Infancy, unsoundness of mind and intoxication",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 25–33: Consent, benefit, compulsion and slight harm",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 34–44: Right of private defence",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 3(1): Penal provisions read subject to General Exceptions",
+  "Bharatiya Sakshya Adhiniyam, 2023 — Burden relating to statutory exceptions",
+];
+
+const chapterFourExamFocus =
+  "Begin with the ingredients of the alleged offence and then identify the exact General Exception. State and apply every condition of that exception. For private defence, analyse reasonable apprehension, commencement, continuance, proportionality, access to public protection and whether causing death was statutorily permitted. Comparative answers should use the direct IPC Section 76–106 to BNS Section 14–44 mapping and identify the law applicable on the date of conduct.";
+
+const chapterFourRevisionNotes =
+  "IPC Sections 76–106 map sequentially to BNS Sections 14–44. Mistake of fact may excuse but mistake of law does not. Accident requires proper care and caution. Infancy, unsoundness of mind and involuntary intoxication turn on precise statutory capacity tests. Consent is limited and cannot legalise conduct that is independently criminal. Private defence begins with reasonable apprehension, lasts only while that apprehension continues, and never permits more harm than necessary.";
+
 
 const units = [
   {
@@ -1793,6 +1836,8 @@ export const criminalLawIChapters = units.map(
             ? "General Explanations: IPC Sections 6–52A and BNS Sections 2–3"
             : index === 2
               ? "Punishments: IPC Sections 53–75 and BNS Sections 4–13"
+            : index === 3
+              ? "General Exceptions: IPC Sections 76–106 and BNS Sections 14–44"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1805,6 +1850,8 @@ export const criminalLawIChapters = units.map(
             ? "Understand the definitions, interpretive rules and joint-liability principles in IPC Sections 6–52A and their consolidation in BNS Sections 2–3."
             : index === 2
               ? "Study punishments, commutation, fines, solitary confinement and enhanced sentences under IPC Sections 53–75 and BNS Sections 4–13."
+            : index === 3
+              ? "Study mistake, accident, capacity, consent, compulsion and private defence under IPC Sections 76–106 and BNS Sections 14–44."
           : unit.shortDescription,
       chapterOverview:
         index === 0
@@ -1813,6 +1860,8 @@ export const criminalLawIChapters = units.map(
             ? chapterTwoOverview
             : index === 2
               ? chapterThreeOverview
+            : index === 3
+              ? chapterFourOverview
             : unit.overview,
       learningObjectives:
         index === 0
@@ -1821,12 +1870,14 @@ export const criminalLawIChapters = units.map(
             ? chapterTwoLearningObjectives
             : index === 2
               ? chapterThreeLearningObjectives
+            : index === 3
+              ? chapterFourLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index <= 2 ? "" : unit.detailedContent,
+      detailedContent: index <= 3 ? "" : unit.detailedContent,
       keyPoints:
         index === 0
           ? chapterOneKeyPoints
@@ -1834,14 +1885,18 @@ export const criminalLawIChapters = units.map(
             ? chapterTwoKeyPoints
             : index === 2
               ? chapterThreeKeyPoints
+            : index === 3
+              ? chapterFourKeyPoints
             : unit.keyPoints,
       statutoryProvisions:
-        index <= 2
+        index <= 3
           ? (index === 0
               ? chapterOneProvisions
               : index === 1
                 ? chapterTwoProvisions
-                : chapterThreeProvisions
+                : index === 2
+                  ? chapterThreeProvisions
+                  : chapterFourProvisions
             ).map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
@@ -1861,6 +1916,8 @@ export const criminalLawIChapters = units.map(
             ? chapterTwoExamFocus
             : index === 2
               ? chapterThreeExamFocus
+            : index === 3
+              ? chapterFourExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
@@ -1870,8 +1927,10 @@ export const criminalLawIChapters = units.map(
             ? chapterTwoRevisionNotes
             : index === 2
               ? chapterThreeRevisionNotes
+            : index === 3
+              ? chapterFourRevisionNotes
             : unit.keyPoints.join("; "),
-      notes: index <= 2 ? "" : unit.detailedContent,
+      notes: index <= 3 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
@@ -1879,6 +1938,8 @@ export const criminalLawIChapters = units.map(
             ? "/documents/criminal-law-i/chapter-2-general-explanations-ipc-bns.pdf"
             : index === 2
               ? "/documents/criminal-law-i/chapter-3-punishments-ipc-bns.pdf"
+            : index === 3
+              ? "/documents/criminal-law-i/chapter-4-general-exceptions-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
@@ -1887,10 +1948,12 @@ export const criminalLawIChapters = units.map(
             ? "Criminal Law I - Chapter II - General Explanations.pdf"
             : index === 2
               ? "Criminal Law I - Chapter III - Punishments.pdf"
+            : index === 3
+              ? "Criminal Law I - Chapter IV - General Exceptions.pdf"
           : "",
       pdfFileSize:
-        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : 0,
-      pdfContentType: index <= 2 ? "application/pdf" : "",
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : 0,
+      pdfContentType: index <= 3 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
