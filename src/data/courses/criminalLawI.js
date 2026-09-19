@@ -229,6 +229,47 @@ const chapterFourExamFocus =
 const chapterFourRevisionNotes =
   "IPC Sections 76–106 map sequentially to BNS Sections 14–44. Mistake of fact may excuse but mistake of law does not. Accident requires proper care and caution. Infancy, unsoundness of mind and involuntary intoxication turn on precise statutory capacity tests. Consent is limited and cannot legalise conduct that is independently criminal. Private defence begins with reasonable apprehension, lasts only while that apprehension continues, and never permits more harm than necessary.";
 
+const chapterFiveOverview =
+  "This chapter explains abetment under IPC Sections 107–120 and BNS Sections 45–60. It studies instigation, abetment by conspiracy, intentional aid, the meaning of abettor, cross-border abetment, punishment when the act abetted is or is not committed, liability for different acts or effects, cumulative punishment, presence of the abettor, group abetment, and concealment of criminal designs.";
+
+const chapterFiveLearningObjectives = [
+  "Identify instigation, abetment by conspiracy and intentional aid.",
+  "Distinguish abetment from criminal conspiracy and mere knowledge.",
+  "Explain why completion of the principal offence is not always necessary.",
+  "Apply liability for a different act or different effect.",
+  "Calculate punishment where the act abetted is or is not committed.",
+  "Explain cross-border abetment under the IPC and BNS.",
+  "Analyse concealment of criminal designs and public-servant liability.",
+];
+
+const chapterFiveKeyPoints = [
+  "Abetment has three statutory modes: instigation, qualifying conspiracy and intentional aid.",
+  "Wilful misrepresentation or concealment of a material fact may amount to instigation.",
+  "The principal act need not always be completed for abetment to exist.",
+  "The person abetted need not possess legal capacity or the same guilty intention as the abettor.",
+  "Liability for a different act depends on probable consequence and its statutory connection to the abetment.",
+  "BNS Section 48 adds abetment outside India for an offence committed in India.",
+  "BNS Section 57 increases the maximum imprisonment for group abetment from three years to seven years.",
+  "Concealment requires intention to facilitate or knowledge that facilitation is likely.",
+];
+
+const chapterFiveProvisions = [
+  "Indian Penal Code, 1860 — Sections 107–108A: Abetment, abettor and cross-border abetment",
+  "Indian Penal Code, 1860 — Sections 109–117: Punishment and consequential liability",
+  "Indian Penal Code, 1860 — Sections 118–120: Concealment of criminal designs",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 45–48: Abetment and cross-border rules",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 49–57: Punishment and consequential liability",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 58–60: Concealment of criminal designs",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 61: Criminal conspiracy",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 62: General attempt provision",
+];
+
+const chapterFiveExamFocus =
+  "Identify the precise mode of abetment first. For instigation, prove active encouragement or qualifying wilful deception; for conspiracy-based abetment, prove agreement plus the required act or illegal omission; for intentional aid, prove facilitation and intention. Then determine whether the principal act occurred, whether a different act or effect was a probable or known consequence, whether the abettor was present, and whether an express punishment provision applies. Do not confuse abetment by conspiracy with the separate offence of criminal conspiracy.";
+
+const chapterFiveRevisionNotes =
+  "IPC Section 107 maps to BNS Section 45, Section 108 to Section 46, and Section 108A to Section 47. BNS Section 48 adds a reciprocal cross-border rule. IPC Sections 109–120 map to BNS Sections 49–60. Instigation, qualifying conspiracy and intentional aid are distinct modes. Abetment may be complete even if the principal offence is not. Different-act liability requires probable consequence, while different-effect liability requires the prescribed knowledge. BNS Section 57 raises the group-abetment maximum to seven years.";
+
 
 const units = [
   {
@@ -1838,6 +1879,8 @@ export const criminalLawIChapters = units.map(
               ? "Punishments: IPC Sections 53–75 and BNS Sections 4–13"
             : index === 3
               ? "General Exceptions: IPC Sections 76–106 and BNS Sections 14–44"
+            : index === 4
+              ? "Abetment: IPC Sections 107–120 and BNS Sections 45–60"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1852,6 +1895,8 @@ export const criminalLawIChapters = units.map(
               ? "Study punishments, commutation, fines, solitary confinement and enhanced sentences under IPC Sections 53–75 and BNS Sections 4–13."
             : index === 3
               ? "Study mistake, accident, capacity, consent, compulsion and private defence under IPC Sections 76–106 and BNS Sections 14–44."
+            : index === 4
+              ? "Study instigation, conspiracy-based abetment, intentional aid and consequential liability under IPC Sections 107–120 and BNS Sections 45–60."
           : unit.shortDescription,
       chapterOverview:
         index === 0
@@ -1862,6 +1907,8 @@ export const criminalLawIChapters = units.map(
               ? chapterThreeOverview
             : index === 3
               ? chapterFourOverview
+            : index === 4
+              ? chapterFiveOverview
             : unit.overview,
       learningObjectives:
         index === 0
@@ -1872,12 +1919,14 @@ export const criminalLawIChapters = units.map(
               ? chapterThreeLearningObjectives
             : index === 3
               ? chapterFourLearningObjectives
+            : index === 4
+              ? chapterFiveLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index <= 3 ? "" : unit.detailedContent,
+      detailedContent: index <= 4 ? "" : unit.detailedContent,
       keyPoints:
         index === 0
           ? chapterOneKeyPoints
@@ -1887,16 +1936,20 @@ export const criminalLawIChapters = units.map(
               ? chapterThreeKeyPoints
             : index === 3
               ? chapterFourKeyPoints
+            : index === 4
+              ? chapterFiveKeyPoints
             : unit.keyPoints,
       statutoryProvisions:
-        index <= 3
+        index <= 4
           ? (index === 0
               ? chapterOneProvisions
               : index === 1
                 ? chapterTwoProvisions
                 : index === 2
                   ? chapterThreeProvisions
-                  : chapterFourProvisions
+                  : index === 3
+                    ? chapterFourProvisions
+                    : chapterFiveProvisions
             ).map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
@@ -1918,6 +1971,8 @@ export const criminalLawIChapters = units.map(
               ? chapterThreeExamFocus
             : index === 3
               ? chapterFourExamFocus
+            : index === 4
+              ? chapterFiveExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
@@ -1929,8 +1984,10 @@ export const criminalLawIChapters = units.map(
               ? chapterThreeRevisionNotes
             : index === 3
               ? chapterFourRevisionNotes
+            : index === 4
+              ? chapterFiveRevisionNotes
             : unit.keyPoints.join("; "),
-      notes: index <= 3 ? "" : unit.detailedContent,
+      notes: index <= 4 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
@@ -1940,6 +1997,8 @@ export const criminalLawIChapters = units.map(
               ? "/documents/criminal-law-i/chapter-3-punishments-ipc-bns.pdf"
             : index === 3
               ? "/documents/criminal-law-i/chapter-4-general-exceptions-ipc-bns.pdf"
+            : index === 4
+              ? "/documents/criminal-law-i/chapter-5-abetment-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
@@ -1950,10 +2009,12 @@ export const criminalLawIChapters = units.map(
               ? "Criminal Law I - Chapter III - Punishments.pdf"
             : index === 3
               ? "Criminal Law I - Chapter IV - General Exceptions.pdf"
+            : index === 4
+              ? "Criminal Law I - Chapter V - Abetment.pdf"
           : "",
       pdfFileSize:
-        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : 0,
-      pdfContentType: index <= 3 ? "application/pdf" : "",
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : 0,
+      pdfContentType: index <= 4 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
