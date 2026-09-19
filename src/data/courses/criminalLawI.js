@@ -270,6 +270,45 @@ const chapterFiveExamFocus =
 const chapterFiveRevisionNotes =
   "IPC Section 107 maps to BNS Section 45, Section 108 to Section 46, and Section 108A to Section 47. BNS Section 48 adds a reciprocal cross-border rule. IPC Sections 109–120 map to BNS Sections 49–60. Instigation, qualifying conspiracy and intentional aid are distinct modes. Abetment may be complete even if the principal offence is not. Different-act liability requires probable consequence, while different-effect liability requires the prescribed knowledge. BNS Section 57 raises the group-abetment maximum to seven years.";
 
+const chapterSixOverview =
+  "This chapter explains criminal conspiracy under IPC Sections 120A–120B and its consolidation in BNS Section 61. It examines the agreement forming the foundation of liability, the two statutory objects of conspiracy, when an overt act is required, the two punishment categories, circumstantial proof of agreement, and the distinctions between criminal conspiracy, abetment by conspiracy and common intention.";
+
+const chapterSixLearningObjectives = [
+  "Identify the agreement that forms the core of criminal conspiracy.",
+  "Distinguish an agreement to commit an offence from other conspiratorial agreements.",
+  "Explain when an overt act is required.",
+  "Apply the punishment categories under IPC Section 120B and BNS Section 61(2).",
+  "Distinguish criminal conspiracy from abetment by conspiracy and common intention.",
+  "Explain how circumstantial evidence may prove agreement without treating association alone as sufficient.",
+];
+
+const chapterSixKeyPoints = [
+  "Two or more persons and an agreement are essential.",
+  "The object may be an illegal act or a lawful act pursued by illegal means.",
+  "An agreement to commit an offence needs no further overt act under the statutory proviso.",
+  "Other conspiratorial agreements require an act besides the agreement in pursuance of it.",
+  "The illegal act may be the ultimate object or merely incidental.",
+  "BNS Section 61 consolidates IPC Sections 120A and 120B.",
+  "Criminal conspiracy is distinct from abetment by conspiracy and common intention.",
+  "Association, relationship, knowledge or presence alone does not necessarily prove agreement.",
+];
+
+const chapterSixProvisions = [
+  "Indian Penal Code, 1860 — Section 120A: Definition of criminal conspiracy",
+  "Indian Penal Code, 1860 — Section 120B: Punishment of criminal conspiracy",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 61: Criminal conspiracy",
+  "Indian Penal Code, 1860 — Section 107: Abetment by conspiracy",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 45(b): Abetment by conspiracy",
+  "Indian Penal Code, 1860 — Section 34 and BNS Section 3(5): Common intention",
+  "Bharatiya Sakshya Adhiniyam, 2023 — Relevant rules for proof of conspiracy-related facts",
+];
+
+const chapterSixExamFocus =
+  "Identify the alleged agreement, every party, its object and proposed means. If the object is an offence, explain why no further overt act is required; otherwise identify the act done in pursuance. Select the proper punishment branch by stating the punishment attached to the object offence. Compare criminal conspiracy with abetment by conspiracy and common intention whenever the facts involve coordinated conduct, and connect each accused individually to the agreement.";
+
+const chapterSixRevisionNotes =
+  "IPC Section 120A maps to BNS Section 61(1), while IPC Section 120B maps to BNS Section 61(2). Agreement is the foundation of the offence. An overt act is unnecessary where the agreement is to commit an offence; other agreements require an act besides the agreement in pursuance. Serious conspiracy is punished as abetment where no express punishment exists. Other conspiracy carries up to six months, fine, or both. Mere association or knowledge does not by itself establish agreement.";
+
 
 const units = [
   {
@@ -1881,6 +1920,8 @@ export const criminalLawIChapters = units.map(
               ? "General Exceptions: IPC Sections 76–106 and BNS Sections 14–44"
             : index === 4
               ? "Abetment: IPC Sections 107–120 and BNS Sections 45–60"
+            : index === 5
+              ? "Criminal Conspiracy: IPC Sections 120A–120B and BNS Section 61"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1897,6 +1938,8 @@ export const criminalLawIChapters = units.map(
               ? "Study mistake, accident, capacity, consent, compulsion and private defence under IPC Sections 76–106 and BNS Sections 14–44."
             : index === 4
               ? "Study instigation, conspiracy-based abetment, intentional aid and consequential liability under IPC Sections 107–120 and BNS Sections 45–60."
+            : index === 5
+              ? "Study the agreement, overt-act rule and punishment governing criminal conspiracy under IPC Sections 120A–120B and BNS Section 61."
           : unit.shortDescription,
       chapterOverview:
         index === 0
@@ -1909,6 +1952,8 @@ export const criminalLawIChapters = units.map(
               ? chapterFourOverview
             : index === 4
               ? chapterFiveOverview
+            : index === 5
+              ? chapterSixOverview
             : unit.overview,
       learningObjectives:
         index === 0
@@ -1921,12 +1966,14 @@ export const criminalLawIChapters = units.map(
               ? chapterFourLearningObjectives
             : index === 4
               ? chapterFiveLearningObjectives
+            : index === 5
+              ? chapterSixLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index <= 4 ? "" : unit.detailedContent,
+      detailedContent: index <= 5 ? "" : unit.detailedContent,
       keyPoints:
         index === 0
           ? chapterOneKeyPoints
@@ -1938,9 +1985,11 @@ export const criminalLawIChapters = units.map(
               ? chapterFourKeyPoints
             : index === 4
               ? chapterFiveKeyPoints
+            : index === 5
+              ? chapterSixKeyPoints
             : unit.keyPoints,
       statutoryProvisions:
-        index <= 4
+        index <= 5
           ? (index === 0
               ? chapterOneProvisions
               : index === 1
@@ -1949,7 +1998,9 @@ export const criminalLawIChapters = units.map(
                   ? chapterThreeProvisions
                   : index === 3
                     ? chapterFourProvisions
-                    : chapterFiveProvisions
+                    : index === 4
+                      ? chapterFiveProvisions
+                      : chapterSixProvisions
             ).map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
@@ -1973,6 +2024,8 @@ export const criminalLawIChapters = units.map(
               ? chapterFourExamFocus
             : index === 4
               ? chapterFiveExamFocus
+            : index === 5
+              ? chapterSixExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
@@ -1986,8 +2039,10 @@ export const criminalLawIChapters = units.map(
               ? chapterFourRevisionNotes
             : index === 4
               ? chapterFiveRevisionNotes
+            : index === 5
+              ? chapterSixRevisionNotes
             : unit.keyPoints.join("; "),
-      notes: index <= 4 ? "" : unit.detailedContent,
+      notes: index <= 5 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
@@ -1999,6 +2054,8 @@ export const criminalLawIChapters = units.map(
               ? "/documents/criminal-law-i/chapter-4-general-exceptions-ipc-bns.pdf"
             : index === 4
               ? "/documents/criminal-law-i/chapter-5-abetment-ipc-bns.pdf"
+            : index === 5
+              ? "/documents/criminal-law-i/chapter-6-criminal-conspiracy-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
@@ -2011,10 +2068,12 @@ export const criminalLawIChapters = units.map(
               ? "Criminal Law I - Chapter IV - General Exceptions.pdf"
             : index === 4
               ? "Criminal Law I - Chapter V - Abetment.pdf"
+            : index === 5
+              ? "Criminal Law I - Chapter VI - Criminal Conspiracy.pdf"
           : "",
       pdfFileSize:
-        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : 0,
-      pdfContentType: index <= 4 ? "application/pdf" : "",
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : 0,
+      pdfContentType: index <= 5 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,

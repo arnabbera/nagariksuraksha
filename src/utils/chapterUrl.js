@@ -65,6 +65,13 @@ const isCriminalLawIChapterFive = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-5");
 
+const isCriminalLawIChapterSix = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-6");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -88,6 +95,11 @@ const CRIMINAL_LAW_I_CHAPTER_FIVE_LEGACY_SEGMENTS = new Set([
   "criminal-law-1-abetment-ipc-sections-107-120-and-bns-sections-45-60",
 ]);
 
+const CRIMINAL_LAW_I_CHAPTER_SIX_LEGACY_SEGMENTS = new Set([
+  "criminal-law-i-transitioning-from-ipc-to-bns-false-evidence-and-offences-against-public-justice",
+  "criminal-law-1-criminal-conspiracy-ipc-sections-120a-120b-and-bns-section-61",
+]);
+
 export const getChapterPathSegment = (courseSlug, chapter) => {
   if (isCriminalLawIChapterOne(courseSlug, chapter)) {
     return "ipc-to-bns-chapter1-Itroduction";
@@ -107,6 +119,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 
   if (isCriminalLawIChapterFive(courseSlug, chapter)) {
     return "ipc-to-bns-chapter5-Abetment";
+  }
+
+  if (isCriminalLawIChapterSix(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter6-Criminal-Conspiracy";
   }
 
   const prefix =
@@ -141,6 +157,10 @@ export const getChapterLearningPath = (courseSlug, chapter) => {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter5-Abetment";
   }
 
+  if (isCriminalLawIChapterSix(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter6-Criminal-Conspiracy";
+  }
+
   return `/student/learn/${courseSlug}/${getChapterPathSegment(courseSlug, chapter)}`;
 };
 
@@ -163,5 +183,7 @@ export const resolveChapterPathSegment = (
         CRIMINAL_LAW_I_CHAPTER_FOUR_LEGACY_SEGMENTS.has(pathSegment)) ||
       (isCriminalLawIChapterFive(courseSlug, chapter) &&
         CRIMINAL_LAW_I_CHAPTER_FIVE_LEGACY_SEGMENTS.has(pathSegment)) ||
+      (isCriminalLawIChapterSix(courseSlug, chapter) &&
+        CRIMINAL_LAW_I_CHAPTER_SIX_LEGACY_SEGMENTS.has(pathSegment)) ||
       getChapterPathSegment(courseSlug, chapter) === pathSegment,
   ) || null;

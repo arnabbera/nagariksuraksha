@@ -40,6 +40,7 @@ const sourceControlledChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-3",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-4",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-5",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-6",
 ]);
 
 // Bundled course chapters are updated through reviewed source changes, while
