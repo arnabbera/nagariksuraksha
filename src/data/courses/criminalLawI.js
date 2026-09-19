@@ -309,6 +309,45 @@ const chapterSixExamFocus =
 const chapterSixRevisionNotes =
   "IPC Section 120A maps to BNS Section 61(1), while IPC Section 120B maps to BNS Section 61(2). Agreement is the foundation of the offence. An overt act is unnecessary where the agreement is to commit an offence; other agreements require an act besides the agreement in pursuance. Serious conspiracy is punished as abetment where no express punishment exists. Other conspiracy carries up to six months, fine, or both. Mere association or knowledge does not by itself establish agreement.";
 
+const chapterSevenOverview =
+  "This chapter examines offences relating to the Army, Navy and Air Force under IPC Sections 131–140 and BNS Sections 159–168. It covers abetment of mutiny, assault on a superior officer, desertion, harbouring a deserter, negligent concealment aboard a merchant vessel, insubordination, exclusion of persons governed by service statutes, and deceptive use of military garb or tokens. Repealed IPC Section 138A is identified separately.";
+
+const chapterSevenLearningObjectives = [
+  "Explain the graduated liability for abetting mutiny.",
+  "Distinguish abetment of assault, desertion and insubordination.",
+  "Apply knowledge and reason-to-believe standards in harbouring cases.",
+  "Explain negligence-based liability of a merchant-vessel master.",
+  "Identify the service-law exclusion and its purpose.",
+  "Compare IPC Sections 131–140 with BNS Sections 159–168.",
+  "Identify repealed Section 138A and material BNS changes.",
+];
+
+const chapterSevenKeyPoints = [
+  "IPC Sections 131–140 correspond to BNS Sections 159–168, except repealed IPC Section 138A.",
+  "Mutiny and completed mutiny attract different punishment provisions.",
+  "The assault provisions require the superior officer to be executing official duty.",
+  "Harbouring requires knowledge or reason to believe that the person deserted.",
+  "The harbouring exception is now expressed in gender-neutral terms for a spouse.",
+  "Merchant-vessel liability may arise through neglect despite ignorance of concealment.",
+  "BNS Section 166 increases the insubordination-abettment maximum imprisonment to two years.",
+  "Military-garb liability requires deceptive intention, not resemblance alone.",
+];
+
+const chapterSevenProvisions = [
+  "Indian Penal Code, 1860 — Sections 131–140: Offences relating to the Army, Navy and Air Force",
+  "Bharatiya Nyaya Sanhita, 2023 — Sections 159–168: Offences relating to the Army, Navy and Air Force",
+  "Army Act, 1950",
+  "Air Force Act, 1950",
+  "Navy Act, 1957",
+  "Bharatiya Nyaya Sanhita, 2023 — Section 167: Persons subject to specified service Acts",
+];
+
+const chapterSevenExamFocus =
+  "Identify the protected service relationship and the accused's precise conduct. For abetment, prove the applicable mode and consequence. For harbouring, establish knowledge or reason to believe; for merchant-vessel concealment, identify neglect or want of discipline; and for false garb or tokens, prove deceptive intention. State the exclusion for persons governed by the specified service Acts and identify every material BNS wording or punishment change.";
+
+const chapterSevenRevisionNotes =
+  "IPC Sections 131–140 map to BNS Sections 159–168, except repealed IPC Section 138A. IPC 131/BNS 159 covers abetting mutiny or seducing service personnel from duty; IPC 132/BNS 160 applies when mutiny follows. The harbouring exception now refers to a spouse. BNS Section 165 raises the merchant-vessel penalty to ₹3,000, Section 166 raises the insubordination maximum to two years, and Section 168 raises the military-garb or token fine to ₹2,000.";
+
 
 const units = [
   {
@@ -1922,6 +1961,8 @@ export const criminalLawIChapters = units.map(
               ? "Abetment: IPC Sections 107–120 and BNS Sections 45–60"
             : index === 5
               ? "Criminal Conspiracy: IPC Sections 120A–120B and BNS Section 61"
+            : index === 6
+              ? "Offences Relating to the Armed Forces: IPC Sections 131–140 and BNS Sections 159–168"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
@@ -1940,6 +1981,8 @@ export const criminalLawIChapters = units.map(
               ? "Study instigation, conspiracy-based abetment, intentional aid and consequential liability under IPC Sections 107–120 and BNS Sections 45–60."
             : index === 5
               ? "Study the agreement, overt-act rule and punishment governing criminal conspiracy under IPC Sections 120A–120B and BNS Section 61."
+            : index === 6
+              ? "Study mutiny, desertion, insubordination and military impersonation under IPC Sections 131–140 and BNS Sections 159–168."
           : unit.shortDescription,
       chapterOverview:
         index === 0
@@ -1954,6 +1997,8 @@ export const criminalLawIChapters = units.map(
               ? chapterFiveOverview
             : index === 5
               ? chapterSixOverview
+            : index === 6
+              ? chapterSevenOverview
             : unit.overview,
       learningObjectives:
         index === 0
@@ -1968,12 +2013,14 @@ export const criminalLawIChapters = units.map(
               ? chapterFiveLearningObjectives
             : index === 5
               ? chapterSixLearningObjectives
+            : index === 6
+              ? chapterSevenLearningObjectives
           : unit.learningObjectives || [
               `Explain the principal criminal-law rules covered in Unit ${index + 1}.`,
               "Apply the relevant IPC principles to legal problems.",
               "Identify the corresponding transition from the IPC to the BNS.",
             ],
-      detailedContent: index <= 5 ? "" : unit.detailedContent,
+      detailedContent: index <= 6 ? "" : unit.detailedContent,
       keyPoints:
         index === 0
           ? chapterOneKeyPoints
@@ -1987,9 +2034,11 @@ export const criminalLawIChapters = units.map(
               ? chapterFiveKeyPoints
             : index === 5
               ? chapterSixKeyPoints
+            : index === 6
+              ? chapterSevenKeyPoints
             : unit.keyPoints,
       statutoryProvisions:
-        index <= 5
+        index <= 6
           ? (index === 0
               ? chapterOneProvisions
               : index === 1
@@ -2000,7 +2049,9 @@ export const criminalLawIChapters = units.map(
                     ? chapterFourProvisions
                     : index === 4
                       ? chapterFiveProvisions
-                      : chapterSixProvisions
+                      : index === 5
+                        ? chapterSixProvisions
+                        : chapterSevenProvisions
             ).map((provision, provisionIndex) => ({
               id: `unit-${index + 1}-provision-${provisionIndex + 1}`,
               title: provision,
@@ -2026,6 +2077,8 @@ export const criminalLawIChapters = units.map(
               ? chapterFiveExamFocus
             : index === 5
               ? chapterSixExamFocus
+            : index === 6
+              ? chapterSevenExamFocus
           : unit.examFocus ||
             "Revise the ingredients of each offence, applicable exceptions, distinctions, punishments and the corresponding transition from the IPC to the BNS. Support answers with statutory provisions and leading judicial principles.",
       revisionNotes:
@@ -2041,8 +2094,10 @@ export const criminalLawIChapters = units.map(
               ? chapterFiveRevisionNotes
             : index === 5
               ? chapterSixRevisionNotes
+            : index === 6
+              ? chapterSevenRevisionNotes
             : unit.keyPoints.join("; "),
-      notes: index <= 5 ? "" : unit.detailedContent,
+      notes: index <= 6 ? "" : unit.detailedContent,
       pdfUrl:
         index === 0
           ? "/documents/criminal-law-i/chapter-1-introduction-ipc-bns.pdf"
@@ -2056,6 +2111,8 @@ export const criminalLawIChapters = units.map(
               ? "/documents/criminal-law-i/chapter-5-abetment-ipc-bns.pdf"
             : index === 5
               ? "/documents/criminal-law-i/chapter-6-criminal-conspiracy-ipc-bns.pdf"
+            : index === 6
+              ? "/documents/criminal-law-i/chapter-7-armed-forces-offences-ipc-bns.pdf"
           : "",
       pdfFileName:
         index === 0
@@ -2070,10 +2127,12 @@ export const criminalLawIChapters = units.map(
               ? "Criminal Law I - Chapter V - Abetment.pdf"
             : index === 5
               ? "Criminal Law I - Chapter VI - Criminal Conspiracy.pdf"
+            : index === 6
+              ? "Criminal Law I - Chapter VII - Armed Forces Offences.pdf"
           : "",
       pdfFileSize:
-        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : 0,
-      pdfContentType: index <= 5 ? "application/pdf" : "",
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
+      pdfContentType: index <= 6 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
