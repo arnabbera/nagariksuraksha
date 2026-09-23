@@ -196,6 +196,9 @@ export default function PublicCoursesPage() {
 
                   return {
                     ...course,
+                    previewChapters: Array.isArray(chapters)
+                      ? chapters.slice(0, 3).map((chapter) => chapter.title).filter(Boolean)
+                      : [],
                     publishedChapterCount:
                       Array.isArray(chapters) &&
                       chapters.length > 0
@@ -529,6 +532,15 @@ export default function PublicCoursesPage() {
                                   .description ||
                                 "Explore this structured law course from NagarikSuraksha."}
                             </p>
+
+                            {course.previewChapters?.length > 0 && (
+                              <p>
+                                <strong>Topics you’ll study:</strong>{" "}
+                                {course.previewChapters.join(" · ")}
+                              </p>
+                            )}
+
+                            <p>₹49 per course · Chapters, study materials, mock tests and a completion certificate included.</p>
 
                             <Link
                               className="course-link"
