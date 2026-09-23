@@ -4,12 +4,13 @@ import {
   FaInfoCircle,
   FaShieldAlt,
 } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../../../hooks/useAuth";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { signIn } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -22,7 +23,14 @@ export default function LoginPage() {
 
       const { profile } = await signIn();
 
-      navigate(profile?.role === "admin" ? "/admin" : "/student", {
+      const next = searchParams.get("next");
+      const safeNext = next?.startsWith("/student/courses/") &&
+        !next.startsWith("//") && !next.includes("\\") &&
+        !next.includes("?") && !next.includes("#")
+        ? next
+        : "/student";
+
+      navigate(profile?.role === "admin" ? "/admin" : safeNext, {
         replace: true,
       });
     } catch (loginError) {
