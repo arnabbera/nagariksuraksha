@@ -82,6 +82,10 @@ export default function PublicCourseDetailsPage() {
     courseSlug,
   } = useParams();
 
+  const enrollmentUrl = `/login?next=${encodeURIComponent(
+    `/student/courses/${courseSlug}`,
+  )}`;
+
   const [
     course,
     setCourse,
@@ -621,7 +625,7 @@ export default function PublicCourseDetailsPage() {
               <div className="course-hero-actions">
                 <Link
                   className="primary-course-cta"
-                  to="/login"
+                  to={enrollmentUrl}
                 >
                   Enroll for ₹49
                   <FaArrowRight />
