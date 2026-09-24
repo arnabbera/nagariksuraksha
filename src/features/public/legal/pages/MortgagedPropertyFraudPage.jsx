@@ -67,7 +67,7 @@ export default function MortgagedPropertyFraudPage() {
       <SEO
         title="Bought a Mortgaged Property by Fraud? Protect Your Home and Money"
         description="Practical legal steps in Kolkata when a seller conceals an earlier mortgage: police complaint, lender notice, SARFAESI and DRT remedies, civil recovery and title verification."
-        canonical="/legal-updates/bought-mortgaged-property-by-fraud"
+        canonical="/legal-remedies/bought-mortgaged-property-by-fraud"
         image="/images/legal-updates/mortgaged-property-fraud.jpg"
         keywords={["mortgaged property fraud Kolkata", "property sold with bank loan", "SARFAESI purchaser remedy", "DRT Section 17", "CERSAI property search", "property cheating BNS"]}
       />
@@ -78,7 +78,7 @@ export default function MortgagedPropertyFraudPage() {
         <section className="ns-property-hero">
           <div className="ns-property-wrap ns-property-hero-grid">
             <div>
-              <Link to="/#legal-remedies" className="ns-property-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-property-back"><FaArrowLeft /> Legal Remedies</Link>
               <span className="ns-property-eyebrow"><FaHome /> Property Fraud and Mortgage Claims</span>
               <h1>Bought a Mortgaged Property by Fraud?</h1>
               <p>Here is how a nagarik can act to protect the home, challenge unlawful conduct and pursue recovery when a seller concealed an earlier mortgage or lien.</p>
@@ -89,7 +89,7 @@ export default function MortgagedPropertyFraudPage() {
 
         <article className="ns-property-wrap ns-property-article">
           <LegalUpdateShare
-            canonicalPath="/legal-updates/bought-mortgaged-property-by-fraud"
+            canonicalPath="/legal-remedies/bought-mortgaged-property-by-fraud"
             shareVersion="mortgaged-property-fraud-card-v1"
             message="Bought a property with a concealed mortgage? Know how to protect your home and money."
           />
