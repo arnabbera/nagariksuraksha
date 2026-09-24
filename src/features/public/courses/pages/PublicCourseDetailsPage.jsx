@@ -35,6 +35,7 @@ import {
 import {
   getCourseBySlug,
 } from "../../../../services/courseService";
+import { trackFunnelEvent } from "../../../../services/funnelAnalyticsService";
 
 // =========================================================
 // HELPERS
@@ -189,6 +190,10 @@ export default function PublicCourseDetailsPage() {
   }, [
     courseSlug,
   ]);
+
+  useEffect(() => {
+    if (course?.id) void trackFunnelEvent("course_visit", course.id);
+  }, [course?.id]);
 
   // =======================================================
   // SEO
@@ -626,6 +631,7 @@ export default function PublicCourseDetailsPage() {
                 <Link
                   className="primary-course-cta"
                   to={enrollmentUrl}
+                  onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
                 >
                   Enroll for ₹49
                   <FaArrowRight />
@@ -925,7 +931,8 @@ export default function PublicCourseDetailsPage() {
 
                 <Link
                   className="sidebar-login-button"
-                  to="/login"
+                  to={enrollmentUrl}
+                  onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
                 >
                   Enroll for ₹49
                   <FaArrowRight />

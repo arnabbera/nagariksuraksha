@@ -44,6 +44,7 @@ import {
 import {
   payForCourseWithRazorpay,
 } from "../../../../services/razorpayPaymentService";
+import { trackFunnelEvent } from "../../../../services/funnelAnalyticsService";
 
 import {
   canJoinLiveSession,
@@ -609,6 +610,8 @@ export default function CourseDetails() {
         return;
       }
 
+      void trackFunnelEvent("enrollment_click", course.id);
+
       try {
         setCertificationEnrolling(
           true,
@@ -674,6 +677,8 @@ export default function CourseDetails() {
 
   const handleLiveClassPayment = async () => {
     if (!studentId || !course?.id || !hasLiveClasses) return;
+
+    void trackFunnelEvent("enrollment_click", course.id);
 
     try {
       setLiveClassEnrolling(true);
