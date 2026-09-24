@@ -55,8 +55,14 @@ const Hero = () => {
             duration: 0.7,
           }}
         >
-          <div className="ns-hero-badge">
-            ⚖ Legal Consultancy • Legal Learning • Legal Awareness
+          <div
+            className="ns-hero-badge"
+            aria-label="Free Initial Legal Consultation • Property Registration • Guidance to file Consumer Cases Guide"
+          >
+            <div className="ns-hero-badge-track" aria-hidden="true">
+              <span>⚖️ Free Initial Legal Consultation • Property Registration • Guidance to file Consumer Cases Guide</span>
+              <span>⚖️ Free Initial Legal Consultation • Property Registration • Guidance to file Consumer Cases Guide</span>
+            </div>
           </div>
 
           <h1>
@@ -198,9 +204,10 @@ const Hero = () => {
           /* BADGE */
 
           .ns-hero-badge {
-            display: inline-block;
+            display: block;
 
-            max-width: 100%;
+            width: min(100%, 580px);
+            overflow: hidden;
 
             margin-bottom: 20px;
 
@@ -223,12 +230,32 @@ const Hero = () => {
                 0.12
               );
 
-            padding: 9px 17px;
+            padding: 9px 0;
 
             font-size: 14px;
             font-weight: 600;
 
             line-height: 1.5;
+          }
+
+          .ns-hero-badge-track {
+            display: flex;
+            width: max-content;
+            animation: ns-hero-badge-scroll 19s linear infinite;
+          }
+
+          .ns-hero-badge-track span {
+            flex: none;
+            padding: 0 24px;
+            white-space: nowrap;
+          }
+
+          .ns-hero-badge:hover .ns-hero-badge-track {
+            animation-play-state: paused;
+          }
+
+          @keyframes ns-hero-badge-scroll {
+            to { transform: translateX(-50%); }
           }
 
           /* HEADING */
@@ -587,6 +614,31 @@ const Hero = () => {
             .ns-hero-stats {
               grid-template-columns:
                 1fr;
+            }
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            .ns-hero-badge {
+              width: auto;
+              overflow: visible;
+              border-radius: 14px;
+              padding: 9px 17px;
+            }
+
+            .ns-hero-badge-track {
+              display: block;
+              width: auto;
+              animation: none;
+            }
+
+            .ns-hero-badge-track span:first-child {
+              display: block;
+              padding: 0;
+              white-space: normal;
+            }
+
+            .ns-hero-badge-track span:last-child {
+              display: none;
             }
           }
         `}
