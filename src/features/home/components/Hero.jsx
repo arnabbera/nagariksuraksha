@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  FaArrowRight,
-  FaBalanceScale,
-  FaBookOpen,
-  FaGraduationCap,
-} from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -40,25 +35,6 @@ const Hero = () => {
       active = false;
     };
   }, []);
-
-  const features = [
-    {
-      icon: <FaBalanceScale />,
-      title: "Legal Services",
-    },
-    {
-      icon: <FaGraduationCap />,
-      title: "LL.B Learning",
-    },
-    {
-      icon: <FaBookOpen />,
-      title: "Legal Resources",
-    },
-    {
-      icon: "🏆",
-      title: "Certification",
-    },
-  ];
 
   return (
     <section className="ns-hero">
@@ -158,25 +134,15 @@ const Hero = () => {
             duration: 0.7,
           }}
         >
-          <div className="ns-hero-feature-grid">
-            {features.map(
-              (item) => (
-                <div
-                  key={item.title}
-                  className="ns-hero-feature"
-                >
-                  <div className="ns-hero-feature-icon">
-                    {item.icon}
-                  </div>
-
-                  <h3>
-                    {item.title}
-                  </h3>
-                </div>
-              ),
-            )}
-          </div>
-
+          <img
+            className="ns-hero-banner"
+            src="/images/sanhita360-home-hero-banner.webp"
+            alt="Sanhita360: Know your rights, protect your future. Simplifying law and empowering citizens."
+            width="1254"
+            height="1254"
+            loading="eager"
+            fetchPriority="high"
+          />
         </motion.div>
       </div>
 
@@ -413,102 +379,15 @@ const Hero = () => {
           /* RIGHT PANEL */
 
           .ns-hero-panel {
-            border:
-              1px solid
-              rgba(
-                255,
-                255,
-                255,
-                0.15
-              );
-
-            border-radius: 24px;
-
-            background:
-              rgba(
-                255,
-                255,
-                255,
-                0.08
-              );
-
-            padding:
-              clamp(
-                22px,
-                3vw,
-                40px
-              );
-
-            backdrop-filter:
-              blur(10px);
+            width: 100%;
           }
 
-          .ns-hero-feature-grid {
-            display: grid;
-
-            grid-template-columns:
-              repeat(
-                2,
-                minmax(0, 1fr)
-              );
-
-            gap: 18px;
-          }
-
-          .ns-hero-feature {
-            min-width: 0;
-
-            border:
-              1px solid
-              rgba(
-                255,
-                255,
-                255,
-                0.08
-              );
-
-            border-radius: 17px;
-
-            background:
-              rgba(
-                255,
-                255,
-                255,
-                0.08
-              );
-
-            padding: 25px 15px;
-
-            text-align: center;
-          }
-
-          .ns-hero-feature-icon {
-            display: flex;
-
-            min-height: 48px;
-
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 13px;
-
-            color: #facc15;
-
-            font-size: 40px;
-          }
-
-          .ns-hero-feature-icon svg {
-            width: 42px;
-            height: 42px;
-          }
-
-          .ns-hero-feature h3 {
-            margin: 0;
-
-            font-size: 15px;
-
-            overflow-wrap:
-              anywhere;
+          .ns-hero-banner {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 44px rgba(3, 13, 32, 0.24);
           }
 
           /* ENROLLMENT */
@@ -684,40 +563,6 @@ const Hero = () => {
               font-size: 10px;
             }
 
-            .ns-hero-panel {
-              border-radius: 18px;
-
-              padding: 15px;
-            }
-
-            .ns-hero-feature-grid {
-              gap: 10px;
-            }
-
-            .ns-hero-feature {
-              border-radius: 13px;
-
-              padding:
-                19px 8px;
-            }
-
-            .ns-hero-feature-icon {
-              min-height: 38px;
-
-              margin-bottom: 9px;
-
-              font-size: 31px;
-            }
-
-            .ns-hero-feature-icon svg {
-              width: 32px;
-              height: 32px;
-            }
-
-            .ns-hero-feature h3 {
-              font-size: 12px;
-            }
-
             .ns-hero-enrollment {
               margin-top: 14px;
 
@@ -737,11 +582,6 @@ const Hero = () => {
 
             .ns-hero h1 {
               font-size: 31px;
-            }
-
-            .ns-hero-feature-grid {
-              grid-template-columns:
-                1fr;
             }
 
             .ns-hero-stats {
