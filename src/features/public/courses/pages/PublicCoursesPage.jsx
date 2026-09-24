@@ -17,7 +17,7 @@ import {
 import {
   FaCheckCircle,
   FaFacebookF,
-  FaLink,
+  FaHeart,
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -138,26 +138,48 @@ export default function PublicCoursesPage() {
     setError,
   ] = useState("");
 
-  const [
-    copied,
-    setCopied,
-  ] = useState(false);
+  const [likes, setLikes] = useState(null);
+  const [liked, setLiked] = useState(false);
+  const [likePending, setLikePending] = useState(false);
+  const [likeError, setLikeError] = useState("");
 
-  const handleCopyLink = async () => {
+  useEffect(() => {
+    let active = true;
+    fetch("/api/law-courses/likes?post=%2Flaw-courses", { credentials: "same-origin" })
+      .then(async (response) => {
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to load likes.");
+        return result;
+      })
+      .then((result) => {
+        if (active) {
+          setLikes(result.count);
+          setLiked(result.liked);
+        }
+      })
+      .catch(() => { if (active) setLikeError("Likes are temporarily unavailable."); });
+    return () => { active = false; };
+  }, []);
+
+  const handleLike = async () => {
+    if (likePending || liked || likes === null) return;
+    setLikePending(true);
+    setLikeError("");
     try {
-      await navigator.clipboard.writeText(
-        CERTIFICATE_COURSES_URL,
-      );
-      setCopied(true);
-      window.setTimeout(
-        () => setCopied(false),
-        2000,
-      );
-    } catch (copyError) {
-      console.error(
-        "Unable to copy courses link:",
-        copyError,
-      );
+      const response = await fetch("/api/law-courses/likes", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ post: "/law-courses" }),
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Unable to save your like.");
+      setLikes(result.count);
+      setLiked(result.liked);
+    } catch (cause) {
+      setLikeError(cause.message);
+    } finally {
+      setLikePending(false);
     }
   };
 
@@ -332,8 +354,9 @@ export default function PublicCoursesPage() {
                   <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(CERTIFICATE_COURSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
                   <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(CERTIFICATE_COURSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
                   <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE}\n${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
-                  <button type="button" onClick={handleCopyLink} aria-label="Copy page link"><FaLink /> {copied ? "Link Copied" : "Copy Link"}</button>
+                  <button type="button" className="is-like" onClick={handleLike} disabled={likes === null || liked || likePending} aria-label={liked ? `Liked, ${likes} likes` : `Like this page, ${likes ?? 0} likes`} aria-pressed={liked}><FaHeart /> {liked ? "Liked" : "Like"} · {likes ?? "…"}</button>
                 </div>
+                {likeError && <p className="courses-share-error" role="status">{likeError}</p>}
               </div>
             </div>
 
@@ -770,6 +793,10 @@ export default function PublicCoursesPage() {
             .courses-share .is-facebook { background: #1877f2; }
             .courses-share .is-twitter { background: #17202a; }
             .courses-share .is-whatsapp { background: #198b47; }
+            .courses-share .is-like { background: #a72646; }
+            .courses-share .is-like[aria-pressed="true"] { background: #6f1d36; }
+            .courses-share button:disabled { cursor: default; opacity: .8; }
+            .courses-share-error { color: #a52132; font-size: .8rem; margin: 9px 0 0; }
 
             .courses-intro {
               padding: 55px 0 25px;
