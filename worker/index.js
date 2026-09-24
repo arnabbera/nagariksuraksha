@@ -216,6 +216,106 @@ const getGoogleAccessToken = async (env) => {
   return result.access_token;
 };
 
+const LIKE_COOKIE = "__Host-sanhita_like_id";
+const likesRoot = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/legalRemedyLikes`;
+const firestoreDocumentsUrl = "https://firestore.googleapis.com/v1";
+
+const getLikeVisitor = (request) => {
+  const value = request.headers.get("cookie")?.match(/(?:^|;\s*)__Host-sanhita_like_id=([a-f0-9]{64})(?:;|$)/)?.[1];
+  return value || null;
+};
+
+const readLikeDocument = async (token, name) => {
+  const response = await fetch(`${firestoreDocumentsUrl}/${name}`, {
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    console.error("Unable to read legal remedy likes", response.status);
+    fail("Unable to load likes right now.", 503);
+  }
+  return response.json();
+};
+
+const likeCount = async (token, postId, visitorHash) => {
+  const counter = `${likesRoot}/${postId}`;
+  const [document, visitor] = await Promise.all([
+    readLikeDocument(token, counter),
+    readLikeDocument(token, `${counter}/visitors/${visitorHash}`),
+  ]);
+  return {
+    count: Math.max(0, Number(document?.fields?.count?.integerValue || 0)),
+    liked: Boolean(visitor),
+  };
+};
+
+const handleLegalLikes = async (request, env, url) => {
+  if (request.method !== "GET" && request.method !== "POST") fail("Method not allowed.", 405);
+  const isWrite = request.method === "POST";
+  if (isWrite && request.headers.get("origin") !== url.origin) {
+    fail("Likes must come from this site.", 403);
+  }
+  const post = isWrite ? (await readBody(request))?.post : url.searchParams.get("post");
+  if (typeof post !== "string" || !Object.hasOwn(LEGAL_UPDATE_SOCIAL_META, post) ||
+    !post.startsWith("/legal-updates/")) fail("Unknown legal remedy post.", 404);
+
+  const postId = post.slice("/legal-updates/".length);
+  let visitorId = getLikeVisitor(request);
+  if (!visitorId && isWrite) fail("Reload the post before liking it.", 409);
+  const newVisitor = !visitorId;
+  if (newVisitor) {
+    visitorId = [...crypto.getRandomValues(new Uint8Array(32))]
+      .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  }
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${postId}:${visitorId}`));
+  const visitorHash = [...new Uint8Array(digest)]
+    .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  const token = await getGoogleAccessToken(env);
+
+  if (isWrite) {
+    const counter = `${likesRoot}/${postId}`;
+    const response = await fetch(
+      `${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:commit`,
+      {
+        method: "POST",
+        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+        body: JSON.stringify({ writes: [
+          {
+            update: {
+              name: `${counter}/visitors/${visitorHash}`,
+              fields: { createdAt: { timestampValue: new Date().toISOString() } },
+            },
+            currentDocument: { exists: false },
+          },
+          {
+            transform: {
+              document: counter,
+              fieldTransforms: [{ fieldPath: "count", increment: { integerValue: "1" } }],
+            },
+          },
+        ] }),
+      },
+    );
+    if (!response.ok) {
+      const result = await response.json().catch(() => ({}));
+      // Two tabs may try to create the same visitor marker at once. The
+      // atomic commit rejects the second write without incrementing count.
+      if (!["ALREADY_EXISTS", "FAILED_PRECONDITION"].includes(result.error?.status)) {
+        console.error("Unable to store legal remedy like", response.status, result.error?.status);
+        fail("Unable to save your like. Please try again.", 503);
+      }
+    }
+  }
+
+  const result = await likeCount(token, postId, visitorHash);
+  return json(result, {
+    headers: {
+      "cache-control": "no-store",
+      ...(newVisitor ? { "set-cookie": `${LIKE_COOKIE}=${visitorId}; Path=/; Max-Age=31536000; Secure; HttpOnly; SameSite=Lax` } : {}),
+    },
+  });
+};
+
 const enrollmentUrl = (studentId, courseId) =>
   `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/studentEnrollments/${encodeURIComponent(`${studentId}_${courseId}`)}`;
 
@@ -804,6 +904,9 @@ export default {
     const url = new URL(request.url);
     if (url.pathname.startsWith("/api/")) {
       try {
+        if (url.pathname === "/api/legal-updates/likes") {
+          return await handleLegalLikes(request, env, url);
+        }
         return json(await handleApi(request, env, url));
       } catch (error) {
         console.error("API request failed", url.pathname, error.message);
