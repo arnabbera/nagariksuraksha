@@ -263,7 +263,7 @@ export default function LawNoteDetailsPage() {
           ?.shortDescription ||
         topic
           ?.overview ||
-        `Read ${topic.title} law notes, important principles, cases and exam-focused study material at NagarikSuraksha.`;
+        `Read ${topic.title} law notes, important principles, cases and exam-focused study material at Sanhita360.`;
 
       const canonical =
         topic
@@ -481,7 +481,7 @@ export default function LawNoteDetailsPage() {
       <>
         <SEO
           title="Law Note Not Found"
-          description="The requested NagarikSuraksha law note could not be found."
+          description="The requested Sanhita360 law note could not be found."
           canonical={`/law-notes/${topicSlug}`}
           robots="noindex, follow"
         />
@@ -999,7 +999,7 @@ export default function LawNoteDetailsPage() {
                   This public law note provides
                   an overview for study and
                   revision. Continue through the
-                  NagarikSuraksha learning
+                  Sanhita360 learning
                   portal for complete
                   chapter-based learning.
                 </p>
@@ -1054,7 +1054,7 @@ export default function LawNoteDetailsPage() {
             </h2>
 
             <p>
-              NagarikSuraksha provides
+              Sanhita360 provides
               topic-wise LL.B law notes to help
               students understand legal
               concepts, revise important

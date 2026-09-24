@@ -36,13 +36,13 @@ const homepageStructuredData = {
         `${SEO_CONFIG.siteUrl}/#organization`,
 
       name:
-        "NagarikSuraksha",
+        "Sanhita360",
 
       url:
         `${SEO_CONFIG.siteUrl}/`,
 
       description:
-        "NagarikSuraksha provides LL.B courses, law notes, study materials, mock tests, legal awareness resources and certification preparation.",
+        "Sanhita360 provides LL.B courses, law notes, study materials, mock tests, legal awareness resources and certification preparation.",
 
       areaServed: {
         "@type":
@@ -77,7 +77,7 @@ const homepageStructuredData = {
         `${SEO_CONFIG.siteUrl}/`,
 
       name:
-        "NagarikSuraksha",
+        "Sanhita360",
 
       publisher: {
         "@id":
@@ -99,7 +99,7 @@ const homepageStructuredData = {
         `${SEO_CONFIG.siteUrl}/`,
 
       name:
-        "NagarikSuraksha - LL.B Courses, Law Notes, Study Materials & Mock Tests",
+        "Sanhita360 - LL.B Courses, Law Notes, Study Materials & Mock Tests",
 
       description:
         HOME_SEO.description,

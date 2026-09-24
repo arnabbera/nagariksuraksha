@@ -60,7 +60,7 @@ export default function Dashboard() {
       <section className="ns-admin-hero">
         <span>Restricted Administrator Access</span>
         <h1>Legal Learning Administration</h1>
-        <p>Manage the learning content visible across NagarikSuraksha from one familiar, responsive workspace.</p>
+        <p>Manage the learning content visible across Sanhita360 from one familiar, responsive workspace.</p>
         <Link to="/" target="_blank" rel="noopener noreferrer">View Public Homepage</Link>
       </section>
 

@@ -276,13 +276,13 @@ const Sidebar = ({
         <div className="ns-sidebar-header">
           <div className="ns-sidebar-brand">
             <div className="ns-sidebar-logo">
-              <FaBalanceScale />
+              <img src="/sanhita360-logo.png" alt="" style={{ width: 42, height: 42, objectFit: "cover", objectPosition: "left", background: "#fff", borderRadius: 6 }} />
             </div>
 
             {!collapsed && (
               <div>
                 <h2>
-                  NagarikSuraksha
+                  Sanhita360
                 </h2>
 
                 <p>

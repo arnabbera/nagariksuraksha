@@ -79,7 +79,7 @@ const StatsSection = () => {
         }}
       >
         <h2 style={{ fontSize: "42px", marginBottom: "15px" }}>
-          NagarikSuraksha in Numbers
+          Sanhita360 in Numbers
         </h2>
 
         <p
@@ -91,7 +91,7 @@ const StatsSection = () => {
             fontSize: "18px",
           }}
         >
-          Live figures from the NagarikSuraksha learning platform.
+          Live figures from the Sanhita360 learning platform.
         </p>
 
         <div

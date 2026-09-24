@@ -63,7 +63,7 @@ Sources for further reading: The Indian Express historical profile on Matangini 
 
   seo: {
     title:
-      "Matangini Hazra: Gandhi Buri and Quit India Martyr | NagarikSuraksha",
+      "Matangini Hazra: Gandhi Buri and Quit India Martyr | Sanhita360",
 
     description:
       "Read the inspiring story of Matangini Hazra, Bengal’s Gandhi Buri, who led a Quit India procession in Tamluk and died holding the Indian tricolour.",

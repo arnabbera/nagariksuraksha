@@ -425,7 +425,7 @@ export default function Courses() {
     <div>
       <PageHeader
         title="Course Management"
-        description="Create, edit, publish and manage NagarikSuraksha learning courses."
+        description="Create, edit, publish and manage Sanhita360 learning courses."
         breadcrumbs={[
           "Admin",
           "Learning",
@@ -547,7 +547,7 @@ export default function Courses() {
             <EmptyState
               icon="ðŸ“š"
               title="No courses found"
-              description="Create the first NagarikSuraksha course using the form."
+              description="Create the first Sanhita360 course using the form."
             />
           ) : (
             <div className="ns-course-list">

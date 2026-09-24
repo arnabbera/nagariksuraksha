@@ -41,10 +41,10 @@ import {
 } from "../../../../services/chapterService";
 
 const CERTIFICATE_COURSES_URL =
-  "https://www.nagariksuraksha.com/share/certificate-courses-card-v3";
+  "https://www.sanhita360.com/share/certificate-courses-card-v3";
 
 const SHARE_MESSAGE =
-  "Explore Certificate Courses in Legal Studies from NagarikSuraksha.";
+  "Explore Certificate Courses in Legal Studies from Sanhita360.";
 
 // =========================================================
 // HELPERS
@@ -87,7 +87,7 @@ const createStructuredData = (
     "LL.B Courses and Law Study Materials",
 
   description:
-    "Explore LL.B courses, law notes, legal study materials and certification preparation from NagarikSuraksha.",
+    "Explore LL.B courses, law notes, legal study materials and certification preparation from Sanhita360.",
 
   url:
     `${SEO_CONFIG.siteUrl}/llb-courses`,
@@ -260,10 +260,10 @@ export default function PublicCoursesPage() {
   return (
     <>
       <SEO
-        title="Certificate Courses in Legal Studies | NagarikSuraksha"
-        description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha."
+        title="Certificate Courses in Legal Studies | Sanhita360"
+        description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360."
         canonical="/llb-courses"
-        image="/certificate-courses-whatsapp-wide-v3.jpg"
+        image="/certificate-courses-sanhita360.png"
         keywords={[
           "LLB courses",
           "LLB course online",
@@ -288,7 +288,7 @@ export default function PublicCoursesPage() {
             <div className="courses-hero-content">
               <span className="courses-eyebrow">
                 <FaScaleBalanced />
-                NagarikSuraksha Legal Learning
+                Sanhita360 Legal Learning
               </span>
 
               <h1>
@@ -337,7 +337,7 @@ export default function PublicCoursesPage() {
               </div>
             </div>
 
-            <img className="courses-hero-image" src="/certificate-courses-hero.jpg" alt="Certificate Courses in Legal Studies at NagarikSuraksha" />
+            <img className="courses-hero-image" src="/certificate-courses-hero.jpg" alt="Certificate Courses in Legal Studies at Sanhita360" />
           </div>
         </section>
 
@@ -355,7 +355,7 @@ export default function PublicCoursesPage() {
             </h2>
 
             <p>
-              NagarikSuraksha provides
+              Sanhita360 provides
               structured learning resources
               designed to help law students
               understand important legal
@@ -530,7 +530,7 @@ export default function PublicCoursesPage() {
                                 .shortDescription ||
                                 course
                                   .description ||
-                                "Explore this structured law course from NagarikSuraksha."}
+                                "Explore this structured law course from Sanhita360."}
                             </p>
 
                             {course.previewChapters?.length > 0 && (

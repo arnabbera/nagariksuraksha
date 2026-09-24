@@ -91,7 +91,7 @@ Masterda’s life illustrates the power of teaching joined with public purpose. 
 
 Historical note: Chittagong was part of the Bengal Presidency under British rule in 1930 and is now Chattogram, Bangladesh.`,
   seo: {
-    title: "Masterda Surya Sen and the Chittagong Armoury Raid | NagarikSuraksha",
+    title: "Masterda Surya Sen and the Chittagong Armoury Raid | Sanhita360",
     description: "Read the story of Masterda Surya Sen, the teacher and revolutionary organiser who led the Chittagong Armoury Raid of 18 April 1930.",
     focusKeyword: "Masterda Surya Sen",
     secondaryKeywords: [

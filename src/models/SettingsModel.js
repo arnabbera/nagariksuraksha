@@ -143,7 +143,7 @@ export const createSettingsModel = ({
     enabled: maintenance.enabled ?? false,
     message:
       maintenance.message ||
-      "NagarikSuraksha is temporarily under maintenance.",
+      "Sanhita360 is temporarily under maintenance.",
   },
 
   databaseVersion,

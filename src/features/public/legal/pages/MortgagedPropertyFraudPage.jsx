@@ -68,7 +68,7 @@ export default function MortgagedPropertyFraudPage() {
         title="Bought a Mortgaged Property by Fraud? Protect Your Home and Money"
         description="Practical legal steps in Kolkata when a seller conceals an earlier mortgage: police complaint, lender notice, SARFAESI and DRT remedies, civil recovery and title verification."
         canonical="/legal-updates/bought-mortgaged-property-by-fraud"
-        image="/images/legal-updates/mortgaged-property-fraud.jpg"
+        image="/images/legal-updates/mortgaged-property-fraud-sanhita360.png"
         keywords={["mortgaged property fraud Kolkata", "property sold with bank loan", "SARFAESI purchaser remedy", "DRT Section 17", "CERSAI property search", "property cheating BNS"]}
       />
 
@@ -83,7 +83,7 @@ export default function MortgagedPropertyFraudPage() {
               <h1>Bought a Mortgaged Property by Fraud?</h1>
               <p>Here is how a nagarik can act to protect the home, challenge unlawful conduct and pursue recovery when a seller concealed an earlier mortgage or lien.</p>
             </div>
-            <img src="/images/legal-updates/mortgaged-property-fraud.jpg" alt="Protecting a home and money after mortgaged property fraud" />
+            <img src="/images/legal-updates/mortgaged-property-fraud-sanhita360.png" alt="Protecting a home and money after mortgaged property fraud" />
           </div>
         </section>
 

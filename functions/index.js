@@ -10,7 +10,7 @@ initializeApp();
 
 const db = getFirestore();
 
-const SITE_URL = "https://www.nagariksuraksha.com";
+const SITE_URL = "https://www.sanhita360.com";
 const DEFAULT_IMAGE = `${SITE_URL}/favicon.svg`;
 const COURSE_FEE_PAISE = 4900;
 const RAZORPAY_KEY_ID = defineSecret("RAZORPAY_KEY_ID");
@@ -128,7 +128,7 @@ const renderPage = ({
     <meta name="robots" content="${notFound ? "noindex, follow" : "index, follow"}" />
     <link rel="canonical" href="${safePostUrl}" />
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="NagarikSuraksha" />
+    <meta property="og:site_name" content="Sanhita360" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:title" content="${safeTitle}" />
     <meta property="og:description" content="${safeDescription}" />
@@ -162,8 +162,8 @@ export const socialShare = onRequest(
       if (!slug) {
         response.status(400).type("html").send(
           renderPage({
-            title: "Post Not Found | NagarikSuraksha",
-            description: "The requested NagarikSuraksha post could not be found.",
+            title: "Post Not Found | Sanhita360",
+            description: "The requested Sanhita360 post could not be found.",
             image: DEFAULT_IMAGE,
             postUrl: `${SITE_URL}/posts`,
             notFound: true,
@@ -178,8 +178,8 @@ export const socialShare = onRequest(
       if (!post) {
         response.status(404).type("html").send(
           renderPage({
-            title: "Post Not Found | NagarikSuraksha",
-            description: "The requested NagarikSuraksha post could not be found.",
+            title: "Post Not Found | Sanhita360",
+            description: "The requested Sanhita360 post could not be found.",
             image: DEFAULT_IMAGE,
             postUrl,
             notFound: true,
@@ -188,18 +188,20 @@ export const socialShare = onRequest(
         return;
       }
 
-      const title = post.seo?.title || post.title || "NagarikSuraksha";
-      const description =
+      const title = (post.seo?.title || post.title || "Sanhita360").replace(/NagarikSuraksha/gi, "Sanhita360");
+      const description = (
         post.seo?.description ||
         post.excerpt ||
-        `Read ${post.title || "this post"} on NagarikSuraksha.`;
+        `Read ${post.title || "this post"} on Sanhita360.`
+      ).replace(/NagarikSuraksha/gi, "Sanhita360");
       const image =
         absoluteUrl(
           post.seo?.ogImageUrl ||
             post.media?.desktop?.url ||
             post.media?.mobile?.url,
         ) || DEFAULT_IMAGE;
-      const canonicalUrl = absoluteUrl(post.seo?.canonicalUrl) || postUrl;
+      const canonicalUrl = absoluteUrl(post.seo?.canonicalUrl)
+        .replace(/^https?:\/\/(?:www\.)?nagariksuraksha\.com(?=\/|$)/i, SITE_URL) || postUrl;
 
       response.status(200).type("html").send(
         renderPage({
@@ -214,7 +216,7 @@ export const socialShare = onRequest(
 
       response.status(500).type("html").send(
         renderPage({
-          title: "NagarikSuraksha",
+          title: "Sanhita360",
           description: "Legal learning, law notes and legal awareness.",
           image: DEFAULT_IMAGE,
           postUrl: SITE_URL,

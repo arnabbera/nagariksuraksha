@@ -1209,7 +1209,7 @@ const StudentDashboard = () => {
             </span>
 
             <h2>
-              What You Get with NagarikSuraksha
+              What You Get with Sanhita360
             </h2>
 
             <p>
@@ -1281,7 +1281,7 @@ const StudentDashboard = () => {
             <p>
               Complete the assessment pathway
               and become eligible for a
-              NagarikSuraksha course certificate.
+              Sanhita360 course certificate.
             </p>
           </div>
         </div>
@@ -1384,7 +1384,7 @@ const StudentDashboard = () => {
           <p>
             Certification enrollment adds
             assessment and credential benefits
-            to eligible NagarikSuraksha courses.
+            to eligible Sanhita360 courses.
           </p>
 
           <div className="ns-certification-benefits">

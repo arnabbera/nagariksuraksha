@@ -12,7 +12,7 @@ const roles = [
     id: "admin",
     name: "Administrator",
     description:
-      "Full access to NagarikSuraksha administration, content, students, courses, SEO, comments and settings.",
+      "Full access to Sanhita360 administration, content, students, courses, SEO, comments and settings.",
     permissions: [
       "dashboard.view",
       "homepage.manage",

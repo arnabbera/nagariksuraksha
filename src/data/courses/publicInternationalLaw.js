@@ -24,7 +24,7 @@ export const publicInternationalLawCourse = createCourseModel({
   createdBy: "system",
   updatedBy: "system",
   seo: {
-    title: "Public International Law Course | NagarikSuraksha",
+    title: "Public International Law Course | Sanhita360",
     description:
       "Study public international law through eight structured units covering sources, States, jurisdiction, treaties, dispute settlement and the United Nations.",
     focusKeyword: "public international law course",

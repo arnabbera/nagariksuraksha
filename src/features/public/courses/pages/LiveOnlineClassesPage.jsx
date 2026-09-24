@@ -21,10 +21,10 @@ import SEO from "../../../../shared/seo/SEO";
 import { getPublishedCourses } from "../../../../services/courseService";
 
 const LIVE_CLASSES_URL =
-  "https://www.nagariksuraksha.com/share/live-online-classes-card-v3";
+  "https://www.sanhita360.com/share/live-online-classes-card-v3";
 
 const SHARE_MESSAGE =
-  "Explore chapter-wise Live Online Law Classes from NagarikSuraksha.";
+  "Explore chapter-wise Live Online Law Classes from Sanhita360.";
 
 const getCourseImage = (course) =>
   course?.thumbnailUrl ||
@@ -71,16 +71,16 @@ export default function LiveOnlineClassesPage() {
   return (
     <>
       <SEO
-        title="Live Online Law Classes | NagarikSuraksha"
-        description="Request chapter-wise live online law classes with approximately eight interactive 45-minute sessions for your enrolled NagarikSuraksha course."
+        title="Live Online Law Classes | Sanhita360"
+        description="Request chapter-wise live online law classes with approximately eight interactive 45-minute sessions for your enrolled Sanhita360 course."
         canonical="/live-online-classes"
-        image="/live-online-classes-whatsapp-wide-v3.jpg"
+        image="/live-online-classes-sanhita360.png"
         keywords={[
           "live online law classes",
           "online legal studies classes",
           "interactive law classes",
           "chapter wise law classes",
-          "NagarikSuraksha live classes",
+          "Sanhita360 live classes",
         ]}
       />
 
@@ -90,7 +90,7 @@ export default function LiveOnlineClassesPage() {
         <section className="ns-live-hero">
           <div className="ns-live-container">
             <div className="ns-live-hero-copy">
-              <span className="ns-live-eyebrow"><FaVideo /> NagarikSuraksha Legal Learning</span>
+              <span className="ns-live-eyebrow"><FaVideo /> Sanhita360 Legal Learning</span>
               <h1>Live Online Classes</h1>
               <p>
                 Get chapter-wise interactive guidance for any enrolled legal-studies course.
@@ -117,8 +117,8 @@ export default function LiveOnlineClassesPage() {
 
             <img
               className="ns-live-hero-image"
-              src="/live-online-classes-og.jpg"
-              alt="Live Online Classes at NagarikSuraksha"
+              src="/live-online-classes-sanhita360.png"
+              alt="Live Online Classes at Sanhita360"
             />
           </div>
         </section>

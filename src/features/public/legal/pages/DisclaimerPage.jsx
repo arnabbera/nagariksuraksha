@@ -13,8 +13,8 @@ export default function DisclaimerPage() {
   return (
     <>
       <SEO
-        title="Terms & Disclaimer | NagarikSuraksha"
-        description="NagarikSuraksha terms covering independent status, paid course access and completion certification."
+        title="Terms & Disclaimer | Sanhita360"
+        description="Sanhita360 terms covering independent status, paid course access and completion certification."
         canonical="/disclaimer"
         robots="index, follow"
       />
@@ -28,7 +28,7 @@ export default function DisclaimerPage() {
             <h1>Terms &amp; Disclaimer</h1>
             <p>
               Important information about individual course enrollment,
-              certification and the status of Nagarik Suraksha.
+              certification and the status of Sanhita360.
             </p>
           </div>
         </section>
@@ -48,7 +48,7 @@ export default function DisclaimerPage() {
               <div>
                 <h2>1. Independent Entity Disclaimer</h2>
                 <p>
-                  Nagarik Suraksha is an independent, private educational
+                  Sanhita360 is an independent, private educational
                   portal. We are <strong>not</strong> affiliated with, endorsed
                   by, accredited by, or connected to any government agency,
                   university, or official educational board.
@@ -82,7 +82,7 @@ export default function DisclaimerPage() {
                   <FaInfoCircle />
                   <p>
                     <strong>Important Notice:</strong> The certificate issued
-                    by Nagarik Suraksha is an appreciation/completion document
+                    by Sanhita360 is an appreciation/completion document
                     for personal learning only. It <strong>does not</strong>{" "}
                     constitute an accredited academic degree, official diploma,
                     professional licence, or government qualification.

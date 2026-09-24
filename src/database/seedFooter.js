@@ -9,7 +9,7 @@ import { db } from "../firebase/firebase";
 
 const footerData = {
   brand: {
-    name: "NagarikSuraksha",
+    name: "Sanhita360",
     tagline: "Legal Learning & Consultancy",
     description:
       "Empowering citizens through legal awareness, professional legal guidance and structured legal education.",
@@ -107,7 +107,7 @@ const footerData = {
   ],
 
   contact: {
-    email: "info@nagariksuraksha.com",
+    email: "beraarnab@gmail.com",
     phone: "",
     whatsapp: "",
     address: "Kolkata, West Bengal, India",
@@ -144,7 +144,7 @@ const footerData = {
   ],
 
   copyrightText:
-    "© {year} NagarikSuraksha. All Rights Reserved.",
+    "© {year} Sanhita360. All Rights Reserved.",
 
   status: "active",
 };

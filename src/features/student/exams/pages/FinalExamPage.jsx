@@ -347,7 +347,7 @@ export default function FinalExamPage({
               </strong>
 
               <span>
-                Your result will be published by NagarikSuraksha Admin.
+                Your result will be published by Sanhita360 Admin.
               </span>
             </div>
           )}

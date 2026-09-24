@@ -938,7 +938,7 @@ export default function CourseBookManagement() {
     <div>
       <PageHeader
         title="Recommended Books"
-        description="Manage recommended reading material for each NagarikSuraksha course."
+        description="Manage recommended reading material for each Sanhita360 course."
         breadcrumbs={[
           "Admin",
           "Learning",

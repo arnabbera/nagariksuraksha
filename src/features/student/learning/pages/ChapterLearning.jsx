@@ -1559,7 +1559,7 @@ export default function ChapterLearning() {
             </h2>
 
             <p>
-              Read the chapter material directly inside NagarikSuraksha.
+              Read the chapter material directly inside Sanhita360.
             </p>
           </div>
         </div>

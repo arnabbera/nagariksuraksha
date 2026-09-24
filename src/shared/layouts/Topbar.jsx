@@ -102,7 +102,7 @@ const Topbar = ({ onOpenSidebar }) => {
           </p>
 
           <h1 className="ns-topbar-title">
-            NagarikSuraksha CMS
+            Sanhita360 CMS
           </h1>
         </div>
       </div>

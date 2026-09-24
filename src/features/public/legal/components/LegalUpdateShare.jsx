@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaFacebookF, FaLink, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
-const SITE_URL = "https://www.nagariksuraksha.com";
+const SITE_URL = "https://www.sanhita360.com";
 
 export default function LegalUpdateShare({ canonicalPath, message, shareVersion }) {
   const [copied, setCopied] = useState(false);

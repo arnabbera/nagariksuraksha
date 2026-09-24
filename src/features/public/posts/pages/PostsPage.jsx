@@ -161,9 +161,9 @@ export default function PostsPage() {
         "@type":
           "CollectionPage",
         name:
-          "NagarikSuraksha Legal Posts",
+          "Sanhita360 Legal Posts",
         description:
-          "Read public legal awareness posts, constitutional updates, law explainers and legal education articles from NagarikSuraksha.",
+          "Read public legal awareness posts, constitutional updates, law explainers and legal education articles from Sanhita360.",
         url:
           `${SEO_CONFIG.siteUrl}/posts`,
         isPartOf: {
@@ -177,15 +177,15 @@ export default function PostsPage() {
   return (
     <>
       <SEO
-        title="Legal Posts & Articles | NagarikSuraksha"
-        description="Read NagarikSuraksha legal posts, law explainers, constitutional awareness articles and public legal education updates."
+        title="Legal Posts & Articles | Sanhita360"
+        description="Read Sanhita360 legal posts, law explainers, constitutional awareness articles and public legal education updates."
         canonical="/posts"
         keywords={[
           "legal posts",
           "law articles India",
           "legal awareness",
           "Indian Constitution articles",
-          "NagarikSuraksha posts",
+          "Sanhita360 posts",
         ]}
         robots="index, follow, max-image-preview:large"
         structuredData={
@@ -211,7 +211,7 @@ export default function PostsPage() {
               Explore legal awareness posts,
               constitutional topics, practical
               law explainers and important legal
-              updates from NagarikSuraksha.
+              updates from Sanhita360.
             </p>
           </div>
         </section>
@@ -286,7 +286,7 @@ export default function PostsPage() {
                                 src={image}
                                 alt={
                                   post.title ||
-                                  "NagarikSuraksha legal post"
+                                  "Sanhita360 legal post"
                                 }
                                 loading="lazy"
                               />

@@ -40,7 +40,7 @@ export const createHomepageModel = ({
     enabled: announcement.enabled ?? true,
     text:
       announcement.text ||
-      "Welcome to NagarikSuraksha - Legal Learning & Consultancy Platform",
+      "Welcome to Sanhita360 - Legal Learning & Consultancy Platform",
     buttonText: announcement.buttonText || "Contact Us",
     buttonLink: announcement.buttonLink || "/contact",
     backgroundColor:
@@ -58,7 +58,7 @@ export const createHomepageModel = ({
       "Legal Learning | Legal Awareness | Legal Consultancy",
     description:
       hero.description ||
-      "Learn law, understand your rights and access professional legal guidance through NagarikSuraksha.",
+      "Learn law, understand your rights and access professional legal guidance through Sanhita360.",
 
     primaryButton: {
       text: hero.primaryButton?.text || "Start Learning",
@@ -109,7 +109,7 @@ export const createHomepageModel = ({
   seo: {
     title:
       seo.title ||
-      "NagarikSuraksha | Legal Learning & Consultancy",
+      "Sanhita360 | Legal Learning & Consultancy",
 
     description:
       seo.description ||
@@ -128,11 +128,11 @@ export const createHomepageModel = ({
 
     canonicalUrl:
       seo.canonicalUrl ||
-      "https://www.nagariksuraksha.com",
+      "https://www.sanhita360.com",
 
     ogTitle:
       seo.ogTitle ||
-      "NagarikSuraksha | Legal Learning & Consultancy",
+      "Sanhita360 | Legal Learning & Consultancy",
 
     ogDescription:
       seo.ogDescription ||

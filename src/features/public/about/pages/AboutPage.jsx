@@ -71,10 +71,10 @@ export default function AboutPage() {
     <>
       <SEO
         title="About Us"
-        description="Learn about NagarikSuraksha, a platform for legal awareness, structured legal learning and practical guidance."
+        description="Learn about Sanhita360, a platform for legal awareness, structured legal learning and practical guidance."
         canonical="/about"
         keywords={[
-          "about NagarikSuraksha",
+          "about Sanhita360",
           "legal learning platform",
           "legal awareness India",
         ]}
@@ -85,10 +85,10 @@ export default function AboutPage() {
       <main className="ns-about-page">
         <section className="ns-about-hero">
           <div className="ns-about-wrap">
-            <p className="ns-about-eyebrow">About NagarikSuraksha</p>
+            <p className="ns-about-eyebrow">About Sanhita360</p>
             <h1>Making legal knowledge clear, practical and accessible</h1>
             <p className="ns-about-intro">
-              NagarikSuraksha brings legal awareness, legal learning and
+              Sanhita360 brings legal awareness, legal learning and
               practical guidance together on one citizen-focused platform.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
             <div className="ns-about-copy">
               <p>
                 Legal language and procedures can often feel difficult to
-                understand. NagarikSuraksha is being developed to make reliable
+                understand. Sanhita360 is being developed to make reliable
                 legal information easier to discover, learn and apply.
               </p>
               <p>
@@ -167,12 +167,12 @@ export default function AboutPage() {
         <section className="ns-about-cta">
           <div className="ns-about-wrap">
             <div>
-              <p className="ns-about-eyebrow">Explore NagarikSuraksha</p>
+              <p className="ns-about-eyebrow">Explore Sanhita360</p>
               <h2>Learn the law. Understand your options.</h2>
             </div>
             <div className="ns-about-actions">
               <Link to="/llb-courses">Explore Courses</Link>
-              <a href="https://wa.me/919830015487?text=Hello%20NagarikSuraksha%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation." className="secondary" target="_blank" rel="noopener noreferrer">Request a Free Consultation</a>
+              <a href="https://wa.me/919830015487?text=Hello%20Sanhita360%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation." className="secondary" target="_blank" rel="noopener noreferrer">Request a Free Consultation</a>
             </div>
           </div>
         </section>

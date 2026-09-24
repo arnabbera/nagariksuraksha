@@ -10,7 +10,7 @@ import { seedNotifications } from "./seedNotifications";
 
 export async function initializeDatabase() {
   console.log("====================================");
-  console.log("NagarikSuraksha Database Installer");
+  console.log("Sanhita360 Database Installer");
   console.log("====================================");
 
   await seedSettings();

@@ -21,12 +21,12 @@ export async function seedSettings() {
   }
 
   const settingsData = {
-    siteName: "NagarikSuraksha",
+    siteName: "Sanhita360",
     tagline: "Legal Learning & Consultancy",
     adminEmail: "beraarnab@gmail.com",
 
     contact: {
-      email: "info@nagariksuraksha.com",
+      email: "beraarnab@gmail.com",
       phone: "",
       whatsapp: "",
       address: "Kolkata, West Bengal, India",
@@ -54,7 +54,7 @@ export async function seedSettings() {
     },
 
     seo: {
-      defaultTitle: "NagarikSuraksha",
+      defaultTitle: "Sanhita360",
       defaultDescription:
         "Legal learning, legal awareness and legal consultancy services.",
       defaultKeywords: [
@@ -64,7 +64,7 @@ export async function seedSettings() {
         "consumer law",
         "legal consultancy",
       ],
-      canonicalBaseUrl: "https://www.nagariksuraksha.com",
+      canonicalBaseUrl: "https://www.sanhita360.com",
       defaultOgImageUrl: "",
       robotsIndex: true,
       robotsFollow: true,

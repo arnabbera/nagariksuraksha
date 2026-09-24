@@ -91,7 +91,7 @@ export const payForCourseWithRazorpay = async ({
       amount: order.amount,
       currency: order.currency,
       order_id: order.orderId,
-      name: "Nagarik Suraksha",
+      name: "Sanhita360",
       description:
         purchaseType === "live-classes"
           ? `${courseTitle || "Course"} — 8 live classes`

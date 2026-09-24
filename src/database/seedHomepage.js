@@ -24,7 +24,7 @@ export async function seedHomepage() {
   const homepage = {
     announcement: {
       enabled: true,
-      text: "🎉 Welcome to NagarikSuraksha - Legal Learning & Consultancy Platform",
+      text: "🎉 Welcome to Sanhita360 - Legal Learning & Consultancy Platform",
       buttonText: "Contact Us",
       buttonLink: "/contact",
       backgroundColor: "#0F172A",
@@ -41,7 +41,7 @@ export async function seedHomepage() {
         "Legal Learning | Legal Awareness | Legal Consultancy",
 
       description:
-        "NagarikSuraksha helps students, citizens and professionals with legal education, consultancy and practical guidance.",
+        "Sanhita360 helps students, citizens and professionals with legal education, consultancy and practical guidance.",
 
       primaryButton: {
         text: "Start Learning",
@@ -88,7 +88,7 @@ export async function seedHomepage() {
 
     seo: {
       title:
-        "NagarikSuraksha | Legal Learning & Consultancy",
+        "Sanhita360 | Legal Learning & Consultancy",
 
       description:
         "Legal Learning, Legal Consultancy, Consumer Law, Property Registration, Cyber Law, Constitutional Law and Legal Awareness Platform.",
@@ -103,7 +103,7 @@ export async function seedHomepage() {
       ],
 
       canonical:
-        "https://www.nagariksuraksha.com",
+        "https://www.sanhita360.com",
 
       schema: "WebSite",
 
