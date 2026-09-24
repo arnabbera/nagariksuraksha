@@ -30,7 +30,7 @@ const updates = [
     description:
       "Landmark Supreme Court judgments have expanded consumer protection across medical treatment, housing, commercial purchases and telecommunications.",
     link: "/legal-updates/important-judgement-on-consumer-rights",
-    image: "/images/legal-updates/consumer-rights-landmark-judgments-sanhita360.png",
+    image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const updates = [
     description:
       "Understand the urgent legal steps available when a seller conceals an earlier bank mortgage or lien over the property you purchased.",
     link: "/legal-updates/bought-mortgaged-property-by-fraud",
-    image: "/images/legal-updates/mortgaged-property-fraud-sanhita360.png",
+    image: "/images/legal-updates/mortgaged-property-fraud.jpg",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const updates = [
     description:
       "Understand the options available when money remains unrecovered after reporting an online financial fraud to the cybercrime authorities.",
     link: "/legal-updates/next-steps-unrecovered-online-fraud-funds",
-    image: "/images/legal-updates/unrecovered-online-fraud-funds-sanhita360.png",
+    image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
   },
 ];
 
