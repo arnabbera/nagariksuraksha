@@ -102,10 +102,10 @@ const getFirebaseKeys = async () => {
   return keys;
 };
 
-const requireStudent = async (request) => {
+const verifyFirebaseUser = async (request) => {
   const authorization = request.headers.get("authorization") || "";
   const token = authorization.match(/^Bearer\s+(.+)$/i)?.[1];
-  if (!token) fail("Please sign in before making a payment.", 401);
+  if (!token) fail("Please sign in to access this feature.", 401);
   const parts = token.split(".");
   if (parts.length !== 3) fail("Your login session is invalid. Please sign in again.", 401);
 
@@ -140,7 +140,17 @@ const requireStudent = async (request) => {
     new TextEncoder().encode(`${parts[0]}.${parts[1]}`),
   );
   if (!verified) fail("Your login session is invalid. Please sign in again.", 401);
-  return payload.sub;
+  return payload;
+};
+
+const requireStudent = async (request) => (await verifyFirebaseUser(request)).sub;
+
+const requireAdmin = async (request) => {
+  const user = await verifyFirebaseUser(request);
+  if (user.email?.toLowerCase() !== "beraarnab@gmail.com" || user.email_verified !== true) {
+    fail("Administrator access required.", 403);
+  }
+  return user.sub;
 };
 
 const getFirebaseServiceAccountJson = (env) =>
@@ -707,6 +717,133 @@ const readBody = async (request) => {
   }
 };
 
+const FUNNEL_COOKIE = "__Host-sanhita_funnel_id";
+const FUNNEL_METRICS = {
+  course_visit: "visits",
+  enrollment_click: "enrollmentClicks",
+  checkout_open: "checkoutOpens",
+  payment: "payments",
+};
+const funnelRoot = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents`;
+const validCourseId = (value) => typeof value === "string" && /^[a-zA-Z0-9_-]{1,160}$/.test(value);
+const hashValue = async (value) => {
+  const bytes = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return [...new Uint8Array(bytes)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+};
+
+// The marker and increment share one atomic commit. A retry, another tab or a
+// repeated payment verification cannot increment the same event twice.
+const recordFunnelEvent = async (env, { courseId, event, dedupeKey, amount = 0 }) => {
+  const metric = FUNNEL_METRICS[event];
+  if (!validCourseId(courseId) || !metric) fail("Invalid funnel event.");
+  const date = new Date().toISOString().slice(0, 10);
+  const marker = await hashValue(`${date}:${courseId}:${event}:${dedupeKey}`);
+  const token = await getGoogleAccessToken(env);
+  const daily = `${funnelRoot}/courseFunnelDaily/${date}`;
+  const transforms = [
+    { fieldPath: metric, increment: { integerValue: "1" } },
+    { fieldPath: `courses.\`${courseId}\`.${metric}`, increment: { integerValue: "1" } },
+  ];
+  if (event === "payment" && Number.isSafeInteger(amount) && amount > 0) {
+    transforms.push(
+      { fieldPath: "revenuePaise", increment: { integerValue: String(amount) } },
+      { fieldPath: `courses.\`${courseId}\`.revenuePaise`, increment: { integerValue: String(amount) } },
+    );
+  }
+  const response = await fetch(`${firestoreDocumentsUrl}/${funnelRoot}:commit`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ writes: [
+      {
+        update: {
+          name: `${funnelRoot}/courseFunnelMarkers/${marker}`,
+          fields: { date: { stringValue: date } },
+        },
+        currentDocument: { exists: false },
+      },
+      {
+        update: { name: daily, fields: { date: { stringValue: date } } },
+        updateMask: { fieldPaths: ["date"] },
+        updateTransforms: transforms,
+      },
+    ] }),
+  });
+  if (response.ok) return;
+  const result = await response.json().catch(() => ({}));
+  if (["ALREADY_EXISTS", "FAILED_PRECONDITION"].includes(result.error?.status)) return;
+  console.error("Unable to store funnel event", response.status, result.error?.status);
+  fail("Unable to record funnel event.", 503);
+};
+
+const handleFunnelEvent = async (request, env, url) => {
+  const body = await readBody(request);
+  if (request.headers.get("origin") !== url.origin) fail("Invalid event origin.", 403);
+  const { courseId, event } = body;
+  if (!validCourseId(courseId) || !["course_visit", "enrollment_click", "checkout_open"].includes(event)) {
+    fail("Invalid funnel event.");
+  }
+  if (event === "checkout_open") {
+    const studentId = await requireStudent(request);
+    const orderId = String(body.orderId || "").trim();
+    if (!/^order_[a-zA-Z0-9]{8,80}$/.test(orderId)) fail("Invalid checkout order.");
+    const { enrollment } = await getEnrollment(env, studentId, courseId);
+    const fields = enrollment.fields || {};
+    const pending = ["certification", "liveClasses"].some((root) =>
+      getFirestoreValue(fields, `${root}.payment.orderId`)?.stringValue === orderId,
+    );
+    if (!pending) fail("Checkout order does not belong to this enrollment.", 403);
+    await recordFunnelEvent(env, { courseId, event, dedupeKey: orderId });
+    return { ok: true };
+  }
+  const existing = request.headers.get("cookie")
+    ?.match(/(?:^|;\s*)__Host-sanhita_funnel_id=([a-f0-9]{64})(?:;|$)/)?.[1];
+  const visitorId = existing || [...crypto.getRandomValues(new Uint8Array(32))]
+    .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  await recordFunnelEvent(env, { courseId, event, dedupeKey: visitorId });
+  return json({ ok: true }, {
+    headers: {
+      ...(!existing ? { "set-cookie": `${FUNNEL_COOKIE}=${visitorId}; Path=/; Max-Age=2592000; Secure; HttpOnly; SameSite=Lax` } : {}),
+    },
+  });
+};
+
+const getFunnelReport = async (request, env) => {
+  if (request.method !== "GET") fail("Method not allowed.", 405);
+  await requireAdmin(request);
+  const start = new Date(Date.now() - 29 * 86400_000).toISOString().slice(0, 10);
+  const token = await getGoogleAccessToken(env);
+  const response = await fetch(`${firestoreDocumentsUrl}/${funnelRoot}:runQuery`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ structuredQuery: {
+      from: [{ collectionId: "courseFunnelDaily" }],
+      where: { fieldFilter: {
+        field: { fieldPath: "date" }, op: "GREATER_THAN_OR_EQUAL", value: { stringValue: start },
+      } },
+      orderBy: [{ field: { fieldPath: "date" }, direction: "ASCENDING" }],
+      limit: 31,
+    } }),
+  });
+  if (!response.ok) fail("Unable to load funnel analytics.", 503);
+  const rows = await response.json();
+  const number = (field) => Number(field?.integerValue || 0);
+  const metrics = ["visits", "enrollmentClicks", "checkoutOpens", "payments", "revenuePaise"];
+  const days = rows.filter((row) => row.document).map(({ document }) => {
+    const fields = document.fields || {};
+    const courses = Object.fromEntries(Object.entries(fields.courses?.mapValue?.fields || {}).map(
+      ([id, value]) => [id, Object.fromEntries(metrics.map(
+        (metric) => [metric, number(value.mapValue?.fields?.[metric])],
+      ))],
+    ));
+    return {
+      date: fields.date?.stringValue,
+      ...Object.fromEntries(metrics.map((metric) => [metric, number(fields[metric])])),
+      courses,
+    };
+  });
+  return { days, since: start, through: new Date().toISOString().slice(0, 10) };
+};
+
 const createOrder = async (request, env) => {
   const studentId = await requireStudent(request);
   const { courseId: rawCourseId, purchaseType: rawPurchaseType } = await readBody(request);
@@ -880,6 +1017,14 @@ const verifyPayment = async (request, env) => {
     updatedAt: { timestampValue: now },
     updatedBy: { stringValue: "razorpay-verification" },
   } });
+  try {
+    await recordFunnelEvent(env, {
+      courseId, event: "payment", dedupeKey: orderId, amount: expectedAmount,
+    });
+  } catch (error) {
+    // The completed payment and course access must not depend on analytics.
+    console.error("Verified payment analytics failed", error.message);
+  }
   return { enrollmentId: `${studentId}_${courseId}`, status: "paid" };
 };
 
@@ -900,6 +1045,8 @@ const handleApi = async (request, env, url) => {
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
   if (url.pathname === "/api/razorpay/verify-payment") return verifyPayment(request, env);
+  if (url.pathname === "/api/funnel/event") return handleFunnelEvent(request, env, url);
+  if (url.pathname === "/api/admin/funnel") return getFunnelReport(request, env);
   if (url.pathname === "/api/live-classes") return getLiveSessions(request, env, url);
   fail("API endpoint not found.", 404);
 };
@@ -912,7 +1059,8 @@ export default {
         if (["/api/legal-remedies/likes", "/api/legal-updates/likes", "/api/law-courses/likes"].includes(url.pathname)) {
           return await handleLegalLikes(request, env, url);
         }
-        return json(await handleApi(request, env, url));
+        const result = await handleApi(request, env, url);
+        return result instanceof Response ? result : json(result);
       } catch (error) {
         console.error("API request failed", url.pathname, error.message);
         return json(

@@ -1,4 +1,5 @@
 import { auth } from "../firebase/firebase";
+import { trackFunnelEvent } from "./funnelAnalyticsService";
 
 const CHECKOUT_SCRIPT = "https://checkout.razorpay.com/v1/checkout.js";
 
@@ -131,6 +132,7 @@ export const payForCourseWithRazorpay = async ({
     });
 
     checkout.open();
+    void trackFunnelEvent("checkout_open", courseId, { orderId: order.orderId });
   });
 };
 

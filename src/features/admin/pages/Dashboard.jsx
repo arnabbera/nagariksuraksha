@@ -1,9 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { FaBook, FaBookOpen, FaCertificate, FaFileAlt, FaImage, FaVideo } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import LoadingSpinner from "../../../shared/components/LoadingSpinner";
 import { getDashboardStatistics, refreshPublicHomepageStatistics } from "../../../services/dashboardService";
+import { getFunnelReport } from "../../../services/funnelAnalyticsService";
+
+const funnelMetrics = ["visits", "enrollmentClicks", "checkoutOpens", "payments", "revenuePaise"];
+const sumFunnel = (days) => Object.fromEntries(funnelMetrics.map(
+  (key) => [key, days.reduce((total, day) => total + Number(day[key] || 0), 0)],
+));
 
 const adminActions = [
   { title: "Posts & Legal Articles", description: "Create and publish articles with separate desktop 16:9 and mobile 9:16 images.", path: "/admin/posts", icon: FaImage, action: "Manage articles" },
@@ -15,6 +21,46 @@ const adminActions = [
 export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState({ courses: 0, chapters: 0, certifications: 0, articles: 0, videos: 0 });
+  const [funnel, setFunnel] = useState(null);
+  const [funnelError, setFunnelError] = useState("");
+  const [funnelLoading, setFunnelLoading] = useState(true);
+
+  const loadFunnel = useCallback(async () => {
+    setFunnelLoading(true);
+    setFunnelError("");
+    try {
+      setFunnel(await getFunnelReport());
+    } catch (error) {
+      setFunnelError(error.message || "Unable to load funnel analytics.");
+    } finally {
+      setFunnelLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(loadFunnel, 0);
+    return () => window.clearTimeout(timer);
+  }, [loadFunnel]);
+
+  const funnelSummary = useMemo(() => {
+    const days = funnel?.days || [];
+    const recentDate = funnel?.through
+      ? new Date(Date.parse(`${funnel.through}T00:00:00Z`) - 6 * 86400_000).toISOString().slice(0, 10)
+      : "";
+    const courses = new Map();
+    for (const day of days) {
+      for (const [id, values] of Object.entries(day.courses || {})) {
+        const current = courses.get(id) || sumFunnel([]);
+        funnelMetrics.forEach((key) => { current[key] += Number(values[key] || 0); });
+        courses.set(id, current);
+      }
+    }
+    return {
+      seven: sumFunnel(days.filter((day) => day.date >= recentDate)),
+      thirty: sumFunnel(days),
+      courses: [...courses].sort((a, b) => b[1].visits - a[1].visits),
+    };
+  }, [funnel]);
 
   const loadDashboard = useCallback(async () => {
     try {
@@ -62,6 +108,45 @@ export default function Dashboard() {
         <h1>Legal Learning Administration</h1>
         <p>Manage the learning content visible across Sanhita360 from one familiar, responsive workspace.</p>
         <Link to="/" target="_blank" rel="noopener noreferrer">View Public Homepage</Link>
+      </section>
+
+      <section className="ns-funnel-section" aria-labelledby="funnel-heading">
+        <div className="ns-funnel-heading">
+          <div>
+            <span>Course enrollment</span>
+            <h2 id="funnel-heading">Enrollment Funnel</h2>
+            <p>Daily unique course visitors and enrollment clicks, checkout openings, and verified payments. Counts begin when this tracking is deployed.</p>
+          </div>
+          <button type="button" onClick={loadFunnel} disabled={funnelLoading}>Refresh</button>
+        </div>
+        {funnelLoading && !funnel && <p role="status">Loading funnel analytics…</p>}
+        {funnelError && <p role="alert">{funnelError}</p>}
+        {funnel && <>
+          <div className="ns-funnel-periods">
+            {[["Last 7 days", funnelSummary.seven], ["Last 30 days", funnelSummary.thirty]].map(([label, values]) => (
+              <div className="ns-funnel-period" key={label}>
+                <h3>{label}</h3>
+                <div className="ns-funnel-metrics">
+                  <span><strong>{values.visits}</strong> Course visits</span>
+                  <span><strong>{values.enrollmentClicks}</strong> Enrollment clicks</span>
+                  <span><strong>{values.checkoutOpens}</strong> Checkouts opened</span>
+                  <span><strong>{values.payments}</strong> Verified payments</span>
+                </div>
+                <p>Collected: ₹{(values.revenuePaise / 100).toLocaleString("en-IN")}</p>
+              </div>
+            ))}
+          </div>
+          <h3>Courses · last 30 days</h3>
+          {funnelSummary.courses.length === 0 ? <p>No course activity has been recorded yet.</p> : (
+            <div className="ns-funnel-table-wrap"><table className="ns-funnel-table">
+              <thead><tr><th>Course ID</th><th>Visits</th><th>Clicks</th><th>Checkouts</th><th>Payments</th><th>Collected</th></tr></thead>
+              <tbody>{funnelSummary.courses.map(([id, values]) => <tr key={id}>
+                <td>{id.replaceAll("-", " ")}</td><td>{values.visits}</td><td>{values.enrollmentClicks}</td>
+                <td>{values.checkoutOpens}</td><td>{values.payments}</td><td>₹{(values.revenuePaise / 100).toLocaleString("en-IN")}</td>
+              </tr>)}</tbody>
+            </table></div>
+          )}
+        </>}
       </section>
 
       <section className="ns-admin-stat-grid" aria-label="Legal Learning statistics">
@@ -112,6 +197,24 @@ export default function Dashboard() {
         .ns-admin-stat-grid small { overflow: hidden; color: #64748b; font-size: 10px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
         .ns-admin-stat-grid strong { margin-top: 3px; color: #0f172a; font-family: Georgia,serif; font-size: 28px; }
         .ns-admin-learning-section { padding: 0 0 20px; }
+        .ns-funnel-section { margin: 24px 0 35px; padding: 28px; border: 1px solid #dbeafe; border-radius: 18px; background: #f8fbff; }
+        .ns-funnel-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+        .ns-funnel-heading > div > span { color: #2563eb; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+        .ns-funnel-heading h2 { margin: 6px 0; font-family: Georgia,serif; font-size: clamp(26px,3vw,36px); }
+        .ns-funnel-heading p { margin: 0 0 20px; color: #475569; line-height: 1.6; }
+        .ns-funnel-heading button { padding: 10px 16px; border: 0; border-radius: 9px; background: #1d4ed8; color: #fff; cursor: pointer; }
+        .ns-funnel-heading button:disabled { opacity: .55; cursor: wait; }
+        .ns-funnel-periods { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+        .ns-funnel-period { padding: 20px; border: 1px solid #dbeafe; border-radius: 14px; background: #fff; }
+        .ns-funnel-period h3 { margin: 0 0 15px; }
+        .ns-funnel-period p { margin: 15px 0 0; color: #1e3a8a; font-weight: 700; }
+        .ns-funnel-metrics { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+        .ns-funnel-metrics span { display: flex; flex-direction: column; color: #475569; font-size: 12px; }
+        .ns-funnel-metrics strong { color: #0f172a; font-size: 26px; }
+        .ns-funnel-table-wrap { overflow-x: auto; }
+        .ns-funnel-table { width: 100%; border-collapse: collapse; background: #fff; }
+        .ns-funnel-table th, .ns-funnel-table td { padding: 12px; border-bottom: 1px solid #dbeafe; text-align: left; white-space: nowrap; }
+        .ns-funnel-table th { color: #334155; font-size: 12px; }
         .ns-admin-section-heading { max-width: 760px; margin-bottom: 28px; }
         .ns-admin-section-heading > span { color: #2563eb; }
         .ns-admin-section-heading h2 { margin: 8px 0; color: #0f172a; font-family: Georgia,serif; font-size: clamp(30px,4vw,42px); }
@@ -123,7 +226,7 @@ export default function Dashboard() {
         .ns-admin-action-grid p { margin: 0 0 20px; color: #64748b; font-size: 13px; line-height: 1.7; }
         .ns-admin-action-grid a { color: #2563eb; text-decoration: none; font-size: 11px; font-weight: 800; }
         @media (max-width: 1000px) { .ns-admin-stat-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
-        @media (max-width: 700px) { .ns-admin-hero { padding: 38px 24px; border-radius: 18px; } .ns-admin-hero p { font-size: 14px; } .ns-admin-stat-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-bottom: 48px; } .ns-admin-action-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 700px) { .ns-admin-hero { padding: 38px 24px; border-radius: 18px; } .ns-admin-hero p { font-size: 14px; } .ns-admin-stat-grid { grid-template-columns: repeat(2,minmax(0,1fr)); margin-bottom: 48px; } .ns-admin-action-grid, .ns-funnel-periods { grid-template-columns: 1fr; } .ns-funnel-heading { flex-direction: column; } }
         @media (max-width: 420px) { .ns-admin-stat-grid { grid-template-columns: 1fr; } }
       `}</style>
     </div>
