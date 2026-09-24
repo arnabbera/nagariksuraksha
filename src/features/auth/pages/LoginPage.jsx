@@ -3,7 +3,7 @@ import {
   FaGoogle,
   FaInfoCircle,
 } from "react-icons/fa";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../../../hooks/useAuth";
 
@@ -89,50 +89,66 @@ export default function LoginPage() {
           automatically be directed to the correct dashboard.
         </p>
 
-        <aside
-          className="student-login-disclaimers"
-          aria-label="Terms and disclaimer"
-        >
-          <div className="student-login-disclaimer-title">
-            <FaInfoCircle />
-            <h2>Terms &amp; Disclaimer</h2>
-          </div>
+        <div className="student-login-benefits">
+          <h2>What you get with a course</h2>
+          <ul>
+            <li>Chapter-wise learning materials and downloadable PDFs</li>
+            <li>Practice mock tests and progress in your student portal</li>
+            <li>A digital Certificate of Completion</li>
+          </ul>
+        </div>
 
-          <div className="student-login-disclaimer-section">
-            <h3>1. Independent Entity Disclaimer</h3>
-            <p>
-              Sanhita360 is an independent, private educational portal.
-              We are <strong>not</strong> affiliated with, endorsed by,
-              accredited by, or connected to any government agency,
-              university, or official educational board.
-            </p>
-          </div>
+        <aside className="student-login-disclaimers" aria-label="Terms and disclaimer">
+          <details>
+            <summary className="student-login-disclaimer-title">
+              <FaInfoCircle aria-hidden="true" />
+              <span>
+                <strong>Terms &amp; Disclaimer</strong>
+                <small>Independent portal; certificate is for personal learning, not an accredited qualification. Read before enrolling.</small>
+              </span>
+              <span className="student-login-disclaimer-toggle" aria-hidden="true">⌄</span>
+            </summary>
 
-          <div className="student-login-disclaimer-section">
-            <h3>2. Individual Course Enrollment</h3>
-            <p>
-              Each course requires a one-time <strong>₹99 introductory fee for the first 100 checkout reservations, then ₹299</strong>.
-              After successful payment, that course and its learning materials
-              become available under Enrolled Courses in the student portal.
-            </p>
-          </div>
+            <div className="student-login-disclaimer-section">
+              <h3>1. Independent Entity Disclaimer</h3>
+              <p>
+                Sanhita360 is an independent, private educational portal.
+                We are <strong>not</strong> affiliated with, endorsed by,
+                accredited by, or connected to any government agency,
+                university, or official educational board.
+              </p>
+            </div>
 
-          <div className="student-login-disclaimer-section">
-            <h3>3. Certification Included</h3>
-            <p>
-              The <strong>individual course fee</strong> covers course access,
-              access to downloadable course PDFs, practice mock tests, and a
-              digital Certificate of Completion.
-            </p>
+            <div className="student-login-disclaimer-section">
+              <h3>2. Individual Course Enrollment</h3>
+              <p>
+                Each course requires a one-time <strong>₹99 introductory fee for the first 100 checkout reservations, then ₹299</strong>.
+                After successful payment, that course and its learning materials
+                become available under Enrolled Courses in the student portal.
+              </p>
+            </div>
 
-            <p className="student-login-important-notice">
-              <strong>Important Notice:</strong> The certificate issued by
-              Sanhita360 is an appreciation/completion document for
-              personal learning only. It <strong>does not</strong> constitute
-              an accredited academic degree, official diploma, professional
-              licence, or government qualification.
+            <div className="student-login-disclaimer-section">
+              <h3>3. Certification Included</h3>
+              <p>
+                The <strong>individual course fee</strong> covers course access,
+                access to downloadable course PDFs, practice mock tests, and a
+                digital Certificate of Completion.
+              </p>
+
+              <p className="student-login-important-notice">
+                <strong>Important Notice:</strong> The certificate issued by
+                Sanhita360 is an appreciation/completion document for
+                personal learning only. It <strong>does not</strong> constitute
+                an accredited academic degree, official diploma, professional
+                licence, or government qualification.
+              </p>
+            </div>
+            <p className="student-login-legal-links">
+              <Link to="/terms">Full Terms</Link>
+              <Link to="/disclaimer">Full Disclaimer</Link>
             </p>
-          </div>
+          </details>
         </aside>
       </section>
 
@@ -258,17 +274,71 @@ export default function LoginPage() {
           background: #eff6ff;
         }
 
+        .student-login-benefits {
+          margin-top: 26px;
+          font-family: Arial, sans-serif;
+        }
+
+        .student-login-benefits h2 {
+          margin: 0 0 10px;
+          color: #0f172a;
+          font-size: 17px;
+        }
+
+        .student-login-benefits ul {
+          margin: 0;
+          padding-left: 21px;
+          color: #475569;
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
         .student-login-disclaimer-title {
           display: flex;
           align-items: center;
           gap: 9px;
           color: #1d4ed8;
+          cursor: pointer;
+          list-style: none;
         }
 
-        .student-login-disclaimer-title h2 {
-          margin: 0;
+        .student-login-disclaimer-title::-webkit-details-marker {
+          display: none;
+        }
+
+        .student-login-disclaimer-title:focus-visible {
+          outline: 3px solid #2563eb;
+          outline-offset: 5px;
+        }
+
+        .student-login-disclaimer-title strong {
+          display: block;
           font-family: Arial, sans-serif;
           font-size: 16px;
+        }
+
+        .student-login-disclaimer-title small {
+          display: block;
+          margin-top: 5px;
+          color: #475569;
+          font-family: Arial, sans-serif;
+          font-size: 12px;
+          line-height: 1.5;
+        }
+
+        .student-login-disclaimer-title svg {
+          flex-shrink: 0;
+        }
+
+        .student-login-disclaimer-toggle {
+          margin-left: auto;
+          font-size: 25px;
+          line-height: 1;
+          transition: transform .2s ease;
+        }
+
+        .student-login-disclaimers details[open] .student-login-disclaimer-toggle {
+          transform: rotate(180deg);
         }
 
         .student-login-disclaimer-section {
@@ -299,6 +369,20 @@ export default function LoginPage() {
           border-radius: 8px;
           background: #fffbeb;
           color: #78350f;
+        }
+
+        .student-login-legal-links {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 18px;
+          margin: 18px 0 0;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+        }
+
+        .student-login-legal-links a {
+          color: #1d4ed8;
+          font-weight: 700;
         }
 
         @media (max-width: 640px) {
