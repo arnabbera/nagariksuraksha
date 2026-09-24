@@ -78,7 +78,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
         <section className="ns-fraud-hero">
           <div className="ns-fraud-wrap ns-fraud-hero-grid">
             <div>
-              <Link to="/#legal-updates" className="ns-fraud-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-fraud-back"><FaArrowLeft /> Legal Updates</Link>
               <span className="ns-fraud-eyebrow"><FaShieldAlt /> Citizen Cyber-Fraud Guidance</span>
               <h1>Next Steps for Unrecovered Online Fraud Funds</h1>
               <p>If money has not returned after a cybercrime complaint, the matter is not necessarily over. A nagarik can follow the frozen funds, seek proper criminal investigation, pursue the bank's grievance route and consider regulatory or consumer remedies where the facts support them.</p>

@@ -57,7 +57,7 @@ const updates = [
 const LatestUpdates = () => {
   return (
     <section
-      id="legal-updates"
+      id="legal-remedies"
       style={{
         padding: "90px 20px",
         scrollMarginTop: "88px",

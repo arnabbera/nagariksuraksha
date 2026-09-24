@@ -98,7 +98,7 @@ export default function ConsumerRightsJudgmentsPage() {
           <div className="ns-consumer-wrap">
             <div className="ns-consumer-hero-grid">
               <div>
-                <Link to="/#legal-updates" className="ns-consumer-back"><FaArrowLeft /> Legal Updates</Link>
+                <Link to="/#legal-remedies" className="ns-consumer-back"><FaArrowLeft /> Legal Updates</Link>
                 <span className="ns-consumer-eyebrow"><FaGavel /> Landmark Supreme Court Decisions</span>
                 <h1>Important Judgments on Consumer Rights</h1>
                 <p>
