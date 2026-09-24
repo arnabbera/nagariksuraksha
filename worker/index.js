@@ -935,14 +935,21 @@ const handleFunnelEvent = async (request, env, url) => {
     fail("Invalid funnel event.");
   }
   if (event === "checkout_open") {
-    const studentId = await requireStudent(request);
     const orderId = String(body.orderId || "").trim();
     if (!/^order_[a-zA-Z0-9]{8,80}$/.test(orderId)) fail("Invalid checkout order.");
-    const { enrollment } = await getEnrollment(env, studentId, courseId);
-    const fields = enrollment.fields || {};
-    const pending = ["certification", "liveClasses"].some((root) =>
-      getFirestoreValue(fields, `${root}.payment.orderId`)?.stringValue === orderId,
-    );
+    let pending;
+    if (body.purchaseCode) {
+      const { document } = await guestDocument(env, String(body.purchaseCode));
+      pending = document?.fields?.orderId?.stringValue === orderId &&
+        document?.fields?.courseId?.stringValue === courseId;
+    } else {
+      const studentId = await requireStudent(request);
+      const { enrollment } = await getEnrollment(env, studentId, courseId);
+      const fields = enrollment.fields || {};
+      pending = ["certification", "liveClasses"].some((root) =>
+        getFirestoreValue(fields, `${root}.payment.orderId`)?.stringValue === orderId,
+      );
+    }
     if (!pending) fail("Checkout order does not belong to this enrollment.", 403);
     await recordFunnelEvent(env, { courseId, event, dedupeKey: orderId });
     return { ok: true };
@@ -1232,6 +1239,210 @@ const verifyPayment = async (request, env) => {
   return { enrollmentId: `${studentId}_${courseId}`, status: "paid" };
 };
 
+// Guest receipts are bearer secrets. Only a verified Razorpay payment can
+// turn one into course access; an email supplied at checkout grants no access.
+const guestRoot = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/guestPurchases`;
+const guestCodePattern = /^[a-f0-9]{64}$/;
+const guestDocument = async (env, code) => {
+  if (!guestCodePattern.test(code)) fail("Invalid purchase code.", 400);
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(code));
+  const id = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  const token = await getGoogleAccessToken(env);
+  const name = `${guestRoot}/${id}`;
+  const response = await fetch(`${firestoreDocumentsUrl}/${name}`, {
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (response.status === 404) return { name, token, document: null };
+  if (!response.ok) fail("Unable to load the purchase. Please try again.", 503);
+  return { name, token, document: await response.json() };
+};
+
+const guestCheckout = async (request, env, url) => {
+  if (request.headers.get("origin") !== url.origin) fail("Invalid checkout origin.", 403);
+  const body = await readBody(request);
+  const courseId = String(body.courseId || "").trim();
+  const email = String(body.email || "").trim().toLowerCase();
+  const name = String(body.name || "").trim().slice(0, 120);
+  if (!validCourseId(courseId) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254) {
+    fail("Enter a valid course and email address.");
+  }
+  const existingCode = String(body.purchaseCode || "").trim();
+  if (existingCode) {
+    const existing = await guestDocument(env, existingCode);
+    const fields = existing.document?.fields;
+    if (fields?.courseId?.stringValue === courseId && fields?.email?.stringValue === email &&
+        fields?.status?.stringValue === "pending") {
+      const order = await razorpayRequest(env, `/orders/${encodeURIComponent(fields.orderId.stringValue)}`);
+      if (order.status === "created" || order.status === "attempted") {
+        return { keyId: getRazorpayCredentials(env).keyId, orderId: order.id,
+          amount: order.amount, currency: CURRENCY, purchaseCode: existingCode };
+      }
+    }
+  }
+  const token = await getGoogleAccessToken(env);
+  const courseResponse = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/courses/${courseId}`, {
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (!courseResponse.ok) fail("This course is not available for checkout.", 404);
+  const course = await courseResponse.json();
+  if (course.fields?.status?.stringValue !== "published" || course.fields?.deleted?.booleanValue === true) {
+    fail("This course is not available for checkout.", 404);
+  }
+  const code = [...crypto.getRandomValues(new Uint8Array(32))]
+    .map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  const guest = await guestDocument(env, code);
+  const makeOrder = (amount) => razorpayRequest(env, "/orders", {
+    method: "POST",
+    body: JSON.stringify({ amount, currency: CURRENCY, receipt: `guest_${Date.now()}_${code.slice(0, 8)}`,
+      notes: { guestId: guest.name.split("/").at(-1), courseId, purchaseType: "certification" } }),
+  });
+  const quote = await coursePricing(env);
+  let order = await makeOrder(quote.amount);
+  let reserved = false;
+  if (quote.amount === INTRO_COURSE_FEE_PAISE) {
+    reserved = await reserveIntroOrder(env, {
+      orderId: order.id, studentId: `guest_${guest.name.split("/").at(-1)}`,
+      courseId, purchaseType: "certification",
+    });
+    if (!reserved) order = await makeOrder(REGULAR_COURSE_FEE_PAISE);
+  }
+  const response = await fetch(`${firestoreDocumentsUrl}/${guest.name}?currentDocument.exists=false`, {
+    method: "PATCH",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ name: guest.name, fields: {
+      courseId: { stringValue: courseId }, email: { stringValue: email },
+      buyerName: { stringValue: name }, orderId: { stringValue: order.id },
+      amount: { integerValue: String(order.amount) }, status: { stringValue: "pending" },
+      createdAt: { timestampValue: new Date().toISOString() },
+    } }),
+  });
+  if (!response.ok) {
+    if (reserved) await releaseIntroOrder(env, order.id);
+    fail("Unable to save checkout. Please try again.", 503);
+  }
+  return { keyId: getRazorpayCredentials(env).keyId, orderId: order.id,
+    amount: order.amount, currency: CURRENCY, purchaseCode: code };
+};
+
+const guestVerify = async (request, env, url) => {
+  if (request.headers.get("origin") !== url.origin) fail("Invalid checkout origin.", 403);
+  const body = await readBody(request);
+  const code = String(body.purchaseCode || "").trim();
+  const { name, token, document } = await guestDocument(env, code);
+  if (!document) fail("Purchase not found.", 404);
+  const fields = document.fields;
+  const orderId = fields.orderId?.stringValue;
+  if (body.razorpayOrderId && body.razorpayOrderId !== orderId) {
+    fail("Payment does not match this purchase.", 403);
+  }
+  const paymentId = String(body.razorpayPaymentId || "");
+  if (paymentId) {
+    const { keySecret } = getRazorpayCredentials(env);
+    if (!/^pay_[a-zA-Z0-9]+$/.test(paymentId) || !keySecret ||
+        !(await signaturesMatch(keySecret, `${orderId}|${paymentId}`,
+          String(body.razorpaySignature || "")))) fail("Payment verification failed.", 403);
+  }
+  const [order, payment] = await Promise.all([
+    razorpayRequest(env, `/orders/${encodeURIComponent(orderId)}`),
+    paymentId ? razorpayRequest(env, `/payments/${encodeURIComponent(paymentId)}`) :
+      razorpayRequest(env, `/orders/${encodeURIComponent(orderId)}/payments`),
+  ]);
+  const capturedPayment = paymentId ? payment : payment.items?.find((item) =>
+    item.status === "captured" && item.order_id === orderId);
+  const amount = Number(fields.amount?.integerValue);
+  if (order.status !== "paid" || capturedPayment?.status !== "captured" ||
+      capturedPayment.order_id !== orderId || capturedPayment.amount !== amount || order.amount !== amount ||
+      capturedPayment.currency !== CURRENCY || order.currency !== CURRENCY ||
+      order.notes?.guestId !== name.split("/").at(-1) || order.notes?.courseId !== fields.courseId?.stringValue ||
+      ![INTRO_COURSE_FEE_PAISE, REGULAR_COURSE_FEE_PAISE].includes(amount)) {
+    fail("Payment is not captured yet. Please try again shortly.", 409);
+  }
+  if (fields.status?.stringValue !== "paid") {
+    if (fields.status?.stringValue !== "pending") fail("This purchase was already claimed.", 409);
+    if (amount === INTRO_COURSE_FEE_PAISE) {
+      const reservation = await fetch(`${firestoreDocumentsUrl}/${pricingReservations}/${orderId}`, {
+        headers: { authorization: `Bearer ${token}` },
+      });
+      if (!reservation.ok || (await reservation.json()).fields?.studentId?.stringValue !==
+          `guest_${name.split("/").at(-1)}`) fail("Introductory price reservation is missing.", 409);
+    }
+    const response = await fetch(`${firestoreDocumentsUrl}/${name}?updateMask.fieldPaths=status&updateMask.fieldPaths=paymentId&updateMask.fieldPaths=paidAt&currentDocument.updateTime=${encodeURIComponent(document.updateTime)}`, {
+      method: "PATCH", headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+      body: JSON.stringify({ name, fields: {
+        status: { stringValue: "paid" }, paymentId: { stringValue: capturedPayment.id },
+        paidAt: { timestampValue: new Date().toISOString() },
+      } }),
+    });
+    if (!response.ok) fail("Payment captured. Please use your purchase code to recover access.", 409);
+    try { await recordFunnelEvent(env, { courseId: fields.courseId.stringValue,
+      event: "payment", dedupeKey: orderId, amount }); } catch (error) {
+      console.error("Guest payment analytics failed", error.message);
+    }
+  }
+  return { status: "paid", courseId: fields.courseId.stringValue };
+};
+
+const claimGuestPurchase = async (request, env, url) => {
+  if (request.headers.get("origin") !== url.origin) fail("Invalid claim origin.", 403);
+  const user = await verifyFirebaseUser(request);
+  if (!user.email || user.email_verified !== true) fail("Sign in with a verified email to claim your course.", 403);
+  const { purchaseCode } = await readBody(request);
+  const { name, token, document } = await guestDocument(env, String(purchaseCode || "").trim());
+  const fields = document?.fields;
+  if (!fields) fail("Purchase not found.", 404);
+  const courseId = fields.courseId?.stringValue;
+  if (fields.status?.stringValue === "claimed" && fields.claimedBy?.stringValue === user.sub) {
+    return { courseId, status: "claimed" };
+  }
+  if (fields.status?.stringValue !== "paid") fail("This purchase is not ready to claim.", 409);
+  const enrollmentName = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/studentEnrollments/${user.sub}_${courseId}`;
+  const existingResponse = await fetch(`${firestoreDocumentsUrl}/${enrollmentName}`, {
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (!existingResponse.ok && existingResponse.status !== 404) fail("Unable to check course access.", 503);
+  const existing = existingResponse.ok ? await existingResponse.json() : null;
+  if (existing?.fields?.certification?.mapValue?.fields?.payment?.mapValue?.fields?.status?.stringValue === "paid") {
+    fail("This account already owns this course. Contact support with your purchase code.", 409);
+  }
+  const now = new Date().toISOString();
+  const amount = Number(fields.amount.integerValue);
+  const enrollmentFields = structuredClone(existing?.fields || {});
+  Object.assign(enrollmentFields, {
+    studentId: { stringValue: user.sub }, courseId: { stringValue: courseId },
+    deleted: { booleanValue: false }, status: { stringValue: "active" },
+    accessType: { stringValue: "certification" }, updatedAt: { timestampValue: now },
+    updatedBy: { stringValue: "guest-claim" },
+    ...(!existing ? { enrolledAt: { timestampValue: now }, createdAt: { timestampValue: now },
+      createdBy: { stringValue: "guest-claim" } } : {}),
+  });
+  setFirestoreValue(enrollmentFields, "certification.status", { stringValue: "active" });
+  setFirestoreValue(enrollmentFields, "certification.activatedAt", { timestampValue: now });
+  setFirestoreValue(enrollmentFields, "certification.fee", { integerValue: String(amount / 100) });
+  setFirestoreValue(enrollmentFields, "certification.payment.status", { stringValue: "paid" });
+  setFirestoreValue(enrollmentFields, "certification.payment.amount", { integerValue: String(amount) });
+  setFirestoreValue(enrollmentFields, "certification.payment.provider", { stringValue: "razorpay" });
+  setFirestoreValue(enrollmentFields, "certification.payment.paymentId", fields.paymentId);
+  setFirestoreValue(enrollmentFields, "certification.payment.reference", fields.orderId);
+  setFirestoreValue(enrollmentFields, "certification.payment.paidAt", fields.paidAt);
+  setFirestoreValue(enrollmentFields, "certification.access.pdfDownload", { booleanValue: true });
+  setFirestoreValue(enrollmentFields, "certification.access.mockTests", { booleanValue: true });
+  setFirestoreValue(enrollmentFields, "certification.access.finalExam", { booleanValue: false });
+  setFirestoreValue(enrollmentFields, "certification.mockTests.test1.status", { stringValue: "available" });
+  const response = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:commit`, {
+    method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ writes: [
+      { update: { name: enrollmentName, fields: enrollmentFields },
+        currentDocument: existing ? { updateTime: existing.updateTime } : { exists: false } },
+      { update: { name, fields: { status: { stringValue: "claimed" },
+        claimedBy: { stringValue: user.sub }, claimedAt: { timestampValue: now } } },
+        updateMask: { fieldPaths: ["status", "claimedBy", "claimedAt"] },
+        currentDocument: { updateTime: document.updateTime } },
+    ] }),
+  });
+  if (!response.ok) fail("Unable to claim this purchase. Please try again.", 409);
+  return { courseId, status: "claimed" };
+};
+
 const handleApi = async (request, env, url) => {
   if (url.pathname === "/api/health") {
     if (request.method !== "GET") fail("Method not allowed.", 405);
@@ -1249,6 +1460,9 @@ const handleApi = async (request, env, url) => {
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
   if (url.pathname === "/api/razorpay/verify-payment") return verifyPayment(request, env);
+  if (url.pathname === "/api/guest/create-order") return guestCheckout(request, env, url);
+  if (url.pathname === "/api/guest/verify-payment") return guestVerify(request, env, url);
+  if (url.pathname === "/api/guest/claim") return claimGuestPurchase(request, env, url);
   if (url.pathname === "/api/course-pricing") {
     if (request.method !== "GET") fail("Method not allowed.", 405);
     return coursePricing(env);

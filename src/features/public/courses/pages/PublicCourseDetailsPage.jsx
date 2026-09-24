@@ -86,9 +86,8 @@ export default function PublicCourseDetailsPage() {
   const pricing = useCoursePricing();
   const priceLabel = pricing ? formatINR(pricing.amount) : "current price";
 
-  const enrollmentUrl = `/login?next=${encodeURIComponent(
-    `/student/courses/${courseSlug}`,
-  )}`;
+  const enrollmentUrl = `/checkout/${courseSlug}`;
+  const accountEnrollmentUrl = `/login?next=${encodeURIComponent(`/student/courses/${courseSlug}`)}`;
 
   const [
     course,
@@ -653,10 +652,9 @@ export default function PublicCourseDetailsPage() {
 
                 <Link
                   className="secondary-course-cta"
-                  to="/law-courses"
+                  to={accountEnrollmentUrl}
                 >
-                  <FaArrowLeft />
-                  All Courses
+                  Existing student? Sign in
                 </Link>
               </div>
             </div>

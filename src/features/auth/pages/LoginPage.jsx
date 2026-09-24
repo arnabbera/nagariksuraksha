@@ -23,7 +23,7 @@ export default function LoginPage() {
       const { profile } = await signIn();
 
       const next = searchParams.get("next");
-      const safeNext = next?.startsWith("/student/courses/") &&
+      const safeNext = (next === "/claim-purchase" || next?.startsWith("/student/courses/")) &&
         !next.startsWith("//") && !next.includes("\\") &&
         !next.includes("?") && !next.includes("#")
         ? next
