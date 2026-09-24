@@ -19,6 +19,11 @@ const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/se
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
+  "/legal-updates/remedies-when-police-refuse-to-register-fir": {
+    title: "When Police Refuse to Register an FIR: Legal Remedies | Sanhita360",
+    description: "Practical remedies under BNSS sections 173(4), 175(3) and 223, plus exceptional High Court relief and records to preserve.",
+    image: "/images/legal-updates/police-refuse-fir-remedies.jpg",
+  },
   "/posts/masterda-surya-sen-chittagong-armoury-raid": {
     title: "Masterda Surya Sen and the Chittagong Armoury Raid | Sanhita360",
     description: "Remembering the schoolteacher and revolutionary organiser who led the historic Chittagong Armoury Raid of 18 April 1930.",

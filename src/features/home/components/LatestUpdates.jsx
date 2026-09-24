@@ -3,6 +3,16 @@ import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const updates = [
   {
+    id: 6,
+    category: "Criminal Procedure & Remedies",
+    title: "Legal Remedies When Police Refuse to Register an FIR",
+    date: "24 Sep 2026",
+    description:
+      "A citizen's practical route through the Superintendent of Police, Magistrate, private complaint and exceptional High Court relief under the BNSS.",
+    link: "/legal-updates/remedies-when-police-refuse-to-register-fir",
+    image: "/images/legal-updates/police-refuse-fir-remedies.jpg",
+  },
+  {
     id: 5,
     category: "Criminal Procedure",
     title: "Section 200 CrPC and Section 223 BNSS: Private Complaint Before a Magistrate",
@@ -88,7 +98,7 @@ const LatestUpdates = () => {
                 marginBottom: "10px",
               }}
             >
-              Legal Remedies
+              Latest Legal Updates
             </h2>
 
             <p

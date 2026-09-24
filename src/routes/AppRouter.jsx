@@ -58,6 +58,7 @@ import UnrecoveredOnlineFraudFundsPage from "../features/public/legal/pages/Unre
 import MortgagedPropertyFraudPage from "../features/public/legal/pages/MortgagedPropertyFraudPage";
 import TechStartupCompliancePage from "../features/public/legal/pages/TechStartupCompliancePage";
 import Section200CrpcSection223BnssPage from "../features/public/legal/pages/Section200CrpcSection223BnssPage";
+import PoliceRefuseFIRPage from "../features/public/legal/pages/PoliceRefuseFIRPage";
 
 // =========================================================
 // PUBLIC LAW NOTES
@@ -195,6 +196,11 @@ export default function AppRouter() {
       <Route
         path="/legal-updates/section-200-crpc-section-223-bnss-private-complaint"
         element={<Section200CrpcSection223BnssPage />}
+      />
+
+      <Route
+        path="/legal-updates/remedies-when-police-refuse-to-register-fir"
+        element={<PoliceRefuseFIRPage />}
       />
 
       {/* =====================================================
