@@ -847,9 +847,9 @@ export default {
         {
           title: "Certificate Courses in Legal Studies | Sanhita360",
           description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360.",
-          image: `${url.origin}/certificate-courses-sanhita360.png`,
+          image: `${url.origin}/certificate-courses-hero.jpg`,
           imageWidth: 1200,
-          imageHeight: 630,
+          imageHeight: 675,
         },
         canonicalUrl,
         socialUrl,
