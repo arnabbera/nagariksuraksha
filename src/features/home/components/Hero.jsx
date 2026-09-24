@@ -113,7 +113,7 @@ const Hero = () => {
               to="/law-courses"
               className="ns-hero-secondary"
             >
-              Explore Law Course
+              Explore Law Courses
               <FaArrowRight />
             </Link>
           </div>
