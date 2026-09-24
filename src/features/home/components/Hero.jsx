@@ -1,41 +1,9 @@
-import { useEffect, useState } from "react";
-
 import { FaArrowRight } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import { getHomepageStatistics } from "../../../services/homepageStatsService";
-
-const formatCount = (value, loading) => {
-  if (loading) return "…";
-  return Number.isFinite(value) ? value.toLocaleString("en-IN") : "—";
-};
-
 const Hero = () => {
-  const [statistics, setStatistics] = useState({
-    students: null,
-    courses: null,
-    chapters: null,
-  });
-  const [statisticsLoading, setStatisticsLoading] = useState(true);
-
-  useEffect(() => {
-    let active = true;
-
-    getHomepageStatistics()
-      .then((result) => {
-        if (active) setStatistics(result);
-      })
-      .finally(() => {
-        if (active) setStatisticsLoading(false);
-      });
-
-    return () => {
-      active = false;
-    };
-  }, []);
-
   return (
     <section className="ns-hero">
       <div className="ns-hero-container">
@@ -100,28 +68,6 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="ns-hero-stats" aria-busy={statisticsLoading}>
-            <div>
-              <strong>
-                {formatCount(statistics.students, statisticsLoading)}
-              </strong>
-              <span>Registered Students</span>
-            </div>
-
-            <div>
-              <strong>
-                {formatCount(statistics.courses, statisticsLoading)}
-              </strong>
-              <span>Courses</span>
-            </div>
-
-            <div>
-              <strong>
-                {formatCount(statistics.chapters, statisticsLoading)}
-              </strong>
-              <span>Chapters</span>
-            </div>
-          </div>
         </motion.div>
 
         {/* RIGHT */}
@@ -361,48 +307,6 @@ const Hero = () => {
               translateY(-2px);
           }
 
-          /* STATS */
-
-          .ns-hero-stats {
-            display: flex;
-            flex-wrap: wrap;
-
-            gap:
-              clamp(
-                24px,
-                4vw,
-                45px
-              );
-
-            margin-top: 45px;
-          }
-
-          .ns-hero-stats > div {
-            display: flex;
-            flex-direction: column;
-
-            gap: 3px;
-          }
-
-          .ns-hero-stats strong {
-            color: #ffffff;
-
-            font-size:
-              clamp(
-                26px,
-                3vw,
-                34px
-              );
-
-            line-height: 1;
-          }
-
-          .ns-hero-stats span {
-            color: #bfdbfe;
-
-            font-size: 13px;
-          }
-
           /* RIGHT PANEL */
 
           .ns-hero-panel {
@@ -482,8 +386,7 @@ const Hero = () => {
               margin-right: auto;
             }
 
-            .ns-hero-actions,
-            .ns-hero-stats {
+            .ns-hero-actions {
               justify-content:
                 center;
             }
@@ -561,35 +464,6 @@ const Hero = () => {
               font-size: 14px;
             }
 
-            .ns-hero-stats {
-              display: grid;
-
-              grid-template-columns:
-                repeat(
-                  3,
-                  minmax(0, 1fr)
-                );
-
-              gap: 8px;
-
-              margin-top: 34px;
-            }
-
-            .ns-hero-stats > div {
-              align-items:
-                center;
-
-              text-align: center;
-            }
-
-            .ns-hero-stats strong {
-              font-size: 24px;
-            }
-
-            .ns-hero-stats span {
-              font-size: 10px;
-            }
-
             .ns-hero-enrollment {
               margin-top: 14px;
 
@@ -611,10 +485,6 @@ const Hero = () => {
               font-size: 31px;
             }
 
-            .ns-hero-stats {
-              grid-template-columns:
-                1fr;
-            }
           }
 
           @media (prefers-reduced-motion: reduce) {
