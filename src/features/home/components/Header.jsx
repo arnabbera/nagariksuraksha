@@ -170,7 +170,7 @@ const Header = () => {
                   </Link>
 
                   <Link to="/#legal-remedies" style={dropdownLink} onClick={closeMenu}>
-                    Legal Updates
+                    Legal Remedies
                   </Link>
 
                   <Link to="/#latest-videos" style={dropdownLink} onClick={closeMenu}>
@@ -315,7 +315,7 @@ const Header = () => {
                   </Link>
 
                   <Link to="/#legal-remedies" onClick={closeMenu}>
-                    Legal Updates
+                    Legal Remedies
                   </Link>
 
                   <Link to="/#latest-videos" onClick={closeMenu}>
