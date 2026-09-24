@@ -10,7 +10,7 @@ const updates = [
     description:
       "A citizen's practical route through the Superintendent of Police, Magistrate, private complaint and exceptional High Court relief under the BNSS.",
     link: "/legal-updates/remedies-when-police-refuse-to-register-fir",
-    image: "/images/legal-updates/police-refuse-fir-remedies.jpg",
+    image: "/images/legal-updates/police-refuse-fir-remedies-v2.jpg",
   },
   {
     id: 5,
