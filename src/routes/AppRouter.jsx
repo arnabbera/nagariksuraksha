@@ -174,32 +174,32 @@ export default function AppRouter() {
       />
 
       <Route
-        path="/legal-updates/important-judgement-on-consumer-rights"
+        path="/legal-remedies/important-judgement-on-consumer-rights"
         element={<ConsumerRightsJudgmentsPage />}
       />
 
       <Route
-        path="/legal-updates/next-steps-unrecovered-online-fraud-funds"
+        path="/legal-remedies/next-steps-unrecovered-online-fraud-funds"
         element={<UnrecoveredOnlineFraudFundsPage />}
       />
 
       <Route
-        path="/legal-updates/bought-mortgaged-property-by-fraud"
+        path="/legal-remedies/bought-mortgaged-property-by-fraud"
         element={<MortgagedPropertyFraudPage />}
       />
 
       <Route
-        path="/legal-updates/tech-startup-regulatory-compliance-2026"
+        path="/legal-remedies/tech-startup-regulatory-compliance-2026"
         element={<TechStartupCompliancePage />}
       />
 
       <Route
-        path="/legal-updates/section-200-crpc-section-223-bnss-private-complaint"
+        path="/legal-remedies/section-200-crpc-section-223-bnss-private-complaint"
         element={<Section200CrpcSection223BnssPage />}
       />
 
       <Route
-        path="/legal-updates/remedies-when-police-refuse-to-register-fir"
+        path="/legal-remedies/remedies-when-police-refuse-to-register-fir"
         element={<PoliceRefuseFIRPage />}
       />
 
