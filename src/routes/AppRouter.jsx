@@ -201,8 +201,10 @@ export default function AppRouter() {
           PUBLIC SEO COURSE PAGES
       ====================================================== */}
 
+      <Route path="/llb-courses" element={<Navigate to="/law-courses" replace />} />
+
       <Route
-        path="/llb-courses"
+        path="/law-courses"
         element={
           <PublicCoursesPage />
         }

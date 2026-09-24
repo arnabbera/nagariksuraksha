@@ -84,13 +84,13 @@ const createStructuredData = (
     "ItemList",
 
   name:
-    "LL.B Courses and Law Study Materials",
+    "Law Courses and Study Materials",
 
   description:
     "Explore LL.B courses, law notes, legal study materials and certification preparation from Sanhita360.",
 
   url:
-    `${SEO_CONFIG.siteUrl}/llb-courses`,
+    `${SEO_CONFIG.siteUrl}/law-courses`,
 
   numberOfItems:
     courses.length,
@@ -262,7 +262,7 @@ export default function PublicCoursesPage() {
       <SEO
         title="Certificate Courses in Legal Studies | Sanhita360"
         description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360."
-        canonical="/llb-courses"
+        canonical="/law-courses"
         image="/certificate-courses-hero.jpg"
         keywords={[
           "LLB courses",
@@ -377,7 +377,7 @@ export default function PublicCoursesPage() {
                 </span>
 
                 <h2>
-                  Explore LL.B Courses
+                  Explore Law Courses
                 </h2>
               </div>
 

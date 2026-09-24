@@ -808,6 +808,10 @@ export default {
         );
       }
     }
+    if (/^\/llb-courses\/?$/.test(url.pathname)) {
+      url.pathname = "/law-courses";
+      return Response.redirect(url.toString(), 301);
+    }
     const assetResponse = await env.ASSETS.fetch(request);
 
     if (
@@ -834,10 +838,10 @@ export default {
     }
 
     if (
-      /^\/(?:llb-courses|share\/certificate-courses-card-v3)\/?$/.test(url.pathname) &&
+      /^\/(?:law-courses|share\/certificate-courses-card-v3)\/?$/.test(url.pathname) &&
       assetResponse.headers.get("content-type")?.includes("text/html")
     ) {
-      const canonicalUrl = `${url.origin}/llb-courses`;
+      const canonicalUrl = `${url.origin}/law-courses`;
       const socialUrl = url.pathname.startsWith("/share/")
         ? `${url.origin}${url.pathname}`
         : canonicalUrl;

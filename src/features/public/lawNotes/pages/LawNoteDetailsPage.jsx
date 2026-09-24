@@ -1013,7 +1013,7 @@ export default function LawNoteDetailsPage() {
                     <FaArrowRight />
                   </Link>
                 ) : (
-                  <Link to="/llb-courses">
+                  <Link to="/law-courses">
                     Explore LL.B Courses
                     <FaArrowRight />
                   </Link>
