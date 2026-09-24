@@ -5,11 +5,14 @@ import SEO from "../../../../shared/seo/SEO";
 import LegalUpdateShare from "../components/LegalUpdateShare";
 
 const path = "/legal-updates/remedies-when-police-refuse-to-register-fir";
+const crpc = "https://www.indiacode.nic.in/bitstream/123456789/15273/1/1598345331915_the_code_of_criminal_procedure%2C_1973.pdf";
+const ipc = "https://www.indiacode.nic.in/bitstream/123456789/4219/1/THE-INDIAN-PENAL-CODE-1860.pdf";
+const bns = "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a202345.pdf";
 const law = "https://www.indiacode.nic.in/bitstream/123456789/21920/1/the_bharatiya_nagarik_suraksha_sanhita%2C_2023.pdf";
 
 export default function PoliceRefuseFIRPage() {
   return <>
-    <SEO title="Legal Remedies When Police Refuse to Register an FIR" description="What to do if police refuse an FIR: approach the SP under BNSS 173(4), apply to a Magistrate under 175(3), file a private complaint, and preserve records." canonical={path} image="/images/legal-updates/police-refuse-fir-remedies.jpg" keywords={["police refuse FIR", "section 173(4) BNSS", "section 175(3) BNSS", "private complaint section 223 BNSS"]} />
+    <SEO title="Legal Remedies When Police Refuse to Register an FIR" description="What to do if police refuse an FIR: approach the SP under BNSS 173(4), apply to a Magistrate under 175(3), file a private complaint, and preserve records." canonical={path} image="/images/legal-updates/police-refuse-fir-remedies-v2.jpg" keywords={["police refuse FIR", "section 173(4) BNSS", "section 175(3) BNSS", "private complaint section 223 BNSS"]} />
     <Header />
     <main className="fir-page">
       <div className="fir-wrap">
@@ -20,12 +23,28 @@ export default function PoliceRefuseFIRPage() {
             <p>A refusal at the police station is not the end of the process. The BNSS provides a route through senior police officers and a Magistrate, with other remedies where appropriate.</p>
             <small>Updated 24 September 2026 · Indian law</small>
           </div>
-          <img src="/images/legal-updates/police-refuse-fir-remedies.jpg" alt="Sanhita360 guide to legal remedies when police refuse to register an FIR" />
+          <img src="/images/legal-updates/police-refuse-fir-remedies-v2.jpg" alt="Sanhita360 guide to legal remedies when police refuse to register an FIR" />
         </div>
-        <LegalUpdateShare canonicalPath={path} shareVersion="fir-remedies-v1" message="Know the legal remedies when police refuse to register an FIR under the BNSS." />
+        <LegalUpdateShare canonicalPath={path} shareVersion="fir-remedies-v2" message="Know the legal remedies when police refuse to register an FIR under the BNSS." />
         <article className="fir-article">
           <p>An FIR records information about an alleged <strong>cognizable offence</strong>, one that police may investigate without a Magistrate’s prior order. If a police station refuses to record such information, keep a copy of your complaint and use the following remedies. Whether a particular allegation is cognizable depends on the applicable offence and its classification.</p>
           <aside className="fir-callout"><strong>Important qualification</strong><p>Registration is generally required when the information discloses a cognizable offence. BNSS section 173(3) also permits a time limited preliminary inquiry for certain offences punishable with three years or more but less than seven years, subject to prior permission from a prescribed senior officer. A lawful inquiry should not be confused with an indefinite refusal. The Supreme Court has explained this distinction.</p></aside>
+
+          <h2>Which law applies: CrPC, IPC, BNSS or BNS?</h2>
+          <p>The <strong>CrPC and BNSS govern procedure</strong> such as recording an FIR and approaching a Magistrate. The <strong>IPC and BNS define many offences</strong> alleged in that FIR. The BNSS and BNS generally apply from 1 July 2024, while the applicable law for older conduct and pending proceedings needs to be assessed under the transition and saving provisions.</p>
+          <div className="fir-table-wrap"><table className="fir-table"><caption>Procedural steps: older CrPC and current BNSS provisions</caption><thead><tr><th>Step</th><th>CrPC, 1973</th><th>BNSS, 2023</th></tr></thead><tbody>
+            <tr><td>Information about a cognizable offence</td><td>Section 154(1)</td><td>Section 173(1)</td></tr>
+            <tr><td>Written information to SP after police refusal</td><td>Section 154(3)</td><td>Section 173(4)</td></tr>
+            <tr><td>Magistrate's direction for police investigation</td><td>Section 156(3)</td><td>Section 175(3)</td></tr>
+            <tr><td>Examination of private complainant</td><td>Section 200</td><td>Section 223</td></tr>
+          </tbody></table></div>
+          <p>These are corresponding routes, not identical wording. BNSS section 173(3) provides for a limited preliminary inquiry in specified cases, and section 175(3) expressly addresses the affidavit, inquiry and police submission.</p>
+          <div className="fir-table-wrap"><table className="fir-table"><caption>Illustrative offence provisions: older IPC and current BNS</caption><thead><tr><th>Allegation</th><th>IPC, 1860</th><th>BNS, 2023</th></tr></thead><tbody>
+            <tr><td>Cheating that dishonestly induces delivery of property</td><td>Section 420</td><td>Section 318(4)</td></tr>
+            <tr><td>Criminal breach of trust</td><td>Section 406</td><td>Section 316(2)</td></tr>
+            <tr><td>Punishment for murder</td><td>Section 302</td><td>Section 103(1)</td></tr>
+          </tbody></table></div>
+          <p>These offence examples do not mean every financial dispute is criminal. The alleged facts must satisfy the elements of the applicable offence, and other special laws may apply.</p>
 
           <h2>1. Write to the Superintendent of Police</h2>
           <p>Under <a href={law}>section 173(4) BNSS</a>, a person aggrieved by the officer in charge’s refusal may send the substance of the information <strong>in writing and by post</strong> to the Superintendent of Police concerned. Attach the original complaint and available supporting documents. You may also use an official email or meet a senior officer, but retain proof of the statutory postal submission.</p>
@@ -51,7 +70,7 @@ export default function PoliceRefuseFIRPage() {
           <h2>Preserve evidence of every step</h2>
           <ul><li>A dated copy of your signed complaint and its attachments.</li><li>Postal receipt, delivery tracking and any police acknowledgment.</li><li>Official email or online complaint reference numbers.</li><li>Names, designations and dates of officers approached.</li><li>Relevant documents and any recordings lawfully obtained.</li></ul>
           <div className="fir-summary"><h2>In short</h2><p>Submit the complaint to the police, send the written information by post to the SP under section 173(4) if refused, and, if necessary, seek a Magistrate’s order under section 175(3) or file a private complaint under section 223. Consider other forums according to the circumstances and preserve proof of each step.</p></div>
-          <p className="fir-source">Primary sources: <a href={law}>Bharatiya Nagarik Suraksha Sanhita, 2023</a>; <a href="https://api.sci.gov.in/supremecourt/2025/25001/25001_2025_11_1501_64020_Judgement_11-Sep-2025.pdf">Supreme Court on BNSS section 173(3)</a>.</p>
+          <p className="fir-source">Primary sources: <a href={law}>BNSS, 2023</a>; <a href={crpc}>CrPC, 1973</a>; <a href={bns}>BNS, 2023</a>; <a href={ipc}>IPC, 1860</a>; <a href="https://api.sci.gov.in/supremecourt/2025/25001/25001_2025_11_1501_64020_Judgement_11-Sep-2025.pdf">Supreme Court on BNSS section 173(3)</a>.</p>
         </article>
       </div>
     </main>
@@ -71,6 +90,11 @@ export default function PoliceRefuseFIRPage() {
       .fir-article p { margin:0 0 19px; }
       .fir-article a { color:#165c9b; text-underline-offset:3px; overflow-wrap:anywhere; }
       .fir-article li { margin-bottom:9px; }
+      .fir-table-wrap { overflow-x:auto; margin:22px 0; }
+      .fir-table { border-collapse:collapse; width:100%; min-width:600px; line-height:1.5; font-size:.95rem; }
+      .fir-table caption { text-align:left; font-weight:800; color:#0b203a; padding-bottom:9px; }
+      .fir-table th,.fir-table td { text-align:left; padding:12px 14px; border:1px solid #dce5ed; }
+      .fir-table th { background:#eaf2fa; color:#0b203a; }
       .fir-callout,.fir-summary { background:#edf4fc; border-left:5px solid #c58b31; padding:20px 23px; border-radius:8px; margin:29px 0; }
       .fir-callout p,.fir-summary p { margin:8px 0 0; }
       .fir-summary h2 { margin:0; }
