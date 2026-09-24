@@ -19,7 +19,7 @@ const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/se
 const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
-  "/legal-updates/remedies-when-police-refuse-to-register-fir": {
+  "/legal-remedies/remedies-when-police-refuse-to-register-fir": {
     title: "When Police Refuse to Register an FIR: Legal Remedies | Sanhita360",
     description: "Practical remedies under BNSS sections 173(4), 175(3) and 223, plus exceptional High Court relief and records to preserve.",
     image: "/images/legal-updates/police-refuse-fir-remedies-v2.jpg",
@@ -29,27 +29,27 @@ const LEGAL_UPDATE_SOCIAL_META = {
     description: "Remembering the schoolteacher and revolutionary organiser who led the historic Chittagong Armoury Raid of 18 April 1930.",
     image: "/images/freedom-fighters/masterda-surya-sen.jpg",
   },
-  "/legal-updates/section-200-crpc-section-223-bnss-private-complaint": {
+  "/legal-remedies/section-200-crpc-section-223-bnss-private-complaint": {
     title: "Section 200 CrPC and Section 223 BNSS Explained | Sanhita360",
     description: "Understand private complaints before a Magistrate, the CrPC-to-BNSS procedure, accused-hearing safeguard and difference from a police-investigation request.",
     image: "/images/legal-updates/section-200-crpc-section-223-bnss.jpg",
   },
-  "/legal-updates/tech-startup-regulatory-compliance-2026": {
+  "/legal-remedies/tech-startup-regulatory-compliance-2026": {
     title: "Tech Startup Regulatory Compliance in 2026 | Sanhita360",
     description: "An India-focused startup guide to data protection, responsible AI, cybersecurity, consumer law and compliance-by-design before scaling.",
     image: "/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg",
   },
-  "/legal-updates/important-judgement-on-consumer-rights": {
+  "/legal-remedies/important-judgement-on-consumer-rights": {
     title: "Important Judgments on Consumer Rights | Sanhita360",
     description: "Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, homebuyers, commercial purpose and telecom disputes.",
     image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
   },
-  "/legal-updates/bought-mortgaged-property-by-fraud": {
+  "/legal-remedies/bought-mortgaged-property-by-fraud": {
     title: "Bought a Mortgaged Property by Fraud? | Sanhita360",
     description: "Practical legal steps in Kolkata when a seller conceals an earlier mortgage: lender notice, police complaint, SARFAESI and DRT remedies, and civil recovery.",
     image: "/images/legal-updates/mortgaged-property-fraud.jpg",
   },
-  "/legal-updates/next-steps-unrecovered-online-fraud-funds": {
+  "/legal-remedies/next-steps-unrecovered-online-fraud-funds": {
     title: "Next Steps for Unrecovered Online Fraud Funds | Sanhita360",
     description: "Options available when money remains unrecovered after an online financial-fraud complaint, including MRM, police escalation, banking and consumer remedies.",
     image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
@@ -255,11 +255,14 @@ const handleLegalLikes = async (request, env, url) => {
   if (isWrite && request.headers.get("origin") !== url.origin) {
     fail("Likes must come from this site.", 403);
   }
-  const post = isWrite ? (await readBody(request))?.post : url.searchParams.get("post");
+  const rawPost = isWrite ? (await readBody(request))?.post : url.searchParams.get("post");
+  const post = typeof rawPost === "string"
+    ? rawPost.replace(/^\/legal-updates\//, "/legal-remedies/")
+    : rawPost;
   if (typeof post !== "string" || !Object.hasOwn(LEGAL_UPDATE_SOCIAL_META, post) ||
-    !post.startsWith("/legal-updates/")) fail("Unknown legal remedy post.", 404);
+    !post.startsWith("/legal-remedies/")) fail("Unknown legal remedy post.", 404);
 
-  const postId = post.slice("/legal-updates/".length);
+  const postId = post.slice("/legal-remedies/".length);
   let visitorId = getLikeVisitor(request);
   if (!visitorId && isWrite) fail("Reload the post before liking it.", 409);
   const newVisitor = !visitorId;
@@ -904,7 +907,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname.startsWith("/api/")) {
       try {
-        if (url.pathname === "/api/legal-updates/likes") {
+        if ((url.pathname === "/api/legal-remedies/likes" || url.pathname === "/api/legal-updates/likes")) {
           return await handleLegalLikes(request, env, url);
         }
         return json(await handleApi(request, env, url));
@@ -915,6 +918,11 @@ export default {
           { status: Number(error.status) || 500 },
         );
       }
+    }
+    const legacyLegalPath = url.pathname.match(/^\/legal-updates\/([^/]+)\/?$/);
+    if (legacyLegalPath && Object.hasOwn(LEGAL_UPDATE_SOCIAL_META, `/legal-remedies/${legacyLegalPath[1]}`)) {
+      url.pathname = `/legal-remedies/${legacyLegalPath[1]}`;
+      return Response.redirect(url.toString(), 301);
     }
     if (/^\/llb-courses\/?$/.test(url.pathname)) {
       url.pathname = "/law-courses";
