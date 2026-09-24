@@ -4,7 +4,7 @@ import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
 import LegalUpdateShare from "../components/LegalUpdateShare";
 
-const path = "/legal-updates/remedies-when-police-refuse-to-register-fir";
+const path = "/legal-remedies/remedies-when-police-refuse-to-register-fir";
 const crpc = "https://www.indiacode.nic.in/bitstream/123456789/15273/1/1598345331915_the_code_of_criminal_procedure%2C_1973.pdf";
 const ipc = "https://www.indiacode.nic.in/bitstream/123456789/4219/1/THE-INDIAN-PENAL-CODE-1860.pdf";
 const bns = "https://www.indiacode.nic.in/bitstream/123456789/20062/1/a202345.pdf";

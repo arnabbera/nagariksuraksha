@@ -9,7 +9,7 @@ const updates = [
     date: "24 Sep 2026",
     description:
       "A citizen's practical route through the Superintendent of Police, Magistrate, private complaint and exceptional High Court relief under the BNSS.",
-    link: "/legal-updates/remedies-when-police-refuse-to-register-fir",
+    link: "/legal-remedies/remedies-when-police-refuse-to-register-fir",
     image: "/images/legal-updates/police-refuse-fir-remedies-v2.jpg",
   },
   {
@@ -19,7 +19,7 @@ const updates = [
     date: "10 Sep 2026",
     description:
       "Understand examination of the complainant, the complaint-case sequence, the difference from a police-investigation request, and the BNSS accused-hearing safeguard.",
-    link: "/legal-updates/section-200-crpc-section-223-bnss-private-complaint",
+    link: "/legal-remedies/section-200-crpc-section-223-bnss-private-complaint",
     image: "/images/legal-updates/section-200-crpc-section-223-bnss.jpg",
   },
   {
@@ -29,7 +29,7 @@ const updates = [
     date: "10 Sep 2026",
     description:
       "A practical legal-risk guide covering data protection, responsible AI, cybersecurity, consumer claims and compliance-by-design before a technology business scales.",
-    link: "/legal-updates/tech-startup-regulatory-compliance-2026",
+    link: "/legal-remedies/tech-startup-regulatory-compliance-2026",
     image: "/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg",
   },
   {
@@ -39,7 +39,7 @@ const updates = [
     date: "05 Aug 2026",
     description:
       "Landmark Supreme Court judgments have expanded consumer protection across medical treatment, housing, commercial purchases and telecommunications.",
-    link: "/legal-updates/important-judgement-on-consumer-rights",
+    link: "/legal-remedies/important-judgement-on-consumer-rights",
     image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
   },
   {
@@ -49,7 +49,7 @@ const updates = [
     date: "09 Sep 2026",
     description:
       "Understand the urgent legal steps available when a seller conceals an earlier bank mortgage or lien over the property you purchased.",
-    link: "/legal-updates/bought-mortgaged-property-by-fraud",
+    link: "/legal-remedies/bought-mortgaged-property-by-fraud",
     image: "/images/legal-updates/mortgaged-property-fraud.jpg",
   },
   {
@@ -59,7 +59,7 @@ const updates = [
     date: "09 Sep 2026",
     description:
       "Understand the options available when money remains unrecovered after reporting an online financial fraud to the cybercrime authorities.",
-    link: "/legal-updates/next-steps-unrecovered-online-fraud-funds",
+    link: "/legal-remedies/next-steps-unrecovered-online-fraud-funds",
     image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
   },
 ];
@@ -98,7 +98,7 @@ const LatestUpdates = () => {
                 marginBottom: "10px",
               }}
             >
-              Latest Legal Updates
+              Legal Remedies
             </h2>
 
             <p

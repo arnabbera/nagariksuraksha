@@ -42,8 +42,8 @@ const footerData = {
       enabled: true,
     },
     {
-      label: "Legal Updates",
-      path: "/legal-updates",
+      label: "Legal Remedies",
+      path: "/#legal-remedies",
       order: 5,
       enabled: true,
     },

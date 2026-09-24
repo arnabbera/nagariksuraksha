@@ -86,7 +86,7 @@ export default function ConsumerRightsJudgmentsPage() {
       <SEO
         title="Important Judgments on Consumer Rights"
         description="Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, commercial purpose, homebuyers and telecom disputes."
-        canonical="/legal-updates/important-judgement-on-consumer-rights"
+        canonical="/legal-remedies/important-judgement-on-consumer-rights"
         image="/images/legal-updates/consumer-rights-landmark-judgments.jpg"
         keywords={["consumer rights India", "Consumer Protection Act 2019", "consumer court judgments", "medical negligence consumer law", "homebuyer consumer rights"]}
       />
@@ -98,7 +98,7 @@ export default function ConsumerRightsJudgmentsPage() {
           <div className="ns-consumer-wrap">
             <div className="ns-consumer-hero-grid">
               <div>
-                <Link to="/#legal-remedies" className="ns-consumer-back"><FaArrowLeft /> Legal Updates</Link>
+                <Link to="/#legal-remedies" className="ns-consumer-back"><FaArrowLeft /> Legal Remedies</Link>
                 <span className="ns-consumer-eyebrow"><FaGavel /> Landmark Supreme Court Decisions</span>
                 <h1>Important Judgments on Consumer Rights</h1>
                 <p>
@@ -112,7 +112,7 @@ export default function ConsumerRightsJudgmentsPage() {
 
         <article className="ns-consumer-wrap ns-consumer-article">
           <LegalUpdateShare
-            canonicalPath="/legal-updates/important-judgement-on-consumer-rights"
+            canonicalPath="/legal-remedies/important-judgement-on-consumer-rights"
             shareVersion="consumer-rights-card-v1"
             message="Understand landmark Supreme Court judgments and consumer rights in India."
           />

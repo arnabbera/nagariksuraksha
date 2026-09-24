@@ -37,7 +37,7 @@ export default function Section200CrpcSection223BnssPage() {
       <SEO
         title="Section 200 CrPC and Section 223 BNSS Explained"
         description="Understand the private-complaint procedure before a Magistrate, the Section 200 CrPC to Section 223 BNSS transition, accused-hearing proviso and difference from a police-investigation request."
-        canonical="/legal-updates/section-200-crpc-section-223-bnss-private-complaint"
+        canonical="/legal-remedies/section-200-crpc-section-223-bnss-private-complaint"
         image="/images/legal-updates/section-200-crpc-section-223-bnss.jpg"
         keywords={["Section 200 CrPC", "Section 223 BNSS", "private complaint Magistrate", "Section 175(3) BNSS", "criminal complaint India"]}
       />
@@ -48,7 +48,7 @@ export default function Section200CrpcSection223BnssPage() {
         <section className="ns-complaint-hero">
           <div className="ns-complaint-wrap ns-complaint-hero-grid">
             <div>
-              <Link to="/#legal-remedies" className="ns-complaint-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-complaint-back"><FaArrowLeft /> Legal Remedies</Link>
               <span className="ns-complaint-eyebrow"><FaGavel /> Criminal Procedure Explained</span>
               <h1>What Was Section 200 CrPC—and What Is Section 223 BNSS?</h1>
               <p>Both provisions concern a private criminal complaint presented directly before a Magistrate, but the BNSS is not merely a renumbering exercise. It introduces important pre-cognizance hearing safeguards.</p>
@@ -59,7 +59,7 @@ export default function Section200CrpcSection223BnssPage() {
 
         <article className="ns-complaint-wrap ns-complaint-article">
           <LegalUpdateShare
-            canonicalPath="/legal-updates/section-200-crpc-section-223-bnss-private-complaint"
+            canonicalPath="/legal-remedies/section-200-crpc-section-223-bnss-private-complaint"
             shareVersion="section-200-crpc-section-223-bnss-card-v1"
             message="Understand Section 200 CrPC, its Section 223 BNSS equivalent and the private-complaint procedure before a Magistrate."
           />

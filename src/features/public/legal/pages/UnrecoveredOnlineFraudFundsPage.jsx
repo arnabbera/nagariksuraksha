@@ -67,7 +67,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
       <SEO
         title="Next Steps for Unrecovered Online Fraud Funds"
         description="Legal and practical options in India when money lost to an online financial fraud remains unrecovered after a cybercrime complaint."
-        canonical="/legal-updates/next-steps-unrecovered-online-fraud-funds"
+        canonical="/legal-remedies/next-steps-unrecovered-online-fraud-funds"
         image="/images/legal-updates/unrecovered-online-fraud-funds.jpg"
         keywords={["online fraud money recovery India", "cybercrime complaint follow up", "Money Restoration Module", "BNSS cyber fraud FIR", "RBI Ombudsman fraud complaint"]}
       />
@@ -78,7 +78,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
         <section className="ns-fraud-hero">
           <div className="ns-fraud-wrap ns-fraud-hero-grid">
             <div>
-              <Link to="/#legal-remedies" className="ns-fraud-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-fraud-back"><FaArrowLeft /> Legal Remedies</Link>
               <span className="ns-fraud-eyebrow"><FaShieldAlt /> Citizen Cyber-Fraud Guidance</span>
               <h1>Next Steps for Unrecovered Online Fraud Funds</h1>
               <p>If money has not returned after a cybercrime complaint, the matter is not necessarily over. A nagarik can follow the frozen funds, seek proper criminal investigation, pursue the bank's grievance route and consider regulatory or consumer remedies where the facts support them.</p>
@@ -89,7 +89,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
 
         <article className="ns-fraud-wrap ns-fraud-article">
           <LegalUpdateShare
-            canonicalPath="/legal-updates/next-steps-unrecovered-online-fraud-funds"
+            canonicalPath="/legal-remedies/next-steps-unrecovered-online-fraud-funds"
             shareVersion="unrecovered-fraud-funds-card-v1"
             message="Know the next legal steps when online fraud funds remain unrecovered."
           />

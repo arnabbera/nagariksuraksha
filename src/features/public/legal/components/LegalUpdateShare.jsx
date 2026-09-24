@@ -12,7 +12,7 @@ export default function LegalUpdateShare({ canonicalPath, message, shareVersion 
 
   useEffect(() => {
     let active = true;
-    fetch(`/api/legal-updates/likes?post=${encodeURIComponent(canonicalPath)}`, { credentials: "same-origin" })
+    fetch(`/api/legal-remedies/likes?post=${encodeURIComponent(canonicalPath)}`, { credentials: "same-origin" })
       .then(async (response) => {
         const result = await response.json();
         if (!response.ok) throw new Error(result.error || "Unable to load likes.");
@@ -32,7 +32,7 @@ export default function LegalUpdateShare({ canonicalPath, message, shareVersion 
     setLoading(true);
     setError("");
     try {
-      const response = await fetch("/api/legal-updates/likes", {
+      const response = await fetch("/api/legal-remedies/likes", {
         method: "POST",
         credentials: "same-origin",
         headers: { "content-type": "application/json" },
