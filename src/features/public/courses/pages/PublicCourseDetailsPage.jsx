@@ -797,9 +797,6 @@ export default function PublicCourseDetailsPage() {
                   </div>
                 )}
 
-              {(!isCivilProcedureCourse ||
-                showCourseDetails) && (
-                <>
               <div className="what-you-learn">
                 <h2>
                   What You Get from This
@@ -865,9 +862,6 @@ export default function PublicCourseDetailsPage() {
                   </div>
                 </div>
               </div>
-
-                </>
-              )}
             </article>
 
             {/* SIDEBAR */}
@@ -1080,63 +1074,63 @@ export default function PublicCourseDetailsPage() {
 
         <section className="course-terms-section">
           <div className="course-page-container">
-            <div className="course-terms-heading">
-              <span className="content-label">
-                Please Read Before Enrollment
-              </span>
+            <details className="course-terms-disclosure">
+              <summary className="course-terms-heading">
+                <div>
+                  <span className="content-label">Please Read Before Enrollment</span>
+                  <h2 className="course-terms-title">Terms &amp; Disclaimer</h2>
+                  <span className="course-terms-intro">Independent learning portal; completion certificate is not an accredited qualification. Read the full terms.</span>
+                </div>
+                <span className="course-terms-toggle" aria-hidden="true">⌄</span>
+              </summary>
+              <div className="course-terms-grid">
+                <article>
+                  <h3>
+                    1. Independent Entity Disclaimer
+                  </h3>
 
-              <h2>
-                Terms &amp; Disclaimer
-              </h2>
-            </div>
+                  <p>
+                    Sanhita360 is an independent, private educational portal. We are <strong>not</strong> affiliated with, endorsed by, accredited by, or connected to any government agency, university, or official educational board.
+                  </p>
+                </article>
 
-            <div className="course-terms-grid">
-              <article>
-                <h3>
-                  1. Independent Entity Disclaimer
-                </h3>
+                <article>
+                  <h3>
+                    2. Individual Course Enrollment
+                  </h3>
 
-                <p>
-                  Sanhita360 is an independent, private educational portal. We are <strong>not</strong> affiliated with, endorsed by, accredited by, or connected to any government agency, university, or official educational board.
-                </p>
-              </article>
+                  <p>
+                    The one-time course fee is <strong>₹99 for the first 100 course checkout reservations, then ₹299</strong>. The available price is confirmed in checkout. After successful payment, that course and its learning materials become available under Enrolled Courses in the student portal.
+                  </p>
+                </article>
 
-              <article>
-                <h3>
-                  2. Individual Course Enrollment
-                </h3>
+                <article>
+                  <h3>
+                    3. Certification Included
+                  </h3>
 
-                <p>
-                  The one-time course fee is <strong>₹99 for the first 100 course checkout reservations, then ₹299</strong>. The available price is confirmed in checkout. After successful payment, that course and its learning materials become available under Enrolled Courses in the student portal.
-                </p>
-              </article>
+                  <p>
+                    The <strong>individual course fee</strong> covers course access, access to downloadable course PDFs, practice mock tests, and a digital Certificate of Completion.
+                  </p>
 
-              <article>
-                <h3>
-                  3. Certification Included
-                </h3>
+                  <p className="course-important-notice">
+                    <strong>Important Notice:</strong> The certificate issued by Sanhita360 is an appreciation/completion document for personal learning only. It <strong>does not</strong> constitute an accredited academic degree, official diploma, professional licence, or government qualification.
+                  </p>
+                </article>
+              </div>
 
-                <p>
-                  The <strong>individual course fee</strong> covers course access, access to downloadable course PDFs, practice mock tests, and a digital Certificate of Completion.
-                </p>
+              <div className="course-terms-links">
+                <Link to="/terms">
+                  Read Full Terms
+                  <FaArrowRight />
+                </Link>
 
-                <p className="course-important-notice">
-                  <strong>Important Notice:</strong> The certificate issued by Sanhita360 is an appreciation/completion document for personal learning only. It <strong>does not</strong> constitute an accredited academic degree, official diploma, professional licence, or government qualification.
-                </p>
-              </article>
-            </div>
-
-            <div className="course-terms-links">
-              <Link to="/terms">
-                Read Full Terms
-                <FaArrowRight />
-              </Link>
-
-              <Link to="/disclaimer">
-                Read Full Disclaimer
-                <FaArrowRight />
-              </Link>
-            </div>
+                <Link to="/disclaimer">
+                  Read Full Disclaimer
+                  <FaArrowRight />
+                </Link>
+              </div>
+            </details>
           </div>
         </section>
 
@@ -1612,10 +1606,47 @@ export default function PublicCourseDetailsPage() {
               padding: 65px 0;
             }
 
-            .course-terms-heading h2 {
+            .course-terms-heading {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 16px;
+              cursor: pointer;
+              list-style: none;
+            }
+
+            .course-terms-heading::-webkit-details-marker {
+              display: none;
+            }
+
+            .course-terms-heading:focus-visible {
+              outline: 3px solid #2563eb;
+              outline-offset: 5px;
+            }
+
+            .course-terms-title {
+              display: block;
               margin: 0;
               color: #0f172a;
               font-size: clamp(24px, 3vw, 32px);
+              font-weight: 700;
+            }
+
+            .course-terms-toggle {
+              color: #2563eb;
+              font-size: 30px;
+              line-height: 1;
+              transition: transform .2s ease;
+            }
+
+            .course-terms-disclosure[open] .course-terms-toggle {
+              transform: rotate(180deg);
+            }
+
+            .course-terms-intro {
+              margin: 12px 0 0;
+              color: #64748b;
+              font-size: 13px;
             }
 
             .course-terms-grid {
