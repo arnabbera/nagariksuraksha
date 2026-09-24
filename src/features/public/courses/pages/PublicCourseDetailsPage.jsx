@@ -401,7 +401,7 @@ export default function PublicCourseDetailsPage() {
               "The requested course is not available."}
           </p>
 
-          <Link to="/llb-courses">
+          <Link to="/law-courses">
             <FaArrowLeft />
             Browse LL.B Courses
           </Link>
@@ -556,7 +556,7 @@ export default function PublicCourseDetailsPage() {
 
             <span>/</span>
 
-            <Link to="/llb-courses">
+            <Link to="/law-courses">
               LL.B Courses
             </Link>
 
@@ -633,7 +633,7 @@ export default function PublicCourseDetailsPage() {
 
                 <Link
                   className="secondary-course-cta"
-                  to="/llb-courses"
+                  to="/law-courses"
                 >
                   <FaArrowLeft />
                   All Courses
@@ -981,7 +981,7 @@ export default function PublicCourseDetailsPage() {
               portal.
             </p>
 
-            <Link to="/llb-courses">
+            <Link to="/law-courses">
               Explore More LL.B Courses
               <FaArrowRight />
             </Link>

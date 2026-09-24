@@ -13,7 +13,7 @@ const courses = [
     description:
       "Comprehensive LL.B learning portal with notes, videos, quizzes and progress tracking.",
     button: "Start Learning",
-    link: "/llb-courses",
+    link: "/law-courses",
     color: "#2563eb",
   },
   {

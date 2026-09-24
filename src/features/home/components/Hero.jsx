@@ -110,7 +110,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              to="/llb-courses"
+              to="/law-courses"
               className="ns-hero-secondary"
             >
               Explore Law Course

@@ -154,7 +154,7 @@ const Header = () => {
               {learningOpen && (
                 <div style={dropdownStyle}>
                   <Link
-                    to="/llb-courses"
+                    to="/law-courses"
                     style={dropdownLink}
                     onClick={closeMenu}
                   >
@@ -301,7 +301,7 @@ const Header = () => {
               {learningOpen && (
                 <div className="ns-mobile-submenu">
                   <Link
-                    to="/llb-courses"
+                    to="/law-courses"
                     onClick={closeMenu}
                   >
                     Certificate Courses
