@@ -37,17 +37,17 @@ const LEGAL_UPDATE_SOCIAL_META = {
   "/legal-updates/important-judgement-on-consumer-rights": {
     title: "Important Judgments on Consumer Rights | Sanhita360",
     description: "Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, homebuyers, commercial purpose and telecom disputes.",
-    image: "/images/legal-updates/consumer-rights-landmark-judgments-sanhita360.png",
+    image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
   },
   "/legal-updates/bought-mortgaged-property-by-fraud": {
     title: "Bought a Mortgaged Property by Fraud? | Sanhita360",
     description: "Practical legal steps in Kolkata when a seller conceals an earlier mortgage: lender notice, police complaint, SARFAESI and DRT remedies, and civil recovery.",
-    image: "/images/legal-updates/mortgaged-property-fraud-sanhita360.png",
+    image: "/images/legal-updates/mortgaged-property-fraud.jpg",
   },
   "/legal-updates/next-steps-unrecovered-online-fraud-funds": {
     title: "Next Steps for Unrecovered Online Fraud Funds | Sanhita360",
     description: "Options available when money remains unrecovered after an online financial-fraud complaint, including MRM, police escalation, banking and consumer remedies.",
-    image: "/images/legal-updates/unrecovered-online-fraud-funds-sanhita360.png",
+    image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
   },
 };
 
