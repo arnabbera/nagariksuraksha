@@ -55,7 +55,7 @@ export default function TechStartupCompliancePage() {
       <SEO
         title="Tech Startup Regulatory Compliance in 2026"
         description="An India-focused legal risk guide for technology startups covering data protection, responsible AI, cybersecurity, consumer protection and compliance-by-design."
-        canonical="/legal-updates/tech-startup-regulatory-compliance-2026"
+        canonical="/legal-remedies/tech-startup-regulatory-compliance-2026"
         image="/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg"
         keywords={[
           "tech startup compliance India",
@@ -72,7 +72,7 @@ export default function TechStartupCompliancePage() {
         <section className="ns-startup-hero">
           <div className="ns-startup-wrap ns-startup-hero-grid">
             <div>
-              <Link to="/#legal-remedies" className="ns-startup-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-startup-back"><FaArrowLeft /> Legal Remedies</Link>
               <span className="ns-startup-eyebrow"><FaBalanceScale /> Technology, AI & Compliance</span>
               <h1>For Tech Startups in 2026, Compliance Is a Product Requirement</h1>
               <p>AI performance may attract users, but weak privacy, unsafe automation, misleading claims or poor incident readiness can stop a promising product from scaling. Legal risk must be designed into the business—not added after launch.</p>
@@ -83,7 +83,7 @@ export default function TechStartupCompliancePage() {
 
         <article className="ns-startup-wrap ns-startup-article">
           <LegalUpdateShare
-            canonicalPath="/legal-updates/tech-startup-regulatory-compliance-2026"
+            canonicalPath="/legal-remedies/tech-startup-regulatory-compliance-2026"
             shareVersion="tech-startup-compliance-2026-card-v1"
             message="Why regulatory compliance is now a core product requirement for tech startups in 2026."
           />
