@@ -136,4 +136,52 @@ export const payForCourseWithRazorpay = async ({
   });
 };
 
+export const payForGuestCourse = async ({ courseId, courseTitle, name, email }) => {
+  const storageKey = `sanhita360-guest-${courseId}`;
+  const existingCode = localStorage.getItem(storageKey) || "";
+  const response = await fetch("/api/guest/create-order", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ courseId, name, email, purchaseCode: existingCode }),
+  });
+  const order = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(order.error || "Unable to start checkout.");
+  localStorage.setItem(storageKey, order.purchaseCode);
+  localStorage.setItem("sanhita360-guest-latest", order.purchaseCode);
+  await loadRazorpayCheckout();
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    const failCheckout = (message) => {
+      if (!settled) { settled = true; reject(new Error(message)); }
+    };
+    const checkout = new window.Razorpay({
+      key: order.keyId, amount: order.amount, currency: order.currency,
+      order_id: order.orderId, name: "Sanhita360",
+      description: `${courseTitle} course enrollment`,
+      prefill: { name, email }, theme: { color: "#2563eb" },
+      modal: { ondismiss: () => failCheckout("Checkout closed. You can retry with the same purchase code.") },
+      handler: async (payment) => {
+        try {
+          const verified = await fetch("/api/guest/verify-payment", {
+            method: "POST", headers: { "content-type": "application/json" },
+            body: JSON.stringify({ purchaseCode: order.purchaseCode,
+              razorpayOrderId: payment.razorpay_order_id,
+              razorpayPaymentId: payment.razorpay_payment_id,
+              razorpaySignature: payment.razorpay_signature }),
+          });
+          const result = await verified.json().catch(() => ({}));
+          if (!verified.ok) throw new Error(result.error || "Payment confirmation is pending.");
+          settled = true;
+          resolve({ ...result, purchaseCode: order.purchaseCode });
+        } catch (error) { failCheckout(error.message); }
+      },
+    });
+    checkout.on("payment.failed", (event) =>
+      failCheckout(event?.error?.description || "Payment failed. Please retry."));
+    checkout.open();
+    void trackFunnelEvent("checkout_open", courseId, { orderId: order.orderId,
+      purchaseCode: order.purchaseCode });
+  });
+};
+
 export default payForCourseWithRazorpay;
