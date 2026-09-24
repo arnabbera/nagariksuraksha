@@ -218,6 +218,7 @@ const getGoogleAccessToken = async (env) => {
 
 const LIKE_COOKIE = "__Host-sanhita_like_id";
 const likesRoot = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/legalRemedyLikes`;
+const pageLikesRoot = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/pageLikes`;
 const firestoreDocumentsUrl = "https://firestore.googleapis.com/v1";
 
 const getLikeVisitor = (request) => {
@@ -237,8 +238,7 @@ const readLikeDocument = async (token, name) => {
   return response.json();
 };
 
-const likeCount = async (token, postId, visitorHash) => {
-  const counter = `${likesRoot}/${postId}`;
+const likeCount = async (token, counter, visitorHash) => {
   const [document, visitor] = await Promise.all([
     readLikeDocument(token, counter),
     readLikeDocument(token, `${counter}/visitors/${visitorHash}`),
@@ -256,13 +256,16 @@ const handleLegalLikes = async (request, env, url) => {
     fail("Likes must come from this site.", 403);
   }
   const rawPost = isWrite ? (await readBody(request))?.post : url.searchParams.get("post");
-  const post = typeof rawPost === "string"
+  const isCoursesPage = url.pathname === "/api/law-courses/likes";
+  const post = !isCoursesPage && typeof rawPost === "string"
     ? rawPost.replace(/^\/legal-updates\//, "/legal-remedies/")
     : rawPost;
-  if (typeof post !== "string" || !Object.hasOwn(LEGAL_UPDATE_SOCIAL_META, post) ||
-    !post.startsWith("/legal-remedies/")) fail("Unknown legal remedy post.", 404);
+  if (isCoursesPage ? post !== "/law-courses" :
+    typeof post !== "string" || !Object.hasOwn(LEGAL_UPDATE_SOCIAL_META, post) ||
+    !post.startsWith("/legal-remedies/")) fail("Unknown page.", 404);
 
-  const postId = post.slice("/legal-remedies/".length);
+  const postId = isCoursesPage ? "law-courses" : post.slice("/legal-remedies/".length);
+  const counter = `${isCoursesPage ? pageLikesRoot : likesRoot}/${postId}`;
   let visitorId = getLikeVisitor(request);
   if (!visitorId && isWrite) fail("Reload the post before liking it.", 409);
   const newVisitor = !visitorId;
@@ -276,7 +279,6 @@ const handleLegalLikes = async (request, env, url) => {
   const token = await getGoogleAccessToken(env);
 
   if (isWrite) {
-    const counter = `${likesRoot}/${postId}`;
     const response = await fetch(
       `${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:commit`,
       {
@@ -310,7 +312,7 @@ const handleLegalLikes = async (request, env, url) => {
     }
   }
 
-  const result = await likeCount(token, postId, visitorHash);
+  const result = await likeCount(token, counter, visitorHash);
   return json(result, {
     headers: {
       "cache-control": "no-store",
@@ -907,7 +909,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname.startsWith("/api/")) {
       try {
-        if ((url.pathname === "/api/legal-remedies/likes" || url.pathname === "/api/legal-updates/likes")) {
+        if (["/api/legal-remedies/likes", "/api/legal-updates/likes", "/api/law-courses/likes"].includes(url.pathname)) {
           return await handleLegalLikes(request, env, url);
         }
         return json(await handleApi(request, env, url));
