@@ -23,9 +23,9 @@ const courses = [
     status: "published",
     order: 1,
     seo: {
-      title: "Three-Year LL.B Learning Programme | NagarikSuraksha",
+      title: "Three-Year LL.B Learning Programme | Sanhita360",
       description:
-        "Access structured LL.B notes, subject-wise lessons, quizzes and certification support through NagarikSuraksha.",
+        "Access structured LL.B notes, subject-wise lessons, quizzes and certification support through Sanhita360.",
       focusKeyword: "three year LLB course",
       secondaryKeywords: [
         "LLB notes",
@@ -55,7 +55,7 @@ const courses = [
     status: "published",
     order: 2,
     seo: {
-      title: "Five-Year Integrated LL.B Learning | NagarikSuraksha",
+      title: "Five-Year Integrated LL.B Learning | Sanhita360",
       description:
         "Study integrated LL.B subjects with structured notes, videos, quizzes and certification support.",
       focusKeyword: "five year LLB course",
@@ -87,7 +87,7 @@ const courses = [
     status: "published",
     order: 3,
     seo: {
-      title: "Constitutional Law Course and Notes | NagarikSuraksha",
+      title: "Constitutional Law Course and Notes | Sanhita360",
       description:
         "Study Constitutional Law with notes, videos, quizzes, important cases and certification.",
       focusKeyword: "constitutional law notes",
@@ -119,7 +119,7 @@ const courses = [
     status: "published",
     order: 4,
     seo: {
-      title: "Law of Torts Notes and Course | NagarikSuraksha",
+      title: "Law of Torts Notes and Course | Sanhita360",
       description:
         "Learn Law of Torts through structured notes, video lessons, quizzes and legal examples.",
       focusKeyword: "law of torts notes",
@@ -151,7 +151,7 @@ const courses = [
     status: "published",
     order: 5,
     seo: {
-      title: "Family Law Notes and Course | NagarikSuraksha",
+      title: "Family Law Notes and Course | Sanhita360",
       description:
         "Study Family Law with structured notes, cases, quizzes and certification support.",
       focusKeyword: "family law notes",
@@ -183,7 +183,7 @@ const courses = [
     status: "published",
     order: 6,
     seo: {
-      title: "Consumer Protection Law Course | NagarikSuraksha",
+      title: "Consumer Protection Law Course | Sanhita360",
       description:
         "Learn consumer rights, complaint procedure and Consumer Protection Act provisions.",
       focusKeyword: "consumer protection law course",

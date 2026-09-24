@@ -13,7 +13,7 @@ const notificationTemplates = [
     name: "Registration Successful",
     event: "student.registration.completed",
     audience: "student",
-    title: "Welcome to NagarikSuraksha",
+    title: "Welcome to Sanhita360",
     message:
       "Your student account has been created successfully. Your enrollment ID is {{enrollmentId}}.",
     link: "/student",

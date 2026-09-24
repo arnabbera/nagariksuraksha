@@ -85,7 +85,7 @@ const CourseCard = ({
 
         <p>
           {course.shortDescription ||
-            "Start learning with NagarikSuraksha."}
+            "Start learning with Sanhita360."}
         </p>
 
         <div className="ns-student-course-meta">

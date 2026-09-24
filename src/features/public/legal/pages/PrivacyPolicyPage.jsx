@@ -13,8 +13,8 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <SEO
-        title="Privacy Policy | NagarikSuraksha"
-        description="Learn what information NagarikSuraksha collects and how account, learning progress and payment-related data is handled."
+        title="Privacy Policy | Sanhita360"
+        description="Learn what information Sanhita360 collects and how account, learning progress and payment-related data is handled."
         canonical="/privacy-policy"
         robots="index, follow"
       />
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
             <div className="ns-privacy-intro">
               <FaShieldAlt />
               <p>
-                At <strong>Nagarik Suraksha</strong> (&quot;we,&quot;
+                At <strong>Sanhita360</strong> (&quot;we,&quot;
                 &quot;our,&quot; or &quot;us&quot;), we respect your privacy.
                 This policy explains what information we collect when you use
                 our portal and how it is handled.
@@ -127,13 +127,13 @@ export default function PrivacyPolicyPage() {
                 <dl className="ns-privacy-contact">
                   <div>
                     <dt>Platform Name</dt>
-                    <dd>Nagarik Suraksha</dd>
+                    <dd>Sanhita360</dd>
                   </div>
                   <div>
                     <dt>Email</dt>
                     <dd>
-                      <a href="mailto:nagariksuraksha@gmail.com">
-                        nagariksuraksha@gmail.com
+                      <a href="mailto:beraarnab@gmail.com">
+                        beraarnab@gmail.com
                       </a>
                     </dd>
                   </div>

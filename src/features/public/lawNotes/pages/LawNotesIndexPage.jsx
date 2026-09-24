@@ -103,7 +103,7 @@ const createSeo = (
       ?.description ||
     topic?.shortDescription ||
     topic?.overview ||
-    `Study ${topic.title} with LL.B law notes, important legal principles, cases and exam-focused material at NagarikSuraksha.`;
+    `Study ${topic.title} with LL.B law notes, important legal principles, cases and exam-focused material at Sanhita360.`;
 
   const keywords = [
     topic?.seo
@@ -516,7 +516,7 @@ export default function LawNoteDetailsPage() {
       <>
         <SEO
           title="Law Note Not Found"
-          description="The requested NagarikSuraksha law note could not be found."
+          description="The requested Sanhita360 law note could not be found."
           canonical={`/law-notes/${topicSlug}`}
           robots="noindex, follow"
         />

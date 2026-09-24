@@ -25,7 +25,7 @@ export const humanRightsLawAndPracticeCourse = createCourseModel({
   createdBy: "system",
   updatedBy: "system",
   seo: {
-    title: "Human Rights Law and Practice Course | NagarikSuraksha",
+    title: "Human Rights Law and Practice Course | Sanhita360",
     description:
       "Study Human Rights Law and Practice through eight structured units covering international law, constitutional remedies and the protection of vulnerable groups.",
     focusKeyword: "human rights law course",

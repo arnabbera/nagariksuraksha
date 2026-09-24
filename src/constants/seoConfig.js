@@ -1,20 +1,20 @@
 // =========================================================
-// NAGARIKSURAKSHA SEO CONFIGURATION
+// SANHITA360 SEO CONFIGURATION
 // =========================================================
 //
 // Central SEO configuration.
 //
 // Public pages should reuse these values instead of
-// hardcoding NagarikSuraksha branding repeatedly.
+// hardcoding Sanhita360 branding repeatedly.
 //
 // =========================================================
 
 export const SEO_CONFIG = Object.freeze({
   siteName:
-    "NagarikSuraksha",
+    "Sanhita360",
 
   siteUrl:
-    "https://www.nagariksuraksha.com",
+    "https://www.sanhita360.com",
 
   locale:
     "en_IN",
@@ -23,13 +23,13 @@ export const SEO_CONFIG = Object.freeze({
     "en-IN",
 
   defaultTitle:
-    "NagarikSuraksha | LL.B Courses, Law Notes, Study Materials & Mock Tests",
+    "Sanhita360 | LL.B Courses, Law Notes, Study Materials & Mock Tests",
 
   titleTemplate:
-    "%s | NagarikSuraksha",
+    "%s | Sanhita360",
 
   defaultDescription:
-    "NagarikSuraksha provides LL.B learning, chapter-wise law notes, law study materials, legal topics, mock tests, case law resources and certification preparation for law students.",
+    "Sanhita360 provides LL.B learning, chapter-wise law notes, law study materials, legal topics, mock tests, case law resources and certification preparation for law students.",
 
   defaultKeywords: [
     "LLB course",
@@ -56,13 +56,13 @@ export const SEO_CONFIG = Object.freeze({
 
   organization: {
     name:
-      "NagarikSuraksha",
+      "Sanhita360",
 
     type:
       "EducationalOrganization",
 
     id:
-      "https://www.nagariksuraksha.com/#organization",
+      "https://www.sanhita360.com/#organization",
   },
 
   social: {
@@ -80,7 +80,7 @@ export const HOME_SEO = Object.freeze({
     "LL.B Courses, Law Notes, Study Materials & Mock Tests",
 
   description:
-    "Study law with NagarikSuraksha. Access chapter-wise LL.B courses, law notes, legal study materials, important legal topics, mock tests, case law resources and certification preparation.",
+    "Study law with Sanhita360. Access chapter-wise LL.B courses, law notes, legal study materials, important legal topics, mock tests, case law resources and certification preparation.",
 
   canonical:
     "/",

@@ -87,7 +87,7 @@ export default function ConsumerRightsJudgmentsPage() {
         title="Important Judgments on Consumer Rights"
         description="Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, commercial purpose, homebuyers and telecom disputes."
         canonical="/legal-updates/important-judgement-on-consumer-rights"
-        image="/images/legal-updates/consumer-rights-landmark-judgments.jpg"
+        image="/images/legal-updates/consumer-rights-landmark-judgments-sanhita360.png"
         keywords={["consumer rights India", "Consumer Protection Act 2019", "consumer court judgments", "medical negligence consumer law", "homebuyer consumer rights"]}
       />
 
@@ -105,7 +105,7 @@ export default function ConsumerRightsJudgmentsPage() {
                   Landmark judgments of the Supreme Court of India have shaped consumer protection by extending effective remedies to areas including medical treatment, housing and telecommunications, while clarifying who qualifies as a consumer.
                 </p>
               </div>
-              <img src="/images/legal-updates/consumer-rights-landmark-judgments.jpg" alt="Important judgments on consumer rights in India" />
+              <img src="/images/legal-updates/consumer-rights-landmark-judgments-sanhita360.png" alt="Important judgments on consumer rights in India" />
             </div>
           </div>
         </section>

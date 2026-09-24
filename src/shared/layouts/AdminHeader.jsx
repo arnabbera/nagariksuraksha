@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 import {
-  FaBalanceScale,
   FaBars,
   FaBook,
   FaBookOpen,
@@ -141,11 +140,7 @@ export default function AdminHeader() {
     <header className="ns-admin-public-header">
       <div className="ns-admin-header-container">
         <Link to="/admin" className="ns-admin-brand" onClick={closeMenus}>
-          <FaBalanceScale />
-          <span>
-            <strong>NagarikSuraksha</strong>
-            <small>Legal Learning Administration</small>
-          </span>
+          <img src="/sanhita360-logo.png" alt="Sanhita360" style={{ width: 155, maxWidth: "100%", height: "auto" }} />
         </Link>
 
         <nav className="ns-admin-desktop-nav" ref={menuRef}>

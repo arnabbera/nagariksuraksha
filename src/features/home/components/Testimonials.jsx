@@ -6,7 +6,7 @@ const testimonials = [
     name: "Rahul Sharma",
     role: "LL.B Student",
     review:
-      "NagarikSuraksha made legal learning simple and practical. The structured notes and video lectures helped me understand complex legal concepts with ease.",
+      "Sanhita360 made legal learning simple and practical. The structured notes and video lectures helped me understand complex legal concepts with ease.",
   },
   {
     id: 2,
@@ -64,7 +64,7 @@ const Testimonials = () => {
             }}
           >
             Hear from students and legal professionals who have benefited from
-            NagarikSuraksha.
+            Sanhita360.
           </p>
         </div>
 

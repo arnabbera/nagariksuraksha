@@ -603,7 +603,7 @@ export default function PostManagement() {
     <div className="ns-post-management">
       <PageHeader
         title="Post Management"
-        description="Create, edit, publish and manage NagarikSuraksha posts with responsive images and SEO."
+        description="Create, edit, publish and manage Sanhita360 posts with responsive images and SEO."
         breadcrumbs={[
           "Admin",
           "Content Manager",
@@ -768,7 +768,7 @@ export default function PostManagement() {
             <EmptyState
               icon="📰"
               title="No posts found"
-              description="Create your first NagarikSuraksha post using the form."
+              description="Create your first Sanhita360 post using the form."
             />
           ) : (
             <div className="ns-post-admin-list">

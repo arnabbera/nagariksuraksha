@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /student/
 Disallow: /login
 
-Sitemap: https://www.nagariksuraksha.com/sitemap.xml
+Sitemap: https://www.sanhita360.com/sitemap.xml

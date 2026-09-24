@@ -100,7 +100,7 @@ against compromised empanelled lawyers and officers.`,
 
   seo: {
     title:
-      "Liability for Negligent Home Loan Sanctions | NagarikSuraksha",
+      "Liability for Negligent Home Loan Sanctions | Sanhita360",
     description:
       "Institutional liability and criminal prosecution arising from negligent home loan sanctions on already mortgaged properties in India.",
     focusKeyword:

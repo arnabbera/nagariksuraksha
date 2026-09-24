@@ -3,9 +3,9 @@ import { FaChevronDown } from "react-icons/fa";
 
 const faqItems = [
   {
-    question: "What is NagarikSuraksha?",
+    question: "What is Sanhita360?",
     answer:
-      "NagarikSuraksha is a digital platform for legal awareness, legal consultancy, LL.B learning, quizzes, course progress and certification.",
+      "Sanhita360 is a digital platform for legal awareness, legal consultancy, LL.B learning, quizzes, course progress and certification.",
   },
   {
     question: "Do visitors need to log in?",
@@ -25,7 +25,7 @@ const faqItems = [
   {
     question: "Who can access the Admin Dashboard?",
     answer:
-      "Only the authorized NagarikSuraksha administrator can access the Admin Dashboard. All other authenticated Google accounts are treated as students.",
+      "Only the authorized Sanhita360 administrator can access the Admin Dashboard. All other authenticated Google accounts are treated as students.",
   },
   {
     question: "Can students download PDF study materials?",
@@ -48,7 +48,7 @@ export default function FAQ() {
       <div className="ns-faq-container">
         <header className="ns-faq-heading">
           <p>Frequently Asked Questions</p>
-          <h2>Common Questions About NagarikSuraksha</h2>
+          <h2>Common Questions About Sanhita360</h2>
           <span>
             Find answers about public access, student login, learning
             materials, enrollment and certification.

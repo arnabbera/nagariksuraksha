@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
               marginBottom: "15px",
             }}
           >
-            Why Choose NagarikSuraksha?
+            Why Choose Sanhita360?
           </h2>
 
           <p

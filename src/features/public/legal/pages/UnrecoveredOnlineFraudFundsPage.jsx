@@ -68,7 +68,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
         title="Next Steps for Unrecovered Online Fraud Funds"
         description="Legal and practical options in India when money lost to an online financial fraud remains unrecovered after a cybercrime complaint."
         canonical="/legal-updates/next-steps-unrecovered-online-fraud-funds"
-        image="/images/legal-updates/unrecovered-online-fraud-funds.jpg"
+        image="/images/legal-updates/unrecovered-online-fraud-funds-sanhita360.png"
         keywords={["online fraud money recovery India", "cybercrime complaint follow up", "Money Restoration Module", "BNSS cyber fraud FIR", "RBI Ombudsman fraud complaint"]}
       />
 
@@ -83,7 +83,7 @@ export default function UnrecoveredOnlineFraudFundsPage() {
               <h1>Next Steps for Unrecovered Online Fraud Funds</h1>
               <p>If money has not returned after a cybercrime complaint, the matter is not necessarily over. A nagarik can follow the frozen funds, seek proper criminal investigation, pursue the bank's grievance route and consider regulatory or consumer remedies where the facts support them.</p>
             </div>
-            <img src="/images/legal-updates/unrecovered-online-fraud-funds.jpg" alt="Legal options for unrecovered online financial fraud funds" />
+            <img src="/images/legal-updates/unrecovered-online-fraud-funds-sanhita360.png" alt="Legal options for unrecovered online financial fraud funds" />
           </div>
         </section>
 

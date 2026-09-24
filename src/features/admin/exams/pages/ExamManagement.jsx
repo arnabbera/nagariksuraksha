@@ -129,7 +129,7 @@ export default function ExamManagement() {
     <div>
       <PageHeader
         title="Examinations"
-        description="Preview and test NagarikSuraksha certification Mock Tests and Final Examinations."
+        description="Preview and test Sanhita360 certification Mock Tests and Final Examinations."
         breadcrumbs={[
           "Admin",
           "Learning",

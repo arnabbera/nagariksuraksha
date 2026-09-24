@@ -12,15 +12,15 @@ export default function LegalServiceDetailsPage() {
   if (!service) return <><Header /><main className="ns-service-missing"><h1>Legal Service Not Found</h1><Link to="/"><FaArrowLeft /> Return Home</Link></main><Footer /><Styles /></>;
 
   return <>
-    <SEO title={`${service.title} Services`} description={service.description} canonical={`/services/${service.slug}`} keywords={[service.title, "legal consultancy", "NagarikSuraksha"]} />
+    <SEO title={`${service.title} Services`} description={service.description} canonical={`/services/${service.slug}`} keywords={[service.title, "legal consultancy", "Sanhita360"]} />
     <Header />
     <main className="ns-service-page">
-      <section className="ns-service-hero"><div className="ns-service-wrap"><nav><Link to="/">Home</Link><span>/</span><span>Legal Services</span><span>/</span><span>{service.title}</span></nav><p className="eyebrow">NagarikSuraksha Legal Services</p><h1>{service.title}</h1><p>{service.description}</p></div></section>
+      <section className="ns-service-hero"><div className="ns-service-wrap"><nav><Link to="/">Home</Link><span>/</span><span>Legal Services</span><span>/</span><span>{service.title}</span></nav><p className="eyebrow">Sanhita360 Legal Services</p><h1>{service.title}</h1><p>{service.description}</p></div></section>
       <section className="ns-service-body"><div className="ns-service-wrap ns-service-grid"><article>
         <div className="ns-service-card"><h2>Service Overview</h2><p>Receive practical guidance on the available remedies, required documents and appropriate legal process for your {service.title.toLowerCase()} matter.</p></div>
         <div className="ns-service-card ns-service-assistance"><h2><FaCheckCircle /> How We Can Assist</h2><p className="ns-service-intro">Every matter is different. We first understand your concern and review the available records, then help you identify practical next steps.</p><div className="ns-assistance-grid">{service.assistance.map((item) => <section key={item.title}><FaCheckCircle /><div><h3>{item.title}</h3><p>{item.description}</p></div></section>)}</div></div>
         <div className="ns-service-card"><h2><FaFileAlt /> Documents to Keep Ready</h2><ul>{service.documents.map((item) => <li key={item}><FaFileAlt />{item}</li>)}</ul></div>
-      </article><aside><div className="ns-service-cta"><h2>Need Guidance?</h2><p>Share a brief summary and the available documents for an initial consultation.</p><a href="https://wa.me/919830015487?text=Hello%20NagarikSuraksha%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation." target="_blank" rel="noopener noreferrer">Request a Free Consultation <FaArrowRight /></a></div><div className="ns-service-note"><strong>Important</strong><p>This page provides general information. Advice depends on the facts, documents and applicable law in each matter.</p></div></aside></div></section>
+      </article><aside><div className="ns-service-cta"><h2>Need Guidance?</h2><p>Share a brief summary and the available documents for an initial consultation.</p><a href="https://wa.me/919830015487?text=Hello%20Sanhita360%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation." target="_blank" rel="noopener noreferrer">Request a Free Consultation <FaArrowRight /></a></div><div className="ns-service-note"><strong>Important</strong><p>This page provides general information. Advice depends on the facts, documents and applicable law in each matter.</p></div></aside></div></section>
     </main>
     <Footer /><Styles />
   </>;

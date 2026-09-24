@@ -8,7 +8,6 @@ import {
 import {
   FaBars,
   FaTimes,
-  FaBalanceScale,
   FaChevronDown,
 } from "react-icons/fa";
 
@@ -69,15 +68,7 @@ const Header = () => {
             className="ns-header-brand"
             onClick={closeMenu}
           >
-            <FaBalanceScale className="ns-header-logo" />
-
-            <div className="ns-header-brand-text">
-              <h2>NagarikSuraksha</h2>
-
-              <small>
-                Legal Learning & Consultancy
-              </small>
-            </div>
+            <img className="ns-header-logo" src="/sanhita360-logo.png" alt="Sanhita360 — legal learning and consultation" />
           </Link>
 
           {/* DESKTOP NAVIGATION */}
@@ -395,8 +386,9 @@ const Header = () => {
           }
 
           .ns-header-logo {
-            width: 34px;
-            height: 34px;
+            width: 190px;
+            height: 76px;
+            object-fit: contain;
             flex-shrink: 0;
             color: #2563eb;
           }
@@ -641,8 +633,8 @@ const Header = () => {
             }
 
             .ns-header-logo {
-              width: 28px;
-              height: 28px;
+              width: 132px;
+              height: 54px;
             }
 
             .ns-header-brand {
@@ -676,8 +668,8 @@ const Header = () => {
             }
 
             .ns-header-logo {
-              width: 25px;
-              height: 25px;
+              width: 112px;
+              height: 46px;
             }
           }
         `}

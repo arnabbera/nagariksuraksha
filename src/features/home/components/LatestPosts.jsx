@@ -93,7 +93,7 @@ const PostCard = ({ post }) => {
         {imageUrl ? (
           <img
             src={imageUrl}
-            alt={post.title || "NagarikSuraksha article"}
+            alt={post.title || "Sanhita360 article"}
             loading="lazy"
           />
         ) : (

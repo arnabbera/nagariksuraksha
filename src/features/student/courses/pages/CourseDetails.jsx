@@ -1,4 +1,4 @@
-﻿import {
+import {
   useCallback,
   useEffect,
   useMemo,
@@ -787,7 +787,7 @@ export default function CourseDetails() {
         }
         description={
           course.shortDescription ||
-          "NagarikSuraksha Learning"
+          "Sanhita360 Learning"
         }
         breadcrumbs={[
           "Student",
@@ -1231,7 +1231,7 @@ export default function CourseDetails() {
               <div>
                 <FaCheckCircle />
                 <span>
-                  NagarikSuraksha Admin-conducted final online examination
+                  Sanhita360 Admin-conducted final online examination
                 </span>
               </div>
 

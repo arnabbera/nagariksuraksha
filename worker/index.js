@@ -20,34 +20,34 @@ const FIRESTORE_SCOPE = "https://www.googleapis.com/auth/datastore";
 
 const LEGAL_UPDATE_SOCIAL_META = {
   "/posts/masterda-surya-sen-chittagong-armoury-raid": {
-    title: "Masterda Surya Sen and the Chittagong Armoury Raid | NagarikSuraksha",
+    title: "Masterda Surya Sen and the Chittagong Armoury Raid | Sanhita360",
     description: "Remembering the schoolteacher and revolutionary organiser who led the historic Chittagong Armoury Raid of 18 April 1930.",
     image: "/images/freedom-fighters/masterda-surya-sen.jpg",
   },
   "/legal-updates/section-200-crpc-section-223-bnss-private-complaint": {
-    title: "Section 200 CrPC and Section 223 BNSS Explained | NagarikSuraksha",
+    title: "Section 200 CrPC and Section 223 BNSS Explained | Sanhita360",
     description: "Understand private complaints before a Magistrate, the CrPC-to-BNSS procedure, accused-hearing safeguard and difference from a police-investigation request.",
     image: "/images/legal-updates/section-200-crpc-section-223-bnss.jpg",
   },
   "/legal-updates/tech-startup-regulatory-compliance-2026": {
-    title: "Tech Startup Regulatory Compliance in 2026 | NagarikSuraksha",
+    title: "Tech Startup Regulatory Compliance in 2026 | Sanhita360",
     description: "An India-focused startup guide to data protection, responsible AI, cybersecurity, consumer law and compliance-by-design before scaling.",
     image: "/images/legal-updates/tech-startup-regulatory-compliance-2026.jpg",
   },
   "/legal-updates/important-judgement-on-consumer-rights": {
-    title: "Important Judgments on Consumer Rights | NagarikSuraksha",
+    title: "Important Judgments on Consumer Rights | Sanhita360",
     description: "Understand consumer rights in India and landmark Supreme Court judgments concerning medical services, homebuyers, commercial purpose and telecom disputes.",
-    image: "/images/legal-updates/consumer-rights-landmark-judgments.jpg",
+    image: "/images/legal-updates/consumer-rights-landmark-judgments-sanhita360.png",
   },
   "/legal-updates/bought-mortgaged-property-by-fraud": {
-    title: "Bought a Mortgaged Property by Fraud? | NagarikSuraksha",
+    title: "Bought a Mortgaged Property by Fraud? | Sanhita360",
     description: "Practical legal steps in Kolkata when a seller conceals an earlier mortgage: lender notice, police complaint, SARFAESI and DRT remedies, and civil recovery.",
-    image: "/images/legal-updates/mortgaged-property-fraud.jpg",
+    image: "/images/legal-updates/mortgaged-property-fraud-sanhita360.png",
   },
   "/legal-updates/next-steps-unrecovered-online-fraud-funds": {
-    title: "Next Steps for Unrecovered Online Fraud Funds | NagarikSuraksha",
+    title: "Next Steps for Unrecovered Online Fraud Funds | Sanhita360",
     description: "Options available when money remains unrecovered after an online financial-fraud complaint, including MRM, police escalation, banking and consumer remedies.",
-    image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
+    image: "/images/legal-updates/unrecovered-online-fraud-funds-sanhita360.png",
   },
 };
 
@@ -404,10 +404,10 @@ const loadCourseSocialMeta = async (env, slug) => {
   if (!title) return null;
 
   const value = {
-    title: /NagarikSuraksha/i.test(title)
+    title: /Sanhita360/i.test(title)
       ? title
-      : `${title} | NagarikSuraksha`,
-    description: description || `Explore ${title} on NagarikSuraksha.`,
+      : `${title} | Sanhita360`,
+    description: description || `Explore ${title} on Sanhita360.`,
     image,
   };
 
@@ -417,6 +417,52 @@ const loadCourseSocialMeta = async (env, slug) => {
   });
 
   return value;
+};
+
+const loadPostSocialMeta = async (env, slug) => {
+  const token = await getGoogleAccessToken(env);
+  const response = await fetch(
+    `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:runQuery`,
+    {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${token}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        structuredQuery: {
+          from: [{ collectionId: "posts" }],
+          where: {
+            fieldFilter: {
+              field: { fieldPath: "slug" },
+              op: "EQUAL",
+              value: { stringValue: slug },
+            },
+          },
+          limit: 1,
+        },
+      }),
+    },
+  );
+
+  if (!response.ok) return null;
+  const result = await response.json();
+  const fields = result.find((entry) => entry.document)?.document?.fields;
+  if (!fields || fields.status?.stringValue !== "published" || fields.deleted?.booleanValue === true) return null;
+
+  const rawTitle = getFirestoreString(fields, ["seo.title", "title"]);
+  if (!rawTitle) return null;
+  const title = rawTitle.replace(/NagarikSuraksha/gi, "Sanhita360");
+  const description = getFirestoreString(fields, ["seo.description", "excerpt"])
+    .replace(/NagarikSuraksha/gi, "Sanhita360");
+  const image = getFirestoreString(fields, [
+    "seo.ogImageUrl", "media.desktop.url", "desktopImageUrl",
+  ]);
+  return {
+    title: /Sanhita360/i.test(title) ? title : `${title} | Sanhita360`,
+    description: description || `Read ${title} on Sanhita360.`,
+    image,
+  };
 };
 
 const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl) => {
@@ -776,9 +822,9 @@ export default {
       return rewriteCourseSocialMetadata(
         assetResponse,
         {
-          title: "Live Online Law Classes | NagarikSuraksha",
+          title: "Live Online Law Classes | Sanhita360",
           description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
-          image: `${url.origin}/live-online-classes-whatsapp-wide-v3.jpg`,
+          image: `${url.origin}/live-online-classes-sanhita360.png`,
           imageWidth: 1200,
           imageHeight: 630,
         },
@@ -799,9 +845,9 @@ export default {
       return rewriteCourseSocialMetadata(
         assetResponse,
         {
-          title: "Certificate Courses in Legal Studies | NagarikSuraksha",
-          description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at NagarikSuraksha.",
-          image: `${url.origin}/certificate-courses-whatsapp-wide-v3.jpg`,
+          title: "Certificate Courses in Legal Studies | Sanhita360",
+          description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360.",
+          image: `${url.origin}/certificate-courses-sanhita360.png`,
           imageWidth: 1200,
           imageHeight: 630,
         },
@@ -858,6 +904,23 @@ export default {
         }
       } catch (error) {
         console.error("Unable to prepare course social preview", error.message);
+      }
+    }
+
+    const postMatch = url.pathname.match(/^\/posts\/([^/]+)\/?$/);
+    if (
+      postMatch &&
+      assetResponse.headers.get("content-type")?.includes("text/html")
+    ) {
+      try {
+        const slug = decodeURIComponent(postMatch[1]).trim();
+        const canonicalUrl = `${url.origin}/posts/${encodeURIComponent(slug)}`;
+        const metadata = await loadPostSocialMeta(env, slug);
+        if (metadata) {
+          return rewriteCourseSocialMetadata(assetResponse, metadata, canonicalUrl, canonicalUrl);
+        }
+      } catch (error) {
+        console.error("Unable to prepare post social preview", error.message);
       }
     }
 

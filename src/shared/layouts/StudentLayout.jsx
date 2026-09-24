@@ -109,7 +109,7 @@ const StudentLayout = () => {
       >
         <div className="ns-student-sidebar-header">
           <div>
-            <h2>NagarikSuraksha</h2>
+            <img src="/sanhita360-logo.png" alt="Sanhita360" style={{ width: 175, maxWidth: "100%", height: "auto", background: "#fff", borderRadius: 8 }} />
             <p>Student Portal</p>
           </div>
 
@@ -194,7 +194,7 @@ const StudentLayout = () => {
 
             <div>
               <p>Learning Portal</p>
-              <h1>NagarikSuraksha</h1>
+              <h1>Sanhita360</h1>
             </div>
           </div>
 

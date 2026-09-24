@@ -211,7 +211,7 @@ export default function PublicCourseDetailsPage() {
           ?.shortDescription ||
         course
           ?.description ||
-        `Study ${course.title} with chapter-wise law notes, study materials and learning resources at NagarikSuraksha.`;
+        `Study ${course.title} with chapter-wise law notes, study materials and learning resources at Sanhita360.`;
 
       const canonical =
         course?.seo
@@ -316,7 +316,7 @@ export default function PublicCourseDetailsPage() {
             `${SEO_CONFIG.siteUrl}/#organization`,
 
           name:
-            "NagarikSuraksha",
+            "Sanhita360",
 
           url:
             `${SEO_CONFIG.siteUrl}/`,
@@ -384,7 +384,7 @@ export default function PublicCourseDetailsPage() {
       <>
         <SEO
           title="Course Not Found"
-          description="The requested NagarikSuraksha course could not be found."
+          description="The requested Sanhita360 course could not be found."
           canonical={`/courses/${courseSlug}`}
           robots="noindex, follow"
         />
@@ -489,7 +489,7 @@ export default function PublicCourseDetailsPage() {
     `${courseCanonicalUrl}?share=course-card-v2`;
 
   const courseShareText =
-    `Explore ${course.title} on NagarikSuraksha`;
+    `Explore ${course.title} on Sanhita360`;
 
   const copyCourseLink =
     async () => {
@@ -963,7 +963,7 @@ export default function PublicCourseDetailsPage() {
             </h2>
 
             <p>
-              NagarikSuraksha provides
+              Sanhita360 provides
               structured LL.B learning
               resources to help students
               study {course.title},
@@ -977,7 +977,7 @@ export default function PublicCourseDetailsPage() {
               pathway to study chapter-wise
               material and continue their
               learning through the
-              NagarikSuraksha student
+              Sanhita360 student
               portal.
             </p>
 
@@ -1076,7 +1076,7 @@ export default function PublicCourseDetailsPage() {
                 </h3>
 
                 <p>
-                  Nagarik Suraksha is an independent, private educational portal. We are <strong>not</strong> affiliated with, endorsed by, accredited by, or connected to any government agency, university, or official educational board.
+                  Sanhita360 is an independent, private educational portal. We are <strong>not</strong> affiliated with, endorsed by, accredited by, or connected to any government agency, university, or official educational board.
                 </p>
               </article>
 
@@ -1100,7 +1100,7 @@ export default function PublicCourseDetailsPage() {
                 </p>
 
                 <p className="course-important-notice">
-                  <strong>Important Notice:</strong> The certificate issued by Nagarik Suraksha is an appreciation/completion document for personal learning only. It <strong>does not</strong> constitute an accredited academic degree, official diploma, professional licence, or government qualification.
+                  <strong>Important Notice:</strong> The certificate issued by Sanhita360 is an appreciation/completion document for personal learning only. It <strong>does not</strong> constitute an accredited academic degree, official diploma, professional licence, or government qualification.
                 </p>
               </article>
             </div>

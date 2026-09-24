@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   FaGoogle,
   FaInfoCircle,
-  FaShieldAlt,
 } from "react-icons/fa";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
@@ -52,12 +51,12 @@ export default function LoginPage() {
     <main className="student-login-page">
       <section className="student-login-card">
         <div className="student-login-brand" aria-hidden="true">
-          <FaShieldAlt />
+          <img src="/sanhita360-logo.png" alt="Sanhita360" style={{ width: 175, maxWidth: "100%", height: "auto" }} />
         </div>
 
         <div className="student-login-heading">
           <p className="student-login-eyebrow">
-            NagarikSuraksha
+            Sanhita360
           </p>
 
           <h1>Student Login</h1>
@@ -102,7 +101,7 @@ export default function LoginPage() {
           <div className="student-login-disclaimer-section">
             <h3>1. Independent Entity Disclaimer</h3>
             <p>
-              Nagarik Suraksha is an independent, private educational portal.
+              Sanhita360 is an independent, private educational portal.
               We are <strong>not</strong> affiliated with, endorsed by,
               accredited by, or connected to any government agency,
               university, or official educational board.
@@ -128,7 +127,7 @@ export default function LoginPage() {
 
             <p className="student-login-important-notice">
               <strong>Important Notice:</strong> The certificate issued by
-              Nagarik Suraksha is an appreciation/completion document for
+              Sanhita360 is an appreciation/completion document for
               personal learning only. It <strong>does not</strong> constitute
               an accredited academic degree, official diploma, professional
               licence, or government qualification.
@@ -160,8 +159,8 @@ export default function LoginPage() {
         }
 
         .student-login-brand {
-          width: 62px;
-          height: 62px;
+          width: 190px;
+          height: 78px;
           display: grid;
           place-items: center;
           margin: 0 auto 18px;

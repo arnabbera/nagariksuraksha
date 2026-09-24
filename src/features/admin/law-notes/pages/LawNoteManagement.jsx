@@ -691,7 +691,7 @@ export default function LawNoteManagement() {
             <EmptyState
               icon="📚"
               title="No law notes found"
-              description="Create your first public NagarikSuraksha law note using the form."
+              description="Create your first public Sanhita360 law note using the form."
             />
           ) : (
             <div className="ns-law-note-admin-list">

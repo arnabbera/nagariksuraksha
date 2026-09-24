@@ -17,8 +17,8 @@ export default function TermsPage() {
   return (
     <>
       <SEO
-        title="Terms and Conditions | NagarikSuraksha"
-        description="Read the NagarikSuraksha terms for course enrollment, certification, accounts, payments, permitted use and liability."
+        title="Terms and Conditions | Sanhita360"
+        description="Read the Sanhita360 terms for course enrollment, certification, accounts, payments, permitted use and liability."
         canonical="/terms"
         robots="index, follow"
       />
@@ -39,11 +39,11 @@ export default function TermsPage() {
             <div className="ns-terms-policy-intro">
               <FaFileContract />
               <p>
-                Welcome to <strong>Nagarik Suraksha</strong> (&quot;we,&quot;
+                Welcome to <strong>Sanhita360</strong> (&quot;we,&quot;
                 &quot;our,&quot; or &quot;us&quot;). By accessing or using our
                 web portal located at{" "}
-                <a href="https://www.nagariksuraksha.com">
-                  www.nagariksuraksha.com
+                <a href="https://www.sanhita360.com">
+                  www.sanhita360.com
                 </a>
                 , you agree to comply with and be bound by the following Terms
                 and Conditions. Please read them carefully before using our
@@ -54,7 +54,7 @@ export default function TermsPage() {
             <TermsCard icon={<FaFileContract />} title="1. Scope of Services">
               <ul>
                 <li>
-                  <strong>Individual Course Access:</strong> Each Nagarik Suraksha
+                  <strong>Individual Course Access:</strong> Each Sanhita360
                   course requires a ₹49 one-time enrollment fee. Successful
                   payment unlocks only the selected course.
                 </li>
@@ -69,7 +69,7 @@ export default function TermsPage() {
             <TermsCard icon={<FaUniversity />} title="2. Independent Portal Disclaimer">
               <ul>
                 <li>
-                  Nagarik Suraksha is an{" "}
+                  Sanhita360 is an{" "}
                   <strong>independent, private educational portal</strong>.
                 </li>
                 <li>
@@ -78,7 +78,7 @@ export default function TermsPage() {
                   educational board, university, or official licensing body.
                 </li>
                 <li>
-                  The certificates issued by Nagarik Suraksha are purely{" "}
+                  The certificates issued by Sanhita360 are purely{" "}
                   <strong>appreciation/completion documents</strong> for
                   personal skill development. They do <strong>not</strong>{" "}
                   constitute an accredited academic degree, official diploma,
@@ -134,8 +134,7 @@ export default function TermsPage() {
               <ul>
                 <li>
                   All course content, mock test questions, PDFs, website
-                  design, graphics, and logos are the property of Nagarik
-                  Suraksha.
+                  design, graphics, and logos are the property of Sanhita360.
                 </li>
                 <li>
                   You are granted a limited, personal, non-exclusive licence to
@@ -162,7 +161,7 @@ export default function TermsPage() {
                   infrastructure.
                 </li>
                 <li>
-                  Misrepresent your Nagarik Suraksha certificate as a
+                  Misrepresent your Sanhita360 certificate as a
                   government-issued or university-accredited credential to
                   third parties or employers.
                 </li>
@@ -171,7 +170,7 @@ export default function TermsPage() {
 
             <TermsCard icon={<FaShieldAlt />} title="7. Limitation of Liability">
               <p>
-                To the fullest extent permitted by law, Nagarik Suraksha shall
+                To the fullest extent permitted by law, Sanhita360 shall
                 not be liable for any direct, indirect, incidental, or
                 consequential damages resulting from your use or inability to
                 use the portal, reliance on course materials, or the
@@ -198,13 +197,13 @@ export default function TermsPage() {
               <dl className="ns-terms-policy-contact">
                 <div>
                   <dt>Platform Name</dt>
-                  <dd>Nagarik Suraksha</dd>
+                  <dd>Sanhita360</dd>
                 </div>
                 <div>
                   <dt>Email</dt>
                   <dd>
-                    <a href="mailto:nagariksuraksha@gmail.com">
-                      nagariksuraksha@gmail.com
+                    <a href="mailto:beraarnab@gmail.com">
+                      beraarnab@gmail.com
                     </a>
                   </dd>
                 </div>

@@ -24,7 +24,7 @@ export const mediaLawCourse = createCourseModel({
   createdBy: "system",
   updatedBy: "system",
   seo: {
-    title: "Media Law Course | NagarikSuraksha",
+    title: "Media Law Course | Sanhita360",
     description:
       "Study Media Law through eight structured units covering press freedom, defamation, contempt, broadcasting, copyright, internet regulation and advertising law.",
     focusKeyword: "media law course",

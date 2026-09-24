@@ -26,7 +26,7 @@ export const generalPrinciplesOfContractCourse = createCourseModel({
   updatedBy: "system",
   seo: {
     title:
-      "General Principles of Contract and Specific Relief Course | NagarikSuraksha",
+      "General Principles of Contract and Specific Relief Course | Sanhita360",
     description:
       "Study Indian contract law and the Specific Relief Act through eight structured units, downloadable learning material, mock tests and certification.",
     focusKeyword: "general principles of contract law",

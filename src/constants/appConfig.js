@@ -1,10 +1,10 @@
 export const APP_CONFIG = Object.freeze({
-  APP_NAME: "NagarikSuraksha",
+  APP_NAME: "Sanhita360",
   APP_VERSION: "1.0.0",
 
   ADMIN_EMAIL: "beraarnab@gmail.com",
 
-  WEBSITE_URL: "https://www.nagariksuraksha.com",
+  WEBSITE_URL: "https://www.sanhita360.com",
   YOUTUBE_CHANNEL_URL:
     "https://www.youtube.com/@nagariksuraksha-ab",
 
@@ -17,7 +17,7 @@ export const APP_CONFIG = Object.freeze({
   ENROLLMENT_PREFIX: "NS",
   ENROLLMENT_SEQUENCE_LENGTH: 6,
 
-  SUPPORT_EMAIL: "info@nagariksuraksha.com",
+  SUPPORT_EMAIL: "beraarnab@gmail.com",
   SUPPORT_PHONE: "",
   SUPPORT_WHATSAPP: "",
 
@@ -44,7 +44,7 @@ export const APP_CONFIG = Object.freeze({
 
   SEO: {
     DEFAULT_TITLE:
-      "NagarikSuraksha | Legal Learning & Consultancy",
+      "Sanhita360 | Legal Learning & Consultancy",
     DEFAULT_DESCRIPTION:
       "Legal learning, legal awareness and professional legal consultancy services in Kolkata.",
     DEFAULT_SCHEMA_TYPE: "WebSite",

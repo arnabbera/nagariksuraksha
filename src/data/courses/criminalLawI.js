@@ -31,7 +31,7 @@ export const criminalLawICourse = createCourseModel({
   updatedBy: "system",
   seo: {
     title:
-      "Criminal Law I: IPC to BNS Course | NagarikSuraksha",
+      "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
       "Study Indian criminal law through eight structured units covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",

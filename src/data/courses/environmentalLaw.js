@@ -25,7 +25,7 @@ export const environmentalLawCourse = createCourseModel({
   createdBy: "system",
   updatedBy: "system",
   seo: {
-    title: "Environmental Law Course | NagarikSuraksha",
+    title: "Environmental Law Course | Sanhita360",
     description:
       "Study environmental law through eight structured units covering constitutional protection, pollution-control laws, forests, wildlife, biodiversity and the National Green Tribunal.",
     focusKeyword: "environmental law course",

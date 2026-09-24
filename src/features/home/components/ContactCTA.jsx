@@ -15,12 +15,12 @@ const ContactCTA = () => {
           <p className="ns-contact-cta-description">
             Whether you need legal consultation, property verification,
             consumer dispute assistance or want to learn law through our
-            structured LL.B learning platform, NagarikSuraksha is here to help.
+            structured LL.B learning platform, Sanhita360 is here to help.
           </p>
 
           <div className="ns-contact-cta-actions">
             <a
-              href="https://wa.me/919830015487?text=Hello%20NagarikSuraksha%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation."
+              href="https://wa.me/919830015487?text=Hello%20Sanhita360%2C%20I%20would%20like%20to%20request%20a%20free%20legal%20consultation."
               className="primary"
               target="_blank"
               rel="noopener noreferrer"

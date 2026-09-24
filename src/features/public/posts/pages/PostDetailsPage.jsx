@@ -360,7 +360,7 @@ export default function PostDetailsPage() {
       const description =
         post?.seo?.description ||
         post.excerpt ||
-        `Read ${post.title} on NagarikSuraksha.`;
+        `Read ${post.title} on Sanhita360.`;
 
       const canonical =
         post?.seo?.canonicalUrl ||
@@ -382,7 +382,7 @@ export default function PostDetailsPage() {
           : []),
         post.category,
         post.title,
-        "NagarikSuraksha",
+        "Sanhita360",
       ].filter(Boolean);
 
       const image =
@@ -550,8 +550,8 @@ export default function PostDetailsPage() {
     return (
       <>
         <SEO
-          title="Post Not Found | NagarikSuraksha"
-          description="The requested NagarikSuraksha post could not be found."
+          title="Post Not Found | Sanhita360"
+          description="The requested Sanhita360 post could not be found."
           canonical={`/posts/${postSlug}`}
           robots="noindex, follow"
         />
@@ -606,31 +606,17 @@ export default function PostDetailsPage() {
       post.slug,
     )}`;
 
-  const socialShareUrl =
-    `https://nagariksuraksha-social-share.beraarnab.workers.dev/?slug=${encodeURIComponent(
-      post.slug,
-    )}&title=${encodeURIComponent(
-      post.title ||
-        "NagarikSuraksha",
-    )}&description=${encodeURIComponent(
-      post.excerpt ||
-        seo.description ||
-        "Legal learning, law notes and legal awareness.",
-    )}&image=${encodeURIComponent(
-      seo.image ||
-        desktopImage ||
-        "",
-    )}&v=5`;
+  const socialShareUrl = shareUrl;
 
   const shareTitle =
     post.title ||
-    "NagarikSuraksha";
+    "Sanhita360";
 
   const shareText =
     post.excerpt ||
     seo.description ||
     post.title ||
-    "Read this post on NagarikSuraksha.";
+    "Read this post on Sanhita360.";
 
   const showShareMessage = (
     message,
@@ -671,7 +657,7 @@ export default function PostDetailsPage() {
   const shareOnX =
     () => {
       const text =
-        `${shareTitle} - NagarikSuraksha`;
+        `${shareTitle} - Sanhita360`;
 
       openShareWindow(
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -942,7 +928,7 @@ export default function PostDetailsPage() {
                 <p>
                   Browse other public legal
                   awareness articles and law
-                  explainers from NagarikSuraksha.
+                  explainers from Sanhita360.
                 </p>
 
                 <Link to="/posts">
