@@ -158,7 +158,7 @@ const Header = () => {
                     style={dropdownLink}
                     onClick={closeMenu}
                   >
-                    Certificate Courses
+                    Law Courses
                   </Link>
 
                   <Link
@@ -304,7 +304,7 @@ const Header = () => {
                     to="/law-courses"
                     onClick={closeMenu}
                   >
-                    Certificate Courses
+                    Law Courses
                   </Link>
 
                   <Link
