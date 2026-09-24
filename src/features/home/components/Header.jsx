@@ -169,7 +169,7 @@ const Header = () => {
                     Live Online Classes
                   </Link>
 
-                  <Link to="/#legal-updates" style={dropdownLink} onClick={closeMenu}>
+                  <Link to="/#legal-remedies" style={dropdownLink} onClick={closeMenu}>
                     Legal Updates
                   </Link>
 
@@ -314,7 +314,7 @@ const Header = () => {
                     Live Online Classes
                   </Link>
 
-                  <Link to="/#legal-updates" onClick={closeMenu}>
+                  <Link to="/#legal-remedies" onClick={closeMenu}>
                     Legal Updates
                   </Link>
 

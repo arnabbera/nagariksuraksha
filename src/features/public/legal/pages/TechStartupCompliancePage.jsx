@@ -72,7 +72,7 @@ export default function TechStartupCompliancePage() {
         <section className="ns-startup-hero">
           <div className="ns-startup-wrap ns-startup-hero-grid">
             <div>
-              <Link to="/#legal-updates" className="ns-startup-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-startup-back"><FaArrowLeft /> Legal Updates</Link>
               <span className="ns-startup-eyebrow"><FaBalanceScale /> Technology, AI & Compliance</span>
               <h1>For Tech Startups in 2026, Compliance Is a Product Requirement</h1>
               <p>AI performance may attract users, but weak privacy, unsafe automation, misleading claims or poor incident readiness can stop a promising product from scaling. Legal risk must be designed into the business—not added after launch.</p>

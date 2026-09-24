@@ -78,7 +78,7 @@ export default function MortgagedPropertyFraudPage() {
         <section className="ns-property-hero">
           <div className="ns-property-wrap ns-property-hero-grid">
             <div>
-              <Link to="/#legal-updates" className="ns-property-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-property-back"><FaArrowLeft /> Legal Updates</Link>
               <span className="ns-property-eyebrow"><FaHome /> Property Fraud and Mortgage Claims</span>
               <h1>Bought a Mortgaged Property by Fraud?</h1>
               <p>Here is how a nagarik can act to protect the home, challenge unlawful conduct and pursue recovery when a seller concealed an earlier mortgage or lien.</p>

@@ -48,7 +48,7 @@ export default function Section200CrpcSection223BnssPage() {
         <section className="ns-complaint-hero">
           <div className="ns-complaint-wrap ns-complaint-hero-grid">
             <div>
-              <Link to="/#legal-updates" className="ns-complaint-back"><FaArrowLeft /> Legal Updates</Link>
+              <Link to="/#legal-remedies" className="ns-complaint-back"><FaArrowLeft /> Legal Updates</Link>
               <span className="ns-complaint-eyebrow"><FaGavel /> Criminal Procedure Explained</span>
               <h1>What Was Section 200 CrPC—and What Is Section 223 BNSS?</h1>
               <p>Both provisions concern a private criminal complaint presented directly before a Magistrate, but the BNSS is not merely a renumbering exercise. It introduces important pre-cognizance hearing safeguards.</p>

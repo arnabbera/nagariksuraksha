@@ -114,7 +114,7 @@ export default function AppRouter() {
     if (hash) {
       const frame = window.requestAnimationFrame(() => {
         document
-          .getElementById(hash.slice(1))
+          .getElementById(hash === "#legal-updates" ? "legal-remedies" : hash.slice(1))
           ?.scrollIntoView({
             behavior: "smooth",
             block: "start",
