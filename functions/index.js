@@ -12,7 +12,38 @@ const db = getFirestore();
 
 const SITE_URL = "https://www.sanhita360.com";
 const DEFAULT_IMAGE = `${SITE_URL}/favicon.svg`;
-const COURSE_FEE_PAISE = 4900;
+const INTRO_COURSE_FEE_PAISE = 9900;
+const REGULAR_COURSE_FEE_PAISE = 29900;
+const INTRO_OFFER_LIMIT = 100;
+const pricingRef = db.collection("coursePricing").doc("introductory-2026");
+const reservationRef = (orderId) => db.collection("coursePricingReservations").doc(orderId);
+
+const coursePrice = async () => {
+  const snapshot = await pricingRef.get();
+  return Number(snapshot.data()?.reserved || 0) < INTRO_OFFER_LIMIT
+    ? INTRO_COURSE_FEE_PAISE : REGULAR_COURSE_FEE_PAISE;
+};
+
+const reserveIntroOrder = (orderId, studentId, courseId) => db.runTransaction(async (transaction) => {
+  const snapshot = await transaction.get(pricingRef);
+  const reserved = Number(snapshot.data()?.reserved || 0);
+  if (reserved >= INTRO_OFFER_LIMIT) return false;
+  transaction.set(pricingRef, { reserved: reserved + 1, limit: INTRO_OFFER_LIMIT });
+  transaction.create(reservationRef(orderId), {
+    studentId, courseId, purchaseType: "certification", amount: INTRO_COURSE_FEE_PAISE,
+    reservedAt: FieldValue.serverTimestamp(),
+  });
+  return true;
+});
+
+const releaseIntroOrder = (orderId) => db.runTransaction(async (transaction) => {
+  const [pricing, reservation] = await Promise.all([
+    transaction.get(pricingRef), transaction.get(reservationRef(orderId)),
+  ]);
+  if (!reservation.exists) return;
+  transaction.delete(reservationRef(orderId));
+  transaction.update(pricingRef, { reserved: Math.max(0, Number(pricing.data()?.reserved || 0) - 1) });
+});
 const RAZORPAY_KEY_ID = defineSecret("RAZORPAY_KEY_ID");
 const RAZORPAY_KEY_SECRET = defineSecret("RAZORPAY_KEY_SECRET");
 
@@ -244,39 +275,62 @@ export const createCoursePayment = onCall(
       throw new HttpsError("already-exists", "This course is already paid and enrolled.");
     }
 
+    const razorpay = getRazorpay();
+    const pending = enrollment.certification?.payment;
+    if (pending?.status === "pending" && pending?.orderId && Number(pending?.amount) > 0) {
+      const previous = await razorpay.orders.fetch(pending.orderId);
+      if (previous.id === pending.orderId && Number(previous.amount) === Number(pending.amount) &&
+          previous.notes?.studentId === studentId && previous.notes?.courseId === courseId) {
+        return { keyId: RAZORPAY_KEY_ID.value(), orderId: previous.id,
+          amount: previous.amount, currency: "INR", courseId };
+      }
+    }
+
+    let reserved = false;
+    let order;
     try {
-      const order = await getRazorpay().orders.create({
-        amount: COURSE_FEE_PAISE,
-        currency: "INR",
+      const makeOrder = (amount) => razorpay.orders.create({
+        amount, currency: "INR",
         receipt: `ns_${Date.now()}_${studentId.slice(0, 8)}`,
-        notes: {
-          studentId,
-          courseId,
-          enrollmentId: enrollmentDocument.id,
-        },
+        notes: { studentId, courseId, purchaseType: "certification", enrollmentId: enrollmentDocument.id },
       });
+      let amount = await coursePrice();
+      order = await makeOrder(amount);
+      if (amount === INTRO_COURSE_FEE_PAISE) {
+        reserved = await reserveIntroOrder(order.id, studentId, courseId);
+        if (!reserved) {
+          amount = REGULAR_COURSE_FEE_PAISE;
+          order = await makeOrder(amount);
+        }
+      }
 
       await enrollmentDocument.ref.update({
         "certification.status": "pending-payment",
-        "certification.fee": 49,
+        "certification.fee": amount / 100,
         "certification.payment.status": "pending",
         "certification.payment.provider": "razorpay",
         "certification.payment.orderId": order.id,
-        "certification.payment.amount": COURSE_FEE_PAISE,
+        "certification.payment.amount": amount,
         "certification.payment.currency": "INR",
+        "certification.payment.purchaseType": "certification",
         "certification.payment.createdAt": FieldValue.serverTimestamp(),
         updatedAt: FieldValue.serverTimestamp(),
         updatedBy: studentId,
-      });
+      }, { lastUpdateTime: enrollmentDocument.updateTime });
 
       return {
         keyId: RAZORPAY_KEY_ID.value(),
         orderId: order.id,
-        amount: COURSE_FEE_PAISE,
+        amount,
         currency: "INR",
         courseId,
       };
     } catch (error) {
+      if (reserved && order?.id) {
+        try { await releaseIntroOrder(order.id); } catch (releaseError) {
+          console.error("Unable to release introductory price", releaseError);
+        }
+      }
       console.error("Unable to create Razorpay course order:", error);
       throw new HttpsError("internal", "Unable to start payment. Please try again.");
     }
@@ -330,14 +384,17 @@ export const verifyCoursePayment = onCall(
         razorpay.payments.fetch(paymentId),
       ]);
 
+      const expectedAmount = Number(enrollment.certification?.payment?.amount);
       const validPayment =
+        [4900, INTRO_COURSE_FEE_PAISE, REGULAR_COURSE_FEE_PAISE].includes(expectedAmount) &&
         order.status === "paid" &&
         payment.status === "captured" &&
         payment.order_id === orderId &&
-        Number(order.amount) === COURSE_FEE_PAISE &&
-        Number(payment.amount) === COURSE_FEE_PAISE &&
+        Number(order.amount) === expectedAmount &&
+        Number(payment.amount) === expectedAmount &&
         order.currency === "INR" &&
-        payment.currency === "INR";
+        payment.currency === "INR" &&
+        order.notes?.studentId === studentId && order.notes?.courseId === courseId;
 
       if (!validPayment) {
         throw new HttpsError(
@@ -346,9 +403,18 @@ export const verifyCoursePayment = onCall(
         );
       }
 
+      if (expectedAmount === INTRO_COURSE_FEE_PAISE) {
+        const reservation = await reservationRef(orderId).get();
+        if (!reservation.exists || reservation.data()?.studentId !== studentId ||
+            reservation.data()?.courseId !== courseId) {
+          throw new HttpsError("failed-precondition", "The introductory order could not be verified.");
+        }
+      }
+
       await enrollmentDocument.ref.update({
         accessType: "certification",
         "certification.status": "active",
+        "certification.fee": expectedAmount / 100,
         "certification.activatedAt": FieldValue.serverTimestamp(),
         "certification.payment.status": "paid",
         "certification.payment.provider": "razorpay",

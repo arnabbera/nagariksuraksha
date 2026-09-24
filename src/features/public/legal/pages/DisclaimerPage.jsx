@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
               <div>
                 <h2>2. Course Access and Fee</h2>
                 <p>
-                  Each course requires a one-time <strong>₹49 enrollment fee</strong>.
+                  Each course requires a one-time <strong>₹99 introductory fee for the first 100 checkout reservations, then ₹299</strong>.
                   Successful payment unlocks that individual course, its chapter
                   materials, downloadable PDFs, three mock tests and final test.
                 </p>
@@ -73,7 +73,7 @@ export default function DisclaimerPage() {
               <div>
                 <h2>3. Completion Certification</h2>
                 <p>
-                  The <strong>₹49 individual course fee</strong> covers course access,
+                  The <strong>individual course fee</strong> covers course access,
                   access to downloadable course PDFs, practice mock tests, and
                   a digital Certificate of Completion.
                 </p>

@@ -45,6 +45,7 @@ import {
   payForCourseWithRazorpay,
 } from "../../../../services/razorpayPaymentService";
 import { trackFunnelEvent } from "../../../../services/funnelAnalyticsService";
+import useCoursePricing, { formatINR } from "../../../../hooks/useCoursePricing";
 
 import {
   canJoinLiveSession,
@@ -75,6 +76,7 @@ const LIVE_CLASS_COURSE_SLUGS = new Set([
 export default function CourseDetails() {
   const { courseId: courseSlug } =
     useParams();
+  const pricing = useCoursePricing();
 
   const navigate = useNavigate();
 
@@ -472,7 +474,9 @@ export default function CourseDetails() {
 
   const certificationAvailable = true;
 
-  const certificationFee = 49;
+  const courseAmountPaise = Number(enrollment?.certification?.payment?.amount || 0) || pricing?.amount || 0;
+  const courseFeeLabel = courseAmountPaise ? formatINR(courseAmountPaise) : "current price";
+  const premiumFeeLabel = courseAmountPaise ? formatINR(courseAmountPaise + 49900) : "price at checkout";
 
   const certification =
     enrollment?.certification ||
@@ -1175,7 +1179,7 @@ export default function CourseDetails() {
 
             {!certificationPaymentCompleted && (
               <div className="ns-course-enroll-action">
-                <p>Pay ₹49 once to join this course and unlock all chapters, study PDFs, mock tests and the final examination.</p>
+                <p>Pay the one-time course fee to unlock all chapters, study PDFs, mock tests and the final examination. Introductory price {formatINR(9900)} for the first 100 checkout reservations, then {formatINR(29900)}.</p>
               </div>
             )}
               </>
@@ -1212,9 +1216,7 @@ export default function CourseDetails() {
               <div className="ns-certification-fee">
                 {isAdmin
                   ? "Admin Access"
-                  : certificationFee > 0
-                  ? `₹${certificationFee}`
-                  : "Free"}
+                  : courseFeeLabel}
               </div>
             </div>
 
@@ -1266,7 +1268,7 @@ export default function CourseDetails() {
                       handleCertificationPayment
                     }
                   >
-                    Enroll and Pay ₹49
+                    Enroll and Pay {courseFeeLabel}
                   </Button>
                 </div>
               )}
@@ -1278,7 +1280,7 @@ export default function CourseDetails() {
                 </strong>
 
                 <span>
-                  Your course enrollment request has been created. Complete the ₹49 payment to unlock this course.
+                  Your course enrollment request has been created. Complete the {courseFeeLabel} payment to unlock this course.
                 </span>
 
                 <Button
@@ -1290,7 +1292,7 @@ export default function CourseDetails() {
                   }
                   style={{ marginTop: "12px" }}
                 >
-                  Continue Payment ₹49
+                  Continue Payment {courseFeeLabel}
                 </Button>
               </div>
             )}
@@ -1554,7 +1556,7 @@ export default function CourseDetails() {
                 <h2>Live Online Classes</h2>
                 <p>Eight interactive Google Meet classes—one class for each chapter.</p>
               </div>
-              <strong>{certificationPaymentCompleted ? "₹499 Upgrade" : "₹548 Premium"}</strong>
+              <strong>{certificationPaymentCompleted ? "₹499 Upgrade" : `${premiumFeeLabel} Premium`}</strong>
             </div>
 
             <div className="ns-live-class-benefits">
@@ -1577,7 +1579,7 @@ export default function CourseDetails() {
                   ? "Live Plan Activation in Progress"
                   : certificationPaymentCompleted
                     ? "Upgrade to 8 Live Classes — ₹499"
-                    : "Choose Premium Live Plan — ₹548"}
+                    : `Choose Premium Live Plan — ${premiumFeeLabel}`}
               </Button>
             )}
           </div>

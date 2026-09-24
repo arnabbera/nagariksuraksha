@@ -131,7 +131,7 @@ const CourseCard = ({
               ? "Edit & Verify Course"
               : certificationPaymentCompleted
               ? "Continue Course"
-              : "Join Course — ₹49"}
+              : "Join Course — See Price"}
           </button>
         </div>
       </div>

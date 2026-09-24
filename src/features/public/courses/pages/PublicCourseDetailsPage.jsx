@@ -36,6 +36,7 @@ import {
   getCourseBySlug,
 } from "../../../../services/courseService";
 import { trackFunnelEvent } from "../../../../services/funnelAnalyticsService";
+import useCoursePricing, { formatINR } from "../../../../hooks/useCoursePricing";
 
 // =========================================================
 // HELPERS
@@ -82,6 +83,8 @@ export default function PublicCourseDetailsPage() {
   const {
     courseSlug,
   } = useParams();
+  const pricing = useCoursePricing();
+  const priceLabel = pricing ? formatINR(pricing.amount) : "current price";
 
   const enrollmentUrl = `/login?next=${encodeURIComponent(
     `/student/courses/${courseSlug}`,
@@ -344,6 +347,16 @@ export default function PublicCourseDetailsPage() {
           image;
       }
 
+      if (pricing) {
+        data.offers = {
+          "@type": "Offer",
+          url: courseUrl,
+          price: (pricing.amount / 100).toFixed(2),
+          priceCurrency: "INR",
+          availability: "https://schema.org/InStock",
+        };
+      }
+
       if (
         course.duration
       ) {
@@ -355,6 +368,7 @@ export default function PublicCourseDetailsPage() {
     }, [
       course,
       seo,
+      pricing,
     ]);
 
   // =======================================================
@@ -633,7 +647,7 @@ export default function PublicCourseDetailsPage() {
                   to={enrollmentUrl}
                   onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
                 >
-                  Enroll for ₹49
+                  Enroll for {priceLabel}
                   <FaArrowRight />
                 </Link>
 
@@ -934,7 +948,7 @@ export default function PublicCourseDetailsPage() {
                   to={enrollmentUrl}
                   onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
                 >
-                  Enroll for ₹49
+                  Enroll for {priceLabel}
                   <FaArrowRight />
                 </Link>
               </div>
@@ -1093,7 +1107,7 @@ export default function PublicCourseDetailsPage() {
                 </h3>
 
                 <p>
-                  Each course requires a one-time <strong>₹49 enrollment fee</strong>. After successful payment, that course and its learning materials become available under Enrolled Courses in the student portal.
+                  The one-time course fee is <strong>₹99 for the first 100 course checkout reservations, then ₹299</strong>. The available price is confirmed in checkout. After successful payment, that course and its learning materials become available under Enrolled Courses in the student portal.
                 </p>
               </article>
 
@@ -1103,7 +1117,7 @@ export default function PublicCourseDetailsPage() {
                 </h3>
 
                 <p>
-                  The <strong>₹49 individual course fee</strong> covers course access, access to downloadable course PDFs, practice mock tests, and a digital Certificate of Completion.
+                  The <strong>individual course fee</strong> covers course access, access to downloadable course PDFs, practice mock tests, and a digital Certificate of Completion.
                 </p>
 
                 <p className="course-important-notice">

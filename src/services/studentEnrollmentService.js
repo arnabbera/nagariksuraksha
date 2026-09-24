@@ -381,7 +381,8 @@ export const enrollForCertification = async (
   // CERTIFICATION FEE
   // -------------------------------------------------------
 
-  const fee = 49;
+  // The checkout API sets the actual introductory or regular fee on the order.
+  const fee = 299;
 
   const freeCertification =
     fee <= 0;

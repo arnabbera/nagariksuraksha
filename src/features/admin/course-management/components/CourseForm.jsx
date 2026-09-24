@@ -253,10 +253,7 @@ const CourseForm = ({
         course.certificationAvailable ??
         false,
 
-      certificationFee:
-        course.certification?.fee ??
-        course.certificationFee ??
-        0,
+      certificationFee: course.certification?.available ? 299 : 0,
 
       desktopImageUrl:
         course.media
@@ -602,15 +599,6 @@ const CourseForm = ({
       return "Short description is required.";
     }
 
-    if (
-      form.certificationAvailable &&
-      Number(
-        form.certificationFee,
-      ) < 0
-    ) {
-      return "Certification fee cannot be negative.";
-    }
-
     return "";
   };
 
@@ -737,11 +725,7 @@ const CourseForm = ({
           form.order || 0,
         ),
 
-        certificationFee:
-          Number(
-            form.certificationFee ||
-              0,
-          ),
+        certificationFee: form.certificationAvailable ? 299 : 0,
 
         desktopImageUrl:
           finalDesktopImageUrl,
@@ -1326,26 +1310,8 @@ const CourseForm = ({
 
       {form.certificationAvailable && (
         <div className="ns-course-field ns-full-width">
-          <label htmlFor="certification-fee">
-            Certification fee
-          </label>
-
-          <input
-            id="certification-fee"
-            type="number"
-            min="0"
-            value={
-              form.certificationFee
-            }
-            onChange={(
-              event,
-            ) =>
-              updateField(
-                "certificationFee",
-                event.target.value,
-              )
-            }
-          />
+          <strong>Course enrollment price</strong>
+          <p>₹99 for the first 100 checkout reservations across Sanhita360, then ₹299. The payment server confirms and enforces the final price. Live classes add ₹499.</p>
         </div>
       )}
 
