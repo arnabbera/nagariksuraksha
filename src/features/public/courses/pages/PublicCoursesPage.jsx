@@ -39,6 +39,7 @@ import {
 import {
   getPublishedChaptersForCourse,
 } from "../../../../services/chapterService";
+import useCoursePricing, { formatINR } from "../../../../hooks/useCoursePricing";
 
 const CERTIFICATE_COURSES_URL =
   "https://www.sanhita360.com/share/certificate-courses-card-v3";
@@ -76,6 +77,7 @@ const getCourseUrl = (
 
 const createStructuredData = (
   courses,
+  pricing,
 ) => ({
   "@context":
     "https://schema.org",
@@ -114,6 +116,16 @@ const createStructuredData = (
 
         name:
           course.title,
+        item: {
+          "@type": "Course",
+          name: course.title,
+          url: `${SEO_CONFIG.siteUrl}${getCourseUrl(course)}`,
+          provider: { "@type": "EducationalOrganization", name: "Sanhita360" },
+          ...(pricing ? { offers: {
+            "@type": "Offer", price: (pricing.amount / 100).toFixed(2),
+            priceCurrency: "INR", availability: "https://schema.org/InStock",
+          } } : {}),
+        },
       }),
     ),
 });
@@ -123,6 +135,7 @@ const createStructuredData = (
 // =========================================================
 
 export default function PublicCoursesPage() {
+  const pricing = useCoursePricing();
   const [
     courses,
     setCourses,
@@ -277,6 +290,7 @@ export default function PublicCoursesPage() {
   const structuredData =
     createStructuredData(
       courses,
+      pricing,
     );
 
   return (
@@ -563,7 +577,7 @@ export default function PublicCoursesPage() {
                               </p>
                             )}
 
-                            <p>₹49 per course · Chapters, study materials, mock tests and a completion certificate included.</p>
+                            <p>{pricing ? `${formatINR(pricing.amount)} per course${pricing.remaining > 0 ? " introductory offer for the first 100 checkout reservations" : ""}` : "₹99 for the first 100 checkout reservations, then ₹299"} · Chapters, study materials, mock tests and a completion certificate included.</p>
 
                             <Link
                               className="course-link"

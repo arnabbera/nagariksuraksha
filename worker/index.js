@@ -1,6 +1,7 @@
-const COURSE_FEE_PAISE = 4900;
+const INTRO_COURSE_FEE_PAISE = 9900;
+const REGULAR_COURSE_FEE_PAISE = 29900;
+const INTRO_OFFER_LIMIT = 100;
 const LIVE_CLASS_FEE_PAISE = 49900;
-const PREMIUM_FEE_PAISE = COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE;
 const LIVE_CLASS_COURSE_IDS = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns",
   "code-of-civil-procedure-and-limitation",
@@ -499,11 +500,10 @@ const loadCourseSocialMeta = async (env, slug) => {
 
   const result = await response.json();
   const fields = result.find((entry) => entry.document)?.document?.fields;
-  if (
-    !fields ||
-    fields.status?.stringValue !== "published" ||
-    fields.deleted?.booleanValue === true
-  ) return null;
+  if (!fields && slug === "media-law") {
+    return { title: "Media Law | Sanhita360", description: "Study media law, broadcasting, digital media and advertising law with Sanhita360.", image: "" };
+  }
+  if (!fields || fields.status?.stringValue !== "published" || fields.deleted?.booleanValue === true) return null;
 
   const title = getFirestoreString(fields, ["seo.title", "title"]);
   const description = getFirestoreString(fields, [
@@ -638,6 +638,28 @@ const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl
       },
     });
 
+  if (Number.isSafeInteger(metadata.coursePricePaise)) {
+    rewriter.on("head", {
+      element(element) {
+        const structuredData = {
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: metadata.title,
+          description: metadata.description,
+          url: canonicalUrl,
+          provider: { "@type": "EducationalOrganization", name: "Sanhita360" },
+          offers: {
+            "@type": "Offer", url: canonicalUrl,
+            price: (metadata.coursePricePaise / 100).toFixed(2),
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+          },
+        };
+        element.append(`<script type="application/ld+json">${JSON.stringify(structuredData).replace(/</g, "\\u003c")}</script>`, { html: true });
+      },
+    });
+  }
+
   if (metadata.image) {
     rewriter.on("head", {
       element(element) {
@@ -664,6 +686,39 @@ const rewriteCourseSocialMetadata = (response, metadata, canonicalUrl, socialUrl
   }
 
   return rewriter.transform(response);
+};
+
+const courseSitemap = async (request, env) => {
+  const response = await env.ASSETS.fetch(request);
+  if (!response.ok) return response;
+  const token = await getGoogleAccessToken(env);
+  const courses = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:runQuery`, {
+    method: "POST",
+    headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ structuredQuery: {
+      from: [{ collectionId: "courses" }],
+      limit: 500,
+    } }),
+  });
+  if (!courses.ok) return response;
+  const rows = await courses.json();
+  const slugs = new Set();
+  let storedMediaLaw = false;
+  for (const row of rows) {
+    const fields = row.document?.fields;
+    const slug = fields?.slug?.stringValue;
+    if (slug === "media-law") storedMediaLaw = true;
+    if (fields?.status?.stringValue === "published" && fields?.deleted?.booleanValue !== true &&
+        /^[a-z0-9-]{1,160}$/.test(slug || "")) slugs.add(slug);
+  }
+  if (!storedMediaLaw) slugs.add("media-law");
+  const urls = [...slugs].sort().map((slug) =>
+    `  <url><loc>https://www.sanhita360.com/courses/${slug}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`,
+  ).join("\n");
+  const xml = (await response.text()).replace("</urlset>", `${urls}\n</urlset>`);
+  return new Response(xml, {
+    headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=300" },
+  });
 };
 
 const updateEnrollment = async ({ enrollment, token, topLevelFields }) => {
@@ -714,6 +769,103 @@ const readBody = async (request) => {
     return await request.json();
   } catch {
     fail("Invalid request.");
+  }
+};
+
+const pricingDocument = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/coursePricing/introductory-2026`;
+const pricingReservations = `projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/coursePricingReservations`;
+
+const readPricing = async (env) => {
+  const token = await getGoogleAccessToken(env);
+  const response = await fetch(`${firestoreDocumentsUrl}/${pricingDocument}`, {
+    headers: { authorization: `Bearer ${token}` },
+  });
+  if (response.status === 404) return { token, reserved: 0, updateTime: null };
+  if (!response.ok) fail("Unable to check the current course price.", 503);
+  const document = await response.json();
+  const reserved = Number(document.fields?.reserved?.integerValue || 0);
+  if (!Number.isSafeInteger(reserved) || reserved < 0) fail("Course pricing is unavailable.", 503);
+  return { token, reserved, updateTime: document.updateTime };
+};
+
+const coursePricing = async (env) => {
+  const { reserved } = await readPricing(env);
+  return {
+    amount: reserved < INTRO_OFFER_LIMIT ? INTRO_COURSE_FEE_PAISE : REGULAR_COURSE_FEE_PAISE,
+    currency: CURRENCY,
+    remaining: Math.max(0, INTRO_OFFER_LIMIT - reserved),
+    regularAmount: REGULAR_COURSE_FEE_PAISE,
+    introLimit: INTRO_OFFER_LIMIT,
+  };
+};
+
+// A quoted introductory order reserves one of the 100 places atomically.
+// This is a sitewide pool across courses; a repeated checkout reuses its order.
+const reserveIntroOrder = async (env, { orderId, studentId, courseId, purchaseType }) => {
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    const state = await readPricing(env);
+    if (state.reserved >= INTRO_OFFER_LIMIT) return false;
+    const response = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:commit`, {
+      method: "POST",
+      headers: { authorization: `Bearer ${state.token}`, "content-type": "application/json" },
+      body: JSON.stringify({ writes: [
+        {
+          update: { name: pricingDocument, fields: {
+            reserved: { integerValue: String(state.reserved + 1) },
+            limit: { integerValue: String(INTRO_OFFER_LIMIT) },
+          } },
+          currentDocument: state.updateTime
+            ? { updateTime: state.updateTime }
+            : { exists: false },
+        },
+        {
+          update: { name: `${pricingReservations}/${orderId}`, fields: {
+            studentId: { stringValue: studentId },
+            courseId: { stringValue: courseId },
+            purchaseType: { stringValue: purchaseType },
+            amount: { integerValue: String(INTRO_COURSE_FEE_PAISE) },
+            reservedAt: { timestampValue: new Date().toISOString() },
+          } },
+          currentDocument: { exists: false },
+        },
+      ] }),
+    });
+    if (response.ok) return true;
+    const result = await response.json().catch(() => ({}));
+    if (!["ABORTED", "FAILED_PRECONDITION"].includes(result.error?.status)) {
+      console.error("Unable to reserve introductory course price", response.status, result.error?.status);
+      fail("Unable to reserve the course price. Please try again.", 503);
+    }
+  }
+  fail("Course pricing is busy. Please try again.", 503);
+};
+
+const releaseIntroOrder = async (env, orderId) => {
+  for (let attempt = 0; attempt < 12; attempt += 1) {
+    const state = await readPricing(env);
+    const response = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:commit`, {
+      method: "POST",
+      headers: { authorization: `Bearer ${state.token}`, "content-type": "application/json" },
+      body: JSON.stringify({ writes: [
+        {
+          delete: `${pricingReservations}/${orderId}`,
+          currentDocument: { exists: true },
+        },
+        {
+          update: { name: pricingDocument, fields: {
+            reserved: { integerValue: String(Math.max(0, state.reserved - 1)) },
+            limit: { integerValue: String(INTRO_OFFER_LIMIT) },
+          } },
+          currentDocument: { updateTime: state.updateTime },
+        },
+      ] }),
+    });
+    if (response.ok) return;
+    const result = await response.json().catch(() => ({}));
+    if (!["ABORTED", "FAILED_PRECONDITION"].includes(result.error?.status)) {
+      console.error("Unable to release introductory price", response.status, result.error?.status);
+      return;
+    }
   }
 };
 
@@ -871,31 +1023,53 @@ const createOrder = async (request, env) => {
   if (purchaseType !== "certification" && liveClassesPaid) {
     fail("Live-class access is already active for this course.", 409);
   }
-  const orderAmount =
-    purchaseType === "live-classes"
-      ? LIVE_CLASS_FEE_PAISE
-      : purchaseType === "premium"
-        ? PREMIUM_FEE_PAISE
-        : COURSE_FEE_PAISE;
-  const order = await razorpayRequest(env, "/orders", {
+  const pendingPath = purchaseType === "certification" ? "certification" : "liveClasses";
+  const existingOrderId = getFirestoreValue(fields, `${pendingPath}.payment.orderId`)?.stringValue;
+  const existingAmount = Number(getFirestoreValue(fields, `${pendingPath}.payment.amount`)?.integerValue);
+  const existingType = getFirestoreValue(fields, `${pendingPath}.payment.purchaseType`)?.stringValue;
+  if (existingOrderId && existingType === purchaseType &&
+      getFirestoreValue(fields, `${pendingPath}.payment.status`)?.stringValue === "pending" &&
+      Number.isSafeInteger(existingAmount) && existingAmount > 0) {
+    const previous = await razorpayRequest(env, `/orders/${encodeURIComponent(existingOrderId)}`);
+    if (previous.id === existingOrderId && previous.amount === existingAmount &&
+        previous.notes?.studentId === studentId && previous.notes?.courseId === courseId &&
+        previous.notes?.purchaseType === purchaseType && previous.currency === CURRENCY) {
+      return { keyId: getRazorpayCredentials(env).keyId, orderId: previous.id,
+        amount: previous.amount, currency: CURRENCY, courseId, purchaseType };
+    }
+  }
+  const makeOrder = (amount) => razorpayRequest(env, "/orders", {
     method: "POST",
     body: JSON.stringify({
-      amount: orderAmount,
-      currency: CURRENCY,
+      amount, currency: CURRENCY,
       receipt: `ns_${Date.now()}_${studentId.slice(0, 8)}`,
-      notes: {
-        studentId,
-        courseId,
-        purchaseType,
-        enrollmentId: `${studentId}_${courseId}`,
-      },
+      notes: { studentId, courseId, purchaseType, enrollmentId: `${studentId}_${courseId}` },
     }),
   });
+  let introReserved = false;
+  let courseFee = 0;
+  let orderAmount = LIVE_CLASS_FEE_PAISE;
+  let order;
+  if (purchaseType === "live-classes") {
+    order = await makeOrder(orderAmount);
+  } else {
+    const quote = await coursePricing(env);
+    courseFee = quote.amount;
+    orderAmount = courseFee + (purchaseType === "premium" ? LIVE_CLASS_FEE_PAISE : 0);
+    order = await makeOrder(orderAmount);
+    if (courseFee === INTRO_COURSE_FEE_PAISE) {
+      introReserved = await reserveIntroOrder(env, { orderId: order.id, studentId, courseId, purchaseType });
+      if (!introReserved) {
+        courseFee = REGULAR_COURSE_FEE_PAISE;
+        orderAmount = courseFee + (purchaseType === "premium" ? LIVE_CLASS_FEE_PAISE : 0);
+        order = await makeOrder(orderAmount);
+      }
+    }
+  }
   const now = new Date().toISOString();
-  const pendingPath = purchaseType === "certification" ? "certification" : "liveClasses";
   setFirestoreValue(fields, `${pendingPath}.status`, { stringValue: "pending-payment" });
   setFirestoreValue(fields, `${pendingPath}.fee`, {
-    integerValue: String(purchaseType === "certification" ? 49 : 499),
+    integerValue: String(purchaseType === "certification" ? courseFee / 100 : purchaseType === "premium" ? orderAmount / 100 : 499),
   });
   setFirestoreValue(fields, `${pendingPath}.payment.status`, { stringValue: "pending" });
   setFirestoreValue(fields, `${pendingPath}.payment.provider`, { stringValue: "razorpay" });
@@ -904,11 +1078,24 @@ const createOrder = async (request, env) => {
   setFirestoreValue(fields, `${pendingPath}.payment.currency`, { stringValue: CURRENCY });
   setFirestoreValue(fields, `${pendingPath}.payment.purchaseType`, { stringValue: purchaseType });
   setFirestoreValue(fields, `${pendingPath}.payment.createdAt`, { timestampValue: now });
-  await updateEnrollment({ enrollment, token, topLevelFields: {
-    [pendingPath]: fields[pendingPath],
-    updatedAt: { timestampValue: now },
-    updatedBy: { stringValue: studentId },
-  } });
+  if (purchaseType === "premium") {
+    setFirestoreValue(fields, "certification.fee", { integerValue: String(courseFee / 100) });
+  }
+  try {
+    await updateEnrollment({ enrollment, token, topLevelFields: {
+      [pendingPath]: fields[pendingPath],
+      ...(purchaseType === "premium" ? { certification: fields.certification } : {}),
+      updatedAt: { timestampValue: now },
+      updatedBy: { stringValue: studentId },
+    } });
+  } catch (error) {
+    if (introReserved) {
+      try { await releaseIntroOrder(env, order.id); } catch (releaseError) {
+        console.error("Unable to release introductory price", releaseError.message);
+      }
+    }
+    throw error;
+  }
   return {
     keyId: getRazorpayCredentials(env).keyId,
     orderId: order.id,
@@ -970,14 +1157,15 @@ const verifyPayment = async (request, env) => {
     razorpayRequest(env, `/orders/${encodeURIComponent(orderId)}`),
     razorpayRequest(env, `/payments/${encodeURIComponent(paymentId)}`),
   ]);
-  const expectedAmount =
-    purchaseType === "live-classes"
-      ? LIVE_CLASS_FEE_PAISE
-      : purchaseType === "premium"
-        ? PREMIUM_FEE_PAISE
-        : COURSE_FEE_PAISE;
+  const expectedAmount = Number(getFirestoreValue(fields, `${paymentRoot}.payment.amount`)?.integerValue);
+  const validAmount = Number.isSafeInteger(expectedAmount) && (
+    purchaseType === "live-classes" ? expectedAmount === LIVE_CLASS_FEE_PAISE :
+      purchaseType === "certification" ? [4900, INTRO_COURSE_FEE_PAISE, REGULAR_COURSE_FEE_PAISE].includes(expectedAmount) :
+        [INTRO_COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE, REGULAR_COURSE_FEE_PAISE + LIVE_CLASS_FEE_PAISE].includes(expectedAmount)
+  );
   const validPayment = order.status === "paid" && payment.status === "captured" &&
     payment.order_id === orderId &&
+    validAmount &&
     Number(payment.amount) === expectedAmount && Number(order.amount) === expectedAmount &&
     order.currency === CURRENCY &&
     payment.currency === CURRENCY && order.notes?.studentId === studentId &&
@@ -985,11 +1173,27 @@ const verifyPayment = async (request, env) => {
   if (!validPayment) {
     fail("Payment is not captured yet. Please wait briefly and try again.", 409);
   }
+  if (purchaseType !== "live-classes" &&
+      expectedAmount - (purchaseType === "premium" ? LIVE_CLASS_FEE_PAISE : 0) === INTRO_COURSE_FEE_PAISE) {
+    const reservationToken = await getGoogleAccessToken(env);
+    const reservationResponse = await fetch(`${firestoreDocumentsUrl}/${pricingReservations}/${orderId}`, {
+      headers: { authorization: `Bearer ${reservationToken}` },
+    });
+    const reservation = reservationResponse.ok ? await reservationResponse.json() : null;
+    if (reservation?.fields?.studentId?.stringValue !== studentId ||
+        reservation?.fields?.courseId?.stringValue !== courseId ||
+        reservation?.fields?.purchaseType?.stringValue !== purchaseType) {
+      fail("The introductory order could not be verified. Please contact support.", 409);
+    }
+  }
   const now = new Date().toISOString();
   if (purchaseType === "certification" || purchaseType === "premium") {
     setFirestoreValue(fields, "certification.status", { stringValue: "active" });
     setFirestoreValue(fields, "certification.activatedAt", { timestampValue: now });
     setFirestoreValue(fields, "certification.payment.status", { stringValue: "paid" });
+    setFirestoreValue(fields, "certification.fee", {
+      integerValue: String((expectedAmount - (purchaseType === "premium" ? LIVE_CLASS_FEE_PAISE : 0)) / 100),
+    });
     setFirestoreValue(fields, "certification.payment.provider", { stringValue: "razorpay" });
     setFirestoreValue(fields, "certification.payment.paymentId", { stringValue: paymentId });
     setFirestoreValue(fields, "certification.payment.reference", { stringValue: orderId });
@@ -1045,6 +1249,10 @@ const handleApi = async (request, env, url) => {
   }
   if (url.pathname === "/api/razorpay/create-order") return createOrder(request, env);
   if (url.pathname === "/api/razorpay/verify-payment") return verifyPayment(request, env);
+  if (url.pathname === "/api/course-pricing") {
+    if (request.method !== "GET") fail("Method not allowed.", 405);
+    return coursePricing(env);
+  }
   if (url.pathname === "/api/funnel/event") return handleFunnelEvent(request, env, url);
   if (url.pathname === "/api/admin/funnel") return getFunnelReport(request, env);
   if (url.pathname === "/api/live-classes") return getLiveSessions(request, env, url);
@@ -1077,6 +1285,14 @@ export default {
     if (/^\/llb-courses\/?$/.test(url.pathname)) {
       url.pathname = "/law-courses";
       return Response.redirect(url.toString(), 301);
+    }
+    if (url.pathname === "/sitemap.xml") {
+      try {
+        return await courseSitemap(request, env);
+      } catch (error) {
+        console.error("Unable to extend course sitemap", error.message);
+        return env.ASSETS.fetch(request);
+      }
     }
     const assetResponse = await env.ASSETS.fetch(request);
 
@@ -1112,11 +1328,18 @@ export default {
         ? `${url.origin}${url.pathname}`
         : canonicalUrl;
 
+      let priceDescription = "";
+      try {
+        const quote = await coursePricing(env);
+        priceDescription = ` Current course enrollment price: ₹${quote.amount / 100}${quote.remaining > 0 ? " for the first 100 checkout reservations; then ₹299" : ""}.`;
+      } catch (error) {
+        console.error("Unable to add current catalogue price metadata", error.message);
+      }
       return rewriteCourseSocialMetadata(
         assetResponse,
         {
           title: "Certificate Courses in Legal Studies | Sanhita360",
-          description: "Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360.",
+          description: `Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360.${priceDescription}`,
           image: `${url.origin}/certificate-courses-hero.jpg`,
           imageWidth: 1200,
           imageHeight: 675,
@@ -1163,11 +1386,15 @@ export default {
         const socialUrl = shareVersion
           ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
           : canonicalUrl;
-        const metadata = await loadCourseSocialMeta(env, slug);
+        const [metadataResult, pricingResult] = await Promise.allSettled([
+          loadCourseSocialMeta(env, slug), coursePricing(env),
+        ]);
+        const metadata = metadataResult.status === "fulfilled" ? metadataResult.value : null;
+        const price = pricingResult.status === "fulfilled" ? pricingResult.value.amount : null;
         if (metadata) {
           return rewriteCourseSocialMetadata(
             assetResponse,
-            metadata,
+            { ...metadata, coursePricePaise: price },
             canonicalUrl,
             socialUrl,
           );

@@ -222,7 +222,7 @@ export default function MyCourses({ view = "available" }) {
             : `${enrolledCount} paid course(s). Continue your enrolled courses.`
           : isAdmin
             ? `${awaitingApprovalCount} draft course(s) awaiting content review and final approval.`
-            : "Choose a course and complete the ₹49 payment to join and view it."}
+            : "Choose a course and complete its one-time payment to join and view it."}
         breadcrumbs={[
           "Student",
           view === "enrolled" ? "Enrolled Courses" : "Available Courses",
@@ -257,7 +257,7 @@ export default function MyCourses({ view = "available" }) {
           description={view === "enrolled"
             ? isAdmin
               ? "Approved courses appear here after final publication."
-              : "Courses appear here after successful ₹49 payment."
+              : "Courses appear here after successful course payment."
             : isAdmin
               ? "No draft courses are awaiting final approval."
               : "All published courses have already been enrolled."}

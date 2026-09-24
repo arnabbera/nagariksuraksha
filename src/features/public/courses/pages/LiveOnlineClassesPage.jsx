@@ -146,7 +146,7 @@ export default function LiveOnlineClassesPage() {
                 <h3>Enrollment and Access</h3>
                 <p>
                   Course enrollment is required. Live-class access is available for an additional
-                  ₹499, or ₹548 together with the ₹49 course and certification enrollment.
+                  ₹499, or together with course enrollment for ₹598 during the first 100 course checkout reservations and ₹798 afterward. Final price is confirmed at checkout.
                   Meeting links are visible only to students with verified live-class access.
                 </p>
               </div>
