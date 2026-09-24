@@ -263,7 +263,7 @@ export default function PublicCoursesPage() {
         title="Certificate Courses in Legal Studies | Sanhita360"
         description="Explore chapter-wise certificate courses in legal studies with study materials, mock tests and certification pathways at Sanhita360."
         canonical="/llb-courses"
-        image="/certificate-courses-sanhita360.png"
+        image="/certificate-courses-hero.jpg"
         keywords={[
           "LLB courses",
           "LLB course online",
