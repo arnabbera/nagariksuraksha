@@ -824,9 +824,9 @@ export default {
         {
           title: "Live Online Law Classes | Sanhita360",
           description: "Join approximately eight chapter-wise, 45-minute interactive online law classes. Ask questions live and strengthen your legal studies.",
-          image: `${url.origin}/live-online-classes-sanhita360.png`,
+          image: `${url.origin}/live-online-classes-og.jpg`,
           imageWidth: 1200,
-          imageHeight: 630,
+          imageHeight: 675,
         },
         canonicalUrl,
         socialUrl,

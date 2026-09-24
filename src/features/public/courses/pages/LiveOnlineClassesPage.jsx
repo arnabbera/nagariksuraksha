@@ -74,7 +74,7 @@ export default function LiveOnlineClassesPage() {
         title="Live Online Law Classes | Sanhita360"
         description="Request chapter-wise live online law classes with approximately eight interactive 45-minute sessions for your enrolled Sanhita360 course."
         canonical="/live-online-classes"
-        image="/live-online-classes-sanhita360.png"
+        image="/live-online-classes-og.jpg"
         keywords={[
           "live online law classes",
           "online legal studies classes",
@@ -117,7 +117,7 @@ export default function LiveOnlineClassesPage() {
 
             <img
               className="ns-live-hero-image"
-              src="/live-online-classes-sanhita360.png"
+              src="/live-online-classes-og.jpg"
               alt="Live Online Classes at Sanhita360"
             />
           </div>
