@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured fifteen-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coin and Government stamps, and other major offences, with IPC-to-BNS comparisons.",
+    "A structured sixteen-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coins, weights and measures, and other major offences, with IPC-to-BNS comparisons.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 15,
+  totalChapters: 16,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through fifteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through sixteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 8 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 8 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 9 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 9 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2848,6 +2848,87 @@ For counterfeiting or coin alteration use BNS 178; for knowing import, export, d
   previewAvailable: false,
 });
 
+const weightsAndMeasuresChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-16`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XIII  OF OFFENCES RELATING TO WEIGHTS AND MEASURES",
+  slug: "unit-16-offences-relating-to-weights-and-measures",
+  shortDescription:
+    "Study IPC Sections 264–267, why they have no direct BNS counterparts, and the relevant Legal Metrology Act provisions governing non-standard weights and measures.",
+  chapterOverview:
+    "IPC Chapter XIII contains four offences covering fraudulent use of a false weighing instrument, fraudulent use of a false weight or measure, possession for fraudulent use, and making or selling false measures. The BNS does not recreate this chapter or supply direct section-for-section equivalents. Current regulation of standards, use, keeping for use, alteration and manufacture or sale is principally found in the Legal Metrology Act, 2009, especially Sections 24–28 and 30. BNS Section 318 may apply to a deceptive transaction only when its independent cheating elements are proved; it is not the replacement number for any of these four IPC offences.",
+  learningObjectives: [
+    "State the ingredients of each IPC offence in Sections 264–267 and its maximum IPC punishment.",
+    "Explain clearly that the BNS has no direct equivalent to IPC Chapter XIII.",
+    "Locate related use, alteration, manufacture, sale and short-delivery rules in the Legal Metrology Act, 2009.",
+    "Distinguish mere possession from keeping a non-standard measure for use or possessing it for sale under the specific law.",
+    "Apply BNS Section 318 only when deception and the statutory inducement and harm elements of cheating are separately established.",
+    "Check the date of conduct and the currently applicable amended Legal Metrology Act before stating a penalty.",
+  ],
+  detailedContent: `CHAPTER XIII — OF OFFENCES RELATING TO WEIGHTS AND MEASURES
+
+Chapter Overview and BNS Position
+
+The supplied IPC Chapter XIII consists of Sections 264–267. Each IPC offence was punishable by imprisonment of either description up to one year, fine, or both. The Bharatiya Nyaya Sanhita, 2023 has no chapter on false weights and measures and no direct successor section to any of these four provisions. Do not invent a BNS number or describe a related statute as an exact renumbering. The Legal Metrology Act, 2009 supplies the distinct present-day rules concerning standards and trade use. Examine the statute and amendments applicable on the date of the alleged conduct before stating a current penalty.
+
+IPC Section 264 — Fraudulent Use of a False Weighing Instrument
+
+Prove actual fraudulent use of an instrument for weighing and knowledge that the instrument is false. Simply finding an inaccurate scale does not by itself establish those IPC elements. There is no direct BNS equivalent. Under the Legal Metrology Act, Section 25 addresses use or keeping for use of a non-standard weight or measure; Section 26 addresses deceptive alteration of weights or measures; Section 24 concerns verification and stamping. The applicable provision depends on the instrument and conduct, and its elements need to be checked separately.
+
+IPC Section 265 — Fraudulent Use of a False Weight or Measure
+
+This covers fraudulent use of a false weight, length measure or capacity measure, and fraudulent use of one weight or measure as if it were another. The IPC focuses on fraud in actual use, not simply that a discrepancy exists. There is no direct BNS equivalent. Legal Metrology Act Section 25 addresses use of non-standard weights or measures; Section 28 concerns transactions contrary to prescribed standards, and Section 30 concerns delivering less than the contracted quantity or receiving an excess quantity in the transactions it specifies. Check the precise transaction and the statutory definitions before choosing among them.
+
+IPC Section 266 — Possession of a False Weight or Measure
+
+The IPC required possession of a weighing instrument, weight or measure known to be false and an intention that it may be fraudulently used. Possession alone was insufficient under this section. There is no direct BNS equivalent. Legal Metrology Act Section 25 includes keeping a non-standard weight or measure for use; Section 27 includes possession for sale of a non-standard weight or measure. They address different purposes and must not be assumed to criminalise every instance of possession.
+
+IPC Section 267 — Making or Selling a False Weight or Measure
+
+The maker or seller must know the instrument, weight or measure is false and make, sell or dispose of it so that it may be used as true, or knowing such use is likely. There is no direct BNS equivalent. Legal Metrology Act Section 27 addresses manufacturing, offering, exposing, possessing for sale or selling a non-standard weight or measure; Section 26 is relevant where an existing weight or measure is deceptively altered. The modern provisions use their own standards and exceptions, rather than the IPC's exact formula.
+
+Related BNS Cheating Provision: Section 318
+
+If a dishonest weighing transaction deceives someone and induces delivery of property or another act or omission with the statutory consequence, BNS Section 318 may also be relevant. Prove deception and inducement under that section independently. A non-standard scale, a short delivery or an administrative metrology violation is not automatically cheating.
+
+Revision and Exam Method
+
+IPC 264: fraudulent use of a known false weighing instrument. IPC 265: fraudulent use of a false or misrepresented weight or measure. IPC 266: knowing possession with intent for fraudulent use. IPC 267: knowing making, selling or disposing for use as true. BNS: no direct four-section mapping. Consult the Legal Metrology Act, 2009, particularly Sections 24–28 and 30, for analogous present-day controls, and BNS 318 only where separate cheating elements arise. First identify the act and mental element, then the applicable date and statute; do not carry the IPC punishment into a current Legal Metrology Act problem.`,
+  keyPoints: [
+    "IPC Chapter XIII Sections 264–267 have no direct BNS counterparts.",
+    "IPC 264 requires fraudulent use of a weighing instrument known to be false.",
+    "IPC 265 covers fraudulent use of a false weight or measure, or use of one as another.",
+    "IPC 266 requires knowing possession and intended fraudulent use; possession alone is insufficient.",
+    "IPC 267 addresses knowing manufacture or sale with intended or likely use as true.",
+    "Legal Metrology Act 25 concerns use or keeping for use; 26 alteration; 27 manufacture or sale; 28 and 30 specified transactions.",
+    "BNS 318 is a separate cheating offence requiring its own proof of deception and inducement, not a one-to-one replacement.",
+    "Check current amendments and the date of conduct before stating present-day penalties.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XIII, Sections 264–267 (historical offences)",
+    "Legal Metrology Act, 2009 — Sections 24–28 and 30 (related, non-identical rules)",
+    "Bharatiya Nyaya Sanhita, 2023 — Section 318 (cheating, only if its independent elements are met)",
+    "Bharatiya Nyaya Sanhita, 2023 — no direct counterparts to IPC Sections 264–267",
+  ].map((provision, index) => ({
+    id: `unit-16-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Statutory reading for weights, measures and related deceptive transactions.",
+  })),
+  examFocus:
+    "Explain each historical IPC offence's act and mental state separately. State explicitly that IPC 264–267 have no direct BNS equivalents. Compare the relevant Legal Metrology Act provision without treating it as identical; use BNS 318 only where deception, inducement and the required consequence are proved. Specify the date and applicable version of the law before discussing punishment.",
+  revisionNotes:
+    "IPC 264: known false weighing instrument used fraudulently; 265: false weight or measure used fraudulently; 266: knowing possession with intent for fraudulent use; 267: knowing manufacture or sale for use as true. No direct BNS successors. Related Legal Metrology Act 24 (verification), 25 (use/keep for use), 26 (alteration), 27 (manufacture/sale), 28 and 30 (transactions). BNS 318 only for separately proved cheating.",
+  chapterNumber: 15,
+  displayOrder: 15,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -2858,5 +2939,6 @@ export const criminalLawIChapters = [
   lawfulAuthorityChapter,
   publicJusticeChapter,
   coinAndStampsChapter,
+  weightsAndMeasuresChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
