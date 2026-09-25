@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured eight-unit course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State and public tranquillity, false evidence, offences against the human body, property offences and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured nine-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State and the armed forces, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 8,
+  totalChapters: 9,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through eight structured units covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through nine structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -900,9 +900,9 @@ Use the following sequence:
   {
     title: "Offences against the State",
     shortDescription:
-      "A detailed study of waging war, conspiracy and preparation against the State, attacks on constitutional authorities, the historical offence of sedition, and BNS Section 152.",
+      "Study IPC Sections 121–130 alongside BNS Sections 147–158: waging war, sedition and sovereignty, foreign States, and prisoners of State or war.",
     overview:
-      "Offences against the State protect the sovereignty, unity, integrity and lawful constitutional authority of India from organised force and other grave threats. This chapter examines IPC Sections 121–124A and their transition to BNS Sections 147–152. It distinguishes waging war from ordinary public-order offences, explains conspiracy, preparation, collection of arms and concealment, analyses coercive attacks on the President or a Governor, and traces the movement from the historical sedition provision in IPC Section 124A to the differently framed offence in BNS Section 152. Particular attention is given to intention, constitutional free speech, the date of the alleged conduct and careful ingredient-based application.",
+      "IPC Chapter VI, Of Offences Against the State, covers Sections 121–130, including Section 121A and the historical Section 124A. The corresponding provisions are in BNS Chapter VII, Sections 147–158. This chapter distinguishes war against India, coercion of constitutional authorities, speech-related offences, acts against friendly foreign States and offences involving State prisoners or prisoners of war. IPC Section 124A and BNS Section 152 have materially different elements; compare their wording and apply the statute in force on the date of the alleged conduct.",
     learningObjectives: [
       "Explain the purpose and special character of offences against the State.",
       "Distinguish waging war from riot, unlawful assembly, terrorism and ordinary violent crime.",
@@ -914,6 +914,8 @@ Use the following sequence:
       "Analyse BNS Section 152 without treating it as a simple renumbering of sedition.",
       "Differentiate protected criticism and dissent from conduct satisfying the statutory offence.",
       "Choose the applicable IPC or BNS provision according to the date of conduct and Article 20(1).",
+      "Map IPC Sections 125–127 to BNS Sections 153–155 and distinguish war, depredation and knowing receipt of property.",
+      "Map IPC Sections 128–130 to BNS Sections 156–158 and distinguish voluntary release, negligent escape and knowing assistance.",
     ],
     detailedContent: `1. Nature and Purpose of Offences against the State
 
@@ -1035,7 +1037,35 @@ Use the following sequence:
 (h) for BNS Section 152, identify the precise listed activity allegedly excited, encouraged or committed;
 (i) consider lawful criticism and other statutory explanations;
 (j) apply Article 20(1) and the repeal-and-savings framework; and
-(k) reach a reasoned conclusion on each offence without relying on labels alone.`,
+(k) reach a reasoned conclusion on each offence without relying on labels alone.
+
+18. War against a Foreign State at Peace with India: IPC Section 125 and BNS Section 153
+
+These provisions address waging, attempting to wage or abetting war against the government of a foreign State at peace with the Government of India. The IPC uses the expression Asiatic Power in alliance or at peace with India; the BNS uses any foreign State at peace with India. The target, relationship with India and accused person's conduct must each be established. Punishment may be life imprisonment with possible fine, imprisonment up to seven years with possible fine, or fine.
+
+19. Depredation: IPC Section 126 and BNS Section 154
+
+Depredation concerns predatory incursions on the territory of a power at peace with India, including preparations to commit such acts. BNS Section 154 refers to the territory of any foreign State at peace with India. The prosecution must identify the intended territory, the acts of depredation or preparation, and the connection to the accused. Punishment can extend to seven years, with fine and forfeiture of property used, intended for use or acquired through the depredation.
+
+20. Receiving Property from War or Depredation: IPC Section 127 and BNS Section 155
+
+Both sections require receiving property with knowledge that it was taken through the offences described in the preceding two provisions. Mere possession without the required knowledge does not suffice. The punishment can extend to seven years, with fine and forfeiture of the property received. In a problem, trace the property to the underlying offence and prove the recipient's knowledge.
+
+21. Voluntary Escape of a State Prisoner or Prisoner of War: IPC Section 128 and BNS Section 156
+
+A public servant who has custody of such a prisoner and voluntarily permits escape commits this offence. Establish the accused's public-servant status, custody, the prisoner's legal status, escape and voluntary permission. Punishment is life imprisonment or imprisonment up to ten years, and fine. Distinguish intentional release from negligence under the following provision.
+
+22. Negligent Escape: IPC Section 129 and BNS Section 157
+
+This is the separate offence where a public servant with custody negligently suffers a State prisoner or prisoner of war to escape from confinement. The prosecution must prove the duty of custody, a negligent failure and the resulting escape; it need not prove a voluntary decision to release the prisoner. Punishment is simple imprisonment up to three years and fine.
+
+23. Aiding Escape, Rescue or Harbouring: IPC Section 130 and BNS Section 158
+
+Knowingly assisting a State prisoner or prisoner of war to escape, rescuing or attempting rescue, harbouring or concealing a person who escaped, or resisting recapture falls within these provisions. A prisoner on parole within set geographical limits is treated as escaping if they go beyond those limits. Punishment is life imprisonment or imprisonment up to ten years, and fine. Identify the accused's knowledge and precise mode of assistance; unlike Sections 128–129, this offence is not confined to the public servant holding custody.
+
+24. Revision Map
+
+IPC 121 → BNS 147; 121A → 148; 122 → 149; 123 → 150; 124 → 151; historical 124A compared with, but not simply renumbered as, BNS 152; 125 → 153; 126 → 154; 127 → 155; 128 → 156; 129 → 157; 130 → 158. The IPC calls this Chapter VI, while the BNS locates the corresponding offences in Chapter VII.`,
     keyPoints: [
       "Waging war requires force directed against the Government of India with the prohibited object; serious violence alone is insufficient.",
       "IPC Section 121 and BNS Section 147 punish waging, attempting to wage and abetting war.",
@@ -1055,6 +1085,8 @@ Use the following sequence:
       "Conspiracy, preparation, concealment, attempt, abetment and completed waging of war are distinct stages requiring separate proof.",
       "Digital evidence, financial evidence and alleged speech must be authenticated and assessed in their complete context.",
       "Every answer should identify the exact statutory ingredient instead of relying on broad labels such as anti-national or sedition.",
+      "IPC Sections 125–127 correspond to BNS Sections 153–155; the BNS refers to a foreign State at peace with India.",
+      "IPC Sections 128–130 correspond to BNS Sections 156–158; distinguish voluntary permission, negligence and knowing assistance.",
     ],
     provisions: [
       "Indian Penal Code, 1860 — Section 121",
@@ -1063,11 +1095,12 @@ Use the following sequence:
       "Indian Penal Code, 1860 — Section 123",
       "Indian Penal Code, 1860 — Section 124",
       "Indian Penal Code, 1860 — Section 124A (historical)",
-      "Bharatiya Nyaya Sanhita, 2023 — Sections 147–152",
+      "Indian Penal Code, 1860 — Sections 125–130",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 147–158",
       "Constitution of India — Articles 19(1)(a), 19(2) and 20(1)",
     ],
     examFocus:
-      "Fix the date of conduct before selecting the IPC or BNS. Distinguish conspiracy, preparation, concealment, attempt, abetment and completed waging of war, then prove the prohibited object and each accused person's mental connection. For speech problems, compare the historical IPC Section 124A with BNS Section 152 precisely, apply constitutional free-speech principles and lawful-criticism explanations, and never describe Section 152 as a mere renumbering of sedition.",
+      "Fix the date of conduct before selecting the IPC or BNS. For Sections 121–124A, distinguish conspiracy, preparation, concealment, coercion and completed war; compare historical IPC Section 124A with BNS Section 152 without treating them as identical. For Sections 125–127, identify the foreign State, depredation or knowing receipt. For Sections 128–130, distinguish voluntary release, negligent escape and knowing rescue or harbouring. Apply the relevant constitutional protections to speech and retrospective punishment.",
   },
   {
     title: "Offences against Public Tranquillity",
@@ -1943,7 +1976,7 @@ Use the following sequence:
   },
 ];
 
-export const criminalLawIChapters = units.map(
+const existingCriminalLawIChapters = units.map(
   (unit, index) =>
     createChapterModel({
       id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-${index + 1}`,
@@ -2133,8 +2166,8 @@ export const criminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index + 1,
-      displayOrder: index + 1,
+      chapterNumber: index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2143,3 +2176,42 @@ export const criminalLawIChapters = units.map(
       previewAvailable: false,
     }),
 );
+
+const stateOffencesUnit = units.find(
+  (unit) => unit.title === "Offences against the State",
+);
+
+const stateOffencesChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-9`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER VI  OF OFFENCES AGAINST THE STATE",
+  slug: "unit-9-offences-against-the-state",
+  shortDescription: stateOffencesUnit.shortDescription,
+  chapterOverview: stateOffencesUnit.overview,
+  learningObjectives: stateOffencesUnit.learningObjectives,
+  detailedContent: stateOffencesUnit.detailedContent,
+  keyPoints: stateOffencesUnit.keyPoints,
+  statutoryProvisions: stateOffencesUnit.provisions.map((provision, index) => ({
+    id: `unit-9-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for offences against the State.",
+  })),
+  examFocus: stateOffencesUnit.examFocus,
+  revisionNotes: stateOffencesUnit.keyPoints.join("; "),
+  notes: stateOffencesUnit.detailedContent,
+  chapterNumber: 7,
+  displayOrder: 7,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
+export const criminalLawIChapters = [
+  ...existingCriminalLawIChapters.slice(0, 6),
+  stateOffencesChapter,
+  ...existingCriminalLawIChapters.slice(6),
+];

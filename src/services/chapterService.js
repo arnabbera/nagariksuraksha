@@ -42,6 +42,12 @@ const sourceControlledChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-5",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-6",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-7",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-9",
+]);
+
+const reorderedCriminalLawIChapterIds = new Set([
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-7",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-8",
 ]);
 
 // Bundled course chapters are updated through reviewed source changes, while
@@ -77,6 +83,12 @@ const mergeStoredAndBundledChapter = (
     title: isSourceControlled
       ? bundledChapter.title
       : storedChapter.title || bundledChapter.title,
+    chapterNumber: reorderedCriminalLawIChapterIds.has(bundledChapter.id)
+      ? bundledChapter.chapterNumber
+      : storedChapter.chapterNumber || bundledChapter.chapterNumber,
+    displayOrder: reorderedCriminalLawIChapterIds.has(bundledChapter.id)
+      ? bundledChapter.displayOrder
+      : storedChapter.displayOrder || bundledChapter.displayOrder,
     shortDescription: isSourceControlled
       ? bundledChapter.shortDescription
       : bundledChapter.shortDescription || storedChapter.shortDescription,
