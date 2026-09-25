@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured thirteen-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity, public servants, elections, contempt of lawful public authority and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured fourteen-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, public justice and other major offences, with IPC-to-BNS comparisons.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 13,
+  totalChapters: 14,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through thirteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through fourteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 6 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 6 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 7 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 7 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2624,6 +2624,122 @@ IPC 172–174 → BNS 206–208; IPC 174A → BNS 209; IPC 175–190 → BNS 210
   previewAvailable: false,
 });
 
+// IPC Chapter XI spans several subjects. Keep the individual cross-references
+// explicit: a contiguous numeric offset fails at the inserted and repealed sections.
+const publicJusticeSectionMap = [
+  ["191", "227", "Giving false evidence", "A person under an oath, express legal duty or legally required declaration states something they know or believe is false, or do not believe true. A sincerely held but mistaken belief is different."],
+  ["192", "228", "Fabricating false evidence", "Creating a false circumstance, entry or document (including an electronic record) intending to mislead a decision-maker about a material point in a judicial or other legally authorised proceeding."],
+  ["193", "229", "Punishment for false evidence", "The judicial-proceeding tier permits imprisonment up to seven years and fine up to ₹10,000; other cases permit up to three years and fine up to ₹5,000. BNS specifies the fine ceilings."],
+  ["194", "230", "False evidence to procure conviction for a capital offence", "Giving or fabricating evidence with the required intent or knowledge about a capital conviction carries life imprisonment or rigorous imprisonment up to ten years and fine up to ₹50,000; an innocent person's conviction and execution triggers the separate, more severe consequence."],
+  ["195", "231", "False evidence to procure conviction for a serious non-capital offence", "The intended conviction must concern an offence punishable by life imprisonment or imprisonment for seven years or more; punishment follows the offence for which conviction was sought."],
+  ["195A", "232", "Threatening a person to give false evidence", "Threatening injury to person, reputation or property with intent to cause false evidence is separately punishable. The statute provides a further consequence when an innocent person is sentenced as a result."],
+  ["196", "233", "Using evidence known to be false", "Corruptly using or trying to use false or fabricated evidence as genuine is punished like giving or fabricating false evidence."],
+  ["197", "234", "Issuing or signing a false certificate", "A legally required or evidential certificate known or believed false on a material point attracts the false-evidence punishment."],
+  ["198", "235", "Using a false certificate", "Corruptly using or attempting to use a certificate known false on a material point attracts the false-evidence punishment."],
+  ["199", "236", "False evidential declaration", "A knowingly or believed-false material statement in a declaration legally receivable as evidence is punished like false evidence."],
+  ["200", "237", "Using a false declaration", "Corrupt use or attempted use of such a declaration, knowing it false in a material respect, is separately covered; an informality alone does not remove it from the provision."],
+  ["201", "238", "Disappearing evidence or false information to screen an offender", "The accused knows or has reason to believe an offence occurred and intends to shield the offender. The penalty depends on the underlying offence's maximum punishment."],
+  ["202", "239", "Omitting legally required information about an offence", "A person legally bound to report an offence intentionally fails to give that information; BNS caps the fine at ₹5,000."],
+  ["203", "240", "False information about an offence", "A person knowing or having reason to believe an offence occurred supplies information about it that they know or believe to be false; this differs from concealment intended to screen an offender."],
+  ["204", "241", "Destroying a document or electronic record to prevent its use", "Secretly removing, destroying or rendering illegible material that can lawfully be required as evidence, to prevent its use; BNS provides imprisonment up to three years or fine up to ₹5,000 or both."],
+  ["205", "242", "False personation in a suit or prosecution", "Assuming another person's identity to make a statement, admit, arrange process, stand bail or undertake another act in litigation or prosecution."],
+  ["206", "243", "Concealing property from forfeiture or execution", "Fraudulently transferring, hiding or removing property to defeat an actual or likely forfeiture, fine or civil decree; BNS raises the imprisonment ceiling to three years."],
+  ["207", "244", "Fraudulent property claim to prevent seizure", "Falsely receiving or claiming a property interest without entitlement to prevent its lawful forfeiture or execution."],
+  ["208", "245", "Fraudulently suffering an undue decree", "Allowing a decree or order against oneself for an amount or property not due, with the required fraudulent purpose."],
+  ["209", "246", "Dishonestly making a false claim in court", "A claim known to be false is made fraudulently, dishonestly or with intent to injure or annoy another person."],
+  ["210", "247", "Fraudulently obtaining an undue decree", "Obtaining a decree or order for an amount or property not due, or causing enforcement after satisfaction, with the required fraudulent state of mind."],
+  ["211", "248", "False criminal charge intended to injure", "Instituting proceedings or accusing someone despite knowing there is no just or lawful ground, with intent to injure. BNS sets up to five years or fine up to ₹2 lakh for the ordinary tier and up to ten years plus fine for the aggravated tier."],
+  ["212", "249", "Harbouring an offender", "Knowingly concealing an offender to screen them from punishment; the sentence scales with the underlying offence. The statutory spouse exception must be checked."],
+  ["213", "250", "Taking a benefit to screen an offender", "Accepting or seeking gratification or property restoration in exchange for concealment, screening or refraining from prosecution; punishment depends on the underlying offence."],
+  ["214", "251", "Offering a benefit to screen an offender", "Offering gratification or restoring property in exchange for concealment, screening or refraining from prosecution; the statutory exception for an offence lawfully compoundable must be considered."],
+  ["215", "252", "Taking a benefit to help recover stolen property", "Taking a benefit on the pretence of helping recover movable property without using all available means to apprehend the offender."],
+  ["216", "253", "Harbouring an escapee or person ordered to be apprehended", "Knowingly concealing a person escaped from custody or whose apprehension has been ordered to prevent apprehension; the penalty depends on the underlying charge or sentence."],
+  ["216A", "254", "Harbouring robbers or dacoits", "Knowing or having reason to believe persons are about to commit or recently committed robbery or dacoity, harbouring them to facilitate the offence or screen them from punishment; the statutory spouse exception applies."],
+  ["217", "255", "Public servant disobeying law to protect person or property", "An official knowingly disobeys a legal direction intending to save someone from legal punishment or property from forfeiture or charge."],
+  ["218", "256", "Public servant making an incorrect record", "An official knowingly frames an incorrect record or writing intending or knowing it likely to cause loss or injury, protect a person from punishment or save property from forfeiture or charge."],
+  ["219", "257", "Public servant corruptly deciding contrary to law", "An official in a judicial proceeding corruptly or maliciously makes a report, order, verdict or decision known to be contrary to law."],
+  ["220", "258", "Unlawful commitment for trial or confinement", "A person authorised to commit someone for trial or confinement does so knowing the act is contrary to law."],
+  ["221", "259", "Public servant intentionally failing to apprehend a person charged", "An official legally bound to arrest or confine an accused or person liable to apprehension intentionally omits arrest or permits escape; the seriousness of the underlying offence sets the tier."],
+  ["222", "260", "Public servant intentionally failing to apprehend a sentenced person", "Intentional non-arrest, escape or assistance to escape for a sentenced person or lawful detainee, with tiers according to the sentence or custody."],
+  ["223", "261", "Public servant negligently allowing escape", "Unlike the preceding intentional offences, this provision addresses a negligent escape from lawful confinement."],
+  ["224", "262", "Resisting one's own lawful apprehension", "Intentionally resisting lawful arrest for an offence, or escaping or attempting escape from lawful custody; punishment is additional to the underlying offence."],
+  ["225", "263", "Resisting another's lawful apprehension or rescue", "Obstructing another person's lawful arrest or rescuing them from lawful custody; separate punishment tiers reflect the underlying charge or sentence."],
+  ["225A", "264", "Other failure by public servant to apprehend", "Residual provision for an official legally bound to arrest or confine a person where Sections 259–261 do not apply; distinguishes intentional and negligent failure."],
+  ["225B", "265", "Other resistance, escape or rescue", "Residual provision for resistance to arrest or escape or rescue where Sections 262–263 and other applicable law do not cover the conduct."],
+  ["227", "266", "Breach of conditional remission", "A person who accepts conditional remission knowingly breaches its condition and becomes liable to the original punishment, less any part already served."],
+  ["228", "267", "Insult or interruption during judicial proceeding", "Intentional insult or interruption of a public servant sitting in a judicial proceeding; BNS raises the maximum fine to ₹5,000."],
+  ["228A(1)–(2)", "72", "Disclosure of a victim's identity", "The rule against publishing information identifying victims of specified sexual offences and its narrow written-authorisation exceptions now appear in the BNS chapter on offences against women and children."],
+  ["228A(3)", "73", "Publication of court proceedings without permission", "The distinct IPC rule about publishing proceedings concerning such offences without the court's prior permission is BNS Section 73, subject to the statutory exception for Supreme Court and High Court judgments."],
+  ["229", "268", "Personation of an assessor", "The BNS text refers to an assessor, whereas the IPC provision also refers to jurors; knowingly obtaining or serving in a role for which one is legally ineligible is prohibited."],
+  ["229A", "269", "Failure to appear after release on bail bond or bond", "Absence without sufficient cause contrary to the bail bond or bond attracts a separate penalty; forfeiture of the bond and liability for the underlying offence remain possible."],
+];
+
+const publicJusticeChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-14`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XI  OF FALSE EVIDENCE AND OFFENCES AGAINST PUBLIC JUSTICE",
+  slug: "unit-14-false-evidence-and-offences-against-public-justice",
+  shortDescription:
+    "Compare IPC Chapter XI (Sections 191–229A) with BNS Chapter XIV (Sections 227–269), including the victim-identity provisions relocated to BNS 72–73.",
+  chapterOverview:
+    "This chapter follows the supplied IPC Chapter XI from false evidence and fabrication through suppression of evidence, screening offenders, public-servant misconduct, escape, and court-related offences. The principal BNS counterparts are Chapter XIV, Sections 227–269. IPC Section 228A is split across BNS Sections 72–73 in a different chapter. IPC Sections 216B and 226 are already repealed in the supplied text and are not presented as current offences.",
+  learningObjectives: [
+    "Map each active IPC Chapter XI offence to its corresponding BNS provision.",
+    "Distinguish a knowingly false statement under a duty of truth from fabrication and corrupt use of fabricated evidence.",
+    "Apply the aggravated provisions for false evidence aimed at capital or other serious convictions and for witness threats.",
+    "Distinguish concealment of evidence, failure to report, false information, harbouring, and benefits for screening offenders.",
+    "Recognise the different duties and mental elements for official misconduct, apprehension, custody and escape.",
+    "Locate the victim-identity rules at BNS Sections 72–73 and the other court-related rules at Sections 266–269.",
+  ],
+  detailedContent: `CHAPTER XI — OF FALSE EVIDENCE AND OFFENCES AGAINST PUBLIC JUSTICE
+
+Chapter Overview
+
+The supplied IPC text covers Sections 191–229A, including inserted lettered sections. Most active counterparts appear in BNS Chapter XIV, Sections 227–269. The exceptions are IPC Section 228A, split into BNS Sections 72 and 73, and the already repealed IPC Sections 216B and 226. For each problem, check the date of conduct, the applicable statute and the elements rather than relying on a section number alone.
+
+${publicJusticeSectionMap.map(([ipc, bns, heading, explanation]) => `IPC Section ${ipc} → BNS Section ${bns}: ${heading}\n\n${explanation}`).join("\n\n")}
+
+Repealed Provisions and Key Distinctions
+
+IPC Section 216B (definition of harbour) and IPC Section 226 (unlawful return from transportation) are recorded as repealed in the supplied text; do not map them to a new BNS offence. IPC Section 228A(1)–(2) maps to BNS 72, while its separate publication-of-proceedings rule in subsection (3) maps to BNS 73. A false statement under a legal duty (191/227), a fabricated item intended for use as evidence (192/228), and corrupt use of known false evidence (196/233) require different conduct. Likewise, screening an offender (201/238), simply failing a legal reporting duty (202/239), and giving information known false (203/240) have different elements. For public servants, distinguish intentional omissions (221–222/259–260) from negligent escape (223/261). The BNS section on assessor personation (268) does not repeat the IPC's juror language.
+
+Exam Method
+
+First prove any oath, legal duty, official power, court process, underlying offence or lawful custody required by the selected provision. Then identify the accused's knowledge, intent, fraud, corruption or negligence and any statutory exception. Use the aggravated sentencing tier only when its additional facts are established. Select IPC or BNS by the relevant date, and treat changes in fine limits, imprisonment and placement as substantive comparison points.`,
+  keyPoints: [
+    "IPC 191–195 and 195A correspond to BNS 227–232; IPC 196–225B correspond in order to BNS 233–265, subject to inserted IPC sections.",
+    "IPC 228A(1)–(2) → BNS 72 and IPC 228A(3) → BNS 73; these BNS provisions are outside Chapter XIV.",
+    "IPC 216B and IPC 226 are repealed in the supplied text and have no direct active offence to carry forward.",
+    "IPC 227–229A correspond to BNS 266–269, with IPC 228A mapped separately to 72–73.",
+    "Giving, fabricating and using false evidence are distinct forms of misconduct; verify materiality and mental state.",
+    "BNS 229 sets fine ceilings of ₹10,000 for judicial proceedings and ₹5,000 for other false-evidence cases.",
+    "BNS 248 provides an ordinary fine ceiling of ₹2 lakh for a false charge intended to injure.",
+    "BNS 268 addresses personation of an assessor and omits the IPC provision's juror wording.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XI, Sections 191–229A (including inserted and repealed sections)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter XIV, Sections 227–269",
+    "Bharatiya Nyaya Sanhita, 2023 — Sections 72–73 (victim identity and proceedings)",
+  ].map((provision, index) => ({
+    id: `unit-14-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for false evidence and public justice.",
+  })),
+  examFocus:
+    "Identify the precise IPC-to-BNS pair, requisite legal duty, mental state and any aggravated sentencing fact. Do not collapse false evidence, concealment, false charges, official misconduct and escape into one offence. Mention the BNS 72–73 split for IPC 228A, the repealed IPC 216B/226 provisions and the assessor-only language of BNS 268.",
+  revisionNotes:
+    "IPC 191–195A → BNS 227–232; IPC 196–225B → BNS 233–265 (216B repealed); IPC 226 repealed; IPC 227/228 → BNS 266/267; IPC 228A(1)–(2)/(3) → BNS 72/73; IPC 229/229A → BNS 268/269. Compare fine ceilings, section elements and relevant dates.",
+  chapterNumber: 13,
+  displayOrder: 13,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -2632,5 +2748,6 @@ export const criminalLawIChapters = [
   publicServantsChapter,
   electionOffencesChapter,
   lawfulAuthorityChapter,
+  publicJusticeChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
