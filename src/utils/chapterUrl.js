@@ -79,6 +79,13 @@ const isCriminalLawIChapterSeven = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-7");
 
+const isCriminalLawIStateOffencesChapter = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-9");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -113,6 +120,10 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIStateOffencesChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter7-Offences-Against-the-State";
+  }
+
   if (isCriminalLawIChapterOne(courseSlug, chapter)) {
     return "ipc-to-bns-chapter1-Itroduction";
   }
@@ -153,6 +164,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIStateOffencesChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter7-Offences-Against-the-State";
+  }
+
   if (isCriminalLawIChapterOne(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter1-Itroduction";
   }
