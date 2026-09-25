@@ -1382,12 +1382,7 @@ const guestVerify = async (request, env, url) => {
   return { status: "paid", courseId: fields.courseId.stringValue };
 };
 
-const claimGuestPurchase = async (request, env, url) => {
-  if (request.headers.get("origin") !== url.origin) fail("Invalid claim origin.", 403);
-  const user = await verifyFirebaseUser(request);
-  if (!user.email || user.email_verified !== true) fail("Sign in with a verified email to claim your course.", 403);
-  const { purchaseCode } = await readBody(request);
-  const { name, token, document } = await guestDocument(env, String(purchaseCode || "").trim());
+const claimGuestRecord = async (env, user, { name, token, document }) => {
   const fields = document?.fields;
   if (!fields) fail("Purchase not found.", 404);
   const courseId = fields.courseId?.stringValue;
@@ -1443,6 +1438,46 @@ const claimGuestPurchase = async (request, env, url) => {
   return { courseId, status: "claimed" };
 };
 
+const claimGuestPurchase = async (request, env, url) => {
+  if (request.headers.get("origin") !== url.origin) fail("Invalid claim origin.", 403);
+  const user = await verifyFirebaseUser(request);
+  if (!user.email || user.email_verified !== true) fail("Sign in with a verified email to claim your course.", 403);
+  const { purchaseCode } = await readBody(request);
+  return claimGuestRecord(env, user, await guestDocument(env, String(purchaseCode || "").trim()));
+};
+
+const claimGuestPurchasesByEmail = async (request, env, url) => {
+  if (request.headers.get("origin") !== url.origin) fail("Invalid claim origin.", 403);
+  const user = await verifyFirebaseUser(request);
+  if (!user.email || user.email_verified !== true) fail("Sign in with a verified email to find your purchases.", 403);
+  await readBody(request);
+  const token = await getGoogleAccessToken(env);
+  const response = await fetch(`${firestoreDocumentsUrl}/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents:runQuery`, {
+    method: "POST", headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+    body: JSON.stringify({ structuredQuery: {
+      from: [{ collectionId: "guestPurchases" }],
+      where: { fieldFilter: { field: { fieldPath: "email" }, op: "EQUAL",
+        value: { stringValue: user.email.toLowerCase() } } },
+      limit: 100,
+    } }),
+  });
+  if (!response.ok) fail("Unable to find purchases for this email.", 503);
+  const rows = await response.json();
+  const claimed = [];
+  for (const row of rows) {
+    const document = row.document;
+    if (!document || document.fields?.status?.stringValue !== "paid") continue;
+    try {
+      const result = await claimGuestRecord(env, user, { name: document.name, token, document });
+      claimed.push(result.courseId);
+    } catch (error) {
+      // One duplicate purchase must not prevent other paid courses from being claimed.
+      console.error("Unable to claim paid guest purchase", error.message);
+    }
+  }
+  return { claimed };
+};
+
 const handleApi = async (request, env, url) => {
   if (url.pathname === "/api/health") {
     if (request.method !== "GET") fail("Method not allowed.", 405);
@@ -1463,6 +1498,7 @@ const handleApi = async (request, env, url) => {
   if (url.pathname === "/api/guest/create-order") return guestCheckout(request, env, url);
   if (url.pathname === "/api/guest/verify-payment") return guestVerify(request, env, url);
   if (url.pathname === "/api/guest/claim") return claimGuestPurchase(request, env, url);
+  if (url.pathname === "/api/guest/claim-email") return claimGuestPurchasesByEmail(request, env, url);
   if (url.pathname === "/api/course-pricing") {
     if (request.method !== "GET") fail("Method not allowed.", 405);
     return coursePricing(env);

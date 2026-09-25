@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   FaGoogle,
   FaInfoCircle,
@@ -6,32 +6,110 @@ import {
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../../../hooks/useAuth";
+import { emailLinkOnCurrentPage, emailLinkPendingKey } from "../../../services/authService";
 
 export default function LoginPage() {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { signIn } = useAuth();
+  const { signIn, signInWithEmail, requestEmailSignInLink } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [email, setEmail] = useState(() => window.localStorage.getItem(emailLinkPendingKey) || "");
+  const [emailOpen, setEmailOpen] = useState(() => emailLinkOnCurrentPage());
+  const [linkSent, setLinkSent] = useState(false);
+  const completionStarted = useRef(false);
+  const completingEmailLink = emailLinkOnCurrentPage();
+  const next = searchParams.get("next");
+  const safeNext = (next === "/claim-purchase" || next?.startsWith("/student/courses/")) &&
+    !next.startsWith("//") && !next.includes("\\") &&
+    !next.includes("?") && !next.includes("#") ? next : "/student";
+  const destination = window.localStorage.getItem("sanhita360-guest-latest")
+    ? "/claim-purchase" : safeNext;
+
+  const continueAfterLogin = async ({ firebaseUser, profile }) => {
+    if (profile?.role === "admin") {
+      navigate("/admin", { replace: true });
+      return;
+    }
+    if (firebaseUser.emailVerified) {
+      try {
+        const response = await fetch("/api/guest/claim-email", {
+          method: "POST",
+          headers: { "content-type": "application/json",
+            authorization: `Bearer ${await firebaseUser.getIdToken()}` },
+          body: "{}",
+        });
+        if (response.ok) {
+          const { claimed = [] } = await response.json();
+          if (claimed.length && destination === "/claim-purchase") {
+            window.localStorage.removeItem("sanhita360-guest-latest");
+            for (const courseId of claimed) {
+              window.localStorage.removeItem(`sanhita360-guest-${courseId}`);
+            }
+            navigate("/student/enrolled-courses", { replace: true });
+            return;
+          }
+        }
+      } catch (claimError) {
+        console.warn("Unable to check purchases on sign-in", claimError);
+      }
+    }
+    navigate(destination, { replace: true });
+  };
+
+  const describeEmailError = (authError) => {
+    if (authError.code === "auth/operation-not-allowed") {
+      return "Email sign-in is not enabled yet. Please contact Sanhita360 support.";
+    }
+    if (authError.code === "auth/invalid-action-code" || authError.code === "auth/expired-action-code") {
+      return "This email link has expired or was already used. Request a new one.";
+    }
+    return authError.message || "Email sign-in failed. Please try again.";
+  };
+
+  const finishEmailSignIn = async (address) => {
+    if (completionStarted.current) return;
+    completionStarted.current = true;
+    setIsLoading(true);
+    setError("");
+    try {
+      await continueAfterLogin(await signInWithEmail(address));
+    } catch (loginError) {
+      setError(describeEmailError(loginError));
+      completionStarted.current = false;
+    } finally { setIsLoading(false); }
+  };
+
+  useEffect(() => {
+    if (completingEmailLink && email && !completionStarted.current) {
+      void finishEmailSignIn(email);
+    }
+    // An email link is handled once, even when React runs effects twice in development.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleEmail = async (event) => {
+    event.preventDefault();
+    if (completingEmailLink) {
+      await finishEmailSignIn(email);
+      return;
+    }
+    setIsLoading(true);
+    setError("");
+    try {
+      await requestEmailSignInLink(email, destination);
+      setLinkSent(true);
+    } catch (emailError) { setError(describeEmailError(emailError)); }
+    finally { setIsLoading(false); }
+  };
 
   const handleGoogleLogin = async () => {
     try {
       setIsLoading(true);
       setError("");
 
-      const { profile } = await signIn();
-
-      const next = searchParams.get("next");
-      const safeNext = (next === "/claim-purchase" || next?.startsWith("/student/courses/")) &&
-        !next.startsWith("//") && !next.includes("\\") &&
-        !next.includes("?") && !next.includes("#")
-        ? next
-        : "/student";
-
-      navigate(profile?.role === "admin" ? "/admin" : safeNext, {
-        replace: true,
-      });
+      await continueAfterLogin(await signIn());
     } catch (loginError) {
       console.error(loginError);
 
@@ -62,7 +140,7 @@ export default function LoginPage() {
           <h1>Student Login</h1>
 
           <p>
-            Sign in securely with your Google account to access courses,
+            Sign in with Google or your email address to access courses,
             learning materials, mock tests and certificates.
           </p>
         </div>
@@ -83,6 +161,24 @@ export default function LoginPage() {
 
           {isLoading ? "Signing in..." : "Continue with Google"}
         </button>
+
+        <div className="student-login-email">
+          <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
+            Continue with email instead
+          </button>
+          {emailOpen && (
+            <form onSubmit={handleEmail}>
+              <label htmlFor="student-login-email-address">Email address</label>
+              <input id="student-login-email-address" type="email" autoComplete="email" required
+                value={email} onChange={(event) => setEmail(event.target.value)} />
+              <button type="submit" disabled={isLoading}>
+                {completingEmailLink ? "Complete email sign-in" : "Send sign-in link"}
+              </button>
+              {linkSent && <p role="status">Check your inbox for a sign-in link. Open it to access your courses.</p>}
+              {completingEmailLink && <p>Enter the same email address that received the link.</p>}
+            </form>
+          )}
+        </div>
 
         <p className="student-login-role-note">
           Students and administrators use the same secure sign-in. You will
@@ -264,6 +360,46 @@ export default function LoginPage() {
           font-size: 13px;
           line-height: 1.55;
           text-align: center;
+        }
+
+        .student-login-email {
+          margin-top: 16px;
+          font-family: Arial, sans-serif;
+        }
+
+        .student-login-email-toggle,
+        .student-login-email form button {
+          width: 100%;
+          padding: 13px 16px;
+          border: 1px solid #2563eb;
+          border-radius: 10px;
+          background: #fff;
+          color: #1d4ed8;
+          font: inherit;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        .student-login-email form {
+          display: grid;
+          gap: 10px;
+          margin-top: 14px;
+          color: #0f172a;
+        }
+
+        .student-login-email input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #94a3b8;
+          border-radius: 8px;
+          font: inherit;
+        }
+
+        .student-login-email form p {
+          margin: 0;
+          color: #475569;
+          font-size: 13px;
+          line-height: 1.5;
         }
 
         .student-login-disclaimers {

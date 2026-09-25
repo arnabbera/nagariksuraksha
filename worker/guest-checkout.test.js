@@ -32,6 +32,10 @@ test("guest payment is verified before a single account can claim course access"
     if (url.endsWith("/coursePricing/introductory-2026")) return Response.json({
       updateTime: "2026-09-24T00:00:00Z", fields: { reserved: { integerValue: String(reserved) } },
     });
+    if (url.endsWith("documents:runQuery")) return Response.json(
+      body.structuredQuery.where.fieldFilter.value.stringValue === purchase?.fields.email.stringValue
+        ? [{ document: purchase }] : [],
+    );
     if (url.endsWith("documents:commit")) {
       if (body.writes[0].update.name.includes("/coursePricing/")) {
         reserved += 1;
@@ -78,11 +82,11 @@ test("guest payment is verified before a single account can claim course access"
       body: JSON.stringify(data),
     }), env);
     const encode = (value) => Buffer.from(JSON.stringify(value)).toString("base64url");
-    const userToken = async (sub) => {
+    const userToken = async (sub, email = "buyer@example.com", emailVerified = true) => {
       const now = Math.floor(Date.now() / 1000);
       const unsigned = `${encode({ alg: "RS256", kid: "guest-key" })}.${encode({
         aud: "nagariksuraksha-60adb", iss: "https://securetoken.google.com/nagariksuraksha-60adb",
-        sub, email: "buyer@example.com", email_verified: true, iat: now, exp: now + 3600,
+        sub, email, email_verified: emailVerified, iat: now, exp: now + 3600,
       })}`;
       const signature = await crypto.subtle.sign("RSASSA-PKCS1-v1_5", keys.privateKey,
         new TextEncoder().encode(unsigned));
@@ -106,6 +110,12 @@ test("guest payment is verified before a single account can claim course access"
     const verified = await request("/api/guest/verify-payment", { purchaseCode });
     assert.equal(verified.status, 200);
     assert.equal((await verified.json()).status, "paid");
+    assert.equal((await request("/api/guest/claim-email", {},
+      await userToken("unverified", "buyer@example.com", false))).status, 403);
+    assert.deepEqual((await (await request("/api/guest/claim-email", {},
+      await userToken("other", "other@example.com"))).json()).claimed, []);
+    assert.deepEqual((await (await request("/api/guest/claim-email", {},
+      await userToken("buyer"))).json()).claimed, ["environmental-law"]);
     assert.equal((await request("/api/guest/claim", { purchaseCode }, await userToken("buyer"))).status, 200);
     assert.equal(claimedEnrollment.fields.certification.mapValue.fields.payment.mapValue.fields.status.stringValue, "paid");
     assert.equal((await request("/api/guest/claim", { purchaseCode }, await userToken("buyer"))).status, 200);
