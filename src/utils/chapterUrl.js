@@ -93,6 +93,13 @@ const isCriminalLawIPublicTranquillityChapter = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-10");
 
+const isCriminalLawIPublicServantsChapter = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-11");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -127,6 +134,10 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIPublicServantsChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter10-Public-Servants";
+  }
+
   if (isCriminalLawIPublicTranquillityChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter9-Public-Tranquillity";
   }
@@ -175,6 +186,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIPublicServantsChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter10-Public-Servants";
+  }
+
   if (isCriminalLawIPublicTranquillityChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter9-Public-Tranquillity";
   }
