@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured eleven-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity and public servants, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured twelve-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity, public servants and elections, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 11,
+  totalChapters: 12,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through eleven structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through twelve structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 4 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 4 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 5 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 5 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2384,11 +2384,110 @@ Historical IPC 161–165A: omitted under the Prevention of Corruption Act, with 
   previewAvailable: false,
 });
 
+const electionOffencesChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-12`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER IXA  OF OFFENCES RELATING TO ELECTIONS",
+  slug: "unit-12-offences-relating-to-elections",
+  shortDescription:
+    "Study IPC Sections 171A–171I alongside BNS Sections 169–177: electoral rights, bribery, undue influence, personation, statements, spending and accounts.",
+  chapterOverview:
+    "IPC Chapter IXA sets out election offences in Sections 171A–171I. The corresponding BNS provisions are in Chapter IX, Sections 169–177. This chapter explains who is a candidate, what counts as an electoral right, and the elements and penalties for bribery, undue influence, personation, knowingly false statements about candidates, unauthorised spending and failure to keep election accounts. It highlights the increased BNS fine limits for spending and accounts and distinguishes permitted public-policy promises and lawful proxy voting from prohibited conduct.",
+  learningObjectives: [
+    "Map each IPC provision in Sections 171A–171I to BNS Sections 169–177.",
+    "Explain the definitions of candidate and electoral right, including the right to abstain or withdraw.",
+    "Distinguish electoral bribery from lawful promises of public policy and explain deemed giving or acceptance of gratification.",
+    "Identify threats, spiritual coercion and other voluntary interference constituting undue influence.",
+    "Analyse personation, repeat voting, abetment and the authorised-proxy exception.",
+    "Distinguish ordinary electoral bribery from treating and apply their different punishments.",
+    "Explain the mental and factual elements of a false statement about a candidate's personal character or conduct.",
+    "Apply written-authority and accounts rules and compare the IPC and BNS fine limits.",
+  ],
+  detailedContent: `CHAPTER IXA — OF OFFENCES RELATING TO ELECTIONS
+
+Chapter Overview
+
+The IPC places these offences in Chapter IXA, Sections 171A–171I. The BNS places their corresponding provisions in Chapter IX, Sections 169–177. The order and underlying subjects are substantially preserved, but the BNS raises the maximum fines for unauthorised election spending and failure to keep election accounts. Always identify the date of the act and the precise provision before selecting the applicable law.
+
+IPC Section 171A → BNS Section 169: Candidate and Electoral Right
+
+A candidate is a person nominated as a candidate at an election. An electoral right includes standing or not standing as a candidate, withdrawing a candidacy, voting and refraining from voting. The offence provisions protect these choices. The statutory definitions, rather than a person's broad political interests, control the answer.
+
+IPC Section 171B → BNS Section 170: Bribery
+
+Giving gratification to induce or reward exercise of another's electoral right, or accepting gratification as a reward for exercise or inducement, constitutes electoral bribery. An offer, agreement or attempt to procure gratification may count as giving; an agreement or attempt to obtain it may count as acceptance. The statute also deals with purported rewards even where the promised action was not intended or performed. A declaration of public policy or promise of public action is excluded. Distinguish a benefit conditioned on a vote from a general public-policy proposal by examining purpose, recipient, timing and evidence.
+
+IPC Section 171C → BNS Section 171: Undue Influence
+
+Voluntary interference or attempted interference with free exercise of an electoral right is prohibited. Threatening injury to a voter, candidate or interested person, or inducing belief in divine displeasure or spiritual censure, are express examples. A public-policy declaration, public-action promise or mere exercise of a legal right without intent to interfere is excluded. Show the particular interference and the affected electoral choice; strong political persuasion alone is not necessarily undue influence.
+
+IPC Section 171D → BNS Section 172: Personation
+
+Applying for a voting paper or voting in another person's name, a deceased person's name or a fictitious name, or applying again in one's own name after already voting at the same election, constitutes personation. Abetting or procuring such voting also falls within the provision. Lawfully authorised proxy voting is excluded to the extent the proxy votes within that authority. Verify the identity, application or vote, election and proxy status rather than treating every assisted vote as personation.
+
+IPC Section 171E → BNS Section 173: Punishment for Bribery
+
+Ordinary bribery carries imprisonment up to one year, fine, or both. Bribery by treating is punishable by fine only. Treating means gratification in the form of food, drink, entertainment or provision. Identify the form of gratification before stating the punishment.
+
+IPC Section 171F → BNS Section 174: Punishment for Undue Influence or Personation
+
+Either offence is punishable by imprisonment up to one year, fine, or both. The penalty provision follows the definitions: cite Section 171C or 171D with IPC 171F, or BNS Section 171 or 172 with BNS 174, as applicable.
+
+IPC Section 171G → BNS Section 175: False Statement about a Candidate
+
+The accused must make or publish a purported factual statement about a candidate's personal character or conduct, knowing or believing it false or not believing it true, with intent to affect the election result. The punishment is fine. A false claim about the candidate's personal conduct must be distinguished from a policy opinion or a disputed prediction; prove the stated knowledge and electoral purpose.
+
+IPC Section 171H → BNS Section 176: Unauthorised Election Payments
+
+The offence concerns expenses incurred or authorised to promote a candidate's election without the candidate's general or special written authority. Both statutes retain the narrow proviso for unauthorised expenses not exceeding ₹10 where written approval is obtained within ten days. The maximum fine rises from ₹500 in the supplied IPC text to ₹10,000 under BNS Section 176. Identify who paid, the election purpose, the written authority and whether the proviso applies.
+
+IPC Section 171I → BNS Section 177: Failure to Keep Election Accounts
+
+The accused must be required by a law or legally effective rule to keep election-expense accounts and must fail to do so. The maximum fine increases from ₹500 under the IPC provision to ₹5,000 under BNS Section 177. Do not assume every participant has this accounting duty; first identify the law or rule imposing it.
+
+Revision Map and Exam Method
+
+IPC 171A → BNS 169; 171B → 170; 171C → 171; 171D → 172; 171E → 173; 171F → 174; 171G → 175; 171H → 176; 171I → 177. In a problem, identify the electoral right, the alleged action and its mental element, then check statutory exclusions or written authority. Separate bribery, influence, personation, false statements, spending and accounts; cite the appropriate punishment provision and compare the fine limit by the date of the act.`,
+  keyPoints: [
+    "IPC Chapter IXA Sections 171A–171I correspond, in order, to BNS Chapter IX Sections 169–177.",
+    "Electoral rights include standing, withdrawing, voting and refraining from voting.",
+    "Promises of public policy and public action are expressly excluded from the bribery provision.",
+    "Threats and inducing belief in divine displeasure are express forms of electoral undue influence.",
+    "Authorised proxy voting is excluded from personation to the extent of the proxy's authority.",
+    "Bribery by treating is punishable by fine only; ordinary bribery can also attract up to one year's imprisonment.",
+    "A false-statement offence requires a purported fact about the candidate's personal character or conduct and intent to affect the result.",
+    "The maximum unauthorised-spending fine rises from IPC ₹500 to BNS ₹10,000.",
+    "The maximum fine for failing to keep required election accounts rises from IPC ₹500 to BNS ₹5,000.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter IXA, Sections 171A–171I",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter IX, Sections 169–177",
+  ].map((provision, index) => ({
+    id: `unit-12-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for election offences.",
+  })),
+  examFocus:
+    "Start with the exact electoral right and the date of conduct. For bribery, identify giver or recipient, gratification and inducement or reward; apply the public-policy exception and treating penalty where appropriate. For undue influence and personation, identify the prohibited interference or false voting and any lawful proxy. For statements, prove false fact, knowledge and electoral purpose. For spending or accounting, identify the written authority or legal duty, then use the correct IPC or BNS fine limit.",
+  revisionNotes:
+    "IPC 171A–171I → BNS 169–177 in order. Bribery: 171B/170, punishment 171E/173. Undue influence: 171C/171; personation: 171D/172; punishment 171F/174. False statement: 171G/175. Unauthorised spending: 171H/176 (₹500 → ₹10,000 maximum fine). Accounts: 171I/177 (₹500 → ₹5,000 maximum fine).",
+  chapterNumber: 11,
+  displayOrder: 11,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
   existingCriminalLawIChapters[6],
   publicTranquillityChapter,
   publicServantsChapter,
+  electionOffencesChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];

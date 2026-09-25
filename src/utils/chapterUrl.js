@@ -100,6 +100,13 @@ const isCriminalLawIPublicServantsChapter = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-11");
 
+const isCriminalLawIElectionOffencesChapter = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-12");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -134,6 +141,10 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIElectionOffencesChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter11-Election-Offences";
+  }
+
   if (isCriminalLawIPublicServantsChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter10-Public-Servants";
   }
@@ -186,6 +197,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIElectionOffencesChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter11-Election-Offences";
+  }
+
   if (isCriminalLawIPublicServantsChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter10-Public-Servants";
   }
