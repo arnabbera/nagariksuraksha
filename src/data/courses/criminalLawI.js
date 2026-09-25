@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured ten-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces and public tranquillity, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured eleven-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity and public servants, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 10,
+  totalChapters: 11,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through ten structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through eleven structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 3 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 3 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 4 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 4 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2281,10 +2281,114 @@ const publicTranquillityChapter = createChapterModel({
   previewAvailable: false,
 });
 
+const publicServantsChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-11`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER IX  OF OFFENCES BY OR RELATING TO PUBLIC SERVANTS",
+  slug: "unit-11-offences-by-or-relating-to-public-servants",
+  shortDescription:
+    "Compare IPC Sections 166–171 and BNS Sections 198–205, including investigation duties, victim treatment, impersonation and public-servant misconduct.",
+  chapterOverview:
+    "IPC Chapter IX includes Sections 161–171 and the inserted Sections 165A, 166A and 166B. IPC Sections 161–165A were omitted by Section 31 of the Prevention of Corruption Act, 1988, so they are not current general IPC bribery offences to be mapped into the BNS. The remaining offences in IPC Sections 166–171 correspond principally to BNS Chapter XII, Sections 198–205. This chapter explains the elements of each offence, the changes to procedure references and penalties, and how to assess State amendments and the date of the conduct.",
+  learningObjectives: [
+    "Explain why omitted IPC Sections 161–165A have no direct BNS counterparts and identify the separate Prevention of Corruption Act framework.",
+    "Map IPC Sections 166, 166A, 166B and 167–171 to BNS Sections 198–205.",
+    "Distinguish knowing disobedience intended to injure from the special investigation duties in IPC Section 166A and BNS Section 199.",
+    "Identify the duty to treat victims under IPC Section 166B and BNS Section 200, with the correct CrPC and BNSS references.",
+    "Analyse incorrect documents, prohibited trading and prohibited property transactions by public servants.",
+    "Distinguish personating a public servant from wearing official garb or carrying an official token.",
+    "Identify changes to community-service availability, impersonation punishment and the fine for misuse of public-servant garb or tokens.",
+    "Treat the supplied Kerala and Arunachal Pradesh State-amendment notes as jurisdiction-specific historical material, not automatic BNS provisions.",
+  ],
+  detailedContent: `CHAPTER IX — OF OFFENCES BY OR RELATING TO PUBLIC SERVANTS
+
+Chapter Overview
+
+IPC Chapter IX addresses misuse of public office and deception about public status. The supplied extract includes repealed bribery sections as well as offences still comparable to BNS Chapter XII. The applicable provision depends on when and where the conduct occurred. The chapter below uses the national BNS text for its comparisons; any State amendment requires separate verification for the relevant jurisdiction and date.
+
+Repealed Bribery Sections: IPC 161–165A
+
+Section 31 of the Prevention of Corruption Act, 1988 omitted IPC Sections 161–165A and preserved the application of the General Clauses Act's saving rule. These old IPC section numbers should not be presented as live BNS offences. Corrupt gratification and related conduct must be assessed under the applicable provisions of the Prevention of Corruption Act and any other relevant law, with the precise date and elements checked. The Kerala amendment to the former IPC Section 161 quoted in the supplied material belongs to this historical context; it does not create a corresponding provision in BNS Chapter XII.
+
+IPC Section 166 → BNS Section 198: Knowing Disobedience Causing Injury
+
+A public servant commits this offence by knowingly disobeying a legal direction governing official conduct while intending to cause injury or knowing injury is likely. Both provisions allow simple imprisonment up to one year, fine, or both. Prove public-servant status, the specific direction of law, knowing disobedience and the required intention or knowledge; a mere mistake in administration does not by itself establish the offence.
+
+IPC Section 166A → BNS Section 199: Investigation Directions and Recording Information
+
+Three alternatives are covered: requiring a person's attendance contrary to law during investigation; disobeying another investigation direction to a person's prejudice; or failing to record specified information concerning listed cognizable offences. The BNS provision refers to Section 173(1) of the Bharatiya Nagarik Suraksha Sanhita, 2023, where the IPC provision referred to Section 154(1) of the Code of Criminal Procedure, 1973. The schedule of underlying offences is expressed in BNS numbers and must be checked against Section 199(c), not converted mechanically from IPC numbers. Punishment is rigorous imprisonment from six months to two years and fine. The Arunachal Pradesh amendment to former IPC Section 166A(c) supplied with the extract must be checked separately for historical local applicability; it does not rewrite the national BNS list.
+
+IPC Section 166B → BNS Section 200: Non-treatment of Victim
+
+The person in charge of a public or private hospital commits the offence by contravening the statutory treatment obligation. The IPC provision referred to CrPC Section 357C; BNS Section 200 refers to BNSS Section 397. Punishment is imprisonment up to one year, fine, or both. Identify the person in charge, the hospital and the underlying statutory treatment duty before applying the penalty.
+
+IPC Section 167 → BNS Section 201: Incorrect Document or Electronic Record
+
+A public servant responsible for preparing or translating a document or electronic record must knowingly or believingly make it incorrect, intending injury or knowing injury is likely. Both statutes provide imprisonment up to three years, fine, or both. The legal duty, falsity, mental element and likely injury must each be established; the existence of a clerical error alone is insufficient.
+
+IPC Section 168 → BNS Section 202: Prohibited Trade
+
+These sections apply where a public servant is legally bound not to engage in trade yet does so. The IPC provides simple imprisonment up to one year, fine, or both. The BNS retains those options and adds community service as a possible alternative. The legal prohibition and the actual trading conduct must be proved.
+
+IPC Section 169 → BNS Section 203: Prohibited Purchase or Bid
+
+A public servant legally barred from buying or bidding for certain property commits this offence by purchasing or bidding in their own name, another's name, jointly or in shares. Both statutes provide simple imprisonment up to two years, fine, or both, and confiscation of the property if purchased. Identify the particular legal restriction and the transaction.
+
+IPC Section 170 → BNS Section 204: Personating a Public Servant
+
+A person who knows they do not hold a public office pretends to hold it, or falsely impersonates another office-holder, and performs or attempts an act under colour of that office. IPC Section 170 provides imprisonment up to two years, fine, or both. BNS Section 204 prescribes imprisonment of at least six months and up to three years, and fine. An empty boast or costume without the required act under colour of office must be distinguished from this offence.
+
+IPC Section 171 → BNS Section 205: Garb or Token
+
+Someone outside a class of public servants wears similar official garb or carries a similar token intending or knowing it likely that others will believe they belong to that class. The maximum imprisonment remains three months. The maximum fine changes from ₹200 in the supplied IPC text to ₹5,000 under BNS Section 205; either provision also permits both imprisonment and fine. Focus on the resemblance and the intended or likely false belief.
+
+Exam Focus and Revision Map
+
+Historical IPC 161–165A: omitted under the Prevention of Corruption Act, with no direct BNS Chapter XII renumbering. IPC 166 → BNS 198; 166A → 199; 166B → 200; 167 → 201; 168 → 202; 169 → 203; 170 → 204; 171 → 205. For a problem, establish date, jurisdiction, public-servant status or impersonation, the exact prohibited act and mental element, then compare the applicable penalty. Treat State-specific amendments separately from the national statutory text.`,
+  keyPoints: [
+    "IPC Sections 161–165A were omitted under the Prevention of Corruption Act, 1988; do not renumber them into the BNS.",
+    "IPC Sections 166, 166A and 166B correspond to BNS Sections 198, 199 and 200.",
+    "BNS Section 199(c) refers to BNSS Section 173(1), while IPC Section 166A(c) referred to CrPC Section 154(1).",
+    "BNS Section 200 refers to BNSS Section 397, while IPC Section 166B referred to CrPC Section 357C.",
+    "IPC Sections 167–171 correspond to BNS Sections 201–205.",
+    "BNS Section 202 adds community service as a possible penalty for prohibited trade.",
+    "BNS Section 204 raises the punishment for public-servant impersonation to a minimum of six months and a maximum of three years, plus fine.",
+    "BNS Section 205 raises the maximum fine for deceptive public-servant garb or a token to ₹5,000.",
+    "State amendments in the supplied IPC extract are not automatic amendments to the national BNS text.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Sections 161–165A (omitted under Prevention of Corruption Act, 1988, Section 31)",
+    "Indian Penal Code, 1860 — Sections 166, 166A and 166B",
+    "Indian Penal Code, 1860 — Sections 167–171",
+    "Bharatiya Nyaya Sanhita, 2023 — Sections 198–205",
+    "Prevention of Corruption Act, 1988 — Section 31 and applicable substantive provisions",
+    "Code of Criminal Procedure, 1973 — Sections 154(1) and 357C (historical IPC references)",
+    "Bharatiya Nagarik Suraksha Sanhita, 2023 — Sections 173(1) and 397",
+  ].map((provision, index) => ({
+    id: `unit-11-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for public-servant offences.",
+  })),
+  examFocus:
+    "Map the alleged facts to the exact IPC or BNS provision based on the date of conduct. Explain the repeal of IPC Sections 161–165A without treating corruption offences as decriminalised. For Sections 166–171, show the statutory duty, act, mental element and any injury; distinguish an actual public servant's misconduct from a false claim of official status. Identify the specific changes in BNS Sections 199, 200, 202, 204 and 205, and check State amendments only when jurisdiction and date make them relevant.",
+  revisionNotes:
+    "Omitted IPC 161–165A: Prevention of Corruption Act, 1988. IPC 166/166A/166B → BNS 198/199/200; IPC 167–171 → BNS 201–205. BNS 199 uses BNSS 173(1), BNS 200 uses BNSS 397, BNS 202 allows community service, BNS 204 increases the impersonation sentence, and BNS 205 raises the fine limit. Verify date and State-specific amendments.",
+  chapterNumber: 10,
+  displayOrder: 10,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
   existingCriminalLawIChapters[6],
   publicTranquillityChapter,
+  publicServantsChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
