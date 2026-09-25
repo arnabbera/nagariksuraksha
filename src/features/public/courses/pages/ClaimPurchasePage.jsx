@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../../../hooks/useAuth";
 
@@ -9,6 +9,38 @@ export default function ClaimPurchasePage() {
   const [status, setStatus] = useState("");
   const [paid, setPaid] = useState(false);
   const [busy, setBusy] = useState(false);
+  const checkedAccount = useRef("");
+
+  useEffect(() => {
+    if (!firebaseUser || checkedAccount.current === firebaseUser.uid) return;
+    checkedAccount.current = firebaseUser.uid;
+    let active = true;
+    const findPaidCourses = async () => {
+      setBusy(true);
+      try {
+        const token = await firebaseUser.getIdToken();
+        const response = await fetch("/api/guest/claim-email", {
+          method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
+          body: "{}",
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Unable to find paid purchases.");
+        if (result.claimed?.length && active) {
+          localStorage.removeItem("sanhita360-guest-latest");
+          for (const courseId of result.claimed) localStorage.removeItem(`sanhita360-guest-${courseId}`);
+          navigate("/student/enrolled-courses", { replace: true });
+        } else if (active) {
+          setStatus(code ? "Enter your purchase code below to check payment and claim access." :
+            "No unclaimed paid courses were found for this verified email. Enter your purchase code if you used another address.");
+        }
+      } catch (error) { if (active) setStatus(error.message); }
+      finally { if (active) setBusy(false); }
+    };
+    void findPaidCourses();
+    return () => { active = false; };
+    // Run when the signed-in identity changes, not when the code input changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [firebaseUser?.uid]);
 
   const confirm = async () => {
     setBusy(true);
@@ -49,8 +81,8 @@ export default function ClaimPurchasePage() {
       <section className="guest-card">
         <Link to="/law-courses">← Browse courses</Link>
         <h1>Your course purchase</h1>
-        <p>Save this private purchase code. It lets you recover your payment and claim the course
-          after signing in. Do not share it.</p>
+        <p>After signing in with the same verified email used at checkout, paid courses are added
+          to your account. You can also enter a private purchase code to recover a payment.</p>
         <label>Purchase code<input value={code} onChange={(event) => setCode(event.target.value.trim())}
           autoComplete="off" spellCheck={false} /></label>
         <button type="button" disabled={busy || !/^[a-f0-9]{64}$/.test(code)} onClick={confirm}>Check payment</button>
@@ -58,6 +90,7 @@ export default function ClaimPurchasePage() {
         {paid && (firebaseUser ?
           <button type="button" disabled={busy} onClick={claim}>Add course to my account</button> :
           <Link to="/login?next=%2Fclaim-purchase">Sign in to access your course</Link>)}
+        {firebaseUser && <p><Link to="/student/enrolled-courses">View my enrolled courses</Link></p>}
         <p>For payment help, keep your Razorpay receipt and purchase code.</p>
       </section>
       <style>{`

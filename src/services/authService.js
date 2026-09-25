@@ -1,8 +1,11 @@
 import {
   GoogleAuthProvider,
   browserLocalPersistence,
+  isSignInWithEmailLink,
   onAuthStateChanged,
+  sendSignInLinkToEmail,
   setPersistence,
+  signInWithEmailLink,
   signInWithPopup,
   signOut,
 } from "firebase/auth";
@@ -197,6 +200,26 @@ export const loginWithGoogle = async () => {
 
     profile,
   };
+};
+
+export const emailLinkPendingKey = "sanhita360-email-link-address";
+
+export const emailLinkOnCurrentPage = () =>
+  isSignInWithEmailLink(auth, window.location.href);
+
+export const requestEmailSignInLink = async (email, next = "/student") => {
+  await sendSignInLinkToEmail(auth, normalizeEmail(email), {
+    url: new URL(`/login?next=${encodeURIComponent(next)}`, window.location.origin).href,
+    handleCodeInApp: true,
+  });
+  window.localStorage.setItem(emailLinkPendingKey, normalizeEmail(email));
+};
+
+export const loginWithEmailLink = async (email) => {
+  await setPersistence(auth, browserLocalPersistence);
+  const { user } = await signInWithEmailLink(auth, normalizeEmail(email), window.location.href);
+  window.localStorage.removeItem(emailLinkPendingKey);
+  return { firebaseUser: user, profile: await createAuthenticatedUserProfile(user) };
 };
 
 export const logoutUser = async () => {

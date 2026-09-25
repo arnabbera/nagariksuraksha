@@ -7,7 +7,9 @@ import {
 
 import {
   loginWithGoogle,
+  loginWithEmailLink,
   logoutUser,
+  requestEmailSignInLink,
   subscribeToAuthentication,
 } from "../services/authService";
 import { userRepository } from "../repositories/UserRepository";
@@ -72,6 +74,22 @@ export function AuthProvider({ children }) {
         error?.message ||
           "Google sign-in failed. Please try again.",
       );
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const signInWithEmail = async (email) => {
+    setLoading(true);
+    setAuthError("");
+    try {
+      const result = await loginWithEmailLink(email);
+      setFirebaseUser(result.firebaseUser);
+      setProfile(result.profile);
+      return result;
+    } catch (error) {
+      setAuthError(error?.message || "Email sign-in failed.");
       throw error;
     } finally {
       setLoading(false);
@@ -146,6 +164,8 @@ export function AuthProvider({ children }) {
       enrollmentId: profile?.enrollmentId || null,
 
       signIn,
+      signInWithEmail,
+      requestEmailSignInLink,
       signOut,
       saveProfile,
       refreshProfile,

@@ -53,8 +53,8 @@ export default function GuestCheckoutPage() {
             onChange={(event) => setEmail(event.target.value)} /></label>
           <button disabled={!course || paying} type="submit">{paying ? "Opening checkout…" : "Continue to secure payment"}</button>
         </form>
-        <p>After payment, save your private purchase code. Sign in later to attach the course
-          to your student account. An email address alone does not grant course access.</p>
+        <p>After payment, sign in with the same email address to access your course. Save the private
+          purchase code as a backup. The email must be verified before course access is granted.</p>
         {error && <p className="guest-error" role="alert">{error} If you paid, use <Link to="/claim-purchase">Recover a purchase</Link>.</p>}
         <p>Already have an account? <Link to={`/login?next=${encodeURIComponent(`/student/courses/${courseSlug}`)}`}>Sign in and enroll</Link>.</p>
       </section>
