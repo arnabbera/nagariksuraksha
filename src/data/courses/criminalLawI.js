@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured nine-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State and the armed forces, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured ten-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces and public tranquillity, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 9,
+  totalChapters: 10,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through nine structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through ten structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -1105,9 +1105,9 @@ IPC 121 → BNS 147; 121A → 148; 122 → 149; 123 → 150; 124 → 151; histor
   {
     title: "Offences against Public Tranquillity",
     shortDescription:
-      "A detailed study of unlawful assembly, membership, common-object liability, rioting, armed rioting, dispersal orders, affray and offences affecting public peace.",
+      "Study IPC Sections 141–160 and BNS Sections 189–197: unlawful assembly, riots, group enmity, affray and related public-order offences.",
     overview:
-      "Public tranquillity offences protect collective peace and lawful public order. This chapter focuses on IPC Sections 141–152 and their principal consolidation in BNS Sections 189–191 and 195. It explains when an assembly of five or more persons becomes unlawful, how intentional membership is proved, when every member becomes constructively liable for an offence committed in prosecution of the common object, and when force or violence converts an unlawful assembly into a riot. It also distinguishes unlawful assembly from criminal conspiracy, common intention and affray, and introduces closely related BNS provisions concerning provocation, riots, affray and public harmony.",
+      "IPC Chapter VIII, Of Offences Against the Public Tranquillity, covers Sections 141–160, including Sections 153A, 153AA and 153B. BNS Chapter XI consolidates the corresponding subjects in Sections 189–197. This chapter explains prohibited common objects, intentional membership, common-object liability, rioting and dispersal; provocation, landholder duties, group enmity, public-servant protection and affray. It identifies changes in grouping, penalties and electronic-communication provisions, while distinguishing protected peaceful assembly from criminal conduct.",
     learningObjectives: [
       "Define an unlawful assembly and identify each statutory common object.",
       "Explain how a lawful assembly may subsequently become unlawful.",
@@ -1118,7 +1118,9 @@ IPC 121 → BNS 147; 121A → 148; 122 → 149; 123 → 150; 124 → 151; histor
       "Analyse liability after a lawful command to disperse.",
       "Explain liability for hiring, engaging, harbouring or going armed for an unlawful assembly.",
       "Distinguish unlawful assembly and rioting from affray and peaceful protest.",
-      "Compare IPC Sections 141–152 with the consolidated BNS framework.",
+      "Map IPC Sections 141–160, including 153A and 153B, to BNS Sections 189–197 without assuming identical numbering or penalties.",
+      "Explain landholder liability under IPC Sections 154–156 and BNS Section 193.",
+      "Identify the scope of IPC Section 153AA and explain why BNS Chapter XI has no separately numbered direct equivalent.",
     ],
     detailedContent: `1. Meaning and Purpose of Public Tranquillity
 
@@ -1197,7 +1199,7 @@ Criminal conspiracy centres on an agreement between at least two persons to purs
 
 IPC Section 150 makes a person who hires, engages, employs, promotes or connives at hiring persons to join an unlawful assembly punishable as a member and, within the statutory rule, for offences committed in pursuance of that hiring.
 
-Related IPC provisions outside the narrow Sections 141–152 range historically address harbouring hired persons and being hired or going armed. BNS Section 189 brings these related forms of liability into its consolidated sub-sections. Proof must connect the accused's conduct to the unlawful assembly; ordinary employment or association is insufficient.
+IPC Sections 157–158 address harbouring hired persons and being hired or going armed. BNS Section 189 brings these forms of liability into its consolidated sub-sections. Proof must connect the accused's conduct to the unlawful assembly; ordinary employment or association is insufficient.
 
 12. Assembly Ordered to Disperse
 
@@ -1209,7 +1211,7 @@ BNS Section 189 separately reflects these situations. The prosecution must prove
 
 IPC Section 152 punishes assaulting, threatening to assault, obstructing, or attempting to obstruct a public servant who is endeavouring to disperse an unlawful assembly or suppress a riot or affray, and using or threatening criminal force against that public servant.
 
-BNS Section 195 addresses assault, obstruction or criminal force against a public servant performing this duty. Its punishment structure distinguishes the basic offence and the more serious use or threat of criminal force. The public servant must be acting in discharge of the relevant official duty.
+BNS Section 195(1) covers actual assault, obstruction or use of criminal force against a public servant performing this duty; it prescribes up to three years' imprisonment or a fine of at least ₹25,000, or both. Section 195(2) separately covers threatened assault or attempted obstruction or criminal force; it prescribes up to one year, fine, or both. The public servant must be acting in discharge of the relevant official duty.
 
 14. Provocation, Landholder Duties and Affray
 
@@ -1219,7 +1221,7 @@ BNS Section 194 defines affray as two or more persons fighting in a public place
 
 15. Public Harmony Provisions
 
-BNS Sections 196 and 197 address promoting enmity between groups and assertions prejudicial to national integration. Their IPC antecedents lie principally in Sections 153A and 153B, outside the requested Sections 141–152 syllabus range, but they are closely related to public tranquillity and are placed in the BNS chapter.
+BNS Sections 196 and 197 address promoting enmity between groups and assertions prejudicial to national integration. Their IPC antecedents lie principally in Sections 153A and 153B. The BNS expressly covers electronic communication, while Section 197(1)(d) also addresses specified false or misleading information jeopardising India's sovereignty, unity, integrity or security. These sections must be read according to their exact statutory ingredients.
 
 These offences may involve speech and therefore require careful application of the statutory mental element, context, audience and constitutional protections. Mere unpopular opinion should not be equated with the prohibited promotion of enmity or disharmony.
 
@@ -1250,7 +1252,39 @@ Use the following sequence:
 (i) distinguish common object from common intention and conspiracy;
 (j) examine withdrawal, late entry and individual roles;
 (k) identify the precise IPC section or BNS section and sub-section; and
-(l) apply constitutional protection to peaceful speech and assembly before reaching a reasoned conclusion.`,
+(l) apply constitutional protection to peaceful speech and assembly before reaching a reasoned conclusion.
+
+19. Provocation to Riot: IPC Section 153 and BNS Section 192
+
+Both provisions address malignant or wanton illegal provocation intended or known to be likely to cause rioting. Punishment depends on whether rioting follows the provocation: up to one year if it does, or up to six months if it does not, or fine or both. Identify the illegal provoking act, the required intent or knowledge, and the causal consequence.
+
+20. Promoting Enmity: IPC Section 153A and BNS Section 196
+
+These provisions address specified promotion of disharmony or enmity between protected groups, acts prejudicial to public harmony, and organised exercises or drills intended or known to involve violence against such groups. BNS Section 196(1)(a) expressly includes electronic communication. Offences in a place of worship or an assembly engaged in religious worship have an enhanced punishment provision in subsection (2). Examine the actual message or activity, group distinction, context and statutory elements; criticism alone is not enough.
+
+21. Armed Processions: IPC Section 153AA
+
+The attached IPC text includes Section 153AA on knowingly carrying arms in a procession or joining a mass drill or training with arms contrary to a public notice or order under the former CrPC Section 144A. BNS Chapter XI, Sections 189–197, does not contain a separately numbered provision matching that offence. Do not manufacture a one-to-one BNS counterpart: identify the jurisdiction and date of the act, the applicable public-order law and any valid order before discussing liability.
+
+22. National Integration: IPC Section 153B and BNS Section 197
+
+These provisions concern specified statements or imputations about the allegiance, citizenship rights or communal obligations of groups. BNS Section 197 adds an express electronic-communication mode and clause (1)(d), addressing false or misleading information that jeopardises India's sovereignty, unity, integrity or security. Both statutes provide a higher punishment for the specified offence committed in a place of worship or an assembly performing religious worship. Identify the precise clause and prove its elements rather than assuming all contentious speech is prohibited.
+
+23. Landholders and Agents: IPC Sections 154–156 and BNS Section 193
+
+These provisions cover specified duties of an owner or occupier of land, an interested person and that person's agent or manager when an unlawful assembly or riot occurs or is likely. BNS Section 193 consolidates the landholder and interested-person rules in subsections (1) and (2), and the agent or manager rule in subsection (3). Liability depends on statutory notice, knowledge or reason to believe, capacity to act and failure to use the lawful measures required; ownership alone is not sufficient.
+
+24. Harbouring and Hiring for an Unlawful Assembly: IPC Sections 157–158 and BNS Section 189(7)–(9)
+
+IPC Section 157 addresses knowingly harbouring or gathering persons hired to join an unlawful assembly. IPC Section 158 addresses being hired or offering to be hired to perform one of the unlawful-assembly objects, with a more serious armed form. The BNS brings these rules into Section 189(7), (8) and (9). Distinguish the organiser, the harbourer, the hired participant and a hired participant who goes armed.
+
+25. Affray: IPC Sections 159–160 and BNS Section 194
+
+Two or more persons commit affray when fighting in a public place disturbs public peace. Both IPC Section 159 and BNS Section 194(1) define the offence. IPC Section 160 and BNS Section 194(2) state punishment: imprisonment up to one month, fine, or both. The BNS maximum fine is ₹1,000, compared with ₹100 under the IPC text. Affray does not require five people or an unlawful common object.
+
+26. Consolidated Revision Map
+
+IPC 141–145 → BNS 189(1)–(5); IPC 146–148 → BNS 191(1)–(3); IPC 149 → BNS 190; IPC 150 → BNS 189(6); IPC 151 → BNS 189(5); IPC 152 → BNS 195; IPC 153 → BNS 192; IPC 153A → BNS 196; IPC 153AA has no separately numbered counterpart in BNS Chapter XI; IPC 153B → BNS 197; IPC 154–156 → BNS 193; IPC 157–158 → BNS 189(7)–(9); IPC 159–160 → BNS 194. Read the exact subsection and the law in force at the date of conduct.`,
     keyPoints: [
       "An unlawful assembly requires at least five persons sharing one of the statutorily prohibited common objects.",
       "A lawful assembly may subsequently become unlawful when its common object changes.",
@@ -1270,18 +1304,22 @@ Use the following sequence:
       "Affray requires fighting by two or more persons in a public place and disturbance of public peace.",
       "Peaceful protest is constitutionally protected and must not be presumed unlawful merely because it is critical or inconvenient.",
       "Every problem should identify number, common object, membership, force, weapon, dispersal order and statutory connection separately.",
+      "IPC Sections 154–156 are consolidated in BNS Section 193, while IPC Sections 159–160 correspond to BNS Section 194.",
+      "IPC Sections 153A and 153B correspond principally to BNS Sections 196 and 197, with express electronic-communication wording and an additional clause in BNS Section 197.",
+      "BNS Section 191(3) increases the maximum term for armed rioting from three years under IPC Section 148 to five years.",
     ],
     provisions: [
-      "Indian Penal Code, 1860 — Sections 141–152",
+      "Indian Penal Code, 1860 — Sections 141–160, including 153A and 153B",
+      "Indian Penal Code, 1860 — Section 153AA (special armed-procession provision in the supplied text; no separately numbered BNS Chapter XI counterpart)",
       "Bharatiya Nyaya Sanhita, 2023 — Section 189",
       "Bharatiya Nyaya Sanhita, 2023 — Section 190",
       "Bharatiya Nyaya Sanhita, 2023 — Section 191",
       "Bharatiya Nyaya Sanhita, 2023 — Sections 192–195",
-      "Bharatiya Nyaya Sanhita, 2023 — Sections 196–197 (related public-harmony provisions)",
+      "Bharatiya Nyaya Sanhita, 2023 — Sections 196–197 (public harmony and national integration)",
       "Constitution of India — Articles 19(1)(a), 19(1)(b), 19(2) and 19(3)",
     ],
     examFocus:
-      "Start by proving five or more persons and stating the exact common object. Then establish the accused's knowing and intentional membership, determine whether force or violence created rioting, and apply constructive liability only after connecting the substantive offence to the common object or known likelihood. Comparative answers should explain how BNS Sections 189–191 consolidate the IPC rules and should distinguish unlawful assembly from common intention, conspiracy, affray and constitutionally protected peaceful protest.",
+      "Start by identifying the date and exact offence. For assembly offences, prove five or more persons, a prohibited common object, intentional membership, and any violence, weapons or dispersal order. For IPC Sections 153A–153B and BNS Sections 196–197, identify the actual expression, relevant group, precise statutory clause and constitutional context. Compare IPC Sections 154–160 with their consolidated BNS counterparts; note the changed armed-rioting penalty and the absence of a separately numbered BNS Chapter XI counterpart to the supplied Section 153AA. Distinguish a peaceful protest from criminal conduct.",
   },
   {
     title: "False Evidence and Offences against Public Justice",
@@ -2166,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 3 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 3 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2210,8 +2248,43 @@ const stateOffencesChapter = createChapterModel({
   previewAvailable: false,
 });
 
+const publicTranquillityUnit = units.find(
+  (unit) => unit.title === "Offences against Public Tranquillity",
+);
+
+const publicTranquillityChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-10`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER VIII  OF OFFENCES AGAINST THE PUBLIC TRANQUILLITY",
+  slug: "unit-10-offences-against-public-tranquillity",
+  shortDescription: publicTranquillityUnit.shortDescription,
+  chapterOverview: publicTranquillityUnit.overview,
+  learningObjectives: publicTranquillityUnit.learningObjectives,
+  detailedContent: publicTranquillityUnit.detailedContent,
+  keyPoints: publicTranquillityUnit.keyPoints,
+  statutoryProvisions: publicTranquillityUnit.provisions.map((provision, index) => ({
+    id: `unit-10-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for offences against public tranquillity.",
+  })),
+  examFocus: publicTranquillityUnit.examFocus,
+  revisionNotes: publicTranquillityUnit.keyPoints.join("; "),
+  notes: publicTranquillityUnit.detailedContent,
+  chapterNumber: 9,
+  displayOrder: 9,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
-  ...existingCriminalLawIChapters.slice(6),
+  existingCriminalLawIChapters[6],
+  publicTranquillityChapter,
+  ...existingCriminalLawIChapters.slice(7),
 ];

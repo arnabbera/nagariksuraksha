@@ -43,6 +43,7 @@ const sourceControlledChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-6",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-7",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-9",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-10",
 ]);
 
 const reorderedCriminalLawIChapterIds = new Set([
@@ -74,6 +75,14 @@ const mergeStoredAndBundledChapter = (
     getDetailedContentLength(bundledChapter) <=
     getDetailedContentLength(storedChapter)
   ) {
+    if (reorderedCriminalLawIChapterIds.has(bundledChapter.id)) {
+      return {
+        ...storedChapter,
+        chapterNumber: bundledChapter.chapterNumber,
+        displayOrder: bundledChapter.displayOrder,
+      };
+    }
+
     return storedChapter;
   }
 
