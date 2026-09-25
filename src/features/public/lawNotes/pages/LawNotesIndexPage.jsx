@@ -22,7 +22,6 @@ import {
   useParams,
 } from "react-router-dom";
 
-import AnnouncementBar from "../../../home/components/AnnouncementBar";
 import Footer from "../../../home/components/Footer";
 import Header from "../../../home/components/Header";
 
@@ -598,8 +597,6 @@ export default function LawNoteDetailsPage() {
       />
 
       <div className="law-note-page">
-        <AnnouncementBar />
-
         <Header />
 
         <main>

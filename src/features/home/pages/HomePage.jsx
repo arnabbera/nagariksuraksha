@@ -1,4 +1,3 @@
-import AnnouncementBar from "../components/AnnouncementBar";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
@@ -144,8 +143,6 @@ const HomePage = () => {
           homepageStructuredData
         }
       />
-
-      <AnnouncementBar />
 
       <Header />
 
