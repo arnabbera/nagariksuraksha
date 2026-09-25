@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured fourteen-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, public justice and other major offences, with IPC-to-BNS comparisons.",
+    "A structured fifteen-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coin and Government stamps, and other major offences, with IPC-to-BNS comparisons.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 14,
+  totalChapters: 15,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through fourteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through fifteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 7 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 7 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 8 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 8 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2740,6 +2740,114 @@ First prove any oath, legal duty, official power, court process, underlying offe
   previewAvailable: false,
 });
 
+// The BNS consolidates former general-coin and Indian-coin offences. Several
+// IPC provisions therefore share a BNS section rather than a numeric offset.
+const coinAndStampsSectionMap = [
+  ["230", "178, Explanation (2)", "Meaning of coin", "The BNS refers to the Coinage Act, 2011 and also covers qualifying metal issued as money by a State or Sovereign Power. The separate IPC definition of Indian coin is not reproduced as a distinct offence category."],
+  ["231", "178", "Counterfeiting coin", "Knowingly performing any part of the process of counterfeiting a coin is covered alongside revenue stamps, currency notes and bank notes. BNS 178 includes changing a genuine coin to look like a different coin."],
+  ["232", "178", "Counterfeiting Indian coin", "The IPC's enhanced provision for Indian coin is consolidated into BNS 178, which does not create a separate Indian-coin counterfeiting tier."],
+  ["233", "181", "Making or selling a counterfeiting instrument", "BNS 181 covers making, mending, buying, selling, disposing of or possessing machinery, dies, instruments or materials intended for counterfeiting coin, revenue stamps or notes."],
+  ["234", "181", "Instrument for counterfeiting Indian coin", "The former Indian-coin-specific instrument rule is consolidated into BNS 181. Prove the purpose or knowledge concerning intended counterfeiting."],
+  ["235", "181", "Possessing counterfeiting instruments or materials", "BNS 181 covers possession of machinery, instruments or materials for the proscribed purpose; the IPC's separate higher tier for Indian coin is not repeated."],
+  ["236", "47 with 178", "Abetting abroad from India", "BNS 47 supplies the general rule for abetment in India of an act outside India that would be an offence here; read it with the counterfeiting offence in BNS 178. There is no stand-alone equivalent in BNS Chapter X."],
+  ["237", "179", "Import or export of counterfeit coin", "BNS 179 combines knowing import and export of counterfeit coin with other dealing, trafficking and use as genuine."],
+  ["238", "179", "Import or export of counterfeit Indian coin", "BNS 179 does not retain a separate Indian-coin import/export tier; knowledge or reason to believe the item counterfeit remains material."],
+  ["239", "179", "Delivering counterfeit coin", "Delivering, selling or otherwise trafficking counterfeit coin while knowing or having reason to believe it counterfeit is within BNS 179. Compare the precise act alleged."],
+  ["240", "179", "Delivering counterfeit Indian coin", "The Indian-coin-specific delivery offence joins the general coin, stamp and note dealing rule in BNS 179."],
+  ["241", "179", "Passing coin discovered to be counterfeit", "A person who first received a coin innocently but later learns it is counterfeit may come within BNS 179 if they then use it as genuine or deal in it with the requisite knowledge or reason to believe."],
+  ["242", "180", "Possessing counterfeit coin for use as genuine", "BNS 180 requires knowledge or reason to believe the coin counterfeit and an intention that it be used as genuine; it also recognises proof of a lawful source of possession."],
+  ["243", "180", "Possessing counterfeit Indian coin", "BNS 180 combines Indian and other counterfeit coin with counterfeit stamps and notes; the requisite intended use and lawful-source explanation apply."],
+  ["244", "187", "Mint worker changing coin weight or composition", "BNS 187 specifically covers a mint employee's act or legally prohibited omission intended to make a coin's weight or composition differ from the lawful standard."],
+  ["245", "188", "Unlawfully taking a mint instrument", "Removing a coining tool or instrument from a lawfully established mint in India without authority remains a distinct BNS offence."],
+  ["246", "178, Explanation (5)", "Diminishing coin weight or altering composition", "The BNS expressly treats diminishing a coin's weight or changing its composition as counterfeiting; assess the statutory counterfeiting elements."],
+  ["247", "178, Explanation (5)", "Diminishing weight or changing Indian coin", "The IPC's Indian-coin-specific alteration rule is absorbed by the general BNS 178 definition of counterfeiting coin."],
+  ["248", "178, Explanation (5)", "Changing a coin's appearance", "Altering appearance so a coin passes as a different coin is included in BNS 178's counterfeiting explanation."],
+  ["249", "178, Explanation (5)", "Changing Indian coin appearance", "The separate Indian-coin appearance offence is consolidated into BNS 178, including the explanation about altered appearance."],
+  ["250", "179", "Delivering an altered coin", "A coin altered in a manner amounting to counterfeiting is covered by BNS 179 when knowingly dealt in or used as genuine."],
+  ["251", "179", "Delivering an altered Indian coin", "BNS 179 does not distinguish Indian coin from other coin for knowing dealing in an altered counterfeit coin."],
+  ["252", "180", "Possessing an altered coin", "Where alteration makes the coin counterfeit, BNS 180 applies to possession with the requisite knowledge and intent that it be used as genuine."],
+  ["253", "180", "Possessing an altered Indian coin", "The Indian-coin-specific possession rule is combined in BNS 180. Check the statutory intent and lawful-source explanation."],
+  ["254", "179", "Passing a coin later discovered altered", "A person who acquired an altered coin innocently but later knows it to be counterfeit may come within BNS 179 on subsequently using it as genuine or dealing in it."],
+  ["255", "178", "Counterfeiting Government stamp", "Counterfeiting a stamp issued by Government for revenue, including making a genuine stamp appear to have another denomination, is addressed in BNS 178."],
+  ["256", "181", "Possessing stamp-counterfeiting instruments", "BNS 181 includes possession of a die, instrument or material intended to counterfeit revenue stamps."],
+  ["257", "181", "Making or selling stamp-counterfeiting instruments", "BNS 181 also covers making, mending, buying, selling or disposing of machinery and instruments for that purpose."],
+  ["258", "179", "Selling a counterfeit stamp", "BNS 179 covers selling or otherwise dealing in a counterfeit Government revenue stamp with knowledge or reason to believe it counterfeit."],
+  ["259", "180", "Possessing a counterfeit stamp", "BNS 180 requires the specified knowledge and intended use as genuine; a proven lawful source is addressed in its explanation."],
+  ["260", "179", "Using a counterfeit stamp as genuine", "Knowingly using a counterfeit Government revenue stamp as genuine falls within BNS 179."],
+  ["261", "183", "Removing a used stamp or its writing", "BNS 183 covers fraudulently effacing writing on a stamped document or removing a used stamp so it can be used for another document."],
+  ["262", "184", "Using a previously used stamp", "BNS 184 addresses fraudulent use of a Government revenue stamp known to have already been used."],
+  ["263", "185", "Removing a stamp's used mark", "BNS 185 covers fraudulent removal of the mark denoting use, and specified knowing possession or disposal of such a stamp."],
+  ["263A", "186", "Fictitious stamps", "BNS 186 retains the prohibition on fictitious postage stamps and materials for making them, with the lawful-excuse qualification, seizure and forfeiture rules."],
+];
+
+const coinAndStampsChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-15`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XII  OF OFFENCES RELATING TO COIN AND GOVERNMENT STAMPS",
+  slug: "unit-15-offences-relating-to-coin-and-government-stamps",
+  shortDescription:
+    "Map IPC Sections 230–263A to consolidated BNS Sections 178–188, including counterfeiting, dealing, possession, revenue stamps, mint offences and cross-border abetment.",
+  chapterOverview:
+    "IPC Chapter XII separates ordinary coin, Indian coin and Government stamp offences. BNS Chapter X, Sections 178–188, consolidates coin, revenue stamp, currency-note and bank-note offences. This chapter maps each supplied IPC provision to its closest substantive BNS rule, explains that IPC 236 is read with the general cross-border abetment rule in BNS 47, and distinguishes knowing dealing from possession intended for genuine use. BNS 182 concerns documents resembling notes and is not a direct counterpart of a provision in this supplied IPC chapter.",
+  learningObjectives: [
+    "Map every IPC provision from 230 to 263A to the relevant consolidated BNS rule.",
+    "Explain the definition of coin and the treatment of altered weight, composition and appearance as counterfeiting.",
+    "Distinguish counterfeiting under BNS 178, knowing dealing under 179, intended genuine use in possession under 180, and counterfeiting equipment under 181.",
+    "Apply BNS 47 to abetment in India of counterfeiting outside India.",
+    "Identify the distinct BNS rules for reused revenue stamps, fictitious postage stamps and mint employees.",
+    "Recognise that BNS includes currency notes and bank notes and generally removes the IPC's separate Indian-coin tiers.",
+  ],
+  detailedContent: `CHAPTER XII — OF OFFENCES RELATING TO COIN AND GOVERNMENT STAMPS
+
+Chapter Overview
+
+IPC Chapter XII in the supplied material covers Sections 230–263A. BNS Chapter X combines coin, Government revenue stamp, currency-note and bank-note offences in Sections 178–188. Multiple IPC sections correspond to one BNS section; there is no reliable fixed number offset. Apply the law in force on the date of the alleged act and establish knowledge, reason to believe, intention and any statutory exception.
+
+${coinAndStampsSectionMap.map(([ipc, bns, heading, explanation]) => `IPC Section ${ipc} → BNS Section ${bns}: ${heading}\n\n${explanation}`).join("\n\n")}
+
+BNS Section 182: Related Rule Outside the Supplied IPC Chapter
+
+BNS 182 punishes making or using a document resembling a currency-note or bank-note and includes rules about identifying who made it. This is part of BNS Chapter X but has no direct predecessor among the supplied IPC Sections 230–263A. Do not mistake BNS 182 for the counterpart to the IPC's mint offences: those are BNS 187 and 188.
+
+Revision and Exam Method
+
+For counterfeiting or coin alteration use BNS 178; for knowing import, export, delivery, sale or use as genuine use 179; for possession with knowledge and intent that the item be used as genuine use 180; for counterfeiting tools use 181. For reused or fictitious stamps use 183–186; for mint conduct use 187–188. IPC 236 additionally raises BNS 47 (abetment in India of conduct abroad) with BNS 178. First identify whether the object is a coin, revenue stamp, currency note or bank note; distinguish a revenue stamp from a fictitious postage stamp. The former IPC distinction between Indian coin and other coin cannot simply be carried into the BNS sentencing tiers.`,
+  keyPoints: [
+    "BNS Chapter X Sections 178–188 consolidate IPC Chapter XII coin and Government-stamp offences and add currency-note and bank-note coverage.",
+    "IPC 230's coin definition corresponds to BNS 178 Explanation (2), which refers to the Coinage Act, 2011.",
+    "IPC 231–232 and 246–249 map to BNS 178; alteration of weight, composition or appearance is expressly included in counterfeiting.",
+    "IPC 237–241, 250–251, 254, 258 and 260 concern dealing or using as genuine under BNS 179.",
+    "IPC 242–243, 252–253 and 259 concern possession with intended genuine use under BNS 180, subject to its lawful-source explanation.",
+    "IPC 233–235 and 256–257 map to equipment and material offences in BNS 181.",
+    "IPC 236 requires BNS 47 read with BNS 178; the BNS coin chapter has no separate provision for this cross-border abetment.",
+    "IPC 261–263A map respectively to BNS 183–186; IPC 244–245 map to BNS 187–188.",
+    "BNS 182 addresses note-like documents and has no direct counterpart in the supplied IPC chapter.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XII, Sections 230–263A",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter X, Sections 178–188",
+    "Bharatiya Nyaya Sanhita, 2023 — Section 47 (abetment in India of act abroad)",
+    "Coinage Act, 2011 — Section 2 (definition referenced in BNS 178)",
+  ].map((provision, index) => ({
+    id: `unit-15-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for coin and Government-stamp offences.",
+  })),
+  examFocus:
+    "Identify the type of coin, stamp or note and distinguish creating a counterfeit, knowingly dealing, possessing for use as genuine and making equipment. Group the IPC's ordinary/Indian coin variants under the correct BNS provision. For stamps distinguish revenue, previously used and fictitious postage stamps. Include BNS 47 for IPC 236 and BNS 182 as a related but non-equivalent rule; compare the date of conduct and statutory mental element.",
+  revisionNotes:
+    "IPC 230–232 → BNS 178; 233–235 → 181; 236 → 47 with 178; 237–241 → 179; 242–243 → 180; 244–245 → 187–188; 246–249 → 178; 250–251 → 179; 252–253 → 180; 254 → 179; 255 → 178; 256–257 → 181; 258 → 179; 259 → 180; 260 → 179; 261–263A → 183–186. BNS 182 covers note-like documents outside these supplied IPC sections.",
+  chapterNumber: 14,
+  displayOrder: 14,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -2749,5 +2857,6 @@ export const criminalLawIChapters = [
   electionOffencesChapter,
   lawfulAuthorityChapter,
   publicJusticeChapter,
+  coinAndStampsChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
