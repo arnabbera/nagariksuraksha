@@ -1995,7 +1995,7 @@ const existingCriminalLawIChapters = units.map(
             : index === 5
               ? "CHAPTER VA  CRIMINAL CONSPIRACY"
             : index === 6
-              ? "Offences Relating to the Armed Forces: IPC Sections 131–140 and BNS Sections 159–168"
+              ? "CHAPTER VII  OF OFFENCES RELATING TO THE ARMY, NAVY AND AIR FORCE"
           : unit.title,
       slug: `unit-${index + 1}-${unit.title
         .toLowerCase()
