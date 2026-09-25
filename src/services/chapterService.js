@@ -46,6 +46,7 @@ const sourceControlledChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-10",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-11",
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-12",
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-13",
 ]);
 
 const reorderedCriminalLawIChapterIds = new Set([
