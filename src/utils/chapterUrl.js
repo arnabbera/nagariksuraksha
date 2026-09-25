@@ -114,6 +114,13 @@ const isCriminalLawILawfulAuthorityChapter = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-13");
 
+const isCriminalLawIPublicJusticeChapter = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-14");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -148,6 +155,10 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIPublicJusticeChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter13-False-Evidence-and-Public-Justice";
+  }
+
   if (isCriminalLawILawfulAuthorityChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter12-Lawful-Authority-of-Public-Servants";
   }
@@ -208,6 +219,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIPublicJusticeChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter13-False-Evidence-and-Public-Justice";
+  }
+
   if (isCriminalLawILawfulAuthorityChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter12-Lawful-Authority-of-Public-Servants";
   }
