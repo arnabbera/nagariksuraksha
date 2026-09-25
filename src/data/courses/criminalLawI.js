@@ -1960,7 +1960,7 @@ export const criminalLawIChapters = units.map(
             : index === 4
               ? "Abetment: IPC Sections 107–120 and BNS Sections 45–60"
             : index === 5
-              ? "Criminal Conspiracy: IPC Sections 120A–120B and BNS Section 61"
+              ? "CHAPTER VA  CRIMINAL CONSPIRACY"
             : index === 6
               ? "Offences Relating to the Armed Forces: IPC Sections 131–140 and BNS Sections 159–168"
           : unit.title,
