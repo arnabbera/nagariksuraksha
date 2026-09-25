@@ -11,7 +11,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured twelve-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity, public servants and elections, and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
+    "A structured thirteen-chapter course covering the general principles of criminal liability, general exceptions, abetment, conspiracy, offences against the State, the armed forces, public tranquillity, public servants, elections, contempt of lawful public authority and other major offences, with comparative guidance for the transition from the IPC to the BNS.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -25,7 +25,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 12,
+  totalChapters: 13,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -33,7 +33,7 @@ export const criminalLawICourse = createCourseModel({
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
     description:
-      "Study Indian criminal law through twelve structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+      "Study Indian criminal law through thirteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
@@ -2204,8 +2204,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 5 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 5 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 6 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 6 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -2482,6 +2482,148 @@ IPC 171A → BNS 169; 171B → 170; 171C → 171; 171D → 172; 171E → 173; 17
   previewAvailable: false,
 });
 
+const lawfulAuthorityChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-13`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER X  OF CONTEMPTS OF THE LAWFUL AUTHORITY OF PUBLIC SERVANTS",
+  slug: "unit-13-contempts-of-the-lawful-authority-of-public-servants",
+  shortDescription:
+    "Study IPC Sections 172–190 alongside BNS Sections 206–225: summons, proclamations, required information, public sales, official orders and threats.",
+  chapterOverview:
+    "IPC Chapter X protects the lawful authority of public servants in Sections 172–190, including Section 174A. The corresponding BNS offences appear in Chapter XIII, Sections 206–225. This chapter maps every provision, distinguishes refusal and omission from deliberate falsehood, and explains changes to fines, proclamation procedure and disobedience penalties. It also identifies BNS Section 226 as an additional provision without a direct counterpart in this IPC chapter.",
+  learningObjectives: [
+    "Map IPC Sections 172–190, including 174A, to BNS Sections 206–225.",
+    "Distinguish evading service, preventing service, nonattendance and failure to respond to a proclamation.",
+    "Identify the legal duty and mental element for withholding documents or information and for furnishing false information.",
+    "Separate refusal of an oath, refusal to answer or sign, and a knowingly false statement on oath.",
+    "Analyse obstruction of seizure, public sale or a public servant, and failure to give legally required assistance.",
+    "Apply the two tiers of disobedience of a duly promulgated order and compare IPC and BNS punishments.",
+    "Explain threats to public servants and threats deterring requests for lawful protection.",
+  ],
+  detailedContent: `CHAPTER X — OF CONTEMPTS OF THE LAWFUL AUTHORITY OF PUBLIC SERVANTS
+
+Chapter Overview
+
+IPC Chapter X comprises Sections 172–190, including the inserted Section 174A. The corresponding BNS provisions are Chapter XIII, Sections 206–225. The numbering changes, but each of the twenty IPC provisions has a direct BNS counterpart. Apply the statute in force on the date of the conduct. These offences generally require a lawful notice, duty, proceeding, order or official act; identify that foundation before assessing conduct or punishment. References in older IPC text to the Code of Criminal Procedure must be checked against the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) for a BNS problem.
+
+IPC Section 172 → BNS Section 206: Absconding to Avoid Service
+
+The accused absconds to avoid service of a summons, notice or order from a legally competent public servant. Distinguish purposeful avoidance from a failure to receive service. Both laws distinguish an ordinary process from one requiring attendance or production before a court. BNS raises the respective maximum fines to ₹5,000 and ₹10,000; the imprisonment limits remain one month and six months.
+
+IPC Section 173 → BNS Section 207: Preventing Service or Publication
+
+Intentional prevention of service on oneself or another, lawful affixing or publication, or lawful public proclamation falls here. Show the lawful process and intentional obstruction. The court-related tier has a higher punishment. BNS raises the ordinary and court-related fine ceilings to ₹5,000 and ₹10,000.
+
+IPC Section 174 → BNS Section 208: Nonattendance in Obedience to an Order
+
+A person legally bound to attend at a specified place and time intentionally omits to do so, or leaves prematurely. Prove the summons, notice, order or proclamation, the duty to attend, and intentional noncompliance. Court attendance and production before a court attract the higher tier. BNS raises the fine ceilings to ₹5,000 and ₹10,000 respectively.
+
+IPC Section 174A → BNS Section 209: Nonappearance after Proclamation
+
+The IPC provision refers to a proclamation under Section 82 of the Code of Criminal Procedure, 1973; the BNS provision refers to Section 84(1) of the BNSS. Ordinary nonappearance carries imprisonment up to three years, fine, both, or community service under BNS. A person declared a proclaimed offender under BNSS Section 84(4) faces imprisonment up to seven years and fine. Establish the valid proclamation and whether the more serious proclaimed-offender finding exists.
+
+IPC Section 175 → BNS Section 210: Omission to Produce Document or Electronic Record
+
+A person legally bound to produce or deliver a document or electronic record intentionally fails to do so. The court-related tier is more serious. Distinguish absence of a legal obligation or genuine inability to produce from intentional omission. Identify the precise order, record and public servant entitled to receive it.
+
+IPC Section 176 → BNS Section 211: Omission to Give Notice or Information
+
+An intentional failure to give a legally required notice or information to a public servant is distinct from giving false information. BNS has ordinary, offence-related and specified BNSS order tiers, with fine ceilings of ₹5,000, ₹10,000 and ₹1,000 respectively. The special BNS tier refers to an order under BNSS Section 394; old IPC text may cite a superseded procedural statute.
+
+IPC Section 177 → BNS Section 212: Furnishing False Information
+
+A person legally bound to furnish information knowingly supplies false information as true. A higher tier applies where the information concerns an offence, its prevention or apprehension of an offender. Prove the duty, falsity, knowledge and relevant subject. The ordinary BNS fine ceiling is ₹5,000.
+
+IPC Section 178 → BNS Section 213: Refusing an Oath or Affirmation
+
+Refusal to bind oneself by oath or affirmation when a competent public servant lawfully requires it constitutes this offence. Ask whether the official had authority and the requirement was lawful; mere disagreement with an inquiry is insufficient.
+
+IPC Section 179 → BNS Section 214: Refusing to Answer
+
+A person legally bound to state the truth refuses to answer a question on a subject about which the public servant is empowered to ask. Identify the particular lawful question, duty to answer and refusal.
+
+IPC Section 180 → BNS Section 215: Refusing to Sign a Statement
+
+The offence requires refusal to sign a statement when a public servant legally competent to require the signature demands it. Distinguish a refusal to sign from contesting the accuracy of a statement where no lawful signature duty is shown.
+
+IPC Section 181 → BNS Section 216: False Statement on Oath or Affirmation
+
+A person legally bound by an oath or affirmation makes a statement to a public servant or other authorised recipient, knowing or believing it false or not believing it true. BNS retains a maximum of three years' imprisonment and fine. Analyse the form of legal obligation and the accused's state of mind.
+
+IPC Section 182 → BNS Section 217: False Information Intended to Misuse Official Power
+
+The accused knowingly provides false information intending or knowing it likely to cause a public servant to act or omit an act contrary to lawful duty, or to use lawful power to injure or annoy someone. The information need not have been furnished under a separate statutory duty; distinguish this offence from Sections 177/212. BNS retains a maximum of one year's imprisonment and raises the fine ceiling to ₹10,000.
+
+IPC Section 183 → BNS Section 218: Resisting Lawful Taking of Property
+
+Resistance to a public servant's lawful taking of property under that servant's authority is prohibited. Identify the official's lawful authority and the act of resistance. BNS allows imprisonment up to six months, fine up to ₹10,000, or both.
+
+IPC Section 184 → BNS Section 219: Obstructing Sale by Authority of Public Servant
+
+Intentional obstruction of a lawful sale of property offered by a public servant is distinct from bidding unlawfully at the sale. BNS allows imprisonment up to one month, fine up to ₹5,000, or both.
+
+IPC Section 185 → BNS Section 220: Illegal Purchase or Bid at Public Sale
+
+The offence covers a purchase or bid at a public-servant sale by someone legally incapacitated from purchasing, bidding without intent to perform legal obligations, or bidding for a person known to be incapacitated. Establish the sale and the relevant prohibition or improper purpose. BNS retains imprisonment up to one month, fine up to ₹200, or both.
+
+IPC Section 186 → BNS Section 221: Obstructing Public Servant in Public Functions
+
+Voluntary obstruction of a public servant in the discharge of public functions falls here. Specify the official act, public function and actual voluntary obstruction. BNS raises the maximum fine to ₹2,500 while retaining imprisonment up to three months.
+
+IPC Section 187 → BNS Section 222: Omitting to Assist a Public Servant
+
+A person legally bound to render assistance intentionally fails to do so. A higher tier applies when the aid is demanded to execute process, prevent an offence or riot or affray, or apprehend an offender. BNS fine ceilings are ₹2,500 for ordinary omission and ₹5,000 for the higher tier; establish the source of the legal duty.
+
+IPC Section 188 → BNS Section 223: Disobeying a Duly Promulgated Order
+
+A public servant lawfully empowered must have promulgated an order and the accused must know of it and disobey it. The ordinary tier requires actual or likely obstruction, annoyance or injury; BNS allows simple imprisonment up to six months or fine up to ₹2,500 or both. Where disobedience causes or risks danger to human life, health or safety, or causes or risks a riot or affray, BNS allows imprisonment up to one year or fine up to ₹5,000 or both. Intent to cause harm is unnecessary when the statutory knowledge, disobedience and resulting risk are proved. The IPC limits were one month/₹200 and six months/₹1,000 respectively.
+
+IPC Section 189 → BNS Section 224: Threat of Injury to a Public Servant
+
+Threatening injury to a public servant or someone in whom the servant is interested, to induce the servant to act, refrain from acting or delay an official function, carries imprisonment up to two years, fine, or both. Distinguish the threatened injury and the intended influence on public duty from an ordinary dispute.
+
+IPC Section 190 → BNS Section 225: Threat to Deter a Request for Protection
+
+Threatening injury to make a person refrain from applying to a public servant for lawful protection carries imprisonment up to one year, fine, or both. The threatened person and purpose differ from Section 189/224; the protection must be one the public servant is legally empowered to give.
+
+Additional BNS Provision and Revision Map
+
+BNS Section 226 appears in the same BNS chapter but has no direct counterpart in the supplied IPC Chapter X. It addresses an attempt to commit suicide intended to compel or restrain a public servant from official duty; its maximum punishment includes simple imprisonment up to one year, fine, both or community service. Study it as an additional statutory offence, not as a renumbering of IPC Section 190.
+
+IPC 172–174 → BNS 206–208; IPC 174A → BNS 209; IPC 175–190 → BNS 210–225, in sequence. In a problem answer, prove lawful authority and the relevant duty or process, specify deliberate avoidance, refusal, falsehood, obstruction, disobedience or threat, and select the correct tier and date-sensitive punishment.`,
+  keyPoints: [
+    "IPC 172–174 map to BNS 206–208; IPC 174A maps to BNS 209; IPC 175–190 map in sequence to BNS 210–225.",
+    "Lawful authority, a valid process or order, and the applicable legal duty are foundational facts.",
+    "BNS 209 updates the proclamation reference to BNSS 84 and allows community service for ordinary nonappearance.",
+    "Omitting to supply required information (IPC 176/BNS 211) differs from knowingly providing false information (IPC 177/BNS 212).",
+    "False information intended to trigger misuse of official power has a separate offence (IPC 182/BNS 217).",
+    "BNS 223 raises both imprisonment and fine limits for disobeying a duly promulgated order.",
+    "BNS 226 is an additional provision in the BNS chapter, without a direct IPC Chapter X counterpart.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter X, Sections 172–190 (including Section 174A)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter XIII, Sections 206–226",
+    "Bharatiya Nagarik Suraksha Sanhita, 2023 — Sections 84 and 394",
+  ].map((provision, index) => ({
+    id: `unit-13-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for contempt of lawful public authority.",
+  })),
+  examFocus:
+    "Map IPC 172–190 (including 174A) to BNS 206–225, prove lawful authority and the required mental element, and distinguish the ordinary and aggravated tiers. For BNS 209 use BNSS 84; for 223 compare the higher BNS punishment limits. Identify BNS 226 separately and select the statute applicable on the date of conduct.",
+  revisionNotes:
+    "IPC 172/173/174 → BNS 206/207/208; 174A → 209; 175–190 → 210–225 in order. Avoidance/service/attendance: 206–209. Documents and information: 210–212. Oath, answers and statements: 213–217. Property, sales and official assistance: 218–222. Orders and threats: 223–225. BNS 226 is additional. Check BNSS 84 and 394 and the date of the alleged offence.",
+  chapterNumber: 12,
+  displayOrder: 12,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -2489,5 +2631,6 @@ export const criminalLawIChapters = [
   publicTranquillityChapter,
   publicServantsChapter,
   electionOffencesChapter,
+  lawfulAuthorityChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
