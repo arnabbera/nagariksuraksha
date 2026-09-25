@@ -1,7 +1,7 @@
 import { createCourseModel } from "../models/CourseModel";
 import courseRepository from "../repositories/CourseRepository";
 import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinciplesOfContract";
-import { criminalLawICourse } from "../data/courses/criminalLawI";
+import { criminalLawICourse, criminalLawIChapters } from "../data/courses/criminalLawI";
 import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 import { environmentalLawCourse } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeCourse } from "../data/courses/humanRightsLawAndPractice";
@@ -16,7 +16,7 @@ const bundledCourses = [
   mediaLawCourse,
 ];
 
-// These published LL.B. courses follow the eight-unit university syllabus.
+// Published LL.B. course counts may outgrow older Firestore course records.
 // Firestore's legacy course documents can still contain `0` because chapters
 // were added after the course record was created. Keep the public catalogue,
 // course details and enrollment cards aligned with the published curriculum.
@@ -26,7 +26,8 @@ const publishedChapterTotals = {
   "family-law-i": 8,
   "indian-constitutional-law-i": 8,
   "law-of-torts-mv-and-cp-laws": 8,
-  "criminal-law-i": 8,
+  "criminal-law-i": criminalLawIChapters.length,
+  "criminal-law-i-transitioning-from-ipc-to-bns": criminalLawIChapters.length,
   "public-international-law": 8,
   "environmental-law": 8,
   "human-rights-law-and-practice": 8,
