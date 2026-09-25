@@ -1956,7 +1956,7 @@ export const criminalLawIChapters = units.map(
             : index === 2
               ? "CHAPTER III  OF PUNISHMENTS"
             : index === 3
-              ? "General Exceptions: IPC Sections 76–106 and BNS Sections 14–44"
+              ? "CHAPTER IV  GENERAL EXCEPTIONS"
             : index === 4
               ? "Abetment: IPC Sections 107–120 and BNS Sections 45–60"
             : index === 5
