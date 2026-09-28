@@ -8,6 +8,8 @@ import { Link, useLocation, useNavigate, useSearchParams } from "react-router-do
 import { useAuth } from "../../../hooks/useAuth";
 import { emailLinkOnCurrentPage, emailLinkPendingKey } from "../../../services/authService";
 
+const signupNamePendingKey = "sanhita360-signup-pending-name";
+
 export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -20,6 +22,8 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [email, setEmail] = useState(() => window.localStorage.getItem(emailLinkPendingKey) || "");
+  const [fullName, setFullName] = useState(() => window.localStorage.getItem(signupNamePendingKey) || "");
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [emailOpen, setEmailOpen] = useState(() => emailLinkOnCurrentPage() || window.location.pathname === "/signup");
   const [linkSent, setLinkSent] = useState(false);
   const completionStarted = useRef(false);
@@ -78,7 +82,9 @@ export default function LoginPage() {
     setIsLoading(true);
     setError("");
     try {
-      await continueAfterLogin(await signInWithEmail(address));
+      const result = await signInWithEmail(address, isSignUp ? { fullName } : undefined);
+      if (isSignUp) window.localStorage.removeItem(signupNamePendingKey);
+      await continueAfterLogin(result);
     } catch (loginError) {
       setError(describeEmailError(loginError));
       completionStarted.current = false;
@@ -86,7 +92,7 @@ export default function LoginPage() {
   };
 
   useEffect(() => {
-    if (completingEmailLink && email && !completionStarted.current) {
+    if (!isSignUp && completingEmailLink && email && !completionStarted.current) {
       void finishEmailSignIn(email);
     }
     // An email link is handled once, even when React runs effects twice in development.
@@ -95,6 +101,10 @@ export default function LoginPage() {
 
   const handleEmail = async (event) => {
     event.preventDefault();
+    if (isSignUp && fullName.trim().length < 2) {
+      setError("Please enter your full name.");
+      return;
+    }
     if (completingEmailLink) {
       await finishEmailSignIn(email);
       return;
@@ -102,13 +112,18 @@ export default function LoginPage() {
     setIsLoading(true);
     setError("");
     try {
-      await requestEmailSignInLink(email, destination);
+      await requestEmailSignInLink(email, destination, { signUp: isSignUp });
+      if (isSignUp) window.localStorage.setItem(signupNamePendingKey, fullName.trim());
       setLinkSent(true);
     } catch (emailError) { setError(describeEmailError(emailError)); }
     finally { setIsLoading(false); }
   };
 
   const handleGoogleLogin = async () => {
+    if (isSignUp && !termsAccepted) {
+      setError("Please agree to the Terms and Conditions and Privacy Policy to continue.");
+      return;
+    }
     try {
       setIsLoading(true);
       setError("");
@@ -129,9 +144,16 @@ export default function LoginPage() {
     }
   };
 
+  const googleButton = (
+    <button type="button" onClick={handleGoogleLogin} disabled={isLoading} className="student-login-google">
+      <FaGoogle />
+      {isLoading ? "Signing in..." : "Continue with Google"}
+    </button>
+  );
+
   return (
     <main className="student-login-page">
-      <section className="student-login-card">
+      <section className={`student-login-card${isSignUp ? " is-signup" : ""}`}>
         <div className="student-login-brand" aria-hidden="true">
           <img src="/sanhita360-logo.png" alt="Sanhita360" style={{ width: 175, maxWidth: "100%", height: "auto" }} />
         </div>
@@ -158,16 +180,30 @@ export default function LoginPage() {
           </div>
         )}
 
-        <button
-          type="button"
-          onClick={handleGoogleLogin}
-          disabled={isLoading}
-          className="student-login-google"
-        >
-          <FaGoogle />
+        {isSignUp && (
+          <form className="student-signup-form" onSubmit={handleEmail}>
+            <label htmlFor="student-signup-name">Full name</label>
+            <input id="student-signup-name" type="text" autoComplete="name" minLength={2} maxLength={120} required
+              value={fullName} onChange={(event) => setFullName(event.target.value)} placeholder="Enter your full name" />
+            <label htmlFor="student-signup-email">Email</label>
+            <input id="student-signup-email" type="email" autoComplete="email" required
+              value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Enter your email" />
+            <label className="student-signup-consent">
+              <input type="checkbox" required checked={termsAccepted}
+                onChange={(event) => setTermsAccepted(event.target.checked)} />
+              <span>By continuing, I agree to the <Link to="/terms" target="_blank" rel="noreferrer">Terms and Conditions</Link> and <Link to="/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</Link>.</span>
+            </label>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "Please wait..." : completingEmailLink ? "Complete sign up" : linkSent ? "Resend link" : "Continue"}
+            </button>
+            {linkSent && <p role="status">Check your inbox for a secure sign-up link. Open it, then confirm your details to finish.</p>}
+            {completingEmailLink && <p>Confirm the full name and email address used to request this link.</p>}
+            {completingEmailLink && <Link to="/signup?source=law-courses">Request a new link</Link>}
+          </form>
+        )}
 
-          {isLoading ? "Signing in..." : "Continue with Google"}
-        </button>
+        {isSignUp && <div className="student-signup-divider">OR</div>}
+        {googleButton}
 
         {isCourseLogin && (
           <div className="student-login-join">
@@ -177,21 +213,17 @@ export default function LoginPage() {
           </div>
         )}
 
-        {!isCourseLogin && <div className="student-login-email">
-          {isSignUp ? (
-            <h2>Sign up with email</h2>
-          ) : (
-            <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
-              Continue with email instead
-            </button>
-          )}
+        {!isCourseLogin && !isSignUp && <div className="student-login-email">
+          <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
+            Continue with email instead
+          </button>
           {emailOpen && (
             <form onSubmit={handleEmail}>
               <label htmlFor="student-login-email-address">Email address</label>
               <input id="student-login-email-address" type="email" autoComplete="email" required
                 value={email} onChange={(event) => setEmail(event.target.value)} />
               <button type="submit" disabled={isLoading}>
-                {completingEmailLink ? "Complete email sign-in" : isSignUp ? "Send sign-up link" : "Send sign-in link"}
+                {completingEmailLink ? "Complete email sign-in" : "Send sign-in link"}
               </button>
               {linkSent && <p role="status">Check your inbox for a secure link. Open it to access your courses.</p>}
               {completingEmailLink && <p>Enter the same email address that received the link.</p>}
@@ -374,6 +406,75 @@ export default function LoginPage() {
         .student-login-google:disabled {
           cursor: not-allowed;
           opacity: 0.65;
+        }
+
+        .student-login-card.is-signup .student-login-google { margin-top: 16px; }
+
+        .student-signup-form {
+          display: grid;
+          gap: 9px;
+          margin-top: 26px;
+          color: #0f172a;
+          font-family: Arial, sans-serif;
+        }
+
+        .student-signup-form > label:not(.student-signup-consent) {
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .student-signup-form > input {
+          width: 100%;
+          min-height: 46px;
+          margin-bottom: 8px;
+          padding: 11px 13px;
+          border: 1px solid #94a3b8;
+          border-radius: 9px;
+          background: #fff;
+          color: #0f172a;
+          font: inherit;
+        }
+
+        .student-signup-consent {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin: 5px 0 9px;
+          color: #475569;
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        .student-signup-consent input { margin-top: 3px; flex: none; }
+        .student-signup-consent a { color: #1d4ed8; font-weight: 700; }
+
+        .student-signup-form > button {
+          min-height: 48px;
+          border: 0;
+          border-radius: 10px;
+          background: #2563eb;
+          color: #fff;
+          font: inherit;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        .student-signup-form > button:disabled { cursor: wait; opacity: .7; }
+        .student-signup-form p { margin: 7px 0 0; color: #475569; font-size: 13px; line-height: 1.5; }
+
+        .student-signup-divider {
+          margin-top: 22px;
+          color: #64748b;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .student-signup-form > input:focus-visible,
+        .student-signup-form > button:focus-visible,
+        .student-login-google:focus-visible {
+          outline: 3px solid #93c5fd;
+          outline-offset: 2px;
         }
 
         .student-login-role-note {

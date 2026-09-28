@@ -8,6 +8,7 @@ import {
   signInWithEmailLink,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 
 import { APP_CONFIG } from "../constants/appConfig";
@@ -207,17 +208,27 @@ export const emailLinkPendingKey = "sanhita360-email-link-address";
 export const emailLinkOnCurrentPage = () =>
   isSignInWithEmailLink(auth, window.location.href);
 
-export const requestEmailSignInLink = async (email, next = "/student") => {
+export const requestEmailSignInLink = async (email, next = "/student", { signUp = false } = {}) => {
+  const returnUrl = new URL(signUp ? "/signup?source=law-courses" : "/login", window.location.origin);
+  returnUrl.searchParams.set("next", next);
   await sendSignInLinkToEmail(auth, normalizeEmail(email), {
-    url: new URL(`/login?next=${encodeURIComponent(next)}`, window.location.origin).href,
+    url: returnUrl.href,
     handleCodeInApp: true,
   });
   window.localStorage.setItem(emailLinkPendingKey, normalizeEmail(email));
 };
 
-export const loginWithEmailLink = async (email) => {
+export const loginWithEmailLink = async (email, { fullName = "" } = {}) => {
   await setPersistence(auth, browserLocalPersistence);
   const { user } = await signInWithEmailLink(auth, normalizeEmail(email), window.location.href);
+  const name = fullName.trim().replace(/\s+/g, " ").slice(0, 120);
+  if (name && !user.displayName) {
+    try {
+      await updateProfile(user, { displayName: name });
+    } catch (error) {
+      console.warn("Unable to save signup name to Firebase Auth", error);
+    }
+  }
   window.localStorage.removeItem(emailLinkPendingKey);
   return { firebaseUser: user, profile: await createAuthenticatedUserProfile(user) };
 };

@@ -80,11 +80,11 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const signInWithEmail = async (email) => {
+  const signInWithEmail = async (email, options) => {
     setLoading(true);
     setAuthError("");
     try {
-      const result = await loginWithEmailLink(email);
+      const result = await loginWithEmailLink(email, options);
       setFirebaseUser(result.firebaseUser);
       setProfile(result.profile);
       return result;
