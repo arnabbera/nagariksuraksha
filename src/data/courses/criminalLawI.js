@@ -2929,6 +2929,102 @@ IPC 264: fraudulent use of a known false weighing instrument. IPC 265: fraudulen
   previewAvailable: false,
 });
 
+const publicHealthSafetySectionMap = [
+  ["268", "270", "Public nuisance", "A common injury, danger or annoyance to the public, or obstruction of a public right, remains the defining rule. Convenience to some does not excuse the nuisance."],
+  ["269", "271", "Negligent spread of dangerous infection", "An unlawful or negligent act likely to spread a disease dangerous to life requires knowledge or reason to believe in that likelihood."],
+  ["270", "272", "Malignant spread of dangerous infection", "The malignant act and awareness of likely infection distinguish this from the negligent offence in BNS 271."],
+  ["271", "273", "Disobedience to quarantine rule", "The BNS extends the transport wording from vessels to any mode of transport, while retaining knowing disobedience of a Government rule."],
+  ["272", "274", "Adulteration of food or drink", "Making food or drink noxious for intended or likely sale is retained; the BNS fine ceiling is ₹5,000."],
+  ["273", "275", "Sale of noxious food or drink", "Sale, offer or exposure for sale of unfit food or drink requires knowledge or reason to believe it noxious; the BNS fine ceiling is ₹5,000."],
+  ["274", "276", "Adulteration of drugs", "Adulterating a medicine for intended or likely medicinal sale or use is retained; BNS increases the imprisonment ceiling to one year and the fine ceiling to ₹5,000."],
+  ["275", "277", "Sale of adulterated drugs", "Knowing sale, offer, dispensing or medicinal use of an adulterated drug is retained with a BNS fine ceiling of ₹5,000."],
+  ["276", "278", "Sale of a drug as a different drug", "Knowingly passing one drug or medical preparation off as another is retained; the BNS fine ceiling is ₹5,000."],
+  ["277", "279", "Fouling a public spring or reservoir", "Voluntarily making the water less fit for its ordinary use is retained; BNS allows six months' imprisonment or a fine up to ₹5,000 or both."],
+  ["278", "280", "Making the atmosphere noxious", "Voluntarily vitiating air to the detriment of people nearby or using a public way is retained with a fine up to ₹1,000."],
+  ["279", "281", "Rash driving or riding", "The public-way danger or likely injury test remains; distinguish this offence from causing death by negligence."],
+  ["280", "282", "Rash navigation of a vessel", "Rash or negligent navigation endangering life or likely to cause injury is retained with a fine ceiling of ₹10,000."],
+  ["281", "283", "False light, mark or buoy", "Exhibiting a misleading navigational signal with the required intent or knowledge is retained; BNS requires a fine of at least ₹10,000 along with the stated imprisonment."],
+  ["282", "284", "Unsafe or overloaded hired vessel", "Knowingly or negligently carrying a person for hire by water in a vessel endangering that person's life is retained."],
+  ["283", "285", "Danger or obstruction in a public way", "An act or omission concerning property in one's charge that causes public-way or navigation danger, obstruction or injury remains covered; the BNS fine ceiling is ₹5,000."],
+  ["284", "286", "Negligent conduct with poison", "Rash or negligent handling, or failure to guard a poisonous substance in one's possession, remains covered."],
+  ["285", "287", "Negligent conduct with fire", "Rash or negligent handling of fire or combustible matter, or failure to guard it, remains covered."],
+  ["286", "288", "Negligent conduct with explosives", "Rash or negligent handling, or failure to guard an explosive substance, remains covered."],
+  ["287", "289", "Negligent conduct with machinery", "Rash or negligent machine use, or failure to guard machinery in one's possession or care, remains covered."],
+  ["288", "290", "Unsafe building work", "The BNS expressly adds constructing buildings to the IPC's pulling down or repairing; prove the omitted safeguards against a probable fall."],
+  ["289", "291", "Negligent conduct with an animal", "Failure to take sufficient precautions with an animal in one's possession against probable danger to life or grievous hurt remains covered."],
+  ["290", "292", "Residual punishment for public nuisance", "This applies to a public nuisance not otherwise punishable by the BNS; the BNS fine ceiling is ₹1,000."],
+  ["291", "293", "Continuing nuisance after injunction", "Repeating or continuing a nuisance despite an injunction by an authorised public servant remains a separate offence."],
+  ["292", "294", "Sale and circulation of obscene material", "The BNS expressly includes display of content in electronic form; apply the whole-work test, listed activities and public-good or religious exceptions."],
+  ["293", "295", "Obscene objects supplied to a child", "The IPC referred to a person under twenty; BNS uses child, defined in BNS Section 2(3) as a person below eighteen."],
+  ["294", "296", "Obscene acts and songs", "An obscene public act or words or song in or near a public place must cause annoyance to others."],
+  ["294A", "297", "Keeping an unauthorised lottery office", "BNS 297(1) addresses keeping the office; subsection (2) separately covers publishing specified proposals tied to the lottery."],
+];
+
+const publicHealthSafetyChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-17`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XIV  OF OFFENCES AFFECTING THE PUBLIC HEALTH, SAFETY, CONVENIENCE, DECENCY AND MORALS",
+  slug: "unit-17-public-health-safety-convenience-decency-and-morals",
+  shortDescription:
+    "Compare IPC Chapter XIV Sections 268–294A with BNS Chapter XV Sections 270–297, including nuisance, public safety, obscenity and lotteries.",
+  chapterOverview:
+    "The supplied historical IPC chapter maps substantially to BNS Chapter XV, Sections 270–297. It covers public nuisance, infectious disease and quarantine, unsafe food and drugs, water and air, rash driving and navigation, hazardous substances, animals, obscene material and lotteries. The central BNS changes some scope, ages and penalties; the Himachal Pradesh and Odisha state amendments in the supplied text must be considered separately.",
+  learningObjectives: [
+    "Match every supplied central IPC provision from 268 through 294A to its BNS counterpart.",
+    "Distinguish public nuisance as defined in BNS 270 from its residual punishment in 292 and continued nuisance in 293.",
+    "Compare negligence and malignancy in infection offences and identify the expanded transport wording in the quarantine offence.",
+    "Identify changes to buildings, electronic obscenity and the age threshold for supplying obscene material to a child.",
+    "Explain why the state-specific IPC amendments do not automatically become central BNS provisions.",
+  ],
+  detailedContent: `CHAPTER XIV — OF OFFENCES AFFECTING THE PUBLIC HEALTH, SAFETY, CONVENIENCE, DECENCY AND MORALS
+
+Chapter Overview
+
+The attachment sets out IPC Chapter XIV, Sections 268–294A. Its central provisions correspond to BNS Chapter XV, Sections 270–297. The BNS has its own wording and penalties: use the statute applicable on the date of the conduct, rather than assuming that a matching heading makes every element identical. The comparison below follows the supplied IPC text and the central Bharatiya Nyaya Sanhita, 2023.
+
+${publicHealthSafetySectionMap.map(([ipc, bns, heading, explanation]) => `IPC Section ${ipc} → BNS Section ${bns}: ${heading}\n\n${explanation}`).join("\n\n")}
+
+State Amendments in the Supplied Text
+
+Himachal Pradesh IPC Section 289-A concerns feeding monkeys in specified public places. It is a state amendment, not an extra central provision between BNS Sections 291 and 292, and has no identified direct central BNS counterpart. The supplied Odisha IPC Section 292-A and its amendments to IPC Sections 292 and 293 concern indecent or scurrilous matter and the state-specific penalties and scope. They are not reproduced as separate central BNS Sections 294-A or 295-A. Check the applicable state's current legislation before asserting whether any state amendment continues or has been replaced.
+
+Exam Method
+
+Identify the precise act, required awareness or negligence, likely danger or annoyance, and whether the item involves food, medicine, navigation, a public way or obscene material. Map IPC 268–294 to BNS 270–296 respectively, and IPC 294A to BNS 297. For IPC 289-A and 292-A, flag the state-specific status. Note the express BNS additions for any mode of transport (273), construction (290), electronic display (294), and child below eighteen (295). Compare penalties under the law applicable to the date of the alleged offence.`,
+  keyPoints: [
+    "IPC Chapter XIV Sections 268–294 map in order to BNS Chapter XV Sections 270–296; IPC 294A maps to BNS 297.",
+    "BNS 270 defines public nuisance; BNS 292 punishes otherwise unpunished nuisance; BNS 293 addresses nuisance continued after an injunction.",
+    "BNS 273 refers to any mode of transport for quarantine, and BNS 290 includes construction work.",
+    "BNS 294 expressly covers display of content in electronic form and retains the stated public-good and religious exceptions.",
+    "BNS 295 uses child (below eighteen under BNS 2(3)); the supplied IPC 293 uses under twenty.",
+    "Himachal Pradesh IPC 289-A and Odisha IPC 292-A are state amendments, with no separately numbered central BNS counterpart in Chapter XV.",
+    "Compare the current BNS punishment separately: multiple fine limits and the drug-adulteration imprisonment limit differ from the supplied IPC text.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XIV, Sections 268–294A (historical central provisions)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter XV, Sections 270–297",
+    "Bharatiya Nyaya Sanhita, 2023 — Section 2(3) (child)",
+    "Supplied state amendments — Himachal Pradesh IPC 289-A; Odisha IPC 292-A and amendments to 292–293 (verify current local law)",
+  ].map((provision, index) => ({
+    id: `unit-17-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Statutory reading for public health, safety, convenience, decency and morals.",
+  })),
+  examFocus:
+    "Map the central sections accurately, then compare the elements and applicable penalties. Separate BNS 270's nuisance definition from punishments in 292–293; contrast IPC 269/270 and BNS 271/272; identify the expanded wording for transport, construction and electronic content; distinguish the age thresholds; treat the Himachal Pradesh and Odisha additions as state-specific issues requiring current-law verification.",
+  revisionNotes:
+    "IPC 268–294 → BNS 270–296 in sequence; IPC 294A → BNS 297. BNS Chapter XV covers public health, safety, convenience, decency and morals. Watch BNS 273 (any mode of transport), 276 (drug adulteration: up to one year), 290 (construction), 294 (electronic form), 295 (child under eighteen), and state-only IPC 289-A / 292-A.",
+  chapterNumber: 16,
+  displayOrder: 16,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -2940,5 +3036,6 @@ export const criminalLawIChapters = [
   publicJusticeChapter,
   coinAndStampsChapter,
   weightsAndMeasuresChapter,
+  publicHealthSafetyChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
