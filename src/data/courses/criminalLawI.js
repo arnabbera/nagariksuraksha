@@ -2480,6 +2480,10 @@ IPC 171A → BNS 169; 171B → 170; 171C → 171; 171D → 172; 171E → 173; 17
     "Start with the exact electoral right and the date of conduct. For bribery, identify giver or recipient, gratification and inducement or reward; apply the public-policy exception and treating penalty where appropriate. For undue influence and personation, identify the prohibited interference or false voting and any lawful proxy. For statements, prove false fact, knowledge and electoral purpose. For spending or accounting, identify the written authority or legal duty, then use the correct IPC or BNS fine limit.",
   revisionNotes:
     "IPC 171A–171I → BNS 169–177 in order. Bribery: 171B/170, punishment 171E/173. Undue influence: 171C/171; personation: 171D/172; punishment 171F/174. False statement: 171G/175. Unauthorised spending: 171H/176 (₹500 → ₹10,000 maximum fine). Accounts: 171I/177 (₹500 → ₹5,000 maximum fine).",
+  pdfUrl: "/documents/criminal-law-i/chapter-9a-election-offences-ipc-bns.pdf",
+  pdfFileName: "Criminal Law I - Chapter IXA - Election Offences.pdf",
+  pdfFileSize: 53972,
+  pdfContentType: "application/pdf",
   chapterNumber: 11,
   displayOrder: 11,
   quizRequired: true,
