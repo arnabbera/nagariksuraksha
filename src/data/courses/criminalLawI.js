@@ -2181,7 +2181,7 @@ const existingCriminalLawIChapters = units.map(
             : index === 4
               ? "/documents/criminal-law-i/chapter-5-abetment-ipc-bns.pdf"
             : index === 5
-              ? "/documents/criminal-law-i/chapter-6-criminal-conspiracy-ipc-bns.pdf"
+              ? "/documents/criminal-law-i/chapter-va-criminal-conspiracy-ipc-bns.pdf"
             : index === 6
               ? "/documents/criminal-law-i/chapter-7-armed-forces-offences-ipc-bns.pdf"
           : "",
@@ -2197,12 +2197,12 @@ const existingCriminalLawIChapters = units.map(
             : index === 4
               ? "Criminal Law I - Chapter V - Abetment.pdf"
             : index === 5
-              ? "Criminal Law I - Chapter VI - Criminal Conspiracy.pdf"
+              ? "Criminal Law I - Chapter VA - Criminal Conspiracy.pdf"
             : index === 6
               ? "Criminal Law I - Chapter VII - Armed Forces Offences.pdf"
           : "",
       pdfFileSize:
-        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 21481 : index === 6 ? 26550 : 0,
+        index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 18632 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
       chapterNumber: index >= 7 ? index + 9 : index >= 6 ? index + 2 : index + 1,
       displayOrder: index >= 7 ? index + 9 : index >= 6 ? index + 2 : index + 1,
