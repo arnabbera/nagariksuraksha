@@ -2746,6 +2746,10 @@ First prove any oath, legal duty, official power, court process, underlying offe
     "Identify the precise IPC-to-BNS pair, requisite legal duty, mental state and any aggravated sentencing fact. Do not collapse false evidence, concealment, false charges, official misconduct and escape into one offence. Mention the BNS 72–73 split for IPC 228A, the repealed IPC 216B/226 provisions and the assessor-only language of BNS 268.",
   revisionNotes:
     "IPC 191–195A → BNS 227–232; IPC 196–225B → BNS 233–265 (216B repealed); IPC 226 repealed; IPC 227/228 → BNS 266/267; IPC 228A(1)–(2)/(3) → BNS 72/73; IPC 229/229A → BNS 268/269. Compare fine ceilings, section elements and relevant dates.",
+  pdfUrl: "/documents/criminal-law-i/chapter-11-public-justice-ipc-bns.pdf",
+  pdfFileName: "Criminal Law I - Chapter XI - False Evidence and Public Justice.pdf",
+  pdfFileSize: 70465,
+  pdfContentType: "application/pdf",
   chapterNumber: 13,
   displayOrder: 13,
   quizRequired: true,
