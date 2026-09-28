@@ -306,6 +306,11 @@ export default function AppRouter() {
         element={<LoginPage />}
       />
 
+      <Route
+        path="/signup"
+        element={<LoginPage />}
+      />
+
       {/* =====================================================
           STUDENT PORTAL
       ====================================================== */}

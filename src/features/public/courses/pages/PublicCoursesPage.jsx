@@ -340,6 +340,10 @@ export default function PublicCoursesPage() {
                 and certification pathways.
               </p>
 
+              <Link className="courses-login-link" to="/login?source=law-courses">
+                Log in to your student account <FaArrowRight aria-hidden="true" />
+              </Link>
+
               <div className="hero-benefits">
                 <span>
                   <FaCheckCircle />
@@ -769,6 +773,24 @@ export default function PublicCoursesPage() {
               font-size: 17px;
               line-height: 1.75;
             }
+
+            .courses-login-link {
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              margin-top: 24px;
+              padding: 13px 18px;
+              border-radius: 10px;
+              background: #fff;
+              color: #173376;
+              font-weight: 800;
+              text-decoration: none;
+              transition: transform .2s ease, background .2s ease;
+            }
+
+            .courses-login-link:hover { background: #eff6ff; transform: translateY(-2px); }
+            .courses-login-link:focus-visible { outline: 3px solid #fbbf24; outline-offset: 3px; }
 
             .hero-benefits {
               display: flex;
