@@ -340,10 +340,6 @@ export default function PublicCoursesPage() {
                 and certification pathways.
               </p>
 
-              <Link className="courses-login-link" to="/login?source=law-courses">
-                Log in to your student account <FaArrowRight aria-hidden="true" />
-              </Link>
-
               <div className="hero-benefits">
                 <span>
                   <FaCheckCircle />
@@ -378,7 +374,12 @@ export default function PublicCoursesPage() {
               </div>
             </div>
 
-            <img className="courses-hero-image" src="/certificate-courses-hero.jpg" alt="Certificate Courses in Legal Studies at Sanhita360" />
+            <div className="courses-hero-visual">
+              <Link className="courses-login-link" to="/login?source=law-courses">
+                Log in to your student account <FaArrowRight aria-hidden="true" />
+              </Link>
+              <img className="courses-hero-image" src="/certificate-courses-hero.jpg" alt="Certificate Courses in Legal Studies at Sanhita360" />
+            </div>
           </div>
         </section>
 
@@ -738,6 +739,15 @@ export default function PublicCoursesPage() {
               min-width: 0;
             }
 
+            .courses-hero-visual {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              align-self: start;
+              min-width: 0;
+              gap: 18px;
+            }
+
             .courses-hero-image {
               display: block;
               width: 100%;
@@ -779,7 +789,6 @@ export default function PublicCoursesPage() {
               align-items: center;
               justify-content: center;
               gap: 10px;
-              margin-top: 24px;
               padding: 13px 18px;
               border-radius: 10px;
               background: #fff;
