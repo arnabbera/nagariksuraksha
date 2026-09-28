@@ -3,20 +3,24 @@ import {
   FaGoogle,
   FaInfoCircle,
 } from "react-icons/fa";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
 import { useAuth } from "../../../hooks/useAuth";
 import { emailLinkOnCurrentPage, emailLinkPendingKey } from "../../../services/authService";
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [searchParams] = useSearchParams();
   const { signIn, signInWithEmail, requestEmailSignInLink } = useAuth();
+  const isSignUp = location.pathname === "/signup";
+  const isCourseLogin = !isSignUp && searchParams.get("source") === "law-courses";
+  const simplifiedEntry = isSignUp || isCourseLogin;
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [email, setEmail] = useState(() => window.localStorage.getItem(emailLinkPendingKey) || "");
-  const [emailOpen, setEmailOpen] = useState(() => emailLinkOnCurrentPage());
+  const [emailOpen, setEmailOpen] = useState(() => emailLinkOnCurrentPage() || window.location.pathname === "/signup");
   const [linkSent, setLinkSent] = useState(false);
   const completionStarted = useRef(false);
   const completingEmailLink = emailLinkOnCurrentPage();
@@ -137,11 +141,14 @@ export default function LoginPage() {
             Sanhita360
           </p>
 
-          <h1>Student Login</h1>
+          <h1>{isSignUp ? "Sign Up" : isCourseLogin ? "Log In" : "Student Login"}</h1>
 
           <p>
-            Sign in with Google or your email address to access courses,
-            learning materials, mock tests and certificates.
+            {isSignUp
+              ? "Create your account to access courses, tests and learning materials. No phone number is needed."
+              : isCourseLogin
+                ? "Access your courses, tests and more under your account."
+                : "Sign in with Google or your email address to access courses, learning materials, mock tests and certificates."}
           </p>
         </div>
 
@@ -162,24 +169,39 @@ export default function LoginPage() {
           {isLoading ? "Signing in..." : "Continue with Google"}
         </button>
 
-        <div className="student-login-email">
-          <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
-            Continue with email instead
-          </button>
+        {isCourseLogin && (
+          <div className="student-login-join">
+            <span>Or</span>
+            <p>New to Sanhita360?</p>
+            <Link to="/signup?source=law-courses">Sign Up</Link>
+          </div>
+        )}
+
+        {!isCourseLogin && <div className="student-login-email">
+          {isSignUp ? (
+            <h2>Sign up with email</h2>
+          ) : (
+            <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
+              Continue with email instead
+            </button>
+          )}
           {emailOpen && (
             <form onSubmit={handleEmail}>
               <label htmlFor="student-login-email-address">Email address</label>
               <input id="student-login-email-address" type="email" autoComplete="email" required
                 value={email} onChange={(event) => setEmail(event.target.value)} />
               <button type="submit" disabled={isLoading}>
-                {completingEmailLink ? "Complete email sign-in" : "Send sign-in link"}
+                {completingEmailLink ? "Complete email sign-in" : isSignUp ? "Send sign-up link" : "Send sign-in link"}
               </button>
-              {linkSent && <p role="status">Check your inbox for a sign-in link. Open it to access your courses.</p>}
+              {linkSent && <p role="status">Check your inbox for a secure link. Open it to access your courses.</p>}
               {completingEmailLink && <p>Enter the same email address that received the link.</p>}
             </form>
           )}
-        </div>
+        </div>}
 
+        {isSignUp && <p className="student-login-return">Already have an account? <Link to="/login">Log in</Link></p>}
+
+        {!simplifiedEntry && <>
         <p className="student-login-role-note">
           Students and administrators use the same secure sign-in. You will
           automatically be directed to the correct dashboard.
@@ -246,6 +268,7 @@ export default function LoginPage() {
             </p>
           </details>
         </aside>
+        </>}
       </section>
 
       <style>{`
@@ -366,6 +389,44 @@ export default function LoginPage() {
           margin-top: 16px;
           font-family: Arial, sans-serif;
         }
+
+        .student-login-email h2 {
+          margin: 24px 0 0;
+          color: #0f172a;
+          font-size: 17px;
+        }
+
+        .student-login-join {
+          margin-top: 22px;
+          text-align: center;
+          font-family: Arial, sans-serif;
+        }
+
+        .student-login-join span {
+          display: block;
+          color: #64748b;
+          font-size: 14px;
+        }
+
+        .student-login-join p, .student-login-return {
+          margin: 20px 0 10px;
+          color: #475569;
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+
+        .student-login-join a {
+          display: block;
+          padding: 13px 16px;
+          border: 1px solid #2563eb;
+          border-radius: 10px;
+          color: #1d4ed8;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
+        .student-login-return a { color: #1d4ed8; font-weight: 700; }
+        .student-login-join a:hover { background: #eff6ff; }
 
         .student-login-email-toggle,
         .student-login-email form button {
