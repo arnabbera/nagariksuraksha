@@ -2626,6 +2626,10 @@ IPC 172–174 → BNS 206–208; IPC 174A → BNS 209; IPC 175–190 → BNS 210
     "Map IPC 172–190 (including 174A) to BNS 206–225, prove lawful authority and the required mental element, and distinguish the ordinary and aggravated tiers. For BNS 209 use BNSS 84; for 223 compare the higher BNS punishment limits. Identify BNS 226 separately and select the statute applicable on the date of conduct.",
   revisionNotes:
     "IPC 172/173/174 → BNS 206/207/208; 174A → 209; 175–190 → 210–225 in order. Avoidance/service/attendance: 206–209. Documents and information: 210–212. Oath, answers and statements: 213–217. Property, sales and official assistance: 218–222. Orders and threats: 223–225. BNS 226 is additional. Check BNSS 84 and 394 and the date of the alleged offence.",
+  pdfUrl: "/documents/criminal-law-i/chapter-10-lawful-authority-ipc-bns.pdf",
+  pdfFileName: "Criminal Law I - Chapter X - Lawful Authority of Public Servants.pdf",
+  pdfFileSize: 59457,
+  pdfContentType: "application/pdf",
   chapterNumber: 12,
   displayOrder: 12,
   quizRequired: true,
