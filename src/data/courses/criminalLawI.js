@@ -2378,6 +2378,10 @@ Historical IPC 161–165A: omitted under the Prevention of Corruption Act, with 
     "Map the alleged facts to the exact IPC or BNS provision based on the date of conduct. Explain the repeal of IPC Sections 161–165A without treating corruption offences as decriminalised. For Sections 166–171, show the statutory duty, act, mental element and any injury; distinguish an actual public servant's misconduct from a false claim of official status. Identify the specific changes in BNS Sections 199, 200, 202, 204 and 205, and check State amendments only when jurisdiction and date make them relevant.",
   revisionNotes:
     "Omitted IPC 161–165A: Prevention of Corruption Act, 1988. IPC 166/166A/166B → BNS 198/199/200; IPC 167–171 → BNS 201–205. BNS 199 uses BNSS 173(1), BNS 200 uses BNSS 397, BNS 202 allows community service, BNS 204 increases the impersonation sentence, and BNS 205 raises the fine limit. Verify date and State-specific amendments.",
+  pdfUrl: "/documents/criminal-law-i/chapter-9-public-servants-ipc-bns.pdf",
+  pdfFileName: "Criminal Law I - Chapter IX - Public Servants.pdf",
+  pdfFileSize: 55277,
+  pdfContentType: "application/pdf",
   chapterNumber: 10,
   displayOrder: 10,
   quizRequired: true,
