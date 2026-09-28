@@ -3025,6 +3025,82 @@ Identify the precise act, required awareness or negligence, likely danger or ann
   previewAvailable: false,
 });
 
+const religionOffencesChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-18`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XV  OF OFFENCES RELATING TO RELIGION",
+  slug: "unit-18-offences-relating-to-religion",
+  shortDescription:
+    "Compare IPC Chapter XV Sections 295–298 with BNS Chapter XVI Sections 298–302, including religious places, malicious insults, assemblies, burial places and deliberate words or gestures.",
+  chapterOverview:
+    "The supplied IPC Chapter XV contains Sections 295, 295A, 296, 297 and 298. BNS Chapter XVI retains their core offences in Sections 298, 299, 300, 301 and 302 respectively. The comparison focuses on the distinct intent or knowledge required for each offence, the express reference to electronic means in BNS 299 and the unchanged stated imprisonment ceilings.",
+  learningObjectives: [
+    "Map all five supplied IPC sections to BNS Sections 298–302.",
+    "Identify the intent to insult or knowledge of likely insult required for damaging a place of worship or sacred object.",
+    "Distinguish deliberate and malicious intention to outrage a class's religious feelings from deliberate intention to wound one person's religious feelings.",
+    "Explain how BNS 299 expressly covers electronic means and how BNS 300–301 protect lawful assemblies and funerary places or rites.",
+    "Apply the statute in force on the date of the alleged conduct and assess each offence's specific act and mental element.",
+  ],
+  detailedContent: `CHAPTER XV — OF OFFENCES RELATING TO RELIGION
+
+Chapter Overview
+
+The supplied historical IPC Chapter XV maps to BNS Chapter XVI. The five central provisions are IPC 295 → BNS 298, IPC 295A → BNS 299, IPC 296 → BNS 300, IPC 297 → BNS 301, and IPC 298 → BNS 302. The BNS headings do not create a general offence of disagreeing with religious views; apply the specific conduct and mental-state requirements in each provision. Compare the date of the act with the applicable IPC or BNS regime.
+
+IPC Section 295 → BNS Section 298: Injuring or Defiling a Place of Worship
+
+The offence covers destroying, damaging or defiling a place of worship or an object held sacred by a class of persons. Prove intention to insult that class's religion, or knowledge that the class is likely to consider the act an insult. BNS 298 retains imprisonment of either description up to two years, fine, or both. Mere accidental damage without the specified mental element does not establish this offence.
+
+IPC Section 295A → BNS Section 299: Deliberate and Malicious Insult
+
+This provision requires deliberate and malicious intention to outrage the religious feelings of a class of citizens of India, coupled with insulting or attempting to insult its religion or beliefs. BNS 299 expressly includes conduct through electronic means alongside spoken or written words, signs, visible representations or otherwise. Its stated punishment remains imprisonment of either description up to three years, fine, or both. Keep this higher specific intent separate from the knowledge alternative in BNS 298 and the personal intention in BNS 302.
+
+IPC Section 296 → BNS Section 300: Disturbing a Religious Assembly
+
+Voluntarily causing disturbance to an assembly lawfully engaged in worship or religious ceremonies remains covered. Establish a lawful assembly engaged in those activities and a voluntary disturbance. BNS 300 retains imprisonment of either description up to one year, fine, or both.
+
+IPC Section 297 → BNS Section 301: Trespass, Burial Places and Funeral Rites
+
+The provision covers trespass in a place of worship, place of sepulture or location set apart for funeral rites or remains, indignity to a human corpse, and disturbance of people assembled for funeral ceremonies. It requires intention to wound feelings or insult religion, or knowledge that those consequences are likely. BNS 301 retains imprisonment of either description up to one year, fine, or both. Do not treat every entry into a cemetery or every interruption as sufficient without the statutory conduct and mental element.
+
+IPC Section 298 → BNS Section 302: Words, Sounds, Gestures or Objects
+
+Uttering words or making sounds in a person's hearing, making gestures in that person's sight, or placing an object in that person's sight is covered when done with deliberate intention to wound that person's religious feelings. BNS 302 retains imprisonment of either description up to one year, fine, or both. This provision concerns the feelings of a person; BNS 299 addresses a class and requires deliberate and malicious intention to outrage its religious feelings.
+
+Revision and Exam Method
+
+Identify the protected context first: sacred place or object (298), a class's religion or beliefs (299), lawful assembly (300), burial or funeral setting (301), or words and gestures directed at a person's religious feelings (302). Next state the precise act, intention or knowledge and the IPC/BNS number pair. Mention electronic means specifically for BNS 299; do not assume that a religious disagreement alone satisfies the statutory ingredients.`,
+  keyPoints: [
+    "IPC 295 → BNS 298: damage or defilement of worship place or sacred object with intent to insult or knowledge of likely insult.",
+    "IPC 295A → BNS 299: deliberate and malicious intention to outrage a class's religious feelings; electronic means expressly included.",
+    "IPC 296 → BNS 300: voluntary disturbance of an assembly lawfully engaged in worship or ceremonies.",
+    "IPC 297 → BNS 301: specified trespass, indignity to a corpse or funeral disturbance with the required intention or knowledge.",
+    "IPC 298 → BNS 302: words, sounds, gestures or objects with deliberate intention to wound a person's religious feelings.",
+    "The stated maximum imprisonment terms are two years for BNS 298, three years for 299, and one year each for 300–302.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XV, Sections 295, 295A, 296–298 (historical)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter XVI, Sections 298–302",
+  ].map((provision, index) => ({
+    id: `unit-18-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Core statutory reading for offences relating to religion.",
+  })),
+  examFocus:
+    "Set out the five IPC-to-BNS pairs, distinguish damage to sacred property from expressions targeting a class or a person, and identify each required mental element. State that BNS 299 expressly includes electronic means. For an assembly, burial or funeral fact pattern, test the exact protected setting and conduct before discussing punishment.",
+  revisionNotes:
+    "295 → 298 (place or sacred object); 295A → 299 (deliberate and malicious insult of class, including electronic means); 296 → 300 (lawful religious assembly); 297 → 301 (burial, corpse and funeral); 298 → 302 (deliberate words, sounds, gestures or object directed at person). BNS Chapter XVI Sections 298–302.",
+  chapterNumber: 17,
+  displayOrder: 17,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -3037,5 +3113,6 @@ export const criminalLawIChapters = [
   coinAndStampsChapter,
   weightsAndMeasuresChapter,
   publicHealthSafetyChapter,
+  religionOffencesChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
