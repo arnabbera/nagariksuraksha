@@ -3101,6 +3101,203 @@ Identify the protected context first: sacred place or object (298), a class's re
   previewAvailable: false,
 });
 
+const humanBodySectionMap = [
+  // Offences affecting life; the dowry-death provision moves to BNS Chapter V.
+  ["299", "100", "Culpable homicide"],
+  ["300", "101", "Murder and its exceptions"],
+  ["301", "102", "Death of a person other than the intended victim"],
+  ["302", "103", "Punishment for murder"],
+  ["303", "104", "Murder by a life convict"],
+  ["304", "105", "Culpable homicide not amounting to murder"],
+  ["304A", "106(1)", "Causing death by negligence"],
+  ["304-AA (Himachal Pradesh)", "No direct central counterpart", "State amendment on intoxicated driving causing death or injury"],
+  ["304B", "80", "Dowry death; moved to offences against women"],
+  ["305", "107", "Abetment of suicide of a child or person of unsound mind"],
+  ["306", "108", "Abetment of suicide"],
+  ["307", "109", "Attempt to murder"],
+  ["308", "110", "Attempt to commit culpable homicide"],
+  ["309", "No general counterpart", "Attempt to commit suicide; see the narrower BNS 226"],
+  ["310", "No direct counterpart", "The IPC thug definition is omitted"],
+  ["311", "No direct counterpart", "The IPC punishment for thug is omitted"],
+  // Miscarriage, unborn children, abandonment and concealment move to BNS Chapter V.
+  ["312", "88", "Causing miscarriage"],
+  ["313", "89", "Causing miscarriage without consent"],
+  ["314", "90", "Death caused by act intended to cause miscarriage"],
+  ["315", "91", "Preventing live birth or causing death after birth"],
+  ["316", "92", "Death of quick unborn child by act amounting to culpable homicide"],
+  ["317", "93", "Exposure and abandonment of child under twelve"],
+  ["318", "94", "Concealment of birth by secret disposal of body"],
+  // Hurt and aggravated hurt are consolidated into BNS sections and subsections.
+  ["319", "114", "Hurt"],
+  ["320", "116", "Grievous hurt"],
+  ["321", "115(1)", "Voluntarily causing hurt"],
+  ["322", "117(1)", "Voluntarily causing grievous hurt"],
+  ["323", "115(2)", "Punishment for voluntarily causing hurt"],
+  ["324", "118(1)", "Hurt by dangerous weapons or means"],
+  ["325", "117(2)", "Punishment for voluntarily causing grievous hurt"],
+  ["326", "118(2)", "Grievous hurt by dangerous weapons or means"],
+  ["326A", "124(1)", "Grievous hurt by use of acid"],
+  ["326B", "124(2)", "Throwing or attempting to throw acid"],
+  ["327", "119(1)", "Hurt to extort property or compel an illegal act"],
+  ["328", "123", "Hurt by poison with intent to commit an offence"],
+  ["329", "119(2)", "Grievous hurt to extort property or compel an illegal act"],
+  ["330", "120(1)", "Hurt to extort confession or restoration of property"],
+  ["331", "120(2)", "Grievous hurt to extort confession or restoration of property"],
+  ["332", "121(1)", "Hurt to deter a public servant"],
+  ["333", "121(2)", "Grievous hurt to deter a public servant"],
+  ["334", "122(1)", "Hurt on grave and sudden provocation"],
+  ["335", "122(2)", "Grievous hurt on grave and sudden provocation"],
+  ["336", "125", "Rash or negligent act endangering life or personal safety"],
+  ["337", "125(a)", "Hurt caused by an endangering act"],
+  ["338", "125(b)", "Grievous hurt caused by an endangering act"],
+  // Restraint and confinement definitions and punishments are grouped together.
+  ["339", "126(1)", "Wrongful restraint"],
+  ["340", "127(1)", "Wrongful confinement"],
+  ["341", "126(2)", "Punishment for wrongful restraint"],
+  ["342", "127(2)", "Punishment for wrongful confinement"],
+  ["343", "127(3)", "Confinement for three or more days"],
+  ["344", "127(4)", "Confinement for ten or more days"],
+  ["345", "127(5)", "Confinement despite a writ for liberation"],
+  ["346", "127(6)", "Secret wrongful confinement"],
+  ["347", "127(7)", "Confinement to extort property or compel an illegal act"],
+  ["348", "127(8)", "Confinement to extort confession or restore property"],
+  // The woman-specific offences are now in BNS Chapter V.
+  ["349", "128", "Force"],
+  ["350", "129", "Criminal force"],
+  ["351", "130", "Assault"],
+  ["352", "131", "Punishment for assault or criminal force"],
+  ["353", "132", "Assault or criminal force to deter a public servant"],
+  ["354", "74", "Assault or force with intent to outrage a woman's modesty"],
+  ["354A", "75", "Sexual harassment"],
+  ["354B", "76", "Assault or force with intent to disrobe"],
+  ["354C", "77", "Voyeurism"],
+  ["354D", "78", "Stalking"],
+  ["354E (Chhattisgarh)", "No direct central counterpart", "State amendment on failing to prevent or report specified offences"],
+  ["355", "133", "Assault or force with intent to dishonour"],
+  ["356", "134", "Assault or force in attempted theft from a person"],
+  ["357", "135", "Assault or force in attempted wrongful confinement"],
+  ["358", "136", "Assault or force on grave provocation"],
+  // Kidnapping is consolidated; several offences concerning women and children move.
+  ["359", "137(1)", "Kinds of kidnapping"],
+  ["360", "137(1)(a)", "Kidnapping from India"],
+  ["361", "137(1)(b)", "Kidnapping from lawful guardianship"],
+  ["362", "138", "Abduction"],
+  ["363", "137(2)", "Punishment for kidnapping"],
+  ["363A", "139", "Kidnapping or maiming child for begging"],
+  ["364", "140(1)", "Kidnapping or abduction in order to murder"],
+  ["364A", "140(2)", "Kidnapping for ransom"],
+  ["365", "140(3)", "Kidnapping or abduction for secret confinement"],
+  ["366", "87", "Kidnapping or inducing woman to compel marriage"],
+  ["366A", "96", "Procuration of child"],
+  ["366B", "141", "Importation of girl or boy from abroad"],
+  ["367", "140(4)", "Kidnapping to subject person to grievous hurt or slavery"],
+  ["368", "142", "Concealing or confining kidnapped or abducted person"],
+  ["369", "97", "Kidnapping child under ten to steal from the child"],
+  ["370", "143", "Trafficking of person"],
+  ["370A", "144", "Exploitation of trafficked person"],
+  ["371", "145", "Habitual dealing in slaves"],
+  ["372", "98", "Selling child for prostitution, etc."],
+  ["373", "99", "Buying child for prostitution, etc."],
+  ["374", "146", "Unlawful compulsory labour"],
+  // Sexual offences formerly in IPC Chapter XVI now appear in BNS Chapter V.
+  ["375", "63", "Rape definition"],
+  ["376", "64; 65(1) for IPC 376(3)", "Punishment for rape and the under-sixteen case"],
+  ["376A", "66", "Rape causing death or persistent vegetative state"],
+  ["376AB", "65(2)", "Rape of woman under twelve"],
+  ["376B", "67", "Sexual intercourse by husband during separation"],
+  ["376C", "68", "Sexual intercourse by person in authority"],
+  ["376D", "70(1)", "Gang rape"],
+  ["376DA", "70(2)", "Gang rape of woman under sixteen; BNS uses under-eighteen tier"],
+  ["376DB", "70(2)", "Gang rape of woman under twelve; BNS uses under-eighteen tier"],
+  ["376E", "71", "Repeat offender"],
+  ["376F (Chhattisgarh)", "No direct central counterpart", "State amendment on failing to prevent or report rape at workplace"],
+  ["377", "No direct counterpart", "The general IPC unnatural-offences section is omitted from BNS"],
+];
+
+const humanBodyChapter = createChapterModel({
+  id: `${CRIMINAL_LAW_I_COURSE_ID}-unit-19`,
+  courseId: CRIMINAL_LAW_I_COURSE_ID,
+  title: "CHAPTER XVI  OF OFFENCES AFFECTING THE HUMAN BODY",
+  slug: "unit-19-offences-affecting-the-human-body",
+  shortDescription:
+    "Map the supplied IPC Sections 299–377 to BNS Chapters V, VI and XIII, with special attention to consolidated provisions, relocated offences and omissions.",
+  chapterOverview:
+    "The supplied IPC Chapter XVI ranges from culpable homicide and hurt to confinement, assault, kidnapping, trafficking and sexual offences. BNS reorganises these subjects across Chapter V (women and children), Chapter VI (human body), and the narrower attempt-to-compel-public-servant suicide rule in Chapter XIII. This chapter gives a provision-level crosswalk, explains key elements and distinguishes omitted IPC offences from BNS additions.",
+  learningObjectives: [
+    "Distinguish culpable homicide, murder, their exceptions, negligent death and attempts by the relevant IPC and BNS sections.",
+    "Find miscarriage, dowry death, sexual offences and woman- and child-specific provisions in BNS Chapter V.",
+    "Map hurt, grievous hurt, acid attacks, restraint, confinement, force and assault to consolidated BNS sections and subsections.",
+    "Explain the separation of kidnapping, abduction, ransom, trafficking and compulsory labour under BNS.",
+    "Identify IPC 309, 310–311 and 377 as lacking direct general BNS counterparts, and note the narrower rule in BNS 226.",
+    "Treat supplied state amendments separately and check applicable law and commencement date before stating penalties.",
+  ],
+  detailedContent: `CHAPTER XVI — OF OFFENCES AFFECTING THE HUMAN BODY
+
+Chapter Overview
+
+This supplied IPC chapter spans Sections 299–377, with several lettered sections and state amendments. BNS does not keep all these topics together: BNS Chapter V covers offences against women and children (including rape and miscarriage), Chapter VI covers offences affecting the human body (Sections 100–146), and BNS 226 in Chapter XIII addresses only an attempt to commit suicide to compel or restrain a public servant from exercising lawful power. Read the exact provision in force at the time of conduct; no fixed numerical offset applies.
+
+IPC to BNS Section Crosswalk
+
+${humanBodySectionMap.map(([ipc, bns, topic]) => `IPC ${ipc} → BNS ${bns}: ${topic}`).join("\n")}
+
+Life, Death and Suicide
+
+IPC 299–301 correspond to BNS 100–102. BNS 101 sets out when culpable homicide amounts to murder and retains the specified exceptions; distinguish intention to kill, intention to cause particular injury, knowledge of likely death and the exception's conditions. Punishment provisions move from IPC 302–304 to BNS 103–105. BNS 103(2) also addresses murder by a group of five or more on listed grounds. IPC 304A maps to BNS 106(1), whose stated general term differs; BNS 106(2) is a separate text concerning rash or negligent driving and failure to report, and its commencement must be checked before treating it as operative. IPC 304B dowry death moves to BNS 80. IPC 305–308 map to BNS 107–110. The broad IPC 309 offence is not retained; BNS 226 is confined to an attempt to commit suicide with the purpose of compelling or restraining a public servant in the exercise of lawful power. IPC 310–311's distinct thug provisions have no direct BNS counterparts; BNS 111–113 address new organised-crime and terrorist offences with their own elements, not renumbered versions of thug.
+
+Miscarriage and Children
+
+IPC 312–318 map to BNS 88–94 in Chapter V, preserving separate tests for consent, resulting death, harm to an unborn child, abandonment and concealing birth. The supplied IPC 366A, 369 and 372–373 map to BNS 96–99; BNS 95 adds the distinct offence of hiring, employing or engaging a child to commit an offence. BNS 96 and 141 change the coverage from the IPC's girl-specific wording: examine the child, age, origin and intention requirements in the actual BNS provisions.
+
+Hurt, Restraint, Force and Assault
+
+IPC 319–338 map largely to BNS 114–125. Definitions and punishment are combined: ordinary hurt in 115, grievous hurt in 117, dangerous weapons in 118, acid in 124 and rash or negligent endangerment in 125. Use the correct subsection, injury threshold, instrument and intent. IPC 339–348 become BNS 126–127; BNS 127(3)–(8) retains the duration and purpose-based confinement variants. IPC 349–358 become BNS 128–136 except IPC 354 and 354A–354D, which move to BNS 74–78 on offences against women. Force, criminal force and assault are distinct concepts; a gesture can amount to assault even before physical force is applied.
+
+Kidnapping, Trafficking and Labour
+
+IPC 359–363 are reorganised into BNS 137–138. IPC 363A and 364–365 map to BNS 139–140; BNS 140(1)–(4) combines murder, ransom, secret confinement and grievous-hurt or slavery purposes. IPC 366 moves to BNS 87, IPC 366A to 96, IPC 366B to 141, and IPC 367–374 divide among BNS 140(4), 142–146, 97–99 as shown above. Distinguish kidnapping from lawful guardianship, abduction by force or deceit, trafficking by its specified means and exploitation, and unlawful compelled labour.
+
+Sexual Offences and Omitted Provision
+
+IPC 375–376E in the supplied material move principally to BNS 63–71 in Chapter V. BNS 63 states the rape definition and consent rules, BNS 64–66 and 70–71 differentiate punishment by circumstance, age, harm, gang rape and prior conviction. BNS 69 is a new offence concerning specified deceitful means; it is not an alternative number for IPC 376C. The old IPC 377 general unnatural-offences provision has no direct BNS successor. Do not imply that every act historically covered by IPC 377 is automatically covered by a different BNS section; examine the elements of any potentially applicable specific law separately.
+
+State Amendments and Exam Method
+
+The attachment includes state-specific additions or changes from Himachal Pradesh (including IPC 304-AA), Maharashtra, Chhattisgarh (including IPC 354E and 376F), Arunachal Pradesh and adaptations for Jammu and Kashmir and Ladakh. These are not automatically central BNS provisions and may need separate current local-law analysis. For an exam problem, identify the date, person, act, mental element, consequence, age and any specific exception; find the correct BNS chapter and subsection using the crosswalk. Check the latest applicable central and local text and commencement before asserting penalties.`,
+  keyPoints: [
+    "IPC 299–308 mostly map to BNS 100–110; dowry death IPC 304B is BNS 80 and negligent death IPC 304A is BNS 106(1).",
+    "IPC 312–318 move to BNS 88–94 on miscarriage, unborn children, abandonment and concealment.",
+    "Hurt and confinement provisions are consolidated into BNS 114–127; use subsection references for specific injuries and purposes.",
+    "IPC 354 and 354A–354D map to BNS 74–78, and IPC 375–376E primarily to BNS 63–71.",
+    "IPC 359–374 maps across BNS 87, 96–99 and 137–146; kidnapping, ransom, trafficking and child offences require their specific elements.",
+    "IPC 309 has no broad equivalent; BNS 226 is narrower. IPC 310–311 and 377 have no direct BNS counterparts.",
+    "State-specific amendments in the supplied text require independent verification of current state law.",
+  ],
+  statutoryProvisions: [
+    "Indian Penal Code, 1860 — Chapter XVI, Sections 299–377 and supplied lettered provisions (historical)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter V, Sections 63–99 (reorganised women and children offences)",
+    "Bharatiya Nyaya Sanhita, 2023 — Chapter VI, Sections 100–146 (offences affecting human body)",
+    "Bharatiya Nyaya Sanhita, 2023 — Section 226 (specific attempt to commit suicide to compel public servant)",
+  ].map((provision, index) => ({
+    id: `unit-19-provision-${index + 1}`,
+    title: provision,
+    provision,
+    description: "Statutory reading for offences affecting the human body.",
+  })),
+  examFocus:
+    "Begin with the date and facts, then find the matching offence and subsection, not a numerical offset. Separate homicide from negligent death; distinguish hurt from grievous hurt, kidnapping from abduction, rape and other specific sexual offences, and identify exceptions or mental states. Explain reorganised provisions, the narrower BNS 226 and the omitted IPC thug and 377 provisions.",
+  revisionNotes:
+    "Life: 299–308 → 100–110 except 304B → 80; 304A → 106(1). Miscarriage/children: 312–318 → 88–94. Hurt: 319–338 → 114–125 with subsection consolidation. Restraint/confinement: 339–348 → 126–127. Force/assault: 349–358 → 128–136 except 354–354D → 74–78. Kidnapping/trafficking: 359–374 → 87, 96–99, 137–146. Rape: 375–376E → 63–71. IPC 309, 310–311 and 377 have no direct general BNS equivalents.",
+  chapterNumber: 18,
+  displayOrder: 18,
+  quizRequired: true,
+  passingPercentage: 80,
+  maximumAttempts: 3,
+  published: true,
+  status: "published",
+  previewAvailable: false,
+});
+
 export const criminalLawIChapters = [
   ...existingCriminalLawIChapters.slice(0, 6),
   stateOffencesChapter,
@@ -3114,5 +3311,6 @@ export const criminalLawIChapters = [
   weightsAndMeasuresChapter,
   publicHealthSafetyChapter,
   religionOffencesChapter,
+  humanBodyChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];

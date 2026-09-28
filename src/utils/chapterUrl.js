@@ -149,6 +149,13 @@ const isCriminalLawIReligionChapter = (courseSlug, chapter) =>
   ].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-18");
 
+const isCriminalLawIHumanBodyChapter = (courseSlug, chapter) =>
+  [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-19");
+
 const CRIMINAL_LAW_I_CHAPTER_ONE_LEGACY_SEGMENT =
   "criminal-law-i-transitioning-from-ipc-to-bns-concept-of-crime-criminal-liability-and-general-exceptions";
 
@@ -183,6 +190,10 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIHumanBodyChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter18-Offences-Affecting-the-Human-Body";
+  }
+
   if (isCriminalLawIReligionChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter17-Offences-Relating-to-Religion";
   }
@@ -263,6 +274,10 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIHumanBodyChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter18-Offences-Affecting-the-Human-Body";
+  }
+
   if (isCriminalLawIReligionChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter17-Offences-Relating-to-Religion";
   }
