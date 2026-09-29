@@ -982,7 +982,7 @@ export default function PublicCourseDetailsPage() {
             </p>
 
             <Link to="/law-courses">
-              Explore More LL.B Courses
+              Explore more Law Courses
               <FaArrowRight />
             </Link>
           </div>
