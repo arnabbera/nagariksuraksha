@@ -23,6 +23,9 @@ const Header = () => {
   const [learningOpen, setLearningOpen] =
     useState(false);
 
+  const [historyOpen, setHistoryOpen] =
+    useState(false);
+
   const navStyle = ({ isActive }) => ({
     color: isActive ? "#2563eb" : "#1e293b",
     textDecoration: "none",
@@ -55,6 +58,7 @@ const Header = () => {
     setMenuOpen(false);
     setServicesOpen(false);
     setLearningOpen(false);
+    setHistoryOpen(false);
   };
 
   return (
@@ -177,12 +181,39 @@ const Header = () => {
                     Learning Videos
                   </Link>
 
-                  <Link to="/#indian-freedom-fighter" style={dropdownLink} onClick={closeMenu}>
-                    Indian Freedom Fighter
-                  </Link>
-
                   <Link to="/#legal-article" style={dropdownLink} onClick={closeMenu}>
                     Legal Article
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* INDIAN HISTORY */}
+
+            <div
+              className="ns-header-dropdown"
+              onMouseEnter={() => setHistoryOpen(true)}
+              onMouseLeave={() => setHistoryOpen(false)}
+            >
+              <button
+                type="button"
+                className="ns-dropdown-trigger"
+                aria-expanded={historyOpen}
+                aria-haspopup="true"
+                onClick={() => setHistoryOpen((current) => !current)}
+              >
+                Indian History
+                <FaChevronDown size={11} />
+              </button>
+
+              {historyOpen && (
+                <div style={dropdownStyle}>
+                  <Link
+                    to="/#indian-freedom-fighter"
+                    style={dropdownLink}
+                    onClick={closeMenu}
+                  >
+                    Indian Freedom Fighter
                   </Link>
                 </div>
               )}
@@ -322,12 +353,27 @@ const Header = () => {
                     Learning Videos
                   </Link>
 
-                  <Link to="/#indian-freedom-fighter" onClick={closeMenu}>
-                    Indian Freedom Fighter
-                  </Link>
-
                   <Link to="/#legal-article" onClick={closeMenu}>
                     Legal Article
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="ns-mobile-group">
+              <button
+                type="button"
+                aria-expanded={historyOpen}
+                onClick={() => setHistoryOpen((current) => !current)}
+              >
+                <span>Indian History</span>
+                <FaChevronDown className={historyOpen ? "is-open" : ""} />
+              </button>
+
+              {historyOpen && (
+                <div className="ns-mobile-submenu">
+                  <Link to="/#indian-freedom-fighter" onClick={closeMenu}>
+                    Indian Freedom Fighter
                   </Link>
                 </div>
               )}
@@ -510,11 +556,10 @@ const Header = () => {
 
           /*
            * Tablet/mobile navigation breakpoint.
-           * We use 1050px rather than 768px because this
-           * navigation has several menu items.
+           * The extra Indian History item needs room on tablets.
            */
 
-          @media (max-width: 1050px) {
+          @media (max-width: 1120px) {
             .ns-desktop-menu {
               display: none;
             }
