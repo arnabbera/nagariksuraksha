@@ -3652,7 +3652,7 @@ export const environmentalLawChapters = units.map(
     createChapterModel({
       id: `${ENVIRONMENTAL_LAW_COURSE_ID}-unit-${index + 1}`,
       courseId: ENVIRONMENTAL_LAW_COURSE_ID,
-      title: unit.title,
+      title: index === 0 ? unit.title : `Chapter-${index + 1}: ${unit.title}`,
       slug: unit.slug || `unit-${index + 1}-${unit.title
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, "")

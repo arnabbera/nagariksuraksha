@@ -60,9 +60,9 @@ const reorderedCriminalLawIChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-8",
 ]);
 
-const renamedChapterIds = new Set([
-  "environmental-law-unit-1",
-]);
+const renamedChapterIds = new Set(
+  environmentalLawChapters.map((chapter) => chapter.id),
+);
 
 // Bundled course chapters are updated through reviewed source changes, while
 // Firestore may still contain an older chapter created during course setup.
