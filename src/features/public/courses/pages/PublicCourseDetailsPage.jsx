@@ -951,10 +951,10 @@ export default function PublicCourseDetailsPage() {
 
                 <Link
                   className="sidebar-login-button"
-                  to={enrollmentUrl}
-                  onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
+                  to={isCivilProcedureCourse ? "/login?source=law-courses" : enrollmentUrl}
+                  onClick={isCivilProcedureCourse ? undefined : () => void trackFunnelEvent("enrollment_click", course.id)}
                 >
-                  Enroll for {priceLabel}
+                  {isCivilProcedureCourse ? "Login to student account" : `Enroll for ${priceLabel}`}
                   <FaArrowRight />
                 </Link>
               </div>
