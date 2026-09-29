@@ -253,8 +253,10 @@ export const getPublishedChaptersByCourse =
     const isFamilyLawCourse = courseSlug === "family-law-i";
     const isConstitutionalLawCourse =
       courseSlug === "indian-constitutional-law-i";
+    const isContractCourse =
+      courseSlug === "general-principles-of-contract-and-specific-relief";
     const hasNumberedTitles =
-      isTortsCourse || isFamilyLawCourse || isConstitutionalLawCourse;
+      isTortsCourse || isFamilyLawCourse || isConstitutionalLawCourse || isContractCourse;
 
     const sortedChapters = [...chapterMap.values()].sort(
       (first, second) =>
