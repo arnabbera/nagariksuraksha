@@ -17,12 +17,14 @@ import { generalPrinciplesOfContractBooks } from "../data/courses/generalPrincip
 import { environmentalLawBooks } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeBooks } from "../data/courses/humanRightsLawAndPractice";
 import { mediaLawBooks } from "../data/courses/mediaLaw";
+import { lawOfTortsBooks } from "../data/courses/lawOfTortsBooks";
 
 const bundledCourseBooks = [
   ...generalPrinciplesOfContractBooks,
   ...environmentalLawBooks,
   ...humanRightsLawAndPracticeBooks,
   ...mediaLawBooks,
+  ...lawOfTortsBooks,
 ];
 
 // =========================================================
