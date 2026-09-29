@@ -23,12 +23,12 @@ export const BENOY_BADAL_DINESH_POST = {
   updatedAt: "2026-09-29T00:00:00.000Z",
   media: {
     desktop: {
-      url: "/images/freedom-fighters/benoy-badal-dinesh-writers-building.jpg",
-      alt: "Historical illustration of three young revolutionaries before the Writers' Building in colonial Calcutta; figures are symbolic, not portraits",
+      url: "/images/freedom-fighters/benoy-badal-dinesh-writers-building-v2.jpg",
+      alt: "Sanhita360 illustration naming Benoy Krishna Basu, Badal Gupta and Dinesh Chandra Gupta with the incident date 8 December 1930; figures are symbolic, not portraits",
     },
     mobile: {
-      url: "/images/freedom-fighters/benoy-badal-dinesh-writers-building.jpg",
-      alt: "Symbolic illustration remembering Benoy, Badal and Dinesh at Writers' Building",
+      url: "/images/freedom-fighters/benoy-badal-dinesh-writers-building-v2.jpg",
+      alt: "Benoy Krishna Basu, Badal Gupta and Dinesh Chandra Gupta: Writers' Building, 8 December 1930",
     },
   },
   content: `**Benoy, Badal and Dinesh: Three Lives, One Defining Day**
@@ -88,7 +88,7 @@ Illustration note: The accompanying artwork is a symbolic historical scene, not 
     ogTitle: "Benoy, Badal and Dinesh: The Writers' Building Story",
     ogDescription:
       "Remembering the three young Bengal Volunteers and the events of 8 December 1930 in colonial Calcutta.",
-    ogImageUrl: "/images/freedom-fighters/benoy-badal-dinesh-writers-building.jpg",
+    ogImageUrl: "/images/freedom-fighters/benoy-badal-dinesh-writers-building-v2.jpg",
     robots: { index: true, follow: true },
     sitemap: { include: true, priority: 0.8, changeFrequency: "monthly" },
   },
