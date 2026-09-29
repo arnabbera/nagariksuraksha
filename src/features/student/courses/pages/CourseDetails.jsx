@@ -73,6 +73,8 @@ const LIVE_CLASS_COURSE_SLUGS = new Set([
   "environmental-law",
 ]);
 
+const RECOMMENDED_BOOK_PREVIEW_COUNT = 3;
+
 export default function CourseDetails() {
   const { courseId: courseSlug } =
     useParams();
@@ -109,6 +111,8 @@ export default function CourseDetails() {
     recommendedBooks,
     setRecommendedBooks,
   ] = useState([]);
+
+  const [showAllRecommendedBooks, setShowAllRecommendedBooks] = useState(false);
 
   const [
     enrollment,
@@ -163,6 +167,7 @@ export default function CourseDetails() {
         setLoading(true);
         setError("");
         setImageError(false);
+        setShowAllRecommendedBooks(false);
 
         // -----------------------------------------------------
         // STEP 1: FIND COURSE BY URL SLUG
@@ -858,56 +863,74 @@ export default function CourseDetails() {
                 Recommended books will be added soon.
               </div>
             ) : (
-              <div className="ns-course-book-list">
-                {recommendedBooks.map((book, index) => {
-                  const cover = getBookCover(book);
-                  const title = getBookTitle(book);
-                  const author = getBookAuthor(book);
-                  const publisher = getBookPublisher(book);
-                  const link = getBookLink(book);
+              <>
+                <div className="ns-course-book-list" id="recommended-books-list">
+                  {(showAllRecommendedBooks
+                    ? recommendedBooks
+                    : recommendedBooks.slice(0, RECOMMENDED_BOOK_PREVIEW_COUNT)
+                  ).map((book, index) => {
+                    const cover = getBookCover(book);
+                    const title = getBookTitle(book);
+                    const author = getBookAuthor(book);
+                    const publisher = getBookPublisher(book);
+                    const link = getBookLink(book);
 
-                  const bookContent = (
-                    <>
-                      <div className="ns-course-book-cover">
-                        {cover ? (
-                          <img
-                            src={cover}
-                            alt={`${title} cover`}
-                            loading="lazy"
-                          />
-                        ) : (
-                          <FaBook />
-                        )}
-                      </div>
+                    const bookContent = (
+                      <>
+                        <div className="ns-course-book-cover">
+                          {cover ? (
+                            <img
+                              src={cover}
+                              alt={`${title} cover`}
+                              loading="lazy"
+                            />
+                          ) : (
+                            <FaBook />
+                          )}
+                        </div>
 
-                      <div className="ns-course-book-info">
-                        <h3>{title}</h3>
-                        {author && <p>By {author}</p>}
-                        {publisher && <small>{publisher}</small>}
-                      </div>
-                    </>
-                  );
+                        <div className="ns-course-book-info">
+                          <h3>{title}</h3>
+                          {author && <p>By {author}</p>}
+                          {publisher && <small>{publisher}</small>}
+                        </div>
+                      </>
+                    );
 
-                  return link ? (
-                    <a
-                      key={book.id || `${title}-${index}`}
-                      href={link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="ns-course-book-item"
-                    >
-                      {bookContent}
-                    </a>
-                  ) : (
-                    <article
-                      key={book.id || `${title}-${index}`}
-                      className="ns-course-book-item"
-                    >
-                      {bookContent}
-                    </article>
-                  );
-                })}
-              </div>
+                    return link ? (
+                      <a
+                        key={book.id || `${title}-${index}`}
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ns-course-book-item"
+                      >
+                        {bookContent}
+                      </a>
+                    ) : (
+                      <article
+                        key={book.id || `${title}-${index}`}
+                        className="ns-course-book-item"
+                      >
+                        {bookContent}
+                      </article>
+                    );
+                  })}
+                </div>
+                {recommendedBooks.length > RECOMMENDED_BOOK_PREVIEW_COUNT && (
+                  <button
+                    type="button"
+                    className="ns-course-books-toggle"
+                    aria-expanded={showAllRecommendedBooks}
+                    aria-controls="recommended-books-list"
+                    onClick={() => setShowAllRecommendedBooks((current) => !current)}
+                  >
+                    {showAllRecommendedBooks
+                      ? "Show fewer books"
+                      : `View all ${recommendedBooks.length} recommended books`}
+                  </button>
+                )}
+              </>
             )}
           </section>
         </div>
@@ -1721,6 +1744,26 @@ export default function CourseDetails() {
           .ns-course-book-list {
             display: flex;
             flex-direction: column;
+          }
+
+          .ns-course-books-toggle {
+            width: 100%;
+            border: 0;
+            border-top: 1px solid #e2e8f0;
+            background: #fff;
+            color: #2563eb;
+            cursor: pointer;
+            padding: 12px 16px;
+            text-align: left;
+            font: inherit;
+            font-size: 12px;
+            font-weight: 600;
+          }
+
+          .ns-course-books-toggle:hover,
+          .ns-course-books-toggle:focus-visible {
+            background: #eff6ff;
+            text-decoration: underline;
           }
 
           .ns-course-book-item {
