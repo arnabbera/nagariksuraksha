@@ -36,7 +36,7 @@ import {
   getCourseBySlug,
 } from "../../../../services/courseService";
 import { trackFunnelEvent } from "../../../../services/funnelAnalyticsService";
-import useCoursePricing, { formatINR } from "../../../../hooks/useCoursePricing";
+import useCoursePricing from "../../../../hooks/useCoursePricing";
 
 // =========================================================
 // HELPERS
@@ -84,10 +84,6 @@ export default function PublicCourseDetailsPage() {
     courseSlug,
   } = useParams();
   const pricing = useCoursePricing();
-  const priceLabel = pricing ? formatINR(pricing.amount) : "current price";
-
-  const enrollmentUrl = `/checkout/${courseSlug}`;
-  const accountEnrollmentUrl = `/login?next=${encodeURIComponent(`/student/courses/${courseSlug}`)}`;
 
   const [
     course,
@@ -641,35 +637,13 @@ export default function PublicCourseDetailsPage() {
               </div>
 
               <div className="course-hero-actions">
-                {isCivilProcedureCourse ? (
-                  <>
-                    <Link className="primary-course-cta" to="/login?source=law-courses">
-                      Login to student account
-                      <FaArrowRight aria-hidden="true" />
-                    </Link>
-                    <a className="secondary-course-cta" href="#course-overview">
-                      Explore course
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    <Link
-                      className="primary-course-cta"
-                      to={enrollmentUrl}
-                      onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
-                    >
-                      Enroll for {priceLabel}
-                      <FaArrowRight />
-                    </Link>
-
-                    <Link
-                      className="secondary-course-cta"
-                      to={accountEnrollmentUrl}
-                    >
-                      Existing student? Sign in
-                    </Link>
-                  </>
-                )}
+                <Link className="primary-course-cta" to="/login?source=law-courses">
+                  Login to student account
+                  <FaArrowRight aria-hidden="true" />
+                </Link>
+                <a className="secondary-course-cta" href="#course-overview">
+                  Explore course
+                </a>
               </div>
             </div>
 
@@ -951,10 +925,9 @@ export default function PublicCourseDetailsPage() {
 
                 <Link
                   className="sidebar-login-button"
-                  to={isCivilProcedureCourse ? "/login?source=law-courses" : enrollmentUrl}
-                  onClick={isCivilProcedureCourse ? undefined : () => void trackFunnelEvent("enrollment_click", course.id)}
+                  to="/login?source=law-courses"
                 >
-                  {isCivilProcedureCourse ? "Login to student account" : `Enroll for ${priceLabel}`}
+                  Login to student account
                   <FaArrowRight />
                 </Link>
               </div>
