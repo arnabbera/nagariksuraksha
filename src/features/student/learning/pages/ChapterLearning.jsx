@@ -468,6 +468,7 @@ export default function ChapterLearning() {
         const chapterList =
           await getPublishedChaptersByCourse(
             realCourseId,
+            courseSlug,
           );
 
         const chapterData =
