@@ -250,35 +250,40 @@ export const getPublishedChaptersByCourse =
 
     const isTortsCourse =
       courseSlug === "law-of-torts-mv-and-cp-laws";
+    const isFamilyLawCourse = courseSlug === "family-law-i";
+    const hasNumberedTitles = isTortsCourse || isFamilyLawCourse;
 
     const sortedChapters = [...chapterMap.values()].sort(
       (first, second) =>
         Number(
-          isTortsCourse
+          hasNumberedTitles
             ? first.chapterNumber || first.displayOrder || 0
             : first.displayOrder || first.chapterNumber || 0,
         ) -
         Number(
-          isTortsCourse
+          hasNumberedTitles
             ? second.chapterNumber || second.displayOrder || 0
             : second.displayOrder || second.chapterNumber || 0,
         ),
     );
 
-    if (!isTortsCourse) return sortedChapters;
+    if (!hasNumberedTitles) return sortedChapters;
 
     let serialNumber = 0;
     return sortedChapters.map((chapter) => {
       if (chapter.deleted === true) return chapter;
 
       serialNumber += 1;
+      const chapterNumber = isFamilyLawCourse
+        ? Number(chapter.chapterNumber || chapter.displayOrder) || serialNumber
+        : serialNumber;
       const title = String(chapter.title || "")
         .replace(/^\s*(?:chapter|unit)[\s-]+(?:\d+|[ivxlcdm]+)\s*[:.\-)–—]*\s*/i, "")
         .trim();
 
       return {
         ...chapter,
-        title: `Chapter-${serialNumber}: ${title}`,
+        title: `Chapter-${chapterNumber}: ${title}`,
       };
     });
   };
