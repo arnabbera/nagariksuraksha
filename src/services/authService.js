@@ -208,9 +208,10 @@ export const emailLinkPendingKey = "sanhita360-email-link-address";
 export const emailLinkOnCurrentPage = () =>
   isSignInWithEmailLink(auth, window.location.href);
 
-export const requestEmailSignInLink = async (email, next = "/student", { signUp = false } = {}) => {
+export const requestEmailSignInLink = async (email, next = "/student", { signUp = false, source = "" } = {}) => {
   const returnUrl = new URL(signUp ? "/signup?source=law-courses" : "/login", window.location.origin);
   returnUrl.searchParams.set("next", next);
+  if (!signUp && source === "law-courses") returnUrl.searchParams.set("source", source);
   await sendSignInLinkToEmail(auth, normalizeEmail(email), {
     url: returnUrl.href,
     handleCodeInApp: true,

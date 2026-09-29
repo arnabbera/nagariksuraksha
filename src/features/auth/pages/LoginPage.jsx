@@ -32,7 +32,7 @@ export default function LoginPage() {
   const safeNext = (next === "/claim-purchase" || next?.startsWith("/student/courses/")) &&
     !next.startsWith("//") && !next.includes("\\") &&
     !next.includes("?") && !next.includes("#") ? next : "/student";
-  const destination = window.localStorage.getItem("sanhita360-guest-latest")
+  const destination = isCourseLogin ? "/student" : window.localStorage.getItem("sanhita360-guest-latest")
     ? "/claim-purchase" : safeNext;
 
   const continueAfterLogin = async ({ firebaseUser, profile }) => {
@@ -112,7 +112,10 @@ export default function LoginPage() {
     setIsLoading(true);
     setError("");
     try {
-      await requestEmailSignInLink(email, destination, { signUp: isSignUp });
+      await requestEmailSignInLink(email, destination, {
+        signUp: isSignUp,
+        source: isCourseLogin ? "law-courses" : "",
+      });
       if (isSignUp) window.localStorage.setItem(signupNamePendingKey, fullName.trim());
       setLinkSent(true);
     } catch (emailError) { setError(describeEmailError(emailError)); }
@@ -205,27 +208,20 @@ export default function LoginPage() {
         {isSignUp && <div className="student-signup-divider">OR</div>}
         {googleButton}
 
-        {isCourseLogin && (
-          <div className="student-login-join">
-            <span>Or</span>
-            <p>New to Sanhita360?</p>
-            <Link to="/signup?source=law-courses">Sign Up</Link>
-          </div>
-        )}
-
-        {!isCourseLogin && !isSignUp && <div className="student-login-email">
+        {!isSignUp && <div className="student-login-email">
           <button type="button" className="student-login-email-toggle" onClick={() => setEmailOpen((open) => !open)}>
             Continue with email instead
           </button>
           {emailOpen && (
             <form onSubmit={handleEmail}>
+              {!completingEmailLink && <p>We will email you a secure link to sign in to your student account.</p>}
               <label htmlFor="student-login-email-address">Email address</label>
               <input id="student-login-email-address" type="email" autoComplete="email" required
                 value={email} onChange={(event) => setEmail(event.target.value)} />
               <button type="submit" disabled={isLoading}>
                 {completingEmailLink ? "Complete email sign-in" : "Send sign-in link"}
               </button>
-              {linkSent && <p role="status">Check your inbox for a secure link. Open it to access your courses.</p>}
+              {linkSent && <p role="status">Check your inbox for a secure sign-in link. Open it to enter your student dashboard.</p>}
               {completingEmailLink && <p>Enter the same email address that received the link.</p>}
             </form>
           )}
@@ -497,37 +493,14 @@ export default function LoginPage() {
           font-size: 17px;
         }
 
-        .student-login-join {
-          margin-top: 22px;
-          text-align: center;
-          font-family: Arial, sans-serif;
-        }
-
-        .student-login-join span {
-          display: block;
-          color: #64748b;
-          font-size: 14px;
-        }
-
-        .student-login-join p, .student-login-return {
+        .student-login-return {
           margin: 20px 0 10px;
           color: #475569;
           font-family: Arial, sans-serif;
           text-align: center;
         }
 
-        .student-login-join a {
-          display: block;
-          padding: 13px 16px;
-          border: 1px solid #2563eb;
-          border-radius: 10px;
-          color: #1d4ed8;
-          font-weight: 700;
-          text-decoration: none;
-        }
-
         .student-login-return a { color: #1d4ed8; font-weight: 700; }
-        .student-login-join a:hover { background: #eff6ff; }
 
         .student-login-email-toggle,
         .student-login-email form button {
