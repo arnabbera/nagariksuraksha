@@ -226,12 +226,16 @@ export const generalPrinciplesOfContractChapters = units.map(
       notes: unit.detailedContent,
       pdfUrl: index === 0
         ? "/documents/contract-law/chapter-1-formation-and-essential-elements.pdf"
-        : "",
+        : index === 1
+          ? "/documents/contract-law/chapter-2-consideration-and-privity.pdf"
+          : "",
       pdfFileName: index === 0
         ? "Chapter-1 - Formation and Essential Elements of Contract.pdf"
-        : "",
-      pdfFileSize: index === 0 ? 62726 : 0,
-      pdfContentType: index === 0 ? "application/pdf" : "",
+        : index === 1
+          ? "Chapter-2 - Consideration and Privity of Contract.pdf"
+          : "",
+      pdfFileSize: index === 0 ? 62726 : index === 1 ? 61392 : 0,
+      pdfContentType: index <= 1 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,

@@ -89,9 +89,10 @@ const mergeStoredAndBundledChapter = (
     sourceControlledChapterIds.has(bundledChapter.id);
   const hasUpdatedTitle =
     renamedChapterIds.has(bundledChapter.id);
-  const hasChapterOneStudyPdf =
-    bundledChapter.id ===
-    "general-principles-of-contract-and-specific-relief-unit-1";
+  const hasContractStudyPdf = [
+    "general-principles-of-contract-and-specific-relief-unit-1",
+    "general-principles-of-contract-and-specific-relief-unit-2",
+  ].includes(bundledChapter.id);
 
   if (
     !isSourceControlled &&
@@ -108,7 +109,7 @@ const mergeStoredAndBundledChapter = (
 
     return hasUpdatedTitle
       ? { ...storedChapter, title: bundledChapter.title }
-      : hasChapterOneStudyPdf
+      : hasContractStudyPdf
         ? { ...storedChapter, pdf: bundledChapter.pdf }
         : storedChapter;
   }
@@ -135,7 +136,7 @@ const mergeStoredAndBundledChapter = (
     notes: isSourceControlled
       ? bundledChapter.notes
       : bundledChapter.notes || storedChapter.notes,
-    pdf: isSourceControlled || hasChapterOneStudyPdf
+    pdf: isSourceControlled || hasContractStudyPdf
       ? bundledChapter.pdf
       : storedChapter.pdf || bundledChapter.pdf,
   };
