@@ -96,6 +96,7 @@ const mergeStoredAndBundledChapter = (
     "general-principles-of-contract-and-specific-relief-unit-4",
     "general-principles-of-contract-and-specific-relief-unit-5",
     "general-principles-of-contract-and-specific-relief-unit-6",
+    "general-principles-of-contract-and-specific-relief-unit-7",
   ].includes(bundledChapter.id);
 
   if (
