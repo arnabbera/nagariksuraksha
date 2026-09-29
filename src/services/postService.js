@@ -7,6 +7,7 @@ import postRepository from "../repositories/PostRepository";
 import {
   MASTERDA_SURYA_SEN_POST,
 } from "../features/public/posts/data/masterdaSuryaSenPost";
+import { BENOY_BADAL_DINESH_POST } from "../features/public/posts/data/benoyBadalDineshPost";
 
 // =========================================================
 // HELPERS
@@ -32,6 +33,7 @@ const normalizeSlug = (
     );
 
 const bundledPosts = [
+  BENOY_BADAL_DINESH_POST,
   MASTERDA_SURYA_SEN_POST,
 ];
 
