@@ -61,7 +61,10 @@ const reorderedCriminalLawIChapterIds = new Set([
 ]);
 
 const renamedChapterIds = new Set(
-  environmentalLawChapters.map((chapter) => chapter.id),
+  [
+    ...environmentalLawChapters,
+    ...humanRightsLawAndPracticeChapters,
+  ].map((chapter) => chapter.id),
 );
 
 // Bundled course chapters are updated through reviewed source changes, while
