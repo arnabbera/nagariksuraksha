@@ -60,6 +60,10 @@ const reorderedCriminalLawIChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-8",
 ]);
 
+const renamedChapterIds = new Set([
+  "environmental-law-unit-1",
+]);
+
 // Bundled course chapters are updated through reviewed source changes, while
 // Firestore may still contain an older chapter created during course setup.
 // Prefer the richer academic content, but retain Firestore-controlled fields
@@ -78,6 +82,8 @@ const mergeStoredAndBundledChapter = (
 
   const isSourceControlled =
     sourceControlledChapterIds.has(bundledChapter.id);
+  const hasUpdatedTitle =
+    renamedChapterIds.has(bundledChapter.id);
 
   if (
     !isSourceControlled &&
@@ -92,13 +98,15 @@ const mergeStoredAndBundledChapter = (
       };
     }
 
-    return storedChapter;
+    return hasUpdatedTitle
+      ? { ...storedChapter, title: bundledChapter.title }
+      : storedChapter;
   }
 
   return {
     ...bundledChapter,
     ...storedChapter,
-    title: isSourceControlled
+    title: isSourceControlled || hasUpdatedTitle
       ? bundledChapter.title
       : storedChapter.title || bundledChapter.title,
     chapterNumber: reorderedCriminalLawIChapterIds.has(bundledChapter.id)

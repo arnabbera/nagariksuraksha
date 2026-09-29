@@ -50,7 +50,8 @@ export const environmentalLawCourse = createCourseModel({
 
 const units = [
   {
-    title: "International Environmental Policy and Sustainable Development",
+    title: "Chapter-1: International Environmental Policy and Sustainable Development",
+    slug: "unit-1-international-environmental-policy-and-sustainable-development",
     shortDescription:
       "Environmental consequences of development policies and the Stockholm, Rio, Johannesburg and Rio+20 declarations.",
     overview:
@@ -3652,7 +3653,7 @@ export const environmentalLawChapters = units.map(
       id: `${ENVIRONMENTAL_LAW_COURSE_ID}-unit-${index + 1}`,
       courseId: ENVIRONMENTAL_LAW_COURSE_ID,
       title: unit.title,
-      slug: `unit-${index + 1}-${unit.title
+      slug: unit.slug || `unit-${index + 1}-${unit.title
         .toLowerCase()
         .replace(/[^a-z0-9\s-]/g, "")
         .replace(/\s+/g, "-")}`,
