@@ -1654,6 +1654,9 @@ export default function ChapterLearning() {
                     ),
                 )
               }
+              onNavigate={(pageNumber) =>
+                setPdfPageNumber(pageNumber)
+              }
             />
 
             <div className="ns-pdf-access">
@@ -1945,6 +1948,7 @@ function ProtectedPdfReader({
   onLoadSuccess,
   onPrevious,
   onNext,
+  onNavigate,
 }) {
   return (
     <div
@@ -1978,6 +1982,9 @@ function ProtectedPdfReader({
           }
           onLoadSuccess={
             onLoadSuccess
+          }
+          onItemClick={({ pageNumber }) =>
+            onNavigate(pageNumber)
           }
           loading={
             <div className="ns-pdf-status">

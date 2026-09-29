@@ -89,6 +89,9 @@ const mergeStoredAndBundledChapter = (
     sourceControlledChapterIds.has(bundledChapter.id);
   const hasUpdatedTitle =
     renamedChapterIds.has(bundledChapter.id);
+  const hasChapterOneStudyPdf =
+    bundledChapter.id ===
+    "general-principles-of-contract-and-specific-relief-unit-1";
 
   if (
     !isSourceControlled &&
@@ -105,7 +108,9 @@ const mergeStoredAndBundledChapter = (
 
     return hasUpdatedTitle
       ? { ...storedChapter, title: bundledChapter.title }
-      : storedChapter;
+      : hasChapterOneStudyPdf
+        ? { ...storedChapter, pdf: bundledChapter.pdf }
+        : storedChapter;
   }
 
   return {
@@ -130,7 +135,7 @@ const mergeStoredAndBundledChapter = (
     notes: isSourceControlled
       ? bundledChapter.notes
       : bundledChapter.notes || storedChapter.notes,
-    pdf: isSourceControlled
+    pdf: isSourceControlled || hasChapterOneStudyPdf
       ? bundledChapter.pdf
       : storedChapter.pdf || bundledChapter.pdf,
   };
