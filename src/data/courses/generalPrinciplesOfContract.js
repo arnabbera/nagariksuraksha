@@ -232,7 +232,9 @@ export const generalPrinciplesOfContractChapters = units.map(
             ? "/documents/contract-law/chapter-3-capacity-to-contract.pdf"
             : index === 3
               ? "/documents/contract-law/chapter-4-free-consent-and-legality-of-object.pdf"
-              : "",
+              : index === 4
+                ? "/documents/contract-law/chapter-5-void-agreements-and-contingent-contracts.pdf"
+                : "",
       pdfFileName: index === 0
         ? "Chapter-1 - Formation and Essential Elements of Contract.pdf"
         : index === 1
@@ -241,9 +243,11 @@ export const generalPrinciplesOfContractChapters = units.map(
             ? "Chapter-3 - Capacity to Contract.pdf"
             : index === 3
               ? "Chapter-4 - Free Consent and Legality of Object.pdf"
-              : "",
-      pdfFileSize: index === 0 ? 62726 : index === 1 ? 61392 : index === 2 ? 61220 : index === 3 ? 63297 : 0,
-      pdfContentType: index <= 3 ? "application/pdf" : "",
+              : index === 4
+                ? "Chapter-5 - Void Agreements and Contingent Contracts.pdf"
+                : "",
+      pdfFileSize: index === 0 ? 62726 : index === 1 ? 61392 : index === 2 ? 61220 : index === 3 ? 63297 : index === 4 ? 63142 : 0,
+      pdfContentType: index <= 4 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
