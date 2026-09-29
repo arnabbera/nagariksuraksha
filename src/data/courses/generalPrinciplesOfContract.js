@@ -238,6 +238,8 @@ export const generalPrinciplesOfContractChapters = units.map(
                   ? "/documents/contract-law/chapter-6-discharge-of-contracts.pdf"
                   : index === 6
                     ? "/documents/contract-law/chapter-7-remedies-for-breach-and-specific-performance.pdf"
+                    : index === 7
+                      ? "/documents/contract-law/chapter-8-the-specific-relief-act-1963.pdf"
                   : "",
       pdfFileName: index === 0
         ? "Chapter-1 - Formation and Essential Elements of Contract.pdf"
@@ -253,9 +255,11 @@ export const generalPrinciplesOfContractChapters = units.map(
                   ? "Chapter-6 - Discharge of Contracts.pdf"
                   : index === 6
                     ? "Chapter-7 - Remedies for Breach and Specific Performance.pdf"
+                    : index === 7
+                      ? "Chapter-8 - The Specific Relief Act, 1963.pdf"
                   : "",
-      pdfFileSize: index === 0 ? 62726 : index === 1 ? 61392 : index === 2 ? 61220 : index === 3 ? 63297 : index === 4 ? 63142 : index === 5 ? 63730 : index === 6 ? 63494 : 0,
-      pdfContentType: index <= 6 ? "application/pdf" : "",
+      pdfFileSize: index === 0 ? 62726 : index === 1 ? 61392 : index === 2 ? 61220 : index === 3 ? 63297 : index === 4 ? 63142 : index === 5 ? 63730 : index === 6 ? 63494 : index === 7 ? 63623 : 0,
+      pdfContentType: index <= 7 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
