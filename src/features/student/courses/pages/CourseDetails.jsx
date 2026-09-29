@@ -216,6 +216,7 @@ export default function CourseDetails() {
           await Promise.all([
             getPublishedChaptersByCourse(
               realCourseId,
+              courseSlug,
             ),
 
             isAdmin
