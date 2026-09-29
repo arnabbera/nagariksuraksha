@@ -65,6 +65,7 @@ const renamedChapterIds = new Set(
     ...environmentalLawChapters,
     ...humanRightsLawAndPracticeChapters,
     ...mediaLawChapters,
+    ...publicInternationalLawChapters,
   ].map((chapter) => chapter.id),
 );
 
