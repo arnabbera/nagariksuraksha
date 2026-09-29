@@ -26,6 +26,7 @@ import {
   Link,
 } from "react-router-dom";
 
+import Footer from "../../../home/components/Footer";
 import SEO from "../../../../shared/seo/SEO";
 
 import {
@@ -1220,6 +1221,7 @@ export default function PublicCoursesPage() {
           `}
         </style>
       </main>
+      <Footer />
     </>
   );
 }
