@@ -251,7 +251,10 @@ export const getPublishedChaptersByCourse =
     const isTortsCourse =
       courseSlug === "law-of-torts-mv-and-cp-laws";
     const isFamilyLawCourse = courseSlug === "family-law-i";
-    const hasNumberedTitles = isTortsCourse || isFamilyLawCourse;
+    const isConstitutionalLawCourse =
+      courseSlug === "indian-constitutional-law-i";
+    const hasNumberedTitles =
+      isTortsCourse || isFamilyLawCourse || isConstitutionalLawCourse;
 
     const sortedChapters = [...chapterMap.values()].sort(
       (first, second) =>
