@@ -23,7 +23,7 @@ const slugify = (value = "") =>
 const removeChapterLabel = (title = "") =>
   String(title)
     .replace(
-      /^\s*(?:chapter|unit)\s+(?:\d+|[ivxlcdm]+)\s*[:.\-)–—]*\s*/i,
+      /^\s*(?:chapter|unit)[\s-]+(?:\d+|[ivxlcdm]+)\s*[:.\-)–—]*\s*/i,
       "",
     )
     .trim();
