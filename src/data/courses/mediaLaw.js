@@ -2060,7 +2060,7 @@ export const mediaLawChapters = units.map((unit, index) =>
       .replace(/[^a-z0-9\s-]/g, "")
       .replace(/\s+/g, "-")}`,
     courseId: MEDIA_LAW_COURSE_ID,
-    title: unit.title,
+    title: `Chapter-${index + 1}: ${unit.title}`,
     slug: `unit-${index + 1}-${unit.title
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, "")
