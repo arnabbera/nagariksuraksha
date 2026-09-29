@@ -224,6 +224,14 @@ export const generalPrinciplesOfContractChapters = units.map(
         "Revise the statutory elements, exceptions, distinctions and available remedies. Support answers with the applicable provisions and leading principles.",
       revisionNotes: unit.keyPoints.join("; "),
       notes: unit.detailedContent,
+      pdfUrl: index === 0
+        ? "/documents/contract-law/chapter-1-formation-and-essential-elements.pdf"
+        : "",
+      pdfFileName: index === 0
+        ? "Chapter-1 - Formation and Essential Elements of Contract.pdf"
+        : "",
+      pdfFileSize: index === 0 ? 62726 : 0,
+      pdfContentType: index === 0 ? "application/pdf" : "",
       chapterNumber: index + 1,
       displayOrder: index + 1,
       quizRequired: true,
