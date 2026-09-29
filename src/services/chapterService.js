@@ -92,6 +92,7 @@ const mergeStoredAndBundledChapter = (
   const hasContractStudyPdf = [
     "general-principles-of-contract-and-specific-relief-unit-1",
     "general-principles-of-contract-and-specific-relief-unit-2",
+    "general-principles-of-contract-and-specific-relief-unit-3",
   ].includes(bundledChapter.id);
 
   if (
