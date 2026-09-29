@@ -2734,7 +2734,7 @@ export const humanRightsLawAndPracticeChapters = units.map((unit, index) =>
   createChapterModel({
     id: `${HUMAN_RIGHTS_LAW_AND_PRACTICE_COURSE_ID}-unit-${index + 1}`,
     courseId: HUMAN_RIGHTS_LAW_AND_PRACTICE_COURSE_ID,
-    title: unit.title,
+    title: `Chapter-${index + 1}: ${unit.title}`,
     slug: `unit-${index + 1}-${unit.title
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, "")
