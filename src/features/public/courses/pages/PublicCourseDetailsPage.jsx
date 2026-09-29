@@ -641,21 +641,35 @@ export default function PublicCourseDetailsPage() {
               </div>
 
               <div className="course-hero-actions">
-                <Link
-                  className="primary-course-cta"
-                  to={enrollmentUrl}
-                  onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
-                >
-                  Enroll for {priceLabel}
-                  <FaArrowRight />
-                </Link>
+                {isCivilProcedureCourse ? (
+                  <>
+                    <Link className="primary-course-cta" to="/login?source=law-courses">
+                      Login to student account
+                      <FaArrowRight aria-hidden="true" />
+                    </Link>
+                    <a className="secondary-course-cta" href="#course-overview">
+                      Explore course
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      className="primary-course-cta"
+                      to={enrollmentUrl}
+                      onClick={() => void trackFunnelEvent("enrollment_click", course.id)}
+                    >
+                      Enroll for {priceLabel}
+                      <FaArrowRight />
+                    </Link>
 
-                <Link
-                  className="secondary-course-cta"
-                  to={accountEnrollmentUrl}
-                >
-                  Existing student? Sign in
-                </Link>
+                    <Link
+                      className="secondary-course-cta"
+                      to={accountEnrollmentUrl}
+                    >
+                      Existing student? Sign in
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
 
@@ -695,7 +709,7 @@ export default function PublicCourseDetailsPage() {
 
         {/* OVERVIEW */}
 
-        <section className="course-content-section">
+        <section className="course-content-section" id="course-overview">
           <div className="course-page-container course-content-grid">
             <article className="course-main-content">
               <span className="content-label">
@@ -1271,6 +1285,8 @@ export default function PublicCourseDetailsPage() {
                 rgba(255,255,255,.35);
               color: white;
             }
+
+            #course-overview { scroll-margin-top: 24px; }
 
             .course-hero-media {
               overflow: hidden;
