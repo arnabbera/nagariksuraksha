@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ServicesSection from "../components/ServicesSection";
 import WhyChooseUs from "../components/WhyChooseUs";
-import StatsSection from "../components/StatsSection";
 import LearningSection from "../components/LearningSection";
 import LatestUpdates from "../components/LatestUpdates";
 import VideosSection from "../components/VideosSection";
@@ -152,8 +151,6 @@ const HomePage = () => {
         <ServicesSection />
 
         <WhyChooseUs />
-
-        <StatsSection />
 
         <LearningSection />
 
