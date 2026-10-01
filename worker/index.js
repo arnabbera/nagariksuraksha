@@ -1,3 +1,7 @@
+import { BENOY_BADAL_DINESH_POST } from "../src/features/public/posts/data/benoyBadalDineshPost.js";
+import { MASTERDA_SURYA_SEN_POST } from "../src/features/public/posts/data/masterdaSuryaSenPost.js";
+import { PRAFULLA_CHAKI_POST } from "../src/features/public/posts/data/prafullaChakiPost.js";
+
 const INTRO_COURSE_FEE_PAISE = 9900;
 const REGULAR_COURSE_FEE_PAISE = 29900;
 const INTRO_OFFER_LIMIT = 100;
@@ -56,6 +60,17 @@ const LEGAL_UPDATE_SOCIAL_META = {
     image: "/images/legal-updates/unrecovered-online-fraud-funds.jpg",
   },
 };
+
+const BUNDLED_POST_SOCIAL_META = Object.fromEntries(
+  [BENOY_BADAL_DINESH_POST, MASTERDA_SURYA_SEN_POST, PRAFULLA_CHAKI_POST].map((post) => [
+    post.slug,
+    {
+      title: post.seo.title,
+      description: post.seo.description,
+      image: post.seo.ogImageUrl || post.media.desktop.url,
+    },
+  ]),
+);
 
 let firebaseKeysCache = null;
 let googleAccessTokenCache = null;
@@ -1662,9 +1677,24 @@ export default {
       try {
         const slug = decodeURIComponent(postMatch[1]).trim();
         const canonicalUrl = `${url.origin}/posts/${encodeURIComponent(slug)}`;
-        const metadata = await loadPostSocialMeta(env, slug);
+        const bundledMetadata = BUNDLED_POST_SOCIAL_META[slug];
+        let metadata;
+        try {
+          metadata = await loadPostSocialMeta(env, slug);
+        } catch (error) {
+          console.error("Unable to load post social metadata", slug, error.message);
+        }
+        metadata ||= bundledMetadata;
+        if (metadata && !metadata.image && bundledMetadata) {
+          metadata = { ...metadata, image: bundledMetadata.image };
+        }
         if (metadata) {
-          return rewriteCourseSocialMetadata(assetResponse, metadata, canonicalUrl, canonicalUrl);
+          return rewriteCourseSocialMetadata(
+            assetResponse,
+            { ...metadata, image: metadata.image ? new URL(metadata.image, url.origin).href : "" },
+            canonicalUrl,
+            canonicalUrl,
+          );
         }
       } catch (error) {
         console.error("Unable to prepare post social preview", error.message);
