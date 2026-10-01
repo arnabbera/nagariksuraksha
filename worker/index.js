@@ -1,4 +1,5 @@
 import { BENOY_BADAL_DINESH_POST } from "../src/features/public/posts/data/benoyBadalDineshPost.js";
+import { BINA_DAS_POST } from "../src/features/public/posts/data/binaDasPost.js";
 import { MASTERDA_SURYA_SEN_POST } from "../src/features/public/posts/data/masterdaSuryaSenPost.js";
 import { PRAFULLA_CHAKI_POST } from "../src/features/public/posts/data/prafullaChakiPost.js";
 
@@ -62,7 +63,7 @@ const LEGAL_UPDATE_SOCIAL_META = {
 };
 
 const BUNDLED_POST_SOCIAL_META = Object.fromEntries(
-  [BENOY_BADAL_DINESH_POST, MASTERDA_SURYA_SEN_POST, PRAFULLA_CHAKI_POST].map((post) => [
+  [BINA_DAS_POST, BENOY_BADAL_DINESH_POST, MASTERDA_SURYA_SEN_POST, PRAFULLA_CHAKI_POST].map((post) => [
     post.slug,
     {
       title: post.seo.title,
