@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <p className="ns-footer-description">Empowering citizens through legal awareness, professional legal services and structured legal education.</p>
           <div className="ns-footer-socials">
-            <a href="#" aria-label="Sanhita360 on Facebook"><FaFacebookF /></a>
+            <a href="https://www.facebook.com/Sanhita360" aria-label="Sanhita360 on Facebook" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
             <a href="https://www.youtube.com/@Sanhita360" aria-label="Sanhita360 on YouTube" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
             <a href="https://x.com/sanhita360" aria-label="Sanhita360 on X" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
             <a href="#" aria-label="Sanhita360 on LinkedIn"><FaLinkedinIn /></a>
