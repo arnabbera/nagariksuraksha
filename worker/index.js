@@ -1677,6 +1677,10 @@ export default {
       try {
         const slug = decodeURIComponent(postMatch[1]).trim();
         const canonicalUrl = `${url.origin}/posts/${encodeURIComponent(slug)}`;
+        const shareVersion = url.searchParams.get("share");
+        const socialUrl = shareVersion
+          ? `${canonicalUrl}?share=${encodeURIComponent(shareVersion)}`
+          : canonicalUrl;
         const bundledMetadata = BUNDLED_POST_SOCIAL_META[slug];
         let metadata;
         try {
@@ -1693,7 +1697,7 @@ export default {
             assetResponse,
             { ...metadata, image: metadata.image ? new URL(metadata.image, url.origin).href : "" },
             canonicalUrl,
-            canonicalUrl,
+            socialUrl,
           );
         }
       } catch (error) {
