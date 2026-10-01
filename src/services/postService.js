@@ -11,6 +11,7 @@ import { BENOY_BADAL_DINESH_POST } from "../features/public/posts/data/benoyBada
 import { PRAFULLA_CHAKI_POST } from "../features/public/posts/data/prafullaChakiPost";
 import { BINA_DAS_POST } from "../features/public/posts/data/binaDasPost";
 import { BAGHA_JATIN_POST } from "../features/public/posts/data/baghaJatinPost";
+import { ULLASKAR_DUTTA_POST } from "../features/public/posts/data/ullaskarDuttaPost";
 
 // =========================================================
 // HELPERS
@@ -36,6 +37,7 @@ const normalizeSlug = (
     );
 
 const bundledPosts = [
+  ULLASKAR_DUTTA_POST,
   BAGHA_JATIN_POST,
   BINA_DAS_POST,
   PRAFULLA_CHAKI_POST,
