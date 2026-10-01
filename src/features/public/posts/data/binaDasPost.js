@@ -69,7 +69,7 @@ Bina Das's life brings women students into the foreground of the independence mo
 - [Bina Das](https://en.wikipedia.org/wiki/Bina_Das), Wikipedia (the source requested for this post).
 - [Bina Das](https://cmsadmin.amritmahotsav.nic.in/unsung-heroes-detail.htm?278=), Azadi Ka Amrit Mahotsav, Ministry of Culture.
 - [Bina Das's 1932 tribunal statement](https://www.indiaofthepast.org/node/176), India of the Past.
-- [Historical photograph of Bina Das](https://commons.wikimedia.org/wiki/File:Bina_Das_(1911_%E2%80%93_1986)_,_Indian_revolutionary_and_nationalist,_Victorial_memorial,_Kolkata.jpg), Wikimedia Commons, photographed by K. Venkataramana at the Victoria Memorial, Kolkata; CC0. The thumbnail incorporates this historical portrait with Sanhita360 branding.`,
+- [Historical photograph of Bina Das](https://commons.wikimedia.org/wiki/File%3ABina_Das_%281911_%E2%80%93_1986%29_%2C_Indian_revolutionary_and_nationalist%2C_Victorial_memorial%2C_Kolkata.jpg), Wikimedia Commons, photographed by K. Venkataramana at the Victoria Memorial, Kolkata; CC0. The thumbnail incorporates this historical portrait with Sanhita360 branding.`,
   seo: {
     title: "Bina Das: The Student Revolutionary of 1932 | Sanhita360",
     description:
