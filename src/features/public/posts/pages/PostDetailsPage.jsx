@@ -606,7 +606,9 @@ export default function PostDetailsPage() {
       post.slug,
     )}`;
 
-  const socialShareUrl = shareUrl;
+  // A new share URL makes X fetch the updated card after it cached the
+  // original URL before this post's thumbnail was available.
+  const socialShareUrl = `${shareUrl}?share=post-card-20261001`;
 
   const shareTitle =
     post.title ||
@@ -683,7 +685,7 @@ export default function PostDetailsPage() {
             text:
               shareText,
             url:
-              shareUrl,
+              socialShareUrl,
           });
 
           return;
@@ -706,7 +708,7 @@ export default function PostDetailsPage() {
 
       const copied =
         await copyToClipboard(
-          shareUrl,
+          socialShareUrl,
         );
 
       showShareMessage(
@@ -720,7 +722,7 @@ export default function PostDetailsPage() {
     async () => {
       const copied =
         await copyToClipboard(
-          shareUrl,
+          socialShareUrl,
         );
 
       showShareMessage(
