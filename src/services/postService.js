@@ -10,6 +10,7 @@ import {
 import { BENOY_BADAL_DINESH_POST } from "../features/public/posts/data/benoyBadalDineshPost";
 import { PRAFULLA_CHAKI_POST } from "../features/public/posts/data/prafullaChakiPost";
 import { BINA_DAS_POST } from "../features/public/posts/data/binaDasPost";
+import { BAGHA_JATIN_POST } from "../features/public/posts/data/baghaJatinPost";
 
 // =========================================================
 // HELPERS
@@ -35,6 +36,7 @@ const normalizeSlug = (
     );
 
 const bundledPosts = [
+  BAGHA_JATIN_POST,
   BINA_DAS_POST,
   PRAFULLA_CHAKI_POST,
   BENOY_BADAL_DINESH_POST,
