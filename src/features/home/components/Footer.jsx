@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import {
   FaEnvelope, FaFacebookF, FaInstagram,
-  FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaYoutube,
+  FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaYoutube,
 } from "react-icons/fa";
 
 const practiceAreas = ["Civil Law", "Criminal Law", "Property Law", "Consumer Law", "Cyber Law", "Family Law", "Banking & SARFAESI", "Legal Documentation"];
+const whatsappMessage = "Hello Sanhita360, I found your contact information on sanhita360.com. I would like assistance with a legal matter. Please contact me.";
+const whatsappUrl = `https://wa.me/919830015487?text=${encodeURIComponent(whatsappMessage)}`;
 
 const Footer = () => {
   return (
@@ -32,8 +34,9 @@ const Footer = () => {
         <section><h3>Practice Areas</h3><ul className="ns-footer-links">{practiceAreas.map((area) => <li key={area}>{area}</li>)}</ul></section>
 
         <section><h3>Contact</h3><div className="ns-footer-contact">
-          <div><FaPhoneAlt /><span><small>Phone</small><a href="tel:+919830015487">+91 98300 15487</a></span></div>
-          <div><FaEnvelope /><span><small>Email</small><a href="mailto:beraarnab@gmail.com">beraarnab@gmail.com</a></span></div>
+          <div><FaPhoneAlt /><span><small>Call Us</small><a href="tel:+919830015487">Connect call to Sanhita360</a></span></div>
+          <div><FaWhatsapp /><span><small>WhatsApp Us</small><a href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp message to Sanhita360</a></span></div>
+          <div><FaEnvelope /><span><small>Email</small><a href="mailto:beraarnab@gmail.com">Email Sanhita360</a></span></div>
           <div><FaMapMarkerAlt /><span><small>Office</small><p>Kolkata, West Bengal, India</p></span></div>
         </div></section>
       </div>
