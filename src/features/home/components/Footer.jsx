@@ -3,6 +3,7 @@ import {
   FaEnvelope, FaFacebookF, FaInstagram,
   FaLinkedinIn, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp, FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const practiceAreas = ["Civil Law", "Criminal Law", "Property Law", "Consumer Law", "Cyber Law", "Family Law", "Banking & SARFAESI", "Legal Documentation"];
 const whatsappMessage = "Hello Sanhita360, I found your contact information on sanhita360.com. I would like assistance with a legal matter. Please contact me.";
@@ -20,6 +21,7 @@ const Footer = () => {
           <div className="ns-footer-socials">
             <a href="#" aria-label="Sanhita360 on Facebook"><FaFacebookF /></a>
             <a href="https://www.youtube.com/@Sanhita360" aria-label="Sanhita360 on YouTube" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            <a href="https://x.com/sanhita360" aria-label="Sanhita360 on X" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
             <a href="#" aria-label="Sanhita360 on LinkedIn"><FaLinkedinIn /></a>
             <a href="#" aria-label="Sanhita360 on Instagram"><FaInstagram /></a>
           </div>
