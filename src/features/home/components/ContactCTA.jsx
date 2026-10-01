@@ -46,7 +46,7 @@ const ContactCTA = () => {
             <span><FaPhoneAlt /></span>
             <div>
               <small>Call Us</small>
-              <a href={`tel:+${contactNumber}`}>+91 98300 15487</a>
+              <a href={`tel:+${contactNumber}`}>Connect call to Sanhita360</a>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ const ContactCTA = () => {
             <div>
               <small>WhatsApp Us</small>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Message +91 98300 15487
+                WhatsApp message to Sanhita360
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@ const ContactCTA = () => {
             <span><FaEnvelope /></span>
             <div>
               <small>Email</small>
-              <a href="mailto:beraarnab@gmail.com">beraarnab@gmail.com</a>
+              <a href="mailto:beraarnab@gmail.com">Email Sanhita360</a>
             </div>
           </div>
 
