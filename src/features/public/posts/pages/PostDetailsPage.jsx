@@ -1,4 +1,5 @@
 import {
+  Fragment,
   useEffect,
   useMemo,
   useState,
@@ -178,6 +179,19 @@ const renderContent = (
 
   return text.split(/\n{2,}/).map((block, index) => {
     const lines = block.split("\n");
+
+    if (lines.every((line) => line.trim().startsWith("> "))) {
+      return (
+        <blockquote key={`${index}-${block.slice(0, 24)}`}>
+          {lines.map((line, lineIndex) => (
+            <Fragment key={line}>
+              {lineIndex > 0 && <br />}
+              {renderInlineContent(line.trim().slice(2))}
+            </Fragment>
+          ))}
+        </blockquote>
+      );
+    }
 
     if (lines.every((line) => line.trim().startsWith("- "))) {
       return (
@@ -1262,6 +1276,16 @@ function PostDetailStyles() {
 
         .ns-post-detail-body p:last-child {
           margin-bottom: 0;
+        }
+
+        .ns-post-detail-body blockquote {
+          margin: 0 0 28px;
+          padding: 16px 20px;
+          border-left: 4px solid #d6a329;
+          background: #f8f4e9;
+          color: #102448;
+          font-size: 17px;
+          line-height: 1.8;
         }
 
         .ns-post-detail-tags {
