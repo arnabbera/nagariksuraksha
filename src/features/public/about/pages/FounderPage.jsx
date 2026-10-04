@@ -33,9 +33,9 @@ export default function FounderPage() {
             <aside>
               <img src="/arnab-founder.jpg" alt="Arnab Bera, founder of Sanhita360" />
               <div className="ns-founder-contact">
-                <h2>Talk to ConsultKaro</h2>
-                <p>Share your location, property type and registration requirements with our team.</p>
-                <a className="ns-founder-button" href="https://www.consultkaro.org/consultants/arnab-bera/" target="_blank" rel="noopener noreferrer">Visit ConsultKaro Profile</a>
+                <h2>Connect on LinkedIn</h2>
+                <p>View Arnab Bera’s professional profile on LinkedIn.</p>
+                <a className="ns-founder-button" href="https://www.linkedin.com/in/beraarnab/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
               </div>
             </aside>
           </div>
