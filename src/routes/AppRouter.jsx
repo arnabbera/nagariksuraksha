@@ -42,6 +42,7 @@ import LoginPage from "../features/auth/pages/LoginPage";
 // =========================================================
 
 import AboutPage from "../features/public/about/pages/AboutPage";
+import FounderPage from "../features/public/about/pages/FounderPage";
 import RecognitionPage from "../features/public/about/pages/RecognitionPage";
 
 import PublicCoursesPage from "../features/public/courses/pages/PublicCoursesPage";
@@ -156,6 +157,8 @@ export default function AppRouter() {
         path="/about"
         element={<AboutPage />}
       />
+
+      <Route path="/about/founder" element={<FounderPage />} />
 
       <Route path="/recognition" element={<RecognitionPage />} />
 

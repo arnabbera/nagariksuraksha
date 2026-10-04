@@ -13,7 +13,14 @@ import {
 
 import { LEGAL_SERVICES } from "../../public/services/data/legalServices";
 
+const aboutLinks = [
+  { to: "/about", label: "Sanhita360" },
+  { to: "/about/founder", label: "Founder" },
+  { to: "/recognition", label: "Recognition" },
+];
+
 const Header = () => {
+  const [aboutOpen, setAboutOpen] = useState(false);
   const [menuOpen, setMenuOpen] =
     useState(false);
 
@@ -56,6 +63,7 @@ const Header = () => {
 
   const closeMenu = () => {
     setMenuOpen(false);
+    setAboutOpen(false);
     setServicesOpen(false);
     setLearningOpen(false);
     setHistoryOpen(false);
@@ -82,16 +90,39 @@ const Header = () => {
               Home
             </NavLink>
 
-            <NavLink
-              to="/about"
-              style={navStyle}
+            <div
+              className="ns-header-dropdown"
+              onMouseEnter={() => setAboutOpen(true)}
+              onMouseLeave={() => setAboutOpen(false)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setAboutOpen(false);
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  setAboutOpen(false);
+                  event.currentTarget.querySelector("button").focus();
+                }
+              }}
             >
-              About
-            </NavLink>
-
-            <NavLink to="/recognition" style={navStyle}>
-              Recognition
-            </NavLink>
+              <button
+                type="button"
+                className="ns-dropdown-trigger"
+                aria-expanded={aboutOpen}
+                aria-controls="ns-about-desktop"
+                onClick={() => setAboutOpen((current) => !current)}
+              >
+                About <FaChevronDown size={11} />
+              </button>
+              {aboutOpen && (
+                <div id="ns-about-desktop" style={dropdownStyle}>
+                  {aboutLinks.map(({ to, label }) => (
+                    <Link key={to} to={to} style={dropdownLink} onClick={closeMenu}>
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* SERVICES */}
 
@@ -267,16 +298,24 @@ const Header = () => {
               Home
             </Link>
 
-            <Link
-              to="/about"
-              onClick={closeMenu}
-            >
-              About
-            </Link>
-
-            <Link to="/recognition" onClick={closeMenu}>
-              Recognition
-            </Link>
+            <div className="ns-mobile-group">
+              <button
+                type="button"
+                aria-expanded={aboutOpen}
+                aria-controls="ns-about-mobile"
+                onClick={() => setAboutOpen((current) => !current)}
+              >
+                <span>About</span>
+                <FaChevronDown className={aboutOpen ? "is-open" : ""} />
+              </button>
+              {aboutOpen && (
+                <div id="ns-about-mobile" className="ns-mobile-submenu">
+                  {aboutLinks.map(({ to, label }) => (
+                    <Link key={to} to={to} onClick={closeMenu}>{label}</Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div className="ns-mobile-group">
               <button
