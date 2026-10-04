@@ -25,7 +25,7 @@ export default function FounderPage() {
               <p className="ns-founder-qualification"><strong>Qualifications:</strong> MTech, B.E; LL.B. (pursuing), Bankura University</p>
               <h2>Professional Affiliations &amp; Mentoring</h2>
               <ul>
-                <li>Associate Member – The Institute of Engineers (India) | Since 2002</li>
+                <li>Associate Member – <a href="https://www.ieindia.org/web/home" target="_blank" rel="noopener noreferrer">The Institute of Engineers (India)</a> | Since 2002</li>
                 <li>Member – Indian Society for Technical Education (ISTE, IIT New Delhi)</li>
                 <li>Mentor – Integration Engineers (JS6), GIAP Mentoring Programme</li>
                 <li>Member – <a href="https://www.gaabesu.in/" target="_blank" rel="noopener noreferrer">GAABESU (Global Alumni Association of Bengal Engineering and Science University (IIEST), Shibpur)</a></li>
