@@ -6,25 +6,28 @@ import SEO from "../../../../shared/seo/SEO";
 export default function FounderPage() {
   return (
     <>
-      <SEO title="Founder — Arnab Bera" description="Meet Arnab Bera, founder of Sanhita360. Read about his background and experience in property consultancy." canonical="/about/founder" />
+      <SEO title="Founder — Arnab Bera" description="Meet Arnab Bera, founder of Sanhita360: an ICT engineering professional with over 20 years of experience, pursuing an LL.B. at Bankura University." canonical="/about/founder" />
       <Header />
       <main className="ns-founder">
         <div className="ns-founder-wrap">
           <nav className="ns-founder-breadcrumb" aria-label="Breadcrumb"><Link to="/">Home</Link><span>/</span><Link to="/about">About</Link><span>/</span><span>Founder</span></nav>
           <p className="ns-founder-eyebrow">Founder of Sanhita360</p>
           <h1>Arnab Bera</h1>
-          <p className="ns-founder-intro">Meet Arnab Bera, a ConsultKaro property registration consultant with more than 10 years of property consultancy experience in Kolkata.</p>
+          <p className="ns-founder-intro">Eminent engineering professional with over 20 years of experience in technical and managerial leadership across the Information and Communications Technology (ICT) industry.</p>
           <div className="ns-founder-grid">
             <article>
-              <h2>Property Registration Consultant — Gariahat</h2>
-              <p>Arnab Bera has more than 10 years of property consultancy experience in Kolkata. He assists buyers, sellers, owners and families through the practical stages of property registration with a structured, document-first approach. His work covers property and document search coordination, agreement and deed preparation, valuation and registration readiness, mutation, and post-registration record updates across Gariahat, Ballygunge and other parts of South Kolkata.</p>
-              <p>With an Engineering background and legal studies as an LL.B Intern, he combines technical attention to detail with practical understanding of property documentation and registration workflows. His focus is to help clients organise information, identify missing requirements and coordinate the appropriate professionals before important property decisions are made.</p>
-              <p className="ns-founder-qualification"><strong>Qualification:</strong> MTech, B.E, LL.B (Intern)</p>
+              <h2>Engineering &amp; Leadership</h2>
+              <p>A proven architect with extensive expertise in delivering large-scale solutions for global telecom and digital environments.</p>
+              <h2>Legal Studies &amp; Practical Experience</h2>
+              <p>Transitioning into the legal domain, currently pursuing an LL.B. degree at Bankura University while actively engaging in legal internships and practical court matters.</p>
+              <p>Leveraging two decades of structured analytical, technical, and problem-solving expertise to assist clients with legal awareness, education, and advisory support.</p>
+              <p>Deeply involved in matters concerning civil and criminal law, property fraud investigations, land title due diligence, and financial debt recovery litigation before Debt Recovery Tribunals (DRT) and Debt Recovery Appellate Tribunals (DRAT).</p>
+              <p className="ns-founder-qualification"><strong>Qualifications:</strong> MTech, B.E; LL.B. (pursuing), Bankura University</p>
+              <h2>Professional Affiliations &amp; Mentoring</h2>
               <ul>
-                <li>More than 10 years of property consultancy experience</li>
-                <li>Property and document search coordination</li>
-                <li>Agreement and deed drafting coordination</li>
-                <li>Valuation, registration and mutation guidance</li>
+                <li>Associate Member – The Institute of Engineers (India) | Since 2002</li>
+                <li>Member – Indian Society for Technical Education (ISTE, IIT New Delhi)</li>
+                <li>Mentor – Integration Engineers (JS6), GIAP Mentoring Programme</li>
               </ul>
               <h2>Professional Scope</h2>
               <p>Consultation and coordination do not replace a formal legal opinion or representation by an appropriately qualified professional. The scope should be confirmed for each matter.</p>
