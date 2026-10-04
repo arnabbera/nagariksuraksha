@@ -28,6 +28,7 @@ export default function FounderPage() {
                 <li>Associate Member – The Institute of Engineers (India) | Since 2002</li>
                 <li>Member – Indian Society for Technical Education (ISTE, IIT New Delhi)</li>
                 <li>Mentor – Integration Engineers (JS6), GIAP Mentoring Programme</li>
+                <li>Member – GAABESU (Global Alumni Association of Bengal Engineering and Science University (IIEST), Shibpur)</li>
               </ul>
               <h2>Professional Scope</h2>
               <p>Consultation and coordination do not replace a formal legal opinion or representation by an appropriately qualified professional. The scope should be confirmed for each matter.</p>
