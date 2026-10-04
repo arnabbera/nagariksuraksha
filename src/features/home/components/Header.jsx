@@ -89,6 +89,10 @@ const Header = () => {
               About
             </NavLink>
 
+            <NavLink to="/recognition" style={navStyle}>
+              Recognition
+            </NavLink>
+
             {/* SERVICES */}
 
             <div
@@ -268,6 +272,10 @@ const Header = () => {
               onClick={closeMenu}
             >
               About
+            </Link>
+
+            <Link to="/recognition" onClick={closeMenu}>
+              Recognition
             </Link>
 
             <div className="ns-mobile-group">
