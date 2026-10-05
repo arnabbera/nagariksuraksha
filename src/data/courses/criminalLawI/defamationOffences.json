@@ -1,0 +1,26 @@
+[
+  {
+    "ipc": "499",
+    "bns": "356(1)",
+    "title": "Defamation",
+    "note": "An imputation concerning a person may be conveyed through spoken words, words intended to be read, signs or visible representations. BNS expressly refers to making or publishing it in any manner. The required mental element is intention to harm reputation, knowledge, or reason to believe that reputation will be harmed. Identify the communication, its meaning in context, the person concerned, the audience and the relevant mental element; then examine the explanations and exceptions. Hurt feelings alone do not replace reputational harm in the estimation of others."
+  },
+  {
+    "ipc": "500",
+    "bns": "356(2)",
+    "title": "Punishment for defamation",
+    "note": "IPC 500 permits simple imprisonment up to two years, or fine, or both. BNS 356(2) retains these options and adds community service as an alternative. Defamation remains a criminal offence under BNS. Do not present community service as mandatory or as automatically applicable to the distinct printing and selling offences."
+  },
+  {
+    "ipc": "501",
+    "bns": "356(3)",
+    "title": "Printing or engraving matter known to be defamatory",
+    "note": "Printing or engraving matter requires knowledge or good reason to believe that it is defamatory of a person. The punishment remains simple imprisonment up to two years, or fine, or both. Identify the accused's own printing or engraving activity and mental element. This subsection does not list community service as a sentencing option."
+  },
+  {
+    "ipc": "502",
+    "bns": "356(4)",
+    "title": "Sale of printed or engraved substance containing defamatory matter",
+    "note": "The section covers selling or offering for sale a printed or engraved substance containing defamatory matter, knowing that it contains such matter. Distinguish actual knowledge under this branch from the knowledge or good-reason-to-believe wording of the printing branch. Punishment: simple imprisonment up to two years, or fine, or both. Community service is not listed in this subsection."
+  }
+]

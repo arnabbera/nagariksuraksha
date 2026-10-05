@@ -1,0 +1,94 @@
+{
+  "title": "CHAPTER XXI - OF DEFAMATION",
+  "overview": "This chapter covers IPC Sections 499-502, consolidated in BNS Section 356. It explains reputational harm, the mental element, four statutory explanations, all ten exceptions and the separate printing and sale offences. It also identifies the new community-service option in BNS 356(2) without extending it to other subsections.",
+  "objectives": [
+    "Map IPC 499-502 to BNS 356(1)-(4).",
+    "Distinguish reputational harm from personal offence or hurt feelings.",
+    "Apply all four explanations and the ten exceptions.",
+    "Distinguish truth plus public good from the good-faith exceptions.",
+    "Separate court reporting, comment on decided cases, complaints and public accusations.",
+    "Compare defamation, printing and sale punishments and their mental elements."
+  ],
+  "transition": "BNS 356 commenced on 1 July 2024 and appears in BNS Chapter XIX under the defamation subheading. The IPC Chapter XXI title is retained for the course. Identify the date and nature of each communication, the savings in BNS 358 and Article 20(1) before selecting the substantive law. Complaint timing alone does not decide which code applies. The four IPC provisions are consolidated into four subsections; the definition retains four explanations and ten exceptions. BNS 356(2) adds community service. Read civil defamation and procedural rules separately rather than importing them into this substantive criminal-law analysis.",
+  "groups": [
+    {
+      "title": "Section-by-section IPC-to-BNS comparison",
+      "sections": [
+        "499",
+        "500",
+        "501",
+        "502"
+      ],
+      "explanation": "IPC 499 -> BNS 356(1); IPC 500 -> 356(2); IPC 501 -> 356(3); IPC 502 -> 356(4). Consolidation preserves distinctions between making or publishing an imputation, printing or engraving and selling or offering printed or engraved matter."
+    },
+    {
+      "title": "Ingredients and four explanations",
+      "sections": [],
+      "explanation": "Begin with the alleged imputation: what did the words, sign, image or representation convey in its full context, whom did it concern and to whom was it communicated? Evaluate intention, knowledge or reason to believe concerning reputational harm. Digital communication can fall within making or publishing in any manner, but forwarding, quotation or satire is not automatically guilty or automatically exempt. Examine the elements and exceptions.\n\nExplanation 1 - deceased persons: the imputation must be such as would harm the deceased person's reputation if living and must be intended to hurt the feelings of family or other near relatives. Do not omit this additional intention.\n\nExplanation 2 - groups and organisations: an imputation concerning a company, association or collection of persons as such may be defamatory. Identify the body concerned; do not assume that every member of an undefined group is automatically individually defamed.\n\nExplanation 3 - alternatives and irony: an insinuation framed as an alternative or an ironic remark may still convey a defamatory meaning. Consider what the communication means rather than its grammatical label.\n\nExplanation 4 - reputation in others' estimation: the statutory categories concern lowered moral or intellectual character, character in relation to caste or calling, lowered credit, or belief in a loathsome or generally disgraceful bodily state. Reputation is distinct from merely feeling insulted.\n\nGood faith: BNS 2(11), corresponding to IPC 52, requires due care and attention. Sincerity alone is insufficient. Examine verification, context, purpose, recipient and scope where the particular exception requires good faith. Do not add a generic good-faith requirement in place of the distinct wording of Exceptions 1 or 4."
+    },
+    {
+      "title": "All ten exceptions",
+      "sections": [],
+      "explanation": "Exception 1. Truth and public good\nIPC 499 Exception 1 -> BNS 356(1) Exception 1. The imputation must be true and its making or publication must be for the public good. Public good is a question of fact. Proving truth alone does not complete this criminal-law exception. Public curiosity and public good must not be assumed to be the same.\n\nException 2. Public conduct of public servants\nIPC 499 Exception 2 -> BNS 356(1) Exception 2. Good-faith opinion about a public servant's conduct in public functions is protected, including character only so far as it appears in that conduct. The exception does not automatically protect unrelated allegations about private life.\n\nException 3. Conduct touching a public question\nIPC 499 Exception 3 -> BNS 356(1) Exception 3. Good-faith opinion may concern any person's conduct on a public question, and character only as disclosed by that conduct. It is not limited to public servants. Identify the public question and the connection between it and the opinion.\n\nException 4. Reports of court proceedings\nIPC 499 Exception 4 -> BNS 356(1) Exception 4. A substantially true report of a court proceeding or its result is protected. The explanation includes a Magistrate or other officer conducting an open-court inquiry preliminary to a court trial. Distinguish accurately reporting that an allegation was made from asserting it as an established fact. This exception is not a general permission to disregard separate reporting restrictions.\n\nException 5. Decided cases and participants\nIPC 499 Exception 5 -> BNS 356(1) Exception 5. Good-faith opinion may address the merits of a civil or criminal case decided by a court, or the conduct of a party, witness or agent in it. Character comment must remain confined to what appears in that conduct. This is distinct from the substantially true reporting exception and is not a blanket licence for prejudging pending cases.\n\nException 6. Public performance\nIPC 499 Exception 6 -> BNS 356(1) Exception 6. Good-faith opinion may address the merits of a performance submitted by its author to public judgment, expressly or by implication. Character criticism must remain tied to what appears in the performance. A review of a published book, public speech or stage performance must be distinguished from an unrelated personal accusation.\n\nException 7. Censure by lawful authority\nIPC 499 Exception 7 -> BNS 356(1) Exception 7. A person with authority conferred by law or a lawful contract may in good faith censure conduct concerning matters within that authority. Identify the source and scope of authority; a supervisory position does not automatically protect every personal attack.\n\nException 8. Accusation to an authorised person\nIPC 499 Exception 8 -> BNS 356(1) Exception 8. A good-faith accusation may be made to someone with lawful authority over the person accused concerning the subject matter. The proper recipient and relevant authority matter. Publicly circulating the same accusation is not automatically protected merely because a complaint was also sent to an authority.\n\nException 9. Protection of interests or public good\nIPC 499 Exception 9 -> BNS 356(1) Exception 9. An imputation on character must be made in good faith to protect the maker's interests, another person's interests, or the public good. Identify the legitimate interest, the factual basis and the communication's purpose and scope; the bare assertion of good intentions is insufficient.\n\nException 10. Caution for another's good or public good\nIPC 499 Exception 10 -> BNS 356(1) Exception 10. A caution against another person must be conveyed in good faith and intended for the good of its recipient, someone in whom the recipient is interested, or the public good. Examine the intended benefit, recipient and factual basis. A warning label alone does not satisfy the exception."
+    }
+  ],
+  "keyPoints": [
+    "Read the offence, all four explanations and the relevant exception together.",
+    "IPC 499-502 become BNS 356(1)-(4), respectively.",
+    "Truth alone is not enough under Exception 1: public good is also required.",
+    "Good faith requires due care and attention; merely saying that an allegation was believed is insufficient.",
+    "Exception 4 concerns substantially true court reporting; Exception 5 concerns good-faith opinion about a decided case and participants.",
+    "Exceptions 2, 3, 5 and 6 limit character comment to the relevant conduct or performance.",
+    "A good-faith complaint to a lawful authority is different from public circulation of an accusation.",
+    "Only 356(2) expressly lists community service; 356(3) and (4) retain simple imprisonment up to two years, fine, or both."
+  ],
+  "examFocus": "Identify the date and applicable law; state the imputation, person, communication and audience; apply the reputational-harm explanation and mental element; identify the precise exception and test every condition; distinguish making or publication from printing and sale; then state the correct punishment. Avoid slogans such as all truth is protected, all criticism is defamation or every online repost is immune. Explain the facts supporting or undermining the claimed exception.",
+  "practice": [
+    {
+      "question": "What are the four IPC-to-BNS mappings?",
+      "answer": "IPC 499 maps to 356(1), 500 to 356(2), 501 to 356(3) and 502 to 356(4). The first subsection includes the definition, explanations and exceptions."
+    },
+    {
+      "question": "A publisher proves an allegation true. Is Exception 1 necessarily satisfied?",
+      "answer": "No. Its making or publication must also be for the public good, which is a question of fact."
+    },
+    {
+      "question": "How does a report of a hearing differ from an opinion about a decided case?",
+      "answer": "Exception 4 protects substantially true reporting of proceedings or their result. Exception 5 addresses good-faith opinion about the merits of a decided case or relevant conduct of parties, witnesses or agents, within its limits."
+    },
+    {
+      "question": "Does a sincere belief automatically establish good faith?",
+      "answer": "No. Due care and attention are required under BNS 2(11). Assess the factual basis and circumstances rather than sincerity alone."
+    },
+    {
+      "question": "Is a complaint to an authorised officer automatically a defence for a later public post repeating it?",
+      "answer": "No. Exception 8 concerns good-faith accusations to persons with relevant lawful authority. The public post needs its own analysis; another exception may or may not apply."
+    },
+    {
+      "question": "Can an ironic compliment or a gesture convey defamation?",
+      "answer": "Yes, depending on its meaning and context. Explanation 3 covers irony and alternative formulations, while the definition includes signs and visible representations. The other ingredients and exceptions still matter."
+    },
+    {
+      "question": "Is community service available in the express text of all three punishment subsections?",
+      "answer": "No. BNS 356(2) adds it for defamation. Subsections (3) and (4) list simple imprisonment up to two years, fine, or both."
+    },
+    {
+      "question": "Does a harsh review of a publicly performed play necessarily amount to defamation?",
+      "answer": "No. Examine Exception 6: good-faith opinion about merits of a performance submitted to public judgment, with character comment confined to what appears in that performance. Unrelated personal allegations require separate analysis."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNS 2023 - official Gazette, Section 356 (printed pages 99-101) and Section 2(11)",
+      "url": "https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf"
+    },
+    {
+      "title": "Historical IPC - Chapter XXI, Sections 499-502; Section 52",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}

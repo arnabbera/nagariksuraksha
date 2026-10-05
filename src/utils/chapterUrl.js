@@ -169,6 +169,10 @@ const isCriminalLawICrueltyChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-24");
 
+const isCriminalLawIDefamationChapter = (courseSlug, chapter) =>
+  ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-25");
+
 const isCriminalLawIHumanBodyChapter = (courseSlug, chapter) =>
   [
     "criminal-law-i",
@@ -210,6 +214,9 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIDefamationChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter24-Defamation";
+  }
   if (isCriminalLawICrueltyChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter23-Cruelty-by-Husband-or-Relatives";
   }
@@ -310,6 +317,9 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIDefamationChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter24-Defamation";
+  }
   if (isCriminalLawICrueltyChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter23-Cruelty-by-Husband-or-Relatives";
   }
