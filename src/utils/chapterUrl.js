@@ -157,6 +157,10 @@ const isCriminalLawIDocumentsChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-21");
 
+const isCriminalLawIServiceChapter = (courseSlug, chapter) =>
+  ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-22");
+
 const isCriminalLawIHumanBodyChapter = (courseSlug, chapter) =>
   [
     "criminal-law-i",
@@ -198,6 +202,9 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIServiceChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter21-Criminal-Breach-of-Contracts-of-Service";
+  }
   if (isCriminalLawIDocumentsChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter20-Documents-and-Property-Marks";
   }
@@ -289,6 +296,9 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIServiceChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter21-Criminal-Breach-of-Contracts-of-Service";
+  }
   if (isCriminalLawIDocumentsChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter20-Documents-and-Property-Marks";
   }
