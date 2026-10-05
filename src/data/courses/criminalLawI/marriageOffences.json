@@ -1,0 +1,38 @@
+[
+  {
+    "ipc": "493",
+    "bns": "81",
+    "title": "Cohabitation caused by a man deceitfully inducing a belief of lawful marriage",
+    "note": "The man must by deceit cause a woman not lawfully married to him to believe that she is lawfully married to him, and she must cohabit or have sexual intercourse with him in that belief. Link the deceit, belief and resulting conduct. A promise to marry in the future is different from inducing belief that a lawful marriage already exists. BNS punishment: imprisonment of either description up to ten years and liability to fine."
+  },
+  {
+    "ipc": "494",
+    "bns": "82(1)",
+    "title": "Marrying again during the lifetime of husband or wife",
+    "note": "The accused must have a living husband or wife and contract a further marriage that is void because it occurs during that spouse's lifetime. Establish the first marriage, its subsistence and the subsequent marriage under the applicable marriage law. Cohabitation or a bare allegation of marriage does not replace the required proof. Punishment: imprisonment of either description up to seven years and liability to fine. The exception covers a former marriage declared void by a competent court, or a spouse continuously absent for seven years and not heard of as alive during that time, provided the known real facts are disclosed to the new spouse before the subsequent marriage. Mere separation or a pending divorce petition is not itself a dissolution."
+  },
+  {
+    "ipc": "495",
+    "bns": "82(2)",
+    "title": "Bigamy with concealment of the former marriage",
+    "note": "This is the aggravated form of the offence under BNS 82(1), where the fact of the former marriage is concealed from the person with whom the subsequent marriage is contracted. Prove the underlying bigamy offence and the concealment; concealment alone does not dispense with the other ingredients. Punishment: imprisonment of either description up to ten years and liability to fine. Disclosure of an existing marriage alone does not make an otherwise prohibited second marriage lawful."
+  },
+  {
+    "ipc": "496",
+    "bns": "83",
+    "title": "Marriage ceremony fraudulently gone through without lawful marriage",
+    "note": "The accused must dishonestly or with fraudulent intention go through a marriage ceremony while knowing that it does not thereby create a lawful marriage. A ceremony, knowledge and the prescribed dishonest or fraudulent state of mind are essential. An invalid marriage caused by a genuine mistake is not automatically this offence. Unlike BNS 81, this section focuses on the knowingly fraudulent ceremony rather than the woman's induced belief followed by cohabitation or intercourse. Punishment: imprisonment of either description up to seven years and liability to fine."
+  },
+  {
+    "ipc": "497",
+    "bns": "No BNS counterpart - unconstitutional IPC provision",
+    "title": "Adultery: historical provision and constitutional status",
+    "note": "The Supreme Court in Joseph Shine v. Union of India, decided on 27 September 2018, struck down IPC 497 as unconstitutional. The judgment also invalidated the related CrPC 198 rule to the extent it concerned prosecution for adultery. Do not present the former IPC penalty as an enforceable criminal punishment. BNS contains no corresponding adultery offence. Adultery may still have matrimonial consequences under the applicable law; decriminalisation does not decide every civil or service-law question. It does not remove the ingredients of separate offences involving deceit, coercion or bigamy."
+  },
+  {
+    "ipc": "498",
+    "bns": "84",
+    "title": "Enticing, taking away or detaining with criminal intent a married woman",
+    "note": "BNS 84 covers taking or enticing away a woman known or reasonably believed to be another man's wife with intent that she have illicit intercourse with any person, and concealing or detaining such a woman with that intent. Prove the relevant act, marital-status knowledge or reason to believe, and specified intent. Unlike IPC 498, the BNS text does not retain the express words requiring taking or enticing from the husband or a person having care of her on his behalf. Punishment: imprisonment of either description up to two years, or fine, or both. This is not a replacement adultery offence: suspicion of a relationship does not alone prove every element. Assess the woman's autonomy and the actual conduct without treating her as property."
+  }
+]

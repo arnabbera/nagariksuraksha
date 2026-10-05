@@ -161,6 +161,10 @@ const isCriminalLawIServiceChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-22");
 
+const isCriminalLawIMarriageChapter = (courseSlug, chapter) =>
+  ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-23");
+
 const isCriminalLawIHumanBodyChapter = (courseSlug, chapter) =>
   [
     "criminal-law-i",
@@ -202,6 +206,9 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIMarriageChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter22-Offences-Relating-to-Marriage";
+  }
   if (isCriminalLawIServiceChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter21-Criminal-Breach-of-Contracts-of-Service";
   }
@@ -296,6 +303,9 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIMarriageChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter22-Offences-Relating-to-Marriage";
+  }
   if (isCriminalLawIServiceChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter21-Criminal-Breach-of-Contracts-of-Service";
   }
