@@ -1,0 +1,141 @@
+{
+  "title": "CHAPTER XVIII - OF OFFENCES RELATING TO DOCUMENTS AND TO PROPERTY MARKS",
+  "overview": "This chapter studies IPC Sections 463-489E, including 477A and the repealed entries 478 and 480. It explains forgery and electronic records, counterfeit authentication, falsification of accounts, property marks and currency offences through provision-level references to BNS Sections 335-350 and 178-182. Read each correspondence with its elements, qualifications and changes in scope.",
+  "objectives": [
+    "Apply the three false-document modes before concluding that forgery occurred.",
+    "Distinguish making, possessing and using a forged record, and identify special instrument categories.",
+    "Explain account falsification and the role of employment, wilfulness and intent to defraud.",
+    "Distinguish ownership marks, official marks and receptacle-content marks.",
+    "Recognise repealed IPC entries and the relocation of currency offences to BNS Chapter X.",
+    "Choose the correct BNS subsection and penalty while preserving statutory qualifications."
+  ],
+  "transition": "These BNS provisions commenced on 1 July 2024 under S.O. 850(E), dated 23 February 2024. Determine the date and nature of the alleged conduct, the IPC repeal-and-savings provisions in BNS 358 and Article 20(1) of the Constitution; the date a complaint is filed alone does not decide the substantive law. BNS Chapter XVIII contains Sections 335-350, while currency-note counterparts are in Chapter X, Sections 178-182. Consolidation and expanded coverage mean that a crosswalk is not a declaration of identical wording or liability.",
+  "groups": [
+    {
+      "title": "Forgery: definitions, documents and use",
+      "start": "463",
+      "end": "471",
+      "sections": [
+        "463",
+        "464",
+        "465",
+        "466",
+        "467",
+        "468",
+        "469",
+        "470",
+        "471"
+      ],
+      "explanation": "Begin with the false-document test in BNS 335, then establish the prohibited intent in 336(1). Distinguish ordinary forgery, special classes of instruments, special purposes and knowing use. Electronic records are expressly covered. A false factual claim is not automatically a false document in the statutory sense."
+    },
+    {
+      "title": "Counterfeit authentication and falsification of accounts",
+      "start": "472",
+      "end": "477A",
+      "sections": [
+        "472",
+        "473",
+        "474",
+        "475",
+        "476",
+        "477",
+        "477A"
+      ],
+      "explanation": "Separate making a forgery from making or possessing counterfeit authentication tools, possessing a specified forged instrument, destroying protected instruments and employee account falsification. The intended forgery and document category determine the correct provision. BNS 341(3) adds a knowing-possession branch carrying up to three years and fine; 341(4) punishes knowing fraudulent or dishonest use as if the seal or instrument had been made or counterfeited."
+    },
+    {
+      "title": "Property and other marks",
+      "start": "478",
+      "end": "489",
+      "sections": [
+        "478",
+        "479",
+        "480",
+        "481",
+        "482",
+        "483",
+        "484",
+        "485",
+        "486",
+        "487",
+        "488",
+        "489"
+      ],
+      "explanation": "A property mark identifies ownership of movable property; a receptacle mark may instead mislead about contents or quality. Read the express defences and mental elements. Preserve the repealed IPC entries for continuity without treating old trade-mark provisions as operative BNS offences."
+    },
+    {
+      "title": "Currency-notes and bank-notes",
+      "start": "489A",
+      "end": "489E",
+      "sections": [
+        "489A",
+        "489B",
+        "489C",
+        "489D",
+        "489E"
+      ],
+      "explanation": "These IPC Chapter XVIII offences now correspond to BNS Chapter X, not BNS Chapter XVIII. BNS 178-181 consolidate currency, coin and Government revenue-stamp offences. Separate counterfeiting, trafficking or use, knowing possession with intended use, and instruments or materials. BNS 182 retains a distinct resemblance-document regime."
+    }
+  ],
+  "keyPoints": [
+    "False statement, false document and forgery are different questions: apply BNS 335 and then 336.",
+    "Special document categories in 337 and 338 affect both forgery and related possession or use offences.",
+    "BNS 340(2) punishes knowing fraudulent or dishonest use as if the user forged the document.",
+    "BNS 339 has a seven-year alternative for possession of a 338-type document; do not substitute the ten-year alternative in 338.",
+    "BNS 344 requires the specified employment capacity and wilful intent to defraud.",
+    "IPC 478 and 480 were repealed before BNS and have no direct operative counterpart here.",
+    "Property marks concern ownership; marks under 350 concern misleading contents or quality.",
+    "BNS 349: the precautions and information conditions are cumulative within that defence; otherwise acting innocently is an alternative.",
+    "Currency offences move to BNS Chapter X. Knowledge and intended use matter in 180, alongside its lawful-source explanation.",
+    "BNS 182 fines are up to Rs 300 and Rs 600 in the respective branches."
+  ],
+  "examFocus": "Use this sequence: identify the date and applicable law; classify the document, mark or currency item; identify the act and its statutory mode; establish knowledge, dishonesty, fraud or specific intention; examine statutory qualifications; select the precise subsection; then state the authorised punishment. In comparison answers distinguish consolidation, expansion, relocation and prior repeal. Do not infer a criminal offence solely from a civil ownership dispute, inaccurate accounting entry or innocent receipt of currency.",
+  "practice": [
+    {
+      "question": "A genuinely executed deed contains a disputed ownership assertion. Is that alone forgery?",
+      "answer": "No automatic conclusion follows. Identify a false-document mode under 335 and the intent required by 336(1). A false assertion alone is not a substitute for those elements. Other offences, if alleged, need independent proof."
+    },
+    {
+      "question": "A person knowingly submits a forged will as genuine with dishonest intent. Which provisions guide the analysis?",
+      "answer": "BNS 340(2) governs use; 338 identifies the special instrument category and the punishment as if the user forged it. Mere use must be distinguished from knowing dishonest or fraudulent use."
+    },
+    {
+      "question": "Compare making a forged valuable security with possessing it intending fraudulent use.",
+      "answer": "Making falls under 338: life or up to ten years and fine. Knowing possession with the required intent falls under 339: life or up to seven years and fine. The conduct and alternative maximum differ."
+    },
+    {
+      "question": "An employee corrects an accounting error openly and honestly. Does every alteration attract 344?",
+      "answer": "No. The specified employment connection, wilfulness and intent to defraud must be proved. An honest correction does not by itself satisfy those requirements."
+    },
+    {
+      "question": "Should IPC 478 and 480 be assigned BNS property-mark numbers?",
+      "answer": "No. They were repealed before BNS. Preserve their historical entries and explain the separate trade-mark regime rather than inventing operative counterparts."
+    },
+    {
+      "question": "What must a seller establish under the first defence in BNS 349?",
+      "answer": "Both reasonable precautions and no reason to suspect the mark, and the available supplier information when properly demanded. The alternative branch permits proof that the seller otherwise acted innocently."
+    },
+    {
+      "question": "A person unknowingly receives a counterfeit note in ordinary change. Is possession alone sufficient under 180?",
+      "answer": "No. Knowledge or reason to believe and intent to use as genuine or let it be so used are required. Also consider the express explanation where possession from a lawful source is established."
+    },
+    {
+      "question": "Where are IPC 489A-489E located in BNS, and is resemblance the same as counterfeiting?",
+      "answer": "Their subject matter corresponds to 178-182 in Chapter X. Section 182 is a distinct resemblance-document regime with fine-based branches and a rebuttable presumption; do not automatically substitute the counterfeiting offence in 178."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bharatiya Nyaya Sanhita, 2023 - official Gazette: Chapter XVIII (335-350) and Chapter X (178-182)",
+      "url": "https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf"
+    },
+    {
+      "title": "Indian Penal Code, 1860 - historical Chapter XVIII, including repeal annotations",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/4219/1/THE-INDIAN-PENAL-CODE-1860.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}
