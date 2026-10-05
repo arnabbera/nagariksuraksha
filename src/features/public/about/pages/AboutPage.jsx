@@ -84,13 +84,24 @@ export default function AboutPage() {
 
       <main className="ns-about-page">
         <section className="ns-about-hero">
-          <div className="ns-about-wrap">
-            <p className="ns-about-eyebrow">About Sanhita360</p>
-            <h1>Making legal knowledge clear, practical and accessible</h1>
-            <p className="ns-about-intro">
-              Sanhita360 brings legal awareness, legal learning and
-              practical guidance together on one citizen-focused platform.
-            </p>
+          <div className="ns-about-wrap ns-about-hero-grid">
+            <div className="ns-about-hero-copy">
+              <p className="ns-about-eyebrow">About Sanhita360</p>
+              <h1>Making legal knowledge clear, practical and accessible</h1>
+              <p className="ns-about-intro">
+                Sanhita360 brings legal awareness, legal learning and
+                practical guidance together on one citizen-focused platform.
+              </p>
+            </div>
+            <img
+              className="ns-about-thumbnail"
+              src="/images/sanhita360-about-thumbnail.webp"
+              alt="About Sanhita360 — legal learning, law notes, study materials and mock tests"
+              width="1672"
+              height="941"
+              fetchPriority="high"
+              decoding="async"
+            />
           </div>
         </section>
 
@@ -190,8 +201,11 @@ function Styles() {
       .ns-about-page,.ns-about-page *{box-sizing:border-box}
       .ns-about-wrap{width:min(100% - 40px,1180px);margin:0 auto}
       .ns-about-hero{padding:84px 0 92px;background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 68%,#2563eb 100%);color:#fff}
+      .ns-about-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+      .ns-about-hero-copy{min-width:0}
+      .ns-about-thumbnail{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 20px 48px rgba(0,0,0,.25)}
       .ns-about-eyebrow,.ns-about-kicker{margin:0 0 12px;color:#93c5fd;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-      .ns-about-hero h1{max-width:850px;margin:0;font-size:clamp(38px,6vw,68px);line-height:1.08}
+      .ns-about-hero h1{max-width:850px;margin:0;font-size:clamp(38px,4.2vw,56px);line-height:1.08}
       .ns-about-intro{max-width:760px;margin:24px 0 0;color:#dbeafe;font-size:clamp(17px,2vw,21px);line-height:1.75}
       .ns-about-section{padding:78px 0;background:#fff}
       .ns-about-soft{background:#f8fafc}
@@ -223,7 +237,7 @@ function Styles() {
       .ns-about-actions{display:flex;flex-wrap:wrap;gap:12px}
       .ns-about-actions a{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:2px solid #fff;border-radius:10px;background:#fff;color:#1d4ed8;text-decoration:none;font-weight:800;white-space:nowrap}
       .ns-about-actions a.secondary{background:transparent;color:#fff}
-      @media(max-width:850px){.ns-about-story-grid{grid-template-columns:1fr;gap:24px}.ns-about-cards,.ns-about-values{grid-template-columns:1fr}.ns-about-cta .ns-about-wrap{align-items:flex-start;flex-direction:column}}
+      @media(max-width:850px){.ns-about-hero-grid{grid-template-columns:1fr;gap:32px}.ns-about-story-grid{grid-template-columns:1fr;gap:24px}.ns-about-cards,.ns-about-values{grid-template-columns:1fr}.ns-about-cta .ns-about-wrap{align-items:flex-start;flex-direction:column}}
       @media(max-width:640px){.ns-about-wrap{width:min(100% - 28px,1180px)}.ns-about-hero{padding:58px 0 64px}.ns-about-section{padding:56px 0}.ns-about-card{padding:24px}.ns-about-values article{padding:20px}.ns-about-cta{padding:48px 0}}
     `}</style>
   );
