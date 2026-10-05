@@ -1,0 +1,83 @@
+{
+  "title": "CHAPTER XIX - OF THE CRIMINAL BREACH OF CONTRACTS OF SERVICE",
+  "overview": "This chapter covers IPC Sections 490-492: two historical repealed entries and the surviving subject of contractual care for a helpless person. It maps IPC 491 to BNS 357 and explains the contractual duty, protected condition, voluntary omission and changed fine ceiling. The focus is a defined care obligation, not criminal punishment for every broken service promise.",
+  "objectives": [
+    "Map IPC 491 to BNS 357 and identify the two previously repealed entries.",
+    "Establish the lawful contract and the precise attendance or supply obligation.",
+    "Connect a listed cause to helplessness or inability to provide safety or wants.",
+    "Distinguish voluntary omission from an unexplained allegation of poor service.",
+    "Compare punishment and apply the correct law to the date of conduct."
+  ],
+  "transition": "BNS 357 commenced on 1 July 2024 under S.O. 850(E), dated 23 February 2024. Determine the date and nature of the conduct, BNS 358 repeal-and-savings rules and Article 20(1) of the Constitution before selecting the substantive offence or punishment. The later filing of a complaint does not alone make the enhanced BNS fine applicable to earlier conduct. The IPC Chapter XIX title is retained for this course; BNS 357 is at the end of its Chapter XIX, under the subheading concerning contractual care for a helpless person. Sections 490 and 492 had already been repealed in 1925.",
+  "groups": [
+    {
+      "title": "Section-by-section IPC-to-BNS comparison",
+      "sections": [
+        "490",
+        "491",
+        "492"
+      ],
+      "explanation": "There is one operative subject-matter correspondence in this short IPC chapter. Keep the two historical repeals separate from the general repeal of IPC in 2024."
+    },
+    {
+      "title": "Ingredients and practical application",
+      "sections": [],
+      "explanation": "1. Lawful contract: establish an enforceable contractual obligation binding this accused. Identify its terms, duration and any lawful variation or termination; a moral expectation alone does not replace this ingredient.\n\n2. Nature of duty: the agreement must require attendance on the person or supply of that person's wants. The section uses alternatives; do not insist that both types of service were promised.\n\n3. Protected condition: youth, unsoundness of mind, disease or bodily weakness must cause the relevant helplessness or incapacity. Do not infer incapacity merely from an age label or diagnosis without examining the facts.\n\n4. Voluntary omission: identify what was due, when it was due and how the accused voluntarily failed to perform it. Evidence of sudden incapacity, actual performance, substitute care or the absence of a subsisting duty must be assessed rather than ignored. Such facts are not automatic blanket defences.\n\n5. Consequences: the statutory wording does not require completed injury or death. Other offences, if alleged because of injury or death, require their own ingredients and cannot be assumed from breach alone.\n\nStudy example: a person lawfully engaged to supply food to a patient unable to obtain food because of bodily weakness knowingly chooses to withhold the agreed supply. Analyse the contract, condition, due obligation and voluntary omission under 357. Contrast an ordinary commercial delivery delay where no such protected care obligation is established."
+    }
+  ],
+  "keyPoints": [
+    "IPC 490 and 492: repealed in 1925; no direct operative BNS counterparts.",
+    "IPC 491 corresponds to BNS 357; the lawful care contract is essential.",
+    "Attendance OR supplying wants is sufficient if it is the contracted obligation.",
+    "A listed cause must produce the required helplessness or incapacity.",
+    "Prove voluntary omission; do not assume every service failure is criminal.",
+    "Actual injury or death is not a separate stated requirement of this offence.",
+    "IPC: up to three months or Rs 200 fine or both. BNS: up to three months or Rs 5,000 fine or both.",
+    "Select the applicable law by the conduct and savings rules, not just the complaint date."
+  ],
+  "examFocus": "Structure an answer as: applicable law and date; lawful contract; protected condition and its cause; attendance or supply obligation; voluntary omission; relevant contrary evidence; conclusion and punishment. In a comparison question explain prior repeal, renumbering and the enhanced fine. Keep civil remedies, general care duties and separately alleged criminal offences analytically distinct.",
+  "practice": [
+    {
+      "question": "What are the three IPC-to-BNS entries for this chapter?",
+      "answer": "IPC 490 and 492 were repealed in 1925 and have no direct operative counterpart. IPC 491 corresponds to BNS 357."
+    },
+    {
+      "question": "Does every breach of a service contract attract BNS 357?",
+      "answer": "No. Establish the lawful contractual care obligation, the specified cause of helplessness or incapacity and voluntary omission. An ordinary employment or commercial disagreement does not automatically satisfy these elements."
+    },
+    {
+      "question": "Must the contract require both attendance and supply of wants?",
+      "answer": "No. The section covers attendance or supply. Identify the obligation actually undertaken and show its voluntary non-performance."
+    },
+    {
+      "question": "A carer fails to attend because of sudden hospitalisation. Is breach alone sufficient?",
+      "answer": "No. Examine the subsisting contract, surrounding facts and whether the omission was voluntary. Do not infer the mental element merely from non-attendance, or assume that a stated excuse conclusively resolves it."
+    },
+    {
+      "question": "Is proof of physical injury necessary, and what is the BNS punishment?",
+      "answer": "The section does not prescribe actual injury as a separate ingredient. If its stated requirements are proved, BNS 357 allows imprisonment of either description up to three months, or fine up to Rs 5,000, or both."
+    },
+    {
+      "question": "Can the BNS fine automatically be applied because an old incident is reported after July 2024?",
+      "answer": "No. Assess the conduct date, BNS 358 savings and the constitutional prohibition on a greater retrospective penalty. Complaint timing alone does not select the punishment."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNS 2023 - official Gazette, section 357 (printed page 102) and section 358",
+      "url": "https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf"
+    },
+    {
+      "title": "Historical IPC - Chapter XIX, sections 490-492 and repeal annotations",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "Workmen's Breach of Contract (Repealing) Act, 1925 - section 2 and Schedule",
+      "url": "https://www.indiacode.nic.in/repealedfileopen?rfilename=A1925-3.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}

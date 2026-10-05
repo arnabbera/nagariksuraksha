@@ -1,3 +1,4 @@
+import { serviceOffencesChapter } from "./criminalLawI/serviceChapter";
 import { documentOffencesChapter } from "./criminalLawI/documentChapter";
 import { propertyOffencesChapter } from "./criminalLawI/propertyChapter";
 import { createChapterModel } from "../../models/ChapterModel";
@@ -13,7 +14,7 @@ export const criminalLawICourse = createCourseModel({
   shortDescription:
     "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
   description:
-    "A structured twenty-one-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coins, weights and measures, and other major offences, with IPC-to-BNS comparisons.",
+    "A structured twenty-two-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coins, weights and measures, and other major offences, with IPC-to-BNS comparisons.",
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -27,7 +28,7 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 21,
+  totalChapters: 22,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
@@ -2206,8 +2207,8 @@ const existingCriminalLawIChapters = units.map(
       pdfFileSize:
         index === 0 ? 23572 : index === 1 ? 76489 : index === 2 ? 39413 : index === 3 ? 54969 : index === 4 ? 37726 : index === 5 ? 18632 : index === 6 ? 26550 : 0,
       pdfContentType: index <= 6 ? "application/pdf" : "",
-      chapterNumber: index >= 7 ? index + 14 : index >= 6 ? index + 2 : index + 1,
-      displayOrder: index >= 7 ? index + 14 : index >= 6 ? index + 2 : index + 1,
+      chapterNumber: index >= 7 ? index + 15 : index >= 6 ? index + 2 : index + 1,
+      displayOrder: index >= 7 ? index + 15 : index >= 6 ? index + 2 : index + 1,
       quizRequired: true,
       passingPercentage: 80,
       maximumAttempts: 3,
@@ -3336,5 +3337,6 @@ export const criminalLawIChapters = [
   humanBodyChapter,
   propertyOffencesChapter,
   documentOffencesChapter,
+  serviceOffencesChapter,
   ...existingCriminalLawIChapters.slice(7),
 ];
