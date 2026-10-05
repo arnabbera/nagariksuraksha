@@ -1,0 +1,86 @@
+{
+  "title": "CHAPTER XXA - OF CRUELTY BY HUSBAND OR RELATIVES OF HUSBAND",
+  "overview": "This chapter explains IPC Section 498A and its reorganisation into BNS Sections 85 and 86. It covers the required relationship, the two alternative branches of cruelty, mental and physical health, harassment connected to unlawful demands, proof of individual conduct and distinctions from related offences. The IPC lettered chapter title is retained for continuity with the course.",
+  "objectives": [
+    "Map the operative part of IPC 498A to BNS 85 and its explanation to BNS 86.",
+    "Apply the two alternative branches of cruelty separately.",
+    "Identify the required relationship and conduct of each accused.",
+    "Distinguish criminal cruelty from a general allegation of marital discord.",
+    "Explain why physical injury, a dowry demand or a completed suicide is not required in every case.",
+    "Distinguish cruelty from dowry death and separately alleged offences."
+  ],
+  "transition": "BNS Sections 85 and 86 commenced on 1 July 2024 and appear in BNS Chapter V, concerning offences against women and children. The substantive definition and three-year punishment ceiling are retained, but the former IPC explanation is now a separate section. Identify the date and nature of the conduct, BNS 358 repeal-and-savings rules and Article 20(1) before selecting the law; complaint timing alone is not decisive. Where allegations span the transition, analyse the relevant acts and dates rather than applying one code merely because the complaint was filed later.",
+  "groups": [
+    {
+      "title": "IPC-to-BNS comparison",
+      "sections": [
+        "498A"
+      ],
+      "explanation": "Read the BNS offence and definition together. IPC 498A operative provision corresponds to BNS 85; explanation (a) corresponds to BNS 86(a); explanation (b) corresponds to BNS 86(b). This is a structural separation, not the creation of two independently punishable cruelty offences."
+    },
+    {
+      "title": "Ingredients and practical application",
+      "sections": [],
+      "explanation": "Relationship and individual conduct: establish that the accused is the husband or a relative of the husband and identify the conduct attributed to that person. Kinship alone does not establish that someone subjected the woman to cruelty. Analyse the allegations and evidence against each accused individually.\n\nBranch (a) - serious wilful conduct: BNS 86(a) covers wilful conduct of a nature likely to drive the woman to suicide or cause grave injury or danger to her life, limb or health, including mental or physical health. The required seriousness and likelihood must be established in context. A completed suicide or visible bodily injury is not invariably necessary; mental-health danger is expressly included. This branch does not require an unlawful property demand.\n\nBranch (b) - demand-linked harassment: BNS 86(b) covers harassment aimed at coercing the woman or a person related to her to meet an unlawful demand for property or valuable security, or harassment because such a demand was not met. Identify the demand, its unlawful character and the connection to the harassment. The statutory wording is not confined to demands labelled dowry. An ordinary financial request does not, without the other ingredients, establish this branch.\n\nAlternative branches: the clauses are linked by OR. One sufficiently proved branch may establish cruelty; the facts may satisfy both. Do not require proof of suicide-related conduct and a property demand in every prosecution.\n\nEvidence and context: consider the acts or words, timing, frequency, surrounding circumstances, communications, witness accounts and any relevant medical or financial material. These are illustrative sources of evidence, not a mandatory checklist or a rule that medical records are always necessary. Avoid both automatically criminalising every disagreement and dismissing serious conduct as merely a family dispute.\n\nTeaching examples: deliberate conduct creating grave danger to mental health may engage 86(a) even without a property demand. Harassing a woman because her family refused an unlawful demand for money may engage 86(b). In either example, prove the relationship, the particular conduct and the statutory threshold rather than relying on the label cruelty."
+    }
+  ],
+  "keyPoints": [
+    "IPC 498A -> BNS 85 read with 86; the punishment remains imprisonment up to three years and liability to fine.",
+    "BNS 86(a): wilful conduct meeting the statutory seriousness and likelihood threshold, including mental-health danger.",
+    "BNS 86(b): harassment to coerce an unlawful property or valuable-security demand, or because it was not met.",
+    "The two branches are alternatives; both need not be proved in every case.",
+    "A dowry demand is not required for branch (a), and branch (b) uses the broader words unlawful demand for property or valuable security.",
+    "Relationship alone does not prove culpability; identify the conduct of each accused.",
+    "Sections 85-86 do not prescribe a seven-year marriage limit as an ingredient.",
+    "Dowry death under BNS 80 has distinct death, timing and dowry-linked requirements; cruelty alone does not automatically establish it."
+  ],
+  "examFocus": "Use this order: applicable statute and dates; qualifying relationship; acts attributable to each accused; branch (a), branch (b), or both; supporting and contrary evidence; conclusion; punishment. In a comparative answer explain the movement of the definition from the IPC explanation to BNS 86. Keep the statutory criminal threshold separate from broader matrimonial or domestic-violence concepts. Do not infer an arrest rule, procedural entitlement or conviction from the substantive definition alone.",
+  "practice": [
+    {
+      "question": "What is the complete BNS counterpart to IPC 498A?",
+      "answer": "BNS 85 contains the offence and punishment; BNS 86 supplies the definition. Read them together. Section 86 alone does not prescribe a separate punishment."
+    },
+    {
+      "question": "Must an unlawful property demand be proved in every cruelty case?",
+      "answer": "No. Branch 86(a) concerns sufficiently serious wilful conduct and its statutory likelihood. Branch 86(b) separately concerns demand-linked harassment. Either branch may apply if its ingredients are proved."
+    },
+    {
+      "question": "Can serious mental-health harm be relevant without visible injuries?",
+      "answer": "Yes. Branch 86(a) expressly includes mental health. The conduct must still meet the wilfulness, seriousness and likelihood requirements; absence of a visible injury is not conclusive."
+    },
+    {
+      "question": "A woman is harassed because her family refused an unlawful money demand. Which branch should be examined?",
+      "answer": "Examine 86(b), including the unlawful property demand, harassment and their connection. Also establish the accused's qualifying relationship and individual conduct."
+    },
+    {
+      "question": "Does a relative become guilty simply because they belong to the husband's family?",
+      "answer": "No. The required relationship does not replace proof that the individual subjected the woman to statutory cruelty. Assess each person's role and the evidence."
+    },
+    {
+      "question": "Is cruelty automatically dowry death, or restricted to seven years after marriage?",
+      "answer": "Neither follows. Sections 85-86 contain no seven-year marriage limit as an ingredient. BNS 80 separately requires the specified death within seven years of marriage and cruelty or harassment soon before death connected with a dowry demand."
+    },
+    {
+      "question": "Must both branches of BNS 86 be proved, and what is the punishment?",
+      "answer": "The branches are alternatives. If the section 85 offence is established using at least one branch, the punishment is imprisonment up to three years and liability to fine."
+    },
+    {
+      "question": "Does every marital disagreement establish the criminal offence?",
+      "answer": "No. Examine whether the proved conduct meets 86(a) or 86(b), while taking serious allegations and their context into account. The general description of a relationship as unhappy is not a substitute for statutory analysis."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNS 2023 - official Gazette, Sections 85-86 (printed page 29); compare Section 80",
+      "url": "https://www.mha.gov.in/sites/default/files/250883_english_01042024.pdf"
+    },
+    {
+      "title": "Historical IPC - Chapter XXA, Section 498A and explanation",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}
