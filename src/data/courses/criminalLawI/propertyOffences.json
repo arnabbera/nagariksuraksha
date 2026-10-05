@@ -1,0 +1,512 @@
+[
+  {
+    "ipc": 378,
+    "bns": "303(1)",
+    "title": "Theft",
+    "note": "Dishonest intention, movable property, another person's possession, absence of consent, and movement for taking must coincide. A severed thing can become movable; consent may be express or implied."
+  },
+  {
+    "ipc": 379,
+    "bns": "303(2)",
+    "title": "Punishment for theft",
+    "note": "General punishment remains up to three years, or fine, or both. BNS adds a one-to-five-year rigorous term with fine for a second or subsequent conviction, and a conditional community-service rule for first-time theft below Rs 5,000."
+  },
+  {
+    "ipc": 380,
+    "bns": "305(a)",
+    "title": "Theft in dwelling house, etc.",
+    "note": "The dwelling/custody-of-property limb is 305(a). Clauses (b)-(e) add transport, goods in transport, religious idols/icons and government/local-authority property; the maximum is seven years and fine."
+  },
+  {
+    "ipc": 381,
+    "bns": "306",
+    "title": "Theft by clerk or servant of property in possession of master",
+    "note": "The employee steals property in the employer's possession; distinguish entrusted property under criminal breach of trust. Maximum seven years and fine."
+  },
+  {
+    "ipc": 382,
+    "bns": "307",
+    "title": "Theft after preparation for death, hurt or restraint",
+    "note": "Preparation may secure the theft, escape or retention of stolen property, and includes preparing to cause the specified fear. Actual injury is not required. Maximum ten years rigorous imprisonment and fine."
+  },
+  {
+    "ipc": 383,
+    "bns": "308(1)",
+    "title": "Extortion",
+    "note": "Intentional fear of injury must dishonestly induce delivery of property, valuable security, or a signed/sealed item convertible into valuable security. Fear may concern another person."
+  },
+  {
+    "ipc": 384,
+    "bns": "308(2)",
+    "title": "Punishment for extortion",
+    "note": "Completed ordinary extortion attracts up to seven years, or fine, or both under BNS, rather than IPC's three-year maximum."
+  },
+  {
+    "ipc": 385,
+    "bns": "308(3)",
+    "title": "Putting person in fear of injury in order to commit extortion",
+    "note": "Putting or attempting to put a person in fear for the purpose of extortion is punishable without proving completed delivery. Maximum two years, or fine, or both."
+  },
+  {
+    "ipc": 386,
+    "bns": "308(5)",
+    "title": "Extortion by fear of death or grievous hurt",
+    "note": "Completed extortion using this aggravated fear carries up to ten years and fine. Do not confuse it with the preparatory/intimidatory offence in 308(4)."
+  },
+  {
+    "ipc": 387,
+    "bns": "308(4)",
+    "title": "Fear of death or grievous hurt in order to commit extortion",
+    "note": "Putting or attempting to put a person in this fear for extortion, without completed delivery, carries up to seven years and fine."
+  },
+  {
+    "ipc": 388,
+    "bns": "308(7)",
+    "title": "Extortion by threat of accusation of a serious offence",
+    "note": "Completed extortion by the specified serious-offence accusation attracts up to ten years and fine. The IPC's express section 377-related limb is not reproduced; this is not an exact textual replacement."
+  },
+  {
+    "ipc": 389,
+    "bns": "308(6)",
+    "title": "Fear of accusation of offence in order to commit extortion",
+    "note": "The in-order-to-commit variant covers fear or attempted fear of accusation of the specified serious offences, with up to ten years and fine. The old IPC 377-specific extension is not reproduced."
+  },
+  {
+    "ipc": 390,
+    "bns": "309(1)-(3)",
+    "title": "Robbery; when theft or extortion is robbery",
+    "note": "For theft, the specified violence, restraint or instant fear must be for the theft or carrying away. Extortion becomes robbery when presence, instant fear and then-and-there delivery coincide."
+  },
+  {
+    "ipc": 391,
+    "bns": "310(1)",
+    "title": "Dacoity",
+    "note": "Five or more must conjointly commit or attempt robbery; persons present and aiding count towards the statutory total. Mere presence without aiding is not enough."
+  },
+  {
+    "ipc": 392,
+    "bns": "309(4)",
+    "title": "Punishment for robbery",
+    "note": "Maximum ten years rigorous imprisonment and fine; highway robbery between sunset and sunrise can extend to fourteen years."
+  },
+  {
+    "ipc": 393,
+    "bns": "309(5)",
+    "title": "Attempt to commit robbery",
+    "note": "A specific attempt provision: up to seven years rigorous imprisonment and fine. Prove conduct amounting to an attempt, not only preparation."
+  },
+  {
+    "ipc": 394,
+    "bns": "309(6)",
+    "title": "Voluntarily causing hurt in committing robbery",
+    "note": "Hurt during committing or attempting robbery attracts life imprisonment or rigorous imprisonment up to ten years and fine, extending to others jointly concerned in that robbery or attempt."
+  },
+  {
+    "ipc": 395,
+    "bns": "310(2)",
+    "title": "Punishment for dacoity",
+    "note": "Life imprisonment or rigorous imprisonment up to ten years and fine. Establish the five-person conjoint-robbery requirement first."
+  },
+  {
+    "ipc": 396,
+    "bns": "310(3)",
+    "title": "Dacoity with murder",
+    "note": "Where one of five or more conjoint dacoits murders during the dacoity, the statutory liability reaches each; punishment is death, life imprisonment, or rigorous imprisonment of at least ten years, and fine."
+  },
+  {
+    "ipc": 397,
+    "bns": "311",
+    "title": "Robbery or dacoity with deadly weapon, grievous hurt or attempted death/grievous hurt",
+    "note": "The offender's use of a deadly weapon, causing grievous hurt, or attempt to cause death/grievous hurt sets a minimum seven-year term. This is distinct from mere armed presence during an attempt."
+  },
+  {
+    "ipc": 398,
+    "bns": "312",
+    "title": "Attempted robbery or dacoity when armed with deadly weapon",
+    "note": "Being armed with a deadly weapon at the time of an attempted robbery/dacoity sets a minimum seven-year term. Contrast the use requirement in 311's weapon limb."
+  },
+  {
+    "ipc": 399,
+    "bns": "310(4)",
+    "title": "Making preparation to commit dacoity",
+    "note": "An express offence at the preparation stage, punishable by rigorous imprisonment up to ten years and fine."
+  },
+  {
+    "ipc": 400,
+    "bns": "310(6)",
+    "title": "Belonging to a gang of dacoits",
+    "note": "Membership of a gang associated for habitual dacoity attracts life imprisonment or rigorous imprisonment up to ten years and fine; distinguish a one-off assembly."
+  },
+  {
+    "ipc": 401,
+    "bns": "313",
+    "title": "Belonging to a gang of thieves",
+    "note": "Covers a gang habitually committing theft or robbery, other than a gang of dacoits. Maximum seven years rigorous imprisonment and fine."
+  },
+  {
+    "ipc": 402,
+    "bns": "310(5)",
+    "title": "Assembling for the purpose of dacoity",
+    "note": "Five or more assembled for that purpose; maximum seven years rigorous imprisonment and fine. Do not interchange 310(5) and the habitual-gang rule in 310(6)."
+  },
+  {
+    "ipc": 403,
+    "bns": "314",
+    "title": "Dishonest misappropriation of property",
+    "note": "Dishonest appropriation or conversion of movable property may arise after innocent receipt. Temporary misappropriation counts. BNS prescribes six months to two years and fine."
+  },
+  {
+    "ipc": 404,
+    "bns": "315",
+    "title": "Misappropriation of property possessed by a deceased person",
+    "note": "Knowingly converting property held by the deceased before it reaches a legally entitled possessor attracts up to three years and fine; a clerk/servant at the death faces up to seven years."
+  },
+  {
+    "ipc": 405,
+    "bns": "316(1)",
+    "title": "Criminal breach of trust",
+    "note": "Entrustment or dominion plus dishonest conversion/use/disposal contrary to the trust is essential. Mere breach of a contract is not automatically criminal breach of trust."
+  },
+  {
+    "ipc": 406,
+    "bns": "316(2)",
+    "title": "Punishment for criminal breach of trust",
+    "note": "Ordinary breach of trust attracts up to five years, or fine, or both, increased from the IPC maximum of three years."
+  },
+  {
+    "ipc": 407,
+    "bns": "316(3)",
+    "title": "Criminal breach of trust by carrier, etc.",
+    "note": "Entrustment as carrier, wharfinger or warehouse-keeper plus breach in that capacity: up to seven years and fine."
+  },
+  {
+    "ipc": 408,
+    "bns": "316(4)",
+    "title": "Criminal breach of trust by clerk or servant",
+    "note": "Property or dominion must have been entrusted in that employment capacity. Maximum seven years and fine; contrast theft under 306."
+  },
+  {
+    "ipc": 409,
+    "bns": "316(5)",
+    "title": "Criminal breach of trust by public servant, banker, merchant or agent",
+    "note": "Entrustment in the specified public or business capacity attracts life imprisonment or up to ten years and fine; the list also includes factor, broker and attorney."
+  },
+  {
+    "ipc": 410,
+    "bns": "317(1)",
+    "title": "Stolen property",
+    "note": "BNS expressly includes possession transferred by cheating as well as theft, extortion, robbery, misappropriation and breach of trust. Property ceases to be stolen when received by a legally entitled possessor."
+  },
+  {
+    "ipc": 411,
+    "bns": "317(2)",
+    "title": "Dishonestly receiving stolen property",
+    "note": "Dishonest receipt or retention plus knowledge or reason to believe the property is stolen: up to three years, or fine, or both."
+  },
+  {
+    "ipc": 412,
+    "bns": "317(3)",
+    "title": "Receiving property stolen in dacoity",
+    "note": "Aggravated knowledge concerning dacoity or a dacoit-gang source must be proved. Life imprisonment or rigorous imprisonment up to ten years and fine."
+  },
+  {
+    "ipc": 413,
+    "bns": "317(4)",
+    "title": "Habitually dealing in stolen property",
+    "note": "Habitual receipt/dealing with knowledge or reason to believe: life imprisonment or up to ten years and fine. One isolated receipt does not establish habitual dealing by itself."
+  },
+  {
+    "ipc": 414,
+    "bns": "317(5)",
+    "title": "Assisting concealment of stolen property",
+    "note": "Voluntary assistance in concealment, disposal or making away, with knowledge or reason to believe it stolen: up to three years, or fine, or both."
+  },
+  {
+    "ipc": 415,
+    "bns": "318(1)",
+    "title": "Cheating",
+    "note": "Deception must induce the specified delivery/retention or harmful act/omission. Dishonest concealment is deception. In a broken-promise problem, examine intention at the time of inducement."
+  },
+  {
+    "ipc": 416,
+    "bns": "319(1)",
+    "title": "Cheating by personation",
+    "note": "Cheating by pretending to be another, substitution, or false identity representation. The person imitated may be real or imaginary."
+  },
+  {
+    "ipc": 417,
+    "bns": "318(2)",
+    "title": "Punishment for cheating",
+    "note": "Ordinary cheating attracts up to three years, or fine, or both, rather than IPC's one-year maximum. Delivery-of-property cases need the separate analysis under 318(4)."
+  },
+  {
+    "ipc": 418,
+    "bns": "318(3)",
+    "title": "Cheating with knowledge of likely loss to a protected interest",
+    "note": "The offender must be bound by law or legal contract to protect that person's interest in the transaction and know wrongful loss is likely. Maximum five years, or fine, or both."
+  },
+  {
+    "ipc": 419,
+    "bns": "319(2)",
+    "title": "Punishment for cheating by personation",
+    "note": "Maximum five years, or fine, or both, increased from the IPC maximum of three years."
+  },
+  {
+    "ipc": 420,
+    "bns": "318(4)",
+    "title": "Cheating and dishonestly inducing delivery of property",
+    "note": "Deception causing dishonest inducement to deliver property or make/alter/destroy a valuable security (or convertible signed/sealed item): up to seven years and fine."
+  },
+  {
+    "ipc": 421,
+    "bns": "320",
+    "title": "Removal or concealment to prevent distribution among creditors",
+    "note": "Dishonest/fraudulent removal, concealment, delivery or inadequate-consideration transfer to defeat lawful creditor distribution. BNS specifies six months to two years, or fine, or both."
+  },
+  {
+    "ipc": 422,
+    "bns": "321",
+    "title": "Preventing a debt being available for creditors",
+    "note": "Dishonestly/fraudulently keeping a debt or demand from lawful debt payment attracts up to two years, or fine, or both. Inability to pay alone does not prove this offence."
+  },
+  {
+    "ipc": 423,
+    "bns": "322",
+    "title": "Deed of transfer with false statement of consideration",
+    "note": "Dishonest/fraudulent participation in a property-transfer/charge instrument with false consideration or beneficial-interest particulars: up to three years, or fine, or both."
+  },
+  {
+    "ipc": 424,
+    "bns": "323",
+    "title": "Dishonest or fraudulent removal or concealment of property",
+    "note": "Covers concealment/removal, assistance, and dishonest release of a demand or claim. Maximum three years, or fine, or both."
+  },
+  {
+    "ipc": 425,
+    "bns": "324(1)",
+    "title": "Mischief",
+    "note": "Intended or knowingly likely wrongful loss/damage through destruction or injurious change in property. An offender can commit mischief affecting their own or jointly owned property."
+  },
+  {
+    "ipc": 426,
+    "bns": "324(2)",
+    "title": "Punishment for mischief",
+    "note": "Basic punishment is up to six months, or fine, or both. Additional damage-based tiers appear in 324(3)-(5)."
+  },
+  {
+    "ipc": 427,
+    "bns": "324(3)-(5), restructured",
+    "title": "Mischief causing damage of fifty rupees or more (IPC)",
+    "note": "No identical Rs 50 threshold survives. BNS 324(3) covers property damage; 324(4) specifies Rs 20,000 to below Rs 1 lakh, and 324(5) Rs 1 lakh or more. Choose the applicable tier on facts."
+  },
+  {
+    "ipc": 428,
+    "bns": "325, consolidated",
+    "title": "Mischief by killing or maiming animal worth ten rupees (IPC)",
+    "note": "BNS combines the animal offences and removes the old monetary threshold. Killing, poisoning, maiming or rendering any animal useless as mischief attracts up to five years, or fine, or both."
+  },
+  {
+    "ipc": 429,
+    "bns": "325, consolidated",
+    "title": "Mischief by killing or maiming cattle, etc. (IPC)",
+    "note": "The old species/value distinctions are replaced by any-animal coverage in BNS 325. The ingredients of mischief still have to be established."
+  },
+  {
+    "ipc": 430,
+    "bns": "326(a)",
+    "title": "Mischief affecting irrigation or water supply",
+    "note": "Covers specified diminution of water for agriculture, food/drink, cleanliness or manufacture; up to five years, or fine, or both."
+  },
+  {
+    "ipc": 431,
+    "bns": "326(b)",
+    "title": "Mischief affecting public road, bridge, river or channel",
+    "note": "Making the specified public/navigable routes impassable or less safe for travel or property conveyance: up to five years, or fine, or both."
+  },
+  {
+    "ipc": 432,
+    "bns": "326(c)",
+    "title": "Inundation or obstruction of public drainage",
+    "note": "Inundation or public-drainage obstruction attended with injury or damage: up to five years, or fine, or both."
+  },
+  {
+    "ipc": 433,
+    "bns": "326(d), expanded",
+    "title": "Destroying or moving lighthouse or sea-mark (IPC)",
+    "note": "BNS uses wider wording for signs/signals guiding rail, aircraft and ship navigation and other navigational guides. Maximum seven years, or fine, or both."
+  },
+  {
+    "ipc": 434,
+    "bns": "326(e)",
+    "title": "Destroying or moving a public-authority landmark",
+    "note": "Destroying, moving or reducing the utility of a landmark fixed by a public servant's authority: up to one year, or fine, or both."
+  },
+  {
+    "ipc": 435,
+    "bns": "326(f), changed thresholds",
+    "title": "Mischief by fire/explosive with specified monetary damage (IPC)",
+    "note": "BNS covers intended or knowingly likely damage to any property, including agricultural produce, without the old Rs 100/Rs 10 thresholds. Maximum seven years and fine."
+  },
+  {
+    "ipc": 436,
+    "bns": "326(g)",
+    "title": "Fire/explosive intended to destroy house, etc.",
+    "note": "Covers buildings ordinarily used for worship, dwelling or custody of property. Life imprisonment or up to ten years and fine."
+  },
+  {
+    "ipc": 437,
+    "bns": "327(1), expanded",
+    "title": "Mischief to destroy or make unsafe a decked or twenty-ton vessel",
+    "note": "BNS also expressly covers rail and aircraft, retaining the specified vessel categories. Maximum ten years and fine."
+  },
+  {
+    "ipc": 438,
+    "bns": "327(2), expanded",
+    "title": "Mischief under IPC 437 by fire or explosive",
+    "note": "BNS covers commission or attempt by fire/explosive of the expanded 327(1) offence. Life imprisonment or up to ten years and fine."
+  },
+  {
+    "ipc": 439,
+    "bns": "328",
+    "title": "Intentionally running vessel aground or ashore to commit theft, etc.",
+    "note": "Intent to enable theft or dishonest misappropriation of cargo/property is essential. Maximum ten years and fine."
+  },
+  {
+    "ipc": 440,
+    "bns": "324(6)",
+    "title": "Mischief after preparation for causing death or hurt",
+    "note": "Preparation includes wrongful restraint and fear of death, hurt or restraint. Maximum five years and fine; actual injury is not essential to this preparation-based variant."
+  },
+  {
+    "ipc": 441,
+    "bns": "329(1)",
+    "title": "Criminal trespass",
+    "note": "Entry on another's possession with intent to offend, intimidate, insult or annoy; alternatively lawful entry followed by unlawful remaining with specified intent. A title dispute alone is insufficient."
+  },
+  {
+    "ipc": 442,
+    "bns": "329(2)",
+    "title": "House-trespass",
+    "note": "Criminal trespass into/remaining in the specified dwelling, worship or property-custody premises. Introduction of any part of the body is sufficient entry."
+  },
+  {
+    "ipc": 443,
+    "bns": "330(1)",
+    "title": "Lurking house-trespass",
+    "note": "Precautions to conceal the house-trespass from someone entitled to exclude/eject the trespasser distinguish it from ordinary house-trespass."
+  },
+  {
+    "ipc": 444,
+    "bns": "330(1) read with 331(2), (4), (6), (8)",
+    "title": "Lurking house-trespass by night",
+    "note": "No separate BNS definition labelled 'by night'; the aggravated provisions expressly use after sunset and before sunrise. Match the additional purpose, preparation or injury facts."
+  },
+  {
+    "ipc": 445,
+    "bns": "330(2)",
+    "title": "House-breaking",
+    "note": "House-trespass through any of six specified modes of entry or exit. Physical breakage is not indispensable: opening a lock or using assault may qualify."
+  },
+  {
+    "ipc": 446,
+    "bns": "330(2) read with 331(2), (4), (6), (8)",
+    "title": "House-breaking by night",
+    "note": "The IPC standalone night definition is not repeated; BNS attaches after-sunset/before-sunrise conditions directly to the relevant punishment provisions."
+  },
+  {
+    "ipc": 447,
+    "bns": "329(3)",
+    "title": "Punishment for criminal trespass",
+    "note": "Maximum three months, or fine up to Rs 5,000, or both. Distinguish criminal intent from a mere civil possession dispute."
+  },
+  {
+    "ipc": 448,
+    "bns": "329(4)",
+    "title": "Punishment for house-trespass",
+    "note": "Maximum one year, or fine up to Rs 5,000, or both."
+  },
+  {
+    "ipc": 449,
+    "bns": "332(a)",
+    "title": "House-trespass to commit an offence punishable with death",
+    "note": "Life imprisonment or rigorous imprisonment up to ten years and fine. Prove the intended offence and its punishment category."
+  },
+  {
+    "ipc": 450,
+    "bns": "332(b)",
+    "title": "House-trespass to commit an offence punishable with life imprisonment",
+    "note": "Maximum ten years and fine; distinguish the death-punishable category under 332(a)."
+  },
+  {
+    "ipc": 451,
+    "bns": "332(c)",
+    "title": "House-trespass to commit an offence punishable with imprisonment",
+    "note": "Maximum two years and fine; if the intended offence is theft, the maximum rises to seven years."
+  },
+  {
+    "ipc": 452,
+    "bns": "333",
+    "title": "House-trespass after preparation for hurt, assault or restraint",
+    "note": "Preparation for hurt, assault, wrongful restraint or the specified fear: up to seven years and fine. Lurking/breaking variants are instead in 331(5)-(6)."
+  },
+  {
+    "ipc": 453,
+    "bns": "331(1)",
+    "title": "Punishment for lurking house-trespass or house-breaking",
+    "note": "Maximum two years and fine under BNS, increased from IPC's one-year maximum."
+  },
+  {
+    "ipc": 454,
+    "bns": "331(3)",
+    "title": "Lurking house-trespass/house-breaking to commit an imprisonable offence",
+    "note": "Maximum three years and fine; up to ten years if theft is the intended offence."
+  },
+  {
+    "ipc": 455,
+    "bns": "331(5)",
+    "title": "Lurking house-trespass/house-breaking after preparation for violence",
+    "note": "The specified hurt, assault, restraint or fear preparation carries up to ten years and fine."
+  },
+  {
+    "ipc": 456,
+    "bns": "331(2)",
+    "title": "Lurking house-trespass or house-breaking by night",
+    "note": "After sunset and before sunrise: up to three years and fine. Use the more specific subsection when further aggravating facts are established."
+  },
+  {
+    "ipc": 457,
+    "bns": "331(4)",
+    "title": "Night lurking house-trespass/house-breaking to commit an imprisonable offence",
+    "note": "Maximum five years and fine; up to fourteen years if theft is the intended offence."
+  },
+  {
+    "ipc": 458,
+    "bns": "331(6)",
+    "title": "Night lurking house-trespass/house-breaking after preparation for violence",
+    "note": "Night plus the specified preparation for hurt, assault, restraint or fear: up to fourteen years and fine."
+  },
+  {
+    "ipc": 459,
+    "bns": "331(7)",
+    "title": "Grievous hurt during lurking house-trespass or house-breaking",
+    "note": "Causing grievous hurt or attempting death/grievous hurt during the offence: life imprisonment or up to ten years and fine."
+  },
+  {
+    "ipc": 460,
+    "bns": "331(8)",
+    "title": "Joint liability for death/grievous hurt in night lurking house-trespass/house-breaking",
+    "note": "If one participant voluntarily causes or attempts death/grievous hurt, every person jointly concerned in the night offence faces the statutory liability: life imprisonment or up to ten years and fine."
+  },
+  {
+    "ipc": 461,
+    "bns": "334(1)",
+    "title": "Dishonestly breaking open a receptacle containing property",
+    "note": "Dishonesty or intent to commit mischief, a closed receptacle containing or believed to contain property, and breaking/unfastening: up to two years, or fine, or both."
+  },
+  {
+    "ipc": 462,
+    "bns": "334(2)",
+    "title": "Same offence by a person entrusted with custody",
+    "note": "Entrusted custody without authority to open plus dishonest/mischievous breaking or unfastening: up to three years, or fine, or both."
+  }
+]
