@@ -1,0 +1,200 @@
+[
+  {
+    "ipc": "463",
+    "bns": "336(1)",
+    "title": "Forgery",
+    "note": "Forgery requires making a false document or electronic record with intent to cause damage or injury, support a claim or title, cause a person to part with property or enter a contract, or commit fraud or enable its commission. Read the false-document requirement in BNS 335 first. A disputed claim or false assertion in an otherwise genuinely executed document does not by itself establish forgery."
+  },
+  {
+    "ipc": "464",
+    "bns": "335",
+    "title": "Making a false document",
+    "note": "The three statutory modes concern false attribution or authority in making or executing a document or electronic record; dishonest or fraudulent material alteration without lawful authority; and procuring execution or alteration from a person whose unsoundness, intoxication or deception prevents understanding. The explanations cover certain own-name signatures, fictitious or deceased persons, and electronic signatures. Identify the precise mode rather than merely labelling a statement false."
+  },
+  {
+    "ipc": "465",
+    "bns": "336(2)",
+    "title": "Punishment for forgery",
+    "note": "Ordinary forgery is punishable with imprisonment up to two years, or fine, or both. First prove the definition and then check whether a special document or purpose attracts an aggravated provision."
+  },
+  {
+    "ipc": "466",
+    "bns": "337",
+    "title": "Forgery of record of Court or of public register, etc.",
+    "note": "This covers specified court records, public registers, official certificates or documents, litigation authorities and powers of attorney. BNS expressly includes Government-issued identity documents, including voter identity cards and Aadhaar cards; the explanation includes electronic records and registers. Punishment: imprisonment up to seven years and liability to fine. Do not apply this category to every private document."
+  },
+  {
+    "ipc": "467",
+    "bns": "338",
+    "title": "Forgery of valuable security, will, etc.",
+    "note": "The protected class includes valuable securities, wills, authorities to adopt a son, specified authorities to transfer securities or receive or deliver money or property, and specified receipts or acquittances. Punishment: imprisonment for life, or imprisonment up to ten years, and liability to fine. Establish that the instrument falls within the statutory class."
+  },
+  {
+    "ipc": "468",
+    "bns": "336(3)",
+    "title": "Forgery for purpose of cheating",
+    "note": "Making a forgery with the intention that it be used for cheating attracts imprisonment up to seven years and liability to fine. The intended use is the aggravating feature; a separate allegation of completed cheating still requires its own ingredients."
+  },
+  {
+    "ipc": "469",
+    "bns": "336(4)",
+    "title": "Forgery for purpose of harming reputation",
+    "note": "Forgery intending harm to reputation, or knowing that it is likely to be used for that purpose, attracts imprisonment up to three years and liability to fine. Connect the forged record to the required reputational purpose or knowledge."
+  },
+  {
+    "ipc": "470",
+    "bns": "340(1)",
+    "title": "Forged document",
+    "note": "A false document or electronic record made wholly or partly by forgery is designated a forged document or electronic record. This is a definition, not an independent flat sentencing provision."
+  },
+  {
+    "ipc": "471",
+    "bns": "340(2)",
+    "title": "Using as genuine a forged document or electronic record",
+    "note": "Fraudulent or dishonest use as genuine requires knowledge or reason to believe that the record is forged. Punishment is the same as if the user had forged it. Determine the relevant forgery category before stating the sentence; mere possession or innocent reliance is not automatically this offence."
+  },
+  {
+    "ipc": "472",
+    "bns": "341(1)",
+    "title": "Counterfeit seal or instrument intended for aggravated forgery",
+    "note": "Making or counterfeiting a seal, plate or impression instrument with intent to commit forgery punishable under BNS 338, or possessing it knowing it is counterfeit with that intent, attracts life imprisonment or imprisonment up to seven years and liability to fine. The specific intended forgery is central."
+  },
+  {
+    "ipc": "473",
+    "bns": "341(2)",
+    "title": "Counterfeit seal or instrument intended for other forgery",
+    "note": "Where the intended forgery is punishable under this chapter otherwise than under BNS 338, the corresponding making or knowing possession attracts imprisonment up to seven years and liability to fine. BNS 341(3) also expressly addresses knowing possession of a counterfeit instrument, and 341(4) its fraudulent or dishonest use as genuine; distinguish these from the specific-intent branches."
+  },
+  {
+    "ipc": "474",
+    "bns": "339",
+    "title": "Possession of specified forged documents with intent to use",
+    "note": "Possession must be accompanied by knowledge of forgery and an intention fraudulently or dishonestly to use the document as genuine. For a BNS 337 document, punishment is imprisonment up to seven years and fine; for a BNS 338 document, life imprisonment or imprisonment up to seven years and fine. The latter seven-year alternative differs from the ten-year alternative for making the forgery under 338."
+  },
+  {
+    "ipc": "475",
+    "bns": "342(1)",
+    "title": "Counterfeit authentication device or mark for valuable security, etc.",
+    "note": "Counterfeiting an authentication device or mark on or in material for documents described in BNS 338, or possessing material bearing it, requires the prescribed intent to lend false authenticity to a forged or intended forged document. Punishment: life imprisonment or imprisonment up to seven years and liability to fine. Distinguish the authentication mark from a mark denoting ownership of goods."
+  },
+  {
+    "ipc": "476",
+    "bns": "342(2)",
+    "title": "Counterfeit authentication device or mark for other documents",
+    "note": "For documents or electronic records outside BNS 338, the corresponding counterfeit authentication mark or marked-material conduct with the specified intent attracts imprisonment up to seven years and liability to fine."
+  },
+  {
+    "ipc": "477",
+    "bns": "343",
+    "title": "Fraudulent cancellation or destruction of will, authority to adopt or valuable security",
+    "note": "Dishonest or fraudulent conduct, or intent to cause damage or injury, must accompany the specified cancellation, destruction, defacement, concealment or related mischief. Attempts are expressly included. The protected instruments are wills, authorities to adopt a son and valuable securities. Punishment: life imprisonment or imprisonment up to seven years and liability to fine."
+  },
+  {
+    "ipc": "477A",
+    "bns": "344",
+    "title": "Falsification of accounts",
+    "note": "A clerk, officer, servant or person acting in that capacity must wilfully and with intent to defraud falsify, alter, destroy or mutilate the relevant employer's books, electronic records, papers, writings, securities or accounts, or make or abet false entries or material omissions or alterations. Punishment: imprisonment up to seven years, or fine, or both. The explanation permits a charge alleging general intent to defraud without specifying a victim, sum or day; intent must still be proved."
+  },
+  {
+    "ipc": "478",
+    "bns": "No direct operative counterpart - repealed",
+    "title": "Repealed provision",
+    "note": "IPC 478 was repealed before BNS by the Trade and Merchandise Marks Act, 1958. Retain the entry for historical numbering only. It is not an operative offence to be mechanically mapped to the BNS property-mark provisions; trade-mark legislation requires separate study."
+  },
+  {
+    "ipc": "479",
+    "bns": "345(1)",
+    "title": "Property mark",
+    "note": "A mark used for denoting that movable property belongs to a particular person is a property mark. Ownership identification is the focus. Do not assume that a commercial trade mark and a property mark have identical legal functions."
+  },
+  {
+    "ipc": "480",
+    "bns": "No direct operative counterpart - repealed",
+    "title": "Repealed provision",
+    "note": "IPC 480 was also repealed by the Trade and Merchandise Marks Act, 1958. Its historical position is preserved without assigning a fictitious BNS counterpart. Contemporary trade-mark issues must be assessed under the applicable separate enactment."
+  },
+  {
+    "ipc": "481",
+    "bns": "345(2)",
+    "title": "Using a false property mark",
+    "note": "Marking movable property, goods or their receptacle, or using a marked receptacle, amounts to using a false property mark where the manner is reasonably calculated to cause belief that the property belongs to someone to whom it does not belong. Identify the misleading ownership representation."
+  },
+  {
+    "ipc": "482",
+    "bns": "345(3)",
+    "title": "Punishment for using a false property mark",
+    "note": "Use of a false property mark attracts imprisonment up to one year, or fine, or both, unless the accused proves that they acted without intent to defraud. Read the definition in 345(2) and preserve this express statutory qualification."
+  },
+  {
+    "ipc": "483",
+    "bns": "347(1)",
+    "title": "Counterfeiting a property mark used by another",
+    "note": "Counterfeiting a property mark used by another person attracts imprisonment up to two years, or fine, or both. Distinguish making the counterfeit mark from subsequently selling goods bearing it."
+  },
+  {
+    "ipc": "484",
+    "bns": "347(2)",
+    "title": "Counterfeiting a mark used by a public servant",
+    "note": "This aggravated branch concerns public-servant property marks and specified official marks denoting matters such as manufacture, quality, passage through an office or exemption. Knowingly using such a counterfeit mark as genuine is also covered. Punishment: imprisonment up to three years and liability to fine."
+  },
+  {
+    "ipc": "485",
+    "bns": "348",
+    "title": "Making or possessing an instrument for counterfeiting a property mark",
+    "note": "The section covers making or possessing dies, plates or instruments for counterfeiting property marks, and possessing a property mark for falsely denoting ownership. Punishment: imprisonment up to three years, or fine, or both. Connect possession to the purpose described in the enactment."
+  },
+  {
+    "ipc": "486",
+    "bns": "349",
+    "title": "Selling goods marked with a counterfeit property mark",
+    "note": "Selling, exposing or possessing for sale goods bearing a counterfeit property mark attracts imprisonment up to one year, or fine, or both, subject to statutory defences. The accused may prove both reasonable precautions with no reason to suspect genuineness and disclosure of available supplier information when demanded by or for the prosecutor; alternatively, they may prove that they otherwise acted innocently. Do not omit the conjunction between the first two conditions."
+  },
+  {
+    "ipc": "487",
+    "bns": "350(1)",
+    "title": "Making a false mark upon a receptacle containing goods",
+    "note": "The false mark must be reasonably calculated to mislead about the receptacle's contents or their nature or quality. Punishment is imprisonment up to three years, or fine, or both, unless the accused proves absence of intent to defraud. This concerns representations about contents, distinct from ownership alone."
+  },
+  {
+    "ipc": "488",
+    "bns": "350(2)",
+    "title": "Using such a false mark",
+    "note": "Making use of a false mark of the kind prohibited by BNS 350(1) carries the same punishment, unless the accused proves absence of intent to defraud. Identify the actual use and the misleading contents representation."
+  },
+  {
+    "ipc": "489",
+    "bns": "346",
+    "title": "Tampering with a property mark with intent to cause injury",
+    "note": "Removing, destroying, defacing or adding to a property mark requires intent to cause injury, or knowledge that injury is likely. Punishment: imprisonment up to one year, or fine, or both. BNS places this provision before counterfeiting offences, so numerical order does not follow the IPC list."
+  },
+  {
+    "ipc": "489A",
+    "bns": "178",
+    "title": "Counterfeiting currency-notes or bank-notes",
+    "note": "BNS consolidates currency-note and bank-note counterfeiting with coin and Government revenue-stamp offences in Chapter X. Counterfeiting, or knowingly performing any part of the counterfeiting process, attracts life imprisonment or imprisonment up to ten years and liability to fine. This is the currency-related correspondence, not a claim that the two sections have identical scope."
+  },
+  {
+    "ipc": "489B",
+    "bns": "179",
+    "title": "Using as genuine forged or counterfeit currency-notes or bank-notes",
+    "note": "The consolidated provision covers specified import, export, sale, delivery, purchase, receipt, trafficking or use as genuine, with knowledge or reason to believe the item counterfeit. Punishment: life imprisonment or imprisonment up to ten years and liability to fine. Currency, coin and Government revenue-stamp categories are now addressed together."
+  },
+  {
+    "ipc": "489C",
+    "bns": "180",
+    "title": "Possession of forged or counterfeit currency-notes or bank-notes",
+    "note": "Possession requires knowledge or reason to believe that the item is counterfeit and intent to use it as genuine or let it be so used. Punishment: imprisonment up to seven years, or fine, or both. The explanation states that possession established to be from a lawful source does not constitute an offence under this section. Accidental receipt is not, by itself, proof of every ingredient."
+  },
+  {
+    "ipc": "489D",
+    "bns": "181",
+    "title": "Instruments or materials for forging or counterfeiting currency",
+    "note": "Making, mending, buying, selling, disposing of or possessing relevant machinery, dies, instruments or materials requires the counterfeiting purpose, or knowledge or reason to believe they are intended for it. Punishment: life imprisonment or imprisonment up to ten years and liability to fine. The consolidated BNS section also covers coin and Government revenue stamps; ordinary equipment alone does not establish liability."
+  },
+  {
+    "ipc": "489E",
+    "bns": "182(1)-(3)",
+    "title": "Documents resembling currency-notes or bank-notes",
+    "note": "Making, causing to be made, using or delivering a document purporting to be, or sufficiently resembling to deceive, a currency-note or bank-note attracts a fine up to Rs 300 under subsection (1). Subsection (2) provides a fine up to Rs 600 for refusal by a person whose name appears on such a document, without lawful excuse, to disclose the maker's name and address when required by a police officer. Subsection (3) creates a rebuttable presumption concerning a person whose name appears on such a document. Do not treat this resemblance offence as automatically full counterfeiting under 178."
+  }
+]

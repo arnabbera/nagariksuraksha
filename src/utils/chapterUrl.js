@@ -153,6 +153,10 @@ const isCriminalLawIPropertyChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-20");
 
+const isCriminalLawIDocumentsChapter = (courseSlug, chapter) =>
+  ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-21");
+
 const isCriminalLawIHumanBodyChapter = (courseSlug, chapter) =>
   [
     "criminal-law-i",
@@ -194,6 +198,9 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIDocumentsChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter20-Documents-and-Property-Marks";
+  }
   if (isCriminalLawIPropertyChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter19-Offences-Against-Property";
   }
@@ -282,6 +289,9 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIDocumentsChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter20-Documents-and-Property-Marks";
+  }
   if (isCriminalLawIPropertyChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter19-Offences-Against-Property";
   }
