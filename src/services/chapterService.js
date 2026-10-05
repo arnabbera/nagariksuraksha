@@ -18,6 +18,15 @@ const bundledChapters = [
   ...mediaLawChapters,
 ];
 
+// Retired combined lesson: ignore older stored copies as well as its old URL.
+const retiredCriminalLawIChapterId =
+  "criminal-law-i-transitioning-from-ipc-to-bns-unit-8";
+const retiredCriminalLawIChapterSlug =
+  "criminal-law-i-transitioning-from-ipc-to-bns-property-sec-378-462-marriage-sec-493-498a-defamation-sec-499-502-intimidation-and-attempts-sec-503-511";
+const isRetiredChapter = (chapter) =>
+  chapter?.id === retiredCriminalLawIChapterId ||
+  chapter?.slug === retiredCriminalLawIChapterSlug;
+
 const createSlug = (value = "") =>
   value
     .trim()
@@ -63,7 +72,6 @@ const sourceControlledChapterIds = new Set([
 
 const reorderedCriminalLawIChapterIds = new Set([
   "criminal-law-i-transitioning-from-ipc-to-bns-unit-7",
-  "criminal-law-i-transitioning-from-ipc-to-bns-unit-8",
 ]);
 
 const renamedChapterIds = new Set(
@@ -159,7 +167,7 @@ const mergeStoredAndBundledChapter = (
 // =========================================================
 
 export const getAllChapters = async () =>
-  chapterRepository.getAll();
+  (await chapterRepository.getAll()).filter((chapter) => !isRetiredChapter(chapter));
 
 // =========================================================
 // ADMIN - ALL CHAPTERS FOR COURSE
@@ -192,7 +200,7 @@ export const getChaptersByCourse = async (
   );
 
   for (const chapter of storedChapters || []) {
-    if (chapter?.id) {
+    if (chapter?.id && !isRetiredChapter(chapter)) {
       const bundledChapter =
         chapterMap.get(chapter.id);
 
@@ -246,7 +254,7 @@ export const getPublishedChaptersByCourse =
     );
 
     for (const chapter of storedChapters || []) {
-      if (chapter?.id) {
+      if (chapter?.id && !isRetiredChapter(chapter)) {
         const chapterKey =
           chapter.slug || chapter.id;
         const bundledChapter =
@@ -383,6 +391,10 @@ export const getChapterById = async (
       (chapter) =>
         chapter.id === chapterId,
     );
+
+  if (isRetiredChapter(storedChapter) || isRetiredChapter({ id: chapterId })) {
+    return null;
+  }
 
   return mergeStoredAndBundledChapter(
     storedChapter,
