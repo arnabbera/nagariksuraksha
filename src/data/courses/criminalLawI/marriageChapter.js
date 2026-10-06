@@ -8,7 +8,7 @@ export const marriageOffencesChapter = createChapterModel({
   courseId,
   title: "CHAPTER XX  OF OFFENCES RELATING TO MARRIAGE",
   slug: "unit-23-offences-relating-to-marriage",
-  shortDescription: "Study IPC Sections 493-498 alongside BNS Sections 81-84 and the constitutional status of adultery, with an indexed PDF, provision-level mapping and practical revision problems.",
+  shortDescription: "Read the supplied IPC Sections 493-498 in full, including the bigamy exceptions and historical adultery text, with BNS mappings, explanations, revision problems and an indexed PDF.",
   chapterOverview: study.overview,
   learningObjectives: study.objectives,
   detailedContent: [
@@ -16,7 +16,7 @@ export const marriageOffencesChapter = createChapterModel({
     ...study.groups.flatMap((group) => [
       group.title, group.explanation,
       ...rows.filter((row) => group.sections.includes(row.ipc))
-        .map((row) => `IPC ${row.ipc} - ${row.title}\nBNS ${row.bns}\n${row.note}`),
+        .map((row) => `IPC ${row.ipc} - ${row.title}\nLegal status: ${row.statusNote}\nSupplied IPC text\n${row.statutoryText}\nBNS mapping: ${row.bns}\nStudy explanation\n${row.note}`),
     ]),
     "Practice questions and model answers",
     ...study.practice.map((item, index) => `${index + 1}. ${item.question}\nAnswer: ${item.answer}`),

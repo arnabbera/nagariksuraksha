@@ -39,13 +39,13 @@ def heading(title,key,level=0):
 def footer(c,doc):
  c.saveState();c.setStrokeColor(colors.HexColor('#d3dee9'));c.line(42,42,A4[0]-42,42)
  c.setFont('StudySans',8);c.setFillColor(colors.HexColor('#53647d'));c.drawString(42,29,'Sanhita360 | Criminal Law I | IPC XX / BNS 81-84');c.drawRightString(A4[0]-42,29,str(doc.page));c.restoreState()
-story=[p('SANHITA360','Map'),p('Criminal Law I | Transitioning from IPC to BNS','SectionTitle'),Spacer(1,16),p('CHAPTER XX\nOFFENCES RELATING TO MARRIAGE','CoverTitle'),p('IPC 493-498 | BNS 81-84 | Constitutional status of IPC 497','Map'),p(study['overview']),p('Study edition: 5 October 2026. Course position 22. Six IPC entries, five correspondences and eight self-check questions. Notes summarise the cited central enactments for legal education.'),Spacer(1,14),heading('Contents','contents')]
+story=[p('SANHITA360','Map'),p('Criminal Law I | Transitioning from IPC to BNS','SectionTitle'),Spacer(1,16),p('CHAPTER XX\nOFFENCES RELATING TO MARRIAGE','CoverTitle'),p('IPC 493-498 | BNS 81-84 | Constitutional status of IPC 497','Map'),p(study['overview']),p('Study edition: 6 October 2026. Course position 22. Six IPC entries, five correspondences and eight self-check questions. Includes the supplied IPC provisions in full, with separate legal-status notes and study explanations.'),Spacer(1,14),heading('Contents','contents')]
 for title,key in [('Objectives and transition','overview'),('IPC-to-BNS comparison','comparison'),('Ingredients and practical application','ingredients'),('Revision and exam method','revision'),('Practice questions and model answers','practice'),('Official sources','sources')]:
  story.append(Paragraph(f'<link href="#{key}" color="#1d4ed8">{escape(title)}</link>',styles['Index']))
 story += [PageBreak(),heading('Objectives and transition','overview')]
 for x in study['objectives']:story.append(p('- '+x))
 story += [Spacer(1,12),p(study['transition']),PageBreak(),heading('IPC-to-BNS comparison','comparison'),p(study['groups'][0]['explanation'])]
-for r in rows:story += [heading(f'IPC {r["ipc"]}. {r["title"]}',f'ipc-{r["ipc"]}',1),p('BNS reference: '+r['bns'],'Map'),p(r['note'])]
+for r in rows:story += [heading(f'IPC {r["ipc"]}. {r["title"]}',f'ipc-{r["ipc"]}',1),p(r['statusNote'],'Map'),p('Supplied IPC text','ProvisionTitle'),p(r['statutoryText']),p('BNS reference: '+r['bns'],'Map'),p('Study explanation','ProvisionTitle'),p(r['note'])]
 story += [PageBreak(),heading('Ingredients and practical application','ingredients'),p(study['groups'][1]['explanation']),PageBreak(),heading('Revision and exam method','revision')]
 for x in study['keyPoints']:story.append(p('- '+x))
 story += [p(study['examFocus']),PageBreak(),heading('Practice questions and model answers','practice'),p('Self-check study exercises; not a timed or graded assessment.')]

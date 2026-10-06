@@ -1,8 +1,9 @@
 {
   "title": "CHAPTER XX - OF OFFENCES RELATING TO MARRIAGE",
-  "overview": "This chapter covers IPC Sections 493-498 and their subject-matter correspondences in BNS Sections 81-84. It distinguishes deceit about an existing lawful marriage, bigamy, concealment of a former marriage, a fraudulent ceremony and taking, enticing, concealing or detaining a married woman with the specified intent. IPC 497 is retained for historical and constitutional study, with its invalidation clearly identified.",
+  "overview": "This rewritten Chapter XX contains the supplied text of IPC Sections 493-498, including the complete Section 494 exception and the historical wording of Section 497, followed by section-specific explanations and BNS mappings. It distinguishes deceitful cohabitation, bigamy, concealment of a prior marriage, a fraudulent ceremony, the invalidated adultery offence, and taking, enticing, concealing or detaining a married woman with criminal intent. Study notes, revision questions and the indexed PDF use the same chapter data.",
   "objectives": [
     "Identify all six IPC entries and the relevant BNS section or constitutional status.",
+    "Read the supplied statutory wording, including both branches of the Section 494 exception and the historical penalty under Section 497.",
     "Distinguish belief in an existing lawful marriage from a promise of future marriage.",
     "Apply the elements of bigamy, concealment and the statutory exceptions.",
     "Distinguish a knowingly fraudulent ceremony from a merely invalid marriage.",
@@ -12,7 +13,7 @@
   "transition": "The relevant BNS provisions commenced on 1 July 2024. Select the substantive law by the date and nature of conduct, BNS 358 repeal-and-savings rules and Article 20(1) of the Constitution; complaint timing alone does not decide the applicable offence or penalty. These marriage offences are reorganised within BNS Chapter V, concerning offences against women and children. IPC Chapter XX is retained as the course heading. IPC 497 was already struck down in 2018: do not confuse constitutional invalidation with the later general repeal of IPC. This chapter ends at IPC 498; cruelty under IPC 498A belongs to the separate Chapter XXA.",
   "groups": [
     {
-      "title": "Section-by-section IPC-to-BNS comparison",
+      "title": "Supplied IPC provisions with explanations and BNS mappings",
       "sections": [
         "493",
         "494",
@@ -21,12 +22,12 @@
         "497",
         "498"
       ],
-      "explanation": "Five IPC entries correspond to four BNS sections because IPC 494 and 495 are consolidated in subsections 82(1) and 82(2). IPC 497 has no BNS counterpart. These notes summarise the cited central texts; the validity of a marriage must be established under the applicable marriage law."
+      "explanation": "Read each supplied IPC provision first, then the legal-status note, BNS mapping and explanation. IPC 493 corresponds to BNS 81; 494 to 82(1); 495 to 82(2); 496 to 83; and 498 to 84. IPC 497 is reproduced only for historical study: it was struck down, and the BNS has no adultery counterpart. The Section 494 exception is reproduced in full; its alternatives and conditions must not be reduced to seven-year absence alone."
     },
     {
       "title": "Ingredients and practical application",
       "sections": [],
-      "explanation": "Deceit and belief (81): identify the representation that a lawful marriage already exists, its falsity, the resulting belief and cohabitation or intercourse in that belief. An unfulfilled future promise requires a different analysis and must not be mechanically labelled an offence under 81.\n\nBigamy (82): establish a valid subsisting first marriage and the subsequent marriage in the legally required manner. Identify why the latter is void owing to the living spouse. Check competent-court orders, dates and the applicable marriage law rather than assuming every second relationship is a second marriage.\n\nSeven-year absence exception: continuous absence, no news of being alive during that period, and disclosure of the known facts to the new spouse before marriage must be considered together. Mere non-contact for a short period is insufficient. Do not treat this exception as a general licence based only on a missing-person report.\n\nFraudulent ceremony (83): an unlawful result alone is insufficient. The section expressly requires a ceremony, knowledge that lawful marriage does not result, and dishonesty or fraudulent intention.\n\nConstitutional distinction: Joseph Shine protects equality, dignity and sexual autonomy against the former adultery offence. Matrimonial relief and independently proved criminal offences are different questions. BNS 84 must be assessed on its own words, not used to assume criminality merely because a married woman forms a relationship.\n\nEvidence for a problem answer: identify the applicable marriage law, proof of required ceremonies or formalities, any dissolution or nullity order, disclosure or concealment, communications explaining the alleged deceit and the conduct alleged. These are analytical prompts, not a substitute for the statutory burden of proof."
+      "explanation": "Deceit and belief (81): identify the representation that a lawful marriage already exists, its falsity, the resulting belief and cohabitation or intercourse in that belief. An unfulfilled future promise requires a different analysis and must not be mechanically labelled an offence under 81.\n\nBigamy (82): establish a valid subsisting first marriage and the subsequent marriage in the legally required manner. Identify why the latter is void owing to the living spouse. Check competent-court orders, dates and the applicable marriage law rather than assuming every second relationship is a second marriage.\n\nFirst exception — court-declared nullity: identify a competent court’s declaration that the former marriage is void. A separation or pending petition is not that declaration. Do not confuse this branch with the separate absence branch.\n\nSecond exception — seven-year absence: continuous absence, no news of being alive during that period, and disclosure of the known facts to the new spouse before marriage must be considered together. Mere non-contact for a short period is insufficient. Do not treat this exception as a general licence based only on a missing-person report.\n\nFraudulent ceremony (83): an unlawful result alone is insufficient. The section expressly requires a ceremony, knowledge that lawful marriage does not result, and dishonesty or fraudulent intention.\n\nConstitutional distinction: Joseph Shine protects equality, dignity and sexual autonomy against the former adultery offence. Matrimonial relief and independently proved criminal offences are different questions. BNS 84 must be assessed on its own words, not used to assume criminality merely because a married woman forms a relationship.\n\nEvidence for a problem answer: identify the applicable marriage law, proof of required ceremonies or formalities, any dissolution or nullity order, disclosure or concealment, communications explaining the alleged deceit and the conduct alleged. These are analytical prompts, not a substitute for the statutory burden of proof."
     }
   ],
   "keyPoints": [
@@ -36,6 +37,7 @@
     "IPC 496 -> BNS 83: knowingly fraudulent or dishonest marriage ceremony; maximum seven years and fine.",
     "IPC 497: struck down in Joseph Shine on 27 September 2018; no BNS adultery counterpart.",
     "IPC 498 -> BNS 84: specified taking, enticing, concealment or detention with the statutory knowledge and intent; maximum two years or fine or both.",
+    "IPC 494 exception: competent-court declaration of nullity, OR continuous seven-year absence with no news of being alive and pre-marriage disclosure of known facts.",
     "Disclosure alone does not validate a prohibited second marriage; apply the complete exception.",
     "A failed marriage, relationship or promise is not automatically proof of a criminal offence."
   ],
@@ -50,8 +52,8 @@
       "answer": "No. BNS 82(1) requires a subsequent marriage void because of a living spouse. Establish the subsisting first marriage and legally relevant proof of the second under the applicable marriage law."
     },
     {
-      "question": "A spouse has been absent for seven years. Is that fact alone sufficient for the exception?",
-      "answer": "No. Examine continuous absence, whether the person heard of the spouse as alive within that time, and disclosure of known real facts to the new spouse before the subsequent marriage."
+      "question": "What are the two branches of the IPC 494 / BNS 82(1) exception?",
+      "answer": "One concerns a former marriage declared void by a competent court. The other requires continuous absence of the former spouse for seven years, no hearing of that spouse as alive during that time, and disclosure of the known real facts to the new spouse before the subsequent marriage. Test each branch on its own conditions."
     },
     {
       "question": "What does concealment add under BNS 82(2)?",
@@ -85,7 +87,7 @@
     },
     {
       "title": "Joseph Shine v. Union of India, 27 September 2018, [2018] 11 SCR 765 - official court-hosted judgment",
-      "url": "https://gujarathighcourt.nic.in/hccms/sites/default/files/scgujaratijudgments/eng/SC_WP(Crl)_194_of_2017.pdf"
+      "url": "https://api.sci.gov.in/supremecourt/2017/32550/32550_2017_Judgement_27-Sep-2018.pdf"
     },
     {
       "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
