@@ -169,6 +169,10 @@ const isCriminalLawICrueltyChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-24");
 
+const isCriminalLawIIntimidationChapter = (courseSlug, chapter) =>
+  ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
+  String(chapter?.id || "").endsWith("-unit-26");
+
 const isCriminalLawIDefamationChapter = (courseSlug, chapter) =>
   ["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseSlug) &&
   String(chapter?.id || "").endsWith("-unit-25");
@@ -214,6 +218,9 @@ const CRIMINAL_LAW_I_CHAPTER_SEVEN_LEGACY_SEGMENTS = new Set([
 ]);
 
 export const getChapterPathSegment = (courseSlug, chapter) => {
+  if (isCriminalLawIIntimidationChapter(courseSlug, chapter)) {
+    return "ipc-to-bns-chapter25-Criminal-Intimidation-Insult-and-Annoyance";
+  }
   if (isCriminalLawIDefamationChapter(courseSlug, chapter)) {
     return "ipc-to-bns-chapter24-Defamation";
   }
@@ -317,6 +324,9 @@ export const getChapterPathSegment = (courseSlug, chapter) => {
 };
 
 export const getChapterLearningPath = (courseSlug, chapter) => {
+  if (isCriminalLawIIntimidationChapter(courseSlug, chapter)) {
+    return "/student/learn/criminal-law-i/ipc-to-bns-chapter25-Criminal-Intimidation-Insult-and-Annoyance";
+  }
   if (isCriminalLawIDefamationChapter(courseSlug, chapter)) {
     return "/student/learn/criminal-law-i/ipc-to-bns-chapter24-Defamation";
   }
