@@ -1,3 +1,4 @@
+import { intimidationOffencesChapter } from "./criminalLawI/intimidationChapter";
 import { defamationOffencesChapter } from "./criminalLawI/defamationChapter";
 import { crueltyOffencesChapter } from "./criminalLawI/crueltyChapter";
 import { marriageOffencesChapter } from "./criminalLawI/marriageChapter";
@@ -3074,4 +3075,5 @@ export const criminalLawIChapters = [
   marriageOffencesChapter,
   crueltyOffencesChapter,
   defamationOffencesChapter,
+  intimidationOffencesChapter,
 ];

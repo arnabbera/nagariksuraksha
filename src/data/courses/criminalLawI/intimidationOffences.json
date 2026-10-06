@@ -1,0 +1,50 @@
+[
+  {
+    "ipc": "503",
+    "title": "Criminal intimidation",
+    "bns": "351(1)",
+    "note": "The offence requires a threat of injury to the target’s person, reputation or property, or to the person or reputation of someone in whom the target is interested. The purpose must be to cause alarm, compel an act the target is not legally bound to do, or prevent an act the target is legally entitled to do as the means of avoiding the threat. The explanation covers threats against the reputation of an interested deceased person. A threatens to burn B’s house unless B stops pursuing a civil suit: the threat uses unlawful injury to interfere with a legal entitlement. Distinguish this from an ordinary notice of lawful legal proceedings. BNS expressly covers threats by any means."
+  },
+  {
+    "ipc": "504",
+    "title": "Intentional insult with intent to provoke breach of the peace",
+    "bns": "352",
+    "note": "Identify an intentional insult, resulting provocation, and intention or knowledge that the provocation is likely to cause a breach of public peace or another offence. Mere unpleasant language does not dispense with those elements. The maximum is two years’ imprisonment of either description, fine, or both. Actual violence is not the sole statutory test; explain the intended or known likely consequence in context."
+  },
+  {
+    "ipc": "505",
+    "title": "Statements conducing to public mischief",
+    "bns": "353(1)-(3) and exception",
+    "note": "Subsection (1)(a) concerns inducing armed-forces personnel to mutiny or disregard duty; (b) concerns public fear or alarm linked to inducement to an offence against the State or public tranquillity; (c) concerns inciting a class or community to offences against another. Punishment: imprisonment up to three years, fine, or both. Subsection (2) covers statements or reports containing rumour or alarming news that intentionally or likely promote group enmity, hatred or ill-will on the listed grounds. It has the same three-year maximum, fine, or both. Subsection (3) aggravates the subsection (2) offence in a place of worship or assembly performing religious worship or ceremonies: up to five years and liability to fine. The exception requires reasonable grounds to believe the material true, good faith, and absence of the specified intent. BNS expressly includes false information and electronic means. Do not treat every inaccurate post as this offence without the relevant statutory consequence."
+  },
+  {
+    "ipc": "506",
+    "title": "Punishment for criminal intimidation",
+    "bns": "351(2)-(3)",
+    "note": "Ordinary intimidation: imprisonment of either description up to two years, fine, or both. Aggravated threats: death, grievous hurt, destruction of property by fire, causing an offence punishable with death, life imprisonment or imprisonment extending to seven years, or imputing unchastity to a woman. The aggravated maximum is seven years’ imprisonment of either description, fine, or both. First establish the definition under IPC 503; then select the punishment by the nature of the threat. Actual execution of the threatened injury is not required by that definition."
+  },
+  {
+    "ipc": "507",
+    "title": "Criminal intimidation by an anonymous communication",
+    "bns": "351(4)",
+    "note": "The underlying intimidation must first be established. Anonymous communication or precautions concealing the sender’s name or abode attracts imprisonment of either description up to two additional years. Concealment is an additional feature, not a substitute for proving the threat and relevant intention. Read BNS 351 as a whole when describing the additional punishment; its subsection (4) literally refers to subsection (1)."
+  },
+  {
+    "ipc": "508",
+    "title": "Act caused by inducing belief in Divine displeasure",
+    "bns": "354",
+    "note": "The offender voluntarily causes or attempts to cause an act not legally required, or omission of an act legally permitted, by inducing or attempting to induce belief that the target or an interested person will become an object of Divine displeasure through the offender’s act. Maximum: one year’s imprisonment of either description, fine, or both. Illustration (a): A sits dhurna at Z’s door intending Z to believe this makes Z an object of Divine displeasure. Illustration (b): A threatens to kill A’s own child unless Z acts, in circumstances making Z believe the killing would bring Divine displeasure on Z. The coercive use of the belief matters; religious belief or peaceful observance alone is not the stated offence."
+  },
+  {
+    "ipc": "509",
+    "title": "Word, gesture or act intended to insult the modesty of a woman",
+    "bns": "79",
+    "note": "With intention to insult a woman’s modesty, the offender utters words, makes a sound or gesture, exhibits an object intended to be heard or seen by her, or intrudes upon her privacy. Punishment: simple imprisonment up to three years and fine. Explain the intention, targeted communication or privacy intrusion and context. Physical touching is not a required element of this provision. The BNS counterpart sits in Chapter V, concerning offences against women and children, rather than Chapter XIX."
+  },
+  {
+    "ipc": "510",
+    "title": "Misconduct in public by a drunken person",
+    "bns": "355",
+    "note": "Intoxication, presence in a public place or a place where entry is a trespass, and conduct causing annoyance to a person must coexist. Intoxication alone is insufficient. Historical IPC punishment: simple imprisonment up to twenty-four hours, fine up to ten rupees, or both. BNS retains the twenty-four-hour maximum, raises the fine ceiling to one thousand rupees and permits community service. Keep the old and new fine amounts distinct."
+  }
+]

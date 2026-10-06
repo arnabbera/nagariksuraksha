@@ -1,0 +1,101 @@
+{
+  "title": "CHAPTER XXII - OF CRIMINAL INTIMIDATION, INSULT AND ANNOYANCE",
+  "overview": "Study IPC Sections 503-510: coercive threats, provocative insults, harmful public statements, anonymous intimidation, coercion through Divine displeasure, insults to a woman’s modesty and drunken public misconduct. Historical Chhattisgarh Sections 509A and 509B are presented separately. This chapter connects each central IPC provision to the BNS and includes revision problems and an indexed study PDF.",
+  "objectives": [
+    "Identify the threat, protected interest and coercive intention in intimidation.",
+    "Distinguish an insult from provocation likely to cause a breach of peace.",
+    "Separate all three public-mischief subsections and apply the exception.",
+    "Compare ordinary, aggravated and anonymous intimidation punishments.",
+    "Explain coercion through Divine displeasure using both illustrations.",
+    "Apply the modesty/privacy and intoxication/public-annoyance provisions.",
+    "Distinguish historical state amendments from central BNS mappings."
+  ],
+  "transition": "The IPC Chapter XXII heading is retained for course continuity. The principal BNS counterparts are in Chapter XIX; IPC 509 is reorganised into BNS Chapter V. For application, identify the date of the alleged conduct and consider BNS commencement on 1 July 2024, Section 358 repeal and savings, and Article 20(1). Filing a complaint after commencement does not by itself convert a historical IPC offence into a BNS offence. These notes paraphrase the legislation for study; the linked enactments supply the full text. IPC 511 belongs to Chapter XXIII and is outside this requested chapter.",
+  "groups": [
+    {
+      "title": "Section-by-section IPC-to-BNS comparison",
+      "sections": [
+        "503",
+        "504",
+        "505",
+        "506",
+        "507",
+        "508",
+        "509",
+        "510"
+      ],
+      "explanation": "503 → 351(1); 504 → 352; 505 → 353; 506 → 351(2)-(3); 507 → 351(4); 508 → 354; 509 → 79; 510 → 355. Keep definitions, punishment tiers and statutory exceptions separate."
+    },
+    {
+      "title": "Ingredients, distinctions and illustrations",
+      "sections": [],
+      "explanation": "Threats versus insults: intimidation uses threatened injury with the prescribed intention; intentional insult concerns provocation with the prescribed likely consequence. A rude exchange must be analysed on facts rather than assigned both labels automatically.\n\nThreats versus defamation: threatening reputational injury to compel conduct is different from making or publishing a defamatory imputation. The same facts may require separate analyses, but the offences have different elements.\n\nIndividual alarm versus public mischief: a threat to an individual and a report likely to induce public disorder are distinct statutory inquiries. Identify the audience, content, purpose and relevant consequence.\n\nDigital examples: a concealed account demanding withdrawal of a suit under a threat of burning the claimant’s house calls for intimidation, aggravation and anonymity analysis. A forwarded rumour calling for violence between communities calls for the subsection-specific public-mischief analysis and exception. Merely forwarding material neither automatically proves nor excuses every element.\n\nExamination method: state the conduct and intention separately; connect every element to a fact; consider the relevant explanation or exception; then identify the punishment. An actual completed injury, riot or coerced act must not be inserted as a universal requirement when the relevant provision includes intention, likelihood or attempt."
+    },
+    {
+      "title": "Chhattisgarh state amendments: historical IPC 509A and 509B",
+      "sections": [],
+      "explanation": "The supplied state-amendment extract identifies Chhattisgarh Act 25 of 2015, Section 6. These are historical state-specific IPC insertions, not sections of the central IPC applicable throughout India.\n\n509A. Sexual harassment by relative\nA blood, adoption or marriage relative other than the husband takes advantage of proximity and induces, seduces or threatens the woman with intent to insult her modesty through word, gesture or act. Rigorous imprisonment: minimum one year, maximum five years; liability to fine. Do not omit the relationship, exclusion of husband or use of proximity.\n\n509B. Sexual harassment by electronic mode\nTransmission-related conduct through telecommunications or electronic modes, including the internet, covers the specified obscene, lewd, lascivious, filthy or indecent communications, with intent or knowledge concerning harassment, annoyance or mental agony to a woman. Rigorous imprisonment: minimum six months, maximum two years; liability to fine.\n\nTransition caution\nThere is no numbered one-to-one central BNS counterpart for these state insertions. Do not label them BNS 79A or 79B or assume automatic nationwide operation. BNS 79 and other provisions must be assessed on their own elements. Any claim about current state-law applicability requires the applicable state enactments, commencement and savings to be checked separately; this chapter does not assert that the historical insertions automatically amend the BNS."
+    }
+  ],
+  "keyPoints": [
+    "IPC 503 defines intimidation; 506 supplies its ordinary and aggravated punishment.",
+    "A threat to an interested deceased person’s reputation is expressly covered by the explanation.",
+    "IPC 504 requires intentional insult plus the prescribed provocation and mental element.",
+    "IPC 505(3) aggravates the subsection (2) offence in the specified religious setting.",
+    "The public-mischief exception needs reasonable grounds, good faith and absence of the specified intent.",
+    "IPC 507 adds up to two years for anonymity or deliberate concealment.",
+    "IPC 508 covers causing or attempting coercion through belief in Divine displeasure.",
+    "IPC 509 carries simple imprisonment up to three years and fine; it is distinct from physical assault.",
+    "IPC 510: historical fine up to ₹10; BNS 355: up to ₹1,000 and community service option.",
+    "Chhattisgarh 509A/509B are historical state amendments; do not invent a central BNS equivalent."
+  ],
+  "examFocus": "For a problem answer: determine the applicable code and territorial setting; identify the words or conduct, recipient or audience and protected interest; apply each mental element; distinguish definition, aggravation and anonymity; test the public-mischief exception where relevant; state the precise punishment and type of imprisonment. For state insertions identify both the jurisdiction and historical legislative source.",
+  "practice": [
+    {
+      "question": "A threatens to burn B’s house unless B abandons a civil suit. Analyse.",
+      "answer": "The threat concerns property injury and seeks omission of a lawful act. Apply IPC 503/506 or BNS 351 according to the date. The fire threat engages the aggravated punishment tier. The statutory illustration directly addresses this pattern."
+    },
+    {
+      "question": "Does every rude remark establish IPC 504?",
+      "answer": "No. Identify intentional insult, resulting provocation and intention or knowledge concerning likely breach of public peace or another offence. Context and the stated consequence matter."
+    },
+    {
+      "question": "Is public-mischief punishment always five years?",
+      "answer": "No. IPC 505(1) and (2) have a three-year maximum, fine, or both. The five-year maximum and liability to fine in (3) concern the subsection (2) offence in the specified religious location or assembly."
+    },
+    {
+      "question": "A circulator says a rumour was sincerely believed. Is that enough for the exception?",
+      "answer": "No. Address reasonable grounds for truth, good faith and absence of the specified intent together; sincerity does not replace the statutory conditions."
+    },
+    {
+      "question": "What must be proved before the anonymous-threat addition?",
+      "answer": "The underlying intimidation, followed by anonymous communication or precautions concealing name or abode. The additional maximum is two years; an anonymous message alone is not necessarily intimidation."
+    },
+    {
+      "question": "How do the two Divine-displeasure illustrations operate?",
+      "answer": "Both use the offender’s conduct or threatened conduct to induce a coercive belief in the target: sitting dhurna at the door in the first, and threatening the offender’s own child in the second. Apply the desired act or omission and the prescribed belief."
+    },
+    {
+      "question": "Is drunken presence in a public place alone enough under IPC 510?",
+      "answer": "No. Conduct causing annoyance to a person is also required. Compare the historical ₹10 ceiling with BNS 355’s ₹1,000 ceiling and community-service option."
+    },
+    {
+      "question": "Can Chhattisgarh 509A/509B be renamed BNS 79A/79B?",
+      "answer": "No. They are historical state IPC insertions. BNS 79 is the central counterpart to IPC 509; analyse other conduct under applicable provisions and verify any current state amendment separately."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNS 2023 — Sections 79, 351-355 and 358 (India Code)",
+      "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/20062/1/a202345.pdf"
+    },
+    {
+      "title": "Historical IPC — Chapter XXII, Sections 503-510 and state-amendment annotation",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}
