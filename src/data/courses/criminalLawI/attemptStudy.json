@@ -1,0 +1,91 @@
+{
+  "title": "CHAPTER XXIII - OF ATTEMPTS TO COMMIT OFFENCES",
+  "overview": "This chapter reproduces the supplied IPC Section 511 and both statutory illustrations, then explains the corresponding BNS Section 62. It covers the distinction between preparation and attempt, the need for an act towards commission, the priority of an express attempt provision, and the maximum punishment under the residual rule. It includes sentencing examples, revision notes and eight self-check questions.",
+  "objectives": [
+    "Identify IPC 511 and its counterpart, BNS 62.",
+    "Distinguish intention and preparation from conduct constituting an attempt.",
+    "Apply both statutory illustrations concerning an empty box and an empty pocket.",
+    "Check for a specific attempt provision before applying the residual rule.",
+    "Calculate the half-maximum imprisonment ceiling and the fraction-of-life rule.",
+    "Distinguish maximum punishment from a mandatory sentence and identify the available fine."
+  ],
+  "transition": "The IPC Chapter XXIII heading is retained for the course. BNS 62 is reorganised into Chapter IV, under the subheading Of attempt. It commenced on 1 July 2024. Identify the conduct date, BNS 358 repeal and savings, and Article 20(1) when selecting the applicable substantive code; the complaint date alone does not settle that question. The supplied IPC wording is reproduced with layout and editorial footnote markers normalised. This chapter follows Chapter XXII and concerns IPC 511 alone.",
+  "groups": [
+    {
+      "title": "Supplied IPC provision and BNS mapping",
+      "sections": [
+        "511"
+      ],
+      "explanation": "IPC 511 corresponds to BNS 62. The residual rule and both illustrations are carried forward; the code reference changes from the IPC to the BNS. Read the intended offence alongside the general attempt provision."
+    },
+    {
+      "title": "Ingredients, preparation and the two illustrations",
+      "sections": [],
+      "explanation": "Identify the intended offence first: specify what completed offence is alleged and its mental element. The residual provision concerns an offence under the applicable code punishable with life imprisonment or other imprisonment, or an attempt to cause such an offence to be committed. Do not treat it as a universal attempt provision for every special statute or a fine-only offence.\n\nAn act towards commission: a thought, intention or plan alone is insufficient. Explain how the proved conduct moves towards committing the identified offence, rather than simply arranging an opportunity. The boundary between preparation and attempt depends on the particular offence and facts; a mechanical last-act rule is not a substitute for analysing the conduct. A completed offence is not needed to establish an attempt.\n\nIllustration (a) — empty box: A breaks open a box to steal jewels and discovers that it contains none. The act towards theft has occurred; the absence of jewels does not defeat the attempt described in the illustration. An act of merely looking for a box must be analysed differently from the stated breaking-open conduct.\n\nIllustration (b) — empty pocket: A inserts a hand into Z’s pocket to steal, but the pocket is empty. The missing property prevents completed theft, yet the attempt described remains punishable. The intent to steal matters: accidentally touching a pocket is not the same conduct with the same mental element.\n\nScope of the illustrations: they address absence of the property sought. They do not establish that every impossible plan, innocent act or incomplete preparation is automatically punishable. Always identify the offence, mental element and act relied on.\n\nAttempt, abetment and conspiracy: an attempt concerns conduct towards commission; abetment and conspiracy have their own statutory elements. An agreement or assistance must not automatically be labelled an attempt without examining those distinctions."
+    },
+    {
+      "title": "Express attempt provisions and punishment calculation",
+      "sections": [],
+      "explanation": "Check the specific provision first. IPC 511 / BNS 62 operates where the applicable code makes no express provision for punishing that attempt. For example, attempted murder is expressly addressed by IPC 307 / BNS 109; do not replace its punishment with an automatic half of the punishment for completed murder. Other express attempt provisions must likewise be assessed on their own wording.\n\nFixed-term example: if the relevant completed offence carries a longest imprisonment term of seven years and no express attempt punishment applies, the residual ceiling is three years and six months. For a ten-year longest term it is five years. These are ceilings, not automatic sentences or minimum terms. The description of imprisonment is one provided for the intended offence.\n\nLife-imprisonment fraction: read IPC 57 / BNS 6. For calculating fractions, life imprisonment is reckoned as twenty years (BNS 6 says unless otherwise provided), making the one-half ceiling ten years under this calculation where the residual rule applies. This calculation does not mean an ordinary life sentence expires after twenty years.\n\nFine: the residual provision permits the fine provided for the intended offence, or both imprisonment and that fine. It does not direct that the fine be halved. Identify the fine authorised by the substantive offence rather than inventing a new amount.\n\nProblem-answer sequence: applicable code → intended offence and mental element → act towards commission → specific attempt provision check → residual maximum and fine. State any assumptions concerning the substantive punishment clearly."
+    }
+  ],
+  "keyPoints": [
+    "IPC 511 → BNS 62; this is a residual provision, not the punishment for every attempt.",
+    "An act towards committing the identified offence is required; mere intention is insufficient.",
+    "The intended offence must be punishable with life imprisonment or other imprisonment under the applicable code.",
+    "Both empty-property illustrations establish attempt on their stated facts despite failure to complete theft.",
+    "Use the express provision when the code separately punishes that attempt.",
+    "Half of a seven-year maximum is three years and six months; half of ten years is five years.",
+    "IPC 57 / BNS 6 govern life-imprisonment fractions; do not equate the calculation with the actual duration of all life sentences.",
+    "The half rule concerns imprisonment; the authorised fine is not automatically halved."
+  ],
+  "examFocus": "Name the intended offence and applicable code. Set out the proved intention or other required mental element and the exact act towards commission. Distinguish preparation on the facts and apply the statutory illustrations where analogous. Check for an express attempt provision before calculating a residual penalty. Give a maximum, not an automatic sentence, and distinguish the imprisonment calculation from the fine. Explain why failure to obtain property does not defeat the attempts in the illustrations.",
+  "practice": [
+    {
+      "question": "What is the BNS counterpart to IPC 511, and where is it placed?",
+      "answer": "BNS 62, under Of attempt in Chapter IV. The course retains the IPC Chapter XXIII heading."
+    },
+    {
+      "question": "A breaks open a box to steal jewels but the box is empty. Is the stated attempt defeated?",
+      "answer": "No. Illustration (a) identifies an act towards theft. The absence of jewels prevents completed theft but does not defeat the attempt described."
+    },
+    {
+      "question": "A inserts a hand into Z’s pocket intending to steal but finds nothing. Analyse.",
+      "answer": "Illustration (b) treats this as an attempt despite the empty pocket. Identify the intent to steal and the act towards commission; actual removal of property is unnecessary for this illustrated attempt."
+    },
+    {
+      "question": "Does buying equipment and forming a plan automatically establish an attempt?",
+      "answer": "No. Examine the identified offence and whether the conduct constitutes an act towards its commission rather than mere preparation. Intention alone is insufficient."
+    },
+    {
+      "question": "Should attempted murder always be sentenced at half the punishment for murder?",
+      "answer": "No. IPC 307 / BNS 109 is an express attempt provision. Assess that provision rather than automatically applying the residual rule."
+    },
+    {
+      "question": "An offence has a seven-year longest imprisonment term and no express attempt punishment. What is the residual ceiling?",
+      "answer": "Three years and six months, subject to the residual provision applying and the description of imprisonment provided for the offence. It is a maximum, not a mandatory sentence."
+    },
+    {
+      "question": "How is one-half of life imprisonment calculated here?",
+      "answer": "Read IPC 57 / BNS 6: life is reckoned as twenty years for fractions, yielding a ten-year half ceiling where this residual calculation applies. BNS 6 qualifies the rule with unless otherwise provided. It does not make every life sentence a twenty-year sentence."
+    },
+    {
+      "question": "Does the provision require halving the fine too?",
+      "answer": "No. It permits the fine provided for the intended offence, or both that fine and the permitted imprisonment. The half formula addresses imprisonment."
+    }
+  ],
+  "sources": [
+    {
+      "title": "BNS 2023 — Sections 62, 6, 109 and 358 (India Code)",
+      "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/20062/1/a202345.pdf"
+    },
+    {
+      "title": "Historical IPC — Chapter XXIII Section 511; Sections 57 and 307",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}

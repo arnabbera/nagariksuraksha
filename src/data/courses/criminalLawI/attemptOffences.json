@@ -1,0 +1,10 @@
+[
+  {
+    "ipc": "511",
+    "title": "Punishment for attempting to commit offences punishable with imprisonment for life or other imprisonment",
+    "bns": "62",
+    "statusNote": "Historical IPC text supplied for study. BNS Section 62 is the counterpart; select the applicable code by the conduct date and the repeal-and-savings rules.",
+    "statutoryText": "Whoever attempts to commit an offence punishable by this Code with imprisonment for life or imprisonment, or to cause such an offence to be committed, and in such attempt does any act towards the commission of the offence, shall, where no express provision is made by this Code for the punishment of such attempt, be punished with imprisonment of any description provided for the offence, for a term which may extend to one-half of the imprisonment for life or, as the case may be, one-half of the longest term of imprisonment provided for that offence, or with such fine as is provided for the offence, or with both.\n\nIllustrations\n(a) A makes an attempt to steal some jewels by breaking open a box, and finds after so opening the box, that there is no jewel in it. He has done an act towards the commission of theft, and therefore is guilty under this section.\n(b) A makes an attempt to pick the pocket of Z by thrusting his hand into Z’s pocket. A fails in the attempt in consequence of Z’s having nothing in his pocket. A is guilty under this section.",
+    "note": "This is a residual attempt provision. Identify the intended substantive offence, the applicable mental element and an act towards its commission; then check whether the code expressly punishes that particular attempt elsewhere. The empty box and empty pocket illustrate that absence of the intended property does not defeat liability on those facts. Actual acquisition of property would belong to analysis of the completed offence rather than being a prerequisite for these attempts."
+  }
+]
