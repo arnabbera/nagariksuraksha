@@ -1059,6 +1059,17 @@ export default function ChapterLearning() {
     );
   };
 
+  const backToCourseButton = course?.slug ? (
+    <Button
+      variant="outline"
+      leftIcon={<FaChevronLeft aria-hidden="true" />}
+      onClick={() => navigate(`/student/courses/${course.slug}`)}
+      aria-label={`Back to Course: ${course.title}`}
+    >
+      Back to Course
+    </Button>
+  ) : null;
+
   // =========================================================
   // LOADING
   // =========================================================
@@ -1098,6 +1109,7 @@ export default function ChapterLearning() {
   if (!canReadPdf) {
     return (
       <div className="ns-learning-page">
+        <div style={{ marginBottom: 18 }}>{backToCourseButton}</div>
         <PageHeader
           title="Course Enrollment Required"
           description={course.title}
@@ -1125,6 +1137,7 @@ export default function ChapterLearning() {
 
   return (
     <div className="ns-learning-page">
+      <div style={{ marginBottom: 18 }}>{backToCourseButton}</div>
       <PageHeader
         title={
           chapter.title
@@ -1930,6 +1943,8 @@ export default function ChapterLearning() {
             : undefined
         }
       />
+
+      <div style={{ marginTop: 18 }}>{backToCourseButton}</div>
 
       <LearningStyles />
     </div>
