@@ -1,0 +1,42 @@
+[
+  {
+    "ipc": "1",
+    "title": "Title and extent of operation of the Code",
+    "bns": "1(1) (short title); read commencement separately under 1(2)",
+    "statutoryText": "This Act shall be called the Indian Penal Code, and shall extend to the whole of India.",
+    "note": "This names the historical Code and states its territorial extent in the supplied amended text. Do not read the modern amended wording as an unchanged transcription of the law enacted in 1860. BNS 1(1) supplies the new short title; commencement is separately governed by 1(2).",
+    "statusNote": "Supplied historical IPC provision; BNS correspondence and explanation appear separately below."
+  },
+  {
+    "ipc": "2",
+    "title": "Punishment of offences committed within India",
+    "bns": "1(3)",
+    "statutoryText": "Every person shall be liable to punishment under this Code and not otherwise for every act or omission contrary to the provisions thereof, of which he shall be guilty within India.",
+    "note": "The territorial rule refers to every person, rather than Indian citizens alone, and covers an act or omission contrary to the Code. Presence or nationality is not itself proof of the ingredients of an offence. Identify the alleged conduct, its location and the substantive provision violated; consider any independently applicable immunity or exception separately.",
+    "statusNote": "Supplied historical IPC provision; BNS correspondence and explanation appear separately below."
+  },
+  {
+    "ipc": "3",
+    "title": "Punishment of offences committed beyond, but which by law may be tried within, India",
+    "bns": "1(4)",
+    "statutoryText": "Any person liable, by any Indian law, to be tried for an offence committed beyond India shall be dealt with according to the provisions of this Code for any act committed beyond India in the same manner as if such act had been committed within India.",
+    "note": "This deals with a person already made liable by Indian law to trial for an offence outside India. Identify the legal basis permitting the Indian trial; Section 3 is not a blanket claim of jurisdiction over every foreign act by every foreign person. Once its conditions are met, the Code applies in the stated manner.",
+    "statusNote": "Supplied historical IPC provision; BNS correspondence and explanation appear separately below."
+  },
+  {
+    "ipc": "4",
+    "title": "Extension of Code to extra-territorial offences",
+    "bns": "1(5)(a)-(c) and explanation",
+    "statutoryText": "The provisions of this Code apply also to any offence committed by-\n(1) any citizen of India in any place without and beyond India;\n(2) any person on any ship or aircraft registered in India wherever it may be;\n(3) any person in any place without and beyond India committing offence targeting a computer resource located in India.\n\nExplanation.-In this section-\n(a) the word “offence” includes every act committed outside India which, if committed in India, would be punishable under this Code;\n(b) the expression “computer resource” shall have the meaning assigned to it in clause (k) of sub-section (1) of section 2 of the Information Technology Act, 2000 (21 of 2000).\n\nIllustration\nA, who is a citizen of India, commits a murder in Uganda. He can be tried and convicted of murder in any place in India in which he may be found.",
+    "note": "Apply the three connections with India separately: citizenship; an Indian-registered ship or aircraft; or targeting a computer resource located in India from abroad. Citizenship is not a condition of the ship/aircraft or computer-resource limbs, which refer to any person. The offence explanation asks whether the foreign act would be punishable if committed in India. The Uganda illustration supplies a citizenship connection, not a universal rule for every person committing an offence abroad. Procedural requirements for an overseas offence remain a separate inquiry.",
+    "statusNote": "Supplied historical IPC provision; BNS correspondence and explanation appear separately below."
+  },
+  {
+    "ipc": "5",
+    "title": "Certain laws not to be affected by this Act",
+    "bns": "1(6)",
+    "statutoryText": "Nothing in this Act shall affect the provisions of any Act for punishing mutiny and desertion of officers, soldiers, sailors or airmen in the service of the Government of India or the provisions of any special or local law.",
+    "note": "The general Penal Code preserves the stated service-law provisions and special or local laws. Identify the applicable special enactment and its own conditions. This is a saving clause, not immunity for all service personnel and not a declaration that only one statute can ever be relevant to a set of facts.",
+    "statusNote": "Supplied historical IPC provision; BNS correspondence and explanation appear separately below."
+  }
+]

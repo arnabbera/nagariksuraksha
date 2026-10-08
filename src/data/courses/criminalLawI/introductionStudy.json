@@ -1,0 +1,99 @@
+{
+  "title": "CHAPTER I - INTRODUCTION",
+  "enactmentDate": "[6th October, 1860.]",
+  "preamble": "Preamble.-WHEREAS it is expedient to provide a general Penal Code for India; It is enacted as follows:-",
+  "overview": "This rewritten introduction reproduces the supplied IPC preamble and Sections 1-5, including all three extra-territorial limbs, both explanation clauses, the Uganda illustration and the saving for service, special and local laws. Section-specific notes compare these rules with BNS Section 1 and explain how to identify the applicable code, the location of the alleged conduct and its connection with India.",
+  "objectives": [
+    "Read the supplied preamble and each of IPC Sections 1-5.",
+    "Distinguish the enactment date shown in the extract from commencement and later amendments.",
+    "Map the title, territorial, overseas-trial, extra-territorial and saving provisions to BNS Section 1.",
+    "Apply all three extra-territorial connections separately.",
+    "Explain the offence and computer-resource explanations and the Uganda illustration.",
+    "Preserve the role of service, special and local laws.",
+    "Select the substantive code by the conduct date and relevant savings rather than the complaint date alone."
+  ],
+  "transition": "The supplied heading records 6 October 1860, the historical enactment date. It is not the BNS commencement date. The extract incorporates later amendments; editorial footnote numbers, amendment brackets and deletion stars have been removed for readability while retaining its supplied substantive wording. The relevant BNS introductory provisions commenced on 1 July 2024. For a live matter, identify the date of each alleged act and apply BNS 358 repeal and savings together with Article 20(1); a later complaint does not automatically convert pre-commencement conduct into a BNS offence. Keep procedural questions under the relevant procedure law separate from substantive jurisdiction.",
+  "groups": [
+    {
+      "title": "Supplied IPC preamble and provisions with BNS comparison",
+      "sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "explanation": "The IPC introductory provisions are substantially consolidated in BNS Section 1: IPC 1’s title corresponds to BNS 1(1); IPC 2 to 1(3); IPC 3 to 1(4); IPC 4 to 1(5); IPC 5 to 1(6). BNS 1(2) separately concerns commencement. This is a subject comparison, not a claim that every word or explanation is reproduced identically."
+    },
+    {
+      "title": "Territorial and extra-territorial application",
+      "sections": [],
+      "explanation": "Within India: begin with the location of the alleged act or omission and its offence ingredients. The phrase every person is broader than citizenship. Do not infer guilt merely from being present within India.\n\nOutside India: identify the statutory connection rather than assuming jurisdiction. IPC 3 concerns acts for which another Indian law makes a person liable to an Indian trial; IPC 4 expressly adds citizenship, Indian ship/aircraft registration and the location of a targeted computer resource.\n\nCitizenship example: the supplied illustration concerns an Indian citizen committing murder in Uganda. Its teaching point is the citizenship limb. The BNS illustration generalises the foreign location rather than naming Uganda. It does not eliminate separate procedural conditions for inquiry or trial.\n\nShip or aircraft example: for conduct aboard a ship or aircraft abroad, identify whether it is registered in India. A passenger’s Indian citizenship is not a stated requirement of this limb; the clause says any person.\n\nComputer-resource example: where conduct abroad targets a resource in India, record evidence of the targeting and the resource’s location. Merely using the internet or having an Indian victim does not substitute for those stated elements. The substantive offence must still be established.\n\nDefinition reference: the supplied IPC 4 explanation incorporates IT Act 2(1)(k), which defines computer resource to include a computer, computer system, computer network, data, computer database or software. Do not narrow it to physical hardware alone. BNS 1 retains the offence explanation; its explanation does not separately reproduce IPC 4’s IT Act definition cross-reference. Consult the relevant definitions when analysing a technical fact pattern.\n\nSaving clause: IPC 5 / BNS 1(6) preserves the named mutiny/desertion enactments and special or local laws. Evaluate that legislation on its own terms; the general saving does not automatically establish an offence or confer a defence."
+    }
+  ],
+  "keyPoints": [
+    "6 October 1860 in the supplied heading is the IPC enactment date, not the commencement of the BNS.",
+    "The supplied amended IPC Section 1 says the whole of India.",
+    "IPC 2 / BNS 1(3) covers every person and prohibited acts or omissions within India.",
+    "IPC 3 / BNS 1(4) requires a legal basis for trying the overseas offence in India.",
+    "IPC 4 / BNS 1(5) covers Indian citizens abroad, any person on Indian-registered ships/aircraft, and overseas targeting of an Indian computer resource.",
+    "The supplied offence explanation tests whether the foreign act would be punishable if committed within India.",
+    "IPC 4 incorporates IT Act 2(1)(k) for computer resource; do not invent an identical cross-reference in BNS 1.",
+    "The Uganda illustration depends on Indian citizenship.",
+    "IPC 5 / BNS 1(6) preserves service, special and local laws.",
+    "Use the conduct date, BNS 358 and Article 20(1) to assess the IPC-to-BNS transition."
+  ],
+  "examFocus": "State the conduct date and applicable substantive code. Identify whether the alleged act or omission occurred within India or abroad. For conduct abroad, specify the legal basis for trial and the precise citizenship, registration or computer-resource connection. Apply the offence explanation and any relevant definitions. Discuss special or local law separately. Do not conflate substantive application, procedural permission, trial venue or proof of guilt.",
+  "practice": [
+    {
+      "question": "What does [6th October, 1860.] represent in the supplied extract?",
+      "answer": "The historical IPC enactment date shown in the heading. It must be distinguished from commencement, later amendments and the BNS commencement on 1 July 2024."
+    },
+    {
+      "question": "Give the introductory IPC-to-BNS mapping.",
+      "answer": "IPC 1’s title corresponds to BNS 1(1); IPC 2 to 1(3); IPC 3 to 1(4); IPC 4 to 1(5); and IPC 5 to 1(6). BNS 1(2) separately addresses commencement."
+    },
+    {
+      "question": "Does the territorial rule apply only to Indian citizens?",
+      "answer": "No. IPC 2 / BNS 1(3) uses every person. Establish the act or omission, location and offence ingredients, while considering independently applicable exceptions or immunity."
+    },
+    {
+      "question": "Does IPC 3 automatically cover every offence committed anywhere by anyone?",
+      "answer": "No. Identify the Indian law making the person liable to be tried in India for that overseas offence. The provision cannot be treated as unrestricted worldwide jurisdiction."
+    },
+    {
+      "question": "Explain the Uganda illustration.",
+      "answer": "A is an Indian citizen who commits murder in Uganda; the supplied illustration permits Indian trial and conviction where A may be found. Citizenship supplies the extra-territorial connection. Procedural requirements remain separate."
+    },
+    {
+      "question": "Must a person aboard an Indian-registered aircraft abroad also be an Indian citizen for this limb?",
+      "answer": "No. The ship/aircraft limb says any person. Establish Indian registration and the alleged conduct rather than inserting a citizenship condition."
+    },
+    {
+      "question": "A person abroad targets software located in India. What should be checked?",
+      "answer": "The substantive offence, evidence of targeting, and resource location. The supplied IPC explanation incorporates IT Act 2(1)(k), which includes software as a computer resource."
+    },
+    {
+      "question": "Does the general Code abolish special or local penal laws, and does a later complaint decide the applicable code?",
+      "answer": "No to both. IPC 5 / BNS 1(6) preserves the stated laws. For transition, analyse the conduct date with repeal and savings and constitutional protection; complaint timing alone is insufficient."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Historical IPC - preamble and Chapter I, Sections 1-5",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/15289/1/ipc_act.pdf"
+    },
+    {
+      "title": "BNS 2023 - Section 1 and Section 358 (India Code)",
+      "url": "https://www.indiacode.nic.in/indiacode/bitstream/123456789/20062/1/a202345.pdf"
+    },
+    {
+      "title": "Information Technology Act 2000 - Section 2(1)(k)",
+      "url": "https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf"
+    },
+    {
+      "title": "BNS commencement notification S.O. 850(E), 23 February 2024",
+      "url": "https://www.mha.gov.in/sites/default/files/BhartiyaNyayaSanhita_24022024.pdf"
+    }
+  ]
+}
