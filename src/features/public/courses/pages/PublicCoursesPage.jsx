@@ -363,16 +363,7 @@ export default function PublicCoursesPage() {
                 </span>
               </div>
 
-              <div className="courses-share" aria-label="Share Certificate Courses">
-                <strong>Share this page</strong>
-                <div>
-                  <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(CERTIFICATE_COURSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
-                  <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(CERTIFICATE_COURSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
-                  <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE}\n${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
-                  <button type="button" className="is-like" onClick={handleLike} disabled={likes === null || liked || likePending} aria-label={liked ? `Liked, ${likes} likes` : `Like this page, ${likes ?? 0} likes`} aria-pressed={liked}><FaHeart /> {liked ? "Liked" : "Like"} · {likes ?? "…"}</button>
-                </div>
-                {likeError && <p className="courses-share-error" role="status">{likeError}</p>}
-              </div>
+
             </div>
 
             <div className="courses-hero-visual">
@@ -693,6 +684,23 @@ export default function PublicCoursesPage() {
           </div>
         </section>
 
+        {/* SHARE AT THE BOTTOM OF THE PAGE */}
+
+        <section className="courses-share-section">
+          <div className="courses-container">
+            <div className="courses-share" aria-label="Share Certificate Courses">
+              <strong>Share this page</strong>
+              <div>
+                <a className="is-facebook" href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(CERTIFICATE_COURSES_URL)}`} target="_blank" rel="noreferrer" aria-label="Share on Facebook"><FaFacebookF /> Facebook</a>
+                <a className="is-twitter" href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(CERTIFICATE_COURSES_URL)}&text=${encodeURIComponent(SHARE_MESSAGE)}`} target="_blank" rel="noreferrer" aria-label="Share on Twitter"><FaTwitter /> Twitter</a>
+                <a className="is-whatsapp" href={`https://wa.me/?text=${encodeURIComponent(`${SHARE_MESSAGE}\n${CERTIFICATE_COURSES_URL}`)}`} target="_blank" rel="noreferrer" aria-label="Share on WhatsApp"><FaWhatsapp /> WhatsApp</a>
+                <button type="button" className="is-like" onClick={handleLike} disabled={likes === null || liked || likePending} aria-label={liked ? `Liked, ${likes} likes` : `Like this page, ${likes ?? 0} likes`} aria-pressed={liked}><FaHeart /> {liked ? "Liked" : "Like"} · {likes ?? "…"}</button>
+              </div>
+              {likeError && <p className="courses-share-error" role="status">{likeError}</p>}
+            </div>
+          </div>
+        </section>
+
         <style>
           {`
             .public-courses-page,
@@ -822,9 +830,13 @@ export default function PublicCoursesPage() {
               color: #4ade80;
             }
 
+            .courses-share-section {
+              padding: 32px 0 48px;
+            }
+
             .courses-share {
               display: inline-block;
-              margin-top: 28px;
+              margin-top: 0;
               padding: 15px 17px;
               border: 1px solid #e2b15f;
               border-radius: 14px;
