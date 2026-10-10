@@ -496,6 +496,11 @@ export default function PublicCourseDetailsPage() {
     course.slug ===
     "code-of-civil-procedure-and-limitation";
 
+  const isCriminalLawCourse = [
+    "criminal-law-i",
+    "criminal-law-i-transitioning-from-ipc-to-bns",
+  ].includes(course.slug || course.id);
+
   const courseCanonicalUrl =
     `${SEO_CONFIG.siteUrl}/courses/${course.slug}`;
 
@@ -734,6 +739,32 @@ export default function PublicCourseDetailsPage() {
                   </p>
                 )}
               </div>
+
+              {isCriminalLawCourse && course.curriculum?.length > 0 && (
+                <div className="criminal-law-course-outline">
+                  <h2>What You Will Learn</h2>
+                  <ul className="criminal-law-outcomes">
+                    {course.learningOutcomes.map((outcome) => (
+                      <li key={outcome}>{outcome}</li>
+                    ))}
+                  </ul>
+
+                  <h2>{course.curriculum.length}-Chapter Curriculum</h2>
+                  <p>
+                    Follow the IPC chapter sequence below, with BNS comparisons
+                    in the individual lessons. Chapters VA, IXA and XXA are
+                    separate lessons within the 26-chapter course.
+                  </p>
+                  <ol className="criminal-law-curriculum">
+                    {course.curriculum.map((chapter) => (
+                      <li key={chapter.id}>{chapter.title}</li>
+                    ))}
+                  </ol>
+
+                  <h2>How to Study This Course</h2>
+                  <p>{course.studyApproach}</p>
+                </div>
+              )}
 
               {isCivilProcedureCourse && (
                 <button
@@ -1382,6 +1413,48 @@ export default function PublicCourseDetailsPage() {
 
             .what-you-learn {
               margin-top: 35px;
+            }
+
+            .criminal-law-course-outline {
+              margin-top: 32px;
+            }
+
+            .criminal-law-course-outline h2 {
+              margin-top: 30px;
+            }
+
+            .criminal-law-course-outline p,
+            .criminal-law-outcomes li {
+              color: #475569;
+              font-size: 14px;
+              line-height: 1.8;
+            }
+
+            .criminal-law-outcomes {
+              padding-left: 22px;
+            }
+
+            .criminal-law-outcomes li + li {
+              margin-top: 10px;
+            }
+
+            .criminal-law-curriculum {
+              padding-left: 28px;
+              margin-top: 20px;
+            }
+
+            .criminal-law-curriculum li {
+              padding: 12px 10px;
+              border-bottom: 1px solid #e2e8f0;
+              color: #334155;
+              font-size: 13px;
+              line-height: 1.65;
+              overflow-wrap: anywhere;
+            }
+
+            .criminal-law-curriculum li::marker {
+              color: #2563eb;
+              font-weight: 700;
             }
 
             .learning-benefits-grid {

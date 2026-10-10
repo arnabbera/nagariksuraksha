@@ -1,4 +1,5 @@
 import introductionStudy from "./criminalLawI/introductionStudy.json";
+import { criminalLawIOverview } from "./criminalLawI/overview";
 import introductionProvisions from "./criminalLawI/introductionProvisions.json";
 import { attemptOffencesChapter } from "./criminalLawI/attemptChapter";
 import { intimidationOffencesChapter } from "./criminalLawI/intimidationChapter";
@@ -18,10 +19,8 @@ export const criminalLawICourse = createCourseModel({
   id: CRIMINAL_LAW_I_COURSE_ID,
   title: "Criminal Law I (Transitioning from IPC to BNS)",
   slug: CRIMINAL_LAW_I_COURSE_ID,
-  shortDescription:
-    "Study the foundational principles of Indian criminal law while understanding the transition from the Indian Penal Code, 1860 to the Bharatiya Nyaya Sanhita, 2023.",
-  description:
-    "A structured twenty-four-chapter course covering criminal liability, general exceptions, abetment, conspiracy, offences against the State, armed forces, public tranquillity, public servants, elections, lawful public authority, false evidence, coins, weights and measures, and other major offences, with IPC-to-BNS comparisons.",
+  shortDescription: criminalLawIOverview.shortDescription,
+  description: criminalLawIOverview.description,
   duration: "Self-paced",
   courseType: "subject-course",
   accessType: "paid-enrollment",
@@ -35,15 +34,14 @@ export const criminalLawICourse = createCourseModel({
   },
   featured: false,
   order: 6,
-  totalChapters: 24,
+  totalChapters: 26,
   status: "draft",
   createdBy: "system",
   updatedBy: "system",
   seo: {
     title:
       "Criminal Law I: IPC to BNS Course | Sanhita360",
-    description:
-      "Study Indian criminal law through sixteen structured chapters covering IPC principles, offences and their transition to the Bharatiya Nyaya Sanhita, 2023.",
+    description: criminalLawIOverview.seoDescription,
     focusKeyword: "criminal law IPC to BNS course",
     secondaryKeywords: [
       "Bharatiya Nyaya Sanhita course",
