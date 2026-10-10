@@ -2,6 +2,7 @@ import { createCourseModel } from "../models/CourseModel";
 import courseRepository from "../repositories/CourseRepository";
 import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinciplesOfContract";
 import { criminalLawICourse, criminalLawIChapters } from "../data/courses/criminalLawI";
+import { criminalLawIOverview } from "../data/courses/criminalLawI/overview";
 import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 import { environmentalLawCourse } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeCourse } from "../data/courses/humanRightsLawAndPractice";
@@ -44,6 +45,22 @@ const withPublishedChapterTotal = (course) => {
 
   return {
     ...course,
+    ...(["criminal-law-i", "criminal-law-i-transitioning-from-ipc-to-bns"].includes(courseKey)
+      ? {
+          shortDescription: criminalLawIOverview.shortDescription,
+          description: criminalLawIOverview.description,
+          learningOutcomes: criminalLawIOverview.learningOutcomes,
+          studyApproach: criminalLawIOverview.studyApproach,
+          curriculum: criminalLawIChapters.map(({ id, title }) => ({ id, title })),
+          seo: {
+            ...course.seo,
+            title: criminalLawICourse.seo.title,
+            description: criminalLawIOverview.seoDescription,
+            ogTitle: criminalLawICourse.seo.title,
+            ogDescription: criminalLawIOverview.seoDescription,
+          },
+        }
+      : {}),
     totals: {
       ...(course.totals || {}),
       chapters: publishedTotal,
