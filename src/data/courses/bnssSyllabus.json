@@ -1,0 +1,3035 @@
+{
+  "title": "Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)",
+  "stage": "course-structure",
+  "sourceDocument": "Pasted text(6).txt",
+  "officialSource": "https://www.mha.gov.in/sites/default/files/2026-02/3_250884_2_english_01042024.pdf",
+  "sourceNote": "Topics follow the supplied clause arrangement. Chapter labels and section ranges follow the enacted Act. Source clause numbers are retained for provenance and are not represented as enacted section numbers.",
+  "chapters": [
+    {
+      "number": 1,
+      "roman": "I",
+      "title": "PRELIMINARY",
+      "sectionStart": 1,
+      "sectionEnd": 5,
+      "topics": [
+        {
+          "sourceClause": 1,
+          "title": "Short title, extent and commencement.",
+          "group": ""
+        },
+        {
+          "sourceClause": 2,
+          "title": "Definitions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 3,
+          "title": "Construction of references.",
+          "group": ""
+        },
+        {
+          "sourceClause": 4,
+          "title": "Trial of offences under Bhartiya Nyaya Sanhita and other laws.",
+          "group": ""
+        },
+        {
+          "sourceClause": 5,
+          "title": "Saving.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "roman": "II",
+      "title": "CONSTITUTION OF CRIMINAL COURTS AND OFFICES",
+      "sectionStart": 6,
+      "sectionEnd": 20,
+      "topics": [
+        {
+          "sourceClause": 6,
+          "title": "Classes of Criminal Courts.",
+          "group": ""
+        },
+        {
+          "sourceClause": 7,
+          "title": "Territorial divisions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 8,
+          "title": "Court of Session.",
+          "group": ""
+        },
+        {
+          "sourceClause": 9,
+          "title": "Courts of Judicial Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 10,
+          "title": "Chief Judicial Magistrate and Additional Chief Judicial Magistrate, etc.",
+          "group": ""
+        },
+        {
+          "sourceClause": 11,
+          "title": "Special Judicial Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 12,
+          "title": "Local jurisdiction of Judicial Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 13,
+          "title": "Subordination of Judicial Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 14,
+          "title": "Executive Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 15,
+          "title": "Special Executive Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 16,
+          "title": "Local Jurisdiction of Executive Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 17,
+          "title": "Subordination of Executive Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 18,
+          "title": "Public Prosecutors.",
+          "group": ""
+        },
+        {
+          "sourceClause": 19,
+          "title": "Assistant Public Prosecutors.",
+          "group": ""
+        },
+        {
+          "sourceClause": 20,
+          "title": "Directorate of Prosecution.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "roman": "III",
+      "title": "POWER OF COURTS",
+      "sectionStart": 21,
+      "sectionEnd": 29,
+      "topics": [
+        {
+          "sourceClause": 21,
+          "title": "Courts by which offences are triable.",
+          "group": ""
+        },
+        {
+          "sourceClause": 22,
+          "title": "Sentences which High Courts and Sessions Judges may pass.",
+          "group": ""
+        },
+        {
+          "sourceClause": 23,
+          "title": "Sentences which Magistrates may pass.",
+          "group": ""
+        },
+        {
+          "sourceClause": 24,
+          "title": "Sentence of imprisonment in default of fine.",
+          "group": ""
+        },
+        {
+          "sourceClause": 25,
+          "title": "Sentence in cases of conviction of several offences at one trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 26,
+          "title": "Mode of conferring powers.",
+          "group": ""
+        },
+        {
+          "sourceClause": 27,
+          "title": "Powers of officers appointed.",
+          "group": ""
+        },
+        {
+          "sourceClause": 28,
+          "title": "Withdrawal of powers.",
+          "group": ""
+        },
+        {
+          "sourceClause": 29,
+          "title": "Powers of Judges and Magistrates exercisable by their successors-in-office.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "roman": "IV",
+      "title": "POWERS OF SUPERIOR OFFICERS OF POLICE AND AID TO THE MAGISTRATES AND THE POLICE",
+      "sectionStart": 30,
+      "sectionEnd": 34,
+      "topics": [
+        {
+          "sourceClause": 30,
+          "title": "Powers of superior officers of police.",
+          "group": ""
+        },
+        {
+          "sourceClause": 31,
+          "title": "Public when to assist Magistrates and police.",
+          "group": ""
+        },
+        {
+          "sourceClause": 32,
+          "title": "Aid to person, other than police officer, executing warrant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 33,
+          "title": "Public to give information of certain offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 34,
+          "title": "Duty of officers employed in connection with the affairs of a village to make certain report.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "roman": "V",
+      "title": "ARREST OF PERSONS",
+      "sectionStart": 35,
+      "sectionEnd": 62,
+      "topics": [
+        {
+          "sourceClause": 35,
+          "title": "When policemay arrest without warrant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 36,
+          "title": "Procedure of arrest and duties of officer making arrest.",
+          "group": ""
+        },
+        {
+          "sourceClause": 37,
+          "title": "Designated Police Officer.",
+          "group": ""
+        },
+        {
+          "sourceClause": 38,
+          "title": "Right of arrested person to meet an advocate of his choice during interrogation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 39,
+          "title": "Arrest on refusal to give name and residence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 40,
+          "title": "Arrest by private person and procedure on such arrest.",
+          "group": ""
+        },
+        {
+          "sourceClause": 41,
+          "title": "Arrest by Magistrate.",
+          "group": ""
+        },
+        {
+          "sourceClause": 42,
+          "title": "Protection of members of the Armed Forces from arrest.",
+          "group": ""
+        },
+        {
+          "sourceClause": 43,
+          "title": "Arrest how made.",
+          "group": ""
+        },
+        {
+          "sourceClause": 44,
+          "title": "Search of place entered by person sought to be arrested.",
+          "group": ""
+        },
+        {
+          "sourceClause": 45,
+          "title": "Pursuit of offenders into other jurisdictions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 46,
+          "title": "No unnecessary restraint.",
+          "group": ""
+        },
+        {
+          "sourceClause": 47,
+          "title": "Person arrested to be informed of grounds of arrest and of right to bail.",
+          "group": ""
+        },
+        {
+          "sourceClause": 48,
+          "title": "Obligation of person making arrest to inform about the arrest, etc., to relative or friend.",
+          "group": ""
+        },
+        {
+          "sourceClause": 49,
+          "title": "Search of arrested person.",
+          "group": ""
+        },
+        {
+          "sourceClause": 50,
+          "title": "Power to seize offensive weapons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 51,
+          "title": "Examination of accused by medical practitioner at the request of police officer.",
+          "group": ""
+        },
+        {
+          "sourceClause": 52,
+          "title": "Examination of person accused of rape by medical practitioner.",
+          "group": ""
+        },
+        {
+          "sourceClause": 53,
+          "title": "Examination of arrested person by medical officer.",
+          "group": ""
+        },
+        {
+          "sourceClause": 54,
+          "title": "Identification of person arrested.",
+          "group": ""
+        },
+        {
+          "sourceClause": 55,
+          "title": "Procedure when police officer deputes subordinate to arrest without warrant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 56,
+          "title": "Health and safety of arrested person.",
+          "group": ""
+        },
+        {
+          "sourceClause": 57,
+          "title": "Person arrested to be taken before Magistrate or officer in charge of police station.",
+          "group": ""
+        },
+        {
+          "sourceClause": 58,
+          "title": "Person arrested not to be detained more than twenty-four hours.",
+          "group": ""
+        },
+        {
+          "sourceClause": 59,
+          "title": "Police to report apprehensions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 60,
+          "title": "Discharge of person apprehended.",
+          "group": ""
+        },
+        {
+          "sourceClause": 61,
+          "title": "Power, on escape, to pursue and retake.",
+          "group": ""
+        },
+        {
+          "sourceClause": 62,
+          "title": "Arrest to be made strictly according to the Sanhita.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "roman": "VI",
+      "title": "PROCESSES TO COMPEL APPEARANCE",
+      "sectionStart": 63,
+      "sectionEnd": 93,
+      "topics": [
+        {
+          "sourceClause": 63,
+          "title": "Form of summons.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 64,
+          "title": "Summons how served.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 65,
+          "title": "Service of summons on corporate bodies, firms, and societies.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 66,
+          "title": "Service when persons summoned cannot be found.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 67,
+          "title": "Procedure when service cannot be effected as before provided.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 68,
+          "title": "Service on Government servant.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 69,
+          "title": "Service of summons outside local limits.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 70,
+          "title": "Proof of service in such cases and when serving officer not present.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 71,
+          "title": "Service of summons on witness by post.",
+          "group": "A.—Summons"
+        },
+        {
+          "sourceClause": 72,
+          "title": "Form of warrant of arrest and duration.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 73,
+          "title": "Power to direct security to be taken.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 74,
+          "title": "Warrants to whom directed.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 75,
+          "title": "Warrant may be directed to any person.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 76,
+          "title": "Warrant directed to police officer.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 77,
+          "title": "Notification of substance of warrant.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 78,
+          "title": "Where warrant may be executed.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 79,
+          "title": "Where warrant may be executed.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 80,
+          "title": "Warrant forwarded for execution outside jurisdiction.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 81,
+          "title": "Warrant directed to police officer for execution outside jurisdiction.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 82,
+          "title": "Procedure on arrest of person against whom warrant issued.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 83,
+          "title": "Procedure by Magistrate before whom such person arrested is brought.",
+          "group": "B.—Warrant of arrest"
+        },
+        {
+          "sourceClause": 84,
+          "title": "Proclamation for person absconding.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 85,
+          "title": "Attachment of property of person absconding.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 86,
+          "title": "Identification and attachment of property of proclaimed person.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 87,
+          "title": "Claims and objections to attachment.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 88,
+          "title": "Release, sale and restoration of attached property.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 89,
+          "title": "Appeal from order rejecting application for restoration of attached property.",
+          "group": "C.—Proclamation and attachment"
+        },
+        {
+          "sourceClause": 90,
+          "title": "Issue of warrant in lieu of, or in addition to, summons.",
+          "group": "D.—Other rules regarding processes"
+        },
+        {
+          "sourceClause": 91,
+          "title": "Power to take bond for appearance.",
+          "group": "D.—Other rules regarding processes"
+        },
+        {
+          "sourceClause": 92,
+          "title": "Arrest on breach of bond for appearance.",
+          "group": "D.—Other rules regarding processes"
+        },
+        {
+          "sourceClause": 93,
+          "title": "Provisions of this Chapter generally applicable to summonses and warrants of arrest.",
+          "group": "D.—Other rules regarding processes"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "roman": "VII",
+      "title": "PROCESS TO COMPEL THE PRODUCTION OF THINGS",
+      "sectionStart": 94,
+      "sectionEnd": 110,
+      "topics": [
+        {
+          "sourceClause": 94,
+          "title": "Summons to produce document or other thing.",
+          "group": "A.—Summons to produce"
+        },
+        {
+          "sourceClause": 95,
+          "title": "Procedure as to letters and telegrams.",
+          "group": "A.—Summons to produce"
+        },
+        {
+          "sourceClause": 96,
+          "title": "When search-warrant may be issued.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 97,
+          "title": "Search of place suspected to contain stolen property, forged documents, etc.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 98,
+          "title": "Power to declare certain publications forfeited and to issue search-warrants for the same.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 99,
+          "title": "Application to High Court to set aside declaration of forfeiture.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 100,
+          "title": "Search for persons wrongfully confined.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 101,
+          "title": "Power to compel restoration of abducted females.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 102,
+          "title": "Direction, etc., of search-warrants.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 103,
+          "title": "Persons in charge of closed place to allow search.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 104,
+          "title": "Disposal of things found in search beyond jurisdiction.",
+          "group": "B.—Search-warrants"
+        },
+        {
+          "sourceClause": 105,
+          "title": "Recording of search and seizure through audio-video electronic means.",
+          "group": "C.—Miscellaneous"
+        },
+        {
+          "sourceClause": 106,
+          "title": "Power of police officer to seize certain property.",
+          "group": "C.—Miscellaneous"
+        },
+        {
+          "sourceClause": 107,
+          "title": "Attachment,  forfeiture or restoration of property.",
+          "group": "C.—Miscellaneous"
+        },
+        {
+          "sourceClause": 108,
+          "title": "Magistrate may direct search in his presence.",
+          "group": "C.—Miscellaneous"
+        },
+        {
+          "sourceClause": 109,
+          "title": "Power to impound document, etc., produced.",
+          "group": "C.—Miscellaneous"
+        },
+        {
+          "sourceClause": 110,
+          "title": "Reciprocal arrangements regarding processes.",
+          "group": "C.—Miscellaneous"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "roman": "VIII",
+      "title": "RECIPROCAL ARRANGEMENTS FOR ASSISTANCE IN CERTAIN MATTERS AND PROCEDURE FOR ATTACHMENT AND FORFEITURE OF PROPERTY",
+      "sectionStart": 111,
+      "sectionEnd": 124,
+      "topics": [
+        {
+          "sourceClause": 111,
+          "title": "Definitions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 112,
+          "title": "Letter of request to competent authority for investigation in a country or place outside India.",
+          "group": ""
+        },
+        {
+          "sourceClause": 113,
+          "title": "Letter of request from a country or place outside India to a Court or an authority for investigation in India.",
+          "group": ""
+        },
+        {
+          "sourceClause": 114,
+          "title": "Assistance in securing transfer of persons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 115,
+          "title": "Assistance in relation to orders of attachment or forfeiture of property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 116,
+          "title": "Identifying unlawfully acquired property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 117,
+          "title": "Seizure or attachment of property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 118,
+          "title": "Management of properties seized or forfeited under this Chapter.",
+          "group": ""
+        },
+        {
+          "sourceClause": 119,
+          "title": "Notice of forfeiture of property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 120,
+          "title": "Forfeiture of property in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 121,
+          "title": "Fine in lieu of forfeiture.",
+          "group": ""
+        },
+        {
+          "sourceClause": 122,
+          "title": "Certain transfers to be null and void.",
+          "group": ""
+        },
+        {
+          "sourceClause": 123,
+          "title": "Procedure in respect of letter of request.",
+          "group": ""
+        },
+        {
+          "sourceClause": 124,
+          "title": "Application of this Chapter.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "roman": "IX",
+      "title": "SECURITY FOR KEEPING THE PEACE AND FOR GOOD BEHAVIOUR",
+      "sectionStart": 125,
+      "sectionEnd": 143,
+      "topics": [
+        {
+          "sourceClause": 125,
+          "title": "Security for keeping the peace on conviction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 126,
+          "title": "Security for keeping the peace in other cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 127,
+          "title": "Security for good behaviour from persons disseminating seditious matters.",
+          "group": ""
+        },
+        {
+          "sourceClause": 128,
+          "title": "Security for good behaviour from suspected persons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 129,
+          "title": "Security for good behaviour from habitual offenders.",
+          "group": ""
+        },
+        {
+          "sourceClause": 130,
+          "title": "Order to be made.",
+          "group": ""
+        },
+        {
+          "sourceClause": 131,
+          "title": "Procedure in respect of person present in Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 132,
+          "title": "Summons or warrant in case of person not so present.",
+          "group": ""
+        },
+        {
+          "sourceClause": 133,
+          "title": "Copy of order to accompany summons or warrant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 134,
+          "title": "Power to dispense with personal attendance.",
+          "group": ""
+        },
+        {
+          "sourceClause": 135,
+          "title": "Inquiry as to truth of information.",
+          "group": ""
+        },
+        {
+          "sourceClause": 136,
+          "title": "Order to give security.",
+          "group": ""
+        },
+        {
+          "sourceClause": 137,
+          "title": "Discharge of person informed against.",
+          "group": ""
+        },
+        {
+          "sourceClause": 138,
+          "title": "Commencement of period for which security is required.",
+          "group": ""
+        },
+        {
+          "sourceClause": 139,
+          "title": "Contents of bond.",
+          "group": ""
+        },
+        {
+          "sourceClause": 140,
+          "title": "Power to reject sureties.",
+          "group": ""
+        },
+        {
+          "sourceClause": 141,
+          "title": "Imprisonment in default of security.",
+          "group": ""
+        },
+        {
+          "sourceClause": 142,
+          "title": "Power to release persons imprisoned for failing to give security.",
+          "group": ""
+        },
+        {
+          "sourceClause": 143,
+          "title": "Security for unexpired period of bond.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "roman": "X",
+      "title": "ORDER FOR MAINTENANCE OF WIVES, CHILDREN AND PARENTS",
+      "sectionStart": 144,
+      "sectionEnd": 147,
+      "topics": [
+        {
+          "sourceClause": 144,
+          "title": "Order for maintenance of wives, children and parents.",
+          "group": ""
+        },
+        {
+          "sourceClause": 145,
+          "title": "Procedure.",
+          "group": ""
+        },
+        {
+          "sourceClause": 146,
+          "title": "Alteration in allowance.",
+          "group": ""
+        },
+        {
+          "sourceClause": 147,
+          "title": "Enforcement of order of maintenance.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "roman": "XI",
+      "title": "MAINTENANCE OF PUBLIC ORDER AND TRANQUILLITY",
+      "sectionStart": 148,
+      "sectionEnd": 167,
+      "topics": [
+        {
+          "sourceClause": 148,
+          "title": "Dispersal of assembly by use of civil force.",
+          "group": "A.—Unlawful assemblies"
+        },
+        {
+          "sourceClause": 149,
+          "title": "Use of armed forces to disperse assembly.",
+          "group": "A.—Unlawful assemblies"
+        },
+        {
+          "sourceClause": 150,
+          "title": "Power of certain armed force officers to disperse assembly.",
+          "group": "A.—Unlawful assemblies"
+        },
+        {
+          "sourceClause": 151,
+          "title": "Protection against prosecution for acts done under sections 148, 149 and 150.",
+          "group": "A.—Unlawful assemblies"
+        },
+        {
+          "sourceClause": 152,
+          "title": "Conditional order for removal of nuisance.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 153,
+          "title": "Service or notification of order.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 154,
+          "title": "Person to whom order is addressed to obey or show cause.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 155,
+          "title": "Consequences of his failing to do so.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 156,
+          "title": "Procedure where existence of public right is denied.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 157,
+          "title": "Procedure where he appears to show cause.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 158,
+          "title": "Power of Magistrate to direct local investigation and examination of an expert.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 159,
+          "title": "Power of Magistrate to furnish written instructions, etc.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 160,
+          "title": "Procedure on order being made absolute and consequences of disobedience.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 161,
+          "title": "Injunction pending inquiry.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 162,
+          "title": "Magistrate may prohibit repetition or continuance of public nuisance.",
+          "group": "B.—Public nuisances"
+        },
+        {
+          "sourceClause": 163,
+          "title": "Power to issue order in urgent cases of nuisance or apprehended danger.",
+          "group": "C.—Urgent cases of nuisance or apprehended danger"
+        },
+        {
+          "sourceClause": 164,
+          "title": "Procedure where dispute concerning land or water is likely to cause breach of peace.",
+          "group": "D.—Disputes as to immovable property"
+        },
+        {
+          "sourceClause": 165,
+          "title": "Power to attach subject of dispute and to appoint receiver.",
+          "group": "D.—Disputes as to immovable property"
+        },
+        {
+          "sourceClause": 166,
+          "title": "Dispute concerning right of use of land or water.",
+          "group": "D.—Disputes as to immovable property"
+        },
+        {
+          "sourceClause": 167,
+          "title": "Local inquiry.",
+          "group": "D.—Disputes as to immovable property"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "roman": "XII",
+      "title": "PREVENTIVE ACTION OF THE POLICE",
+      "sectionStart": 168,
+      "sectionEnd": 172,
+      "topics": [
+        {
+          "sourceClause": 168,
+          "title": "Police to prevent cognizable offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 169,
+          "title": "Information of design to commit cognizable offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 170,
+          "title": "Arrest to prevent the commission of cognizable offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 171,
+          "title": "Prevention of injury to public property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 172,
+          "title": "Persons bound to conform to lawful directions of police.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "roman": "XIII",
+      "title": "INFORMATION TO THE POLICE AND THEIR POWERS TO INVESTIGATE",
+      "sectionStart": 173,
+      "sectionEnd": 196,
+      "topics": [
+        {
+          "sourceClause": 173,
+          "title": "Information in cognizable cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 174,
+          "title": "Information as to non-cognizable cases and investigation of such cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 175,
+          "title": "Police officer's power to investigate cognizable case.",
+          "group": ""
+        },
+        {
+          "sourceClause": 176,
+          "title": "Procedure for investigation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 177,
+          "title": "Report how submitted.",
+          "group": ""
+        },
+        {
+          "sourceClause": 178,
+          "title": "Power to hold investigation or preliminary inquiry.",
+          "group": ""
+        },
+        {
+          "sourceClause": 179,
+          "title": "Police officer's power to require attendance of witnesses.",
+          "group": ""
+        },
+        {
+          "sourceClause": 180,
+          "title": "Examination of witnesses by police.",
+          "group": ""
+        },
+        {
+          "sourceClause": 181,
+          "title": "Statements to police not to be signed: Use of statements in evidence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 182,
+          "title": "No inducement to be offered.",
+          "group": ""
+        },
+        {
+          "sourceClause": 183,
+          "title": "Recording of confessions and statements.",
+          "group": ""
+        },
+        {
+          "sourceClause": 184,
+          "title": "Medical examination of the victim of rape.",
+          "group": ""
+        },
+        {
+          "sourceClause": 185,
+          "title": "Search by police officer.",
+          "group": ""
+        },
+        {
+          "sourceClause": 186,
+          "title": "When officer in charge of police station may require another to issue search-warrant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 187,
+          "title": "Procedure when investigation cannot be completed in twenty-four hours.",
+          "group": ""
+        },
+        {
+          "sourceClause": 188,
+          "title": "Report of investigation by subordinate police officer.",
+          "group": ""
+        },
+        {
+          "sourceClause": 189,
+          "title": "Release of accused when evidence deficient.",
+          "group": ""
+        },
+        {
+          "sourceClause": 190,
+          "title": "Cases to be sent to Magistrate, when evidence is sufficient.",
+          "group": ""
+        },
+        {
+          "sourceClause": 191,
+          "title": "Complainant and witnesses not to be required to accompany police officer and not to be subjected to restraint.",
+          "group": ""
+        },
+        {
+          "sourceClause": 192,
+          "title": "Diary of proceedings in investigation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 193,
+          "title": "Report of police officer on completion of investigation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 194,
+          "title": "Police to enquire and report on suicide, etc.",
+          "group": ""
+        },
+        {
+          "sourceClause": 195,
+          "title": "Power to summon persons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 196,
+          "title": "Inquiry by Magistrate into cause of death.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "roman": "XIV",
+      "title": "JURISDICTION OF THE CRIMINAL COURTS IN INQUIRIES AND TRIALS",
+      "sectionStart": 197,
+      "sectionEnd": 209,
+      "topics": [
+        {
+          "sourceClause": 197,
+          "title": "Ordinary place of inquiry and trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 198,
+          "title": "Place of inquiry or trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 199,
+          "title": "Offence triable where act is done or consequence ensues.",
+          "group": ""
+        },
+        {
+          "sourceClause": 200,
+          "title": "Place of trial where act is an offence by reason of relation to other offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 201,
+          "title": "Place of trial in case of certain offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 202,
+          "title": "Offences committed by means of electronic communications, letters, etc.",
+          "group": ""
+        },
+        {
+          "sourceClause": 203,
+          "title": "Offence committed on journey or voyage.",
+          "group": ""
+        },
+        {
+          "sourceClause": 204,
+          "title": "Place of trial for offences triable together.",
+          "group": ""
+        },
+        {
+          "sourceClause": 205,
+          "title": "Power to order cases to be tried in different sessions divisions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 206,
+          "title": "High Court to decide, in case of doubt, district where inquiry or trial shall take place.",
+          "group": ""
+        },
+        {
+          "sourceClause": 207,
+          "title": "Power to issue summons or warrant for offence committed beyond local jurisdiction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 208,
+          "title": "Offence committed outside India.",
+          "group": ""
+        },
+        {
+          "sourceClause": 209,
+          "title": "Receipt of evidence relating to offences committed outside India.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "roman": "XV",
+      "title": "CONDITIONS REQUISITE FOR INITIATION OF PROCEEDINGS",
+      "sectionStart": 210,
+      "sectionEnd": 222,
+      "topics": [
+        {
+          "sourceClause": 210,
+          "title": "Cognizance of offences by Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 211,
+          "title": "Transfer on application of the accused.",
+          "group": ""
+        },
+        {
+          "sourceClause": 212,
+          "title": "Making over of cases to Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 213,
+          "title": "Cognizance of offences by Courts of Session.",
+          "group": ""
+        },
+        {
+          "sourceClause": 214,
+          "title": "Additional Sessions Judges to try cases made over to them.",
+          "group": ""
+        },
+        {
+          "sourceClause": 215,
+          "title": "Prosecution for contempt of lawful authority of public servants, for offences against public justice and for offences relating to documents given in evidence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 216,
+          "title": "Procedure for witnesses in case of threatening, etc.",
+          "group": ""
+        },
+        {
+          "sourceClause": 217,
+          "title": "Prosecution for offences against the State and for criminal conspiracy to commit such offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 218,
+          "title": "Prosecution of Judges and public servants.",
+          "group": ""
+        },
+        {
+          "sourceClause": 219,
+          "title": "Prosecution for offences against marriage.",
+          "group": ""
+        },
+        {
+          "sourceClause": 220,
+          "title": "Prosecution of offences under section 498A of the Bhartiya Nyaya Sanhita, 2023.",
+          "group": ""
+        },
+        {
+          "sourceClause": 221,
+          "title": "Cognizance of offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 222,
+          "title": "Prosecution for defamation.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "roman": "XVI",
+      "title": "COMPLAINTS TO MAGISTRATES",
+      "sectionStart": 223,
+      "sectionEnd": 226,
+      "topics": [
+        {
+          "sourceClause": 223,
+          "title": "Examination of complainant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 224,
+          "title": "Procedure by Magistrate not competent to take cognizance of the case.",
+          "group": ""
+        },
+        {
+          "sourceClause": 225,
+          "title": "Postponement of issue of process.",
+          "group": ""
+        },
+        {
+          "sourceClause": 226,
+          "title": "Dismissal of complaint.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "roman": "XVII",
+      "title": "COMMENCEMENT OF PROCEEDINGS BEFORE MAGISTRATES",
+      "sectionStart": 227,
+      "sectionEnd": 233,
+      "topics": [
+        {
+          "sourceClause": 227,
+          "title": "Issue of process.",
+          "group": ""
+        },
+        {
+          "sourceClause": 228,
+          "title": "Magistrate may dispense with personal attendance of accused.",
+          "group": ""
+        },
+        {
+          "sourceClause": 229,
+          "title": "Special summons in cases of petty offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 230,
+          "title": "Supply to the accused of copy of police report and other documents.",
+          "group": ""
+        },
+        {
+          "sourceClause": 231,
+          "title": "Supply of copies of statements and documents to accused in other cases triable by Court of Session.",
+          "group": ""
+        },
+        {
+          "sourceClause": 232,
+          "title": "Commitment of case to Court of Session when offence is triable exclusively by it.",
+          "group": ""
+        },
+        {
+          "sourceClause": 233,
+          "title": "Procedure to be followed when there is a complaint case and police investigation in respect of the same offence.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "roman": "XVIII",
+      "title": "THE CHARGE",
+      "sectionStart": 234,
+      "sectionEnd": 247,
+      "topics": [
+        {
+          "sourceClause": 234,
+          "title": "Contents of charge.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 235,
+          "title": "Particulars as to time, place and person.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 236,
+          "title": "When manner of committing offence must be stated.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 237,
+          "title": "Words in charge taken in sense of law under which offence is punishable.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 238,
+          "title": "Effect of errors.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 239,
+          "title": "Court may alter charge.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 240,
+          "title": "Recall of witnesses when charge altered.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 241,
+          "title": "Separate charges for distinct offences.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 242,
+          "title": "Offences of same kind within year may be charged together.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 243,
+          "title": "Trial for more than one offence.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 244,
+          "title": "Where it is doubtful what offence has been committed.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 245,
+          "title": "When offence proved included in offence charged.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 246,
+          "title": "What persons may be charged jointly.",
+          "group": "A.—Form of charges"
+        },
+        {
+          "sourceClause": 247,
+          "title": "Withdrawal of remaining charges on conviction on one of several charges.",
+          "group": "A.—Form of charges"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "roman": "XIX",
+      "title": "TRIAL BEFORE A COURT OF SESSION",
+      "sectionStart": 248,
+      "sectionEnd": 260,
+      "topics": [
+        {
+          "sourceClause": 248,
+          "title": "Trial to be conducted by Public Prosecutor.",
+          "group": ""
+        },
+        {
+          "sourceClause": 249,
+          "title": "Opening case for prosecution.",
+          "group": ""
+        },
+        {
+          "sourceClause": 250,
+          "title": "Discharge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 251,
+          "title": "Framing of charge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 252,
+          "title": "Conviction on plea of guilty.",
+          "group": ""
+        },
+        {
+          "sourceClause": 253,
+          "title": "Date for prosecution evidence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 254,
+          "title": "Evidence for prosecution.",
+          "group": ""
+        },
+        {
+          "sourceClause": 255,
+          "title": "Acquittal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 256,
+          "title": "Entering upon defence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 257,
+          "title": "Arguments.",
+          "group": ""
+        },
+        {
+          "sourceClause": 258,
+          "title": "Judgment of acquittal or conviction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 259,
+          "title": "Previous conviction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 260,
+          "title": "Procedure in cases instituted under section 223(1).",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "roman": "XX",
+      "title": "TRIAL OF WARRANT-CASES BY MAGISTRATES",
+      "sectionStart": 261,
+      "sectionEnd": 273,
+      "topics": [
+        {
+          "sourceClause": 261,
+          "title": "Compliance with section 231.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 262,
+          "title": "When accused shall be discharged.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 263,
+          "title": "Framing of charge.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 264,
+          "title": "Conviction on plea of guilty.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 265,
+          "title": "Evidence for prosecution.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 266,
+          "title": "Evidence for defence.",
+          "group": "A.—Cases instituted on a police report"
+        },
+        {
+          "sourceClause": 267,
+          "title": "Evidence for prosecution.",
+          "group": "B.—Cases instituted otherwise than on police report"
+        },
+        {
+          "sourceClause": 268,
+          "title": "When accused shall be discharged.",
+          "group": "B.—Cases instituted otherwise than on police report"
+        },
+        {
+          "sourceClause": 269,
+          "title": "Procedure where accused is not discharged.",
+          "group": "B.—Cases instituted otherwise than on police report"
+        },
+        {
+          "sourceClause": 270,
+          "title": "Evidence for defence.",
+          "group": "B.—Cases instituted otherwise than on police report"
+        },
+        {
+          "sourceClause": 271,
+          "title": "Acquittal or conviction.",
+          "group": "C.-Conclusion of trial"
+        },
+        {
+          "sourceClause": 272,
+          "title": "Absence of complainant.",
+          "group": "C.-Conclusion of trial"
+        },
+        {
+          "sourceClause": 273,
+          "title": "Compensation for accusation without reasonable cause.",
+          "group": "C.-Conclusion of trial"
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "roman": "XXI",
+      "title": "TRIAL OF SUMMONS-CASES BY MAGISTRATES",
+      "sectionStart": 274,
+      "sectionEnd": 282,
+      "topics": [
+        {
+          "sourceClause": 274,
+          "title": "Substance of accusation to be stated.",
+          "group": ""
+        },
+        {
+          "sourceClause": 275,
+          "title": "Conviction on plea of guilty.",
+          "group": ""
+        },
+        {
+          "sourceClause": 276,
+          "title": "Conviction on plea of guilty in absence of accused in petty cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 277,
+          "title": "Procedure when not convicted.",
+          "group": ""
+        },
+        {
+          "sourceClause": 278,
+          "title": "Acquittal or conviction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 279,
+          "title": "Non-appearance or death of complainant.",
+          "group": ""
+        },
+        {
+          "sourceClause": 280,
+          "title": "Withdrawal of complaint.",
+          "group": ""
+        },
+        {
+          "sourceClause": 281,
+          "title": "Power to stop proceedings in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 282,
+          "title": "Power of Court to convert summons-cases into warrant-cases.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "roman": "XXII",
+      "title": "SUMMARY TRIALS",
+      "sectionStart": 283,
+      "sectionEnd": 288,
+      "topics": [
+        {
+          "sourceClause": 283,
+          "title": "Power to try summarily.",
+          "group": ""
+        },
+        {
+          "sourceClause": 284,
+          "title": "Summary trial by Magistrate of the second class.",
+          "group": ""
+        },
+        {
+          "sourceClause": 285,
+          "title": "Procedure for summary trials.",
+          "group": ""
+        },
+        {
+          "sourceClause": 286,
+          "title": "Record in summary trials.",
+          "group": ""
+        },
+        {
+          "sourceClause": 287,
+          "title": "Judgment in cases tried summarily.",
+          "group": ""
+        },
+        {
+          "sourceClause": 288,
+          "title": "Language of record and judgment.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "roman": "XXIII",
+      "title": "PLEA BARGAINING",
+      "sectionStart": 289,
+      "sectionEnd": 300,
+      "topics": [
+        {
+          "sourceClause": 289,
+          "title": "Application of the Chapter.",
+          "group": ""
+        },
+        {
+          "sourceClause": 290,
+          "title": "Application for plea bargaining.",
+          "group": ""
+        },
+        {
+          "sourceClause": 291,
+          "title": "Guidelines for mutually satisfactory disposition.",
+          "group": ""
+        },
+        {
+          "sourceClause": 292,
+          "title": "Report of the mutually satisfactory disposition to be submitted before the Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 293,
+          "title": "Disposal of the case.",
+          "group": ""
+        },
+        {
+          "sourceClause": 294,
+          "title": "Judgment of the Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 295,
+          "title": "Finality of the judgment.",
+          "group": ""
+        },
+        {
+          "sourceClause": 296,
+          "title": "Power of the Court in plea bargaining.",
+          "group": ""
+        },
+        {
+          "sourceClause": 297,
+          "title": "Period of detention undergone by the accused to be set off against the sentence of imprisonment.",
+          "group": ""
+        },
+        {
+          "sourceClause": 298,
+          "title": "Savings.",
+          "group": ""
+        },
+        {
+          "sourceClause": 299,
+          "title": "Statements of accused not to be used.",
+          "group": ""
+        },
+        {
+          "sourceClause": 300,
+          "title": "Non-application of the Chapter.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "roman": "XXIV",
+      "title": "ATTENDANCE OF PERSONS CONFINED OR DETAINED IN PRISONS",
+      "sectionStart": 301,
+      "sectionEnd": 306,
+      "topics": [
+        {
+          "sourceClause": 301,
+          "title": "Definitions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 302,
+          "title": "Power to require attendance of prisoners.",
+          "group": ""
+        },
+        {
+          "sourceClause": 303,
+          "title": "Power of State Government or Central Government to exclude certain persons from operation of section 302.",
+          "group": ""
+        },
+        {
+          "sourceClause": 304,
+          "title": "Officer in charge of prison to abstain from carrying out order in certain contingencies.",
+          "group": ""
+        },
+        {
+          "sourceClause": 305,
+          "title": "Prisoner to be brought to Court in custody.",
+          "group": ""
+        },
+        {
+          "sourceClause": 306,
+          "title": "Power to issue commission for examination of witness in prison.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "roman": "XXV",
+      "title": "EVIDENCE IN INQUIRIES AND TRIALS",
+      "sectionStart": 307,
+      "sectionEnd": 336,
+      "topics": [
+        {
+          "sourceClause": 307,
+          "title": "Language of Courts.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 308,
+          "title": "Evidence to be taken in presence of accused.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 309,
+          "title": "Record in summons-cases and inquiries.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 310,
+          "title": "Record in warrant-cases.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 311,
+          "title": "Record in trial before Court of Session.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 312,
+          "title": "Language of record of evidence.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 313,
+          "title": "Procedure in regard to such evidence when completed.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 314,
+          "title": "Interpretation of evidence to accused or his pleader.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 315,
+          "title": "Remarks respecting demeanour of witness.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 316,
+          "title": "Record of examination of accused.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 317,
+          "title": "Interpreter to be bound to interpret truthfully.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 318,
+          "title": "Record in High Court.",
+          "group": "A.—Mode of taking and recording evidence"
+        },
+        {
+          "sourceClause": 319,
+          "title": "When attendance of witness may be dispensed with and commission issued.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 320,
+          "title": "Commission to whom to be issued.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 321,
+          "title": "Execution of commissions.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 322,
+          "title": "Parties may examine witnesses.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 323,
+          "title": "Return of commission.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 324,
+          "title": "Adjournment of proceeding.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 325,
+          "title": "Execution of foreign commissions.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 326,
+          "title": "Deposition of medical witness.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 327,
+          "title": "Identification report of Magistrate.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 328,
+          "title": "Evidence of officers of the Mint.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 329,
+          "title": "Reports of certain Government scientific experts.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 330,
+          "title": "No formal proof of certain documents.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 331,
+          "title": "Affidavit in proof of conduct of public servants.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 332,
+          "title": "Evidence of formal character on affidavit.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 333,
+          "title": "Authorities before whom affidavits may be sworn.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 334,
+          "title": "Previous conviction or acquittal how proved.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 335,
+          "title": "Record of evidence in absence of accused.",
+          "group": "B.-Commissions for the examination of witnesses"
+        },
+        {
+          "sourceClause": 336,
+          "title": "Evidence of public servants, experts, police officers in certain cases.",
+          "group": "B.-Commissions for the examination of witnesses"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "roman": "XXVI",
+      "title": "GENERAL PROVISIONS AS TO INQUIRIES AND TRIALS",
+      "sectionStart": 337,
+      "sectionEnd": 366,
+      "topics": [
+        {
+          "sourceClause": 337,
+          "title": "Person once convicted or acquitted not to be tried for same offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 338,
+          "title": "Appearance by Public Prosecutors.",
+          "group": ""
+        },
+        {
+          "sourceClause": 339,
+          "title": "Permission to conduct prosecution.",
+          "group": ""
+        },
+        {
+          "sourceClause": 340,
+          "title": "Right of person against whom proceedings are instituted to be defended.",
+          "group": ""
+        },
+        {
+          "sourceClause": 341,
+          "title": "Legal aid to accused at State expense in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 342,
+          "title": "Procedure when corporation or registered society is an accused.",
+          "group": ""
+        },
+        {
+          "sourceClause": 343,
+          "title": "Tender of pardon to accomplice.",
+          "group": ""
+        },
+        {
+          "sourceClause": 344,
+          "title": "Power to direct tender of pardon.",
+          "group": ""
+        },
+        {
+          "sourceClause": 345,
+          "title": "Trial of person not complying with conditions of pardon.",
+          "group": ""
+        },
+        {
+          "sourceClause": 346,
+          "title": "Power to postpone or adjourn proceedings.",
+          "group": ""
+        },
+        {
+          "sourceClause": 347,
+          "title": "Local inspection.",
+          "group": ""
+        },
+        {
+          "sourceClause": 348,
+          "title": "Power to summon material witness, or examine person present.",
+          "group": ""
+        },
+        {
+          "sourceClause": 349,
+          "title": "Power of Magistrate to order person to give specimen signatures or handwriting.",
+          "group": ""
+        },
+        {
+          "sourceClause": 350,
+          "title": "Expenses of complainants and witnesses.",
+          "group": ""
+        },
+        {
+          "sourceClause": 351,
+          "title": "Power to examine the accused.",
+          "group": ""
+        },
+        {
+          "sourceClause": 352,
+          "title": "Oral arguments and memorandum of arguments.",
+          "group": ""
+        },
+        {
+          "sourceClause": 353,
+          "title": "Accused person to be competent witness.",
+          "group": ""
+        },
+        {
+          "sourceClause": 354,
+          "title": "No influence to be used to induce disclosure.",
+          "group": ""
+        },
+        {
+          "sourceClause": 355,
+          "title": "Provision for inquiries and trial being held in the absence of accused in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 356,
+          "title": "Inquiry, trial or judgment in absentia of proclaimed offender.",
+          "group": ""
+        },
+        {
+          "sourceClause": 357,
+          "title": "Procedure where accused does not understand proceedings.",
+          "group": ""
+        },
+        {
+          "sourceClause": 358,
+          "title": "Power to proceed against other persons appearing to be guilty of offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 359,
+          "title": "Compounding of offences.",
+          "group": ""
+        },
+        {
+          "sourceClause": 360,
+          "title": "Withdrawal from prosecution.",
+          "group": ""
+        },
+        {
+          "sourceClause": 361,
+          "title": "Procedure in cases which Magistrate cannot dispose of.",
+          "group": ""
+        },
+        {
+          "sourceClause": 362,
+          "title": "Procedure when, after commencement of inquiry or trial, Magistrate finds case should be committed.",
+          "group": ""
+        },
+        {
+          "sourceClause": 363,
+          "title": "Trial of persons previously convicted of offences against coinage, stamp-law or property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 364,
+          "title": "Procedure when Magistrate cannot pass sentence sufficiently severe.",
+          "group": ""
+        },
+        {
+          "sourceClause": 365,
+          "title": "Conviction or commitment on evidence partly recorded by one Magistrate and partly by another.",
+          "group": ""
+        },
+        {
+          "sourceClause": 366,
+          "title": "Court to be open.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "roman": "XXVII",
+      "title": "PROVISIONS AS TO ACCUSED PERSONS OF UNSOUND MIND",
+      "sectionStart": 367,
+      "sectionEnd": 378,
+      "topics": [
+        {
+          "sourceClause": 367,
+          "title": "Procedure in case of accused being person with mental illness.",
+          "group": ""
+        },
+        {
+          "sourceClause": 368,
+          "title": "Procedure in case of person with mental illness tried before Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 369,
+          "title": "Release of person with mental illness pending investigation or trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 370,
+          "title": "Resumption of inquiry or trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 371,
+          "title": "Procedure on accused appearing before Magistrate or Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 372,
+          "title": "When accused appears to have been of sound mind.",
+          "group": ""
+        },
+        {
+          "sourceClause": 373,
+          "title": "Judgment of acquittal on ground of mental illness.",
+          "group": ""
+        },
+        {
+          "sourceClause": 374,
+          "title": "Person acquitted on such ground to be detained in safe custody.",
+          "group": ""
+        },
+        {
+          "sourceClause": 375,
+          "title": "Power of State Government to empower officer-in-charge to discharge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 376,
+          "title": "Procedure where prisoner with mental illness is reported capable of making his defence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 377,
+          "title": "Procedure where person with mental illness detained is declared fit to be released.",
+          "group": ""
+        },
+        {
+          "sourceClause": 378,
+          "title": "Delivery of person with mental liabilities to care of relative or friend.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "roman": "XXVIII",
+      "title": "PROVISIONS AS TO OFFENCES AFFECTING THE ADMINISTRATION OF JUSTICE",
+      "sectionStart": 379,
+      "sectionEnd": 391,
+      "topics": [
+        {
+          "sourceClause": 379,
+          "title": "Procedure in cases mentioned in section 215.",
+          "group": ""
+        },
+        {
+          "sourceClause": 380,
+          "title": "Appeal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 381,
+          "title": "Power to order costs.",
+          "group": ""
+        },
+        {
+          "sourceClause": 382,
+          "title": "Procedure of Magistrate taking cognizance.",
+          "group": ""
+        },
+        {
+          "sourceClause": 383,
+          "title": "Summary procedure for trial for giving false evidence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 384,
+          "title": "Procedure in certain cases of contempt.",
+          "group": ""
+        },
+        {
+          "sourceClause": 385,
+          "title": "Procedure where Court considers that case should not be dealt with under section 384.",
+          "group": ""
+        },
+        {
+          "sourceClause": 386,
+          "title": "When Registrar or Sub-Registrar to be deemed a Civil Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 387,
+          "title": "Discharge of offender on submission of apology.",
+          "group": ""
+        },
+        {
+          "sourceClause": 388,
+          "title": "Imprisonment or committal of person refusing to answer or produce document.",
+          "group": ""
+        },
+        {
+          "sourceClause": 389,
+          "title": "Summary procedure for punishment for non-attendance by a witness in obedience to summons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 390,
+          "title": "Appeals from convictions under sections 383, 384, 388 and 389.",
+          "group": ""
+        },
+        {
+          "sourceClause": 391,
+          "title": "Certain Judges and Magistrates not to try certain offences when committed before themselves.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "roman": "XXIX",
+      "title": "THE JUDGMENT",
+      "sectionStart": 392,
+      "sectionEnd": 406,
+      "topics": [
+        {
+          "sourceClause": 392,
+          "title": "Judgment.",
+          "group": ""
+        },
+        {
+          "sourceClause": 393,
+          "title": "Language and contents of judgment.",
+          "group": ""
+        },
+        {
+          "sourceClause": 394,
+          "title": "Order for notifying address of previously convicted offender.",
+          "group": ""
+        },
+        {
+          "sourceClause": 395,
+          "title": "Order to pay compensation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 396,
+          "title": "Victim compensation scheme.",
+          "group": ""
+        },
+        {
+          "sourceClause": 397,
+          "title": "Treatment of victims.",
+          "group": ""
+        },
+        {
+          "sourceClause": 398,
+          "title": "Witness protection scheme.",
+          "group": ""
+        },
+        {
+          "sourceClause": 399,
+          "title": "Compensation to persons groundlessly arrested.",
+          "group": ""
+        },
+        {
+          "sourceClause": 400,
+          "title": "Order to pay costs in non-cognizable cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 401,
+          "title": "Order to release on probation of good conduct or after admonition.",
+          "group": ""
+        },
+        {
+          "sourceClause": 402,
+          "title": "Special reasons to be recorded in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 403,
+          "title": "Court not to alter judgment.",
+          "group": ""
+        },
+        {
+          "sourceClause": 404,
+          "title": "Copy of judgment to be given to the accused and other persons.",
+          "group": ""
+        },
+        {
+          "sourceClause": 405,
+          "title": "Judgment when to be translated.",
+          "group": ""
+        },
+        {
+          "sourceClause": 406,
+          "title": "Court of Session to send copy of finding and sentence to District Magistrate.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "roman": "XXX",
+      "title": "SUBMISSION OF DEATH SENTENCES FOR CONFIRMATION",
+      "sectionStart": 407,
+      "sectionEnd": 412,
+      "topics": [
+        {
+          "sourceClause": 407,
+          "title": "Sentence of death to be submitted by Court of Session for confirmation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 408,
+          "title": "Power to direct further inquiry to be made or additional evidence to be taken.",
+          "group": ""
+        },
+        {
+          "sourceClause": 409,
+          "title": "Power of High Court to confirm sentence or annul conviction.",
+          "group": ""
+        },
+        {
+          "sourceClause": 410,
+          "title": "Confirmation or new sentence to be signed by two Judges.",
+          "group": ""
+        },
+        {
+          "sourceClause": 411,
+          "title": "Procedure in case of difference of opinion.",
+          "group": ""
+        },
+        {
+          "sourceClause": 412,
+          "title": "Procedure in cases submitted to High Court for confirmation.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "roman": "XXXI",
+      "title": "APPEALS",
+      "sectionStart": 413,
+      "sectionEnd": 435,
+      "topics": [
+        {
+          "sourceClause": 413,
+          "title": "No appeal to lie unless otherwise provided.",
+          "group": ""
+        },
+        {
+          "sourceClause": 414,
+          "title": "Appeal from orders requiring security or refusal to accept or rejecting surety for keeping peace or good behaviour.",
+          "group": ""
+        },
+        {
+          "sourceClause": 415,
+          "title": "Appeals from convictions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 416,
+          "title": "No appeal in certain cases when accused pleads guilty.",
+          "group": ""
+        },
+        {
+          "sourceClause": 417,
+          "title": "No appeal in petty cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 418,
+          "title": "Appeal by the State Government against sentence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 419,
+          "title": "Appeal in case of acquittal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 420,
+          "title": "Appeal against conviction by High Court in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 421,
+          "title": "Special right of appeal in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 422,
+          "title": "Appeal to Court of Session how heard.",
+          "group": ""
+        },
+        {
+          "sourceClause": 423,
+          "title": "Petition of appeal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 424,
+          "title": "Procedure when appellant in jail.",
+          "group": ""
+        },
+        {
+          "sourceClause": 425,
+          "title": "Summary dismissal of appeal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 426,
+          "title": "Procedure for hearing appeals not dismissed summarily.",
+          "group": ""
+        },
+        {
+          "sourceClause": 427,
+          "title": "Powers of the Appellate Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 428,
+          "title": "Judgments of Subordinate Appellate Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 429,
+          "title": "Order of High Court on appeal to be certified to lower Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 430,
+          "title": "Suspension of sentence pending the appeal; release of appellant on bail.",
+          "group": ""
+        },
+        {
+          "sourceClause": 431,
+          "title": "Arrest of accused in appeal from acquittal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 432,
+          "title": "Appellate Court may take further evidence or direct it to be taken.",
+          "group": ""
+        },
+        {
+          "sourceClause": 433,
+          "title": "Procedure where Judges of Court of Appeal are equally divided.",
+          "group": ""
+        },
+        {
+          "sourceClause": 434,
+          "title": "Finality of judgments and orders on appeal.",
+          "group": ""
+        },
+        {
+          "sourceClause": 435,
+          "title": "Abatement of appeals.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "roman": "XXXII",
+      "title": "REFERENCE AND REVISION",
+      "sectionStart": 436,
+      "sectionEnd": 445,
+      "topics": [
+        {
+          "sourceClause": 436,
+          "title": "Reference to High Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 437,
+          "title": "Disposal of case according to decision of High Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 438,
+          "title": "Calling for records to exercise powers of revision.",
+          "group": ""
+        },
+        {
+          "sourceClause": 439,
+          "title": "Power to order inquiry.",
+          "group": ""
+        },
+        {
+          "sourceClause": 440,
+          "title": "Sessions Judge's powers of revision.",
+          "group": ""
+        },
+        {
+          "sourceClause": 441,
+          "title": "Power of Additional Sessions Judge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 442,
+          "title": "High Court's powers of revision.",
+          "group": ""
+        },
+        {
+          "sourceClause": 443,
+          "title": "Power of High Court to withdraw or transfer revision cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 444,
+          "title": "Option of Court to hear parties.",
+          "group": ""
+        },
+        {
+          "sourceClause": 445,
+          "title": "Statement by Magistrate of grounds of his decision to be considered by High Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 446,
+          "title": "High Court's order to be certified to lower Court.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "roman": "XXXIII",
+      "title": "TRANSFER OF CRIMINAL CASES",
+      "sectionStart": 446,
+      "sectionEnd": 452,
+      "topics": [
+        {
+          "sourceClause": 447,
+          "title": "Power of Supreme Court to transfer cases and appeals.",
+          "group": ""
+        },
+        {
+          "sourceClause": 448,
+          "title": "Power of High Court to transfer cases and appeals.",
+          "group": ""
+        },
+        {
+          "sourceClause": 449,
+          "title": "Power of Sessions Judge to transfer cases and appeals.",
+          "group": ""
+        },
+        {
+          "sourceClause": 450,
+          "title": "Withdrawal of cases and appeals by Session Judge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 451,
+          "title": "Withdrawal of cases by Judicial Magistrate.",
+          "group": ""
+        },
+        {
+          "sourceClause": 452,
+          "title": "Making over or withdrawal of cases by Executive Magistrates.",
+          "group": ""
+        },
+        {
+          "sourceClause": 453,
+          "title": "Reasons to be recorded.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "roman": "XXXIV",
+      "title": "EXECUTION, SUSPENSION, REMISSION AND COMMUTATION OF SENTENCES",
+      "sectionStart": 453,
+      "sectionEnd": 477,
+      "topics": [
+        {
+          "sourceClause": 454,
+          "title": "Execution of order passed under section 410.",
+          "group": "A.—Death Sentences"
+        },
+        {
+          "sourceClause": 455,
+          "title": "Execution of sentence of death passed by High Court.",
+          "group": "A.—Death Sentences"
+        },
+        {
+          "sourceClause": 456,
+          "title": "Postponement of execution of sentence of death in case of appeal to Supreme Court.",
+          "group": "A.—Death Sentences"
+        },
+        {
+          "sourceClause": 457,
+          "title": "Postponement of capital sentence on pregnant woman.",
+          "group": "A.—Death Sentences"
+        },
+        {
+          "sourceClause": 458,
+          "title": "Power to appoint place of imprisonment.",
+          "group": "B.—Imprisonment"
+        },
+        {
+          "sourceClause": 459,
+          "title": "Execution of sentence of imprisonment.",
+          "group": "B.—Imprisonment"
+        },
+        {
+          "sourceClause": 460,
+          "title": "Direction of warrant for execution.",
+          "group": "B.—Imprisonment"
+        },
+        {
+          "sourceClause": 461,
+          "title": "Warrant with whom to be lodged.",
+          "group": "B.—Imprisonment"
+        },
+        {
+          "sourceClause": 462,
+          "title": "Warrant for levy of fine.",
+          "group": "C.—Levy of fine"
+        },
+        {
+          "sourceClause": 463,
+          "title": "Effect of such warrant.",
+          "group": "C.—Levy of fine"
+        },
+        {
+          "sourceClause": 464,
+          "title": "Warrant for levy of fine issued by a Court in any territory to which this Sanhita does not extend.",
+          "group": "C.—Levy of fine"
+        },
+        {
+          "sourceClause": 465,
+          "title": "Suspension of execution of sentence of imprisonment.",
+          "group": "C.—Levy of fine"
+        },
+        {
+          "sourceClause": 466,
+          "title": "Who may issue warrant.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 467,
+          "title": "Sentence on escaped convict when to take effect.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 468,
+          "title": "Sentence on offender already sentenced for another offence.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 469,
+          "title": "Period of detention undergone by the accused to be set off against the sentence of imprisonment.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 470,
+          "title": "Saving.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 471,
+          "title": "Return of warrant on execution of sentence.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 472,
+          "title": "Money ordered to be paid recoverable as a fine.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 473,
+          "title": "Mercy Petition in death sentence cases.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 474,
+          "title": "Power to suspend or remit sentences.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 475,
+          "title": "Power to commute sentence.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 476,
+          "title": "Restriction on powers of remission or commutation in certain cases.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 477,
+          "title": "Concurrent power of Central Government in case of death sentences.",
+          "group": "D.—General provisions regarding execution"
+        },
+        {
+          "sourceClause": 478,
+          "title": "State Government to act after concurrence with Central Government in certain cases.",
+          "group": "D.—General provisions regarding execution"
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "roman": "XXXV",
+      "title": "PROVISIONS AS TO BAIL AND BONDS",
+      "sectionStart": 478,
+      "sectionEnd": 496,
+      "topics": [
+        {
+          "sourceClause": 479,
+          "title": "Bail and bond.",
+          "group": ""
+        },
+        {
+          "sourceClause": 480,
+          "title": "In what cases bail to be taken.",
+          "group": ""
+        },
+        {
+          "sourceClause": 481,
+          "title": "Maximum period for which an undertrial prisoner can be detained.",
+          "group": ""
+        },
+        {
+          "sourceClause": 482,
+          "title": "When bail may be taken in case of non-bailable offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 483,
+          "title": "Bail to require accused to appear before next appellate Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 484,
+          "title": "Direction for grant of bail to person apprehending arrest.",
+          "group": ""
+        },
+        {
+          "sourceClause": 485,
+          "title": "Special powers of High Court or Court of Session regarding bail.",
+          "group": ""
+        },
+        {
+          "sourceClause": 486,
+          "title": "Amount of bond and reduction thereof.",
+          "group": ""
+        },
+        {
+          "sourceClause": 487,
+          "title": "Bond of accused and sureties.",
+          "group": ""
+        },
+        {
+          "sourceClause": 488,
+          "title": "Declaration by sureties.",
+          "group": ""
+        },
+        {
+          "sourceClause": 489,
+          "title": "Discharge from custody.",
+          "group": ""
+        },
+        {
+          "sourceClause": 490,
+          "title": "Power to order sufficient bail when that first taken is insufficient.",
+          "group": ""
+        },
+        {
+          "sourceClause": 491,
+          "title": "Discharge of sureties.",
+          "group": ""
+        },
+        {
+          "sourceClause": 492,
+          "title": "Deposit instead of recognizance.",
+          "group": ""
+        },
+        {
+          "sourceClause": 493,
+          "title": "Procedure when bond has been forfeited.",
+          "group": ""
+        },
+        {
+          "sourceClause": 494,
+          "title": "Cancellation of bond and bail bond.",
+          "group": ""
+        },
+        {
+          "sourceClause": 495,
+          "title": "Procedure in case of insolvency of death of surety or when a bond is forfeited.",
+          "group": ""
+        },
+        {
+          "sourceClause": 496,
+          "title": "Bond required from minor.",
+          "group": ""
+        },
+        {
+          "sourceClause": 497,
+          "title": "Appeal from orders under section 446.",
+          "group": ""
+        },
+        {
+          "sourceClause": 498,
+          "title": "Power to direct levy of amount due on certain recognizances.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "roman": "XXXVI",
+      "title": "DISPOSAL OF PROPERTY",
+      "sectionStart": 497,
+      "sectionEnd": 505,
+      "topics": [
+        {
+          "sourceClause": 499,
+          "title": "Order for custody and disposal of property pending trial in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 500,
+          "title": "Order for disposal of property at conclusion of trial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 501,
+          "title": "Payment to innocent purchaser of money found on accused.",
+          "group": ""
+        },
+        {
+          "sourceClause": 502,
+          "title": "Appeal against orders under section 500 or section 501.",
+          "group": ""
+        },
+        {
+          "sourceClause": 503,
+          "title": "Destruction of libellous and other matter.",
+          "group": ""
+        },
+        {
+          "sourceClause": 504,
+          "title": "Power to restore possession of immovable property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 505,
+          "title": "Procedure by police upon seizure of property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 506,
+          "title": "Procedure where no claimant appears within six months.",
+          "group": ""
+        },
+        {
+          "sourceClause": 507,
+          "title": "Power to sell perishable property.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "roman": "XXXVII",
+      "title": "IRREGULAR PROCEEDINGS",
+      "sectionStart": 506,
+      "sectionEnd": 512,
+      "topics": [
+        {
+          "sourceClause": 508,
+          "title": "Irregularities which do not vitiate proceedings.",
+          "group": ""
+        },
+        {
+          "sourceClause": 509,
+          "title": "Irregularities which vitiate proceedings.",
+          "group": ""
+        },
+        {
+          "sourceClause": 510,
+          "title": "Proceedings in wrong place.",
+          "group": ""
+        },
+        {
+          "sourceClause": 511,
+          "title": "Non-compliance with provisions of section 183 or section 316.",
+          "group": ""
+        },
+        {
+          "sourceClause": 512,
+          "title": "Effect of omission to frame, or absence of, or error in, charge.",
+          "group": ""
+        },
+        {
+          "sourceClause": 513,
+          "title": "Finding or sentence when reversible by reason of error, omission or irregularity.",
+          "group": ""
+        },
+        {
+          "sourceClause": 514,
+          "title": "Defect or error not to make attachment unlawful.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "roman": "XXXVIII",
+      "title": "LIMITATION FOR TAKING COGNIZANCE OF CERTAIN OFFENCES",
+      "sectionStart": 513,
+      "sectionEnd": 519,
+      "topics": [
+        {
+          "sourceClause": 515,
+          "title": "Definitions.",
+          "group": ""
+        },
+        {
+          "sourceClause": 516,
+          "title": "Bar to taking cognizance after lapse of the period of limitation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 517,
+          "title": "Commencement of the period of limitation.",
+          "group": ""
+        },
+        {
+          "sourceClause": 518,
+          "title": "Exclusion of time in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 519,
+          "title": "Exclusion of date on which Court is closed.",
+          "group": ""
+        },
+        {
+          "sourceClause": 520,
+          "title": "Continuing offence.",
+          "group": ""
+        },
+        {
+          "sourceClause": 521,
+          "title": "Extension of period of limitation in certain cases.",
+          "group": ""
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "roman": "XXXIX",
+      "title": "MISCELLANEOUS",
+      "sectionStart": 520,
+      "sectionEnd": 531,
+      "topics": [
+        {
+          "sourceClause": 522,
+          "title": "Trials before High Courts.",
+          "group": ""
+        },
+        {
+          "sourceClause": 523,
+          "title": "Delivery to commanding officers of persons liable to be tried by Court-martial.",
+          "group": ""
+        },
+        {
+          "sourceClause": 524,
+          "title": "Forms.",
+          "group": ""
+        },
+        {
+          "sourceClause": 525,
+          "title": "Power of High Court to make rules.",
+          "group": ""
+        },
+        {
+          "sourceClause": 526,
+          "title": "Power to alter functions allocated to Executive Magistrate in certain cases.",
+          "group": ""
+        },
+        {
+          "sourceClause": 527,
+          "title": "Case in which Judge or Magistrate is personally interested.",
+          "group": ""
+        },
+        {
+          "sourceClause": 528,
+          "title": "Practicing advocate not to sit as Magistrate in certain Courts.",
+          "group": ""
+        },
+        {
+          "sourceClause": 529,
+          "title": "Public servant concerned in sale not to purchase or bid for property.",
+          "group": ""
+        },
+        {
+          "sourceClause": 530,
+          "title": "Saving of inherent powers of High Court.",
+          "group": ""
+        },
+        {
+          "sourceClause": 531,
+          "title": "Duty of High Court to exercise continuous superintendence over Courts.",
+          "group": ""
+        },
+        {
+          "sourceClause": 532,
+          "title": "Trial and proceedings to be held in electronic mode.",
+          "group": ""
+        },
+        {
+          "sourceClause": 533,
+          "title": "Repeal and savings.",
+          "group": ""
+        }
+      ]
+    }
+  ],
+  "schedules": [
+    {
+      "title": "First Schedule",
+      "description": "Classification of offences."
+    },
+    {
+      "title": "Second Schedule",
+      "description": "Forms."
+    }
+  ]
+}

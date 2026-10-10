@@ -7,6 +7,7 @@ import { publicInternationalLawChapters } from "../data/courses/publicInternatio
 import { environmentalLawChapters } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeChapters } from "../data/courses/humanRightsLawAndPractice";
 import { mediaLawChapters } from "../data/courses/mediaLaw";
+import { bnssChapters, BNSS_COURSE_ID } from "../data/courses/bnss";
 
 const bundledChapters = [
   ...generalPrinciplesOfContractChapters,
@@ -16,6 +17,7 @@ const bundledChapters = [
   ...environmentalLawChapters,
   ...humanRightsLawAndPracticeChapters,
   ...mediaLawChapters,
+  ...bnssChapters,
 ];
 
 // Retired combined lesson: ignore older stored copies as well as its old URL.
@@ -168,8 +170,13 @@ const mergeStoredAndBundledChapter = (
 // ADMIN - ALL CHAPTERS
 // =========================================================
 
-export const getAllChapters = async () =>
-  (await chapterRepository.getAll()).filter((chapter) => !isRetiredChapter(chapter));
+export const getAllChapters = async () => {
+  const chapters = new Map(bnssChapters.map((chapter) => [chapter.id, chapter]));
+  for (const chapter of (await chapterRepository.getAll()) || []) {
+    if (!isRetiredChapter(chapter)) chapters.set(chapter.id, chapter);
+  }
+  return [...chapters.values()];
+};
 
 // =========================================================
 // ADMIN - ALL CHAPTERS FOR COURSE
@@ -251,7 +258,9 @@ export const getPublishedChaptersByCourse =
 
     const chapterMap = new Map(
       bundledChapters
-        .filter((chapter) => chapter.courseId === courseId)
+        .filter((chapter) => chapter.courseId === courseId &&
+          (chapter.courseId !== BNSS_COURSE_ID ||
+            (chapter.published === true && chapter.status === "published")))
         .map((chapter) => [chapter.slug || chapter.id, chapter]),
     );
 
