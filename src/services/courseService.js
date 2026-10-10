@@ -4,6 +4,7 @@ import { generalPrinciplesOfContractCourse } from "../data/courses/generalPrinci
 import { criminalLawICourse, criminalLawIChapters } from "../data/courses/criminalLawI";
 import { criminalLawIOverview } from "../data/courses/criminalLawI/overview";
 import { lawOfTortsCurriculum } from "../data/courses/lawOfTortsOverview";
+import { bnssCourse, bnssChapters } from "../data/courses/bnss";
 import { publicInternationalLawCourse } from "../data/courses/publicInternationalLaw";
 import { environmentalLawCourse } from "../data/courses/environmentalLaw";
 import { humanRightsLawAndPracticeCourse } from "../data/courses/humanRightsLawAndPractice";
@@ -16,6 +17,7 @@ const bundledCourses = [
   environmentalLawCourse,
   humanRightsLawAndPracticeCourse,
   mediaLawCourse,
+  bnssCourse,
 ];
 
 // Published LL.B. course counts may outgrow older Firestore course records.
@@ -34,6 +36,7 @@ const publishedChapterTotals = {
   "environmental-law": 8,
   "human-rights-law-and-practice": 8,
   "media-law": 8,
+  [bnssCourse.slug]: bnssChapters.length,
 };
 
 const withPublishedChapterTotal = (course) => {
