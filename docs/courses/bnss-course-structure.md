@@ -56,3 +56,7 @@ The supplied arrangement was used for the syllabus topics. The enacted BNSS was 
 [Enacted BNSS, Act 46 of 2023 — Ministry of Home Affairs](https://www.mha.gov.in/sites/default/files/2026-02/3_250884_2_english_01042024.pdf)
 
 The course and its 39 chapter models are registered in the course and chapter services for admin management. They remain draft and are excluded from published course and chapter lists until approved through the existing admin workflow.
+
+## Chapter I lesson
+
+Chapter I now contains the enacted statutory text of sections 1–5, with a chapter overview, learning objectives, key points and revision notes. The source Bill extract has been reconciled with Act 46 of 2023, including the enacted definitions of bail, bail bond and bond and the police-report reference to section 193(3). The course and chapters remain drafts.
