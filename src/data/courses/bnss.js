@@ -1,4 +1,5 @@
 import syllabus from "./bnssSyllabus.json";
+import preliminary from "./bnssChapter1.json";
 import { createCourseModel } from "../../models/CourseModel";
 import { createChapterModel } from "../../models/ChapterModel";
 
@@ -13,7 +14,7 @@ export const bnssCourse = createCourseModel({
   description: [
     "Study the Bharatiya Nagarik Suraksha Sanhita, 2023 through 39 chapters in the statutory sequence. The course begins with preliminary provisions and criminal courts, then follows arrest, appearance and search processes, investigation, cognizance, charges and the different forms of trial.",
     "Later chapters cover evidence, general trial procedure, accused persons of unsound mind, administration of justice, judgment, death-sentence confirmation, appeals, revision, transfer, execution of sentences, bail, disposal of property, procedural irregularities, limitation and miscellaneous provisions. The First Schedule and Second Schedule are included as supplementary syllabus references.",
-    "This draft contains the course syllabus and chapter outlines. Detailed explanations, case-law study notes, lesson PDFs, quizzes and certification assessments are to be developed before the course is released for enrollment.",
+    "This draft contains the course syllabus, chapter outlines and the Chapter I statutory lesson covering sections 1–5. Further lessons, case-law study notes, lesson PDFs, quizzes and certification assessments are to be developed before the course is released for enrollment.",
   ].join("\n\n"),
   duration: "Self-paced",
   courseType: "subject-course",
@@ -92,5 +93,25 @@ export const bnssChapters = syllabus.chapters.map((chapter) => {
     published: false,
     previewAvailable: false,
     status: "draft",
+    ...(chapter.number === 1 ? {
+      shortDescription: preliminary.shortDescription,
+      chapterOverview: preliminary.chapterOverview,
+      learningObjectives: preliminary.learningObjectives,
+      detailedContent: [
+        "CHAPTER I — PRELIMINARY",
+        "Bharatiya Nagarik Suraksha Sanhita, 2023 — Sections 1–5",
+        ...preliminary.sections.map(({ number, title, text }) => `${number}. ${title}\n\n${text}`),
+        `Editorial Note\n\n${preliminary.editorialNote}`,
+        `Official Statutory Source\n\n${preliminary.source}`,
+      ].join("\n\n"),
+      keyPoints: preliminary.keyPoints,
+      statutoryProvisions: preliminary.sections.map(({ number, title }) => ({
+        id: `bnss-section-${number}`,
+        title: `Section ${number} — ${title}`,
+        provision: `Bharatiya Nagarik Suraksha Sanhita, 2023 — Section ${number}`,
+        description: title,
+      })),
+      revisionNotes: preliminary.revisionNotes,
+    } : {}),
   });
 });
