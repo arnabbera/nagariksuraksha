@@ -54,9 +54,9 @@ const withPublishedChapterTotal = (course) => {
           curriculum: criminalLawIChapters.map(({ id, title }) => ({ id, title })),
           seo: {
             ...course.seo,
-            title: criminalLawICourse.seo.title,
+            title: "Criminal Law I: IPC to BNS Course",
             description: criminalLawIOverview.seoDescription,
-            ogTitle: criminalLawICourse.seo.title,
+            ogTitle: "Criminal Law I: IPC to BNS Course",
             ogDescription: criminalLawIOverview.seoDescription,
           },
         }
