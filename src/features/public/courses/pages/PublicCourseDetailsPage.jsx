@@ -501,6 +501,9 @@ export default function PublicCourseDetailsPage() {
     "criminal-law-i-transitioning-from-ipc-to-bns",
   ].includes(course.slug || course.id);
 
+  const isTortsCourse =
+    (course.slug || course.id) === "law-of-torts-mv-and-cp-laws";
+
   const courseCanonicalUrl =
     `${SEO_CONFIG.siteUrl}/courses/${course.slug}`;
 
@@ -764,6 +767,25 @@ export default function PublicCourseDetailsPage() {
                   <h2>How to Study This Course</h2>
                   <p>{course.studyApproach}</p>
                 </div>
+              )}
+
+              {isTortsCourse && course.curriculum?.length > 0 && (
+                <section className="course-chapter-details" aria-labelledby="torts-curriculum-heading">
+                  <h2 id="torts-curriculum-heading">8-Chapter Curriculum</h2>
+                  <p>
+                    Study the foundations of tortious liability, individual
+                    wrongs and remedies, then apply those principles to consumer
+                    protection and motor vehicles law.
+                  </p>
+                  <ol>
+                    {course.curriculum.map((chapter, index) => (
+                      <li key={chapter.id}>
+                        <h3>Chapter {index + 1}: {chapter.title}</h3>
+                        <p>{chapter.summary}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </section>
               )}
 
               {isCivilProcedureCourse && (
@@ -1413,6 +1435,43 @@ export default function PublicCourseDetailsPage() {
 
             .what-you-learn {
               margin-top: 35px;
+            }
+
+            .course-chapter-details {
+              margin-top: 35px;
+            }
+
+            .course-chapter-details > p,
+            .course-chapter-details li p {
+              color: #475569;
+              font-size: 14px;
+              line-height: 1.8;
+            }
+
+            .course-chapter-details ol {
+              list-style: none;
+              margin: 22px 0 0;
+              padding: 0;
+            }
+
+            .course-chapter-details li {
+              margin-top: 14px;
+              padding: 20px;
+              border: 1px solid #e2e8f0;
+              border-radius: 12px;
+              background: #f8fafc;
+              overflow-wrap: anywhere;
+            }
+
+            .course-chapter-details h3 {
+              margin: 0 0 9px;
+              color: #0f172a;
+              font-size: 17px;
+              line-height: 1.5;
+            }
+
+            .course-chapter-details li p {
+              margin: 0;
             }
 
             .criminal-law-course-outline {
